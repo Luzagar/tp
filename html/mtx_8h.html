@@ -89,14 +89,13 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="mtx44_8h_source.html">dolphin/mtx/mtx44.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="quat_8h_source.html">dolphin/mtx/quat.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="vec_8h_source.html">dolphin/mtx/vec.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for mtx.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="mtx_8h__incl.svg" width="368" height="359"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="mtx_8h__incl.svg" width="351" height="359"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -159,6 +158,8 @@ Functions</h2></td></tr>
 <tr class="separator:aa095323adb7519887b93e5c8bcbed13d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f2fdbcedb32f4c2d1a7b9d55d959ae5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8h.html#a7f2fdbcedb32f4c2d1a7b9d55d959ae5">C_MTXLightOrtho</a> (<a class="el" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a> m, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> top, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> bottom, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> left, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> right, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> scale_s, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> scale_t, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> trans_s, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> trans_t)</td></tr>
 <tr class="separator:a7f2fdbcedb32f4c2d1a7b9d55d959ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15373c31bbe599ef613f3d7e75a25c0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8h.html#a15373c31bbe599ef613f3d7e75a25c0e">C_MTXRotAxisRad</a> (<a class="el" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a> m, const <a class="el" href="structVec.html">Vec</a> *axis, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> rad)</td></tr>
+<tr class="separator:a15373c31bbe599ef613f3d7e75a25c0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a054fccb69e756d4e7ef8cd036a676b88" name="a054fccb69e756d4e7ef8cd036a676b88"></a>
@@ -450,6 +451,48 @@ Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a15373c31bbe599ef613f3d7e75a25c0e" name="a15373c31bbe599ef613f3d7e75a25c0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15373c31bbe599ef613f3d7e75a25c0e">&#9670;&#160;</a></span>C_MTXRotAxisRad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void C_MTXRotAxisRad </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a>&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structVec.html">Vec</a> *&#160;</td>
+          <td class="paramname"><em>axis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td>
+          <td class="paramname"><em>rad</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

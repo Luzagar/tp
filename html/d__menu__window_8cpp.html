@@ -89,9 +89,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="d__menu__window_8h_source.html">d/menu/d_menu_window.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="JKRExpHeap_8h_source.html">JSystem/JKernel/JKRExpHeap.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="Z2AudioMgr_8h_source.html">Z2AudioLib/Z2AudioMgr.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="d__a__player_8h_source.html">d/a/d_a_player.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="d__com__inf__game_8h_source.html">d/com/d_com_inf_game.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="d__lib_8h_source.html">d/d_lib.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="d__menu__collect_8h_source.html">d/menu/d_menu_collect.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="d__menu__dmap_8h_source.html">d/menu/d_menu_dmap.h</a>&quot;</code><br />
@@ -110,7 +108,6 @@ $(function() {
 <code>#include &quot;<a class="el" href="d__msg__object_8h_source.html">d/msg/d_msg_object.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="OS_8h_source.html">dolphin/os/OS.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="f__op__msg__mng_8h_source.html">f_op/f_op_msg_mng.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="global_8h_source.html">global.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="m__Do__controller__pad_8h_source.html">m_Do/m_Do_controller_pad.h</a>&quot;</code><br />
@@ -5202,7 +5199,7 @@ Variables</h2></td></tr>
 <div class="line">    <a class="code hl_define" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">}</div>
 <div class="ttc" id="ad__a__no__chg__room_8cpp_html_a3de3a374119e8432d211e29713bce0ae"><div class="ttname"><a href="d__a__no__chg__room_8cpp.html#a3de3a374119e8432d211e29713bce0ae">g_fpcLf_Method</a></div><div class="ttdeci">void * g_fpcLf_Method[5+1]</div><div class="ttdef"><b>Definition:</b> f_pc_leaf.cpp:65</div></div>
-<div class="ttc" id="ad__menu__window_8cpp_html_a2d2ce8c2dcdcc7ca31b053c96d978c39"><div class="ttname"><a href="d__menu__window_8cpp.html#a2d2ce8c2dcdcc7ca31b053c96d978c39">l_dMw_Method</a></div><div class="ttdeci">static dMw_Method l_dMw_Method[5]</div><div class="ttdef"><b>Definition:</b> d_menu_window.cpp:2001</div></div>
+<div class="ttc" id="ad__menu__window_8cpp_html_a2d2ce8c2dcdcc7ca31b053c96d978c39"><div class="ttname"><a href="d__menu__window_8cpp.html#a2d2ce8c2dcdcc7ca31b053c96d978c39">l_dMw_Method</a></div><div class="ttdeci">static dMw_Method l_dMw_Method[5]</div><div class="ttdef"><b>Definition:</b> d_menu_window.cpp:1998</div></div>
 <div class="ttc" id="af__op__msg_8cpp_html_a2c87dec04f1678d18541f1301e0f424c"><div class="ttname"><a href="f__op__msg_8cpp.html#a2c87dec04f1678d18541f1301e0f424c">g_fopMsg_Method</a></div><div class="ttdeci">leafdraw_method_class g_fopMsg_Method</div><div class="ttdef"><b>Definition:</b> f_op_msg.cpp:87</div></div>
 </div><!-- fragment -->
 </div>
@@ -5280,12 +5277,12 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">    (<a class="code hl_typedef" href="d__menu__window_8h.html#aae649284c8ee1866c2d821e24fcd7aa0">dMw_Method</a>)<a class="code hl_function" href="d__menu__window_8cpp.html#a5ab38d40fd5ef10714f73c09bac65672">dMw_Create</a>, <a class="code hl_function" href="d__menu__window_8cpp.html#a71a28c91a9ca1328e5a5698a2aa5f93c">dMw_Delete</a>, <a class="code hl_function" href="d__menu__window_8cpp.html#a0fa25c66cb6514f5466d1685e92a9a96">dMw_Execute</a>, <a class="code hl_function" href="d__menu__window_8cpp.html#a39dce6c67f833f704ddb82a8af228198">dMw_IsDelete</a>, <a class="code hl_function" href="d__menu__window_8cpp.html#ab1a87d7f9244ac72e7fd730d6ffaab91">dMw_Draw</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="ad__menu__window_8cpp_html_a0fa25c66cb6514f5466d1685e92a9a96"><div class="ttname"><a href="d__menu__window_8cpp.html#a0fa25c66cb6514f5466d1685e92a9a96">dMw_Execute</a></div><div class="ttdeci">static int dMw_Execute(dMw_c *p_menu)</div><div class="ttdef"><b>Definition:</b> d_menu_window.cpp:2725</div></div>
-<div class="ttc" id="ad__menu__window_8cpp_html_a39dce6c67f833f704ddb82a8af228198"><div class="ttname"><a href="d__menu__window_8cpp.html#a39dce6c67f833f704ddb82a8af228198">dMw_IsDelete</a></div><div class="ttdeci">static int dMw_IsDelete(dMw_c *p_menu)</div><div class="ttdef"><b>Definition:</b> d_menu_window.cpp:2730</div></div>
-<div class="ttc" id="ad__menu__window_8cpp_html_a5ab38d40fd5ef10714f73c09bac65672"><div class="ttname"><a href="d__menu__window_8cpp.html#a5ab38d40fd5ef10714f73c09bac65672">dMw_Create</a></div><div class="ttdeci">static int dMw_Create(msg_class *p_menu)</div><div class="ttdef"><b>Definition:</b> d_menu_window.cpp:2744</div></div>
-<div class="ttc" id="ad__menu__window_8cpp_html_a71a28c91a9ca1328e5a5698a2aa5f93c"><div class="ttname"><a href="d__menu__window_8cpp.html#a71a28c91a9ca1328e5a5698a2aa5f93c">dMw_Delete</a></div><div class="ttdeci">static int dMw_Delete(dMw_c *p_menu)</div><div class="ttdef"><b>Definition:</b> d_menu_window.cpp:2735</div></div>
-<div class="ttc" id="ad__menu__window_8cpp_html_ab1a87d7f9244ac72e7fd730d6ffaab91"><div class="ttname"><a href="d__menu__window_8cpp.html#ab1a87d7f9244ac72e7fd730d6ffaab91">dMw_Draw</a></div><div class="ttdeci">static int dMw_Draw(dMw_c *p_menu)</div><div class="ttdef"><b>Definition:</b> d_menu_window.cpp:2720</div></div>
-<div class="ttc" id="ad__menu__window_8h_html_aae649284c8ee1866c2d821e24fcd7aa0"><div class="ttname"><a href="d__menu__window_8h.html#aae649284c8ee1866c2d821e24fcd7aa0">dMw_Method</a></div><div class="ttdeci">int(* dMw_Method)(dMw_c *)</div><div class="ttdef"><b>Definition:</b> d_menu_window.h:303</div></div>
+<div class="ttc" id="ad__menu__window_8cpp_html_a0fa25c66cb6514f5466d1685e92a9a96"><div class="ttname"><a href="d__menu__window_8cpp.html#a0fa25c66cb6514f5466d1685e92a9a96">dMw_Execute</a></div><div class="ttdeci">static int dMw_Execute(dMw_c *p_menu)</div><div class="ttdef"><b>Definition:</b> d_menu_window.cpp:2722</div></div>
+<div class="ttc" id="ad__menu__window_8cpp_html_a39dce6c67f833f704ddb82a8af228198"><div class="ttname"><a href="d__menu__window_8cpp.html#a39dce6c67f833f704ddb82a8af228198">dMw_IsDelete</a></div><div class="ttdeci">static int dMw_IsDelete(dMw_c *p_menu)</div><div class="ttdef"><b>Definition:</b> d_menu_window.cpp:2727</div></div>
+<div class="ttc" id="ad__menu__window_8cpp_html_a5ab38d40fd5ef10714f73c09bac65672"><div class="ttname"><a href="d__menu__window_8cpp.html#a5ab38d40fd5ef10714f73c09bac65672">dMw_Create</a></div><div class="ttdeci">static int dMw_Create(msg_class *p_menu)</div><div class="ttdef"><b>Definition:</b> d_menu_window.cpp:2741</div></div>
+<div class="ttc" id="ad__menu__window_8cpp_html_a71a28c91a9ca1328e5a5698a2aa5f93c"><div class="ttname"><a href="d__menu__window_8cpp.html#a71a28c91a9ca1328e5a5698a2aa5f93c">dMw_Delete</a></div><div class="ttdeci">static int dMw_Delete(dMw_c *p_menu)</div><div class="ttdef"><b>Definition:</b> d_menu_window.cpp:2732</div></div>
+<div class="ttc" id="ad__menu__window_8cpp_html_ab1a87d7f9244ac72e7fd730d6ffaab91"><div class="ttname"><a href="d__menu__window_8cpp.html#ab1a87d7f9244ac72e7fd730d6ffaab91">dMw_Draw</a></div><div class="ttdeci">static int dMw_Draw(dMw_c *p_menu)</div><div class="ttdef"><b>Definition:</b> d_menu_window.cpp:2717</div></div>
+<div class="ttc" id="ad__menu__window_8h_html_aae649284c8ee1866c2d821e24fcd7aa0"><div class="ttname"><a href="d__menu__window_8h.html#aae649284c8ee1866c2d821e24fcd7aa0">dMw_Method</a></div><div class="ttdeci">int(* dMw_Method)(dMw_c *)</div><div class="ttdef"><b>Definition:</b> d_menu_window.h:302</div></div>
 </div><!-- fragment -->
 </div>
 </div>

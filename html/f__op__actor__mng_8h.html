@@ -83,16 +83,14 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">f_op_actor_mng.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="c__sxyz_8h_source.html">SSystem/SComponent/c_sxyz.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="c__xyz_8h_source.html">SSystem/SComponent/c_xyz.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="f__op__actor_8h_source.html">f_op/f_op_actor.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="f__op__actor_8h_source.html">f_op/f_op_actor.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="f__op__actor__iter_8h_source.html">f_op/f_op_actor_iter.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="f__pc__manager_8h_source.html">f_pc/f_pc_manager.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="f__pc__searcher_8h_source.html">f_pc/f_pc_searcher.h</a>&quot;</code><br />
@@ -127,6 +125,11 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDOUBLE__POS.html">DOUBLE_POS</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:aad9fe5f23ec24c176d8b9b6a6877a116"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__actor__mng_8h.html#aad9fe5f23ec24c176d8b9b6a6877a116">fopAcM_SetupActor</a>(ptr,  ClassName)</td></tr>
+<tr class="separator:aad9fe5f23ec24c176d8b9b6a6877a116"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -711,6 +714,40 @@ Functions</h2></td></tr>
 <tr class="memitem:a2b56b8ff54c7ef900096fe0a2c6dd420"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__actor__mng_8h.html#a2b56b8ff54c7ef900096fe0a2c6dd420">fopAcM_GetID__FPCv</a> (void)</td></tr>
 <tr class="separator:a2b56b8ff54c7ef900096fe0a2c6dd420"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="aad9fe5f23ec24c176d8b9b6a6877a116" name="aad9fe5f23ec24c176d8b9b6a6877a116"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad9fe5f23ec24c176d8b9b6a6877a116">&#9670;&#160;</a></span>fopAcM_SetupActor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define fopAcM_SetupActor</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ptr, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ClassName&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">if</span> (!<a class="code hl_function" href="f__op__actor__mng_8h.html#ae04f369129df519ebcf4a9109d3ee24a">fopAcM_CheckCondition</a>(ptr, 8)) { \</div>
+<div class="line">        new (ptr) ClassName(); \</div>
+<div class="line">        fopAcM_OnCondition(ptr, 8); \</div>
+<div class="line">    }</div>
+<div class="ttc" id="af__op__actor__mng_8h_html_ae04f369129df519ebcf4a9109d3ee24a"><div class="ttname"><a href="f__op__actor__mng_8h.html#ae04f369129df519ebcf4a9109d3ee24a">fopAcM_CheckCondition</a></div><div class="ttdeci">bool fopAcM_CheckCondition(fopAc_ac_c *p_actor, u32 flag)</div><div class="ttdef"><b>Definition:</b> f_op_actor_mng.h:217</div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a0b41bbbca8c43cd70ec786a2a4314295" name="a0b41bbbca8c43cd70ec786a2a4314295"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0b41bbbca8c43cd70ec786a2a4314295">&#9670;&#160;</a></span>createFunc</h2>

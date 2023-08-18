@@ -87,20 +87,18 @@ $(function() {
 <a href="osdsp_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef OSDSP_H</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define OSDSP_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">dolphin/types.h</a>&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">struct </span><a class="code hl_struct" href="structDSPTaskInfo.html">DSPTaskInfo</a>;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">struct </span><a class="code hl_struct" href="structSTRUCT__DSP__TASK.html">STRUCT_DSP_TASK</a>;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> <a class="code hl_struct" href="structDSPTaskInfo.html">DSPTaskInfo</a>* <a class="code hl_function" href="CARDUnlock_8c.html#acb392b2fdd4897d33213e604f7abd902">DSPAddTask</a>(<a class="code hl_struct" href="structDSPTaskInfo.html">DSPTaskInfo</a>*);</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keywordtype">void</span> <a class="code hl_function" href="osdsp_8h.html#a64693bb05201928f88176bb321746b49">DSPAddPriorTask</a>(<a class="code hl_struct" href="structSTRUCT__DSP__TASK.html">STRUCT_DSP_TASK</a>*);</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#endif </span><span class="comment">/* OSDSP_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">struct </span><a class="code hl_struct" href="structDSPTaskInfo.html">DSPTaskInfo</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">struct </span><a class="code hl_struct" href="structSTRUCT__DSP__TASK.html">STRUCT_DSP_TASK</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> <a class="code hl_struct" href="structDSPTaskInfo.html">DSPTaskInfo</a>* <a class="code hl_function" href="CARDUnlock_8c.html#acb392b2fdd4897d33213e604f7abd902">DSPAddTask</a>(<a class="code hl_struct" href="structDSPTaskInfo.html">DSPTaskInfo</a>*);</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keywordtype">void</span> <a class="code hl_function" href="osdsp_8h.html#a64693bb05201928f88176bb321746b49">DSPAddPriorTask</a>(<a class="code hl_struct" href="structSTRUCT__DSP__TASK.html">STRUCT_DSP_TASK</a>*);</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#endif </span><span class="comment">/* OSDSP_H */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aCARDUnlock_8c_html_acb392b2fdd4897d33213e604f7abd902"><div class="ttname"><a href="CARDUnlock_8c.html#acb392b2fdd4897d33213e604f7abd902">DSPAddTask</a></div><div class="ttdeci">void DSPAddTask()</div></div>
-<div class="ttc" id="aosdsp_8h_html_a64693bb05201928f88176bb321746b49"><div class="ttname"><a href="osdsp_8h.html#a64693bb05201928f88176bb321746b49">DSPAddPriorTask</a></div><div class="ttdeci">void DSPAddPriorTask(STRUCT_DSP_TASK *)</div><div class="ttdef"><b>Definition:</b> osdsp.cpp:53</div></div>
+<div class="ttc" id="aosdsp_8h_html_a64693bb05201928f88176bb321746b49"><div class="ttname"><a href="osdsp_8h.html#a64693bb05201928f88176bb321746b49">DSPAddPriorTask</a></div><div class="ttdeci">void DSPAddPriorTask(STRUCT_DSP_TASK *)</div><div class="ttdef"><b>Definition:</b> osdsp.cpp:51</div></div>
 <div class="ttc" id="astructDSPTaskInfo_html"><div class="ttname"><a href="structDSPTaskInfo.html">DSPTaskInfo</a></div><div class="ttdef"><b>Definition:</b> dsp.h:26</div></div>
-<div class="ttc" id="astructSTRUCT__DSP__TASK_html"><div class="ttname"><a href="structSTRUCT__DSP__TASK.html">STRUCT_DSP_TASK</a></div><div class="ttdef"><b>Definition:</b> dsptask.cpp:17</div></div>
-<div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div></div>
+<div class="ttc" id="astructSTRUCT__DSP__TASK_html"><div class="ttname"><a href="structSTRUCT__DSP__TASK.html">STRUCT_DSP_TASK</a></div><div class="ttdef"><b>Definition:</b> dsptask.cpp:16</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

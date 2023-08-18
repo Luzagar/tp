@@ -23,11 +23,16 @@ var searchData=
   ['link_5fptr_20',['LINK_PTR',['../d__com__inf__game_8h.html#a42eb736ca7b3065ff9097c87e3ed93e0a1e2e114150505f73ef0e9401b9ba8157',1,'d_com_inf_game.h']]],
   ['links_5fsavings_21',['LINKS_SAVINGS',['../d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2abf8e827734a06c7b478b9bd6b406fef3',1,'d_save.h']]],
   ['locked_22',['LOCKED',['../classJ3DDrawPacket.html#a60a6ac2f15dcb6c5a508c9edd721a18eafe0b2b49c27c19a7108d8a417deba829',1,'J3DDrawPacket']]],
-  ['lure_5frod_23',['LURE_ROD',['../d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2ab0781833d53c98947d99ddb9116f140f',1,'d_save.h']]],
-  ['lv1_5fsoup_24',['LV1_SOUP',['../d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2a2505d39cc580ec37793c5e1478da6306',1,'d_save.h']]],
-  ['lv2_5fboss_5fkey_25',['LV2_BOSS_KEY',['../d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2a4449e3ab87df1dcb3db9ee43bc2e739c',1,'d_save.h']]],
-  ['lv2_5fsoup_26',['LV2_SOUP',['../d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2a625faf766e6baacd415d37dd28e84ba6',1,'d_save.h']]],
-  ['lv3_5fsoup_27',['LV3_SOUP',['../d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2a03b740b7b7a56805aa4c152cb55f93ac',1,'d_save.h']]],
-  ['lv5_5fboss_5fkey_28',['LV5_BOSS_KEY',['../d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2a22d4f95a12b6f18fe05b6388e6d10d37',1,'d_save.h']]],
-  ['lv7_5fdungeon_5fexit_29',['LV7_DUNGEON_EXIT',['../d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2a67c91966c3e6b98af1cb4673287648df',1,'d_save.h']]]
+  ['loop_5fmirror_5fonce_5fe_23',['LOOP_MIRROR_ONCE_e',['../structJ3DFrameCtrl.html#a301752b74dd4e0122b96d7f0ba95149caa5422d4e6bcefa74e4d11ed5b156fde7',1,'J3DFrameCtrl']]],
+  ['loop_5fmirror_5frepeat_5fe_24',['LOOP_MIRROR_REPEAT_e',['../structJ3DFrameCtrl.html#a301752b74dd4e0122b96d7f0ba95149ca869834ceb121324d1b1a40a47f3f9119',1,'J3DFrameCtrl']]],
+  ['loop_5fonce_5fe_25',['LOOP_ONCE_e',['../structJ3DFrameCtrl.html#a301752b74dd4e0122b96d7f0ba95149ca02c339e3f35d46f4623a218f7eed5d8c',1,'J3DFrameCtrl']]],
+  ['loop_5fonce_5freset_5fe_26',['LOOP_ONCE_RESET_e',['../structJ3DFrameCtrl.html#a301752b74dd4e0122b96d7f0ba95149cad342d5181fffe4138e3ec0635b94ca8c',1,'J3DFrameCtrl']]],
+  ['loop_5frepeat_5fe_27',['LOOP_REPEAT_e',['../structJ3DFrameCtrl.html#a301752b74dd4e0122b96d7f0ba95149cac2444cd5973a6ad47117153db52a9412',1,'J3DFrameCtrl']]],
+  ['lure_5frod_28',['LURE_ROD',['../d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2ab0781833d53c98947d99ddb9116f140f',1,'d_save.h']]],
+  ['lv1_5fsoup_29',['LV1_SOUP',['../d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2a2505d39cc580ec37793c5e1478da6306',1,'d_save.h']]],
+  ['lv2_5fboss_5fkey_30',['LV2_BOSS_KEY',['../d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2a4449e3ab87df1dcb3db9ee43bc2e739c',1,'d_save.h']]],
+  ['lv2_5fsoup_31',['LV2_SOUP',['../d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2a625faf766e6baacd415d37dd28e84ba6',1,'d_save.h']]],
+  ['lv3_5fsoup_32',['LV3_SOUP',['../d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2a03b740b7b7a56805aa4c152cb55f93ac',1,'d_save.h']]],
+  ['lv5_5fboss_5fkey_33',['LV5_BOSS_KEY',['../d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2a22d4f95a12b6f18fe05b6388e6d10d37',1,'d_save.h']]],
+  ['lv7_5fdungeon_5fexit_34',['LV7_DUNGEON_EXIT',['../d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2a67c91966c3e6b98af1cb4673287648df',1,'d_save.h']]]
 ];

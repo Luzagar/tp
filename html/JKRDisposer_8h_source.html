@@ -88,31 +88,29 @@ $(function() {
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define JKRDISPOSER_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="JSUList_8h.html">JSystem/JSupport/JSUList.h</a>&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">dolphin/types.h</a>&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">class </span><a class="code hl_class" href="structJKRHeap.html">JKRHeap</a>;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">class </span><a class="code hl_class" href="structJKRDisposer.html">JKRDisposer</a> {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="structJKRDisposer.html#ac5a1bf5e5a976af8c8f0114452590c22">   10</a></span>    <a class="code hl_function" href="structJKRDisposer.html#ac5a1bf5e5a976af8c8f0114452590c22">JKRDisposer</a>();</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="structJKRDisposer.html#a50b0be1e5dd1cdaf2e7272cdc03ae62a">   11</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="structJKRDisposer.html#a50b0be1e5dd1cdaf2e7272cdc03ae62a">~JKRDisposer</a>();</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="comment">/* 0x00 */</span>  <span class="comment">// vtable</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structJKRDisposer.html#aff0df032b36c7d3317822f5ef6fd5659">   15</a></span>    <span class="comment">/* 0x04 */</span> <a class="code hl_class" href="structJKRHeap.html">JKRHeap</a>* <a class="code hl_variable" href="structJKRDisposer.html#aff0df032b36c7d3317822f5ef6fd5659">mHeap</a>;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structJKRDisposer.html#ad0231fe5cc1600f0d98178925adb5002">   16</a></span>    <span class="comment">/* 0x08 */</span> <a class="code hl_class" href="structJSULink.html">JSULink&lt;JKRDisposer&gt;</a> <a class="code hl_variable" href="structJKRDisposer.html#ad0231fe5cc1600f0d98178925adb5002">mLink</a>;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">/* 0x18 */</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>};</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#endif </span><span class="comment">/* JKRDISPOSER_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">class </span><a class="code hl_class" href="structJKRHeap.html">JKRHeap</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">class </span><a class="code hl_class" href="structJKRDisposer.html">JKRDisposer</a> {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="structJKRDisposer.html#ac5a1bf5e5a976af8c8f0114452590c22">    9</a></span>    <a class="code hl_function" href="structJKRDisposer.html#ac5a1bf5e5a976af8c8f0114452590c22">JKRDisposer</a>();</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="structJKRDisposer.html#a50b0be1e5dd1cdaf2e7272cdc03ae62a">   10</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="structJKRDisposer.html#a50b0be1e5dd1cdaf2e7272cdc03ae62a">~JKRDisposer</a>();</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="comment">/* 0x00 */</span>  <span class="comment">// vtable</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structJKRDisposer.html#aff0df032b36c7d3317822f5ef6fd5659">   14</a></span>    <span class="comment">/* 0x04 */</span> <a class="code hl_class" href="structJKRHeap.html">JKRHeap</a>* <a class="code hl_variable" href="structJKRDisposer.html#aff0df032b36c7d3317822f5ef6fd5659">mHeap</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structJKRDisposer.html#ad0231fe5cc1600f0d98178925adb5002">   15</a></span>    <span class="comment">/* 0x08 */</span> <a class="code hl_class" href="structJSULink.html">JSULink&lt;JKRDisposer&gt;</a> <a class="code hl_variable" href="structJKRDisposer.html#ad0231fe5cc1600f0d98178925adb5002">mLink</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="comment">/* 0x18 */</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>};</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#endif </span><span class="comment">/* JKRDISPOSER_H */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aJSUList_8h_html"><div class="ttname"><a href="JSUList_8h.html">JSUList.h</a></div></div>
-<div class="ttc" id="astructJKRDisposer_html"><div class="ttname"><a href="structJKRDisposer.html">JKRDisposer</a></div><div class="ttdef"><b>Definition:</b> JAUSectionHeap.cpp:54</div></div>
+<div class="ttc" id="astructJKRDisposer_html"><div class="ttname"><a href="structJKRDisposer.html">JKRDisposer</a></div><div class="ttdef"><b>Definition:</b> JAUSectionHeap.cpp:53</div></div>
 <div class="ttc" id="astructJKRDisposer_html_a50b0be1e5dd1cdaf2e7272cdc03ae62a"><div class="ttname"><a href="structJKRDisposer.html#a50b0be1e5dd1cdaf2e7272cdc03ae62a">JKRDisposer::~JKRDisposer</a></div><div class="ttdeci">virtual ~JKRDisposer()</div></div>
 <div class="ttc" id="astructJKRDisposer_html_ac5a1bf5e5a976af8c8f0114452590c22"><div class="ttname"><a href="structJKRDisposer.html#ac5a1bf5e5a976af8c8f0114452590c22">JKRDisposer::JKRDisposer</a></div><div class="ttdeci">JKRDisposer()</div></div>
-<div class="ttc" id="astructJKRDisposer_html_ad0231fe5cc1600f0d98178925adb5002"><div class="ttname"><a href="structJKRDisposer.html#ad0231fe5cc1600f0d98178925adb5002">JKRDisposer::mLink</a></div><div class="ttdeci">JSULink&lt; JKRDisposer &gt; mLink</div><div class="ttdef"><b>Definition:</b> JKRDisposer.h:16</div></div>
-<div class="ttc" id="astructJKRDisposer_html_aff0df032b36c7d3317822f5ef6fd5659"><div class="ttname"><a href="structJKRDisposer.html#aff0df032b36c7d3317822f5ef6fd5659">JKRDisposer::mHeap</a></div><div class="ttdeci">JKRHeap * mHeap</div><div class="ttdef"><b>Definition:</b> JKRDisposer.h:15</div></div>
-<div class="ttc" id="astructJKRHeap_html"><div class="ttname"><a href="structJKRHeap.html">JKRHeap</a></div><div class="ttdef"><b>Definition:</b> d_menu_fmap2D.cpp:219</div></div>
-<div class="ttc" id="astructJSULink_html"><div class="ttname"><a href="structJSULink.html">JSULink</a></div><div class="ttdef"><b>Definition:</b> JAUSectionHeap.cpp:40</div></div>
-<div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div></div>
+<div class="ttc" id="astructJKRDisposer_html_ad0231fe5cc1600f0d98178925adb5002"><div class="ttname"><a href="structJKRDisposer.html#ad0231fe5cc1600f0d98178925adb5002">JKRDisposer::mLink</a></div><div class="ttdeci">JSULink&lt; JKRDisposer &gt; mLink</div><div class="ttdef"><b>Definition:</b> JKRDisposer.h:15</div></div>
+<div class="ttc" id="astructJKRDisposer_html_aff0df032b36c7d3317822f5ef6fd5659"><div class="ttname"><a href="structJKRDisposer.html#aff0df032b36c7d3317822f5ef6fd5659">JKRDisposer::mHeap</a></div><div class="ttdeci">JKRHeap * mHeap</div><div class="ttdef"><b>Definition:</b> JKRDisposer.h:14</div></div>
+<div class="ttc" id="astructJKRHeap_html"><div class="ttname"><a href="structJKRHeap.html">JKRHeap</a></div><div class="ttdef"><b>Definition:</b> d_menu_fmap2D.cpp:218</div></div>
+<div class="ttc" id="astructJSULink_html"><div class="ttname"><a href="structJSULink.html">JSULink</a></div><div class="ttdef"><b>Definition:</b> JAUSectionHeap.cpp:39</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

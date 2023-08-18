@@ -7,7 +7,7 @@ var searchData=
   ['max_5fqueues_4',['MAX_QUEUES',['../dvdqueue_8c.html#a16d3fa04757c66ba1c3228f57e1be03d',1,'dvdqueue.c']]],
   ['max_5fselect_5fitem_5',['MAX_SELECT_ITEM',['../d__save_8h.html#aa81e4358e60fa5195668bfe07f7b5173',1,'d_save.h']]],
   ['maxfloat_6',['MAXFLOAT',['../fdlibm_8h.html#a5e9e29217f6ec61105a4520ec5942225',1,'fdlibm.h']]],
-  ['min_7',['MIN',['../dvd_8c.html#a3acffbd305ee72dcd4593c0d8af64a4f',1,'MIN():&#160;dvd.c'],['../JPABaseShape_8cpp.html#a3acffbd305ee72dcd4593c0d8af64a4f',1,'MIN():&#160;JPABaseShape.cpp']]],
+  ['min_7',['MIN',['../dvd_8c.html#a3acffbd305ee72dcd4593c0d8af64a4f',1,'dvd.c']]],
   ['mmcr0_8',['MMCR0',['../PPCArch_8h.html#a57b1b93bf0725f7d55bfb49cfdd7334e',1,'PPCArch.h']]],
   ['mmcr0_5fdis_9',['MMCR0_DIS',['../PPCArch_8h.html#abdde652cd5b69a632fe9cba0d8a6cc65',1,'PPCArch.h']]],
   ['mmcr0_5fdiscount_10',['MMCR0_DISCOUNT',['../PPCArch_8h.html#acf118a7f5af0cd3a27755208d8bcd3c4',1,'PPCArch.h']]],

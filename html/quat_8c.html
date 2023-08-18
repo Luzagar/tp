@@ -82,54 +82,43 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">quat.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="quat_8h_source.html">dolphin/mtx/quat.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="math_8h_source.html">MSL_C/math.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
-<code>#include &quot;asm/dolphin/mtx/quat/C_QUATRotAxisRad.s&quot;</code><br />
-<code>#include &quot;asm/dolphin/mtx/quat/C_QUATSlerp.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for quat.c:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="quat_8c__incl.svg" width="100%" height="580"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="quat_8c__incl.svg" width="368" height="359"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:afa3685d4dd4e3bdffe2d294d8ef821b1"><td class="memItemLeft" align="right" valign="top">asm void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="quat_8c.html#afa3685d4dd4e3bdffe2d294d8ef821b1">PSQUATMultiply</a> (register const <a class="el" href="structQuaternion.html">Quaternion</a> *a, register const <a class="el" href="structQuaternion.html">Quaternion</a> *b, register <a class="el" href="structQuaternion.html">Quaternion</a> *ab)</td></tr>
-<tr class="separator:afa3685d4dd4e3bdffe2d294d8ef821b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bc33a8cfbe039318065fa9fe8531cbe"><td class="memItemLeft" align="right" valign="top">asm void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="quat_8c.html#a3bc33a8cfbe039318065fa9fe8531cbe">C_QUATRotAxisRad</a> (<a class="el" href="structQuaternion.html">Quaternion</a> *q, const <a class="el" href="structVec.html">Vec</a> *axis, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> rad)</td></tr>
-<tr class="separator:a3bc33a8cfbe039318065fa9fe8531cbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcbb3b9fe0d39fe6de9dccb4d0b075b0"><td class="memItemLeft" align="right" valign="top">asm void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="quat_8c.html#afcbb3b9fe0d39fe6de9dccb4d0b075b0">C_QUATSlerp</a> (const <a class="el" href="structQuaternion.html">Quaternion</a> *p, const <a class="el" href="structQuaternion.html">Quaternion</a> *q, <a class="el" href="structQuaternion.html">Quaternion</a> *r, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> t)</td></tr>
-<tr class="separator:afcbb3b9fe0d39fe6de9dccb4d0b075b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a675f550f86f753b7a2c2f33f66d3fd93"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="quat_8c.html#a675f550f86f753b7a2c2f33f66d3fd93">lit_130</a> [4]</td></tr>
-<tr class="separator:a675f550f86f753b7a2c2f33f66d3fd93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfc5d163a224d4dd3f9971b558b320b2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="quat_8c.html#acfc5d163a224d4dd3f9971b558b320b2">lit_133</a> = 1.0f</td></tr>
-<tr class="separator:acfc5d163a224d4dd3f9971b558b320b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42128ad510e2fc0399349087188ed901"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="quat_8c.html#a42128ad510e2fc0399349087188ed901">lit_135</a> = 0.5f</td></tr>
-<tr class="separator:a42128ad510e2fc0399349087188ed901"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9ad55f9122bab05392294e373bdcd85"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="quat_8c.html#aa9ad55f9122bab05392294e373bdcd85">lit_261</a> = 0.9999899864196777f</td></tr>
-<tr class="separator:aa9ad55f9122bab05392294e373bdcd85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a080ac62d0b2dccd88fb5f4b4dfdd28bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="quat_8c.html#a080ac62d0b2dccd88fb5f4b4dfdd28bc">PSQUATMultiply</a> (register const <a class="el" href="structQuaternion.html">Quaternion</a> *a, register const <a class="el" href="structQuaternion.html">Quaternion</a> *b, register <a class="el" href="structQuaternion.html">Quaternion</a> *ab)</td></tr>
+<tr class="separator:a080ac62d0b2dccd88fb5f4b4dfdd28bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad03ebe9ec771324bf616aad1bcd37c82"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="quat_8c.html#ad03ebe9ec771324bf616aad1bcd37c82">dummyLiteralFunc</a> ()</td></tr>
+<tr class="separator:ad03ebe9ec771324bf616aad1bcd37c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e2bef04969a21c2b0cc5d97c9c0664e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="quat_8c.html#a1e2bef04969a21c2b0cc5d97c9c0664e">dummyLiteralFunc2</a> ()</td></tr>
+<tr class="separator:a1e2bef04969a21c2b0cc5d97c9c0664e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ac811a4c6438793b6e24e3ba8d1888d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="quat_8c.html#a4ac811a4c6438793b6e24e3ba8d1888d">C_QUATRotAxisRad</a> (<a class="el" href="structQuaternion.html">Quaternion</a> *q, const <a class="el" href="structVec.html">Vec</a> *axis, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> rad)</td></tr>
+<tr class="separator:a4ac811a4c6438793b6e24e3ba8d1888d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6358d20e8c30f0138ce3032c0d20649f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="quat_8c.html#a6358d20e8c30f0138ce3032c0d20649f">C_QUATSlerp</a> (const <a class="el" href="structQuaternion.html">Quaternion</a> *p, const <a class="el" href="structQuaternion.html">Quaternion</a> *q, <a class="el" href="structQuaternion.html">Quaternion</a> *r, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> t)</td></tr>
+<tr class="separator:a6358d20e8c30f0138ce3032c0d20649f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a3bc33a8cfbe039318065fa9fe8531cbe" name="a3bc33a8cfbe039318065fa9fe8531cbe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3bc33a8cfbe039318065fa9fe8531cbe">&#9670;&#160;</a></span>C_QUATRotAxisRad()</h2>
+<a id="a4ac811a4c6438793b6e24e3ba8d1888d" name="a4ac811a4c6438793b6e24e3ba8d1888d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ac811a4c6438793b6e24e3ba8d1888d">&#9670;&#160;</a></span>C_QUATRotAxisRad()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">asm void C_QUATRotAxisRad </td>
+          <td class="memname">void C_QUATRotAxisRad </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structQuaternion.html">Quaternion</a> *&#160;</td>
           <td class="paramname"><em>q</em>, </td>
@@ -156,14 +145,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="afcbb3b9fe0d39fe6de9dccb4d0b075b0" name="afcbb3b9fe0d39fe6de9dccb4d0b075b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afcbb3b9fe0d39fe6de9dccb4d0b075b0">&#9670;&#160;</a></span>C_QUATSlerp()</h2>
+<a id="a6358d20e8c30f0138ce3032c0d20649f" name="a6358d20e8c30f0138ce3032c0d20649f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6358d20e8c30f0138ce3032c0d20649f">&#9670;&#160;</a></span>C_QUATSlerp()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">asm void C_QUATSlerp </td>
+          <td class="memname">void C_QUATSlerp </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structQuaternion.html">Quaternion</a> *&#160;</td>
           <td class="paramname"><em>p</em>, </td>
@@ -196,14 +185,64 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="afa3685d4dd4e3bdffe2d294d8ef821b1" name="afa3685d4dd4e3bdffe2d294d8ef821b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa3685d4dd4e3bdffe2d294d8ef821b1">&#9670;&#160;</a></span>PSQUATMultiply()</h2>
+<a id="ad03ebe9ec771324bf616aad1bcd37c82" name="ad03ebe9ec771324bf616aad1bcd37c82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad03ebe9ec771324bf616aad1bcd37c82">&#9670;&#160;</a></span>dummyLiteralFunc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> dummyLiteralFunc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e2bef04969a21c2b0cc5d97c9c0664e" name="a1e2bef04969a21c2b0cc5d97c9c0664e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e2bef04969a21c2b0cc5d97c9c0664e">&#9670;&#160;</a></span>dummyLiteralFunc2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> dummyLiteralFunc2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a080ac62d0b2dccd88fb5f4b4dfdd28bc" name="a080ac62d0b2dccd88fb5f4b4dfdd28bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a080ac62d0b2dccd88fb5f4b4dfdd28bc">&#9670;&#160;</a></span>PSQUATMultiply()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">asm void PSQUATMultiply </td>
+          <td class="memname">void PSQUATMultiply </td>
           <td>(</td>
           <td class="paramtype">register const <a class="el" href="structQuaternion.html">Quaternion</a> *&#160;</td>
           <td class="paramname"><em>a</em>, </td>
@@ -228,101 +267,6 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p ><a class="el" href="quat_8c.html">quat.c</a> Dolphin - Matrix <a class="el" href="structQuaternion.html">Quaternion</a> Functions </p>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="a675f550f86f753b7a2c2f33f66d3fd93" name="a675f550f86f753b7a2c2f33f66d3fd93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a675f550f86f753b7a2c2f33f66d3fd93">&#9670;&#160;</a></span>lit_130</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_130[4]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="acfc5d163a224d4dd3f9971b558b320b2" name="acfc5d163a224d4dd3f9971b558b320b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acfc5d163a224d4dd3f9971b558b320b2">&#9670;&#160;</a></span>lit_133</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_133 = 1.0f</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a42128ad510e2fc0399349087188ed901" name="a42128ad510e2fc0399349087188ed901"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42128ad510e2fc0399349087188ed901">&#9670;&#160;</a></span>lit_135</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_135 = 0.5f</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa9ad55f9122bab05392294e373bdcd85" name="aa9ad55f9122bab05392294e373bdcd85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9ad55f9122bab05392294e373bdcd85">&#9670;&#160;</a></span>lit_261</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_261 = 0.9999899864196777f</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 
 </div>
 </div>

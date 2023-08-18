@@ -10,5 +10,6 @@ var searchData=
   ['node_5fmethod_5fdata_7',['node_method_data',['../structnode__method__data.html',1,'']]],
   ['node_5fprocess_5fprofile_5fdefinition_8',['node_process_profile_definition',['../structnode__process__profile__definition.html',1,'']]],
   ['nodedraw_5fmethod_5fclass_9',['nodedraw_method_class',['../structnodedraw__method__class.html',1,'']]],
-  ['nubevent_10',['NubEvent',['../structNubEvent.html',1,'']]]
+  ['npc_5ffish_5fclass_10',['npc_fish_class',['../classnpc__fish__class.html',1,'']]],
+  ['nubevent_11',['NubEvent',['../structNubEvent.html',1,'']]]
 ];
