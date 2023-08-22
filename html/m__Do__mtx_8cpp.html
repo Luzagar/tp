@@ -82,7 +82,6 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">m_Do_mtx.cpp File Reference</div></div>
@@ -91,14 +90,15 @@ $(function() {
 <div class="textblock"><code>#include &quot;<a class="el" href="m__Do__mtx_8h_source.html">m_Do/m_Do_mtx.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="JMATrigonometric_8h_source.html">JSystem/JMath/JMATrigonometric.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="JMath_8h_source.html">JSystem/JMath/JMath.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="c__math_8h_source.html">SSystem/SComponent/c_math.h</a>&quot;</code><br />
 <code>#include &quot;asm/m_Do/m_Do_mtx/mDoMtx_XrotS__FPA4_fs.s&quot;</code><br />
 <code>#include &quot;asm/m_Do/m_Do_mtx/mDoMtx_YrotS__FPA4_fs.s&quot;</code><br />
 <code>#include &quot;asm/m_Do/m_Do_mtx/mDoMtx_ZrotS__FPA4_fs.s&quot;</code><br />
 <code>#include &quot;asm/m_Do/m_Do_mtx/mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs.s&quot;</code><br />
 <code>#include &quot;asm/m_Do/m_Do_mtx/mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs.s&quot;</code><br />
-<code>#include &quot;asm/m_Do/m_Do_mtx/mDoMtx_concatProjView__FPA4_CfPA4_CfPA4_f.s&quot;</code><br />
 <code>#include &quot;asm/m_Do/m_Do_mtx/mDoMtx_inverseTranspose__FPA4_CfPA4_f.s&quot;</code><br />
-<code>#include &quot;asm/m_Do/m_Do_mtx/mDoMtx_QuatConcat__FPC10QuaternionPC10QuaternionP10Quaternion.s&quot;</code><br />
 <code>#include &quot;asm/m_Do/m_Do_mtx/mDoMtx_MtxToRot__FPA4_CfP5csXyz.s&quot;</code><br />
 <code>#include &quot;asm/m_Do/m_Do_mtx/__sinit_m_Do_mtx_cpp.s&quot;</code><br />
 <code>#include &quot;asm/m_Do/m_Do_mtx/__dt__18mDoMtx_quatStack_cFv.s&quot;</code><br />
@@ -112,11 +112,6 @@ $(function() {
 </div>
 </div>
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJMath.html">JMath</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aacdd3ca2696a0dbe646185baa57c108d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__mtx_8cpp.html#aacdd3ca2696a0dbe646185baa57c108d">mDoMtx_XYZrotS__FPA4_fsss</a> ()</td></tr>
@@ -225,12 +220,12 @@ Functions</h2></td></tr>
 <tr class="separator:a12946ef2806ff7b323e55d7829d3a700"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c7f07c64469d9e5db720eacf8506870"><td class="memItemLeft" align="right" valign="top">asm void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__mtx_8cpp.html#a6c7f07c64469d9e5db720eacf8506870">mDoMtx_lookAt</a> (<a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>(*param_0)[4], <a class="el" href="structVec.html">Vec</a> const *param_1, <a class="el" href="structVec.html">Vec</a> const *param_2, <a class="el" href="structVec.html">Vec</a> const *param_3, <a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> param_4)</td></tr>
 <tr class="separator:a6c7f07c64469d9e5db720eacf8506870"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5299300c1e7a1461f2202fbadb545f3"><td class="memItemLeft" align="right" valign="top">asm void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__mtx_8cpp.html#ad5299300c1e7a1461f2202fbadb545f3">mDoMtx_concatProjView</a> (<a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> const (*param_0)[4], <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> const (*param_1)[4], <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>(*param_2)[4])</td></tr>
-<tr class="separator:ad5299300c1e7a1461f2202fbadb545f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a125f39c7b172dd65fc60d82477dfe7fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__mtx_8cpp.html#a125f39c7b172dd65fc60d82477dfe7fb">mDoMtx_concatProjView</a> (const <a class="el" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a> a, const <a class="el" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a> b, <a class="el" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a> c)</td></tr>
+<tr class="separator:a125f39c7b172dd65fc60d82477dfe7fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15449d4997aa4f8053854aac1fdbf158"><td class="memItemLeft" align="right" valign="top">asm void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__mtx_8cpp.html#a15449d4997aa4f8053854aac1fdbf158">mDoMtx_inverseTranspose</a> (<a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> const (*param_0)[4], <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>(*param_1)[4])</td></tr>
 <tr class="separator:a15449d4997aa4f8053854aac1fdbf158"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab664f1dfa08b23753cf34bc05aefa720"><td class="memItemLeft" align="right" valign="top">asm void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__mtx_8cpp.html#ab664f1dfa08b23753cf34bc05aefa720">mDoMtx_QuatConcat</a> (<a class="el" href="structQuaternion.html">Quaternion</a> const *param_0, <a class="el" href="structQuaternion.html">Quaternion</a> const *param_1, <a class="el" href="structQuaternion.html">Quaternion</a> *param_2)</td></tr>
-<tr class="separator:ab664f1dfa08b23753cf34bc05aefa720"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc13685518a7094f504b831933df4611"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__mtx_8cpp.html#abc13685518a7094f504b831933df4611">mDoMtx_QuatConcat</a> (<a class="el" href="structQuaternion.html">Quaternion</a> const *a, <a class="el" href="structQuaternion.html">Quaternion</a> const *b, <a class="el" href="structQuaternion.html">Quaternion</a> *c)</td></tr>
+<tr class="separator:abc13685518a7094f504b831933df4611"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc915097e8cd0afc5884766d886fc380"><td class="memItemLeft" align="right" valign="top">asm void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__mtx_8cpp.html#afc915097e8cd0afc5884766d886fc380">mDoMtx_MtxToRot</a> (<a class="el" href="mtx_8h.html#a054fccb69e756d4e7ef8cd036a676b88">CMtxP</a> param_0, <a class="el" href="structcsXyz.html">csXyz</a> *param_1)</td></tr>
 <tr class="separator:afc915097e8cd0afc5884766d886fc380"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c214b603db5140b52424f6fc07fea14"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__mtx_8cpp.html#a1c214b603db5140b52424f6fc07fea14">REGISTER_CTORS</a> (0x8000CFB8, <a class="el" href="m__Do__mtx_8cpp.html#a04de1e3c2f40829e2d15df69993c7e35">__sinit_m_Do_mtx_cpp</a>)</td></tr>
@@ -421,29 +416,29 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ad5299300c1e7a1461f2202fbadb545f3" name="ad5299300c1e7a1461f2202fbadb545f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5299300c1e7a1461f2202fbadb545f3">&#9670;&#160;</a></span>mDoMtx_concatProjView()</h2>
+<a id="a125f39c7b172dd65fc60d82477dfe7fb" name="a125f39c7b172dd65fc60d82477dfe7fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a125f39c7b172dd65fc60d82477dfe7fb">&#9670;&#160;</a></span>mDoMtx_concatProjView()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">asm void mDoMtx_concatProjView </td>
+          <td class="memname">void mDoMtx_concatProjView </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> const (*)&#160;</td>
-          <td class="paramname"><em>param_0</em>[4], </td>
+          <td class="paramtype">const <a class="el" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> const (*)&#160;</td>
-          <td class="paramname"><em>param_1</em>[4], </td>
+          <td class="paramtype">const <a class="el" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a>&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>(*)&#160;</td>
-          <td class="paramname"><em>param_2</em>[4]&#160;</td>
+          <td class="paramtype"><a class="el" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a>&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -682,29 +677,29 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ab664f1dfa08b23753cf34bc05aefa720" name="ab664f1dfa08b23753cf34bc05aefa720"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab664f1dfa08b23753cf34bc05aefa720">&#9670;&#160;</a></span>mDoMtx_QuatConcat()</h2>
+<a id="abc13685518a7094f504b831933df4611" name="abc13685518a7094f504b831933df4611"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc13685518a7094f504b831933df4611">&#9670;&#160;</a></span>mDoMtx_QuatConcat()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">asm void mDoMtx_QuatConcat </td>
+          <td class="memname">void mDoMtx_QuatConcat </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structQuaternion.html">Quaternion</a> const *&#160;</td>
-          <td class="paramname"><em>param_0</em>, </td>
+          <td class="paramname"><em>a</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structQuaternion.html">Quaternion</a> const *&#160;</td>
-          <td class="paramname"><em>param_1</em>, </td>
+          <td class="paramname"><em>b</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structQuaternion.html">Quaternion</a> *&#160;</td>
-          <td class="paramname"><em>param_2</em>&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -942,6 +937,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p ><a class="el" href="m__Do__mtx_8cpp.html">m_Do_mtx.cpp</a> Matrix Helper Functions </p>
 
 </div>
 </div>

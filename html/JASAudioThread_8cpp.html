@@ -89,6 +89,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="JASAudioThread_8h_source.html">JSystem/JAudio2/JASAudioThread.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="JASDriverIF_8h_source.html">JSystem/JAudio2/JASDriverIF.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="JASHeapCtrl_8h_source.html">JSystem/JAudio2/JASHeapCtrl.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="JKRSolidHeap_8h_source.html">JSystem/JKernel/JKRSolidHeap.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="OS_8h_source.html">dolphin/os/OS.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="dsp_8h_source.html">dolphin/dsp/dsp.h</a>&quot;</code><br />
@@ -106,11 +109,7 @@ $(function() {
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASProbe.html">JASProbe</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASMemPool.html">JASMemPool&lt; A0 &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASMemPool__MultiThreaded____template2.html">JASMemPool_MultiThreaded__template2</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASGenericMemPool.html">JASGenericMemPool</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASDsp.html">JASDsp</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -119,10 +118,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLock.html">Lock</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASChannel.html">JASChannel</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASMemPool__MultiThreaded.html">JASMemPool_MultiThreaded&lt; A0 &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJASPoolAllocObject__MultiThreaded.html">JASPoolAllocObject_MultiThreaded&lt; T &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -200,8 +195,6 @@ Variables</h2></td></tr>
 <tr class="separator:a5ec5e1d1ec38494498d5f453a709c09a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98b58c165eacfc265404d698e5bc9525"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAudioThread_8cpp.html#a98b58c165eacfc265404d698e5bc9525">__OSReport_disable</a></td></tr>
 <tr class="separator:a98b58c165eacfc265404d698e5bc9525"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65ddb3674b26abbdc607a9ca1278da20"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJKRHeap.html">JKRHeap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAudioThread_8cpp.html#a65ddb3674b26abbdc607a9ca1278da20">JASDram</a></td></tr>
-<tr class="separator:a65ddb3674b26abbdc607a9ca1278da20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab958d2dc816e1237919dbf1762dca7ee"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAudioThread_8cpp.html#ab958d2dc816e1237919dbf1762dca7ee">stringBase_8039B338</a> = &quot;SFR_DSP&quot;</td></tr>
 <tr class="separator:ab958d2dc816e1237919dbf1762dca7ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab47d38a7d05635034a19c6eea615ec9a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAudioThread_8cpp.html#ab47d38a7d05635034a19c6eea615ec9a">lit_205</a> [12+4]</td></tr>
@@ -746,28 +739,6 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">char const* const JASAudioThread__stringBase0</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a65ddb3674b26abbdc607a9ca1278da20" name="a65ddb3674b26abbdc607a9ca1278da20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65ddb3674b26abbdc607a9ca1278da20">&#9670;&#160;</a></span>JASDram</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structJKRHeap.html">JKRHeap</a>* JASDram</td>
         </tr>
       </table>
   </td>
