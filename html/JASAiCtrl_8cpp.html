@@ -89,19 +89,23 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="JASAiCtrl_8h_source.html">JSystem/JAudio2/JASAiCtrl.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="JASAudioThread_8h_source.html">JSystem/JAudio2/JASAudioThread.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="JASCalc_8h_source.html">JSystem/JAudio2/JASCalc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="JASCriticalSection_8h_source.html">JSystem/JAudio2/JASCriticalSection.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="JASDSPInterface_8h_source.html">JSystem/JAudio2/JASDSPInterface.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="JASHeapCtrl_8h_source.html">JSystem/JAudio2/JASHeapCtrl.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="JASLfo_8h_source.html">JSystem/JAudio2/JASLfo.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="JASProbe_8h_source.html">JSystem/JAudio2/JASProbe.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="JASReport_8h_source.html">JSystem/JAudio2/JASReport.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="JKRSolidHeap_8h_source.html">JSystem/JKernel/JKRSolidHeap.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ai_8h_source.html">dolphin/ai/ai.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="OSCache_8h_source.html">dolphin/os/OSCache.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="OSTime_8h_source.html">dolphin/os/OSTime.h</a>&quot;</code><br />
 <code>#include &quot;asm/JSystem/JAudio2/JASAiCtrl/initAI__9JASDriverFPFv_v.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/JAudio2/JASAiCtrl/startDMA__9JASDriverFv.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/JAudio2/JASAiCtrl/stopDMA__9JASDriverFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JAudio2/JASAiCtrl/setOutputRate__9JASDriverF13JASOutputRate.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/JAudio2/JASAiCtrl/updateDac__9JASDriverFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JAudio2/JASAiCtrl/updateDSP__9JASDriverFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JAudio2/JASAiCtrl/readDspBuffer__9JASDriverFPsUl.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/JAudio2/JASAiCtrl/finishDSPFrame__9JASDriverFv.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/JAudio2/JASAiCtrl/registerMixCallback__9JASDriverFPFl_Ps10JASMixMode.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/JAudio2/JASAiCtrl/getDacRate__9JASDriverFv.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/JAudio2/JASAiCtrl/getDacSize__9JASDriverFv.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/JAudio2/JASAiCtrl/getFrameSamples__9JASDriverFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JAudio2/JASAiCtrl/mixMonoTrack__9JASDriverFPsUlPFl_Ps.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JAudio2/JASAiCtrl/mixMonoTrackWide__9JASDriverFPsUlPFl_Ps.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JAudio2/JASAiCtrl/mixExtraTrack__9JASDriverFPsUlPFl_Ps.s&quot;</code><br />
@@ -111,35 +115,17 @@ $(function() {
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="JASAiCtrl_8cpp__incl.svg" width="100%" height="536"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="JASAiCtrl_8cpp__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRHeap.html">JKRHeap</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASProbe.html">JASProbe</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASPortCmd.html">JASPortCmd</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASOutputRate.html">JASOutputRate</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASMixMode.html">JASMixMode</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASLfo.html">JASLfo</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASDsp.html">JASDsp</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASDriver.html">JASDriver</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASDSPChannel.html">JASDSPChannel</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASChannel.html">JASChannel</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASCalc.html">JASCalc</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASAudioThread.html">JASAudioThread</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -170,14 +156,14 @@ Functions</h2></td></tr>
 <tr class="separator:aedba932e809fe0c197c86e0d7e36ddb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a047250390658e9c98aabb06f64eeec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a8a047250390658e9c98aabb06f64eeec">getFrameSamples__9JASDriverFv</a> ()</td></tr>
 <tr class="separator:a8a047250390658e9c98aabb06f64eeec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4fdbdd5797c6479d0b14b3488b53a0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#ac4fdbdd5797c6479d0b14b3488b53a0f">mixMonoTrack__9JASDriverFPsUlPFl_Ps</a> ()</td></tr>
-<tr class="separator:ac4fdbdd5797c6479d0b14b3488b53a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fc582ba05df7c6b9d62ec441a92a649"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a4fc582ba05df7c6b9d62ec441a92a649">mixMonoTrackWide__9JASDriverFPsUlPFl_Ps</a> ()</td></tr>
-<tr class="separator:a4fc582ba05df7c6b9d62ec441a92a649"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a414009a9e4af19a64497f7c1c1e331f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a414009a9e4af19a64497f7c1c1e331f1">mixExtraTrack__9JASDriverFPsUlPFl_Ps</a> ()</td></tr>
-<tr class="separator:a414009a9e4af19a64497f7c1c1e331f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac85296aeea86592b52033d01a4ad5907"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#ac85296aeea86592b52033d01a4ad5907">mixInterleaveTrack__9JASDriverFPsUlPFl_Ps</a> ()</td></tr>
-<tr class="separator:ac85296aeea86592b52033d01a4ad5907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2c00d2fb043e9c36d6520500958f116"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#aa2c00d2fb043e9c36d6520500958f116">mixMonoTrack</a> (<a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> *, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>, <a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> *(*)(<a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>))</td></tr>
+<tr class="separator:aa2c00d2fb043e9c36d6520500958f116"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a537d9875415e3687a8e3f2e7de12c024"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a537d9875415e3687a8e3f2e7de12c024">mixMonoTrackWide</a> (<a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> *, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>, <a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> *(*)(<a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>))</td></tr>
+<tr class="separator:a537d9875415e3687a8e3f2e7de12c024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4e6483f59b1f57b07a94f99c8fcac55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#af4e6483f59b1f57b07a94f99c8fcac55">mixExtraTrack</a> (<a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> *, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>, <a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> *(*)(<a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>))</td></tr>
+<tr class="separator:af4e6483f59b1f57b07a94f99c8fcac55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa1b5d23d1d9e043b366d1e591b671cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#aaa1b5d23d1d9e043b366d1e591b671cf">mixInterleaveTrack</a> (<a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> *, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>, <a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> *(*)(<a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>))</td></tr>
+<tr class="separator:aaa1b5d23d1d9e043b366d1e591b671cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64acbd847772e5e2ed88d84de2036dfc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a64acbd847772e5e2ed88d84de2036dfc">getSubFrameCounter__9JASDriverFv</a> ()</td></tr>
 <tr class="separator:a64acbd847772e5e2ed88d84de2036dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29788c2dc5fe082e47f34035403272d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a29788c2dc5fe082e47f34035403272d9">imixcopy__7JASCalcFPCsPCsPsUl</a> ()</td></tr>
@@ -214,28 +200,6 @@ Functions</h2></td></tr>
 <tr class="separator:ab5efcf376ffface3c3e116a3a11e9f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a705148c8961d58e1331fd2c53e823e37"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a705148c8961d58e1331fd2c53e823e37">__nwa__FUlP7JKRHeapi</a> ()</td></tr>
 <tr class="separator:a705148c8961d58e1331fd2c53e823e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32d5d7a69e38c98d1817a890960c30b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a32d5d7a69e38c98d1817a890960c30b7">DCInvalidateRange</a> ()</td></tr>
-<tr class="separator:a32d5d7a69e38c98d1817a890960c30b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0440acad7d135008a79a898fb9e03f45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a0440acad7d135008a79a898fb9e03f45">DCStoreRange</a> ()</td></tr>
-<tr class="separator:a0440acad7d135008a79a898fb9e03f45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65b7dd4c9756f26d16dcf8f0dedb07bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a65b7dd4c9756f26d16dcf8f0dedb07bf">OSDisableInterrupts</a> ()</td></tr>
-<tr class="separator:a65b7dd4c9756f26d16dcf8f0dedb07bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14b5cc2befa83d8710fba14f4de14fd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a14b5cc2befa83d8710fba14f4de14fd9">OSRestoreInterrupts</a> ()</td></tr>
-<tr class="separator:a14b5cc2befa83d8710fba14f4de14fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5396361b271662929897def7eed6de62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a5396361b271662929897def7eed6de62">OSGetTick</a> ()</td></tr>
-<tr class="separator:a5396361b271662929897def7eed6de62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7656bf91c03fc551ab5182fe5487925d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a7656bf91c03fc551ab5182fe5487925d">AIRegisterDMACallback</a> ()</td></tr>
-<tr class="separator:a7656bf91c03fc551ab5182fe5487925d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3209617feaf1974f41ce286abde466be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a3209617feaf1974f41ce286abde466be">AIInitDMA</a> ()</td></tr>
-<tr class="separator:a3209617feaf1974f41ce286abde466be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96ebc3a6a5650b3caa7b7a05dca1789e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a96ebc3a6a5650b3caa7b7a05dca1789e">AIStartDMA</a> ()</td></tr>
-<tr class="separator:a96ebc3a6a5650b3caa7b7a05dca1789e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae42468b9e57248fb895bbaf6d09baba9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#ae42468b9e57248fb895bbaf6d09baba9">AIStopDMA</a> ()</td></tr>
-<tr class="separator:ae42468b9e57248fb895bbaf6d09baba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18272b33bc6bb21c1a2d23d4fc78871e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a18272b33bc6bb21c1a2d23d4fc78871e">AISetDSPSampleRate</a> ()</td></tr>
-<tr class="separator:a18272b33bc6bb21c1a2d23d4fc78871e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa13a08f30739d1a04b380439596efade"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#aa13a08f30739d1a04b380439596efade">AIInit</a> ()</td></tr>
-<tr class="separator:aa13a08f30739d1a04b380439596efade"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58fb5b02bb14a176b115397be03bbe99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a58fb5b02bb14a176b115397be03bbe99">_savegpr_25</a> ()</td></tr>
 <tr class="separator:a58fb5b02bb14a176b115397be03bbe99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8b2b992407cf48ba98905b417420685"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#aa8b2b992407cf48ba98905b417420685">_savegpr_27</a> ()</td></tr>
@@ -252,7 +216,7 @@ Functions</h2></td></tr>
 <tr class="separator:a3f61243ebf5cbb2ff90548d397b16772"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abed5bd59c54272a132a5b4da4beff66d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#abed5bd59c54272a132a5b4da4beff66d">_restgpr_29</a> ()</td></tr>
 <tr class="separator:abed5bd59c54272a132a5b4da4beff66d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fba6bc821b0c5ec8a6c933ec9929a96"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a4fba6bc821b0c5ec8a6c933ec9929a96">COMPILER_STRIP_GATE</a> (0x8039B2E0, &amp;<a class="el" href="structJASDriver.html#a34a2dcaa5faf32047376405bacf01438">JASDriver::sMixFuncs</a>)</td></tr>
+<tr class="memitem:a4fba6bc821b0c5ec8a6c933ec9929a96"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a4fba6bc821b0c5ec8a6c933ec9929a96">COMPILER_STRIP_GATE</a> (0x8039B2E0, &amp;JASDriver::sMixFuncs)</td></tr>
 <tr class="separator:a4fba6bc821b0c5ec8a6c933ec9929a96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
@@ -291,30 +255,24 @@ Variables</h2></td></tr>
 <tr class="separator:a99e78db15e26072c5c3b7a4210518c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc5d2001ecb5e29e97bcf333cc7168a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#acc5d2001ecb5e29e97bcf333cc7168a3">sFreeRunLfo__6JASLfo</a> [24]</td></tr>
 <tr class="separator:acc5d2001ecb5e29e97bcf333cc7168a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a7a3822f0b02c17ed6f8a99b46e7618"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a4a7a3822f0b02c17ed6f8a99b46e7618">JASDram</a> [4]</td></tr>
-<tr class="separator:a4a7a3822f0b02c17ed6f8a99b46e7618"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85eb03d94ec76ec20f13232d271307e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a85eb03d94ec76ec20f13232d271307e9">snIntCount__14JASAudioThread</a> [4+4]</td></tr>
 <tr class="separator:a85eb03d94ec76ec20f13232d271307e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a1bf1322a2ae8742093fef8d9e41af6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a2a1bf1322a2ae8742093fef8d9e41af6">data_804507A8</a> = 0x03000000</td></tr>
-<tr class="separator:a2a1bf1322a2ae8742093fef8d9e41af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cb46051802771a17f4954b2d8b8d041"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a2cb46051802771a17f4954b2d8b8d041">data_804507A8</a> = 3</td></tr>
+<tr class="separator:a2cb46051802771a17f4954b2d8b8d041"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12e5c0bf73a694e31bc908d396a552cc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a12e5c0bf73a694e31bc908d396a552cc">lit_233</a> = 32000.0f</td></tr>
 <tr class="separator:a12e5c0bf73a694e31bc908d396a552cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8f40c642c3fde113dd31bd668458c4b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#af8f40c642c3fde113dd31bd668458c4b">lit_234</a> = 48000.0f</td></tr>
 <tr class="separator:af8f40c642c3fde113dd31bd668458c4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0566187109c3df95786c87e07b5396cf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a0566187109c3df95786c87e07b5396cf">lit_235</a> = 1.0008896589279175f</td></tr>
 <tr class="separator:a0566187109c3df95786c87e07b5396cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9232122a7e485223c607750f4bb7ca01"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a9232122a7e485223c607750f4bb7ca01">dacp</a> [4]</td></tr>
-<tr class="separator:a9232122a7e485223c607750f4bb7ca01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4817f6a67c0a0177df1f578cc0ba1c0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#ac4817f6a67c0a0177df1f578cc0ba1c0">data_804512CC</a> [4]</td></tr>
-<tr class="separator:ac4817f6a67c0a0177df1f578cc0ba1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1eab21326d5eb5896e38310763b3a1a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#af1eab21326d5eb5896e38310763b3a1a">stringBase_8039B2F0</a> = &quot;SFR-UPDATE&quot;</td></tr>
 <tr class="separator:af1eab21326d5eb5896e38310763b3a1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe91e43baa73af4391199dd4f8023b78"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#afe91e43baa73af4391199dd4f8023b78">stringBase_8039B2FB</a> = &quot;kill DSP channel&quot;</td></tr>
 <tr class="separator:afe91e43baa73af4391199dd4f8023b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac73ce2d8d82531ccaf2fd60f2e1c1bbe"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#ac73ce2d8d82531ccaf2fd60f2e1c1bbe">history</a> [40]</td></tr>
-<tr class="separator:ac73ce2d8d82531ccaf2fd60f2e1c1bbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72625716aeefdcc4852269e62bd35901"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a72625716aeefdcc4852269e62bd35901">old_time</a> [4]</td></tr>
-<tr class="separator:a72625716aeefdcc4852269e62bd35901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a174356167b6ecb5152e2eb458a320f00"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a174356167b6ecb5152e2eb458a320f00">history</a> [10]</td></tr>
+<tr class="separator:a174356167b6ecb5152e2eb458a320f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96c098d7b21a23db23bdb68254cf5240"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a96c098d7b21a23db23bdb68254cf5240">old_time</a></td></tr>
+<tr class="separator:a96c098d7b21a23db23bdb68254cf5240"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5c97123bce11fe2c6a0d39ba91caa78"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#ae5c97123bce11fe2c6a0d39ba91caa78">data_804512D4</a> [4]</td></tr>
 <tr class="separator:ae5c97123bce11fe2c6a0d39ba91caa78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f166cef60570d5d0318281c594e1bfe"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAiCtrl_8cpp.html#a1f166cef60570d5d0318281c594e1bfe">lit_275</a> = 11.0f / 10.0f</td></tr>
@@ -488,108 +446,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aa13a08f30739d1a04b380439596efade" name="aa13a08f30739d1a04b380439596efade"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa13a08f30739d1a04b380439596efade">&#9670;&#160;</a></span>AIInit()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void AIInit </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a3209617feaf1974f41ce286abde466be" name="a3209617feaf1974f41ce286abde466be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3209617feaf1974f41ce286abde466be">&#9670;&#160;</a></span>AIInitDMA()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void AIInitDMA </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7656bf91c03fc551ab5182fe5487925d" name="a7656bf91c03fc551ab5182fe5487925d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7656bf91c03fc551ab5182fe5487925d">&#9670;&#160;</a></span>AIRegisterDMACallback()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void AIRegisterDMACallback </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a18272b33bc6bb21c1a2d23d4fc78871e" name="a18272b33bc6bb21c1a2d23d4fc78871e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18272b33bc6bb21c1a2d23d4fc78871e">&#9670;&#160;</a></span>AISetDSPSampleRate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void AISetDSPSampleRate </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a96ebc3a6a5650b3caa7b7a05dca1789e" name="a96ebc3a6a5650b3caa7b7a05dca1789e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96ebc3a6a5650b3caa7b7a05dca1789e">&#9670;&#160;</a></span>AIStartDMA()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void AIStartDMA </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae42468b9e57248fb895bbaf6d09baba9" name="ae42468b9e57248fb895bbaf6d09baba9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae42468b9e57248fb895bbaf6d09baba9">&#9670;&#160;</a></span>AIStopDMA()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void AIStopDMA </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a62421cf3ca91caf08088f49ddf8fdc05" name="a62421cf3ca91caf08088f49ddf8fdc05"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a62421cf3ca91caf08088f49ddf8fdc05">&#9670;&#160;</a></span>bzero__7JASCalcFPvUl()</h2>
 
@@ -622,47 +478,13 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">&amp;<a class="el" href="structJASDriver.html#a34a2dcaa5faf32047376405bacf01438">JASDriver::sMixFuncs</a>&#160;</td>
+          <td class="paramtype">&amp;JASDriver::sMixFuncs&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a32d5d7a69e38c98d1817a890960c30b7" name="a32d5d7a69e38c98d1817a890960c30b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32d5d7a69e38c98d1817a890960c30b7">&#9670;&#160;</a></span>DCInvalidateRange()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void DCInvalidateRange </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0440acad7d135008a79a898fb9e03f45" name="a0440acad7d135008a79a898fb9e03f45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0440acad7d135008a79a898fb9e03f45">&#9670;&#160;</a></span>DCStoreRange()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void DCStoreRange </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -952,119 +774,136 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a414009a9e4af19a64497f7c1c1e331f1" name="a414009a9e4af19a64497f7c1c1e331f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a414009a9e4af19a64497f7c1c1e331f1">&#9670;&#160;</a></span>mixExtraTrack__9JASDriverFPsUlPFl_Ps()</h2>
+<a id="af4e6483f59b1f57b07a94f99c8fcac55" name="af4e6483f59b1f57b07a94f99c8fcac55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4e6483f59b1f57b07a94f99c8fcac55">&#9670;&#160;</a></span>mixExtraTrack()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void mixExtraTrack__9JASDriverFPsUlPFl_Ps </td>
+          <td class="memname">void mixExtraTrack </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> *&#160;</td>
+          <td class="paramname">*)(s32&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ac85296aeea86592b52033d01a4ad5907" name="ac85296aeea86592b52033d01a4ad5907"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac85296aeea86592b52033d01a4ad5907">&#9670;&#160;</a></span>mixInterleaveTrack__9JASDriverFPsUlPFl_Ps()</h2>
+<a id="aaa1b5d23d1d9e043b366d1e591b671cf" name="aaa1b5d23d1d9e043b366d1e591b671cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa1b5d23d1d9e043b366d1e591b671cf">&#9670;&#160;</a></span>mixInterleaveTrack()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void mixInterleaveTrack__9JASDriverFPsUlPFl_Ps </td>
+          <td class="memname">void mixInterleaveTrack </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> *&#160;</td>
+          <td class="paramname">*)(s32&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ac4fdbdd5797c6479d0b14b3488b53a0f" name="ac4fdbdd5797c6479d0b14b3488b53a0f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4fdbdd5797c6479d0b14b3488b53a0f">&#9670;&#160;</a></span>mixMonoTrack__9JASDriverFPsUlPFl_Ps()</h2>
+<a id="aa2c00d2fb043e9c36d6520500958f116" name="aa2c00d2fb043e9c36d6520500958f116"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2c00d2fb043e9c36d6520500958f116">&#9670;&#160;</a></span>mixMonoTrack()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void mixMonoTrack__9JASDriverFPsUlPFl_Ps </td>
+          <td class="memname">void mixMonoTrack </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> *&#160;</td>
+          <td class="paramname">*)(s32&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a4fc582ba05df7c6b9d62ec441a92a649" name="a4fc582ba05df7c6b9d62ec441a92a649"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4fc582ba05df7c6b9d62ec441a92a649">&#9670;&#160;</a></span>mixMonoTrackWide__9JASDriverFPsUlPFl_Ps()</h2>
+<a id="a537d9875415e3687a8e3f2e7de12c024" name="a537d9875415e3687a8e3f2e7de12c024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a537d9875415e3687a8e3f2e7de12c024">&#9670;&#160;</a></span>mixMonoTrackWide()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void mixMonoTrackWide__9JASDriverFPsUlPFl_Ps </td>
+          <td class="memname">void mixMonoTrackWide </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> *&#160;</td>
+          <td class="paramname">, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a65b7dd4c9756f26d16dcf8f0dedb07bf" name="a65b7dd4c9756f26d16dcf8f0dedb07bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65b7dd4c9756f26d16dcf8f0dedb07bf">&#9670;&#160;</a></span>OSDisableInterrupts()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">void OSDisableInterrupts </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramname">, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5396361b271662929897def7eed6de62" name="a5396361b271662929897def7eed6de62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5396361b271662929897def7eed6de62">&#9670;&#160;</a></span>OSGetTick()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">void OSGetTick </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> *&#160;</td>
+          <td class="paramname">*)(s32&#160;</td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a14b5cc2befa83d8710fba14f4de14fd9" name="a14b5cc2befa83d8710fba14f4de14fd9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14b5cc2befa83d8710fba14f4de14fd9">&#9670;&#160;</a></span>OSRestoreInterrupts()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">void OSRestoreInterrupts </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
           <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1307,8 +1146,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a9232122a7e485223c607750f4bb7ca01" name="a9232122a7e485223c607750f4bb7ca01"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9232122a7e485223c607750f4bb7ca01">&#9670;&#160;</a></span>dacp</h2>
+<a id="a2cb46051802771a17f4954b2d8b8d041" name="a2cb46051802771a17f4954b2d8b8d041"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cb46051802771a17f4954b2d8b8d041">&#9670;&#160;</a></span>data_804507A8</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1317,51 +1156,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> dacp[4]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2a1bf1322a2ae8742093fef8d9e41af6" name="a2a1bf1322a2ae8742093fef8d9e41af6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a1bf1322a2ae8742093fef8d9e41af6">&#9670;&#160;</a></span>data_804507A8</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> data_804507A8 = 0x03000000</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac4817f6a67c0a0177df1f578cc0ba1c0" name="ac4817f6a67c0a0177df1f578cc0ba1c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4817f6a67c0a0177df1f578cc0ba1c0">&#9670;&#160;</a></span>data_804512CC</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> data_804512CC[4]</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> data_804507A8 = 3</td>
         </tr>
       </table>
   </td>
@@ -1409,8 +1204,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ac73ce2d8d82531ccaf2fd60f2e1c1bbe" name="ac73ce2d8d82531ccaf2fd60f2e1c1bbe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac73ce2d8d82531ccaf2fd60f2e1c1bbe">&#9670;&#160;</a></span>history</h2>
+<a id="a174356167b6ecb5152e2eb458a320f00" name="a174356167b6ecb5152e2eb458a320f00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a174356167b6ecb5152e2eb458a320f00">&#9670;&#160;</a></span>history</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1419,7 +1214,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> history[40]</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> history[10]</td>
         </tr>
       </table>
   </td>
@@ -1429,9 +1224,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00, 0x0F, 0x42, 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
-<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
-<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x000F4240,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -1447,28 +1240,6 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">char const* const JASAiCtrl__stringBase0</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4a7a3822f0b02c17ed6f8a99b46e7618" name="a4a7a3822f0b02c17ed6f8a99b46e7618"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a7a3822f0b02c17ed6f8a99b46e7618">&#9670;&#160;</a></span>JASDram</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JASDram[4]</td>
         </tr>
       </table>
   </td>
@@ -1631,8 +1402,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a72625716aeefdcc4852269e62bd35901" name="a72625716aeefdcc4852269e62bd35901"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72625716aeefdcc4852269e62bd35901">&#9670;&#160;</a></span>old_time</h2>
+<a id="a96c098d7b21a23db23bdb68254cf5240" name="a96c098d7b21a23db23bdb68254cf5240"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96c098d7b21a23db23bdb68254cf5240">&#9670;&#160;</a></span>old_time</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1641,7 +1412,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> old_time[4]</td>
+          <td class="memname"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> old_time</td>
         </tr>
       </table>
   </td>

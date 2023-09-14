@@ -9,5 +9,6 @@ var searchData=
   ['targsupp_2ec_6',['targsupp.c',['../targsupp_8c.html',1,'']]],
   ['targsupp_2eh_7',['targsupp.h',['../targsupp_8h.html',1,'']]],
   ['tcolor_2eh_8',['TColor.h',['../TColor_8h.html',1,'']]],
-  ['types_2eh_9',['types.h',['../types_8h.html',1,'']]]
+  ['tposition3_2ehh_9',['TPosition3.hh',['../TPosition3_8hh.html',1,'']]],
+  ['types_2eh_10',['types.h',['../types_8h.html',1,'']]]
 ];

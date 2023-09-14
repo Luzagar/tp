@@ -84,18 +84,20 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">JASHeapCtrl.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="JSUList_8h_source.html">JSystem/JSupport/JSUList.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="OSInterrupt_8h_source.html">dolphin/os/OSInterrupt.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="OSMutex_8h_source.html">dolphin/os/OSMutex.h</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for JASHeapCtrl.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="JASHeapCtrl_8h__incl.svg" width="382" height="432"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="JASHeapCtrl_8h__incl.svg" width="490" height="432"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -111,7 +113,7 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASHeap.html">JASHeap</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASHeap.html">JASHeap</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASGenericMemPool.html">JASGenericMemPool</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,11 +132,34 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
+<tr class="memitem:namespaceJASKernel"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceJASKernel.html">JASKernel</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespaceJASThreadingModel"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceJASThreadingModel.html">JASThreadingModel</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a6f15b170422f19a56cf537fc8e307fe2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceJASKernel.html#a6f15b170422f19a56cf537fc8e307fe2">JASKernel::setupRootHeap</a> (<a class="el" href="structJKRSolidHeap.html">JKRSolidHeap</a> *, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>)</td></tr>
+<tr class="separator:a6f15b170422f19a56cf537fc8e307fe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ee61af5d8d14ad5879b493d44831530"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJKRHeap.html">JKRHeap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceJASKernel.html#a8ee61af5d8d14ad5879b493d44831530">JASKernel::getSystemHeap</a> ()</td></tr>
+<tr class="separator:a8ee61af5d8d14ad5879b493d44831530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0a5cfc5c3c6f58471bfb41267f2f685"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceJASKernel.html#ac0a5cfc5c3c6f58471bfb41267f2f685">JASKernel::getCommandHeap</a> ()</td></tr>
+<tr class="separator:ac0a5cfc5c3c6f58471bfb41267f2f685"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76950240a4b4e396ec01c47ba3204f2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceJASKernel.html#a76950240a4b4e396ec01c47ba3204f2d">JASKernel::setupAramHeap</a> (<a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>)</td></tr>
+<tr class="separator:a76950240a4b4e396ec01c47ba3204f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95767e95b41621acd6a05779946d0fc9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJASHeap.html">JASHeap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceJASKernel.html#a95767e95b41621acd6a05779946d0fc9">JASKernel::getAramHeap</a> ()</td></tr>
+<tr class="separator:a95767e95b41621acd6a05779946d0fc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:a722f755a873a797c9d44ffeef003fa50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceJASKernel.html#a722f755a873a797c9d44ffeef003fa50">JASKernel::audioAramHeap</a> [68]</td></tr>
+<tr class="separator:a722f755a873a797c9d44ffeef003fa50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39a571470696edde78d780eee6452159"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceJASKernel.html#a39a571470696edde78d780eee6452159">JASKernel::sAramBase</a> [4]</td></tr>
+<tr class="separator:a39a571470696edde78d780eee6452159"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1691704ba2291e68a6cadfba77dc1da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJKRHeap.html">JKRHeap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceJASKernel.html#ab1691704ba2291e68a6cadfba77dc1da">JASKernel::sSystemHeap</a></td></tr>
+<tr class="separator:ab1691704ba2291e68a6cadfba77dc1da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bfa1563e4875d61b5f9cae8e4de95b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceJASKernel.html#a9bfa1563e4875d61b5f9cae8e4de95b1">JASKernel::sCommandHeap</a> [4]</td></tr>
+<tr class="separator:a9bfa1563e4875d61b5f9cae8e4de95b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59a4b2bba8b0965789ee1b838b4d3890"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJKRSolidHeap.html">JKRSolidHeap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASHeapCtrl_8h.html#a59a4b2bba8b0965789ee1b838b4d3890">JASDram</a></td></tr>
 <tr class="separator:a59a4b2bba8b0965789ee1b838b4d3890"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>

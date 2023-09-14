@@ -29,5 +29,6 @@ var searchData=
   ['fpscrunion_26',['FpscrUnion',['../unionFpscrUnion.html',1,'']]],
   ['fstentry_27',['FSTEntry',['../structFSTEntry.html',1,'']]],
   ['functable_28',['FuncTable',['../structFuncTable.html',1,'']]],
-  ['fxlineconfig_5f_29',['FxlineConfig_',['../structJASDsp_1_1FxlineConfig__.html',1,'JASDsp']]]
+  ['fxbuf_29',['FxBuf',['../structJASDsp_1_1FxBuf.html',1,'JASDsp']]],
+  ['fxlineconfig_5f_30',['FxlineConfig_',['../structJASDsp_1_1FxlineConfig__.html',1,'JASDsp']]]
 ];

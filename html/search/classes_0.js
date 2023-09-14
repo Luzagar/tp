@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['_5f_5fbitset_5fbase_0',['__bitset_base',['../structstd_1_1____bitset__base.html',1,'std']]],
-  ['_5f_5fbitset_5fbase_5f_5ftemplate0_1',['__bitset_base__template0',['../structstd_1_1____bitset__base____template0.html',1,'std']]],
+  ['_5f_5fbitset_5fbase_0',['__bitset_base',['../classstd_1_1____bitset__base.html',1,'std']]],
+  ['_5f_5fbitset_5fbase_3c_28n_20_2d_201_29_2fsizeof_28size_5ft_29_2b1_20_3e_1',['__bitset_base&lt;(N - 1)/sizeof(size_t)+1 &gt;',['../classstd_1_1____bitset__base.html',1,'std']]],
   ['_5f_5fd_5ftimer_5finfo_5fc_2',['__d_timer_info_c',['../class____d__timer__info__c.html',1,'']]],
   ['_5f_5fpartial_5farray_5fdestructor_3',['__partial_array_destructor',['../struct____partial__array__destructor.html',1,'']]],
   ['_5f_5fptmf_4',['__ptmf',['../struct____ptmf.html',1,'']]],

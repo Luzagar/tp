@@ -14,8 +14,10 @@ var searchData=
   ['j3dsysdrawbuffer_11',['J3DSysDrawBuffer',['../J3DSys_8h.html#a86b42b9786c8ef48baa9e9d1455d1392',1,'J3DSys.h']]],
   ['j3dsysflag_12',['J3DSysFlag',['../J3DSys_8h.html#a26200bc06a3935eb5d34b04a21d37c8b',1,'J3DSys.h']]],
   ['jasaudiomessage_13',['JASAudioMessage',['../JASAudioThread_8h.html#ac11d3651aef0eb9a6920dc7bac750bd8',1,'JASAudioThread.h']]],
-  ['jkrexpandswitch_14',['JKRExpandSwitch',['../JKRDvdRipper_8h.html#a3a81ab253efe80892d32be96b8a9dec2',1,'JKRDvdRipper.h']]],
-  ['jkrmembreakflag_15',['JKRMemBreakFlag',['../JKRMemArchive_8h.html#a2a0bd9c14b0a5e25b0a8d59556ac8dd2',1,'JKRMemArchive.h']]],
-  ['jsustreamseekfrom_16',['JSUStreamSeekFrom',['../JSUInputStream_8h.html#a858865037a136681f994fcd5565c1404',1,'JSUInputStream.h']]],
-  ['juttransparency_17',['JUTTransparency',['../JUTPalette_8h.html#a491b4d113f1985ddc5da78693ee35d61',1,'JUTPalette.h']]]
+  ['jasmixmode_14',['JASMixMode',['../JASAiCtrl_8h.html#a0afb4e822ef485ad7cc403ceea779b63',1,'JASAiCtrl.h']]],
+  ['jasoutputrate_15',['JASOutputRate',['../JASAiCtrl_8h.html#a17798305b6b8f32e641d4de5c1382286',1,'JASAiCtrl.h']]],
+  ['jkrexpandswitch_16',['JKRExpandSwitch',['../JKRDvdRipper_8h.html#a3a81ab253efe80892d32be96b8a9dec2',1,'JKRDvdRipper.h']]],
+  ['jkrmembreakflag_17',['JKRMemBreakFlag',['../JKRMemArchive_8h.html#a2a0bd9c14b0a5e25b0a8d59556ac8dd2',1,'JKRMemArchive.h']]],
+  ['jsustreamseekfrom_18',['JSUStreamSeekFrom',['../JSUInputStream_8h.html#a858865037a136681f994fcd5565c1404',1,'JSUInputStream.h']]],
+  ['juttransparency_19',['JUTTransparency',['../JUTPalette_8h.html#a491b4d113f1985ddc5da78693ee35d61',1,'JUTPalette.h']]]
 ];

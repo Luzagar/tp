@@ -127,5 +127,21 @@ var searchData=
   ['msr_5fri_124',['MSR_RI',['../PPCArch_8h.html#a0960208e3de952801488883144eae96b',1,'PPCArch.h']]],
   ['msr_5fri_5fbit_125',['MSR_RI_BIT',['../PPCArch_8h.html#a16b3c315c4ab9fb9ffe8241231fc376b',1,'PPCArch.h']]],
   ['msr_5fse_126',['MSR_SE',['../PPCArch_8h.html#a48d9a48243b7b0da81ee90deb31900bc',1,'PPCArch.h']]],
-  ['msr_5fse_5fbit_127',['MSR_SE_BIT',['../PPCArch_8h.html#ab4429cbf1599af17c98933c4631efbe4',1,'PPCArch.h']]]
+  ['msr_5fse_5fbit_127',['MSR_SE_BIT',['../PPCArch_8h.html#ab4429cbf1599af17c98933c4631efbe4',1,'PPCArch.h']]],
+  ['mtxconcat_128',['MTXConcat',['../mtx_8h.html#a1a6c99923def60e65ace12e1860bbd57',1,'mtx.h']]],
+  ['mtxcopy_129',['MTXCopy',['../mtx_8h.html#abeefab06a4321dc6dee01a632eac80f4',1,'mtx.h']]],
+  ['mtxidentity_130',['MTXIdentity',['../mtx_8h.html#ad9d076a2af1091bc359c73ff6b8fd9f0',1,'mtx.h']]],
+  ['mtxinverse_131',['MTXInverse',['../mtx_8h.html#a2fa20bb7213655a9097b935318330806',1,'mtx.h']]],
+  ['mtxmultvec_132',['MTXMultVec',['../mtxvec_8h.html#ae94b1e46f992dd2a029eaf378ad26a53',1,'mtxvec.h']]],
+  ['mtxmultvecarray_133',['MTXMultVecArray',['../mtxvec_8h.html#ac4da8ba8f28cfb8d9d113f27f41f3833',1,'mtxvec.h']]],
+  ['mtxmultvecarraysr_134',['MTXMultVecArraySR',['../mtxvec_8h.html#a3a8d202b52f7426f36bbe9c5bb556b74',1,'mtxvec.h']]],
+  ['mtxmultvecsr_135',['MTXMultVecSR',['../mtxvec_8h.html#a6cc13b1b9f0e8b6ed9ddf35afb7dc456',1,'mtxvec.h']]],
+  ['mtxquat_136',['MTXQuat',['../mtx_8h.html#a03608b49c8ab3a98dbecf0e627f18ed7',1,'mtx.h']]],
+  ['mtxrotaxisrad_137',['MTXRotAxisRad',['../mtx_8h.html#a297d66f846f2cff8da8fd0c770184767',1,'mtx.h']]],
+  ['mtxrotrad_138',['MTXRotRad',['../mtx_8h.html#a5309cc100043f1d71c566d639a141855',1,'mtx.h']]],
+  ['mtxrottrig_139',['MTXRotTrig',['../mtx_8h.html#a427284c4bb07084e216ab4269e526c06',1,'mtx.h']]],
+  ['mtxscale_140',['MTXScale',['../mtx_8h.html#a6fda1ebdc85f9e65147ba32d7ebc6387',1,'mtx.h']]],
+  ['mtxscaleapply_141',['MTXScaleApply',['../mtx_8h.html#ac8e93fe55b60be6c2f61b2be5342a29e',1,'mtx.h']]],
+  ['mtxtrans_142',['MTXTrans',['../mtx_8h.html#a0cbe33be9640cc0dbc3fe5555be600fc',1,'mtx.h']]],
+  ['mtxtransapply_143',['MTXTransApply',['../mtx_8h.html#aee5f1d94201a0dceefcac56e5298e75e',1,'mtx.h']]]
 ];

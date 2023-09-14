@@ -16,12 +16,11 @@ var searchData=
   ['enemytable_13',['EnemyTable',['../structEnemyTable.html',1,'']]],
   ['enemytablelist_14',['EnemyTableList',['../structEnemyTableList.html',1,'']]],
   ['entry_15',['Entry',['../structResNTAB_1_1Entry.html',1,'ResNTAB']]],
-  ['erumble_16',['ERumble',['../structJUTGamePad_1_1CRumble_1_1ERumble.html',1,'JUTGamePad::CRumble']]],
-  ['estatus_17',['EStatus',['../structJUTFader_1_1EStatus.html',1,'JUTFader']]],
-  ['event_5fbinary_5fdata_5fheader_18',['event_binary_data_header',['../structevent__binary__data__header.html',1,'']]],
-  ['eventqueue_19',['EventQueue',['../structEventQueue.html',1,'']]],
-  ['exception_20',['exception',['../structexception.html',1,'']]],
-  ['exicontrol_21',['EXIControl',['../structEXIControl.html',1,'']]],
-  ['extended1_5fppc_5f6xx_5f7xx_22',['Extended1_PPC_6xx_7xx',['../structExtended1__PPC__6xx__7xx.html',1,'']]],
-  ['extended2_5fppc_5f6xx_5f7xx_23',['Extended2_PPC_6xx_7xx',['../structExtended2__PPC__6xx__7xx.html',1,'']]]
+  ['estatus_16',['EStatus',['../structJUTFader_1_1EStatus.html',1,'JUTFader']]],
+  ['event_5fbinary_5fdata_5fheader_17',['event_binary_data_header',['../structevent__binary__data__header.html',1,'']]],
+  ['eventqueue_18',['EventQueue',['../structEventQueue.html',1,'']]],
+  ['exception_19',['exception',['../structexception.html',1,'']]],
+  ['exicontrol_20',['EXIControl',['../structEXIControl.html',1,'']]],
+  ['extended1_5fppc_5f6xx_5f7xx_21',['Extended1_PPC_6xx_7xx',['../structExtended1__PPC__6xx__7xx.html',1,'']]],
+  ['extended2_5fppc_5f6xx_5f7xx_22',['Extended2_PPC_6xx_7xx',['../structExtended2__PPC__6xx__7xx.html',1,'']]]
 ];

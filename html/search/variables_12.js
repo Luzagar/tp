@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['r_0',['r',['../struct__GXColor.html#af4723bcb80b74798ce9b54a83b18410f',1,'_GXColor::r()'],['../structcolor__RGB__class.html#a5510795984c17f7f08d1ff8bb1bf147f',1,'color_RGB_class::r()'],['../struct__GXFogAdjTable.html#af29b27ccb5ee34d154eaa28fff5af1b1',1,'_GXFogAdjTable::r()'],['../struct__GXColorS10.html#a8b5e064824ec91bf2e319139108917fa',1,'_GXColorS10::r()']]],
+  ['r_0',['r',['../struct__GXColor.html#af4723bcb80b74798ce9b54a83b18410f',1,'_GXColor::r()'],['../struct__GXColorS10.html#a8b5e064824ec91bf2e319139108917fa',1,'_GXColorS10::r()'],['../struct__GXFogAdjTable.html#af29b27ccb5ee34d154eaa28fff5af1b1',1,'_GXFogAdjTable::r()'],['../structcolor__RGB__class.html#a5510795984c17f7f08d1ff8bb1bf147f',1,'color_RGB_class::r()']]],
   ['r0_1',['r0',['../c__math_8cpp.html#ae89795cca8972bd8d810f1e61bc7a202',1,'c_math.cpp']]],
   ['r02_2',['r02',['../c__math_8cpp.html#ade776008eb82892e12df3c9a6ea259d1',1,'c_math.cpp']]],
   ['r09o_3',['r09o',['../d__kankyo__wether_8cpp.html#a836cd4fcf752c7dae805cbdf9271a6ad',1,'d_kankyo_wether.cpp']]],
@@ -13,7 +13,7 @@ var searchData=
   ['random_10',['random',['../structZ2SpeechMgr2.html#a9e56ed52ea38d149be91bffcce0cc9e6',1,'Z2SpeechMgr2']]],
   ['range_5f_11',['range_',['../classJStudio_1_1TFunctionValueAttributeSet__const.html#ad630faf3b5aaff087785d0a171330757',1,'JStudio::TFunctionValueAttributeSet_const']]],
   ['rank_5ftbl_12',['rank_tbl',['../d__cc__s_8cpp.html#a616d9b9fa83ec57317a09709857fb620',1,'d_cc_s.cpp']]],
-  ['raw_13',['raw',['../structJGadget_1_1binary_1_1TParseData.html#ad20f34bba43116602826f17857a0ea32',1,'JGadget::binary::TParseData']]],
+  ['raw_13',['raw',['../structJGadget_1_1binary_1_1TParseData.html#ad20f34bba43116602826f17857a0ea32',1,'JGadget::binary::TParseData::raw()'],['../structJAUAudibleParam.html#a27d9250572d599df237d0b2688e991d9',1,'JAUAudibleParam::raw()']]],
   ['rawdata_14',['rawData',['../structJStudio_1_1TFunctionValue__composite_1_1TData.html#a5e2b3292c3275af0fbf70fddd2155baa',1,'JStudio::TFunctionValue_composite::TData']]],
   ['rboxposx_15',['rboxPosX',['../d__meter__HIO_8cpp.html#ae3153da3e9f3e625cfe35561ffe7a09e',1,'d_meter_HIO.cpp']]],
   ['rboxposy_16',['rboxPosY',['../d__meter__HIO_8cpp.html#a4711af9bba5e19925ba480f8a8ce99ce',1,'d_meter_HIO.cpp']]],
@@ -25,7 +25,7 @@ var searchData=
   ['read_5ffn_22',['read_fn',['../struct__FILE.html#a42eac0bd200619a198dfb855c6680cb7',1,'_FILE']]],
   ['read_5ffunc_23',['read_func',['../structDBCommTable.html#aabe6fbb3031b80fe5a137f09f83dd588',1,'DBCommTable']]],
   ['read_5fptr_24',['read_ptr',['../struct__GXFifoObj.html#ad8a926303e35239b2c54916c9c8395e6',1,'_GXFifoObj']]],
-  ['readcount_25',['readCount',['../JKRAram_8cpp.html#a064af2ccac3265b95bb0f8b19bf218ac',1,'readCount():&#160;JKRAram.cpp'],['../JKRDvdAramRipper_8cpp.html#a8ac585642b6907bc5c5a42ca1c55e6db',1,'readCount():&#160;JKRDvdAramRipper.cpp'],['../JKRDvdRipper_8cpp.html#a064af2ccac3265b95bb0f8b19bf218ac',1,'readCount():&#160;JKRDvdRipper.cpp']]],
+  ['readcount_25',['readCount',['../JKRDvdAramRipper_8cpp.html#a8ac585642b6907bc5c5a42ca1c55e6db',1,'readCount():&#160;JKRDvdAramRipper.cpp'],['../JKRAram_8cpp.html#a064af2ccac3265b95bb0f8b19bf218ac',1,'readCount():&#160;JKRAram.cpp'],['../JKRDvdRipper_8cpp.html#a064af2ccac3265b95bb0f8b19bf218ac',1,'readCount():&#160;JKRDvdRipper.cpp']]],
   ['recalibratebits_26',['RecalibrateBits',['../Pad_8c.html#a81c6467b1bab7ed9c5605e5fba2ffc47',1,'Pad.c']]],
   ['recalibrated_27',['recalibrated',['../Pad_8c.html#a8be694b1b2e163247bc45912d699a61a',1,'Pad.c']]],
   ['receiving_5fqueue_28',['receiving_queue',['../structOSMessageQueue.html#a7a59b6900961b8450aaf28b031973bd2',1,'OSMessageQueue']]],

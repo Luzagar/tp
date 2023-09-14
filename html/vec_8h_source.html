@@ -113,7 +113,7 @@ $(function() {
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="code hl_function" href="JPAFieldBlock_8cpp.html#aee5f81b08ecc7317a404edd1b0686ea3">PSVECMag</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structVec.html">Vec</a>* v);</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="code hl_function" href="vec_8h.html#a6988cecef632c5850709231045498cfe">PSVECDotProduct</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structVec.html">Vec</a>* a, <span class="keyword">const</span> <a class="code hl_struct" href="structVec.html">Vec</a>* b);</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keywordtype">void</span> <a class="code hl_function" href="JPAFieldBlock_8cpp.html#ad020f89b3a5906e30371543f023f919f">PSVECCrossProduct</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structVec.html">Vec</a>* a, <span class="keyword">const</span> <a class="code hl_struct" href="structVec.html">Vec</a>* b, <a class="code hl_struct" href="structVec.html">Vec</a>* axb);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="code hl_function" href="d__a__npc__cd2_8cpp.html#a21505f0028282e0dcc507940f24da508">PSVECSquareDistance</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structVec.html">Vec</a>* a, <span class="keyword">const</span> <a class="code hl_struct" href="structVec.html">Vec</a>* b);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="code hl_function" href="d__envse_8cpp.html#a21505f0028282e0dcc507940f24da508">PSVECSquareDistance</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structVec.html">Vec</a>* a, <span class="keyword">const</span> <a class="code hl_struct" href="structVec.html">Vec</a>* b);</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="code hl_function" href="vec_8h.html#a276fbd082589efa95472964627c0267c">PSVECDistance</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structVec.html">Vec</a>* a, <span class="keyword">const</span> <a class="code hl_struct" href="structVec.html">Vec</a>* b);</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keywordtype">void</span> <a class="code hl_function" href="vec_8h.html#a416efb31cef3daa45b67c4bacda74bd3">C_VECHalfAngle</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structVec.html">Vec</a>* a, <span class="keyword">const</span> <a class="code hl_struct" href="structVec.html">Vec</a>* b, <a class="code hl_struct" href="structVec.html">Vec</a>* <a class="code hl_variable" href="e__rem__pio2_8c.html#aaad8d6a2a7c43ba9c697808113a6261a">half</a>);</div>
@@ -166,21 +166,47 @@ $(function() {
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        lfs     z,   8(src)</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        ps_madd res, z, z, x_y</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        ps_sum0 res, res, x_y, x_y</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    };</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordflow">return</span> res;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>}</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>};</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#endif </span><span class="comment">/* VEC_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    ;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">return</span> res;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">/* When compiling in debug mode, use C implementations */</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#ifdef DEBUG</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">#define VECAdd C_VECAdd</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#define VECSubtract C_VECSubtract</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">#define VECScale C_VECScale</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">#define VECNormalize C_VECNormalize</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">#define VECSquareMag C_VECSquareMag</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">#define VECMag C_VECMag</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">#define VECDotProduct C_VECDotProduct</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">#define VECCrossProduct C_VECCrossProduct</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">#define VECSquareDistance C_VECSquareDistance</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">#define VECDistance C_VECDistance</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="vec_8h.html#a42c6c754fd272ea0a7f3a2b6ed1f1ee5">  101</a></span><span class="preprocessor">#define VECAdd PSVECAdd</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="vec_8h.html#a349618764c6e6230d29dd3fbad7266d6">  102</a></span><span class="preprocessor">#define VECSubtract PSVECSubtract</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="vec_8h.html#a47bf3748a9b4d6a374b2348cf49fd5d1">  103</a></span><span class="preprocessor">#define VECScale PSVECScale</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="vec_8h.html#aeb8b67b5139e6d484f1a76275cfde025">  104</a></span><span class="preprocessor">#define VECNormalize PSVECNormalize</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="vec_8h.html#a6837244354b6d82fb33cf6d3784b8e13">  105</a></span><span class="preprocessor">#define VECSquareMag PSVECSquareMag</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="vec_8h.html#a77a0ed2c0fed93312ea630f438b182fa">  106</a></span><span class="preprocessor">#define VECMag PSVECMag</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="vec_8h.html#a5c1fe616305e76cf5ec039ed963e69a1">  107</a></span><span class="preprocessor">#define VECDotProduct PSVECDotProduct</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="vec_8h.html#a5dbd9064dafbdab7e5e66554c457daba">  108</a></span><span class="preprocessor">#define VECCrossProduct PSVECCrossProduct</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="vec_8h.html#a470b9b08c1e1c369f48bfba519e91474">  109</a></span><span class="preprocessor">#define VECSquareDistance PSVECSquareDistance</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="vec_8h.html#a1ddaf3170555e633b655725cea6f7067">  110</a></span><span class="preprocessor">#define VECDistance PSVECDistance</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>};</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">#endif </span><span class="comment">/* VEC_H */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aJ3DCluster_8cpp_html_ad147100ce3c1b81ba959b43b39ad5a53"><div class="ttname"><a href="J3DCluster_8cpp.html#ad147100ce3c1b81ba959b43b39ad5a53">PSVECNormalize</a></div><div class="ttdeci">void PSVECNormalize()</div></div>
 <div class="ttc" id="aJPAFieldBlock_8cpp_html_ad020f89b3a5906e30371543f023f919f"><div class="ttname"><a href="JPAFieldBlock_8cpp.html#ad020f89b3a5906e30371543f023f919f">PSVECCrossProduct</a></div><div class="ttdeci">void PSVECCrossProduct()</div></div>
 <div class="ttc" id="aJPAFieldBlock_8cpp_html_aee5f81b08ecc7317a404edd1b0686ea3"><div class="ttname"><a href="JPAFieldBlock_8cpp.html#aee5f81b08ecc7317a404edd1b0686ea3">PSVECMag</a></div><div class="ttdeci">void PSVECMag()</div></div>
 <div class="ttc" id="ad__a__no__chg__room_8cpp_html_a775b9d140a0f4dcf213338a70ab2ba8c"><div class="ttname"><a href="d__a__no__chg__room_8cpp.html#a775b9d140a0f4dcf213338a70ab2ba8c">PSVECScale</a></div><div class="ttdeci">void PSVECScale()</div></div>
-<div class="ttc" id="ad__a__npc__cd2_8cpp_html_a21505f0028282e0dcc507940f24da508"><div class="ttname"><a href="d__a__npc__cd2_8cpp.html#a21505f0028282e0dcc507940f24da508">PSVECSquareDistance</a></div><div class="ttdeci">void PSVECSquareDistance()</div></div>
 <div class="ttc" id="ad__cc__d_8cpp_html_afc0c92f112facbcaf192f1baacbf7af9"><div class="ttname"><a href="d__cc__d_8cpp.html#afc0c92f112facbcaf192f1baacbf7af9">PSVECSubtract</a></div><div class="ttdeci">void PSVECSubtract()</div></div>
+<div class="ttc" id="ad__envse_8cpp_html_a21505f0028282e0dcc507940f24da508"><div class="ttname"><a href="d__envse_8cpp.html#a21505f0028282e0dcc507940f24da508">PSVECSquareDistance</a></div><div class="ttdeci">void PSVECSquareDistance()</div></div>
 <div class="ttc" id="ad__ev__camera_8cpp_html_a2d764a513a37c661319298005a236abc"><div class="ttname"><a href="d__ev__camera_8cpp.html#a2d764a513a37c661319298005a236abc">PSVECAdd</a></div><div class="ttdeci">void PSVECAdd()</div></div>
 <div class="ttc" id="ad__ev__camera_8cpp_html_a88c6b9ce661844f2cadd1160699eaff8"><div class="ttname"><a href="d__ev__camera_8cpp.html#a88c6b9ce661844f2cadd1160699eaff8">PSVECSquareMag</a></div><div class="ttdeci">void PSVECSquareMag()</div></div>
 <div class="ttc" id="ae__rem__pio2_8c_html_aaad8d6a2a7c43ba9c697808113a6261a"><div class="ttname"><a href="e__rem__pio2_8c.html#aaad8d6a2a7c43ba9c697808113a6261a">half</a></div><div class="ttdeci">static double half</div><div class="ttdef"><b>Definition:</b> e_rem_pio2.c:66</div></div>
@@ -188,7 +214,7 @@ $(function() {
 <div class="ttc" id="astructSVec_html_a4770ada490b8dd61c47e6082b478e0c5"><div class="ttname"><a href="structSVec.html#a4770ada490b8dd61c47e6082b478e0c5">SVec::x</a></div><div class="ttdeci">s16 x</div><div class="ttdef"><b>Definition:</b> vec.h:19</div></div>
 <div class="ttc" id="astructSVec_html_a70b2f4a996cec5592fd09d472ea99d29"><div class="ttname"><a href="structSVec.html#a70b2f4a996cec5592fd09d472ea99d29">SVec::z</a></div><div class="ttdeci">s16 z</div><div class="ttdef"><b>Definition:</b> vec.h:19</div></div>
 <div class="ttc" id="astructSVec_html_a859b2828adfc78271dcbeddb0f59e331"><div class="ttname"><a href="structSVec.html#a859b2828adfc78271dcbeddb0f59e331">SVec::y</a></div><div class="ttdeci">s16 y</div><div class="ttdef"><b>Definition:</b> vec.h:19</div></div>
-<div class="ttc" id="astructVec_html"><div class="ttname"><a href="structVec.html">Vec</a></div><div class="ttdef"><b>Definition:</b> d_a_npc_cd.cpp:137</div></div>
+<div class="ttc" id="astructVec_html"><div class="ttname"><a href="structVec.html">Vec</a></div><div class="ttdef"><b>Definition:</b> d_cc_d.cpp:47</div></div>
 <div class="ttc" id="astructVec_html_a0f0b609a811cdc8e682bbe324cb928fe"><div class="ttname"><a href="structVec.html#a0f0b609a811cdc8e682bbe324cb928fe">Vec::z</a></div><div class="ttdeci">f32 z</div><div class="ttdef"><b>Definition:</b> vec.h:11</div></div>
 <div class="ttc" id="astructVec_html_a2329da04868799450765a987a6517e16"><div class="ttname"><a href="structVec.html#a2329da04868799450765a987a6517e16">Vec::x</a></div><div class="ttdeci">f32 x</div><div class="ttdef"><b>Definition:</b> vec.h:11</div></div>
 <div class="ttc" id="astructVec_html_a48232f97ea29848c051edb006e66310a"><div class="ttname"><a href="structVec.html#a48232f97ea29848c051edb006e66310a">Vec::y</a></div><div class="ttdeci">f32 y</div><div class="ttdef"><b>Definition:</b> vec.h:11</div></div>

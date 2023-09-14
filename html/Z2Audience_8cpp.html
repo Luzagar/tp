@@ -89,79 +89,56 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="Z2Audience_8h_source.html">Z2AudioLib/Z2Audience.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Z2Calc_8h_source.html">Z2AudioLib/Z2Calc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Z2SoundInfo_8h_source.html">Z2AudioLib/Z2SoundInfo.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="JAISound_8h_source.html">JSystem/JAudio2/JAISound.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="JASHeapCtrl_8h_source.html">JSystem/JAudio2/JASHeapCtrl.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="J3DUD_8h_source.html">JSystem/J3DU/J3DUD.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="JKRHeap_8h_source.html">JSystem/JKernel/JKRHeap.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="JMATrigonometric_8h_source.html">JSystem/JMath/JMATrigonometric.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
-<code>#include &quot;asm/Z2AudioLib/Z2Audience/func_802BBCDC.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/func_802BBD18.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/func_802BBD94.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/__ct__16Z2AudibleChannelFv.s&quot;</code><br />
-<code>#include &quot;asm/Z2AudioLib/Z2Audience/calc__9Z2AudibleFv.s&quot;</code><br />
-<code>#include &quot;asm/Z2AudioLib/Z2Audience/getOuterParams__9Z2AudibleFi.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/setOuterParams__9Z2AudibleFRC14JASSoundParamsRC14JASSoundParamsi.s&quot;</code><br />
-<code>#include &quot;asm/Z2AudioLib/Z2Audience/getChannel__9Z2AudibleFi.s&quot;</code><br />
-<code>#include &quot;asm/Z2AudioLib/Z2Audience/getDistVolBit__9Z2AudibleFv.s&quot;</code><br />
-<code>#include &quot;asm/Z2AudioLib/Z2Audience/__ct__19Z2Audience3DSettingFv.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/init__19Z2Audience3DSettingFv.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/initVolumeDist__19Z2Audience3DSettingFv.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/updateVolumeDist__19Z2Audience3DSettingFf.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/initDolbyDist__19Z2Audience3DSettingFv.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/updateDolbyDist__19Z2Audience3DSettingFff.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/__ct__13Z2AudioCameraFv.s&quot;</code><br />
-<code>#include &quot;asm/Z2AudioLib/Z2Audience/init__13Z2AudioCameraFv.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/setCameraState__13Z2AudioCameraFPA4_CfR3Vecb.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/setCameraState__13Z2AudioCameraFPA4_fR3VecR3Vecffbb.s&quot;</code><br />
-<code>#include &quot;asm/Z2AudioLib/Z2Audience/convertAbsToRel__13Z2AudioCameraFP9Z2Audiblei.s&quot;</code><br />
-<code>#include &quot;asm/Z2AudioLib/Z2Audience/convertAbsToRel__13Z2AudioCameraCFR3VecP3Vec.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/isInSight__13Z2AudioCameraCFR3Vec.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/__ct__9Z2SpotMicFv.s&quot;</code><br />
-<code>#include &quot;asm/Z2AudioLib/Z2Audience/clearMicState__9Z2SpotMicFi.s&quot;</code><br />
-<code>#include &quot;asm/Z2AudioLib/Z2Audience/calcVolumeFactor__9Z2SpotMicFi.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/setMicState__9Z2SpotMicFP13Z2AudioCamerai.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/calcMicDist__9Z2SpotMicFP9Z2Audible.s&quot;</code><br />
-<code>#include &quot;asm/Z2AudioLib/Z2Audience/calcMicPriority__9Z2SpotMicFf.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/calcMicVolume__9Z2SpotMicFfif.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/__ct__10Z2AudienceFv.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/__dt__10Z2AudienceFv.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/func_802BD288.s&quot;</code><br />
-<code>#include &quot;asm/Z2AudioLib/Z2Audience/setAudioCamera__10Z2AudienceFPA4_fR3VecR3Vecffbib.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/func_802BD338.s&quot;</code><br />
-<code>#include &quot;asm/Z2AudioLib/Z2Audience/deleteAudible__10Z2AudienceFP10JAIAudible.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/__dt__9Z2AudibleFv.s&quot;</code><br />
-<code>#include &quot;asm/Z2AudioLib/Z2Audience/calcPriority__10Z2AudienceFP10JAIAudible.s&quot;</code><br />
-<code>#include &quot;asm/Z2AudioLib/Z2Audience/calcOffMicSound__10Z2AudienceFf.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/mixChannelOut__10Z2AudienceFRC14JASSoundParamsP10JAIAudiblei.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/setTargetVolume__10Z2AudienceFfi.s&quot;</code><br />
-<code>#include &quot;asm/Z2AudioLib/Z2Audience/convertAbsToRel__10Z2AudienceFR3VecP3Veci.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/calcRelPosVolume__10Z2AudienceFRC3Vecfi.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/calcRelPosPan__10Z2AudienceFRC3Veci.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/calcRelPosDolby__10Z2AudienceFRC3Veci.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/calcVolume___10Z2AudienceCFfi.s&quot;</code><br />
-<code>#include &quot;asm/Z2AudioLib/Z2Audience/calcDeltaPriority___10Z2AudienceCFfib.s&quot;</code><br />
-<code>#include &quot;asm/Z2AudioLib/Z2Audience/func_802BDCB0.s&quot;</code><br />
-<code>#include &quot;asm/Z2AudioLib/Z2Audience/calcFxMix___10Z2AudienceCFfi.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/calcPitch___10Z2AudienceCFP16Z2AudibleChannelPC9Z2AudiblePC13Z2AudioCamera.s&quot;</code><br />
-<code>#include &quot;asm/Z2AudioLib/Z2Audience/getMaxChannels__10Z2AudienceFv.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2Audience/__sinit_Z2Audience_cpp.s&quot;</code><br />
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for Z2Audience.cpp:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="Z2Audience_8cpp__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZ2Audible.html">Z2Audible</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZ2SoundInfo.html">Z2SoundInfo</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZ2Param.html">Z2Param</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZ2Calc.html">Z2Calc</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZ2Calc_1_1CurveSign.html">Z2Calc::CurveSign</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZ2AudibleAbsPos.html">Z2AudibleAbsPos</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASMemPool.html">JASMemPool&lt; A0 &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASMemPool____template5.html">JASMemPool__template5</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASGenericMemPool.html">JASGenericMemPool</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -405,8 +382,6 @@ Variables</h2></td></tr>
 <tr class="separator:a065d19b5669fc197fdd66c4bb318a944"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39d54fb4edc12ea17aa8e940f36cec8c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Z2Audience_8cpp.html#a39d54fb4edc12ea17aa8e940f36cec8c">cNearFarRatio</a></td></tr>
 <tr class="separator:a39d54fb4edc12ea17aa8e940f36cec8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adff4fa423d30211ac559c660cebc7948"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Z2Audience_8cpp.html#adff4fa423d30211ac559c660cebc7948">lit_1135</a> = 100000.0f</td></tr>
-<tr class="separator:adff4fa423d30211ac559c660cebc7948"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef692154f1f374ae16373b1394fe434a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a4b9935e85afcb3a8dd9bb8636b23ce3b">SECTION_RODATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Z2Audience_8cpp.html#aef692154f1f374ae16373b1394fe434a">lit_1193</a> [12+4]</td></tr>
 <tr class="separator:aef692154f1f374ae16373b1394fe434a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a63450947878a82ce6bd322ab1915df"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Z2Audience_8cpp.html#a3a63450947878a82ce6bd322ab1915df">lit_1267</a> = -22.755556106567383f</td></tr>
@@ -1870,7 +1845,7 @@ Variables</h2></td></tr>
 <div class="ttc" id="aZ2Audience_8cpp_html_acec7c51a58fd5994bf443ca50a078e95"><div class="ttname"><a href="Z2Audience_8cpp.html#acec7c51a58fd5994bf443ca50a078e95">getMaxChannels__10Z2AudienceFv</a></div><div class="ttdeci">void getMaxChannels__10Z2AudienceFv()</div></div>
 <div class="ttc" id="aZ2Audience_8cpp_html_ad77e27a0dcc735bf5a0760fc985ba6ac"><div class="ttname"><a href="Z2Audience_8cpp.html#ad77e27a0dcc735bf5a0760fc985ba6ac">deleteAudible__10Z2AudienceFP10JAIAudible</a></div><div class="ttdeci">void deleteAudible__10Z2AudienceFP10JAIAudible()</div></div>
 <div class="ttc" id="aZ2Audience_8cpp_html_adfacd197b474cb7d3f77e47720502ebc"><div class="ttname"><a href="Z2Audience_8cpp.html#adfacd197b474cb7d3f77e47720502ebc">calcPriority__10Z2AudienceFP10JAIAudible</a></div><div class="ttdeci">void calcPriority__10Z2AudienceFP10JAIAudible()</div></div>
-<div class="ttc" id="aZ2Audience_8cpp_html_ae8f986002ca4d5458997029fa994644d"><div class="ttname"><a href="Z2Audience_8cpp.html#ae8f986002ca4d5458997029fa994644d">__dt__10Z2AudienceFv</a></div><div class="ttdeci">void __dt__10Z2AudienceFv()</div><div class="ttdef"><b>Definition:</b> Z2Audience.cpp:659</div></div>
+<div class="ttc" id="aZ2Audience_8cpp_html_ae8f986002ca4d5458997029fa994644d"><div class="ttname"><a href="Z2Audience_8cpp.html#ae8f986002ca4d5458997029fa994644d">__dt__10Z2AudienceFv</a></div><div class="ttdeci">void __dt__10Z2AudienceFv()</div><div class="ttdef"><b>Definition:</b> Z2Audience.cpp:1022</div></div>
 <div class="ttc" id="astddef_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> stddef.h:12</div></div>
 </div><!-- fragment -->
 </div>
@@ -2441,28 +2416,6 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_1067 = 2.0f / 5.0f</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="adff4fa423d30211ac559c660cebc7948" name="adff4fa423d30211ac559c660cebc7948"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adff4fa423d30211ac559c660cebc7948">&#9670;&#160;</a></span>lit_1135</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_1135 = 100000.0f</td>
         </tr>
       </table>
   </td>

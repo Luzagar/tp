@@ -147,6 +147,7 @@ Enumerations</h2></td></tr>
 , <a class="el" href="f__op__actor__mng_8h.html#a9a8f0caf5338c590123da43b40d903aba210c0886cfd5f2a742e644029edda232">fopAcM_CARRY_TYPE_8</a> = 8
 , <br />
 &#160;&#160;<a class="el" href="f__op__actor__mng_8h.html#a9a8f0caf5338c590123da43b40d903aba20604b6174c8536e7812a4c8a0ad8d89">fopAcM_CARRY_LIGHT</a> = 16
+, <a class="el" href="f__op__actor__mng_8h.html#a9a8f0caf5338c590123da43b40d903aba2bc192ea31676580f658582661798be3">fopAcM_CARRY_UNK_30</a> = 0x30
 <br />
  }</td></tr>
 <tr class="separator:a9a8f0caf5338c590123da43b40d903ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -343,7 +344,7 @@ Functions</h2></td></tr>
 <tr class="separator:ac652d2fa283bc088f84802d5cce412a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3c0659cf4a419e45f2e265f99131ea4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__actor__mng_8h.html#aa3c0659cf4a419e45f2e265f99131ea4">fopAcM_setCullSizeBox2</a> (<a class="el" href="structfopAc__ac__c.html">fopAc_ac_c</a> *p_actor, <a class="el" href="structJ3DModelData.html">J3DModelData</a> *p_modelData)</td></tr>
 <tr class="separator:aa3c0659cf4a419e45f2e265f99131ea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02c19300c38f04305e29d237a3ebf666"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__actor__mng_8h.html#a02c19300c38f04305e29d237a3ebf666">fopAcM_addAngleY</a> (<a class="el" href="structfopAc__ac__c.html">fopAc_ac_c</a> *p_actor, <a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> <a class="el" href="d__a__npc__cd2_8cpp.html#af839075603a1a31e84ffe32bc427ad5d">target</a>, <a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> step)</td></tr>
+<tr class="memitem:a02c19300c38f04305e29d237a3ebf666"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__actor__mng_8h.html#a02c19300c38f04305e29d237a3ebf666">fopAcM_addAngleY</a> (<a class="el" href="structfopAc__ac__c.html">fopAc_ac_c</a> *p_actor, <a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> <a class="el" href="d__a__npc__cd2_8cpp.html#aa15d1782a0d61976219146e1e4930f51">target</a>, <a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> step)</td></tr>
 <tr class="separator:a02c19300c38f04305e29d237a3ebf666"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b8a77485e14bff264a0e6acc2436b7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__actor__mng_8h.html#a0b8a77485e14bff264a0e6acc2436b7a">fopAcM_calcSpeed</a> (<a class="el" href="structfopAc__ac__c.html">fopAc_ac_c</a> *p_actor)</td></tr>
 <tr class="separator:a0b8a77485e14bff264a0e6acc2436b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -744,7 +745,7 @@ Functions</h2></td></tr>
 <div class="line">        new (ptr) ClassName(); \</div>
 <div class="line">        fopAcM_OnCondition(ptr, 8); \</div>
 <div class="line">    }</div>
-<div class="ttc" id="af__op__actor__mng_8h_html_ae04f369129df519ebcf4a9109d3ee24a"><div class="ttname"><a href="f__op__actor__mng_8h.html#ae04f369129df519ebcf4a9109d3ee24a">fopAcM_CheckCondition</a></div><div class="ttdeci">bool fopAcM_CheckCondition(fopAc_ac_c *p_actor, u32 flag)</div><div class="ttdef"><b>Definition:</b> f_op_actor_mng.h:217</div></div>
+<div class="ttc" id="af__op__actor__mng_8h_html_ae04f369129df519ebcf4a9109d3ee24a"><div class="ttname"><a href="f__op__actor__mng_8h.html#ae04f369129df519ebcf4a9109d3ee24a">fopAcM_CheckCondition</a></div><div class="ttdeci">bool fopAcM_CheckCondition(fopAc_ac_c *p_actor, u32 flag)</div><div class="ttdef"><b>Definition:</b> f_op_actor_mng.h:218</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -795,6 +796,7 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a9a8f0caf5338c590123da43b40d903aba9d1eddeb47a510e3fbb715388b393860" name="a9a8f0caf5338c590123da43b40d903aba9d1eddeb47a510e3fbb715388b393860"></a>fopAcM_CARRY_SIDE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a9a8f0caf5338c590123da43b40d903aba210c0886cfd5f2a742e644029edda232" name="a9a8f0caf5338c590123da43b40d903aba210c0886cfd5f2a742e644029edda232"></a>fopAcM_CARRY_TYPE_8&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a9a8f0caf5338c590123da43b40d903aba20604b6174c8536e7812a4c8a0ad8d89" name="a9a8f0caf5338c590123da43b40d903aba20604b6174c8536e7812a4c8a0ad8d89"></a>fopAcM_CARRY_LIGHT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9a8f0caf5338c590123da43b40d903aba2bc192ea31676580f658582661798be3" name="a9a8f0caf5338c590123da43b40d903aba2bc192ea31676580f658582661798be3"></a>fopAcM_CARRY_UNK_30&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>

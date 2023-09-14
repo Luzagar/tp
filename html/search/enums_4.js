@@ -49,7 +49,7 @@ var searchData=
   ['dmeter2draw_5factionflag_46',['dMeter2Draw_actionFlag',['../d__meter2__draw_8h.html#a88f1f58c44f381002ff77651f5d7fbb3',1,'d_meter2_draw.h']]],
   ['dmeter2draw_5factionid_47',['dMeter2Draw_actionID',['../d__meter2__draw_8h.html#a6d998eb7f44ad1b1ea2fadcf17af89e9',1,'d_meter2_draw.h']]],
   ['dmeter2info_5fwarpstatus_48',['dMeter2Info_warpStatus',['../d__meter2__info_8h.html#ab5bd43360466ab7ac683d76f39b01939',1,'d_meter2_info.h']]],
-  ['dmw_5fstatus_49',['dMw_Status',['../structdMw__c.html#a9c12bf96930db318a3d8b6704985face',1,'dMw_c']]],
+  ['dmw_5fstatus_49',['dMw_Status',['../classdMw__c.html#a9c12bf96930db318a3d8b6704985face',1,'dMw_c']]],
   ['drawbuffer_50',['DrawBuffer',['../structdDlst__list__c.html#ade1f3b0d8ae13b1208ac59bfcf50415c',1,'dDlst_list_c']]],
   ['drawmode_51',['DrawMode',['../structJ3DSys.html#a30cc363d626b82865300b658c387eab9',1,'J3DSys']]],
   ['dvdresult_52',['DVDResult',['../dvd_8h.html#ac3c743dfa2642c893af57e9582d42d9b',1,'dvd.h']]],

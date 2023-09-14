@@ -89,50 +89,29 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="J2DPictureEx_8h_source.html">JSystem/J2DGraph/J2DPictureEx.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="J2DMaterial_8h_source.html">JSystem/J2DGraph/J2DMaterial.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="J2DScreen_8h_source.html">JSystem/J2DGraph/J2DScreen.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="JSURandomInputStream_8h_source.html">JSystem/JSupport/JSURandomInputStream.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="JUTTexture_8h_source.html">JSystem/JUtility/JUTTexture.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
 <code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/initiate__12J2DPictureExFPC7ResTIMGPC7ResTLUT.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/__ct__12J2DPictureExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/__dt__12J2DPictureExFv.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/prepareTexture__12J2DPictureExFUc.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/drawSelf__12J2DPictureExFffPA3_A4_f.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/drawFullSet__12J2DPictureExFffffPA3_A4_f.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/drawTexCoord__12J2DPictureExFffffssssssssPA3_A4_f.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/append__12J2DPictureExFPC7ResTIMGP10JUTPalettef.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/append__12J2DPictureExFPCcP10JUTPalettef.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/append__12J2DPictureExFP10JUTTexturef.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/insert__12J2DPictureExFPC7ResTIMGP10JUTPaletteUcf.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/insert__12J2DPictureExFPCcP10JUTPaletteUcf.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/insert__12J2DPictureExFP10JUTTextureUcf.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/insertCommon__12J2DPictureExFUcf.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/isInsert__12J2DPictureExCFUc.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/remove__12J2DPictureExFUc.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/remove__12J2DPictureExFv.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/remove__12J2DPictureExFP10JUTTexture.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/isRemove__12J2DPictureExCFUc.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/draw__12J2DPictureExFffUcbbb.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/draw__12J2DPictureExFffffbbb.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/drawOut__12J2DPictureExFffffff.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/func_80304EF0.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/load__12J2DPictureExF11_GXTexMapIDUc.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/setTevOrder__12J2DPictureExFUcUcb.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/setTevStage__12J2DPictureExFUcUcb.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/setTevKColor__12J2DPictureExFUc.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/setTevKColorSel__12J2DPictureExFUc.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/setTevKAlphaSel__12J2DPictureExFUc.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/shiftSetBlendRatio__12J2DPictureExFUcfbb.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/setBlendColorRatio__12J2DPictureExFff.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/setBlendAlphaRatio__12J2DPictureExFff.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/changeTexture__12J2DPictureExFPC7ResTIMGUc.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/changeTexture__12J2DPictureExFPCcUc.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/changeTexture__12J2DPictureExFPC7ResTIMGUcP10JUTPalette.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/changeTexture__12J2DPictureExFPCcUcP10JUTPalette.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/getTexture__12J2DPictureExCFUc.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/getTextureCount__12J2DPictureExCFv.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/setBlack__12J2DPictureExFQ28JUtility6TColor.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/setWhite__12J2DPictureExFQ28JUtility6TColor.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/setBlackWhite__12J2DPictureExFQ28JUtility6TColorQ28JUtility6TColor.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/getBlackWhite__12J2DPictureExCFPQ28JUtility6TColorPQ28JUtility6TColor.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/isSetBlackWhite__12J2DPictureExCFQ28JUtility6TColorQ28JUtility6TColor.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J2DGraph/J2DPictureEx/getBlack__12J2DPictureExCFv.s&quot;</code><br />
@@ -437,8 +416,6 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aa6f424c598e7b25b5892e40eb28dc20e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J2DPictureEx_8cpp.html#aa6f424c598e7b25b5892e40eb28dc20e">j2dDefaultTexMtxInfo</a> [36]</td></tr>
-<tr class="separator:aa6f424c598e7b25b5892e40eb28dc20e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39031cb2c20381575ad669e36356a9e1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J2DPictureEx_8cpp.html#a39031cb2c20381575ad669e36356a9e1">lit_1517</a> = 1.0f</td></tr>
 <tr class="separator:a39031cb2c20381575ad669e36356a9e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24a882d099a4c285127aad6ec15090ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J2DPictureEx_8cpp.html#a24a882d099a4c285127aad6ec15090ed">__vt__12J2DPictureEx</a> [83+1]</td></tr>
@@ -2781,28 +2758,6 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void* __vt__12J2DPictureEx[83+1]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa6f424c598e7b25b5892e40eb28dc20e" name="aa6f424c598e7b25b5892e40eb28dc20e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6f424c598e7b25b5892e40eb28dc20e">&#9670;&#160;</a></span>j2dDefaultTexMtxInfo</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> const j2dDefaultTexMtxInfo[36]</td>
         </tr>
       </table>
   </td>

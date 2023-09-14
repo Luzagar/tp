@@ -89,10 +89,11 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="JAISeq_8h_source.html">JSystem/JAudio2/JAISeq.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="JAISeqMgr_8h_source.html">JSystem/JAudio2/JAISeqMgr.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="JASAudioReseter_8h_source.html">JSystem/JAudio2/JASAudioReseter.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="JASCriticalSection_8h_source.html">JSystem/JAudio2/JASCriticalSection.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="JAISoundChild_8h_source.html">JSystem/JAudio2/JAISoundChild.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="JAIAudience_8h_source.html">JSystem/JAudio2/JAIAudience.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="JKRHeap_8h_source.html">JSystem/JKernel/JKRHeap.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
-<code>#include &quot;asm/JSystem/JAudio2/JAISeq/func_802A0A6C.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JAudio2/JAISeq/func_802A0A8C.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JAudio2/JAISeq/reserveChildTracks___6JAISeqFi.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JAudio2/JAISeq/die___6JAISeqFv.s&quot;</code><br />
@@ -112,8 +113,8 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a43a116374d90f11503c745925b8ffbd8"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JAISeq_8cpp.html#a43a116374d90f11503c745925b8ffbd8">func_802A0A6C</a> (<a class="el" href="structJASTrack.html">JASTrack</a> *)</td></tr>
-<tr class="separator:a43a116374d90f11503c745925b8ffbd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e330057e72d34a3e45fd3f7cf834b66"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JAISeq_8cpp.html#a2e330057e72d34a3e45fd3f7cf834b66">func_802A0A6C</a> (<a class="el" href="structJASTrack.html">JASTrack</a> *)</td></tr>
+<tr class="separator:a2e330057e72d34a3e45fd3f7cf834b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8dfa2bafd39f62e85083315c1577375"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JAISeq_8cpp.html#af8dfa2bafd39f62e85083315c1577375">func_802A0A8C</a> ()</td></tr>
 <tr class="separator:af8dfa2bafd39f62e85083315c1577375"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3841f2a32a94e09dd9daade8e12e4fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JAISeq_8cpp.html#aa3841f2a32a94e09dd9daade8e12e4fb">func_802A0B64</a> ()</td></tr>
@@ -772,8 +773,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a43a116374d90f11503c745925b8ffbd8" name="a43a116374d90f11503c745925b8ffbd8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43a116374d90f11503c745925b8ffbd8">&#9670;&#160;</a></span>func_802A0A6C()</h2>
+<a id="a2e330057e72d34a3e45fd3f7cf834b66" name="a2e330057e72d34a3e45fd3f7cf834b66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e330057e72d34a3e45fd3f7cf834b66">&#9670;&#160;</a></span>func_802A0A6C()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -782,10 +783,10 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static asm bool func_802A0A6C </td>
+          <td class="memname">static bool func_802A0A6C </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structJASTrack.html">JASTrack</a> *&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>track</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
