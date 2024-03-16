@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['z2bgmid_0',['Z2BgmID',['../Z2SeqMgr_8h.html#a61d7f798d58941871faea3c813b33b5c',1,'Z2SeqMgr.h']]],
-  ['z2soundid_1',['Z2SoundID',['../Z2SeMgr_8h.html#a2015be0323c9a6d9908c0ddb691584ab',1,'Z2SeMgr.h']]]
+  ['validmemoryoptions_0',['ValidMemoryOptions',['../trk_8h.html#aae9a842ab730926b65d8e5b373142c13',1,'trk.h']]],
+  ['vitvmode_1',['VITVMode',['../vi_8h.html#abff30bd79dcb2f2ba4293c7630c860ba',1,'vi.h']]],
+  ['vixfbmode_2',['VIXFBMode',['../vi_8h.html#ac3a9e2111ea612658c93a9f4c1b43823',1,'vi.h']]]
 ];

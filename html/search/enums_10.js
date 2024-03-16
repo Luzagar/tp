@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['regid_0',['RegID',['../classJASRegisterParam.html#aa1f04d37f2825f6dd459e365e257bc09',1,'JASRegisterParam']]],
-  ['resarcmessage_1',['ResArcMessage',['../JASResArcLoader_8h.html#a1377a217d616a86a8fdd14f0fccb32fe',1,'JASResArcLoader.h']]],
-  ['restype_2',['ResType',['../classJUTResReference.html#a179eca94097e5000a84875da5b8e607e',1,'JUTResReference']]]
+  ['playerptr_0',['PlayerPtr',['../d__com__inf__game_8h.html#a42eb736ca7b3065ff9097c87e3ed93e0',1,'d_com_inf_game.h']]],
+  ['priority_1',['PRIORITY',['../classdBgW__Base.html#acaa511193b1454aa4379cfefb712c733',1,'dBgW_Base']]],
+  ['prm_5fe_2',['Prm_e',['../classdaObjEff_1_1Act__c.html#aaf749986f27d52fd6dc155c42c4defe1',1,'daObjEff::Act_c']]],
+  ['pushpulllabel_3',['PushPullLabel',['../classdBgW__Base.html#ac7576eb3c56d041a93b302116ab071dc',1,'dBgW_Base']]]
 ];

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['pad_2ec_0',['Pad.c',['../Pad_8c.html',1,'']]],
-  ['pad_2eh_1',['Pad.h',['../Pad_8h.html',1,'']]],
+  ['pad_2eh_1',['pad.h',['../pad_8h.html',1,'']]],
   ['padclamp_2ec_2',['Padclamp.c',['../Padclamp_8c.html',1,'']]],
   ['padclamp_2eh_3',['Padclamp.h',['../Padclamp_8h.html',1,'']]],
   ['ppcarch_2ec_4',['PPCArch.c',['../PPCArch_8c.html',1,'']]],
