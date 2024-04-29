@@ -1,0 +1,27 @@
+var classJAUSoundAnimationSound =
+[
+    [ "isNoting", "classJAUSoundAnimationSound.html#a9f6b36ae96a28652a5d815119d5bc12e", null ],
+    [ "isNotingOff", "classJAUSoundAnimationSound.html#a397d748ac2e886828732a211b0e17ff7", null ],
+    [ "isNotingOn", "classJAUSoundAnimationSound.html#a99ffbea29aec0f65b7a0b344277febc1", null ],
+    [ "playsAtIntervals", "classJAUSoundAnimationSound.html#a8a5c34a34199c21767790004e4699b9f", null ],
+    [ "playsOnlyForward", "classJAUSoundAnimationSound.html#a05f3a35d1dc5bb2e0ea6fc5533192225", null ],
+    [ "playsOnlyOnce", "classJAUSoundAnimationSound.html#a0ca38f88a7f49b97be1fa7ab4f98e52f", null ],
+    [ "playsOnlyReverse", "classJAUSoundAnimationSound.html#af605eb8056079285a70f9de76fbda161", null ],
+    [ "setsLifeTime", "classJAUSoundAnimationSound.html#a2bbdcf9ef14f2e4310ad7b3c134f664f", null ],
+    [ "stopsWhenAnimationChanges", "classJAUSoundAnimationSound.html#a6ede1f55d34da37423f3f8692b5ade24", null ],
+    [ "stopsWhenNoteOff", "classJAUSoundAnimationSound.html#ad2affb59a7f86f16174da046900e5116", null ],
+    [ "stopsWhenSpeedIsZero", "classJAUSoundAnimationSound.html#a7cb66c705b2d321f0b6dc8574bac1dbb", null ],
+    [ "field_0x04", "classJAUSoundAnimationSound.html#ab47fe7f396bd671b3301f4e58723dbe4", null ],
+    [ "field_0x08", "classJAUSoundAnimationSound.html#a26a0ea5bcdb9e1f780f0122a3854c380", null ],
+    [ "field_0x0c", "classJAUSoundAnimationSound.html#ae770e63b27db9ee3bd4e1a1ae3614410", null ],
+    [ "field_0x14", "classJAUSoundAnimationSound.html#a28fae12af61b686bf5dc42994cd8a3af", null ],
+    [ "field_0x15", "classJAUSoundAnimationSound.html#a9c4199937016b6b451f4658878e06ae7", null ],
+    [ "field_0x16", "classJAUSoundAnimationSound.html#a4c7c277f5aad3404f379011aa3c71691", null ],
+    [ "field_0x17", "classJAUSoundAnimationSound.html#a2890b76d3bb04f569afef43c17fdc171", null ],
+    [ "field_0x18", "classJAUSoundAnimationSound.html#ae9187133cd8ae97ad1b1f2a303d47a66", null ],
+    [ "field_0x19", "classJAUSoundAnimationSound.html#aa574e140346db503bd79caa556629531", null ],
+    [ "field_0x1a", "classJAUSoundAnimationSound.html#a7efd60a9e5f8ed51fa801a780b1f928d", null ],
+    [ "mFlags", "classJAUSoundAnimationSound.html#a9e195aa604d8c9017524216a583efdf2", null ],
+    [ "mSoundId", "classJAUSoundAnimationSound.html#af09dd3d5b948b701c56a2786fc6fd3b8", null ],
+    [ "unk_0x1b", "classJAUSoundAnimationSound.html#a44f91f58f5aaffc816baa6bd65cd2cb2", null ]
+];

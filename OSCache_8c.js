@@ -1,0 +1,25 @@
+var OSCache_8c =
+[
+    [ "__LCEnable", "OSCache_8c.html#abce1c282ec49adcb45da93859c28a50b", null ],
+    [ "__OSCacheInit", "OSCache_8c.html#a5d30f30b5ade1347fbc57ccdb040733b", null ],
+    [ "DCEnable", "OSCache_8c.html#aec91af94c2434f2599ba62e5a162cd13", null ],
+    [ "DCFlushRange", "OSCache_8c.html#a78d17752840232f15105395e6255f17c", null ],
+    [ "DCFlushRangeNoSync", "OSCache_8c.html#a91850029fe93842ed73d7af1191296a9", null ],
+    [ "DCInvalidateRange", "OSCache_8c.html#a2648ba66afbebb43c0d622a475dd526e", null ],
+    [ "DCStoreRange", "OSCache_8c.html#acc63ed846ecf063ec9b491c62914ca98", null ],
+    [ "DCStoreRangeNoSync", "OSCache_8c.html#aa6ddb7c40bc067b48f58da2569df9cc1", null ],
+    [ "DCZeroRange", "OSCache_8c.html#a5773de4c956fe42c327aef26c41e4080", null ],
+    [ "DMAErrorHandler", "OSCache_8c.html#a614641f2c996fb883ce11cdc7b86a42f", null ],
+    [ "ICEnable", "OSCache_8c.html#ab43b50724f1973bcba29a6cd08266443", null ],
+    [ "ICFlashInvalidate", "OSCache_8c.html#aa256d25217b508ef4ef5add56a0ce8dc", null ],
+    [ "ICInvalidateRange", "OSCache_8c.html#a99ecc026e822c6e582781e054fd76eaa", null ],
+    [ "L2Disable", "OSCache_8c.html#ab1e08fb15c9d9664d6970ee25006a530", null ],
+    [ "L2Enable", "OSCache_8c.html#ae6665b88a1e6e65c5b5652919ca093ac", null ],
+    [ "L2GlobalInvalidate", "OSCache_8c.html#a47adb0ccd345257b2e6cac34399acf2a", null ],
+    [ "L2Init", "OSCache_8c.html#a9d7c279ed0989a80c254076eddc34e51", null ],
+    [ "LCDisable", "OSCache_8c.html#a3f91db9430a43c76a31aa386000ca306", null ],
+    [ "LCEnable", "OSCache_8c.html#ae0c03c90f329fa166f157478931372af", null ],
+    [ "LCQueueWait", "OSCache_8c.html#a8820cb630bcd3a007368b0f9e166fb2a", null ],
+    [ "LCStoreBlocks", "OSCache_8c.html#a689b2c63c80586fa4e9a648640dc7292", null ],
+    [ "LCStoreData", "OSCache_8c.html#a0855275ac50f3cdf7982d22f0b4b5a77", null ]
+];

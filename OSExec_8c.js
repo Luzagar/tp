@@ -1,0 +1,27 @@
+var OSExec_8c =
+[
+    [ "AppLoaderStruct", "structAppLoaderStruct.html", "structAppLoaderStruct" ],
+    [ "AppLoaderCallback", "OSExec_8c.html#afed75b1d3bb2504531510a18026d8105", null ],
+    [ "AppLoaderInnerCallback", "OSExec_8c.html#a117b5dffdcfdd8a1e8f3ddf1047417d1", null ],
+    [ "LogCallback", "OSExec_8c.html#a293b05d1d90feba2aafec9427c527757", null ],
+    [ "__OSBootDol", "OSExec_8c.html#a48cd3892e1b5082677fa574899d2e1df", null ],
+    [ "__OSBootDolSimple", "OSExec_8c.html#aa567718e524d33242f94855da182fe24", null ],
+    [ "__OSGetExecParams", "OSExec_8c.html#a65a7919e0793deaa8294074833b25c17", null ],
+    [ "__OSSetExecParams", "OSExec_8c.html#afaf6371d7d7f4c88cb0ff531eb8c30bd", null ],
+    [ "Callback", "OSExec_8c.html#a96dd9999bfb4a3ada9c4f9a7f50afaa6", null ],
+    [ "GetApploaderPosition", "OSExec_8c.html#af985217153aa033d5e42b84ca608dbc9", null ],
+    [ "IsNewApploader", "OSExec_8c.html#a3d13209429743b5d7a898d81975c48cd", null ],
+    [ "LoadApploader", "OSExec_8c.html#af6be7a710494a545a2f783d8502ec66b", null ],
+    [ "LoadDol", "OSExec_8c.html#a4d5721b6154f7d172a082910d8f8ea53", null ],
+    [ "PackArgs", "OSExec_8c.html#a76e470c9c8f49185853dc6d2e989a048", null ],
+    [ "ReadDisc", "OSExec_8c.html#a1fa7b17f69870e1ba21561955b80fae8", null ],
+    [ "Run", "OSExec_8c.html#a864c987bf7655cd80fc9d442996a5bdd", null ],
+    [ "StartDol", "OSExec_8c.html#a19be1d2cb16c3f45578a11967a432863", null ],
+    [ "appLoaderOffset", "OSExec_8c.html#a32b2f921a559dd7267a140feaddae157", null ],
+    [ "apploaderPosition", "OSExec_8c.html#ae60241a051073282ff1bbf3effa09152", null ],
+    [ "DAT_800030e2", "OSExec_8c.html#a700b004c1f49924ed2c724b2dadfb0a4", null ],
+    [ "lit_115", "OSExec_8c.html#a177677f86559ec76bba99e775bdd4148", null ],
+    [ "lit_213", "OSExec_8c.html#a45b36ac18d5cb44419230a89c5ee3b00", null ],
+    [ "osExecParams", "OSExec_8c.html#a5cd8eec7c25ee626cb5183f7455eb064", null ],
+    [ "Prepared", "OSExec_8c.html#aadb3c5ec3d72a60eefaed1edd7f12721", null ]
+];

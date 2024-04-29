@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: include/JSystem/J2DGraph/J2DAnmLoader.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('J2DAnmLoader_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">J2DAnmLoader.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="J2DAnmLoader_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef J2DANMLOADER_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define J2DANMLOADER_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="J2DAnimation_8h.html">JSystem/J2DGraph/J2DAnimation.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">struct </span><a class="code hl_struct" href="structJ2DAnmLoaderDataBase.html">J2DAnmLoaderDataBase</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="structJ2DAnmLoaderDataBase.html#abe1c5b47737ae42192a267434c22d78b">   11</a></span>    <span class="comment">/* 80308A6C */</span> <span class="keyword">static</span> <a class="code hl_class" href="structJ2DAnmBase.html">J2DAnmBase</a>* <a class="code hl_function" href="structJ2DAnmLoaderDataBase.html#abe1c5b47737ae42192a267434c22d78b">load</a>(<span class="keywordtype">void</span> <span class="keyword">const</span>*);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>};</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">class </span><a class="code hl_class" href="structJ2DAnmLoader.html">J2DAnmLoader</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="structJ2DAnmLoader.html#a4b7ac7111edd0c627ff105d020210adc">   20</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span>* <a class="code hl_function" href="structJ2DAnmLoader.html#a4b7ac7111edd0c627ff105d020210adc">load</a>(<span class="keywordtype">void</span> <span class="keyword">const</span>*) = 0;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structJ2DAnmLoader.html#a217498747938d6964b0f661165231b78">   21</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structJ2DAnmLoader.html#a217498747938d6964b0f661165231b78">setResource</a>(<a class="code hl_class" href="structJ2DAnmBase.html">J2DAnmBase</a>*, <span class="keywordtype">void</span> <span class="keyword">const</span>*) = 0;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structJ2DAnmLoader.html#a74e9f7b0d5cad80689697fc5ec5971d1">   22</a></span>    <span class="comment">/* 8030A410 */</span> <span class="keyword">virtual</span> <a class="code hl_function" href="structJ2DAnmLoader.html#a74e9f7b0d5cad80689697fc5ec5971d1">~J2DAnmLoader</a>() {}</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structJ2DAnmLoader.html#a855121129c73934040b93587196a5425">   24</a></span>    <span class="keywordtype">void</span>* <a class="code hl_variable" href="structJ2DAnmLoader.html#a855121129c73934040b93587196a5425">mpResource</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>};</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">struct </span><a class="code hl_struct" href="structJ3DAnmTextureSRTKeyData.html">J3DAnmTextureSRTKeyData</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">struct </span><a class="code hl_struct" href="structJ3DAnmColorKeyData.html">J3DAnmColorKeyData</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">struct </span><a class="code hl_struct" href="structJ3DAnmVtxColorKeyData.html">J3DAnmVtxColorKeyData</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">struct </span><a class="code hl_struct" href="structJ3DAnmTevRegKeyData.html">J3DAnmTevRegKeyData</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">struct </span><a class="code hl_struct" href="structJ3DAnmTransformFullData.html">J3DAnmTransformFullData</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">struct </span><a class="code hl_struct" href="structJ3DAnmColorFullData.html">J3DAnmColorFullData</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">struct </span><a class="code hl_struct" href="structJ3DAnmTexPatternFullData.html">J3DAnmTexPatternFullData</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">struct </span><a class="code hl_struct" href="structJ3DAnmVisibilityFullData.html">J3DAnmVisibilityFullData</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">struct </span><a class="code hl_struct" href="structJ3DAnmVtxColorFullData.html">J3DAnmVtxColorFullData</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">struct </span><a class="code hl_struct" href="structJ3DAnmTransformKeyData.html">J3DAnmTransformKeyData</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">class </span><a class="code hl_class" href="structJ2DAnmKeyLoader__v15.html">J2DAnmKeyLoader_v15</a> : <span class="keyword">public</span> <a class="code hl_class" href="structJ2DAnmLoader.html">J2DAnmLoader</a> {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="structJ2DAnmKeyLoader__v15.html#ab1dda360bd07c98db74e50e819b483eb">   44</a></span>    <span class="comment">/* 80309290 */</span> <a class="code hl_function" href="structJ2DAnmKeyLoader__v15.html#ab1dda360bd07c98db74e50e819b483eb">J2DAnmKeyLoader_v15</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structJ2DAnmKeyLoader__v15.html#ad94e27e742e1cc5dd23cfb245c22e633">   45</a></span>    <span class="comment">/* 80309570 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structJ2DAnmKeyLoader__v15.html#ad94e27e742e1cc5dd23cfb245c22e633">readAnmTransform</a>(<a class="code hl_struct" href="structJ3DAnmTransformKeyData.html">J3DAnmTransformKeyData</a> <span class="keyword">const</span>*);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="structJ2DAnmKeyLoader__v15.html#a13d4d10bbd66aa03d0bd1307d1b359a8">   46</a></span>    <span class="comment">/* 80309598 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structJ2DAnmKeyLoader__v15.html#a13d4d10bbd66aa03d0bd1307d1b359a8">setAnmTransform</a>(<a class="code hl_class" href="structJ2DAnmTransformKey.html">J2DAnmTransformKey</a>*, <a class="code hl_struct" href="structJ3DAnmTransformKeyData.html">J3DAnmTransformKeyData</a> <span class="keyword">const</span>*);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="structJ2DAnmKeyLoader__v15.html#a0b4835c52b34d43fa3049732687ecb2e">   47</a></span>    <span class="comment">/* 80309634 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structJ2DAnmKeyLoader__v15.html#a0b4835c52b34d43fa3049732687ecb2e">readAnmTextureSRT</a>(<a class="code hl_struct" href="structJ3DAnmTextureSRTKeyData.html">J3DAnmTextureSRTKeyData</a> <span class="keyword">const</span>*);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="structJ2DAnmKeyLoader__v15.html#a60bf1a37847364738fb9d9338a909f06">   48</a></span>    <span class="comment">/* 8030965C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structJ2DAnmKeyLoader__v15.html#a60bf1a37847364738fb9d9338a909f06">setAnmTextureSRT</a>(<a class="code hl_class" href="structJ2DAnmTextureSRTKey.html">J2DAnmTextureSRTKey</a>*, <a class="code hl_struct" href="structJ3DAnmTextureSRTKeyData.html">J3DAnmTextureSRTKeyData</a> <span class="keyword">const</span>*);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="structJ2DAnmKeyLoader__v15.html#ac179a5b545480c2c9cf883ab20ee5504">   49</a></span>    <span class="comment">/* 80309848 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structJ2DAnmKeyLoader__v15.html#ac179a5b545480c2c9cf883ab20ee5504">readAnmColor</a>(<a class="code hl_struct" href="structJ3DAnmColorKeyData.html">J3DAnmColorKeyData</a> <span class="keyword">const</span>*);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="structJ2DAnmKeyLoader__v15.html#ab79d94be8c2ad3949eca8585df2257d3">   50</a></span>    <span class="comment">/* 80309870 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structJ2DAnmKeyLoader__v15.html#ab79d94be8c2ad3949eca8585df2257d3">setAnmColor</a>(<a class="code hl_class" href="structJ2DAnmColorKey.html">J2DAnmColorKey</a>*, <a class="code hl_struct" href="structJ3DAnmColorKeyData.html">J3DAnmColorKeyData</a> <span class="keyword">const</span>*);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="structJ2DAnmKeyLoader__v15.html#ac141841076c54789ff1aa6719de7a113">   51</a></span>    <span class="comment">/* 8030995C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structJ2DAnmKeyLoader__v15.html#ac141841076c54789ff1aa6719de7a113">readAnmVtxColor</a>(<a class="code hl_struct" href="structJ3DAnmVtxColorKeyData.html">J3DAnmVtxColorKeyData</a> <span class="keyword">const</span>*);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="structJ2DAnmKeyLoader__v15.html#adde9c231b4c624f709897fa98166a657">   52</a></span>    <span class="comment">/* 80309984 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structJ2DAnmKeyLoader__v15.html#adde9c231b4c624f709897fa98166a657">setAnmVtxColor</a>(<a class="code hl_class" href="structJ2DAnmVtxColorKey.html">J2DAnmVtxColorKey</a>*, <a class="code hl_struct" href="structJ3DAnmVtxColorKeyData.html">J3DAnmVtxColorKeyData</a> <span class="keyword">const</span>*);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="structJ2DAnmKeyLoader__v15.html#a215dc3cf40e0564b5ed8a71197c72dca">   53</a></span>    <span class="comment">/* 80309FDC */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structJ2DAnmKeyLoader__v15.html#a215dc3cf40e0564b5ed8a71197c72dca">readAnmTevReg</a>(<a class="code hl_struct" href="structJ3DAnmTevRegKeyData.html">J3DAnmTevRegKeyData</a> <span class="keyword">const</span>*);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="structJ2DAnmKeyLoader__v15.html#a13b89019b6819735b95c3066c596881d">   54</a></span>    <span class="comment">/* 8030A004 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structJ2DAnmKeyLoader__v15.html#a13b89019b6819735b95c3066c596881d">setAnmTevReg</a>(<a class="code hl_class" href="structJ2DAnmTevRegKey.html">J2DAnmTevRegKey</a>*, <a class="code hl_struct" href="structJ3DAnmTevRegKeyData.html">J3DAnmTevRegKeyData</a> <span class="keyword">const</span>*);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="structJ2DAnmKeyLoader__v15.html#a216d3d6b5917524ce7829dd5d505c01d">   56</a></span>    <span class="comment">/* 80309308 */</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span>* <a class="code hl_function" href="structJ2DAnmKeyLoader__v15.html#a216d3d6b5917524ce7829dd5d505c01d">load</a>(<span class="keywordtype">void</span> <span class="keyword">const</span>*);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="structJ2DAnmKeyLoader__v15.html#a965b78ca0ea51a4cc2ceea0022f2f31a">   57</a></span>    <span class="comment">/* 80309414 */</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structJ2DAnmKeyLoader__v15.html#a965b78ca0ea51a4cc2ceea0022f2f31a">setResource</a>(<a class="code hl_class" href="structJ2DAnmBase.html">J2DAnmBase</a>*, <span class="keywordtype">void</span> <span class="keyword">const</span>*);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="structJ2DAnmKeyLoader__v15.html#a32073cbb93c44ee16ec8cd30c106f74d">   58</a></span>    <span class="comment">/* 803092AC */</span> <span class="keyword">virtual</span> <a class="code hl_function" href="structJ2DAnmKeyLoader__v15.html#a32073cbb93c44ee16ec8cd30c106f74d">~J2DAnmKeyLoader_v15</a>();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">// /* 0x04 */ void* _4;</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>};</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keyword">class </span><a class="code hl_class" href="structJ2DAnmFullLoader__v15.html">J2DAnmFullLoader_v15</a> : <span class="keyword">public</span> <a class="code hl_class" href="structJ2DAnmLoader.html">J2DAnmLoader</a> {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="structJ2DAnmFullLoader__v15.html#af73c0803eab5048cff3e0eb690d89d58">   69</a></span>    <span class="comment">/* 80309CE8 */</span> <a class="code hl_function" href="structJ2DAnmFullLoader__v15.html#af73c0803eab5048cff3e0eb690d89d58">J2DAnmFullLoader_v15</a>();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="structJ2DAnmFullLoader__v15.html#aed39bc72a35f1d316a7c1a8b17a3fe85">   70</a></span>    <span class="comment">/* 80309D60 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structJ2DAnmFullLoader__v15.html#aed39bc72a35f1d316a7c1a8b17a3fe85">readAnmTransform</a>(<a class="code hl_struct" href="structJ3DAnmTransformFullData.html">J3DAnmTransformFullData</a> <span class="keyword">const</span>*);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="structJ2DAnmFullLoader__v15.html#a6612aa1028982040df4b03117feb8c51">   71</a></span>    <span class="comment">/* 80309D88 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structJ2DAnmFullLoader__v15.html#a6612aa1028982040df4b03117feb8c51">setAnmTransform</a>(<a class="code hl_class" href="structJ2DAnmTransformFull.html">J2DAnmTransformFull</a>*, <a class="code hl_struct" href="structJ3DAnmTransformFullData.html">J3DAnmTransformFullData</a> <span class="keyword">const</span>*);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="structJ2DAnmFullLoader__v15.html#a20ad72f69febfbe6c3e8eeeb05e6eea8">   72</a></span>    <span class="comment">/* 80309E1C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structJ2DAnmFullLoader__v15.html#a20ad72f69febfbe6c3e8eeeb05e6eea8">readAnmColor</a>(<a class="code hl_struct" href="structJ3DAnmColorFullData.html">J3DAnmColorFullData</a> <span class="keyword">const</span>*);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="structJ2DAnmFullLoader__v15.html#a3276ec044255a1f41e44f0e18b8fe730">   73</a></span>    <span class="comment">/* 80309E44 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structJ2DAnmFullLoader__v15.html#a3276ec044255a1f41e44f0e18b8fe730">setAnmColor</a>(<a class="code hl_class" href="structJ2DAnmColorFull.html">J2DAnmColorFull</a>*, <a class="code hl_struct" href="structJ3DAnmColorFullData.html">J3DAnmColorFullData</a> <span class="keyword">const</span>*);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="structJ2DAnmFullLoader__v15.html#abdd0016dee61f2ce3dc28571a0ddd94c">   74</a></span>    <span class="comment">/* 80309F10 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structJ2DAnmFullLoader__v15.html#abdd0016dee61f2ce3dc28571a0ddd94c">readAnmTexPattern</a>(<a class="code hl_struct" href="structJ3DAnmTexPatternFullData.html">J3DAnmTexPatternFullData</a> <span class="keyword">const</span>*);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="structJ2DAnmFullLoader__v15.html#a8e7313998bd9adae430382f9033ce741">   75</a></span>    <span class="comment">/* 80309F38 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structJ2DAnmFullLoader__v15.html#a8e7313998bd9adae430382f9033ce741">setAnmTexPattern</a>(<a class="code hl_class" href="structJ2DAnmTexPattern.html">J2DAnmTexPattern</a>*, <a class="code hl_struct" href="structJ3DAnmTexPatternFullData.html">J3DAnmTexPatternFullData</a> <span class="keyword">const</span>*);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="structJ2DAnmFullLoader__v15.html#a2a52fcec12fb05040c21c700d80d8ef3">   76</a></span>    <span class="comment">/* 8030A190 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structJ2DAnmFullLoader__v15.html#a2a52fcec12fb05040c21c700d80d8ef3">readAnmVisibility</a>(<a class="code hl_struct" href="structJ3DAnmVisibilityFullData.html">J3DAnmVisibilityFullData</a> <span class="keyword">const</span>*);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="structJ2DAnmFullLoader__v15.html#aa72f272d0ad01caae10918d4bda1ac5a">   77</a></span>    <span class="comment">/* 8030A1B8 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structJ2DAnmFullLoader__v15.html#aa72f272d0ad01caae10918d4bda1ac5a">setAnmVisibility</a>(<a class="code hl_class" href="structJ2DAnmVisibilityFull.html">J2DAnmVisibilityFull</a>*, <a class="code hl_struct" href="structJ3DAnmVisibilityFullData.html">J3DAnmVisibilityFullData</a> <span class="keyword">const</span>*);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="structJ2DAnmFullLoader__v15.html#a6380383b9bfc8f5377d782354d5cccc0">   78</a></span>    <span class="comment">/* 8030A234 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structJ2DAnmFullLoader__v15.html#a6380383b9bfc8f5377d782354d5cccc0">readAnmVtxColor</a>(<a class="code hl_struct" href="structJ3DAnmVtxColorFullData.html">J3DAnmVtxColorFullData</a> <span class="keyword">const</span>*);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="structJ2DAnmFullLoader__v15.html#a52b941322a68913a7c7cce978ff1a474">   79</a></span>    <span class="comment">/* 8030A25C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structJ2DAnmFullLoader__v15.html#a52b941322a68913a7c7cce978ff1a474">setAnmVtxColor</a>(<a class="code hl_class" href="structJ2DAnmVtxColorFull.html">J2DAnmVtxColorFull</a>*, <a class="code hl_struct" href="structJ3DAnmVtxColorFullData.html">J3DAnmVtxColorFullData</a> <span class="keyword">const</span>*);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="structJ2DAnmFullLoader__v15.html#a8662994affc28b5be634c790a3ba6b89">   81</a></span>    <span class="comment">/* 80309A80 */</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span>* <a class="code hl_function" href="structJ2DAnmFullLoader__v15.html#a8662994affc28b5be634c790a3ba6b89">load</a>(<span class="keywordtype">void</span> <span class="keyword">const</span>*);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="structJ2DAnmFullLoader__v15.html#ac2be296a2d69c7a1a2cef26adb734feb">   82</a></span>    <span class="comment">/* 80309B8C */</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structJ2DAnmFullLoader__v15.html#ac2be296a2d69c7a1a2cef26adb734feb">setResource</a>(<a class="code hl_class" href="structJ2DAnmBase.html">J2DAnmBase</a>*, <span class="keywordtype">void</span> <span class="keyword">const</span>*);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="structJ2DAnmFullLoader__v15.html#a249c62d4effc2a5ce5297f5635f5279b">   83</a></span>    <span class="comment">/* 80309D04 */</span> <span class="keyword">virtual</span> <a class="code hl_function" href="structJ2DAnmFullLoader__v15.html#a249c62d4effc2a5ce5297f5635f5279b">~J2DAnmFullLoader_v15</a>();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="comment">// void* _4;</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>};</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">#endif </span><span class="comment">/* J2DANMLOADER_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aJ2DAnimation_8h_html"><div class="ttname"><a href="J2DAnimation_8h.html">J2DAnimation.h</a></div></div>
+<div class="ttc" id="astructJ2DAnmBase_html"><div class="ttname"><a href="structJ2DAnmBase.html">J2DAnmBase</a></div><div class="ttdef"><b>Definition</b> J2DAnmLoader.cpp:78</div></div>
+<div class="ttc" id="astructJ2DAnmColorFull_html"><div class="ttname"><a href="structJ2DAnmColorFull.html">J2DAnmColorFull</a></div><div class="ttdef"><b>Definition</b> J2DAnmLoader.cpp:101</div></div>
+<div class="ttc" id="astructJ2DAnmColorKey_html"><div class="ttname"><a href="structJ2DAnmColorKey.html">J2DAnmColorKey</a></div><div class="ttdef"><b>Definition</b> d_msg_scrn_3select.cpp:46</div></div>
+<div class="ttc" id="astructJ2DAnmFullLoader__v15_html"><div class="ttname"><a href="structJ2DAnmFullLoader__v15.html">J2DAnmFullLoader_v15</a></div><div class="ttdef"><b>Definition</b> J2DAnmLoader.cpp:103</div></div>
+<div class="ttc" id="astructJ2DAnmFullLoader__v15_html_a20ad72f69febfbe6c3e8eeeb05e6eea8"><div class="ttname"><a href="structJ2DAnmFullLoader__v15.html#a20ad72f69febfbe6c3e8eeeb05e6eea8">J2DAnmFullLoader_v15::readAnmColor</a></div><div class="ttdeci">void readAnmColor(J3DAnmColorFullData const *)</div></div>
+<div class="ttc" id="astructJ2DAnmFullLoader__v15_html_a249c62d4effc2a5ce5297f5635f5279b"><div class="ttname"><a href="structJ2DAnmFullLoader__v15.html#a249c62d4effc2a5ce5297f5635f5279b">J2DAnmFullLoader_v15::~J2DAnmFullLoader_v15</a></div><div class="ttdeci">virtual ~J2DAnmFullLoader_v15()</div></div>
+<div class="ttc" id="astructJ2DAnmFullLoader__v15_html_a2a52fcec12fb05040c21c700d80d8ef3"><div class="ttname"><a href="structJ2DAnmFullLoader__v15.html#a2a52fcec12fb05040c21c700d80d8ef3">J2DAnmFullLoader_v15::readAnmVisibility</a></div><div class="ttdeci">void readAnmVisibility(J3DAnmVisibilityFullData const *)</div></div>
+<div class="ttc" id="astructJ2DAnmFullLoader__v15_html_a3276ec044255a1f41e44f0e18b8fe730"><div class="ttname"><a href="structJ2DAnmFullLoader__v15.html#a3276ec044255a1f41e44f0e18b8fe730">J2DAnmFullLoader_v15::setAnmColor</a></div><div class="ttdeci">void setAnmColor(J2DAnmColorFull *, J3DAnmColorFullData const *)</div></div>
+<div class="ttc" id="astructJ2DAnmFullLoader__v15_html_a52b941322a68913a7c7cce978ff1a474"><div class="ttname"><a href="structJ2DAnmFullLoader__v15.html#a52b941322a68913a7c7cce978ff1a474">J2DAnmFullLoader_v15::setAnmVtxColor</a></div><div class="ttdeci">void setAnmVtxColor(J2DAnmVtxColorFull *, J3DAnmVtxColorFullData const *)</div></div>
+<div class="ttc" id="astructJ2DAnmFullLoader__v15_html_a6380383b9bfc8f5377d782354d5cccc0"><div class="ttname"><a href="structJ2DAnmFullLoader__v15.html#a6380383b9bfc8f5377d782354d5cccc0">J2DAnmFullLoader_v15::readAnmVtxColor</a></div><div class="ttdeci">void readAnmVtxColor(J3DAnmVtxColorFullData const *)</div></div>
+<div class="ttc" id="astructJ2DAnmFullLoader__v15_html_a6612aa1028982040df4b03117feb8c51"><div class="ttname"><a href="structJ2DAnmFullLoader__v15.html#a6612aa1028982040df4b03117feb8c51">J2DAnmFullLoader_v15::setAnmTransform</a></div><div class="ttdeci">void setAnmTransform(J2DAnmTransformFull *, J3DAnmTransformFullData const *)</div></div>
+<div class="ttc" id="astructJ2DAnmFullLoader__v15_html_a8662994affc28b5be634c790a3ba6b89"><div class="ttname"><a href="structJ2DAnmFullLoader__v15.html#a8662994affc28b5be634c790a3ba6b89">J2DAnmFullLoader_v15::load</a></div><div class="ttdeci">virtual void * load(void const *)</div></div>
+<div class="ttc" id="astructJ2DAnmFullLoader__v15_html_a8e7313998bd9adae430382f9033ce741"><div class="ttname"><a href="structJ2DAnmFullLoader__v15.html#a8e7313998bd9adae430382f9033ce741">J2DAnmFullLoader_v15::setAnmTexPattern</a></div><div class="ttdeci">void setAnmTexPattern(J2DAnmTexPattern *, J3DAnmTexPatternFullData const *)</div></div>
+<div class="ttc" id="astructJ2DAnmFullLoader__v15_html_aa72f272d0ad01caae10918d4bda1ac5a"><div class="ttname"><a href="structJ2DAnmFullLoader__v15.html#aa72f272d0ad01caae10918d4bda1ac5a">J2DAnmFullLoader_v15::setAnmVisibility</a></div><div class="ttdeci">void setAnmVisibility(J2DAnmVisibilityFull *, J3DAnmVisibilityFullData const *)</div></div>
+<div class="ttc" id="astructJ2DAnmFullLoader__v15_html_abdd0016dee61f2ce3dc28571a0ddd94c"><div class="ttname"><a href="structJ2DAnmFullLoader__v15.html#abdd0016dee61f2ce3dc28571a0ddd94c">J2DAnmFullLoader_v15::readAnmTexPattern</a></div><div class="ttdeci">void readAnmTexPattern(J3DAnmTexPatternFullData const *)</div></div>
+<div class="ttc" id="astructJ2DAnmFullLoader__v15_html_ac2be296a2d69c7a1a2cef26adb734feb"><div class="ttname"><a href="structJ2DAnmFullLoader__v15.html#ac2be296a2d69c7a1a2cef26adb734feb">J2DAnmFullLoader_v15::setResource</a></div><div class="ttdeci">virtual void setResource(J2DAnmBase *, void const *)</div></div>
+<div class="ttc" id="astructJ2DAnmFullLoader__v15_html_aed39bc72a35f1d316a7c1a8b17a3fe85"><div class="ttname"><a href="structJ2DAnmFullLoader__v15.html#aed39bc72a35f1d316a7c1a8b17a3fe85">J2DAnmFullLoader_v15::readAnmTransform</a></div><div class="ttdeci">void readAnmTransform(J3DAnmTransformFullData const *)</div></div>
+<div class="ttc" id="astructJ2DAnmFullLoader__v15_html_af73c0803eab5048cff3e0eb690d89d58"><div class="ttname"><a href="structJ2DAnmFullLoader__v15.html#af73c0803eab5048cff3e0eb690d89d58">J2DAnmFullLoader_v15::J2DAnmFullLoader_v15</a></div><div class="ttdeci">J2DAnmFullLoader_v15()</div></div>
+<div class="ttc" id="astructJ2DAnmKeyLoader__v15_html"><div class="ttname"><a href="structJ2DAnmKeyLoader__v15.html">J2DAnmKeyLoader_v15</a></div><div class="ttdef"><b>Definition</b> J2DAnmLoader.cpp:84</div></div>
+<div class="ttc" id="astructJ2DAnmKeyLoader__v15_html_a0b4835c52b34d43fa3049732687ecb2e"><div class="ttname"><a href="structJ2DAnmKeyLoader__v15.html#a0b4835c52b34d43fa3049732687ecb2e">J2DAnmKeyLoader_v15::readAnmTextureSRT</a></div><div class="ttdeci">void readAnmTextureSRT(J3DAnmTextureSRTKeyData const *)</div></div>
+<div class="ttc" id="astructJ2DAnmKeyLoader__v15_html_a13b89019b6819735b95c3066c596881d"><div class="ttname"><a href="structJ2DAnmKeyLoader__v15.html#a13b89019b6819735b95c3066c596881d">J2DAnmKeyLoader_v15::setAnmTevReg</a></div><div class="ttdeci">void setAnmTevReg(J2DAnmTevRegKey *, J3DAnmTevRegKeyData const *)</div></div>
+<div class="ttc" id="astructJ2DAnmKeyLoader__v15_html_a13d4d10bbd66aa03d0bd1307d1b359a8"><div class="ttname"><a href="structJ2DAnmKeyLoader__v15.html#a13d4d10bbd66aa03d0bd1307d1b359a8">J2DAnmKeyLoader_v15::setAnmTransform</a></div><div class="ttdeci">void setAnmTransform(J2DAnmTransformKey *, J3DAnmTransformKeyData const *)</div></div>
+<div class="ttc" id="astructJ2DAnmKeyLoader__v15_html_a215dc3cf40e0564b5ed8a71197c72dca"><div class="ttname"><a href="structJ2DAnmKeyLoader__v15.html#a215dc3cf40e0564b5ed8a71197c72dca">J2DAnmKeyLoader_v15::readAnmTevReg</a></div><div class="ttdeci">void readAnmTevReg(J3DAnmTevRegKeyData const *)</div></div>
+<div class="ttc" id="astructJ2DAnmKeyLoader__v15_html_a216d3d6b5917524ce7829dd5d505c01d"><div class="ttname"><a href="structJ2DAnmKeyLoader__v15.html#a216d3d6b5917524ce7829dd5d505c01d">J2DAnmKeyLoader_v15::load</a></div><div class="ttdeci">virtual void * load(void const *)</div></div>
+<div class="ttc" id="astructJ2DAnmKeyLoader__v15_html_a32073cbb93c44ee16ec8cd30c106f74d"><div class="ttname"><a href="structJ2DAnmKeyLoader__v15.html#a32073cbb93c44ee16ec8cd30c106f74d">J2DAnmKeyLoader_v15::~J2DAnmKeyLoader_v15</a></div><div class="ttdeci">virtual ~J2DAnmKeyLoader_v15()</div></div>
+<div class="ttc" id="astructJ2DAnmKeyLoader__v15_html_a60bf1a37847364738fb9d9338a909f06"><div class="ttname"><a href="structJ2DAnmKeyLoader__v15.html#a60bf1a37847364738fb9d9338a909f06">J2DAnmKeyLoader_v15::setAnmTextureSRT</a></div><div class="ttdeci">void setAnmTextureSRT(J2DAnmTextureSRTKey *, J3DAnmTextureSRTKeyData const *)</div></div>
+<div class="ttc" id="astructJ2DAnmKeyLoader__v15_html_a965b78ca0ea51a4cc2ceea0022f2f31a"><div class="ttname"><a href="structJ2DAnmKeyLoader__v15.html#a965b78ca0ea51a4cc2ceea0022f2f31a">J2DAnmKeyLoader_v15::setResource</a></div><div class="ttdeci">virtual void setResource(J2DAnmBase *, void const *)</div></div>
+<div class="ttc" id="astructJ2DAnmKeyLoader__v15_html_ab1dda360bd07c98db74e50e819b483eb"><div class="ttname"><a href="structJ2DAnmKeyLoader__v15.html#ab1dda360bd07c98db74e50e819b483eb">J2DAnmKeyLoader_v15::J2DAnmKeyLoader_v15</a></div><div class="ttdeci">J2DAnmKeyLoader_v15()</div></div>
+<div class="ttc" id="astructJ2DAnmKeyLoader__v15_html_ab79d94be8c2ad3949eca8585df2257d3"><div class="ttname"><a href="structJ2DAnmKeyLoader__v15.html#ab79d94be8c2ad3949eca8585df2257d3">J2DAnmKeyLoader_v15::setAnmColor</a></div><div class="ttdeci">void setAnmColor(J2DAnmColorKey *, J3DAnmColorKeyData const *)</div></div>
+<div class="ttc" id="astructJ2DAnmKeyLoader__v15_html_ac141841076c54789ff1aa6719de7a113"><div class="ttname"><a href="structJ2DAnmKeyLoader__v15.html#ac141841076c54789ff1aa6719de7a113">J2DAnmKeyLoader_v15::readAnmVtxColor</a></div><div class="ttdeci">void readAnmVtxColor(J3DAnmVtxColorKeyData const *)</div></div>
+<div class="ttc" id="astructJ2DAnmKeyLoader__v15_html_ac179a5b545480c2c9cf883ab20ee5504"><div class="ttname"><a href="structJ2DAnmKeyLoader__v15.html#ac179a5b545480c2c9cf883ab20ee5504">J2DAnmKeyLoader_v15::readAnmColor</a></div><div class="ttdeci">void readAnmColor(J3DAnmColorKeyData const *)</div></div>
+<div class="ttc" id="astructJ2DAnmKeyLoader__v15_html_ad94e27e742e1cc5dd23cfb245c22e633"><div class="ttname"><a href="structJ2DAnmKeyLoader__v15.html#ad94e27e742e1cc5dd23cfb245c22e633">J2DAnmKeyLoader_v15::readAnmTransform</a></div><div class="ttdeci">void readAnmTransform(J3DAnmTransformKeyData const *)</div></div>
+<div class="ttc" id="astructJ2DAnmKeyLoader__v15_html_adde9c231b4c624f709897fa98166a657"><div class="ttname"><a href="structJ2DAnmKeyLoader__v15.html#adde9c231b4c624f709897fa98166a657">J2DAnmKeyLoader_v15::setAnmVtxColor</a></div><div class="ttdeci">void setAnmVtxColor(J2DAnmVtxColorKey *, J3DAnmVtxColorKeyData const *)</div></div>
+<div class="ttc" id="astructJ2DAnmLoaderDataBase_html"><div class="ttname"><a href="structJ2DAnmLoaderDataBase.html">J2DAnmLoaderDataBase</a></div><div class="ttdef"><b>Definition</b> d_file_sel_warning.cpp:54</div></div>
+<div class="ttc" id="astructJ2DAnmLoaderDataBase_html_abe1c5b47737ae42192a267434c22d78b"><div class="ttname"><a href="structJ2DAnmLoaderDataBase.html#abe1c5b47737ae42192a267434c22d78b">J2DAnmLoaderDataBase::load</a></div><div class="ttdeci">static J2DAnmBase * load(void const *)</div></div>
+<div class="ttc" id="astructJ2DAnmLoader_html"><div class="ttname"><a href="structJ2DAnmLoader.html">J2DAnmLoader</a></div><div class="ttdef"><b>Definition</b> J2DAnmLoader.cpp:74</div></div>
+<div class="ttc" id="astructJ2DAnmLoader_html_a217498747938d6964b0f661165231b78"><div class="ttname"><a href="structJ2DAnmLoader.html#a217498747938d6964b0f661165231b78">J2DAnmLoader::setResource</a></div><div class="ttdeci">virtual void setResource(J2DAnmBase *, void const *)=0</div></div>
+<div class="ttc" id="astructJ2DAnmLoader_html_a4b7ac7111edd0c627ff105d020210adc"><div class="ttname"><a href="structJ2DAnmLoader.html#a4b7ac7111edd0c627ff105d020210adc">J2DAnmLoader::load</a></div><div class="ttdeci">virtual void * load(void const *)=0</div></div>
+<div class="ttc" id="astructJ2DAnmLoader_html_a74e9f7b0d5cad80689697fc5ec5971d1"><div class="ttname"><a href="structJ2DAnmLoader.html#a74e9f7b0d5cad80689697fc5ec5971d1">J2DAnmLoader::~J2DAnmLoader</a></div><div class="ttdeci">virtual ~J2DAnmLoader()</div><div class="ttdef"><b>Definition</b> J2DAnmLoader.h:22</div></div>
+<div class="ttc" id="astructJ2DAnmLoader_html_a855121129c73934040b93587196a5425"><div class="ttname"><a href="structJ2DAnmLoader.html#a855121129c73934040b93587196a5425">J2DAnmLoader::mpResource</a></div><div class="ttdeci">void * mpResource</div><div class="ttdef"><b>Definition</b> J2DAnmLoader.h:24</div></div>
+<div class="ttc" id="astructJ2DAnmTevRegKey_html"><div class="ttname"><a href="structJ2DAnmTevRegKey.html">J2DAnmTevRegKey</a></div><div class="ttdef"><b>Definition</b> J2DAnmLoader.cpp:68</div></div>
+<div class="ttc" id="astructJ2DAnmTexPattern_html"><div class="ttname"><a href="structJ2DAnmTexPattern.html">J2DAnmTexPattern</a></div><div class="ttdef"><b>Definition</b> d_pane_class_ex.cpp:36</div></div>
+<div class="ttc" id="astructJ2DAnmTextureSRTKey_html"><div class="ttname"><a href="structJ2DAnmTextureSRTKey.html">J2DAnmTextureSRTKey</a></div><div class="ttdef"><b>Definition</b> d_menu_fmap2D.cpp:56</div></div>
+<div class="ttc" id="astructJ2DAnmTransformFull_html"><div class="ttname"><a href="structJ2DAnmTransformFull.html">J2DAnmTransformFull</a></div><div class="ttdef"><b>Definition</b> J2DAnmLoader.cpp:62</div></div>
+<div class="ttc" id="astructJ2DAnmTransformKey_html"><div class="ttname"><a href="structJ2DAnmTransformKey.html">J2DAnmTransformKey</a></div><div class="ttdef"><b>Definition</b> J2DAnmLoader.cpp:60</div></div>
+<div class="ttc" id="astructJ2DAnmVisibilityFull_html"><div class="ttname"><a href="structJ2DAnmVisibilityFull.html">J2DAnmVisibilityFull</a></div><div class="ttdef"><b>Definition</b> d_pane_class_ex.cpp:38</div></div>
+<div class="ttc" id="astructJ2DAnmVtxColorFull_html"><div class="ttname"><a href="structJ2DAnmVtxColorFull.html">J2DAnmVtxColorFull</a></div><div class="ttdef"><b>Definition</b> J2DAnmLoader.cpp:49</div></div>
+<div class="ttc" id="astructJ2DAnmVtxColorKey_html"><div class="ttname"><a href="structJ2DAnmVtxColorKey.html">J2DAnmVtxColorKey</a></div><div class="ttdef"><b>Definition</b> J2DAnmLoader.cpp:47</div></div>
+<div class="ttc" id="astructJ3DAnmColorFullData_html"><div class="ttname"><a href="structJ3DAnmColorFullData.html">J3DAnmColorFullData</a></div><div class="ttdef"><b>Definition</b> J2DAnmLoader.cpp:43</div></div>
+<div class="ttc" id="astructJ3DAnmColorKeyData_html"><div class="ttname"><a href="structJ3DAnmColorKeyData.html">J3DAnmColorKeyData</a></div><div class="ttdef"><b>Definition</b> J2DAnmLoader.cpp:41</div></div>
+<div class="ttc" id="astructJ3DAnmTevRegKeyData_html"><div class="ttname"><a href="structJ3DAnmTevRegKeyData.html">J3DAnmTevRegKeyData</a></div><div class="ttdef"><b>Definition</b> J2DAnmLoader.cpp:39</div></div>
+<div class="ttc" id="astructJ3DAnmTexPatternFullData_html"><div class="ttname"><a href="structJ3DAnmTexPatternFullData.html">J3DAnmTexPatternFullData</a></div><div class="ttdef"><b>Definition</b> J2DAnmLoader.cpp:37</div></div>
+<div class="ttc" id="astructJ3DAnmTextureSRTKeyData_html"><div class="ttname"><a href="structJ3DAnmTextureSRTKeyData.html">J3DAnmTextureSRTKeyData</a></div><div class="ttdef"><b>Definition</b> J2DAnmLoader.cpp:35</div></div>
+<div class="ttc" id="astructJ3DAnmTransformFullData_html"><div class="ttname"><a href="structJ3DAnmTransformFullData.html">J3DAnmTransformFullData</a></div><div class="ttdef"><b>Definition</b> J2DAnmLoader.cpp:33</div></div>
+<div class="ttc" id="astructJ3DAnmTransformKeyData_html"><div class="ttname"><a href="structJ3DAnmTransformKeyData.html">J3DAnmTransformKeyData</a></div><div class="ttdef"><b>Definition</b> J2DAnmLoader.cpp:31</div></div>
+<div class="ttc" id="astructJ3DAnmVisibilityFullData_html"><div class="ttname"><a href="structJ3DAnmVisibilityFullData.html">J3DAnmVisibilityFullData</a></div><div class="ttdef"><b>Definition</b> J2DAnmLoader.cpp:29</div></div>
+<div class="ttc" id="astructJ3DAnmVtxColorFullData_html"><div class="ttname"><a href="structJ3DAnmVtxColorFullData.html">J3DAnmVtxColorFullData</a></div><div class="ttdef"><b>Definition</b> J2DAnmLoader.cpp:27</div></div>
+<div class="ttc" id="astructJ3DAnmVtxColorKeyData_html"><div class="ttname"><a href="structJ3DAnmVtxColorKeyData.html">J3DAnmVtxColorKeyData</a></div><div class="ttdef"><b>Definition</b> J2DAnmLoader.cpp:25</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_4f0979a7f5e3194619cde56505e372d8.html">JSystem</a></li><li class="navelem"><a class="el" href="dir_a9517e75d808b51ad9f5947a3cea1d31.html">J2DGraph</a></li><li class="navelem"><a class="el" href="J2DAnmLoader_8h.html">J2DAnmLoader.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

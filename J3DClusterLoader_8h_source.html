@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: include/JSystem/J3DGraphLoader/J3DClusterLoader.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('J3DClusterLoader_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">J3DClusterLoader.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="J3DClusterLoader_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef J3DCLUSTERLOADER_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define J3DCLUSTERLOADER_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="J3DAnimation_8h.html">JSystem/J3DGraphAnimator/J3DAnimation.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="structJ3DClusterLoaderDataBase.html">   10</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structJ3DClusterLoaderDataBase.html">J3DClusterLoaderDataBase</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="comment">/* 80334130 */</span> <span class="keyword">static</span> <span class="keywordtype">void</span>* <a class="code hl_function" href="structJ3DClusterLoaderDataBase.html#ab80d5784573e09fe26aa79d532b0c594">load</a>(<span class="keywordtype">void</span> <span class="keyword">const</span>*);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>};</div>
+</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classJ3DClusterBlock.html">   18</a></span><span class="keyword">class </span><a class="code hl_class" href="classJ3DClusterBlock.html">J3DClusterBlock</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structJUTDataBlockHeader.html">JUTDataBlockHeader</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classJ3DClusterBlock.html#a05ad54cab600c8e2c8d3a4cb562ec5b9">   20</a></span>    <span class="comment">/* 0x08 */</span> <a class="code hl_typedef" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> <a class="code hl_variable" href="classJ3DClusterBlock.html#a05ad54cab600c8e2c8d3a4cb562ec5b9">mClusterNum</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classJ3DClusterBlock.html#a7988d61bb92fecd9562bb07d730544e8">   21</a></span>    <span class="comment">/* 0x0A */</span> <a class="code hl_typedef" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> <a class="code hl_variable" href="classJ3DClusterBlock.html#a7988d61bb92fecd9562bb07d730544e8">mClusterKeyNum</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classJ3DClusterBlock.html#af0ef8f7998eb9d20c7d7d807bb120ca3">   22</a></span>    <span class="comment">/* 0x0C */</span> <a class="code hl_typedef" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> <a class="code hl_variable" href="classJ3DClusterBlock.html#af0ef8f7998eb9d20c7d7d807bb120ca3">mClusterVertexNum</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classJ3DClusterBlock.html#ac9e11e9a1119d632bc1c7e7bcaa4fd39">   23</a></span>    <span class="comment">/* 0x0E */</span> <a class="code hl_typedef" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> <a class="code hl_variable" href="classJ3DClusterBlock.html#ac9e11e9a1119d632bc1c7e7bcaa4fd39">mVtxPosNum</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classJ3DClusterBlock.html#a38a418484c7cbb8b80dd64f652f348da">   24</a></span>    <span class="comment">/* 0x10 */</span> <a class="code hl_typedef" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> <a class="code hl_variable" href="classJ3DClusterBlock.html#a38a418484c7cbb8b80dd64f652f348da">mVtxNrmNum</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classJ3DClusterBlock.html#a5e39113b0a81b6027e55ec38018b4d16">   25</a></span>    <span class="comment">/* 0x14 */</span> <span class="keywordtype">void</span>* <a class="code hl_variable" href="classJ3DClusterBlock.html#a5e39113b0a81b6027e55ec38018b4d16">mClusterPointer</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classJ3DClusterBlock.html#afbb07806996da581b644d49c836d2b36">   26</a></span>    <span class="comment">/* 0x18 */</span> <span class="keywordtype">void</span>* <a class="code hl_variable" href="classJ3DClusterBlock.html#afbb07806996da581b644d49c836d2b36">mClusterKeyPointer</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classJ3DClusterBlock.html#a6073d24d1b913df0620b69eddce517b4">   27</a></span>    <span class="comment">/* 0x1C */</span> <span class="keywordtype">void</span>* <a class="code hl_variable" href="classJ3DClusterBlock.html#a6073d24d1b913df0620b69eddce517b4">mClusterVertex</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classJ3DClusterBlock.html#a5a25ffca985af87af5c9d65f94e999cd">   28</a></span>    <span class="comment">/* 0x20 */</span> <span class="keywordtype">void</span>* <a class="code hl_variable" href="classJ3DClusterBlock.html#a5a25ffca985af87af5c9d65f94e999cd">mVtxPos</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classJ3DClusterBlock.html#a11fce3d668e8646adeac870b70e3e48f">   29</a></span>    <span class="comment">/* 0x24 */</span> <span class="keywordtype">void</span>* <a class="code hl_variable" href="classJ3DClusterBlock.html#a11fce3d668e8646adeac870b70e3e48f">mVtxNrm</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classJ3DClusterBlock.html#a7faca0b163a2820ce38b38b6c793d2b8">   30</a></span>    <span class="comment">/* 0x28 */</span> <span class="keywordtype">void</span>* <a class="code hl_variable" href="classJ3DClusterBlock.html#a7faca0b163a2820ce38b38b6c793d2b8">mClusterName</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classJ3DClusterBlock.html#afc5fc87f5ad346dda3b003c19697fc0c">   31</a></span>    <span class="comment">/* 0x2C */</span> <span class="keywordtype">void</span>* <a class="code hl_variable" href="classJ3DClusterBlock.html#afc5fc87f5ad346dda3b003c19697fc0c">mClusterKeyName</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>};</div>
+</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="};">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classJ3DClusterLoader.html">   38</a></span><span class="keyword">class </span><a class="code hl_class" href="classJ3DClusterLoader.html">J3DClusterLoader</a> {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classJ3DClusterLoader.html#aee67955b91e58bb93e9742594e599ecd">   40</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span>* <a class="code hl_function" href="classJ3DClusterLoader.html#aee67955b91e58bb93e9742594e599ecd">load</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>*) = 0;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classJ3DClusterLoader.html#a9ecbc949efe1c95ef210c3e3cea48ecf">   41</a></span>    <span class="comment">/* 803345FC */</span> <span class="keyword">virtual</span> <a class="code hl_function" href="classJ3DClusterLoader.html#a9ecbc949efe1c95ef210c3e3cea48ecf">~J3DClusterLoader</a>() {}</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>};</div>
+</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">class </span><a class="code hl_struct" href="classJ3DDeformData.html">J3DDeformData</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="};">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classJ3DClusterLoader__v15.html">   50</a></span><span class="keyword">class </span><a class="code hl_class" href="classJ3DClusterLoader__v15.html">J3DClusterLoader_v15</a> : <span class="keyword">public</span> <a class="code hl_class" href="classJ3DClusterLoader.html">J3DClusterLoader</a> {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">/* 803341CC */</span> <a class="code hl_function" href="classJ3DClusterLoader__v15.html#a1637c07168ba975ff8149e785c91d2df">J3DClusterLoader_v15</a>();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="comment">/* 803342F8 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classJ3DClusterLoader__v15.html#aa3ecafea9239e18e1d91a8c294a00357">readCluster</a>(<a class="code hl_class" href="classJ3DClusterBlock.html">J3DClusterBlock</a> <span class="keyword">const</span>*);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">/* 80334244 */</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span>* <a class="code hl_function" href="classJ3DClusterLoader__v15.html#ada8dc008d2f1617d66015758133e1a9f">load</a>(<span class="keywordtype">void</span> <span class="keyword">const</span>*);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">/* 803341E8 */</span> <span class="keyword">virtual</span> <a class="code hl_function" href="classJ3DClusterLoader__v15.html#a518d83b5f00af92e2fc36b23d6a6f936">~J3DClusterLoader_v15</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classJ3DClusterLoader__v15.html#a664aa964c3f6255780e3a501a3fc123b">   58</a></span>    <span class="comment">/* 0x04 */</span> <a class="code hl_struct" href="classJ3DDeformData.html">J3DDeformData</a>* <a class="code hl_variable" href="classJ3DClusterLoader__v15.html#a664aa964c3f6255780e3a501a3fc123b">mpDeformData</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>};</div>
+</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#endif </span><span class="comment">/* J3DCLUSTERLOADER_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aJ3DAnimation_8h_html"><div class="ttname"><a href="J3DAnimation_8h.html">J3DAnimation.h</a></div></div>
+<div class="ttc" id="aclassJ3DClusterBlock_html"><div class="ttname"><a href="classJ3DClusterBlock.html">J3DClusterBlock</a></div><div class="ttdef"><b>Definition</b> J3DClusterLoader.h:18</div></div>
+<div class="ttc" id="aclassJ3DClusterBlock_html_a05ad54cab600c8e2c8d3a4cb562ec5b9"><div class="ttname"><a href="classJ3DClusterBlock.html#a05ad54cab600c8e2c8d3a4cb562ec5b9">J3DClusterBlock::mClusterNum</a></div><div class="ttdeci">u16 mClusterNum</div><div class="ttdef"><b>Definition</b> J3DClusterLoader.h:20</div></div>
+<div class="ttc" id="aclassJ3DClusterBlock_html_a11fce3d668e8646adeac870b70e3e48f"><div class="ttname"><a href="classJ3DClusterBlock.html#a11fce3d668e8646adeac870b70e3e48f">J3DClusterBlock::mVtxNrm</a></div><div class="ttdeci">void * mVtxNrm</div><div class="ttdef"><b>Definition</b> J3DClusterLoader.h:29</div></div>
+<div class="ttc" id="aclassJ3DClusterBlock_html_a38a418484c7cbb8b80dd64f652f348da"><div class="ttname"><a href="classJ3DClusterBlock.html#a38a418484c7cbb8b80dd64f652f348da">J3DClusterBlock::mVtxNrmNum</a></div><div class="ttdeci">u16 mVtxNrmNum</div><div class="ttdef"><b>Definition</b> J3DClusterLoader.h:24</div></div>
+<div class="ttc" id="aclassJ3DClusterBlock_html_a5a25ffca985af87af5c9d65f94e999cd"><div class="ttname"><a href="classJ3DClusterBlock.html#a5a25ffca985af87af5c9d65f94e999cd">J3DClusterBlock::mVtxPos</a></div><div class="ttdeci">void * mVtxPos</div><div class="ttdef"><b>Definition</b> J3DClusterLoader.h:28</div></div>
+<div class="ttc" id="aclassJ3DClusterBlock_html_a5e39113b0a81b6027e55ec38018b4d16"><div class="ttname"><a href="classJ3DClusterBlock.html#a5e39113b0a81b6027e55ec38018b4d16">J3DClusterBlock::mClusterPointer</a></div><div class="ttdeci">void * mClusterPointer</div><div class="ttdef"><b>Definition</b> J3DClusterLoader.h:25</div></div>
+<div class="ttc" id="aclassJ3DClusterBlock_html_a6073d24d1b913df0620b69eddce517b4"><div class="ttname"><a href="classJ3DClusterBlock.html#a6073d24d1b913df0620b69eddce517b4">J3DClusterBlock::mClusterVertex</a></div><div class="ttdeci">void * mClusterVertex</div><div class="ttdef"><b>Definition</b> J3DClusterLoader.h:27</div></div>
+<div class="ttc" id="aclassJ3DClusterBlock_html_a7988d61bb92fecd9562bb07d730544e8"><div class="ttname"><a href="classJ3DClusterBlock.html#a7988d61bb92fecd9562bb07d730544e8">J3DClusterBlock::mClusterKeyNum</a></div><div class="ttdeci">u16 mClusterKeyNum</div><div class="ttdef"><b>Definition</b> J3DClusterLoader.h:21</div></div>
+<div class="ttc" id="aclassJ3DClusterBlock_html_a7faca0b163a2820ce38b38b6c793d2b8"><div class="ttname"><a href="classJ3DClusterBlock.html#a7faca0b163a2820ce38b38b6c793d2b8">J3DClusterBlock::mClusterName</a></div><div class="ttdeci">void * mClusterName</div><div class="ttdef"><b>Definition</b> J3DClusterLoader.h:30</div></div>
+<div class="ttc" id="aclassJ3DClusterBlock_html_ac9e11e9a1119d632bc1c7e7bcaa4fd39"><div class="ttname"><a href="classJ3DClusterBlock.html#ac9e11e9a1119d632bc1c7e7bcaa4fd39">J3DClusterBlock::mVtxPosNum</a></div><div class="ttdeci">u16 mVtxPosNum</div><div class="ttdef"><b>Definition</b> J3DClusterLoader.h:23</div></div>
+<div class="ttc" id="aclassJ3DClusterBlock_html_af0ef8f7998eb9d20c7d7d807bb120ca3"><div class="ttname"><a href="classJ3DClusterBlock.html#af0ef8f7998eb9d20c7d7d807bb120ca3">J3DClusterBlock::mClusterVertexNum</a></div><div class="ttdeci">u16 mClusterVertexNum</div><div class="ttdef"><b>Definition</b> J3DClusterLoader.h:22</div></div>
+<div class="ttc" id="aclassJ3DClusterBlock_html_afbb07806996da581b644d49c836d2b36"><div class="ttname"><a href="classJ3DClusterBlock.html#afbb07806996da581b644d49c836d2b36">J3DClusterBlock::mClusterKeyPointer</a></div><div class="ttdeci">void * mClusterKeyPointer</div><div class="ttdef"><b>Definition</b> J3DClusterLoader.h:26</div></div>
+<div class="ttc" id="aclassJ3DClusterBlock_html_afc5fc87f5ad346dda3b003c19697fc0c"><div class="ttname"><a href="classJ3DClusterBlock.html#afc5fc87f5ad346dda3b003c19697fc0c">J3DClusterBlock::mClusterKeyName</a></div><div class="ttdeci">void * mClusterKeyName</div><div class="ttdef"><b>Definition</b> J3DClusterLoader.h:31</div></div>
+<div class="ttc" id="aclassJ3DClusterLoader__v15_html"><div class="ttname"><a href="classJ3DClusterLoader__v15.html">J3DClusterLoader_v15</a></div><div class="ttdef"><b>Definition</b> J3DClusterLoader.h:50</div></div>
+<div class="ttc" id="aclassJ3DClusterLoader__v15_html_a1637c07168ba975ff8149e785c91d2df"><div class="ttname"><a href="classJ3DClusterLoader__v15.html#a1637c07168ba975ff8149e785c91d2df">J3DClusterLoader_v15::J3DClusterLoader_v15</a></div><div class="ttdeci">J3DClusterLoader_v15()</div><div class="ttdef"><b>Definition</b> J3DClusterLoader.cpp:80</div></div>
+<div class="ttc" id="aclassJ3DClusterLoader__v15_html_a518d83b5f00af92e2fc36b23d6a6f936"><div class="ttname"><a href="classJ3DClusterLoader__v15.html#a518d83b5f00af92e2fc36b23d6a6f936">J3DClusterLoader_v15::~J3DClusterLoader_v15</a></div><div class="ttdeci">virtual ~J3DClusterLoader_v15()</div><div class="ttdef"><b>Definition</b> J3DClusterLoader.cpp:83</div></div>
+<div class="ttc" id="aclassJ3DClusterLoader__v15_html_a664aa964c3f6255780e3a501a3fc123b"><div class="ttname"><a href="classJ3DClusterLoader__v15.html#a664aa964c3f6255780e3a501a3fc123b">J3DClusterLoader_v15::mpDeformData</a></div><div class="ttdeci">J3DDeformData * mpDeformData</div><div class="ttdef"><b>Definition</b> J3DClusterLoader.h:58</div></div>
+<div class="ttc" id="aclassJ3DClusterLoader__v15_html_aa3ecafea9239e18e1d91a8c294a00357"><div class="ttname"><a href="classJ3DClusterLoader__v15.html#aa3ecafea9239e18e1d91a8c294a00357">J3DClusterLoader_v15::readCluster</a></div><div class="ttdeci">void readCluster(J3DClusterBlock const *)</div><div class="ttdef"><b>Definition</b> J3DClusterLoader.cpp:110</div></div>
+<div class="ttc" id="aclassJ3DClusterLoader__v15_html_ada8dc008d2f1617d66015758133e1a9f"><div class="ttname"><a href="classJ3DClusterLoader__v15.html#ada8dc008d2f1617d66015758133e1a9f">J3DClusterLoader_v15::load</a></div><div class="ttdeci">virtual void * load(void const *)</div><div class="ttdef"><b>Definition</b> J3DClusterLoader.cpp:86</div></div>
+<div class="ttc" id="aclassJ3DClusterLoader_html"><div class="ttname"><a href="classJ3DClusterLoader.html">J3DClusterLoader</a></div><div class="ttdef"><b>Definition</b> J3DClusterLoader.h:38</div></div>
+<div class="ttc" id="aclassJ3DClusterLoader_html_a9ecbc949efe1c95ef210c3e3cea48ecf"><div class="ttname"><a href="classJ3DClusterLoader.html#a9ecbc949efe1c95ef210c3e3cea48ecf">J3DClusterLoader::~J3DClusterLoader</a></div><div class="ttdeci">virtual ~J3DClusterLoader()</div><div class="ttdef"><b>Definition</b> J3DClusterLoader.h:41</div></div>
+<div class="ttc" id="aclassJ3DClusterLoader_html_aee67955b91e58bb93e9742594e599ecd"><div class="ttname"><a href="classJ3DClusterLoader.html#aee67955b91e58bb93e9742594e599ecd">J3DClusterLoader::load</a></div><div class="ttdeci">virtual void * load(const void *)=0</div></div>
+<div class="ttc" id="aclassJ3DDeformData_html"><div class="ttname"><a href="classJ3DDeformData.html">J3DDeformData</a></div><div class="ttdef"><b>Definition</b> J3DCluster.h:74</div></div>
+<div class="ttc" id="astructJ3DClusterLoaderDataBase_html"><div class="ttname"><a href="structJ3DClusterLoaderDataBase.html">J3DClusterLoaderDataBase</a></div><div class="ttdef"><b>Definition</b> J3DClusterLoader.h:10</div></div>
+<div class="ttc" id="astructJ3DClusterLoaderDataBase_html_ab80d5784573e09fe26aa79d532b0c594"><div class="ttname"><a href="structJ3DClusterLoaderDataBase.html#ab80d5784573e09fe26aa79d532b0c594">J3DClusterLoaderDataBase::load</a></div><div class="ttdeci">static void * load(void const *)</div><div class="ttdef"><b>Definition</b> J3DClusterLoader.cpp:51</div></div>
+<div class="ttc" id="astructJUTDataBlockHeader_html"><div class="ttname"><a href="structJUTDataBlockHeader.html">JUTDataBlockHeader</a></div><div class="ttdef"><b>Definition</b> J3DAnimation.h:7</div></div>
+<div class="ttc" id="atypes_8h_html_a9e6c91d77e24643b888dbd1a1a590054"><div class="ttname"><a href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a></div><div class="ttdeci">unsigned short u16</div><div class="ttdef"><b>Definition</b> types.h:9</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_4f0979a7f5e3194619cde56505e372d8.html">JSystem</a></li><li class="navelem"><a class="el" href="dir_a362cd36472d11e3c6a34ca86d202e04.html">J3DGraphLoader</a></li><li class="navelem"><a class="el" href="J3DClusterLoader_8h.html">J3DClusterLoader.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

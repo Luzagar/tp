@@ -1,0 +1,26 @@
+var classdaAlinkHIO__board__c1 =
+[
+    [ "mAirborneAnm", "classdaAlinkHIO__board__c1.html#abda846c75fd9d13704bc27d74ac833e4", null ],
+    [ "mEffectMaxSpeed", "classdaAlinkHIO__board__c1.html#aa2e2fa5fda32144ca377e9b31b7d5f56", null ],
+    [ "mFastPushInterpolation", "classdaAlinkHIO__board__c1.html#a2892bbd399e5e1930731925cfbe309a8", null ],
+    [ "mFastPushSwitchSpeed", "classdaAlinkHIO__board__c1.html#a0912b2f469f35362d0bfaf56ef1576e7", null ],
+    [ "mJumpAnm", "classdaAlinkHIO__board__c1.html#a361d0444aade786be8c7711fd163d592", null ],
+    [ "mLandAnm", "classdaAlinkHIO__board__c1.html#a5f864217deb273c500285f907b9f8ee5", null ],
+    [ "mMaxJumpSpeedY", "classdaAlinkHIO__board__c1.html#acb73339179ec388f559d1751d3072973", null ],
+    [ "mMaxPushSpeed", "classdaAlinkHIO__board__c1.html#a56f96f6fe80bedc2b263d58e59e99b67", null ],
+    [ "mMaxSpeed", "classdaAlinkHIO__board__c1.html#a6c452fbeae1c17c62cdb66c11aa75fef", null ],
+    [ "mMinJumpSpeedY", "classdaAlinkHIO__board__c1.html#aece68fb3c44c26ce812372394d23fc8f", null ],
+    [ "mPushAccel", "classdaAlinkHIO__board__c1.html#aa45a0f72037e260b6a0d0028cf92b1ad", null ],
+    [ "mPushAnmMaxSpeed", "classdaAlinkHIO__board__c1.html#ab30f0e07d95326c44812f102de425102", null ],
+    [ "mPushAnmMinSpeed", "classdaAlinkHIO__board__c1.html#af43895cf04a12647920ac4e7140551ec", null ],
+    [ "mPushInterpolation", "classdaAlinkHIO__board__c1.html#a90c2f1bb0db54d61f4c21f2370e474ea", null ],
+    [ "mSitAnmSpeed", "classdaAlinkHIO__board__c1.html#acdae3b0cd9387d4bcdbd4403aa992f29", null ],
+    [ "mSitInterpolation", "classdaAlinkHIO__board__c1.html#aeb535f2260c91e9c0df47a7af8d92790", null ],
+    [ "mSpinAnm", "classdaAlinkHIO__board__c1.html#abd9b5ac4801e2754c062129e2d1f4c43", null ],
+    [ "mSpinMaxJumpSpeedY", "classdaAlinkHIO__board__c1.html#a8b196056399222deeedf9d5c32a0d0d9", null ],
+    [ "mSpinMinJumpSpeedY", "classdaAlinkHIO__board__c1.html#a86928dcbaad38f69bced65ca07eb8302", null ],
+    [ "mStandAnmSpeed", "classdaAlinkHIO__board__c1.html#a067f1c84be5501d397b0a8081f80e3a6", null ],
+    [ "mStandInterpolation", "classdaAlinkHIO__board__c1.html#a765acf2be5d92e1e556e24302a54c014", null ],
+    [ "mStartAddSpeed", "classdaAlinkHIO__board__c1.html#a0a57e5fc66eed1269860c663174bb975", null ],
+    [ "mStartMinSpeed", "classdaAlinkHIO__board__c1.html#a020d97955b311eb9398fefbe74379bb9", null ]
+];

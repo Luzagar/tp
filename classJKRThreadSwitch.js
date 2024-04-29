@@ -1,0 +1,26 @@
+var classJKRThreadSwitch =
+[
+    [ "JKRThreadSwitch", "classJKRThreadSwitch.html#a2cc854ac9b77efdf8398600e9a2148bb", null ],
+    [ "~JKRThreadSwitch", "classJKRThreadSwitch.html#a5887841dee5c2487a911d7963c2a0bb2", null ],
+    [ "callback", "classJKRThreadSwitch.html#acc0f9bc4d70a401ee7adbbd3bdbd756a", null ],
+    [ "createManager", "classJKRThreadSwitch.html#ad1e44f01a261d2a1fe2a53630b26e0f6", null ],
+    [ "draw", "classJKRThreadSwitch.html#a91658788912708608e60ce560e2c1965", null ],
+    [ "draw", "classJKRThreadSwitch.html#a8e6431833f4d52cf7455e6677e730db6", null ],
+    [ "enter", "classJKRThreadSwitch.html#a398b31c09d8378d87bf971c19da2ea98", null ],
+    [ "getManager", "classJKRThreadSwitch.html#ad7e49104b6842e0b9ee1d1b50b134b2b", null ],
+    [ "getTotalCount", "classJKRThreadSwitch.html#ad866c881c764a36609e2e6d4a52df8b8", null ],
+    [ "field_0x10", "classJKRThreadSwitch.html#ab7e5a7bbd9cabedbcbc5894a82bc62d4", null ],
+    [ "field_0x14", "classJKRThreadSwitch.html#abd28b5cb8eb3d9e02675abc9f79deffe", null ],
+    [ "field_0x18", "classJKRThreadSwitch.html#a5602b03d7d7974cbbb3d9ad905300bc8", null ],
+    [ "field_0x20", "classJKRThreadSwitch.html#a7627bea7c1ac779579ce689d304596fd", null ],
+    [ "field_0x24", "classJKRThreadSwitch.html#abdaed1551018f3e84ff76aea02d3a587", null ],
+    [ "field_0x9", "classJKRThreadSwitch.html#a4ec84bc484c3ea40caaaa525e5892cc0", null ],
+    [ "field_0xC", "classJKRThreadSwitch.html#a5660acde0e7fe915029379aa1b659f0c", null ],
+    [ "mHeap", "classJKRThreadSwitch.html#ae2b986b7c02a76f623412691b4cef59b", null ],
+    [ "mSetNextHeap", "classJKRThreadSwitch.html#a7e29382b1a3390e2498cb507bd8e022e", null ],
+    [ "mUserPostCallback", "classJKRThreadSwitch.html#a5afe7b1b79fb297ea57f885f2c02eb4c", null ],
+    [ "mUserPreCallback", "classJKRThreadSwitch.html#af9358bb3db6d7d90e7e7a10049eb85fc", null ],
+    [ "sManager", "classJKRThreadSwitch.html#a56e02224911b25ff4244ab4135a528eb", null ],
+    [ "sTotalCount", "classJKRThreadSwitch.html#aed83239abcba0ca05bd70a5d075a5e04", null ],
+    [ "sTotalStart", "classJKRThreadSwitch.html#abc359083821dab6b94d4b7fddfabec1a", null ]
+];

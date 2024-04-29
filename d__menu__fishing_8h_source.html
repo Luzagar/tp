@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: include/d/menu/d_menu_fishing.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d__menu__fishing_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">d_menu_fishing.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="d__menu__fishing_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef D_MENU_D_MENU_FISHING_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define D_MENU_D_MENU_FISHING_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="d__com__inf__game_8h.html">d/com/d_com_inf_game.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">class </span><a class="code hl_struct" href="structCPaneMgr.html">CPaneMgr</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">struct </span><a class="code hl_struct" href="structCSTControl.html">CSTControl</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">class </span><a class="code hl_struct" href="structJ2DTextBox.html">J2DTextBox</a>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">class </span><a class="code hl_class" href="structSTControl.html">STControl</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">class </span><a class="code hl_class" href="structdMsgString__c.html">dMsgString_c</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">class </span><a class="code hl_struct" href="structmDoDvdThd__mountArchive__c.html">mDoDvdThd_mountArchive_c</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html">   13</a></span><span class="keyword">class </span><a class="code hl_class" href="classdMenu__Fishing__c.html">dMenu_Fishing_c</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structdDlst__base__c.html">dDlst_base_c</a> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#ac5043dd7c32c29f420389e476edd4ccf">   16</a></span>    <span class="keyword">enum</span> <a class="code hl_enumeration" href="classdMenu__Fishing__c.html#ac5043dd7c32c29f420389e476edd4ccf">dMenu_Fishing_Status</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#ac5043dd7c32c29f420389e476edd4ccfad2a472e10ef9bb605dd72112c61da9c9">   17</a></span>        <a class="code hl_enumvalue" href="classdMenu__Fishing__c.html#ac5043dd7c32c29f420389e476edd4ccfad2a472e10ef9bb605dd72112c61da9c9">CLOSED</a> = 0,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#ac5043dd7c32c29f420389e476edd4ccfa9c7b0c92da6957e962c0d8c2ead5d330">   18</a></span>        <a class="code hl_enumvalue" href="classdMenu__Fishing__c.html#ac5043dd7c32c29f420389e476edd4ccfa9c7b0c92da6957e962c0d8c2ead5d330">READY_OPEN</a> = 1,</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#ac5043dd7c32c29f420389e476edd4ccfa40e5c008393b4d2c8a82979e10f0bd98">   19</a></span>        <a class="code hl_enumvalue" href="classdMenu__Fishing__c.html#ac5043dd7c32c29f420389e476edd4ccfa40e5c008393b4d2c8a82979e10f0bd98">READY_MOVE</a> = 2,</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#ac5043dd7c32c29f420389e476edd4ccfa59efb35ab9603895a2f8962d1c503800">   20</a></span>        <a class="code hl_enumvalue" href="classdMenu__Fishing__c.html#ac5043dd7c32c29f420389e476edd4ccfa59efb35ab9603895a2f8962d1c503800">READY_CLOSE</a> = 3,</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    };</div>
+</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="comment">/* 801C4D54 */</span> <a class="code hl_class" href="classdMenu__Fishing__c.html">dMenu_Fishing_c</a>(<a class="code hl_struct" href="structJKRExpHeap.html">JKRExpHeap</a>*, <a class="code hl_class" href="structSTControl.html">STControl</a>*, <a class="code hl_struct" href="structCSTControl.html">CSTControl</a>*);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">/* 801C504C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdMenu__Fishing__c.html#a785866cf5eff02f654e893025f8f89c5">_create</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment">/* 801C50B4 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdMenu__Fishing__c.html#aefa2c769274a43c423c9d47e230c51e8">_move</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="comment">/* 801C514C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdMenu__Fishing__c.html#a33708166ca52aed85f040e7c990ca318">_draw</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">/* 801C5204 */</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classdMenu__Fishing__c.html#af70dbdd69e5028cdcbc38b14485cfbf6">isSync</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">/* 801C522C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdMenu__Fishing__c.html#ab6a116978a6e6ab53d57e94031356a1d">init</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">/* 801C52E4 */</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classdMenu__Fishing__c.html#aeeeafe6c4dbf7a8783d64ace23957706">_open</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">/* 801C5470 */</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classdMenu__Fishing__c.html#a8d5a5907d352697af86832ce129886b4">_close</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">/* 801C556C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdMenu__Fishing__c.html#ab96d933b63c77719cacb515a568f1090">wait_init</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">/* 801C55A8 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdMenu__Fishing__c.html#a9ffea58def66e8b5c13f452c3b0df782">wait_move</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="comment">/* 801C55D8 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdMenu__Fishing__c.html#a9d95f33b58d3a24246bb3edcb4d631b9">screenSetBase</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="comment">/* 801C5D3C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdMenu__Fishing__c.html#a9be584915d8f2169f71c654b979b8f64">screenSetDoIcon</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">/* 801C5EB8 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdMenu__Fishing__c.html#a9e26d8b266c2dd4c2e652a3034edf781">setAButtonString</a>(<a class="code hl_typedef" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">/* 801C5F68 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdMenu__Fishing__c.html#a2a61c00327fc97c075e7454e47802c4c">setBButtonString</a>(<a class="code hl_typedef" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment">/* 801C6018 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_function" href="classdMenu__Fishing__c.html#a725ef56938b41fc81b650f1783dce656">getFigure</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">/* 801C605C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdMenu__Fishing__c.html#a4c497ec327d4c46160cc84d6107841fd">setFishParam</a>(<span class="keywordtype">int</span>, <a class="code hl_typedef" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>, <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="comment">/* 801C6210 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdMenu__Fishing__c.html#a9993af169210488a1be3d6daae576738">setHIO</a>(<span class="keywordtype">bool</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#a842daf247e9ee8e9ef67d42678583ebe">   41</a></span>    <span class="comment">/* 801C659C */</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdMenu__Fishing__c.html#a842daf247e9ee8e9ef67d42678583ebe">draw</a>() { <a class="code hl_function" href="classdMenu__Fishing__c.html#a33708166ca52aed85f040e7c990ca318">_draw</a>(); }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">/* 801C4D98 */</span> <span class="keyword">virtual</span> <a class="code hl_function" href="classdMenu__Fishing__c.html#ae5a7072b21096755ec1b68456d96c15a">~dMenu_Fishing_c</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#ab447e98a1884a6136da6063dd96238b6">   44</a></span>    <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_function" href="classdMenu__Fishing__c.html#ab447e98a1884a6136da6063dd96238b6">getStatus</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="classdMenu__Fishing__c.html#a7e0b47c91d8a4556f3919c157b10b27d">mStatus</a>; }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#a234bfba5fcb01f87db8de8031665736a">   47</a></span>    <span class="comment">/* 0x004 */</span> <a class="code hl_struct" href="structJKRExpHeap.html">JKRExpHeap</a>* <a class="code hl_variable" href="classdMenu__Fishing__c.html#a234bfba5fcb01f87db8de8031665736a">mpHeap</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#acd4ee085e9114bf73188ea652129e76e">   48</a></span>    <span class="comment">/* 0x008 */</span> <a class="code hl_struct" href="structJKRArchive.html">JKRArchive</a>* <a class="code hl_variable" href="classdMenu__Fishing__c.html#acd4ee085e9114bf73188ea652129e76e">mpArchive</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#aadeac0b64edd8a08b52ee5fdc02a25a2">   49</a></span>    <span class="comment">/* 0x00C */</span> <a class="code hl_class" href="structSTControl.html">STControl</a>* <a class="code hl_variable" href="classdMenu__Fishing__c.html#aadeac0b64edd8a08b52ee5fdc02a25a2">mpStick</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#aed886d69ca812d56fc7c4f422e60160f">   50</a></span>    <span class="comment">/* 0x010 */</span> <a class="code hl_struct" href="structCSTControl.html">CSTControl</a>* <a class="code hl_variable" href="classdMenu__Fishing__c.html#aed886d69ca812d56fc7c4f422e60160f">mpCStick</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#a4353371adc50e69782006c88c20c72cc">   51</a></span>    <span class="comment">/* 0x014 */</span> <a class="code hl_struct" href="structmDoDvdThd__mountArchive__c.html">mDoDvdThd_mountArchive_c</a>* <a class="code hl_variable" href="classdMenu__Fishing__c.html#a4353371adc50e69782006c88c20c72cc">mpMount</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#a0fed2c7e7f44002c876f368a35ed427c">   52</a></span>    <span class="comment">/* 0x018 */</span> <a class="code hl_struct" href="structJ2DScreen.html">J2DScreen</a>* <a class="code hl_variable" href="classdMenu__Fishing__c.html#a0fed2c7e7f44002c876f368a35ed427c">mpScreen</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#abf1c19ad58c313f05a75011d53977867">   53</a></span>    <span class="comment">/* 0x01C */</span> <a class="code hl_struct" href="structJ2DScreen.html">J2DScreen</a>* <a class="code hl_variable" href="classdMenu__Fishing__c.html#abf1c19ad58c313f05a75011d53977867">mpIconScreen</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#affbffc30461f76f4439d5023cda2dc69">   54</a></span>    <span class="comment">/* 0x020 */</span> <a class="code hl_struct" href="structJ2DTextBox.html">J2DTextBox</a>* <a class="code hl_variable" href="classdMenu__Fishing__c.html#affbffc30461f76f4439d5023cda2dc69">mpAButtonString</a>[5]; <span class="comment">// Displays string based on stringID on A button Always empty</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#a718b952821ef578c8338ac77e0050e55">   55</a></span>    <span class="comment">/* 0x034 */</span> <a class="code hl_struct" href="structJ2DTextBox.html">J2DTextBox</a>* <a class="code hl_variable" href="classdMenu__Fishing__c.html#a718b952821ef578c8338ac77e0050e55">mpBButtonString</a>[5]; <span class="comment">// Displays string based on stringID on B button. Only &quot;Back&quot; here</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#a7c16bcccca8ed2aa15eedd1c678b0067">   56</a></span>    <span class="comment">/* 0x048 */</span> <a class="code hl_struct" href="structCPaneMgr.html">CPaneMgr</a>* <a class="code hl_variable" href="classdMenu__Fishing__c.html#a7c16bcccca8ed2aa15eedd1c678b0067">mpParent</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#a518153f266a7902dd8fdf5be60a0cecc">   57</a></span>    <span class="comment">/* 0x04C */</span> <a class="code hl_struct" href="structCPaneMgr.html">CPaneMgr</a>* <a class="code hl_variable" href="classdMenu__Fishing__c.html#a518153f266a7902dd8fdf5be60a0cecc">mpFishParent</a>[MAX_FINDABLE_FISHES]; <span class="comment">// Displays fishes based on index and if collected once</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#af040b1ce48ee51f5f76f327f758022c9">   58</a></span>    <span class="comment">/* 0x064 */</span> <a class="code hl_struct" href="structCPaneMgr.html">CPaneMgr</a>* <a class="code hl_variable" href="classdMenu__Fishing__c.html#af040b1ce48ee51f5f76f327f758022c9">mpFishParts</a>[6][6];</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#a63a2bc156c58fa2bba2256455f58c56c">   59</a></span>    <span class="comment">/* 0x0F4 */</span> <a class="code hl_struct" href="structCPaneMgr.html">CPaneMgr</a>* <a class="code hl_variable" href="classdMenu__Fishing__c.html#a63a2bc156c58fa2bba2256455f58c56c">mpFishInfoParent</a>[2]; <span class="comment">// 0: Blue info box ; 1: Red info box</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#ab598e81d7d6557424ca37d33b614338e">   60</a></span>    <span class="comment">/* 0x0FC */</span> <a class="code hl_struct" href="structCPaneMgr.html">CPaneMgr</a>* <a class="code hl_variable" href="classdMenu__Fishing__c.html#ab598e81d7d6557424ca37d33b614338e">mpButtonAB</a>[2]; <span class="comment">// Controls the position and scale of the buttons. 0: A ; 1: B</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#aaf78d234df30d9d6f593756555d9a694">   61</a></span>    <span class="comment">/* 0x104 */</span> <a class="code hl_struct" href="structCPaneMgr.html">CPaneMgr</a>* <a class="code hl_variable" href="classdMenu__Fishing__c.html#aaf78d234df30d9d6f593756555d9a694">mpButtonText</a>[2]; <span class="comment">// Controls the position and scale of the button texts. 0: A ; 1: B</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#ae99af14dedf7afc12129c263cecb643e">   62</a></span>    <span class="comment">/* 0x10C */</span> <a class="code hl_struct" href="structJ2DTextBox.html">J2DTextBox</a>* <a class="code hl_variable" href="classdMenu__Fishing__c.html#ae99af14dedf7afc12129c263cecb643e">field_0x10c</a>[2][6]; <span class="comment">// Displays the actual inches into the blue box of every fish </span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#adbfbfede10eb1221550e009ae89526be">   63</a></span>    <span class="comment">/* 0x13C */</span> <a class="code hl_struct" href="structJ2DTextBox.html">J2DTextBox</a>* <a class="code hl_variable" href="classdMenu__Fishing__c.html#adbfbfede10eb1221550e009ae89526be">field_0x13c</a>[2][6]; <span class="comment">// Displays the actual number of caught fishes into the red box of every fish</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#ad5089000a348956cfbd3a551fbfb1424">   64</a></span>    <span class="comment">/* 0x16C */</span> <a class="code hl_struct" href="structJ2DTextBox.html">J2DTextBox</a>* <a class="code hl_variable" href="classdMenu__Fishing__c.html#ad5089000a348956cfbd3a551fbfb1424">field_0x16c</a>[2][6]; <span class="comment">// Displays string &quot;inches&quot; next to the blue box of every fish</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#a19ea4cbe0c71093b554ea80b23575b57">   65</a></span>    <span class="comment">/* 0x19C */</span> <a class="code hl_struct" href="structJ2DTextBox.html">J2DTextBox</a>* <a class="code hl_variable" href="classdMenu__Fishing__c.html#a19ea4cbe0c71093b554ea80b23575b57">field_0x19c</a>[2][6]; <span class="comment">// Displays string &quot;fish&quot; next to the red box of every fish</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#a3f02d5d320d2841de00b873b0019b4f3">   66</a></span>    <span class="comment">/* 0x1CC */</span> <a class="code hl_struct" href="structJ2DTextBox.html">J2DTextBox</a>* <a class="code hl_variable" href="classdMenu__Fishing__c.html#a3f02d5d320d2841de00b873b0019b4f3">mpFishNameString</a>[MAX_FINDABLE_FISHES]; <span class="comment">// Displays name of every caught fish</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#ab46a2c15fd859e83fc0bae8daffd87c5">   67</a></span>    <span class="comment">/* 0x1E4 */</span> <a class="code hl_struct" href="structJ2DTextBox.html">J2DTextBox</a>* <a class="code hl_variable" href="classdMenu__Fishing__c.html#ab46a2c15fd859e83fc0bae8daffd87c5">mpInfoLargestString</a>; <span class="comment">// Displays &quot;Largest&quot; next to the blue box</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#a1977a70fe2f0c687e5bf58366b308424">   68</a></span>    <span class="comment">/* 0x1E8 */</span> <a class="code hl_struct" href="structJ2DTextBox.html">J2DTextBox</a>* <a class="code hl_variable" href="classdMenu__Fishing__c.html#a1977a70fe2f0c687e5bf58366b308424">mpInfoNumCaughtString</a>; <span class="comment">// Displays &quot;No. Caught&quot; next to the red box</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#a08d49be6d7ed35aea1190fa58f26c3c6">   69</a></span>    <span class="comment">/* 0x1EC */</span> <a class="code hl_struct" href="structJ2DTextBox.html">J2DTextBox</a>* <a class="code hl_variable" href="classdMenu__Fishing__c.html#a08d49be6d7ed35aea1190fa58f26c3c6">field_0x1ec</a>; <span class="comment">// unused</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#ae9bf968942ea9e51dc3cb0c5de36e7e9">   70</a></span>    <span class="comment">/* 0x1F0 */</span> <a class="code hl_struct" href="structJ2DPicture.html">J2DPicture</a>* <a class="code hl_variable" href="classdMenu__Fishing__c.html#ae9bf968942ea9e51dc3cb0c5de36e7e9">mpBlackTex</a>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#a1db60d3b5be4e36bd6febd93eda6fe05">   71</a></span>    <span class="comment">/* 0x1F4 */</span> <a class="code hl_class" href="structdMsgString__c.html">dMsgString_c</a>* <a class="code hl_variable" href="classdMenu__Fishing__c.html#a1db60d3b5be4e36bd6febd93eda6fe05">mpString</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#a98bc501cdda8262327be3e553807ba9f">   72</a></span>    <span class="comment">/* 0x1F8 */</span> <a class="code hl_typedef" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> <a class="code hl_variable" href="classdMenu__Fishing__c.html#a98bc501cdda8262327be3e553807ba9f">mFishListScreenFrames</a>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#a7e0b47c91d8a4556f3919c157b10b27d">   73</a></span>    <span class="comment">/* 0x1FA */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdMenu__Fishing__c.html#a7e0b47c91d8a4556f3919c157b10b27d">mStatus</a>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classdMenu__Fishing__c.html#a6e3409a5b4f7dc239793def431709e77">   74</a></span>    <span class="comment">/* 0x1FB */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdMenu__Fishing__c.html#a6e3409a5b4f7dc239793def431709e77">mProcess</a>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>};</div>
+</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#endif </span><span class="comment">/* D_MENU_D_MENU_FISHING_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html"><div class="ttname"><a href="classdMenu__Fishing__c.html">dMenu_Fishing_c</a></div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:13</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_a08d49be6d7ed35aea1190fa58f26c3c6"><div class="ttname"><a href="classdMenu__Fishing__c.html#a08d49be6d7ed35aea1190fa58f26c3c6">dMenu_Fishing_c::field_0x1ec</a></div><div class="ttdeci">J2DTextBox * field_0x1ec</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:69</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_a0fed2c7e7f44002c876f368a35ed427c"><div class="ttname"><a href="classdMenu__Fishing__c.html#a0fed2c7e7f44002c876f368a35ed427c">dMenu_Fishing_c::mpScreen</a></div><div class="ttdeci">J2DScreen * mpScreen</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:52</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_a1977a70fe2f0c687e5bf58366b308424"><div class="ttname"><a href="classdMenu__Fishing__c.html#a1977a70fe2f0c687e5bf58366b308424">dMenu_Fishing_c::mpInfoNumCaughtString</a></div><div class="ttdeci">J2DTextBox * mpInfoNumCaughtString</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:68</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_a19ea4cbe0c71093b554ea80b23575b57"><div class="ttname"><a href="classdMenu__Fishing__c.html#a19ea4cbe0c71093b554ea80b23575b57">dMenu_Fishing_c::field_0x19c</a></div><div class="ttdeci">J2DTextBox * field_0x19c[2][6]</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:65</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_a1db60d3b5be4e36bd6febd93eda6fe05"><div class="ttname"><a href="classdMenu__Fishing__c.html#a1db60d3b5be4e36bd6febd93eda6fe05">dMenu_Fishing_c::mpString</a></div><div class="ttdeci">dMsgString_c * mpString</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:71</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_a234bfba5fcb01f87db8de8031665736a"><div class="ttname"><a href="classdMenu__Fishing__c.html#a234bfba5fcb01f87db8de8031665736a">dMenu_Fishing_c::mpHeap</a></div><div class="ttdeci">JKRExpHeap * mpHeap</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:47</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_a2a61c00327fc97c075e7454e47802c4c"><div class="ttname"><a href="classdMenu__Fishing__c.html#a2a61c00327fc97c075e7454e47802c4c">dMenu_Fishing_c::setBButtonString</a></div><div class="ttdeci">void setBButtonString(u16)</div><div class="ttdef"><b>Definition</b> d_menu_fishing.cpp:374</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_a33708166ca52aed85f040e7c990ca318"><div class="ttname"><a href="classdMenu__Fishing__c.html#a33708166ca52aed85f040e7c990ca318">dMenu_Fishing_c::_draw</a></div><div class="ttdeci">void _draw()</div><div class="ttdef"><b>Definition</b> d_menu_fishing.cpp:123</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_a3f02d5d320d2841de00b873b0019b4f3"><div class="ttname"><a href="classdMenu__Fishing__c.html#a3f02d5d320d2841de00b873b0019b4f3">dMenu_Fishing_c::mpFishNameString</a></div><div class="ttdeci">J2DTextBox * mpFishNameString[MAX_FINDABLE_FISHES]</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:66</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_a4353371adc50e69782006c88c20c72cc"><div class="ttname"><a href="classdMenu__Fishing__c.html#a4353371adc50e69782006c88c20c72cc">dMenu_Fishing_c::mpMount</a></div><div class="ttdeci">mDoDvdThd_mountArchive_c * mpMount</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:51</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_a4c497ec327d4c46160cc84d6107841fd"><div class="ttname"><a href="classdMenu__Fishing__c.html#a4c497ec327d4c46160cc84d6107841fd">dMenu_Fishing_c::setFishParam</a></div><div class="ttdeci">void setFishParam(int, u16, u8)</div><div class="ttdef"><b>Definition</b> d_menu_fishing.cpp:404</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_a518153f266a7902dd8fdf5be60a0cecc"><div class="ttname"><a href="classdMenu__Fishing__c.html#a518153f266a7902dd8fdf5be60a0cecc">dMenu_Fishing_c::mpFishParent</a></div><div class="ttdeci">CPaneMgr * mpFishParent[MAX_FINDABLE_FISHES]</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:57</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_a63a2bc156c58fa2bba2256455f58c56c"><div class="ttname"><a href="classdMenu__Fishing__c.html#a63a2bc156c58fa2bba2256455f58c56c">dMenu_Fishing_c::mpFishInfoParent</a></div><div class="ttdeci">CPaneMgr * mpFishInfoParent[2]</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:59</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_a6e3409a5b4f7dc239793def431709e77"><div class="ttname"><a href="classdMenu__Fishing__c.html#a6e3409a5b4f7dc239793def431709e77">dMenu_Fishing_c::mProcess</a></div><div class="ttdeci">u8 mProcess</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:74</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_a718b952821ef578c8338ac77e0050e55"><div class="ttname"><a href="classdMenu__Fishing__c.html#a718b952821ef578c8338ac77e0050e55">dMenu_Fishing_c::mpBButtonString</a></div><div class="ttdeci">J2DTextBox * mpBButtonString[5]</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:55</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_a725ef56938b41fc81b650f1783dce656"><div class="ttname"><a href="classdMenu__Fishing__c.html#a725ef56938b41fc81b650f1783dce656">dMenu_Fishing_c::getFigure</a></div><div class="ttdeci">u8 getFigure(int)</div><div class="ttdef"><b>Definition</b> d_menu_fishing.cpp:387</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_a785866cf5eff02f654e893025f8f89c5"><div class="ttname"><a href="classdMenu__Fishing__c.html#a785866cf5eff02f654e893025f8f89c5">dMenu_Fishing_c::_create</a></div><div class="ttdeci">void _create()</div><div class="ttdef"><b>Definition</b> d_menu_fishing.cpp:102</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_a7c16bcccca8ed2aa15eedd1c678b0067"><div class="ttname"><a href="classdMenu__Fishing__c.html#a7c16bcccca8ed2aa15eedd1c678b0067">dMenu_Fishing_c::mpParent</a></div><div class="ttdeci">CPaneMgr * mpParent</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:56</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_a7e0b47c91d8a4556f3919c157b10b27d"><div class="ttname"><a href="classdMenu__Fishing__c.html#a7e0b47c91d8a4556f3919c157b10b27d">dMenu_Fishing_c::mStatus</a></div><div class="ttdeci">u8 mStatus</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:73</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_a842daf247e9ee8e9ef67d42678583ebe"><div class="ttname"><a href="classdMenu__Fishing__c.html#a842daf247e9ee8e9ef67d42678583ebe">dMenu_Fishing_c::draw</a></div><div class="ttdeci">virtual void draw()</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:41</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_a8d5a5907d352697af86832ce129886b4"><div class="ttname"><a href="classdMenu__Fishing__c.html#a8d5a5907d352697af86832ce129886b4">dMenu_Fishing_c::_close</a></div><div class="ttdeci">int _close()</div><div class="ttdef"><b>Definition</b> d_menu_fishing.cpp:191</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_a98bc501cdda8262327be3e553807ba9f"><div class="ttname"><a href="classdMenu__Fishing__c.html#a98bc501cdda8262327be3e553807ba9f">dMenu_Fishing_c::mFishListScreenFrames</a></div><div class="ttdeci">s16 mFishListScreenFrames</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:72</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_a9993af169210488a1be3d6daae576738"><div class="ttname"><a href="classdMenu__Fishing__c.html#a9993af169210488a1be3d6daae576738">dMenu_Fishing_c::setHIO</a></div><div class="ttdeci">void setHIO(bool)</div><div class="ttdef"><b>Definition</b> d_menu_fishing.cpp:441</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_a9be584915d8f2169f71c654b979b8f64"><div class="ttname"><a href="classdMenu__Fishing__c.html#a9be584915d8f2169f71c654b979b8f64">dMenu_Fishing_c::screenSetDoIcon</a></div><div class="ttdeci">void screenSetDoIcon()</div><div class="ttdef"><b>Definition</b> d_menu_fishing.cpp:339</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_a9d95f33b58d3a24246bb3edcb4d631b9"><div class="ttname"><a href="classdMenu__Fishing__c.html#a9d95f33b58d3a24246bb3edcb4d631b9">dMenu_Fishing_c::screenSetBase</a></div><div class="ttdeci">void screenSetBase()</div><div class="ttdef"><b>Definition</b> d_menu_fishing.cpp:224</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_a9e26d8b266c2dd4c2e652a3034edf781"><div class="ttname"><a href="classdMenu__Fishing__c.html#a9e26d8b266c2dd4c2e652a3034edf781">dMenu_Fishing_c::setAButtonString</a></div><div class="ttdeci">void setAButtonString(u16)</div><div class="ttdef"><b>Definition</b> d_menu_fishing.cpp:361</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_a9ffea58def66e8b5c13f452c3b0df782"><div class="ttname"><a href="classdMenu__Fishing__c.html#a9ffea58def66e8b5c13f452c3b0df782">dMenu_Fishing_c::wait_move</a></div><div class="ttdeci">void wait_move()</div><div class="ttdef"><b>Definition</b> d_menu_fishing.cpp:216</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_aadeac0b64edd8a08b52ee5fdc02a25a2"><div class="ttname"><a href="classdMenu__Fishing__c.html#aadeac0b64edd8a08b52ee5fdc02a25a2">dMenu_Fishing_c::mpStick</a></div><div class="ttdeci">STControl * mpStick</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:49</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_aaf78d234df30d9d6f593756555d9a694"><div class="ttname"><a href="classdMenu__Fishing__c.html#aaf78d234df30d9d6f593756555d9a694">dMenu_Fishing_c::mpButtonText</a></div><div class="ttdeci">CPaneMgr * mpButtonText[2]</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:61</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_ab447e98a1884a6136da6063dd96238b6"><div class="ttname"><a href="classdMenu__Fishing__c.html#ab447e98a1884a6136da6063dd96238b6">dMenu_Fishing_c::getStatus</a></div><div class="ttdeci">u8 getStatus()</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:44</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_ab46a2c15fd859e83fc0bae8daffd87c5"><div class="ttname"><a href="classdMenu__Fishing__c.html#ab46a2c15fd859e83fc0bae8daffd87c5">dMenu_Fishing_c::mpInfoLargestString</a></div><div class="ttdeci">J2DTextBox * mpInfoLargestString</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:67</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_ab598e81d7d6557424ca37d33b614338e"><div class="ttname"><a href="classdMenu__Fishing__c.html#ab598e81d7d6557424ca37d33b614338e">dMenu_Fishing_c::mpButtonAB</a></div><div class="ttdeci">CPaneMgr * mpButtonAB[2]</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:60</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_ab6a116978a6e6ab53d57e94031356a1d"><div class="ttname"><a href="classdMenu__Fishing__c.html#ab6a116978a6e6ab53d57e94031356a1d">dMenu_Fishing_c::init</a></div><div class="ttdeci">void init()</div><div class="ttdef"><b>Definition</b> d_menu_fishing.cpp:142</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_ab96d933b63c77719cacb515a568f1090"><div class="ttname"><a href="classdMenu__Fishing__c.html#ab96d933b63c77719cacb515a568f1090">dMenu_Fishing_c::wait_init</a></div><div class="ttdeci">void wait_init()</div><div class="ttdef"><b>Definition</b> d_menu_fishing.cpp:210</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_abf1c19ad58c313f05a75011d53977867"><div class="ttname"><a href="classdMenu__Fishing__c.html#abf1c19ad58c313f05a75011d53977867">dMenu_Fishing_c::mpIconScreen</a></div><div class="ttdeci">J2DScreen * mpIconScreen</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:53</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_ac5043dd7c32c29f420389e476edd4ccf"><div class="ttname"><a href="classdMenu__Fishing__c.html#ac5043dd7c32c29f420389e476edd4ccf">dMenu_Fishing_c::dMenu_Fishing_Status</a></div><div class="ttdeci">dMenu_Fishing_Status</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:16</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_ac5043dd7c32c29f420389e476edd4ccfa40e5c008393b4d2c8a82979e10f0bd98"><div class="ttname"><a href="classdMenu__Fishing__c.html#ac5043dd7c32c29f420389e476edd4ccfa40e5c008393b4d2c8a82979e10f0bd98">dMenu_Fishing_c::READY_MOVE</a></div><div class="ttdeci">@ READY_MOVE</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:19</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_ac5043dd7c32c29f420389e476edd4ccfa59efb35ab9603895a2f8962d1c503800"><div class="ttname"><a href="classdMenu__Fishing__c.html#ac5043dd7c32c29f420389e476edd4ccfa59efb35ab9603895a2f8962d1c503800">dMenu_Fishing_c::READY_CLOSE</a></div><div class="ttdeci">@ READY_CLOSE</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:20</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_ac5043dd7c32c29f420389e476edd4ccfa9c7b0c92da6957e962c0d8c2ead5d330"><div class="ttname"><a href="classdMenu__Fishing__c.html#ac5043dd7c32c29f420389e476edd4ccfa9c7b0c92da6957e962c0d8c2ead5d330">dMenu_Fishing_c::READY_OPEN</a></div><div class="ttdeci">@ READY_OPEN</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:18</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_ac5043dd7c32c29f420389e476edd4ccfad2a472e10ef9bb605dd72112c61da9c9"><div class="ttname"><a href="classdMenu__Fishing__c.html#ac5043dd7c32c29f420389e476edd4ccfad2a472e10ef9bb605dd72112c61da9c9">dMenu_Fishing_c::CLOSED</a></div><div class="ttdeci">@ CLOSED</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:17</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_acd4ee085e9114bf73188ea652129e76e"><div class="ttname"><a href="classdMenu__Fishing__c.html#acd4ee085e9114bf73188ea652129e76e">dMenu_Fishing_c::mpArchive</a></div><div class="ttdeci">JKRArchive * mpArchive</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:48</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_ad5089000a348956cfbd3a551fbfb1424"><div class="ttname"><a href="classdMenu__Fishing__c.html#ad5089000a348956cfbd3a551fbfb1424">dMenu_Fishing_c::field_0x16c</a></div><div class="ttdeci">J2DTextBox * field_0x16c[2][6]</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:64</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_adbfbfede10eb1221550e009ae89526be"><div class="ttname"><a href="classdMenu__Fishing__c.html#adbfbfede10eb1221550e009ae89526be">dMenu_Fishing_c::field_0x13c</a></div><div class="ttdeci">J2DTextBox * field_0x13c[2][6]</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:63</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_ae5a7072b21096755ec1b68456d96c15a"><div class="ttname"><a href="classdMenu__Fishing__c.html#ae5a7072b21096755ec1b68456d96c15a">dMenu_Fishing_c::~dMenu_Fishing_c</a></div><div class="ttdeci">virtual ~dMenu_Fishing_c()</div><div class="ttdef"><b>Definition</b> d_menu_fishing.cpp:47</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_ae99af14dedf7afc12129c263cecb643e"><div class="ttname"><a href="classdMenu__Fishing__c.html#ae99af14dedf7afc12129c263cecb643e">dMenu_Fishing_c::field_0x10c</a></div><div class="ttdeci">J2DTextBox * field_0x10c[2][6]</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:62</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_ae9bf968942ea9e51dc3cb0c5de36e7e9"><div class="ttname"><a href="classdMenu__Fishing__c.html#ae9bf968942ea9e51dc3cb0c5de36e7e9">dMenu_Fishing_c::mpBlackTex</a></div><div class="ttdeci">J2DPicture * mpBlackTex</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:70</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_aed886d69ca812d56fc7c4f422e60160f"><div class="ttname"><a href="classdMenu__Fishing__c.html#aed886d69ca812d56fc7c4f422e60160f">dMenu_Fishing_c::mpCStick</a></div><div class="ttdeci">CSTControl * mpCStick</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:50</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_aeeeafe6c4dbf7a8783d64ace23957706"><div class="ttname"><a href="classdMenu__Fishing__c.html#aeeeafe6c4dbf7a8783d64ace23957706">dMenu_Fishing_c::_open</a></div><div class="ttdeci">int _open()</div><div class="ttdef"><b>Definition</b> d_menu_fishing.cpp:157</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_aefa2c769274a43c423c9d47e230c51e8"><div class="ttname"><a href="classdMenu__Fishing__c.html#aefa2c769274a43c423c9d47e230c51e8">dMenu_Fishing_c::_move</a></div><div class="ttdeci">void _move()</div><div class="ttdef"><b>Definition</b> d_menu_fishing.cpp:111</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_af040b1ce48ee51f5f76f327f758022c9"><div class="ttname"><a href="classdMenu__Fishing__c.html#af040b1ce48ee51f5f76f327f758022c9">dMenu_Fishing_c::mpFishParts</a></div><div class="ttdeci">CPaneMgr * mpFishParts[6][6]</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:58</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_af70dbdd69e5028cdcbc38b14485cfbf6"><div class="ttname"><a href="classdMenu__Fishing__c.html#af70dbdd69e5028cdcbc38b14485cfbf6">dMenu_Fishing_c::isSync</a></div><div class="ttdeci">bool isSync()</div><div class="ttdef"><b>Definition</b> d_menu_fishing.cpp:134</div></div>
+<div class="ttc" id="aclassdMenu__Fishing__c_html_affbffc30461f76f4439d5023cda2dc69"><div class="ttname"><a href="classdMenu__Fishing__c.html#affbffc30461f76f4439d5023cda2dc69">dMenu_Fishing_c::mpAButtonString</a></div><div class="ttdeci">J2DTextBox * mpAButtonString[5]</div><div class="ttdef"><b>Definition</b> d_menu_fishing.h:54</div></div>
+<div class="ttc" id="ad__com__inf__game_8h_html"><div class="ttname"><a href="d__com__inf__game_8h.html">d_com_inf_game.h</a></div></div>
+<div class="ttc" id="astructCPaneMgr_html"><div class="ttname"><a href="structCPaneMgr.html">CPaneMgr</a></div><div class="ttdef"><b>Definition</b> d_menu_fmap2D.cpp:250</div></div>
+<div class="ttc" id="astructCSTControl_html"><div class="ttname"><a href="structCSTControl.html">CSTControl</a></div><div class="ttdef"><b>Definition</b> d_lib.h:73</div></div>
+<div class="ttc" id="astructJ2DPicture_html"><div class="ttname"><a href="structJ2DPicture.html">J2DPicture</a></div><div class="ttdef"><b>Definition</b> d_menu_fmap2D.cpp:231</div></div>
+<div class="ttc" id="astructJ2DScreen_html"><div class="ttname"><a href="structJ2DScreen.html">J2DScreen</a></div><div class="ttdef"><b>Definition</b> d_menu_fmap2D.cpp:73</div></div>
+<div class="ttc" id="astructJ2DTextBox_html"><div class="ttname"><a href="structJ2DTextBox.html">J2DTextBox</a></div><div class="ttdef"><b>Definition</b> d_menu_fmap2D.cpp:224</div></div>
+<div class="ttc" id="astructJKRArchive_html"><div class="ttname"><a href="structJKRArchive.html">JKRArchive</a></div><div class="ttdef"><b>Definition</b> d_menu_fmap2D.cpp:71</div></div>
+<div class="ttc" id="astructJKRExpHeap_html"><div class="ttname"><a href="structJKRExpHeap.html">JKRExpHeap</a></div><div class="ttdef"><b>Definition</b> d_menu_fmap2D.cpp:58</div></div>
+<div class="ttc" id="astructSTControl_html"><div class="ttname"><a href="structSTControl.html">STControl</a></div><div class="ttdef"><b>Definition</b> d_menu_fmap2D.cpp:36</div></div>
+<div class="ttc" id="astructdDlst__base__c_html"><div class="ttname"><a href="structdDlst__base__c.html">dDlst_base_c</a></div><div class="ttdef"><b>Definition</b> d_menu_fmap_map.cpp:115</div></div>
+<div class="ttc" id="astructdMsgString__c_html"><div class="ttname"><a href="structdMsgString__c.html">dMsgString_c</a></div><div class="ttdef"><b>Definition</b> d_file_sel_warning.cpp:44</div></div>
+<div class="ttc" id="astructmDoDvdThd__mountArchive__c_html"><div class="ttname"><a href="structmDoDvdThd__mountArchive__c.html">mDoDvdThd_mountArchive_c</a></div><div class="ttdef"><b>Definition</b> d_menu_fmap.cpp:29</div></div>
+<div class="ttc" id="atypes_8h_html_a5ffa4f640862b25ba6d4f635b78bdbe1"><div class="ttname"><a href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a></div><div class="ttdeci">signed short s16</div><div class="ttdef"><b>Definition</b> types.h:5</div></div>
+<div class="ttc" id="atypes_8h_html_a9e6c91d77e24643b888dbd1a1a590054"><div class="ttname"><a href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a></div><div class="ttdeci">unsigned short u16</div><div class="ttdef"><b>Definition</b> types.h:9</div></div>
+<div class="ttc" id="atypes_8h_html_aed742c436da53c1080638ce6ef7d13de"><div class="ttname"><a href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a></div><div class="ttdeci">unsigned char u8</div><div class="ttdef"><b>Definition</b> types.h:8</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_cc3ad1aed4be3f446fdd7af78322f5bf.html">d</a></li><li class="navelem"><a class="el" href="dir_8708ba3a724eae4ad101a20e39d5924d.html">menu</a></li><li class="navelem"><a class="el" href="d__menu__fishing_8h.html">d_menu_fishing.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

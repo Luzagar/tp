@@ -1,0 +1,445 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: JFWSystem::CSetUpParam Struct Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('structJFWSystem_1_1CSetUpParam.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="structJFWSystem_1_1CSetUpParam-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">JFWSystem::CSetUpParam Struct Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="JFWSystem_8h_source.html">JFWSystem.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for JFWSystem::CSetUpParam:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structJFWSystem_1_1CSetUpParam__coll__graph.svg" width="256" height="126"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a976e78376720263cac7c5c255b42b002" id="r_a976e78376720263cac7c5c255b42b002"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJFWSystem_1_1CSetUpParam.html#a976e78376720263cac7c5c255b42b002">maxStdHeaps</a> = 2</td></tr>
+<tr class="separator:a976e78376720263cac7c5c255b42b002"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af470112bfaaca4a770db40e0c61ef344" id="r_af470112bfaaca4a770db40e0c61ef344"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJFWSystem_1_1CSetUpParam.html#af470112bfaaca4a770db40e0c61ef344">sysHeapSize</a> = 0x400000</td></tr>
+<tr class="separator:af470112bfaaca4a770db40e0c61ef344"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfb708e36e6504716e9057a3781991f5" id="r_acfb708e36e6504716e9057a3781991f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJFWSystem_1_1CSetUpParam.html#acfb708e36e6504716e9057a3781991f5">fifoBufSize</a> = 0x40000</td></tr>
+<tr class="separator:acfb708e36e6504716e9057a3781991f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30c53c895490c8f80b8722e1668058d7" id="r_a30c53c895490c8f80b8722e1668058d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJFWSystem_1_1CSetUpParam.html#a30c53c895490c8f80b8722e1668058d7">aramAudioBufSize</a> = 0x800000</td></tr>
+<tr class="separator:a30c53c895490c8f80b8722e1668058d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3235fcf9331d6e041897b2e39668b25c" id="r_a3235fcf9331d6e041897b2e39668b25c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJFWSystem_1_1CSetUpParam.html#a3235fcf9331d6e041897b2e39668b25c">aramGraphBufSize</a> = 0x600000</td></tr>
+<tr class="separator:a3235fcf9331d6e041897b2e39668b25c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb59bb8fe736cb82cec2978b722ca7ce" id="r_adb59bb8fe736cb82cec2978b722ca7ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJFWSystem_1_1CSetUpParam.html#adb59bb8fe736cb82cec2978b722ca7ce">streamPriority</a> = 8</td></tr>
+<tr class="separator:adb59bb8fe736cb82cec2978b722ca7ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18719f7349c97e6e68415e3847396fa3" id="r_a18719f7349c97e6e68415e3847396fa3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJFWSystem_1_1CSetUpParam.html#a18719f7349c97e6e68415e3847396fa3">decompPriority</a> = 7</td></tr>
+<tr class="separator:a18719f7349c97e6e68415e3847396fa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ee71e904ba49f6510ac0d17fd1c78cb" id="r_a2ee71e904ba49f6510ac0d17fd1c78cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJFWSystem_1_1CSetUpParam.html#a2ee71e904ba49f6510ac0d17fd1c78cb">aPiecePriority</a> = 6</td></tr>
+<tr class="separator:a2ee71e904ba49f6510ac0d17fd1c78cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38e2319f5c6af38b8402d605a34ed31e" id="r_a38e2319f5c6af38b8402d605a34ed31e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="structResFONT.html">ResFONT</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJFWSystem_1_1CSetUpParam.html#a38e2319f5c6af38b8402d605a34ed31e">systemFontRes</a> = (<a class="el" href="structResFONT.html">ResFONT</a>*)&amp;<a class="el" href="JFWSystem_8cpp.html#afe7e06d514fd47c6bc38ac5124ab8c57">JUTResFONT_Ascfont_fix12</a></td></tr>
+<tr class="separator:a38e2319f5c6af38b8402d605a34ed31e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0638fa1ae5bbdbc9d3263284a5a93e65" id="r_a0638fa1ae5bbdbc9d3263284a5a93e65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="JFWSystem_8h.html#a1e9a66640aae9a5e9fc045dac21369a4">GXRenderModeObj</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJFWSystem_1_1CSetUpParam.html#a0638fa1ae5bbdbc9d3263284a5a93e65">renderMode</a></td></tr>
+<tr class="separator:a0638fa1ae5bbdbc9d3263284a5a93e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19ab934b863c40de0baf78c49acd79b5" id="r_a19ab934b863c40de0baf78c49acd79b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJFWSystem_1_1CSetUpParam.html#a19ab934b863c40de0baf78c49acd79b5">exConsoleBufferSize</a> = 0x24FC</td></tr>
+<tr class="separator:a19ab934b863c40de0baf78c49acd79b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a2ee71e904ba49f6510ac0d17fd1c78cb" name="a2ee71e904ba49f6510ac0d17fd1c78cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ee71e904ba49f6510ac0d17fd1c78cb">&#9670;&#160;</a></span>aPiecePriority</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_SDATA</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> JFWSystem::CSetUpParam::aPiecePriority = 6</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a30c53c895490c8f80b8722e1668058d7" name="a30c53c895490c8f80b8722e1668058d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30c53c895490c8f80b8722e1668058d7">&#9670;&#160;</a></span>aramAudioBufSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_SDATA</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> JFWSystem::CSetUpParam::aramAudioBufSize = 0x800000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3235fcf9331d6e041897b2e39668b25c" name="a3235fcf9331d6e041897b2e39668b25c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3235fcf9331d6e041897b2e39668b25c">&#9670;&#160;</a></span>aramGraphBufSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_SDATA</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> JFWSystem::CSetUpParam::aramGraphBufSize = 0x600000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a18719f7349c97e6e68415e3847396fa3" name="a18719f7349c97e6e68415e3847396fa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18719f7349c97e6e68415e3847396fa3">&#9670;&#160;</a></span>decompPriority</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_SDATA</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> JFWSystem::CSetUpParam::decompPriority = 7</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a19ab934b863c40de0baf78c49acd79b5" name="a19ab934b863c40de0baf78c49acd79b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19ab934b863c40de0baf78c49acd79b5">&#9670;&#160;</a></span>exConsoleBufferSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_SDATA</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> JFWSystem::CSetUpParam::exConsoleBufferSize = 0x24FC</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acfb708e36e6504716e9057a3781991f5" name="acfb708e36e6504716e9057a3781991f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfb708e36e6504716e9057a3781991f5">&#9670;&#160;</a></span>fifoBufSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_SDATA</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> JFWSystem::CSetUpParam::fifoBufSize = 0x40000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a976e78376720263cac7c5c255b42b002" name="a976e78376720263cac7c5c255b42b002"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a976e78376720263cac7c5c255b42b002">&#9670;&#160;</a></span>maxStdHeaps</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_SDATA</a> <a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> JFWSystem::CSetUpParam::maxStdHeaps = 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0638fa1ae5bbdbc9d3263284a5a93e65" name="a0638fa1ae5bbdbc9d3263284a5a93e65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0638fa1ae5bbdbc9d3263284a5a93e65">&#9670;&#160;</a></span>renderMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_SDATA</a> <a class="el" href="JFWSystem_8h.html#a1e9a66640aae9a5e9fc045dac21369a4">GXRenderModeObj</a> * JFWSystem::CSetUpParam::renderMode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">    (<a class="code hl_struct" href="struct__GXRenderModeObj.html">GXRenderModeObj</a>*)&amp;<a class="code hl_variable" href="GXFrameBuf_8c.html#a41c824bbb84e8a709bde61399d27f585">GXNtsc480IntDf</a></div>
+<div class="ttc" id="aGXFrameBuf_8c_html_a41c824bbb84e8a709bde61399d27f585"><div class="ttname"><a href="GXFrameBuf_8c.html#a41c824bbb84e8a709bde61399d27f585">GXNtsc480IntDf</a></div><div class="ttdeci">GXRenderModeObj GXNtsc480IntDf</div><div class="ttdef"><b>Definition</b> GXFrameBuf.c:4</div></div>
+<div class="ttc" id="astruct__GXRenderModeObj_html"><div class="ttname"><a href="struct__GXRenderModeObj.html">_GXRenderModeObj</a></div><div class="ttdef"><b>Definition</b> GXStruct.h:22</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adb59bb8fe736cb82cec2978b722ca7ce" name="adb59bb8fe736cb82cec2978b722ca7ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb59bb8fe736cb82cec2978b722ca7ce">&#9670;&#160;</a></span>streamPriority</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_SDATA</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> JFWSystem::CSetUpParam::streamPriority = 8</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af470112bfaaca4a770db40e0c61ef344" name="af470112bfaaca4a770db40e0c61ef344"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af470112bfaaca4a770db40e0c61ef344">&#9670;&#160;</a></span>sysHeapSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_SDATA</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> JFWSystem::CSetUpParam::sysHeapSize = 0x400000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a38e2319f5c6af38b8402d605a34ed31e" name="a38e2319f5c6af38b8402d605a34ed31e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38e2319f5c6af38b8402d605a34ed31e">&#9670;&#160;</a></span>systemFontRes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_SDATA</a> <a class="el" href="structResFONT.html">ResFONT</a> * JFWSystem::CSetUpParam::systemFontRes = (<a class="el" href="structResFONT.html">ResFONT</a>*)&amp;<a class="el" href="JFWSystem_8cpp.html#afe7e06d514fd47c6bc38ac5124ab8c57">JUTResFONT_Ascfont_fix12</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following files:<ul>
+<li>include/JSystem/JFramework/<a class="el" href="JFWSystem_8h_source.html">JFWSystem.h</a></li>
+<li>libs/JSystem/JFramework/<a class="el" href="JFWSystem_8cpp.html">JFWSystem.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="structJFWSystem.html">JFWSystem</a></li><li class="navelem"><a class="el" href="structJFWSystem_1_1CSetUpParam.html">CSetUpParam</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

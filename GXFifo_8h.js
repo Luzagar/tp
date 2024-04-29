@@ -1,0 +1,25 @@
+var GXFifo_8h =
+[
+    [ "GXBreakPtCallback", "GXFifo_8h.html#a4ceafb5ed4cba8cb1af9e537d8c71354", null ],
+    [ "__GXCleanGPFifo", "GXFifo_8h.html#a43d2c4317f7c8058b17c100283dc62d2", null ],
+    [ "__GXFifoInit", "GXFifo_8h.html#a2c7b2f6a83dd199af2dcdec9c1bc84e0", null ],
+    [ "__GXFifoLink", "GXFifo_8h.html#aca9eaaa14536c0d5f59e8f6e58b4d53b", null ],
+    [ "__GXFifoReadDisable", "GXFifo_8h.html#adbaa6c8733eab67edbd4631b07637c23", null ],
+    [ "__GXFifoReadEnable", "GXFifo_8h.html#af7e2c5c75e56e6f76dbf3be603264fdc", null ],
+    [ "__GXSaveCPUFifoAux", "GXFifo_8h.html#ac02dc65673623a2ae8c78c8b84dd9da8", null ],
+    [ "__GXWriteFifoIntEnable", "GXFifo_8h.html#a17a323dfaa6e26d246407427ea2f54ea", null ],
+    [ "__GXWriteFifoIntReset", "GXFifo_8h.html#a0ef8c639e662f7731a4d3ea24eb3dd46", null ],
+    [ "GXGetCPUFifo", "GXFifo_8h.html#a6811a5d1bd0bc6843ac7be8e1269c14b", null ],
+    [ "GXGetCurrentGXThread", "GXFifo_8h.html#a3d1a0402673b955f4b3e72eeb993a2f4", null ],
+    [ "GXGetFifoBase", "GXFifo_8h.html#a2a056bebd137562a1281b2cb3a963828", null ],
+    [ "GXGetFifoSize", "GXFifo_8h.html#aa3dc23ffc408fd20a97ea74db66487fc", null ],
+    [ "GXGetGPFifo", "GXFifo_8h.html#a16a3445fa67ad9fb9de007033cf64504", null ],
+    [ "GXGetGPStatus", "GXFifo_8h.html#ad748540ba7494d23aa4f6d08e3dc5ffb", null ],
+    [ "GXInitFifoBase", "GXFifo_8h.html#a62ff3dcc2197148e5478f887029897ae", null ],
+    [ "GXInitFifoPtrs", "GXFifo_8h.html#abed41cd59f46828b4431309a04ae3c03", null ],
+    [ "GXSaveCPUFifo", "GXFifo_8h.html#a0acd4cd987be6abed0cde2718c11fd9a", null ],
+    [ "GXSetBreakPtCallback", "GXFifo_8h.html#af1cf4e87adb52d3786169e6fcdd842c3", null ],
+    [ "GXSetCPUFifo", "GXFifo_8h.html#a10da398d73865d6a4727a546add359d4", null ],
+    [ "GXSetCurrentGXThread", "GXFifo_8h.html#a51ceb11872abcf846af836cedac345d6", null ],
+    [ "GXSetGPFifo", "GXFifo_8h.html#a4e9c8b186477ff6cec5822bb0bf0d62c", null ]
+];

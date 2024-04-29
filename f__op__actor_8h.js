@@ -1,0 +1,88 @@
+var f__op__actor_8h =
+[
+    [ "actor_method_class", "structactor__method__class.html", "structactor__method__class" ],
+    [ "actor_process_profile_definition", "structactor__process__profile__definition.html", "structactor__process__profile__definition" ],
+    [ "actor_process_profile_definition2", "structactor__process__profile__definition2.html", "structactor__process__profile__definition2" ],
+    [ "dEvt_info_c", "classdEvt__info__c.html", "classdEvt__info__c" ],
+    [ "actor_place", "structactor__place.html", "structactor__place" ],
+    [ "actor_attention_types", "structactor__attention__types.html", "structactor__attention__types" ],
+    [ "cull_sphere", "structcull__sphere.html", "structcull__sphere" ],
+    [ "cull_box", "structcull__box.html", "structcull__box" ],
+    [ "fopAc_ac_c", "structfopAc__ac__c.html", "structfopAc__ac__c" ],
+    [ "fopEn_enemy_c", "classfopEn__enemy__c.html", "classfopEn__enemy__c" ],
+    [ "dEvt_Command_e", "f__op__actor_8h.html#a9fee940072892d21c6a11a7ed7adf637", [
+      [ "dEvtCmd_NONE_e", "f__op__actor_8h.html#a9fee940072892d21c6a11a7ed7adf637ae6665177bdead19e67675e8e804b5f5f", null ],
+      [ "dEvtCmd_INTALK_e", "f__op__actor_8h.html#a9fee940072892d21c6a11a7ed7adf637a40f925aba96a3c1afd4982fff28d75c1", null ],
+      [ "dEvtCmd_INDEMO_e", "f__op__actor_8h.html#a9fee940072892d21c6a11a7ed7adf637a48052e28bc8e05a5d40b6ebbcd67c4fe", null ],
+      [ "dEvtCmd_INDOOR_e", "f__op__actor_8h.html#a9fee940072892d21c6a11a7ed7adf637aaeaa22710329876feecaeca37bdec751", null ],
+      [ "dEvtCmd_INGETITEM_e", "f__op__actor_8h.html#a9fee940072892d21c6a11a7ed7adf637a8105698a544d5ae2387411f96225630b", null ],
+      [ "dEvtCmd_INCATCH_e", "f__op__actor_8h.html#a9fee940072892d21c6a11a7ed7adf637a0b72f8dc66a7a81b88eaeacd0c67146d", null ],
+      [ "dEvtCmd_DUMMY", "f__op__actor_8h.html#a9fee940072892d21c6a11a7ed7adf637a0dba51a43a8234b7f5a31fb001b33819", null ]
+    ] ],
+    [ "dEvt_Condition_e", "f__op__actor_8h.html#a6a25f0a5e67da59d420e1ffd85414c26", [
+      [ "dEvtCnd_NONE_e", "f__op__actor_8h.html#a6a25f0a5e67da59d420e1ffd85414c26aa1b397e6cda5e696c8734ca559671b4c", null ],
+      [ "dEvtCnd_CANTALK_e", "f__op__actor_8h.html#a6a25f0a5e67da59d420e1ffd85414c26acbda8eaeeac87266ccdd6bff5ec7352c", null ],
+      [ "dEvtCnd_CANDEMO_e", "f__op__actor_8h.html#a6a25f0a5e67da59d420e1ffd85414c26a6325dc59fe66fabf0297371f1e9a05fe", null ],
+      [ "dEvtCnd_CANDOOR_e", "f__op__actor_8h.html#a6a25f0a5e67da59d420e1ffd85414c26a80305c5382bce8351dd40d25b214730b", null ],
+      [ "dEvtCnd_CANGETITEM_e", "f__op__actor_8h.html#a6a25f0a5e67da59d420e1ffd85414c26a082aa2e9227f8b028b88d7cb066ba44a", null ],
+      [ "dEvtCnd_CANTALKITEM_e", "f__op__actor_8h.html#a6a25f0a5e67da59d420e1ffd85414c26a65b4eaa1f98e851e9de03513523feda5", null ],
+      [ "dEvtCnd_DUMMY", "f__op__actor_8h.html#a6a25f0a5e67da59d420e1ffd85414c26acfc9ebc5a18f3de36d5d0e4f4fb43367", null ]
+    ] ],
+    [ "fopAc_Condition_e", "f__op__actor_8h.html#ab1287a1d957b35b3d72048712ba82c35", [
+      [ "fopAcCnd_NOEXEC_e", "f__op__actor_8h.html#ab1287a1d957b35b3d72048712ba82c35a9aa3bb8e397455262c2ad75f7aaca652", null ],
+      [ "fopAcCnd_NODRAW_e", "f__op__actor_8h.html#ab1287a1d957b35b3d72048712ba82c35ab4dc4cb96b3a19a029dd15537a66b1e2", null ],
+      [ "fopAcCnd_INIT_e", "f__op__actor_8h.html#ab1287a1d957b35b3d72048712ba82c35a36a6b534748c92fe19c0da633fe96bcb", null ]
+    ] ],
+    [ "fopAc_Cull_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49", [
+      [ "fopAc_CULLBOX_0_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49afa5e14784a253d0c3d6d5748198d25dc", null ],
+      [ "fopAc_CULLBOX_1_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49a7b7af36cc9ae16d7171975b8f7668e35", null ],
+      [ "fopAc_CULLBOX_2_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49a2bed9735eeae8fe0bda1aa80a2398ef3", null ],
+      [ "fopAc_CULLBOX_3_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49afd6e16268d218cad56bc48d86697d897", null ],
+      [ "fopAc_CULLBOX_4_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49a494f925916dc7c4c6056e7c78467db9d", null ],
+      [ "fopAc_CULLBOX_5_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49a2f670f559179d10d876cbb542a5b7928", null ],
+      [ "fopAc_CULLBOX_6_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49abfada4e2be92d6ff87275e509b8c877c", null ],
+      [ "fopAc_CULLBOX_7_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49a5f8d51202bfb9a49656919afe1b1c74a", null ],
+      [ "fopAc_CULLBOX_8_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49a7f00c95e3ad78c84fad61e36d1779ca0", null ],
+      [ "fopAc_CULLBOX_9_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49a304daa7bb029d7971367b0b67488a382", null ],
+      [ "fopAc_CULLBOX_10_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49abf72a70a319da4da59d820d910e6d7b9", null ],
+      [ "fopAc_CULLBOX_11_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49ac5d87137fd30e844c4894377bdcc9fb7", null ],
+      [ "fopAc_CULLBOX_12_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49acb0687fa43cb664f1abeea592b5a9ee2", null ],
+      [ "fopAc_CULLBOX_13_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49a8c4d0a3abcdb4042fcdabb8eb2433d87", null ],
+      [ "fopAc_CULLBOX_CUSTOM_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49a6a952c99f90ae2aab63140b382ca391a", null ],
+      [ "fopAc_CULLSPHERE_0_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49a1dd0a3493669e3c1d389da8b8cc7aa8d", null ],
+      [ "fopAc_CULLSPHERE_1_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49a97f10ae1ce3a690963950ebcd9a308db", null ],
+      [ "fopAc_CULLSPHERE_2_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49a1c598251972b642c6ef65f0dc4cabc7d", null ],
+      [ "fopAc_CULLSPHERE_3_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49a40c7278069c4f8c77148ab6e7bbc19eb", null ],
+      [ "fopAc_CULLSPHERE_4_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49a22cc8711a3ccc78b2939228d185fc419", null ],
+      [ "fopAc_CULLSPHERE_5_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49ab6ffcdac745737a5b4c71ed0550cbfd7", null ],
+      [ "fopAc_CULLSPHERE_6_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49a6a5f98e7f71ecc2788ef1ce50b783b53", null ],
+      [ "fopAc_CULLSPHERE_7_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49ae0dc7e2a46e43508c07871a17e446b5f", null ],
+      [ "fopAc_CULLSPHERE_8_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49ac9e7bfa990d66c8df05ec0187c7214e8", null ],
+      [ "fopAc_CULLSPHERE_9_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49a21d790b055200c970bf3082c90e00d53", null ],
+      [ "fopAc_CULLSPHERE_10_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49ab50c4f2442ea54ccf229367948cd9f42", null ],
+      [ "fopAc_CULLSPHERE_11_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49a695f297d9f51d1b343ff1224f3dd3492", null ],
+      [ "fopAc_CULLSPHERE_12_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49a01d3db641d592300e71136ea6303c806", null ],
+      [ "fopAc_CULLSPHERE_13_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49a6da4894410951e7e37df9eed59bade94", null ],
+      [ "fopAc_CULLSPHERE_CUSTOM_e", "f__op__actor_8h.html#a6429d29e063784c5eb7637d536e7ed49abb7e8fc2440446aad19252781f7a9908", null ]
+    ] ],
+    [ "fopAc_Group_e", "f__op__actor_8h.html#a9888fa1ca225292c2aaeb06970bdc0b6", [
+      [ "fopAc_ACTOR_e", "f__op__actor_8h.html#a9888fa1ca225292c2aaeb06970bdc0b6a8b76e7d7c66aecbebe900ea50aecfb47", null ],
+      [ "fopAc_PLAYER_e", "f__op__actor_8h.html#a9888fa1ca225292c2aaeb06970bdc0b6aace619f079d6700c3fc2a4eeac22b18c", null ],
+      [ "fopAc_ENEMY_e", "f__op__actor_8h.html#a9888fa1ca225292c2aaeb06970bdc0b6a704fc7f34c3b91019c1e5ff11ebe9964", null ],
+      [ "fopAc_ENV_e", "f__op__actor_8h.html#a9888fa1ca225292c2aaeb06970bdc0b6aee35bbfdb2f6a0090bef7804aa046116", null ],
+      [ "fopAc_NPC_e", "f__op__actor_8h.html#a9888fa1ca225292c2aaeb06970bdc0b6af8ffe46b19027a300fac74bd44d1c84e", null ],
+      [ "fopAc_UNK_GROUP_5_e", "f__op__actor_8h.html#a9888fa1ca225292c2aaeb06970bdc0b6ae4b593a85be61df1f271df4cf44d8b99", null ]
+    ] ],
+    [ "fopAc_Status_e", "f__op__actor_8h.html#a881f03b35ef4020c1e98de4ac741d134", [
+      [ "fopAcStts_NOEXEC_e", "f__op__actor_8h.html#a881f03b35ef4020c1e98de4ac741d134ac832e1b4e5ba4e8567aec12c8e296a8a", null ],
+      [ "fopAcStts_CULL_e", "f__op__actor_8h.html#a881f03b35ef4020c1e98de4ac741d134a4650e0e52df17b428d5c3196ecb627c9", null ],
+      [ "fopAcStts_FREEZE_e", "f__op__actor_8h.html#a881f03b35ef4020c1e98de4ac741d134aee52804ced8a73ad6e8e878e8af1e610", null ],
+      [ "fopAcStts_CARRY_e", "f__op__actor_8h.html#a881f03b35ef4020c1e98de4ac741d134a16b5b8f84a332baa4f44ad28d232b5bc", null ],
+      [ "fopAcStts_NOPAUSE_e", "f__op__actor_8h.html#a881f03b35ef4020c1e98de4ac741d134a1496f0914752329d3b13f00571894407", null ],
+      [ "fopAcStts_NODRAW_e", "f__op__actor_8h.html#a881f03b35ef4020c1e98de4ac741d134a2dd3aca7ac85f38d59270df2492b520d", null ],
+      [ "fopAcStts_BOSS_e", "f__op__actor_8h.html#a881f03b35ef4020c1e98de4ac741d134a3633934c5d6ed71b13dfb188b42a7294", null ]
+    ] ],
+    [ "fopAc_IsActor", "f__op__actor_8h.html#a50e2fdd3ad8ddeea0db43a1271dfb1c0", null ],
+    [ "STATIC_ASSERT", "f__op__actor_8h.html#a5c2d62303bf4ea832ff54e529a28558b", null ],
+    [ "g_fopAc_Method", "f__op__actor_8h.html#afb28ea67faff0ed1cf8f57117b39142c", null ]
+];

@@ -1,0 +1,1205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: dEvt_info_c Struct Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classdEvt__info__c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="classdEvt__info__c-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">dEvt_info_c Struct Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="f__op__actor_8h_source.html">f_op_actor.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a86f0a845033fe13f830f6ccca8bcfb07" id="r_a86f0a845033fe13f830f6ccca8bcfb07"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#a86f0a845033fe13f830f6ccca8bcfb07">dEvt_info_c</a> ()</td></tr>
+<tr class="separator:a86f0a845033fe13f830f6ccca8bcfb07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3fa4e1e9a209d5aa2acaa3ed1c33809" id="r_aa3fa4e1e9a209d5aa2acaa3ed1c33809"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">virtual</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#aa3fa4e1e9a209d5aa2acaa3ed1c33809">~dEvt_info_c</a> ()</td></tr>
+<tr class="separator:aa3fa4e1e9a209d5aa2acaa3ed1c33809"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a147115157f61cda308c13a067af82dc9" id="r_a147115157f61cda308c13a067af82dc9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#a147115157f61cda308c13a067af82dc9">setEventName</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *)</td></tr>
+<tr class="separator:a147115157f61cda308c13a067af82dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a41c08ca9113f833935246ccd731eb8" id="r_a1a41c08ca9113f833935246ccd731eb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#a1a41c08ca9113f833935246ccd731eb8">getEventName</a> ()</td></tr>
+<tr class="separator:a1a41c08ca9113f833935246ccd731eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4135b01fc3846a195c093b5613d65924" id="r_a4135b01fc3846a195c093b5613d65924"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#a4135b01fc3846a195c093b5613d65924">beforeProc</a> ()</td></tr>
+<tr class="separator:a4135b01fc3846a195c093b5613d65924"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dd6203595d4a0e43a5c70aa185eb242" id="r_a5dd6203595d4a0e43a5c70aa185eb242"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#a5dd6203595d4a0e43a5c70aa185eb242">onCondition</a> (<a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>)</td></tr>
+<tr class="separator:a5dd6203595d4a0e43a5c70aa185eb242"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1af38965f2d7d27e60007b0fe74b05c" id="r_ad1af38965f2d7d27e60007b0fe74b05c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#ad1af38965f2d7d27e60007b0fe74b05c">offCondition</a> (<a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>)</td></tr>
+<tr class="separator:ad1af38965f2d7d27e60007b0fe74b05c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afee29a3258876d8d0225cea247c136d0" id="r_afee29a3258876d8d0225cea247c136d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#afee29a3258876d8d0225cea247c136d0">checkCommandCatch</a> ()</td></tr>
+<tr class="separator:afee29a3258876d8d0225cea247c136d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93852e981b073a2c48332f6540ac76c5" id="r_a93852e981b073a2c48332f6540ac76c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#a93852e981b073a2c48332f6540ac76c5">checkCommandDoor</a> ()</td></tr>
+<tr class="separator:a93852e981b073a2c48332f6540ac76c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9defd6a092200344f1388ac1883ea3f0" id="r_a9defd6a092200344f1388ac1883ea3f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#a9defd6a092200344f1388ac1883ea3f0">checkCommandDemoAccrpt</a> ()</td></tr>
+<tr class="separator:a9defd6a092200344f1388ac1883ea3f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a003638de3f10335c90f48dc0500bdfbb" id="r_a003638de3f10335c90f48dc0500bdfbb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#a003638de3f10335c90f48dc0500bdfbb">setCommand</a> (<a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> command)</td></tr>
+<tr class="separator:a003638de3f10335c90f48dc0500bdfbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e09f8ed7379fe58ec40e0eade12d687" id="r_a1e09f8ed7379fe58ec40e0eade12d687"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#a1e09f8ed7379fe58ec40e0eade12d687">setMapToolId</a> (<a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="el" href="d__a__npc__cd_8cpp.html#ab7710104fe587e0c8b4be67c675f3e0c">id</a>)</td></tr>
+<tr class="separator:a1e09f8ed7379fe58ec40e0eade12d687"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca43cda0819131c74a5dc426c6d5f881" id="r_aca43cda0819131c74a5dc426c6d5f881"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#aca43cda0819131c74a5dc426c6d5f881">setEventId</a> (<a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> <a class="el" href="d__a__npc__cd_8cpp.html#ab7710104fe587e0c8b4be67c675f3e0c">id</a>)</td></tr>
+<tr class="separator:aca43cda0819131c74a5dc426c6d5f881"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60558a16ba61134de665c69b98490989" id="r_a60558a16ba61134de665c69b98490989"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#a60558a16ba61134de665c69b98490989">setCondition</a> (<a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">condition</a>)</td></tr>
+<tr class="separator:a60558a16ba61134de665c69b98490989"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb4fa3409c66e8fab1e3aff81040a372" id="r_adb4fa3409c66e8fab1e3aff81040a372"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#adb4fa3409c66e8fab1e3aff81040a372">getCondition</a> ()</td></tr>
+<tr class="separator:adb4fa3409c66e8fab1e3aff81040a372"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f3289c45e3a17f5dee37a43803b2031" id="r_a6f3289c45e3a17f5dee37a43803b2031"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#a6f3289c45e3a17f5dee37a43803b2031">setArchiveName</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *name)</td></tr>
+<tr class="separator:a6f3289c45e3a17f5dee37a43803b2031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9210df1627c22ed8056ad6c6b5b07480" id="r_a9210df1627c22ed8056ad6c6b5b07480"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#a9210df1627c22ed8056ad6c6b5b07480">getMapToolId</a> ()</td></tr>
+<tr class="separator:a9210df1627c22ed8056ad6c6b5b07480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1376af2a4932cc64f006c86c9506a0a2" id="r_a1376af2a4932cc64f006c86c9506a0a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#a1376af2a4932cc64f006c86c9506a0a2">getEventId</a> ()</td></tr>
+<tr class="separator:a1376af2a4932cc64f006c86c9506a0a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2420525be4d9554e963233fce42944c" id="r_ac2420525be4d9554e963233fce42944c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#ac2420525be4d9554e963233fce42944c">getIdx</a> ()</td></tr>
+<tr class="separator:ac2420525be4d9554e963233fce42944c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9de0a3f2c4bbd06739e547c902deccdc" id="r_a9de0a3f2c4bbd06739e547c902deccdc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#a9de0a3f2c4bbd06739e547c902deccdc">setIdx</a> (<a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_idx</a>)</td></tr>
+<tr class="separator:a9de0a3f2c4bbd06739e547c902deccdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04721bc5ffee20d9fc99f3fcae303813" id="r_a04721bc5ffee20d9fc99f3fcae303813"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#a04721bc5ffee20d9fc99f3fcae303813">getArchiveName</a> ()</td></tr>
+<tr class="separator:a04721bc5ffee20d9fc99f3fcae303813"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae909424a4ad8bf886d419b40b5f5ed14" id="r_ae909424a4ad8bf886d419b40b5f5ed14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#ae909424a4ad8bf886d419b40b5f5ed14">chkCondition</a> (<a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">condition</a>)</td></tr>
+<tr class="separator:ae909424a4ad8bf886d419b40b5f5ed14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade32ebee7f82a1b4b43bedf6f6f61108" id="r_ade32ebee7f82a1b4b43bedf6f6f61108"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#ade32ebee7f82a1b4b43bedf6f6f61108">i_onCondition</a> (<a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">cond</a>)</td></tr>
+<tr class="separator:ade32ebee7f82a1b4b43bedf6f6f61108"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa3fbddd9e9a86809e607c3bc08b7603" id="r_aaa3fbddd9e9a86809e607c3bc08b7603"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#aaa3fbddd9e9a86809e607c3bc08b7603">i_offCondition</a> (<a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">cond</a>)</td></tr>
+<tr class="separator:aaa3fbddd9e9a86809e607c3bc08b7603"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d797c4fe7f74f8cc84bfe9110d3116d" id="r_a5d797c4fe7f74f8cc84bfe9110d3116d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#a5d797c4fe7f74f8cc84bfe9110d3116d">checkCommandTalk</a> ()</td></tr>
+<tr class="separator:a5d797c4fe7f74f8cc84bfe9110d3116d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7434a903345b4279147bc80bf0c6255" id="r_ab7434a903345b4279147bc80bf0c6255"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#ab7434a903345b4279147bc80bf0c6255">checkCommandItem</a> ()</td></tr>
+<tr class="separator:ab7434a903345b4279147bc80bf0c6255"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0161e7239bcc9b91131f2834e2fde28e" id="r_a0161e7239bcc9b91131f2834e2fde28e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#a0161e7239bcc9b91131f2834e2fde28e">i_checkCommandDoor</a> ()</td></tr>
+<tr class="separator:a0161e7239bcc9b91131f2834e2fde28e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a798c9a55683269c6936bcabfb80298f7" id="r_a798c9a55683269c6936bcabfb80298f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#a798c9a55683269c6936bcabfb80298f7">i_checkCommandDemoAccrpt</a> ()</td></tr>
+<tr class="separator:a798c9a55683269c6936bcabfb80298f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd4909601d788a3be67af29b5b34e84e" id="r_acd4909601d788a3be67af29b5b34e84e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#acd4909601d788a3be67af29b5b34e84e">i_checkCommandCatch</a> ()</td></tr>
+<tr class="separator:acd4909601d788a3be67af29b5b34e84e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1f72f7b997a443e0948b8e7774f0702" id="r_af1f72f7b997a443e0948b8e7774f0702"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#af1f72f7b997a443e0948b8e7774f0702">suspendProc</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">actor</a>)</td></tr>
+<tr class="separator:af1f72f7b997a443e0948b8e7774f0702"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a147115157f61cda308c13a067af82dc9" id="r_a147115157f61cda308c13a067af82dc9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#a147115157f61cda308c13a067af82dc9">setEventName</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *)</td></tr>
+<tr class="separator:a147115157f61cda308c13a067af82dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4821b9e0c53015e6c497208f019f0a27" id="r_a4821b9e0c53015e6c497208f019f0a27"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#a4821b9e0c53015e6c497208f019f0a27">onCondition</a> (<a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>)</td></tr>
+<tr class="separator:a4821b9e0c53015e6c497208f019f0a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3f35d8fa91b0fa2695a6ea262618ce2" id="r_ad3f35d8fa91b0fa2695a6ea262618ce2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#ad3f35d8fa91b0fa2695a6ea262618ce2">checkCommandDemoAccrpt</a> ()</td></tr>
+<tr class="separator:ad3f35d8fa91b0fa2695a6ea262618ce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4821b9e0c53015e6c497208f019f0a27" id="r_a4821b9e0c53015e6c497208f019f0a27"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#a4821b9e0c53015e6c497208f019f0a27">onCondition</a> (<a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>)</td></tr>
+<tr class="separator:a4821b9e0c53015e6c497208f019f0a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3f35d8fa91b0fa2695a6ea262618ce2" id="r_ad3f35d8fa91b0fa2695a6ea262618ce2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#ad3f35d8fa91b0fa2695a6ea262618ce2">checkCommandDemoAccrpt</a> ()</td></tr>
+<tr class="separator:ad3f35d8fa91b0fa2695a6ea262618ce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4821b9e0c53015e6c497208f019f0a27" id="r_a4821b9e0c53015e6c497208f019f0a27"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#a4821b9e0c53015e6c497208f019f0a27">onCondition</a> (<a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>)</td></tr>
+<tr class="separator:a4821b9e0c53015e6c497208f019f0a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3f35d8fa91b0fa2695a6ea262618ce2" id="r_ad3f35d8fa91b0fa2695a6ea262618ce2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#ad3f35d8fa91b0fa2695a6ea262618ce2">checkCommandDemoAccrpt</a> ()</td></tr>
+<tr class="separator:ad3f35d8fa91b0fa2695a6ea262618ce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a6c2f3825181e90e36a6800f28c4a2d57" id="r_a6c2f3825181e90e36a6800f28c4a2d57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#a6c2f3825181e90e36a6800f28c4a2d57">mCommand</a></td></tr>
+<tr class="separator:a6c2f3825181e90e36a6800f28c4a2d57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18f0baab3510aa575018e1d2adae8dae" id="r_a18f0baab3510aa575018e1d2adae8dae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#a18f0baab3510aa575018e1d2adae8dae">mCondition</a></td></tr>
+<tr class="separator:a18f0baab3510aa575018e1d2adae8dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4231705965a29b7ece9b0f10f9faac61" id="r_a4231705965a29b7ece9b0f10f9faac61"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#a4231705965a29b7ece9b0f10f9faac61">mEventId</a></td></tr>
+<tr class="separator:a4231705965a29b7ece9b0f10f9faac61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad19f7943a26d7d1eab76d89f22d35b88" id="r_ad19f7943a26d7d1eab76d89f22d35b88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#ad19f7943a26d7d1eab76d89f22d35b88">mMapToolId</a></td></tr>
+<tr class="separator:ad19f7943a26d7d1eab76d89f22d35b88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9b5e416cb676fe49fc2d42092bdfaaa" id="r_ae9b5e416cb676fe49fc2d42092bdfaaa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a151f780fb455885061d3b77ec1c90c03">s8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#ae9b5e416cb676fe49fc2d42092bdfaaa">mIndex</a></td></tr>
+<tr class="separator:ae9b5e416cb676fe49fc2d42092bdfaaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dbcc67f367298b45cba4e98e6b46c50" id="r_a8dbcc67f367298b45cba4e98e6b46c50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#a8dbcc67f367298b45cba4e98e6b46c50">mArchiveName</a></td></tr>
+<tr class="separator:a8dbcc67f367298b45cba4e98e6b46c50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaf5b284a17e77c35a6b612e4ca5068b" id="r_acaf5b284a17e77c35a6b612e4ca5068b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#acaf5b284a17e77c35a6b612e4ca5068b">field_0x10</a></td></tr>
+<tr class="separator:acaf5b284a17e77c35a6b612e4ca5068b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aaa6890057f469c35046588e4c4d4f9" id="r_a8aaa6890057f469c35046588e4c4d4f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdEvt__info__c.html#a8aaa6890057f469c35046588e4c4d4f9">field_0x14</a> )(<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *)</td></tr>
+<tr class="separator:a8aaa6890057f469c35046588e4c4d4f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a86f0a845033fe13f830f6ccca8bcfb07" name="a86f0a845033fe13f830f6ccca8bcfb07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86f0a845033fe13f830f6ccca8bcfb07">&#9670;&#160;</a></span>dEvt_info_c()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dEvt_info_c::dEvt_info_c </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa3fa4e1e9a209d5aa2acaa3ed1c33809" name="aa3fa4e1e9a209d5aa2acaa3ed1c33809"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3fa4e1e9a209d5aa2acaa3ed1c33809">&#9670;&#160;</a></span>~dEvt_info_c()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">virtual</a> dEvt_info_c::~dEvt_info_c </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4135b01fc3846a195c093b5613d65924" name="a4135b01fc3846a195c093b5613d65924"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4135b01fc3846a195c093b5613d65924">&#9670;&#160;</a></span>beforeProc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dEvt_info_c::beforeProc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afee29a3258876d8d0225cea247c136d0" name="afee29a3258876d8d0225cea247c136d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afee29a3258876d8d0225cea247c136d0">&#9670;&#160;</a></span>checkCommandCatch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a> dEvt_info_c::checkCommandCatch </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9defd6a092200344f1388ac1883ea3f0" name="a9defd6a092200344f1388ac1883ea3f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9defd6a092200344f1388ac1883ea3f0">&#9670;&#160;</a></span>checkCommandDemoAccrpt() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dEvt_info_c::checkCommandDemoAccrpt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad3f35d8fa91b0fa2695a6ea262618ce2" name="ad3f35d8fa91b0fa2695a6ea262618ce2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3f35d8fa91b0fa2695a6ea262618ce2">&#9670;&#160;</a></span>checkCommandDemoAccrpt() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dEvt_info_c::checkCommandDemoAccrpt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad3f35d8fa91b0fa2695a6ea262618ce2" name="ad3f35d8fa91b0fa2695a6ea262618ce2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3f35d8fa91b0fa2695a6ea262618ce2">&#9670;&#160;</a></span>checkCommandDemoAccrpt() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dEvt_info_c::checkCommandDemoAccrpt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad3f35d8fa91b0fa2695a6ea262618ce2" name="ad3f35d8fa91b0fa2695a6ea262618ce2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3f35d8fa91b0fa2695a6ea262618ce2">&#9670;&#160;</a></span>checkCommandDemoAccrpt() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dEvt_info_c::checkCommandDemoAccrpt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a93852e981b073a2c48332f6540ac76c5" name="a93852e981b073a2c48332f6540ac76c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93852e981b073a2c48332f6540ac76c5">&#9670;&#160;</a></span>checkCommandDoor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> dEvt_info_c::checkCommandDoor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab7434a903345b4279147bc80bf0c6255" name="ab7434a903345b4279147bc80bf0c6255"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7434a903345b4279147bc80bf0c6255">&#9670;&#160;</a></span>checkCommandItem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a> dEvt_info_c::checkCommandItem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d797c4fe7f74f8cc84bfe9110d3116d" name="a5d797c4fe7f74f8cc84bfe9110d3116d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d797c4fe7f74f8cc84bfe9110d3116d">&#9670;&#160;</a></span>checkCommandTalk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a> dEvt_info_c::checkCommandTalk </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae909424a4ad8bf886d419b40b5f5ed14" name="ae909424a4ad8bf886d419b40b5f5ed14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae909424a4ad8bf886d419b40b5f5ed14">&#9670;&#160;</a></span>chkCondition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> dEvt_info_c::chkCondition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td>
+          <td class="paramname"><em>condition</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a04721bc5ffee20d9fc99f3fcae303813" name="a04721bc5ffee20d9fc99f3fcae303813"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04721bc5ffee20d9fc99f3fcae303813">&#9670;&#160;</a></span>getArchiveName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> * dEvt_info_c::getArchiveName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb4fa3409c66e8fab1e3aff81040a372" name="adb4fa3409c66e8fab1e3aff81040a372"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb4fa3409c66e8fab1e3aff81040a372">&#9670;&#160;</a></span>getCondition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> dEvt_info_c::getCondition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1376af2a4932cc64f006c86c9506a0a2" name="a1376af2a4932cc64f006c86c9506a0a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1376af2a4932cc64f006c86c9506a0a2">&#9670;&#160;</a></span>getEventId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> dEvt_info_c::getEventId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a41c08ca9113f833935246ccd731eb8" name="a1a41c08ca9113f833935246ccd731eb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a41c08ca9113f833935246ccd731eb8">&#9670;&#160;</a></span>getEventName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> * dEvt_info_c::getEventName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac2420525be4d9554e963233fce42944c" name="ac2420525be4d9554e963233fce42944c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2420525be4d9554e963233fce42944c">&#9670;&#160;</a></span>getIdx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> dEvt_info_c::getIdx </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9210df1627c22ed8056ad6c6b5b07480" name="a9210df1627c22ed8056ad6c6b5b07480"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9210df1627c22ed8056ad6c6b5b07480">&#9670;&#160;</a></span>getMapToolId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> dEvt_info_c::getMapToolId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd4909601d788a3be67af29b5b34e84e" name="acd4909601d788a3be67af29b5b34e84e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd4909601d788a3be67af29b5b34e84e">&#9670;&#160;</a></span>i_checkCommandCatch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a> dEvt_info_c::i_checkCommandCatch </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a798c9a55683269c6936bcabfb80298f7" name="a798c9a55683269c6936bcabfb80298f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a798c9a55683269c6936bcabfb80298f7">&#9670;&#160;</a></span>i_checkCommandDemoAccrpt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a> dEvt_info_c::i_checkCommandDemoAccrpt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0161e7239bcc9b91131f2834e2fde28e" name="a0161e7239bcc9b91131f2834e2fde28e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0161e7239bcc9b91131f2834e2fde28e">&#9670;&#160;</a></span>i_checkCommandDoor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> dEvt_info_c::i_checkCommandDoor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa3fbddd9e9a86809e607c3bc08b7603" name="aaa3fbddd9e9a86809e607c3bc08b7603"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa3fbddd9e9a86809e607c3bc08b7603">&#9670;&#160;</a></span>i_offCondition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dEvt_info_c::i_offCondition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td>
+          <td class="paramname"><em>cond</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ade32ebee7f82a1b4b43bedf6f6f61108" name="ade32ebee7f82a1b4b43bedf6f6f61108"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade32ebee7f82a1b4b43bedf6f6f61108">&#9670;&#160;</a></span>i_onCondition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dEvt_info_c::i_onCondition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td>
+          <td class="paramname"><em>cond</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad1af38965f2d7d27e60007b0fe74b05c" name="ad1af38965f2d7d27e60007b0fe74b05c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1af38965f2d7d27e60007b0fe74b05c">&#9670;&#160;</a></span>offCondition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dEvt_info_c::offCondition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5dd6203595d4a0e43a5c70aa185eb242" name="a5dd6203595d4a0e43a5c70aa185eb242"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dd6203595d4a0e43a5c70aa185eb242">&#9670;&#160;</a></span>onCondition() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dEvt_info_c::onCondition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4821b9e0c53015e6c497208f019f0a27" name="a4821b9e0c53015e6c497208f019f0a27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4821b9e0c53015e6c497208f019f0a27">&#9670;&#160;</a></span>onCondition() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dEvt_info_c::onCondition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4821b9e0c53015e6c497208f019f0a27" name="a4821b9e0c53015e6c497208f019f0a27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4821b9e0c53015e6c497208f019f0a27">&#9670;&#160;</a></span>onCondition() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dEvt_info_c::onCondition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4821b9e0c53015e6c497208f019f0a27" name="a4821b9e0c53015e6c497208f019f0a27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4821b9e0c53015e6c497208f019f0a27">&#9670;&#160;</a></span>onCondition() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dEvt_info_c::onCondition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6f3289c45e3a17f5dee37a43803b2031" name="a6f3289c45e3a17f5dee37a43803b2031"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f3289c45e3a17f5dee37a43803b2031">&#9670;&#160;</a></span>setArchiveName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dEvt_info_c::setArchiveName </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a003638de3f10335c90f48dc0500bdfbb" name="a003638de3f10335c90f48dc0500bdfbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a003638de3f10335c90f48dc0500bdfbb">&#9670;&#160;</a></span>setCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dEvt_info_c::setCommand </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td>
+          <td class="paramname"><em>command</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60558a16ba61134de665c69b98490989" name="a60558a16ba61134de665c69b98490989"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60558a16ba61134de665c69b98490989">&#9670;&#160;</a></span>setCondition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dEvt_info_c::setCondition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td>
+          <td class="paramname"><em>condition</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca43cda0819131c74a5dc426c6d5f881" name="aca43cda0819131c74a5dc426c6d5f881"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca43cda0819131c74a5dc426c6d5f881">&#9670;&#160;</a></span>setEventId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dEvt_info_c::setEventId </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a147115157f61cda308c13a067af82dc9" name="a147115157f61cda308c13a067af82dc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a147115157f61cda308c13a067af82dc9">&#9670;&#160;</a></span>setEventName() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dEvt_info_c::setEventName </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a147115157f61cda308c13a067af82dc9" name="a147115157f61cda308c13a067af82dc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a147115157f61cda308c13a067af82dc9">&#9670;&#160;</a></span>setEventName() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dEvt_info_c::setEventName </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9de0a3f2c4bbd06739e547c902deccdc" name="a9de0a3f2c4bbd06739e547c902deccdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9de0a3f2c4bbd06739e547c902deccdc">&#9670;&#160;</a></span>setIdx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dEvt_info_c::setIdx </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td>
+          <td class="paramname"><em>i_idx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e09f8ed7379fe58ec40e0eade12d687" name="a1e09f8ed7379fe58ec40e0eade12d687"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e09f8ed7379fe58ec40e0eade12d687">&#9670;&#160;</a></span>setMapToolId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dEvt_info_c::setMapToolId </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af1f72f7b997a443e0948b8e7774f0702" name="af1f72f7b997a443e0948b8e7774f0702"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1f72f7b997a443e0948b8e7774f0702">&#9670;&#160;</a></span>suspendProc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dEvt_info_c::suspendProc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td>
+          <td class="paramname"><em>actor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="acaf5b284a17e77c35a6b612e4ca5068b" name="acaf5b284a17e77c35a6b612e4ca5068b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaf5b284a17e77c35a6b612e4ca5068b">&#9670;&#160;</a></span>field_0x10</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> dEvt_info_c::field_0x10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8aaa6890057f469c35046588e4c4d4f9" name="a8aaa6890057f469c35046588e4c4d4f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8aaa6890057f469c35046588e4c4d4f9">&#9670;&#160;</a></span>field_0x14</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>(* dEvt_info_c::field_0x14) (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8dbcc67f367298b45cba4e98e6b46c50" name="a8dbcc67f367298b45cba4e98e6b46c50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dbcc67f367298b45cba4e98e6b46c50">&#9670;&#160;</a></span>mArchiveName</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a>* dEvt_info_c::mArchiveName</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c2f3825181e90e36a6800f28c4a2d57" name="a6c2f3825181e90e36a6800f28c4a2d57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c2f3825181e90e36a6800f28c4a2d57">&#9670;&#160;</a></span>mCommand</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> dEvt_info_c::mCommand</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a18f0baab3510aa575018e1d2adae8dae" name="a18f0baab3510aa575018e1d2adae8dae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18f0baab3510aa575018e1d2adae8dae">&#9670;&#160;</a></span>mCondition</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> dEvt_info_c::mCondition</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4231705965a29b7ece9b0f10f9faac61" name="a4231705965a29b7ece9b0f10f9faac61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4231705965a29b7ece9b0f10f9faac61">&#9670;&#160;</a></span>mEventId</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> dEvt_info_c::mEventId</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae9b5e416cb676fe49fc2d42092bdfaaa" name="ae9b5e416cb676fe49fc2d42092bdfaaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9b5e416cb676fe49fc2d42092bdfaaa">&#9670;&#160;</a></span>mIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a151f780fb455885061d3b77ec1c90c03">s8</a> dEvt_info_c::mIndex</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad19f7943a26d7d1eab76d89f22d35b88" name="ad19f7943a26d7d1eab76d89f22d35b88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad19f7943a26d7d1eab76d89f22d35b88">&#9670;&#160;</a></span>mMapToolId</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> dEvt_info_c::mMapToolId</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following files:<ul>
+<li>include/f_op/<a class="el" href="f__op__actor_8h_source.html">f_op_actor.h</a></li>
+<li>rel/d/a/d_a_tbox/<a class="el" href="d__a__tbox_8cpp.html">d_a_tbox.cpp</a></li>
+<li>rel/d/a/e/d_a_e_po/<a class="el" href="d__a__e__po_8cpp.html">d_a_e_po.cpp</a></li>
+<li>rel/d/a/npc/d_a_npc_henna/<a class="el" href="d__a__npc__henna_8cpp.html">d_a_npc_henna.cpp</a></li>
+<li>rel/d/a/npc/d_a_npc_ks/<a class="el" href="d__a__npc__ks_8cpp.html">d_a_npc_ks.cpp</a></li>
+<li>src/d/event/<a class="el" href="d__event_8cpp.html">d_event.cpp</a></li>
+<li>rel/d/a/b/d_a_b_ob/<a class="el" href="d__a__b__ob_8cpp.html">d_a_b_ob.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classdEvt__info__c.html">dEvt_info_c</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

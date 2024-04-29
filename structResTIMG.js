@@ -1,0 +1,25 @@
+var structResTIMG =
+[
+    [ "alphaEnabled", "structResTIMG.html#a4234678cb8adfb8cc57dd2745b97fca7", null ],
+    [ "biasClamp", "structResTIMG.html#a581f52f69459463c4e05ec935f3dcc47", null ],
+    [ "colorFormat", "structResTIMG.html#a48934ae17d47e73c973a0c4f96ec5c1a", null ],
+    [ "doEdgeLOD", "structResTIMG.html#a0eb668be61f5a6657d4e9f5288d42e93", null ],
+    [ "format", "structResTIMG.html#ac7f04f7ecda104f2e24c0fa2b77447de", null ],
+    [ "height", "structResTIMG.html#abe49cad407fd2cbfeaadcfc32fc8115e", null ],
+    [ "imageOffset", "structResTIMG.html#a238f1ae96e37af44c1ae7ffb188fa7bf", null ],
+    [ "indexTexture", "structResTIMG.html#aa66845d9a5263a06b9ae44c122e5debb", null ],
+    [ "LODBias", "structResTIMG.html#a968543b1a58698fd75ca4b967af130fe", null ],
+    [ "magFilter", "structResTIMG.html#a7b05b5b7ec92dbbcd16339e0598eabf2", null ],
+    [ "maxAnisotropy", "structResTIMG.html#a4b47ef5fec14e71c285ecc16a8f9e972", null ],
+    [ "maxLOD", "structResTIMG.html#a62d554cbdc25ea79d2b2f7d18d8b65be", null ],
+    [ "minFilter", "structResTIMG.html#a4acf136e9a6fcd3d86e5c872afa1ff78", null ],
+    [ "minLOD", "structResTIMG.html#ae0a1eb6d8c25308b2434ed72caded8a8", null ],
+    [ "mipmapCount", "structResTIMG.html#a5d3cc2cf1830a46607cf072e1f259d46", null ],
+    [ "mipmapEnabled", "structResTIMG.html#a8032a78a21d9d5f69e2f77dc1696cfcc", null ],
+    [ "numColors", "structResTIMG.html#ad1111f8684475b38b6013439cd41c292", null ],
+    [ "paletteOffset", "structResTIMG.html#a9a07458291697434cac39fce7f1c88e8", null ],
+    [ "unknown", "structResTIMG.html#a53bfe413bcb3c7c5db1ccd12ecbab0c1", null ],
+    [ "width", "structResTIMG.html#a371834a76a41f01f5c5ca065e9527a3f", null ],
+    [ "wrapS", "structResTIMG.html#a9f4b17006a80fe7bf1b7e2f059163839", null ],
+    [ "wrapT", "structResTIMG.html#aa2a52f83806da1420efbb167e27c9026", null ]
+];

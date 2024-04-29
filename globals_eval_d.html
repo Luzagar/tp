@@ -1,0 +1,379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: File Members</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('globals_eval_d.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="contents">
+<div class="textblock">Here is a list of all enum values with links to the files they belong to:</div>
+
+<h3><a id="index_d" name="index_d"></a>- d -</h3><ul>
+<li>dCcD_SE_13&#160;:&#160;<a class="el" href="d__cc__d_8h.html#a3dc1e5b4347d327cfbf1ccf922b19b26ab995ada0023058a586e2a3eeb7b058e8">d_cc_d.h</a></li>
+<li>dCcD_SE_15&#160;:&#160;<a class="el" href="d__cc__d_8h.html#a3dc1e5b4347d327cfbf1ccf922b19b26a26dcd4df95a80aa407a234d330e8e792">d_cc_d.h</a></li>
+<li>dCcD_SE_17&#160;:&#160;<a class="el" href="d__cc__d_8h.html#a3dc1e5b4347d327cfbf1ccf922b19b26a7d3ba83d82b5bca94085867db6f8d175">d_cc_d.h</a></li>
+<li>dCcD_SE_23&#160;:&#160;<a class="el" href="d__cc__d_8h.html#a3dc1e5b4347d327cfbf1ccf922b19b26a6cbe2c923cc7d57025f800b0af311b07">d_cc_d.h</a></li>
+<li>dCcD_SE_ARROW_STICK&#160;:&#160;<a class="el" href="d__cc__d_8h.html#a3dc1e5b4347d327cfbf1ccf922b19b26aaebd677f4b83b0d52f9df9f628fd5c36">d_cc_d.h</a></li>
+<li>dCcD_SE_COPYROD&#160;:&#160;<a class="el" href="d__cc__d_8h.html#a3dc1e5b4347d327cfbf1ccf922b19b26ad31517259e054d43a66cdb7c312dd756">d_cc_d.h</a></li>
+<li>dCcD_SE_HAMMER&#160;:&#160;<a class="el" href="d__cc__d_8h.html#a3dc1e5b4347d327cfbf1ccf922b19b26ac5845e58c88daa86d719c6c92571be10">d_cc_d.h</a></li>
+<li>dCcD_SE_HARD_BODY&#160;:&#160;<a class="el" href="d__cc__d_8h.html#a3dc1e5b4347d327cfbf1ccf922b19b26a379fc10f782d97e66433dfc0893c4893">d_cc_d.h</a></li>
+<li>dCcD_SE_HOOKSHOT_STICK&#160;:&#160;<a class="el" href="d__cc__d_8h.html#a3dc1e5b4347d327cfbf1ccf922b19b26ae86a37289ad504cd530abe453ae7a59e">d_cc_d.h</a></li>
+<li>dCcD_SE_METAL&#160;:&#160;<a class="el" href="d__cc__d_8h.html#a3dc1e5b4347d327cfbf1ccf922b19b26a32eccee92f5a336d5ceb1e168261a3d9">d_cc_d.h</a></li>
+<li>dCcD_SE_NONE&#160;:&#160;<a class="el" href="d__cc__d_8h.html#a3dc1e5b4347d327cfbf1ccf922b19b26a913c3c381a1fc3645f8cf085eb3b8154">d_cc_d.h</a></li>
+<li>dCcD_SE_PACHINKO&#160;:&#160;<a class="el" href="d__cc__d_8h.html#a3dc1e5b4347d327cfbf1ccf922b19b26ac02467c98f2bcdb7bd34b46a950c721d">d_cc_d.h</a></li>
+<li>dCcD_SE_SHIELD_ATTACK&#160;:&#160;<a class="el" href="d__cc__d_8h.html#a3dc1e5b4347d327cfbf1ccf922b19b26aca2296a6022abc02ca9f00cc4280b197">d_cc_d.h</a></li>
+<li>dCcD_SE_SOFT_BODY&#160;:&#160;<a class="el" href="d__cc__d_8h.html#a3dc1e5b4347d327cfbf1ccf922b19b26ad5ea4b6ea2d4184d2769a49ddc5f3603">d_cc_d.h</a></li>
+<li>dCcD_SE_SPINNER&#160;:&#160;<a class="el" href="d__cc__d_8h.html#a3dc1e5b4347d327cfbf1ccf922b19b26a0a4a7b11dfb29c284b37d6c7cbef5dea">d_cc_d.h</a></li>
+<li>dCcD_SE_STATUE_HAMMER&#160;:&#160;<a class="el" href="d__cc__d_8h.html#a3dc1e5b4347d327cfbf1ccf922b19b26ab44d650b5cf13be0de625e27bdc387b1">d_cc_d.h</a></li>
+<li>dCcD_SE_STONE&#160;:&#160;<a class="el" href="d__cc__d_8h.html#a3dc1e5b4347d327cfbf1ccf922b19b26a596ca53208ffbbcaa8c7c9f3b5d83fc6">d_cc_d.h</a></li>
+<li>dCcD_SE_SWORD&#160;:&#160;<a class="el" href="d__cc__d_8h.html#a3dc1e5b4347d327cfbf1ccf922b19b26a6395a5ffe5e78aa6b29bf713ffab52d2">d_cc_d.h</a></li>
+<li>dCcD_SE_SWORD_RUN&#160;:&#160;<a class="el" href="d__cc__d_8h.html#a3dc1e5b4347d327cfbf1ccf922b19b26a51774a74f985941a6b4d529721a7ce55">d_cc_d.h</a></li>
+<li>dCcD_SE_SWORD_STAB&#160;:&#160;<a class="el" href="d__cc__d_8h.html#a3dc1e5b4347d327cfbf1ccf922b19b26a84b7f52d4c1e3de0bc92b5896789ca74">d_cc_d.h</a></li>
+<li>dCcD_SE_THROW_OBJ&#160;:&#160;<a class="el" href="d__cc__d_8h.html#a3dc1e5b4347d327cfbf1ccf922b19b26af0ccc3b26cb1aa5de6eb9150b0e4fb01">d_cc_d.h</a></li>
+<li>dCcD_SE_WOLF_BITE&#160;:&#160;<a class="el" href="d__cc__d_8h.html#a3dc1e5b4347d327cfbf1ccf922b19b26ad610956dbdef963227ca598f4749ddde">d_cc_d.h</a></li>
+<li>dCcD_SE_WOLF_KICK&#160;:&#160;<a class="el" href="d__cc__d_8h.html#a3dc1e5b4347d327cfbf1ccf922b19b26afd0016028fa909fca0e9975384fe777b">d_cc_d.h</a></li>
+<li>dCcD_SE_WOOD&#160;:&#160;<a class="el" href="d__cc__d_8h.html#a3dc1e5b4347d327cfbf1ccf922b19b26ae9b705936dfa0b116b3dfbbaa2688943">d_cc_d.h</a></li>
+<li>dCcG_At_Spl_UNK_0&#160;:&#160;<a class="el" href="d__cc__d_8h.html#a69a75b4ec8839e0fe308a75c2ec0a531af2ec59409252d1771978e47c2029a08c">d_cc_d.h</a></li>
+<li>dCcG_At_Spl_UNK_1&#160;:&#160;<a class="el" href="d__cc__d_8h.html#a69a75b4ec8839e0fe308a75c2ec0a531a16e75bd1c48811d786399873af6511b5">d_cc_d.h</a></li>
+<li>dCcG_Tg_Spl_UNK_0&#160;:&#160;<a class="el" href="d__cc__d_8h.html#acbb3d4afe38102cc5d44426ead6e3832ab7dff906a220019f6ad51d5e6a66734a">d_cc_d.h</a></li>
+<li>dCcG_Tg_Spl_UNK_1&#160;:&#160;<a class="el" href="d__cc__d_8h.html#acbb3d4afe38102cc5d44426ead6e3832a95c25613662adce56f7017d1295ec183">d_cc_d.h</a></li>
+<li>DEMO_ACT_ADJUSTMENT&#160;:&#160;<a class="el" href="d__a__obj__kgate_8cpp.html#a5bea799269f02f5b3395d6b2c068b618a959e12835e7b63bce81ea82fcbfa4a21">d_a_obj_kgate.cpp</a>, <a class="el" href="d__a__obj__rgate_8cpp.html#aa94c5fdcac6a4b26211b612c3edc04ffa959e12835e7b63bce81ea82fcbfa4a21">d_a_obj_rgate.cpp</a></li>
+<li>DEMO_ACT_OPEN&#160;:&#160;<a class="el" href="d__a__obj__rgate_8cpp.html#aa94c5fdcac6a4b26211b612c3edc04ffa0b563edf0f8cd8e8f6b9ae54eaf94182">d_a_obj_rgate.cpp</a>, <a class="el" href="d__a__obj__kgate_8cpp.html#a5bea799269f02f5b3395d6b2c068b618a0b563edf0f8cd8e8f6b9ae54eaf94182">d_a_obj_kgate.cpp</a></li>
+<li>DEMO_ACT_UNLOCK&#160;:&#160;<a class="el" href="d__a__obj__kgate_8cpp.html#a5bea799269f02f5b3395d6b2c068b618ad0639d2ea1a57263e296c97fa204c250">d_a_obj_kgate.cpp</a>, <a class="el" href="d__a__obj__rgate_8cpp.html#aa94c5fdcac6a4b26211b612c3edc04ffad0639d2ea1a57263e296c97fa204c250">d_a_obj_rgate.cpp</a></li>
+<li>DEMO_ACT_WAIT&#160;:&#160;<a class="el" href="d__a__obj__kgate_8cpp.html#a5bea799269f02f5b3395d6b2c068b618ad40e5fd09e445f6c3dce939dc43af079">d_a_obj_kgate.cpp</a>, <a class="el" href="d__a__obj__rgate_8cpp.html#aa94c5fdcac6a4b26211b612c3edc04ffad40e5fd09e445f6c3dce939dc43af079">d_a_obj_rgate.cpp</a></li>
+<li>dEvtCmd_DUMMY&#160;:&#160;<a class="el" href="f__op__actor_8h.html#a9fee940072892d21c6a11a7ed7adf637a0dba51a43a8234b7f5a31fb001b33819">f_op_actor.h</a></li>
+<li>dEvtCmd_INCATCH_e&#160;:&#160;<a class="el" href="f__op__actor_8h.html#a9fee940072892d21c6a11a7ed7adf637a0b72f8dc66a7a81b88eaeacd0c67146d">f_op_actor.h</a></li>
+<li>dEvtCmd_INDEMO_e&#160;:&#160;<a class="el" href="f__op__actor_8h.html#a9fee940072892d21c6a11a7ed7adf637a48052e28bc8e05a5d40b6ebbcd67c4fe">f_op_actor.h</a></li>
+<li>dEvtCmd_INDOOR_e&#160;:&#160;<a class="el" href="f__op__actor_8h.html#a9fee940072892d21c6a11a7ed7adf637aaeaa22710329876feecaeca37bdec751">f_op_actor.h</a></li>
+<li>dEvtCmd_INGETITEM_e&#160;:&#160;<a class="el" href="f__op__actor_8h.html#a9fee940072892d21c6a11a7ed7adf637a8105698a544d5ae2387411f96225630b">f_op_actor.h</a></li>
+<li>dEvtCmd_INTALK_e&#160;:&#160;<a class="el" href="f__op__actor_8h.html#a9fee940072892d21c6a11a7ed7adf637a40f925aba96a3c1afd4982fff28d75c1">f_op_actor.h</a></li>
+<li>dEvtCmd_NONE_e&#160;:&#160;<a class="el" href="f__op__actor_8h.html#a9fee940072892d21c6a11a7ed7adf637ae6665177bdead19e67675e8e804b5f5f">f_op_actor.h</a></li>
+<li>dEvtCnd_CANDEMO_e&#160;:&#160;<a class="el" href="f__op__actor_8h.html#a6a25f0a5e67da59d420e1ffd85414c26a6325dc59fe66fabf0297371f1e9a05fe">f_op_actor.h</a></li>
+<li>dEvtCnd_CANDOOR_e&#160;:&#160;<a class="el" href="f__op__actor_8h.html#a6a25f0a5e67da59d420e1ffd85414c26a80305c5382bce8351dd40d25b214730b">f_op_actor.h</a></li>
+<li>dEvtCnd_CANGETITEM_e&#160;:&#160;<a class="el" href="f__op__actor_8h.html#a6a25f0a5e67da59d420e1ffd85414c26a082aa2e9227f8b028b88d7cb066ba44a">f_op_actor.h</a></li>
+<li>dEvtCnd_CANTALK_e&#160;:&#160;<a class="el" href="f__op__actor_8h.html#a6a25f0a5e67da59d420e1ffd85414c26acbda8eaeeac87266ccdd6bff5ec7352c">f_op_actor.h</a></li>
+<li>dEvtCnd_CANTALKITEM_e&#160;:&#160;<a class="el" href="f__op__actor_8h.html#a6a25f0a5e67da59d420e1ffd85414c26a65b4eaa1f98e851e9de03513523feda5">f_op_actor.h</a></li>
+<li>dEvtCnd_DUMMY&#160;:&#160;<a class="el" href="f__op__actor_8h.html#a6a25f0a5e67da59d420e1ffd85414c26acfc9ebc5a18f3de36d5d0e4f4fb43367">f_op_actor.h</a></li>
+<li>dEvtCnd_NONE_e&#160;:&#160;<a class="el" href="f__op__actor_8h.html#a6a25f0a5e67da59d420e1ffd85414c26aa1b397e6cda5e696c8734ca559671b4c">f_op_actor.h</a></li>
+<li>DICE_MODE_CLOUDY_e&#160;:&#160;<a class="el" href="d__kankyo_8h.html#a0cbabe1978609ab71d0924e4269dbb0fa91e7bccdb9ddb2bbd7b6cfdf654dc92e">d_kankyo.h</a></li>
+<li>DICE_MODE_DONE_e&#160;:&#160;<a class="el" href="d__kankyo_8h.html#a0cbabe1978609ab71d0924e4269dbb0fa8d6f231e468731e8033c91082bf147a7">d_kankyo.h</a></li>
+<li>DICE_MODE_RAIN_HEAVY_e&#160;:&#160;<a class="el" href="d__kankyo_8h.html#a0cbabe1978609ab71d0924e4269dbb0fa736ae5762bf8c11c48525fcc460393a3">d_kankyo.h</a></li>
+<li>DICE_MODE_RAIN_LIGHT_e&#160;:&#160;<a class="el" href="d__kankyo_8h.html#a0cbabe1978609ab71d0924e4269dbb0fa7547e4e466bc9166a346cef1a0169016">d_kankyo.h</a></li>
+<li>DICE_MODE_SUNNY_e&#160;:&#160;<a class="el" href="d__kankyo_8h.html#a0cbabe1978609ab71d0924e4269dbb0fa465b2d46675fbedb37e03559a24f60b7">d_kankyo.h</a></li>
+<li>DICE_MODE_THUNDER_HEAVY_e&#160;:&#160;<a class="el" href="d__kankyo_8h.html#a0cbabe1978609ab71d0924e4269dbb0faf446dbecc0f3d8c17cd3942fe2e0cedd">d_kankyo.h</a></li>
+<li>DICE_MODE_THUNDER_LIGHT_e&#160;:&#160;<a class="el" href="d__kankyo_8h.html#a0cbabe1978609ab71d0924e4269dbb0fa7ccc913819060e24b202553035e950a5">d_kankyo.h</a></li>
+<li>DICE_MODE_UNK6_e&#160;:&#160;<a class="el" href="d__kankyo_8h.html#a0cbabe1978609ab71d0924e4269dbb0fae9f3b90bcad3c05c5fa15b1bf6ff302c">d_kankyo.h</a></li>
+<li>DICE_STATE_EXEC_e&#160;:&#160;<a class="el" href="d__kankyo_8h.html#a16b4edc3b34b2b61f211ca4825eb2e96ae5a89dfebd76ac4a6ff9c5baebe86b05">d_kankyo.h</a></li>
+<li>DICE_STATE_INIT_e&#160;:&#160;<a class="el" href="d__kankyo_8h.html#a16b4edc3b34b2b61f211ca4825eb2e96a2e72194ceb7f2cf75f4602ebb147c2c0">d_kankyo.h</a></li>
+<li>DICE_STATE_NEXT_e&#160;:&#160;<a class="el" href="d__kankyo_8h.html#a16b4edc3b34b2b61f211ca4825eb2e96ad447d43cbbe4c5db323a13d89d143d3c">d_kankyo.h</a></li>
+<li>DICE_STATE_RESET_e&#160;:&#160;<a class="el" href="d__kankyo_8h.html#a16b4edc3b34b2b61f211ca4825eb2e96a6fb1a5f57219c78668efe547a1f26d67">d_kankyo.h</a></li>
+<li>digit_loop&#160;:&#160;<a class="el" href="strtoul_8c.html#ac812c5ecefd961b87d832c6c9a2f1bdfadc872e59cb138425a5b0f40ceda358f1">strtoul.c</a></li>
+<li>DROP_BOTTLE&#160;:&#160;<a class="el" href="d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2a32e375f65c6d74ed2542a2e1cd092470">d_save.h</a></li>
+<li>DROP_CONTAINER&#160;:&#160;<a class="el" href="d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2acdfcb6559155fabe7bd9c7b588f1c737">d_save.h</a></li>
+<li>DROP_CONTAINER02&#160;:&#160;<a class="el" href="d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2ad99b8f5fbdb612060c8abe660cb9bd20">d_save.h</a></li>
+<li>DROP_CONTAINER03&#160;:&#160;<a class="el" href="d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2a8c7972a798ffe491abe0e2eac4b4bf80">d_save.h</a></li>
+<li>DS_CWDSException&#160;:&#160;<a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408a51a9f6ff4a68952d254f5164a8cd60ce">trk.h</a></li>
+<li>DS_DispatchError&#160;:&#160;<a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408ab1268c16a407ef863fa2ca5df9011482">trk.h</a></li>
+<li>DS_Error800&#160;:&#160;<a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408adb1961643ec37f093427aee7cb5704d8">trk.h</a></li>
+<li>DS_EventQueueFull&#160;:&#160;<a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408accfcc12f5b70b0db1632d480500165b5">trk.h</a></li>
+<li>DS_HEAD_JNT_FUR_B&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a3344140d82666d01f7c016f20af3803eae666e9d67fcbf7039c37b84a820f0a4d">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_HEAD_JNT_FUR_L1&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a3344140d82666d01f7c016f20af3803eafffd0b37b499f71694d6915a76a4e76b">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_HEAD_JNT_FUR_L2&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a3344140d82666d01f7c016f20af3803ea0e7e14a37a8e02f84fd21646dba76c14">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_HEAD_JNT_FUR_R1&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a3344140d82666d01f7c016f20af3803eae5de848d4dbb3131c827cde4238b0b23">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_HEAD_JNT_FUR_R2&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a3344140d82666d01f7c016f20af3803eadda8161e7953a9c521f9d324acf390b2">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_HEAD_JNT_HEAD&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a3344140d82666d01f7c016f20af3803ea9bf9e79c1c6965d6b9bd05f373b7f3fd">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_HEAD_JNT_JAW&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a3344140d82666d01f7c016f20af3803ea5056703b31acafc5243945ca3fbd0ba6">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_InvalidMemory&#160;:&#160;<a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408a3bf83afc71cde7063a8cb7a86fa6e082">trk.h</a></li>
+<li>DS_InvalidProcessID&#160;:&#160;<a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408a001d0a79980d1edbb2837921a0b52610">trk.h</a></li>
+<li>DS_InvalidRegister&#160;:&#160;<a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408a618628d92e63da1cc3efe2784e8a8ba1">trk.h</a></li>
+<li>DS_InvalidThreadID&#160;:&#160;<a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408a748e609fb95dfad2cce2317c44739449">trk.h</a></li>
+<li>DS_IOEOF&#160;:&#160;<a class="el" href="trk_8h.html#abb04573ed5817a3349abfeb032fc2384a7a8b43b120c4d0dc70d79b9a33cde814">trk.h</a></li>
+<li>DS_IOError&#160;:&#160;<a class="el" href="trk_8h.html#abb04573ed5817a3349abfeb032fc2384a1d6f7de0285954fcb13d1a7e2b98d129">trk.h</a></li>
+<li>DS_IONoError&#160;:&#160;<a class="el" href="trk_8h.html#abb04573ed5817a3349abfeb032fc2384acb1188feeea1a6620028be3681ea915d">trk.h</a></li>
+<li>DS_JNT_ARM_L1&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa1dc3c0fd431499d93202b4a637013da0">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_ARM_L2&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa6827d26457dca5ff195cb0f3229f4118">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_ARM_R1&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa5c01b0ae58b1d902a380b94fc745af2b">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_ARM_R2&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa1f54630ab6de9b552ca1fc620b36a60c">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_BACKBONE1&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa24a2505b0f720bcba7a35bdf0b9faa8c">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_BACKBONE2&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa560d499b7287bc84f74a96c6bdd3ffa7">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_BACKBONE3&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842faf5c212bd8fe708fb73dc36891d8e2db4">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_BACKBONE4&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa8e173cf61d70c655c80a7f4a965807d7">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_HAND_L&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842faa9c399b2ac3ddbf3611bf7779da557ed">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_HAND_R&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa02cd7e550cff5083be845bab2e7812d5">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_HEAD&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa1f3e85179280d37e6235f62e4c9bdf26">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_JAW&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa57579188ef7620a15d91295e8163f704">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_LYUBI_A1&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa8136fa492c8091fa95be87f213016522">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_LYUBI_A2&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa6fdb7a17c887f744895d9fee7659c387">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_LYUBI_A3&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa9dcd4bf7dd8d3e8e126546b2c78d8b7a">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_LYUBI_B1&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa7f6822f03ba2742c1e125e0e2f1dd6b6">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_LYUBI_B2&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa1e841d8e032b46bebe23feafe1d3899b">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_LYUBI_B3&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842faaf27e4c6e340506f4ee68b6fa90c7074">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_LYUBI_C1&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fac43522edac33ad6cd30deed336cf498c">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_LYUBI_C2&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa2d6ba3d1ac8c9781792bba09aa9431ff">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_LYUBI_C3&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa5b64f95d5215f6fae2324a1ee3fe0fdb">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_LYUBI_D1&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842faa33dc6cc216f18ec042ea63ab47b7931">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_LYUBI_D2&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842faa8715cd112e3cd350e8a3c8748ad74a6">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_LYUBI_D3&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fabc752ecc666fcb9d37528fa6a328148f">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_LYUBI_E1&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa52694c343ca6d8b7acc80b0e44eea6c9">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_LYUBI_E2&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fad938c4788e02b41465bb6f2f8af2fd01">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_LYUBI_E3&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa08de7e799a6d0ef8754f6cc1836a11d3">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_NECK1&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842faa4301bdec7e98c709bf95a47c75a8050">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_NECK2&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa460c63bf9f67fa4752220914134da12c">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_RYUBI_A1&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa1ae2f5e8e9adcfc3cb531dbd647b5187">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_RYUBI_A2&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fac18c0128b279530234b6baebbef8dc71">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_RYUBI_A3&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa33099fda0ace0761615b8a9f14034bf2">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_RYUBI_B1&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa232df0d9c3fd28d63a0d1d092e67251a">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_RYUBI_B2&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa6287593f277b8b9c8822f8029b3b67ea">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_RYUBI_B3&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa717ffbf4bab17314d1d35ae976dfa3dd">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_RYUBI_C1&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842faec976753f3224162c9d6580647915cd8">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_RYUBI_C2&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842faa98edc75b28ec7620bfa1657b5e2fa65">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_RYUBI_C3&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa0230455492900ea3b2cba8d1d32fad7d">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_RYUBI_D1&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842faa349bfad808c85efddf6f5e1847190bf">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_RYUBI_D2&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa2d8d879258e5794f2bae673492cc5056">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_RYUBI_D3&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fae41ba21dd06e201c1c7e8a805032f0b9">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_RYUBI_E1&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa33b2761fab9a1538c340b7b681faff53">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_RYUBI_E2&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fab8da7c2edaed359db30f9080735f72bf">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_RYUBI_E3&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fabbe4aa892111f306a933022a35cb95ca">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_SHOULDER_BL&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa369280687383811bb4ad81cc04a6763c">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_SHOULDER_BR&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fae79505477f70634dff3b9656c549c324">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_SHOULDER_L&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa1c16880b428dba430f33522ecd7f68d5">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_JNT_SHOULDER_R&#160;:&#160;<a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a96337816361d415c6dc030f28858842fa8818dcb784301618db0f322a8b17a01f">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>DS_MessageBufferOverflow&#160;:&#160;<a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408a075db8392a28f8777627f709d656517c">trk.h</a></li>
+<li>DS_MessageBufferReadError&#160;:&#160;<a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408a12cc95648e00830a5b773a717df40e1a">trk.h</a></li>
+<li>DS_NoError&#160;:&#160;<a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408a126018271a566021ff0e273aaf7bc81c">trk.h</a></li>
+<li>DS_NoMessageBufferAvailable&#160;:&#160;<a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408a90e56b0ecc5444629a3da2cf101f3f56">trk.h</a></li>
+<li>DS_OSError&#160;:&#160;<a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408ae0fa54c80ac6313331bd66bbf5755f9a">trk.h</a></li>
+<li>DS_ParameterError&#160;:&#160;<a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408ad70af7fcaf93bb87639a6f6a7a58e22b">trk.h</a></li>
+<li>DS_Stderr&#160;:&#160;<a class="el" href="trk_8h.html#ad05ef16f1f26edddaa833cd6980ea313aa530b67c5b39b2fb789ebe740f145a82">trk.h</a></li>
+<li>DS_Stdin&#160;:&#160;<a class="el" href="trk_8h.html#ad05ef16f1f26edddaa833cd6980ea313adbc2c3a8dc2ca57047c511d79b0d82cd">trk.h</a></li>
+<li>DS_Stdout&#160;:&#160;<a class="el" href="trk_8h.html#ad05ef16f1f26edddaa833cd6980ea313a0837df2af1bc688b488d4121817b647d">trk.h</a></li>
+<li>DS_StepError&#160;:&#160;<a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408aa36a24002695b80a204f28c5bf357aa3">trk.h</a></li>
+<li>DS_UnsupportedError&#160;:&#160;<a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408a1f3b456c3a20b741429065609f7fc8e6">trk.h</a></li>
+<li>DSMSG_CloseFile&#160;:&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfaedff2a1fc2af7de89651fca5eaf0f9f9">trk.h</a></li>
+<li>DSMSG_Connect&#160;:&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfaba3809be9b29075af2b62ef7931b80e9">trk.h</a></li>
+<li>DSMSG_Continue&#160;:&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa73717006e499744124fb49a30efbae1d">trk.h</a></li>
+<li>DSMSG_Disconnect&#160;:&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfaa6cab40131e919960687db8fc303bd4c">trk.h</a></li>
+<li>DSMSG_NotifyException&#160;:&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfaec5882c43d837d42f97f56c8ef44c1d7">trk.h</a></li>
+<li>DSMSG_NotifyStopped&#160;:&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfaa1c9338b9a6928a005cf7f22c38ac08b">trk.h</a></li>
+<li>DSMSG_OpenFile&#160;:&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa814fc0ee3f2a82baf6e61d57a1c23ed3">trk.h</a></li>
+<li>DSMSG_Override&#160;:&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfaf6a94fedbe39f346ea9a9f82c21fad77">trk.h</a></li>
+<li>DSMSG_Ping&#160;:&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfac6f511775fe451bc416cf69bdd6ef0b8">trk.h</a></li>
+<li>DSMSG_PositionFile&#160;:&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfacb9c4e1c203d74a9c5fd2e64ffd7ea3b">trk.h</a></li>
+<li>DSMSG_ReadFile&#160;:&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa5d8e4eacaf01479931e9b58f72b1ea3b">trk.h</a></li>
+<li>DSMSG_ReadMemory&#160;:&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa6e3ec7f65b42e830e2ceb317edf9df11">trk.h</a></li>
+<li>DSMSG_ReadRegisters&#160;:&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa28df12cf5614a6925ded1dfe4bd9596c">trk.h</a></li>
+<li>DSMSG_ReplyACK&#160;:&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa7d848956e52c016356e74f1155417426">trk.h</a></li>
+<li>DSMSG_ReplyNAK&#160;:&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa226068d127f8821f95284d1889d0bcaa">trk.h</a></li>
+<li>DSMSG_Reset&#160;:&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa923b2998289aa55f36a04d12c67fa275">trk.h</a></li>
+<li>DSMSG_SetOption&#160;:&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa2636dff90e23e9bb3cfebb2cbf99d8d9">trk.h</a></li>
+<li>DSMSG_Step&#160;:&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa6382d2ef6f2ef23760d5c51aa9f074ad">trk.h</a></li>
+<li>DSMSG_Stop&#160;:&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa6c4830a31ab7ab6564f11f30c304a84c">trk.h</a></li>
+<li>DSMSG_SupportMask&#160;:&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfaa7c8588ffc7a8033c3274711bd709e80">trk.h</a></li>
+<li>DSMSG_Versions&#160;:&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa464aee155200d3b49738e41a2e0a026c">trk.h</a></li>
+<li>DSMSG_WriteFile&#160;:&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa82669fbeea5bcca2fd7d81320608c786">trk.h</a></li>
+<li>DSMSG_WriteMemory&#160;:&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa3e21de752395f3390617fccf91368686">trk.h</a></li>
+<li>DSMSG_WriteRegisters&#160;:&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa73255c34881697f43db0b59cb63f80a9">trk.h</a></li>
+<li>DSMSGMEMORY_Extended&#160;:&#160;<a class="el" href="trk_8h.html#a726ca809ffd3d67ab4b8476646f26635a01bb8a771213a2f1e232af6ff2972f88">trk.h</a></li>
+<li>DSMSGMEMORY_Protected&#160;:&#160;<a class="el" href="trk_8h.html#a726ca809ffd3d67ab4b8476646f26635a6161ee4159b150132d6c5828fedd8605">trk.h</a></li>
+<li>DSMSGMEMORY_Segmented&#160;:&#160;<a class="el" href="trk_8h.html#a726ca809ffd3d67ab4b8476646f26635a024c1b07b5cc2d92c77f69bc1228abc9">trk.h</a></li>
+<li>DSMSGMEMORY_Space_data&#160;:&#160;<a class="el" href="trk_8h.html#a726ca809ffd3d67ab4b8476646f26635a22d766b2763f40c41cc75de48b74c302">trk.h</a></li>
+<li>DSMSGMEMORY_Space_io&#160;:&#160;<a class="el" href="trk_8h.html#a726ca809ffd3d67ab4b8476646f26635a7b03347d1ddb900bb81fa15acface712">trk.h</a></li>
+<li>DSMSGMEMORY_Space_program&#160;:&#160;<a class="el" href="trk_8h.html#a726ca809ffd3d67ab4b8476646f26635a02ea7c7b3e43267755d869a49a77bdf1">trk.h</a></li>
+<li>DSMSGMEMORY_Userview&#160;:&#160;<a class="el" href="trk_8h.html#a726ca809ffd3d67ab4b8476646f26635a12d21ad24aa57663ac6edafb75735dfa">trk.h</a></li>
+<li>DSRECV_Found&#160;:&#160;<a class="el" href="trk_8h.html#a48ff129248fb802ab462a75ce847c119af4a3e0440e7ccd3cd93ecc89e4b1e7b3">trk.h</a></li>
+<li>DSRECV_FrameOverflow&#160;:&#160;<a class="el" href="trk_8h.html#a48ff129248fb802ab462a75ce847c119aa130b593c485f39b1b5c498443df99de">trk.h</a></li>
+<li>DSRECV_InFrame&#160;:&#160;<a class="el" href="trk_8h.html#a48ff129248fb802ab462a75ce847c119a1e40e0d028f03b0efa4db5ae17ab2df3">trk.h</a></li>
+<li>DSRECV_Wait&#160;:&#160;<a class="el" href="trk_8h.html#a48ff129248fb802ab462a75ce847c119ae89c3b3c9e10781ee557c231d8358da7">trk.h</a></li>
+<li>DSREG_Default&#160;:&#160;<a class="el" href="trk_8h.html#a34f2f0d330a3f85587fce2aeea6bc07eabe55615376383af92e72a82be9788330">trk.h</a></li>
+<li>DSREG_Extended1&#160;:&#160;<a class="el" href="trk_8h.html#a34f2f0d330a3f85587fce2aeea6bc07ea4f347a30442ff17b798ec5ea905456aa">trk.h</a></li>
+<li>DSREG_Extended2&#160;:&#160;<a class="el" href="trk_8h.html#a34f2f0d330a3f85587fce2aeea6bc07ea29ec337b5b7e6ed13134f0e3ac7924ce">trk.h</a></li>
+<li>DSREG_FP&#160;:&#160;<a class="el" href="trk_8h.html#a34f2f0d330a3f85587fce2aeea6bc07eaf98fe6e0f28986f4966db5c94921d3d8">trk.h</a></li>
+<li>DSREPLY_BadFCS&#160;:&#160;<a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a1baaa37edb4e86bda7cb9061105f9fa6">trk.h</a></li>
+<li>DSREPLY_BreakpointConflict&#160;:&#160;<a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a16513fce41455a26202020308be0801b">trk.h</a></li>
+<li>DSREPLY_BreakpointsFull&#160;:&#160;<a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143afc4565bbccf84063c9c47bf765a80551">trk.h</a></li>
+<li>DSREPLY_CWDSError&#160;:&#160;<a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a02ba0678819255620581d3647acc53e3">trk.h</a></li>
+<li>DSREPLY_CWDSException&#160;:&#160;<a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143aec0242ad15f4f848e7bff2665fc66d36">trk.h</a></li>
+<li>DSREPLY_DebugSecurityError&#160;:&#160;<a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143ad8dd0be5c60d7ac77611d145fb68d599">trk.h</a></li>
+<li>DSREPLY_Error&#160;:&#160;<a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a109abd5bc633725c63c6effb67115aeb">trk.h</a></li>
+<li>DSREPLY_EscapeError&#160;:&#160;<a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a00687efe369f6ba03eaa9fe13c5b0299">trk.h</a></li>
+<li>DSREPLY_InvalidMemoryRange&#160;:&#160;<a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a59ec8e7ae9e0ddd9409f96b8bc53cbb3">trk.h</a></li>
+<li>DSREPLY_InvalidProcessID&#160;:&#160;<a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a2cafe6415ad682851a8dad02e32bf2f4">trk.h</a></li>
+<li>DSREPLY_InvalidRegisterRange&#160;:&#160;<a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a3bba7095edaddb00b2e46c73eceed6fa">trk.h</a></li>
+<li>DSREPLY_InvalidThreadID&#160;:&#160;<a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a6d8ca6553d15c4806402ae0324268641">trk.h</a></li>
+<li>DSREPLY_NoError&#160;:&#160;<a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a600345694d4558f64efcd1457129395d">trk.h</a></li>
+<li>DSREPLY_NotStopped&#160;:&#160;<a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a70e994968765c0230b1be620b21dc733">trk.h</a></li>
+<li>DSREPLY_OSError&#160;:&#160;<a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143af86c1d0d99871e22035e9e49fdfe0487">trk.h</a></li>
+<li>DSREPLY_Overflow&#160;:&#160;<a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a83cc37e351bda5053b4b4978f32c3a43">trk.h</a></li>
+<li>DSREPLY_PacketSizeError&#160;:&#160;<a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143afd24ba88534370202c43192561a9fc8c">trk.h</a></li>
+<li>DSREPLY_ParameterError&#160;:&#160;<a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a1ccf8186219f18d443ffe5db6558eb66">trk.h</a></li>
+<li>DSREPLY_SequenceMissing&#160;:&#160;<a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a4c9bd3a4a45c03b4cef9f8998fe8a04b">trk.h</a></li>
+<li>DSREPLY_UnsupportedCommandError&#160;:&#160;<a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a1790073654f7e9775eaf0496a60def6c">trk.h</a></li>
+<li>DSREPLY_UnsupportedOptionError&#160;:&#160;<a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a3b9a8e283f8537840ffc6220e9c6e4f2">trk.h</a></li>
+<li>DSSTEP_IntoCount&#160;:&#160;<a class="el" href="trk_8h.html#a5b538f42a2e6625f06b1dba3dc6f1cbea974d137adf39e28c45a9cda64ee878f3">trk.h</a></li>
+<li>DSSTEP_IntoRange&#160;:&#160;<a class="el" href="trk_8h.html#a5b538f42a2e6625f06b1dba3dc6f1cbea3f17af0e466e8beacbed701a2edfd2a3">trk.h</a></li>
+<li>DSSTEP_OverCount&#160;:&#160;<a class="el" href="trk_8h.html#a5b538f42a2e6625f06b1dba3dc6f1cbeae0fdc672b8018a0b2c98881a075dd8db">trk.h</a></li>
+<li>DSSTEP_OverRange&#160;:&#160;<a class="el" href="trk_8h.html#a5b538f42a2e6625f06b1dba3dc6f1cbea4702c1c8d58c35353cd868ce2ecff7b4">trk.h</a></li>
+<li>DUNGEON_BACK&#160;:&#160;<a class="el" href="d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2a6fdc5d91ec995e620d7be0c2bc9a1483">d_save.h</a></li>
+<li>DUNGEON_EXIT&#160;:&#160;<a class="el" href="d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2aabcb9cd1b0004fceb8076f76629314a8">d_save.h</a></li>
+<li>DUNGEON_EXIT_2&#160;:&#160;<a class="el" href="d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2a31da0c4af385d9e43f15c3ad8de2f0e6">d_save.h</a></li>
+<li>DVD_RESULT_CANCELED&#160;:&#160;<a class="el" href="dvd_8h.html#ac3c743dfa2642c893af57e9582d42d9babcb4520ccd1f3d784211bfd8e0bc0528">dvd.h</a></li>
+<li>DVD_RESULT_FATAL_ERROR&#160;:&#160;<a class="el" href="dvd_8h.html#ac3c743dfa2642c893af57e9582d42d9bacea3b30544cda543787debd9453ec4c7">dvd.h</a></li>
+<li>DVD_RESULT_GOOD&#160;:&#160;<a class="el" href="dvd_8h.html#ac3c743dfa2642c893af57e9582d42d9baa93fcb586c35c75ed6d326dd67083ca9">dvd.h</a></li>
+<li>DVD_RESULT_IGNORED&#160;:&#160;<a class="el" href="dvd_8h.html#ac3c743dfa2642c893af57e9582d42d9ba2a40b74d00dc17a3d463e8748d404604">dvd.h</a></li>
+<li>DVD_STATE_BUSY&#160;:&#160;<a class="el" href="dvd_8h.html#ad4f227aed34861133cc1c89c8a0d86e7a18b329b00727fda3bec76fba05f1f76a">dvd.h</a></li>
+<li>DVD_STATE_CANCELED&#160;:&#160;<a class="el" href="dvd_8h.html#ad4f227aed34861133cc1c89c8a0d86e7a6c16379a2e5cd999723615ee2a2c92dc">dvd.h</a></li>
+<li>DVD_STATE_COVER_CLOSED&#160;:&#160;<a class="el" href="dvd_8h.html#ad4f227aed34861133cc1c89c8a0d86e7acafc329805145ecfa7b2f7e1dc628947">dvd.h</a></li>
+<li>DVD_STATE_COVER_OPEN&#160;:&#160;<a class="el" href="dvd_8h.html#ad4f227aed34861133cc1c89c8a0d86e7ae0d71ed23888084636de5ea633774e2b">dvd.h</a></li>
+<li>DVD_STATE_END&#160;:&#160;<a class="el" href="dvd_8h.html#ad4f227aed34861133cc1c89c8a0d86e7a952f62ea9cfe4509e7b760b0e09ecfd1">dvd.h</a></li>
+<li>DVD_STATE_FATAL_ERROR&#160;:&#160;<a class="el" href="dvd_8h.html#ad4f227aed34861133cc1c89c8a0d86e7af40a360d56e5f7c502f81239e39843e7">dvd.h</a></li>
+<li>DVD_STATE_IGNORED&#160;:&#160;<a class="el" href="dvd_8h.html#ad4f227aed34861133cc1c89c8a0d86e7ae90993369c015747bf7bfe4485c6ca59">dvd.h</a></li>
+<li>DVD_STATE_MOTOR_STOPPED&#160;:&#160;<a class="el" href="dvd_8h.html#ad4f227aed34861133cc1c89c8a0d86e7a9ad3a4c88d7954bd7f50a8a6d64cfbc9">dvd.h</a></li>
+<li>DVD_STATE_NO_DISK&#160;:&#160;<a class="el" href="dvd_8h.html#ad4f227aed34861133cc1c89c8a0d86e7a41fa1d5e2ac564eb85e3c1561e9084d6">dvd.h</a></li>
+<li>DVD_STATE_RETRY&#160;:&#160;<a class="el" href="dvd_8h.html#ad4f227aed34861133cc1c89c8a0d86e7a0a849d0275679deece14f3da35564dc2">dvd.h</a></li>
+<li>DVD_STATE_WAITING&#160;:&#160;<a class="el" href="dvd_8h.html#ad4f227aed34861133cc1c89c8a0d86e7ae641b040f6252d828681ae14b15cec1e">dvd.h</a></li>
+<li>DVD_STATE_WRONG_DISK&#160;:&#160;<a class="el" href="dvd_8h.html#ad4f227aed34861133cc1c89c8a0d86e7a394441b8580597f6c5f4ea0b44cafeb8">dvd.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

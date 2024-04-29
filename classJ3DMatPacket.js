@@ -1,0 +1,27 @@
+var classJ3DMatPacket =
+[
+    [ "J3DMatPacket", "classJ3DMatPacket.html#a565181e8a9d76a3cc55d873d84c8a0a5", null ],
+    [ "~J3DMatPacket", "classJ3DMatPacket.html#a287538cb1cf122f4aff2b518ec560b85", null ],
+    [ "addShapePacket", "classJ3DMatPacket.html#a4538f2060ef03854bb2b28076782e27c", null ],
+    [ "beginDiff", "classJ3DMatPacket.html#a4835e9e4f549705d897c1df527f61898", null ],
+    [ "draw", "classJ3DMatPacket.html#aedb2a99c73938269d7902ec26cac4d37", null ],
+    [ "endDiff", "classJ3DMatPacket.html#a039483e59b66776beda5be916348a516", null ],
+    [ "entry", "classJ3DMatPacket.html#ab0965b685d5fdf39eeba81d19b5c6ab0", null ],
+    [ "getMaterial", "classJ3DMatPacket.html#a76456228731067521a354e9e3f371fb7", null ],
+    [ "getShapePacket", "classJ3DMatPacket.html#a407969c855423856a44bbb87fa6cf097", null ],
+    [ "isChanged", "classJ3DMatPacket.html#a84747c6dffc6c96c64aab4915b767273", null ],
+    [ "isEnabled_Diff", "classJ3DMatPacket.html#a0e13a1c2681a06353b1146f6fb9b28c2", null ],
+    [ "isSame", "classJ3DMatPacket.html#a327c94782f08383b7ecf19710ff791dd", null ],
+    [ "setInitShapePacket", "classJ3DMatPacket.html#aa3651b0d1077b35380bc427a498930ca", null ],
+    [ "setMaterial", "classJ3DMatPacket.html#a8856091008adf8eae746869ffa5e78f3", null ],
+    [ "setMaterialAnmID", "classJ3DMatPacket.html#aaffd1f2c5ab95798f3b87a5784680f98", null ],
+    [ "setMaterialID", "classJ3DMatPacket.html#a38295c6056d2fccdebed3ae659e659cb", null ],
+    [ "setShapePacket", "classJ3DMatPacket.html#a8c28dfa38f5656428c4548a2e0d47585", null ],
+    [ "setTexture", "classJ3DMatPacket.html#aa26d094e7164b564717f9a8ce803ee1c", null ],
+    [ "mDiffFlag", "classJ3DMatPacket.html#aa58c611230c519a7ff70ede59cc6e0b0", null ],
+    [ "mpInitShapePacket", "classJ3DMatPacket.html#a5d36bdeaba0a43bea4445ed326562c7c", null ],
+    [ "mpMaterial", "classJ3DMatPacket.html#a51b1d4954f6eadf2d875e0eece4a95a3", null ],
+    [ "mpMaterialAnm", "classJ3DMatPacket.html#a8973017cfe52e6ce83ecd897dfce3ffa", null ],
+    [ "mpShapePacket", "classJ3DMatPacket.html#a30a6201a34af2a6c0f7faf388526814e", null ],
+    [ "mpTexture", "classJ3DMatPacket.html#a9bea4f3d448e7b0402e07f1d8dc080be", null ]
+];

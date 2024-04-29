@@ -1,0 +1,26 @@
+var classdPaPoF__c =
+[
+    [ "effTypeFunc", "classdPaPoF__c.html#a0710196141756dc966d980d575ace7e3", null ],
+    [ "emitterFunc", "classdPaPoF__c.html#ac38896b4032d1a82f1ce91a0566adfd2", null ],
+    [ "clearBLeftID", "classdPaPoF__c.html#aecc2a8879d8cef57b8c6fd486e13c7e4", null ],
+    [ "clearBRightID", "classdPaPoF__c.html#a1c4844768bf398d73c53560d8c950c14", null ],
+    [ "clearFourAllID", "classdPaPoF__c.html#afafab918bedfe8488395d0f6fc0b3db8", null ],
+    [ "getBackLeftEffType", "classdPaPoF__c.html#aafbc0967702f264ee0744b4573d68b66", null ],
+    [ "getBackLeftEmitter", "classdPaPoF__c.html#a0a539bc5a7d9a63e198de96fd90c7177", null ],
+    [ "getBackRightEffType", "classdPaPoF__c.html#ad24dcfc4e2ac157584bf559282f9a2c7", null ],
+    [ "getBackRightEmitter", "classdPaPoF__c.html#a1242f46f8f5412b7a8d2fd3163583f71", null ],
+    [ "getEmitterFour", "classdPaPoF__c.html#a5e3b82f145ab0758e143c3c851322e14", null ],
+    [ "getTypeFour", "classdPaPoF__c.html#a13d838d3cdc1a2541f7379c4db45612a", null ],
+    [ "setEffectFour", "classdPaPoF__c.html#a114959bcb61dbc449733a07e1eef6c3f", null ],
+    [ "setEffectFour", "classdPaPoF__c.html#a653bac466d25e25f08eb14e017ff6293", null ],
+    [ "field_0xc4", "classdPaPoF__c.html#a967b37a8ae2a897639b95ad88e06c1f0", null ],
+    [ "field_0xc5", "classdPaPoF__c.html#ab3caf4628e4532da18d397284d5d9635", null ],
+    [ "m_emitterFourData", "classdPaPoF__c.html#aa48f4f97352cef47848876bdfb252faf", null ],
+    [ "m_emitterFourData", "classdPaPoF__c.html#a6e7bf47c892219df17f49e871d302d04", null ],
+    [ "m_typeFourData", "classdPaPoF__c.html#a9ff4003acf4ba4a1138efae7e4f9b99b", null ],
+    [ "m_typeFourData", "classdPaPoF__c.html#a8ea2cfce23e4b00118a2b7b6d860a991", null ],
+    [ "mBackLeftEffType", "classdPaPoF__c.html#a0b1d5d85ab4e069b274b8f1a95b09546", null ],
+    [ "mBackLeftEmitter", "classdPaPoF__c.html#a5afe718e6b069f46808831a471575df7", null ],
+    [ "mBackRightEffType", "classdPaPoF__c.html#a61d556f1eae8d5d7ac0aa61903a4ae64", null ],
+    [ "mBackRightEmitter", "classdPaPoF__c.html#ad13f714957f64871c158bc83aa659de0", null ]
+];

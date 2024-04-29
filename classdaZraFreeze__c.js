@@ -1,0 +1,27 @@
+var classdaZraFreeze__c =
+[
+    [ "chkActorInScreen", "classdaZraFreeze__c.html#aae848d80fd818e4adcc7a338327b4039", null ],
+    [ "Create", "classdaZraFreeze__c.html#aea2c218cfa6041b716af40b1e0fa4e1c", null ],
+    [ "CreateHeap", "classdaZraFreeze__c.html#a18b1f4b2a7afbafc690ac9ed38d08066", null ],
+    [ "Delete", "classdaZraFreeze__c.html#aaca2ddf3eead2bf75aff07a6cbc9677a", null ],
+    [ "Draw", "classdaZraFreeze__c.html#a5c349365da2b89c973a418ca7d7107ad", null ],
+    [ "Execute", "classdaZraFreeze__c.html#a4821cb40859df4c45e54612350ed20af", null ],
+    [ "setBaseMtx", "classdaZraFreeze__c.html#a9582364c495b6af93daf278765c3bbc5", null ],
+    [ "setHitodamaPrtcl", "classdaZraFreeze__c.html#ac33743093270c06cc8fa1a631826f38d", null ],
+    [ "field_0x5b0", "classdaZraFreeze__c.html#ab1ca34954873804382a68d4310fb3617", null ],
+    [ "field_0x5b1", "classdaZraFreeze__c.html#a10d7c37d503424b96eb413b4b4aadb94", null ],
+    [ "field_0x5b2", "classdaZraFreeze__c.html#ae5b8c710d08465204a718f86172416a7", null ],
+    [ "field_0x5cf", "classdaZraFreeze__c.html#a0c4eaed3aa5ed5be04a982dd10d68bec", null ],
+    [ "field_0x5dc", "classdaZraFreeze__c.html#abdebc90760fb39c7a3c91c599dbeeb06", null ],
+    [ "field_0x5de", "classdaZraFreeze__c.html#a153fd77a7b6d9616cc0fdedef7793620", null ],
+    [ "mEventId", "classdaZraFreeze__c.html#a5a3ad53ef9c36fd069f06773cf1cebe1", null ],
+    [ "mMapToolId", "classdaZraFreeze__c.html#a3aba891bf0a5612b8e4409c3a3637cea", null ],
+    [ "mMax", "classdaZraFreeze__c.html#a52f77a301d4b02d7e7752ebbf54df96e", null ],
+    [ "mMin", "classdaZraFreeze__c.html#aa8de3d265c3f6ab998b0133e71e5368e", null ],
+    [ "mMtx", "classdaZraFreeze__c.html#a12bbdbf6e6ae4710d48002b96f53edc4", null ],
+    [ "mParticleKey", "classdaZraFreeze__c.html#a69818b04a7cf2ea8defe1ee843e8d475", null ],
+    [ "mParticleOffset", "classdaZraFreeze__c.html#aa00c9b9d6b8aa020f4b80946584c9dfc", null ],
+    [ "mPhaseReq", "classdaZraFreeze__c.html#aec24089e64c3178eb5fd1922b3c524da", null ],
+    [ "mpModel", "classdaZraFreeze__c.html#a559f9c3865bf0eefca27909ba9370615", null ],
+    [ "mTwilight", "classdaZraFreeze__c.html#a3a6bfc05c55f9fedc78be8ea652b6399", null ]
+];

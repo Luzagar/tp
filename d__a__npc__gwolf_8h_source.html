@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: include/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d__a__npc__gwolf_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">d_a_npc_gwolf.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="d__a__npc__gwolf_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef D_A_NPC_GWOLF_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define D_A_NPC_GWOLF_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="d__a__npc_8h.html">d/a/d_a_npc.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classdaNpc__GWolf__c.html">    6</a></span><span class="keyword">class </span><a class="code hl_struct" href="classdaNpc__GWolf__c.html">daNpc_GWolf_c</a> : <span class="keyword">public</span> <a class="code hl_struct" href="classdaNpcF__c.html">daNpcF_c</a> {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="comment">/* 809F30AC */</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#a8927f6c0c30504050dbb111f8b36edd8">daNpc_GWolf_c</a>();</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="comment">/* 809F34C0 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#a8258f70da8b99b70d7a04e56c7b95585">create</a>();</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="comment">/* 809F37C0 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#aa511e89367d7027134027c2b2cb9ad2c">CreateHeap</a>();</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="comment">/* 809F3BD8 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#aa2a5fbbcb8f1ef55d125bc87cb1c79a1">Delete</a>();</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="comment">/* 809F3C0C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#a8e0f0d3964dd80386eac49b88d00a7ef">Execute</a>();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="comment">/* 809F3C2C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#aead2da83992ce580a4048d199bfa04f4">Draw</a>();</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="comment">/* 809F3CBC */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#a07e06f4c2536db1bff6c6162a7b7d1c0">draw</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_struct" href="struct__GXColorS10.html">GXColorS10</a>*, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="comment">/* 809F3FB8 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#a5ce9a7acdf03b2ab76daa859efb40f71">ctrlJoint</a>(<a class="code hl_struct" href="classJ3DJoint.html">J3DJoint</a>*, <a class="code hl_struct" href="classJ3DModel.html">J3DModel</a>*);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="comment">/* 809F41EC */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#aceb13ac814fb6796ac3a12db87762322">createHeapCallBack</a>(<a class="code hl_struct" href="structfopAc__ac__c.html">fopAc_ac_c</a>*);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">/* 809F420C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#a886cf951872b497403a47a2d6f55c2f0">ctrlJointCallBack</a>(<a class="code hl_struct" href="classJ3DJoint.html">J3DJoint</a>*, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="comment">/* 809F4E38 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#a02f52abe3e6b2e1d9d310eb12a8f45df">getTypeFromParam</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="comment">/* 809F4E84 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#ad14dec10f98131ab4d6764400461f6a5">getModeFromParam</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="comment">/* 809F4F00 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#a9736cd5472ac6162c1303e27ed664f63">isDelete</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">/* 809F4FF4 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#a92fc2502e8947413214d0cede4b21e52">reset</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">/* 809F520C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#ae7104cf30ff6daeeaa0620ea7f469edd">playMotion</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="comment">/* 809F55D0 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#ab45bd1fde0d64f741e94b8de1602ff55">chkAction</a>(<span class="keywordtype">int</span> (<a class="code hl_struct" href="classdaNpc__GWolf__c.html">daNpc_GWolf_c</a>::*)(<span class="keywordtype">void</span>*));</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">/* 809F55FC */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#aa947013fc25b5bbe50ae9a7a8fea52b1">setAction</a>(<span class="keywordtype">int</span> (<a class="code hl_struct" href="classdaNpc__GWolf__c.html">daNpc_GWolf_c</a>::*)(<span class="keywordtype">void</span>*));</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment">/* 809F56A4 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#a785546532d58c52549e6e9dd524f2161">selectAction</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="comment">/* 809F5770 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#a1f8893443497f3b758e3cb16dd637cab">doNormalAction</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">/* 809F5884 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#a0d91cb386228da62ebb0cd5398040def">doEvent</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">/* 809F5B60 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#ab8cff58135667d3172006ee22da5933b">setLookMode</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">/* 809F5B84 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#a09dbd472b7ac95a3764aac54cad0e652">lookat</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">/* 809F5E0C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#ad66ff7e3ee22a60ab5c8eb62a06de029">ECut_attackWarp</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">/* 809F6548 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#ae0f924ec75434dc5a83c1e8f1a67c094">ECut_attackWarpHorse</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">/* 809F6BFC */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#a1edb37811d33f56abeb8734b1e16def4">ECut_howlingSessionA</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="comment">/* 809F70A8 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#a9a0048706ba1de4a488eaa19c68097a0">meetGWolfSkip</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="comment">/* 809F70EC */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#afb0670ecb683f8e0c81ed5d36d8aaa61">ECut_meetGWolf</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">/* 809F71E0 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#ad1580231d0120b08dc199648bea32a53">wait</a>(<span class="keywordtype">void</span>*);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">/* 809F75C0 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#a1f34c0fd11e397b153f774942c631ab3">waitHowling</a>(<span class="keywordtype">void</span>*);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment">/* 809F775C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#ab4c941b108f919b93ead225895bdb2ec">waitBrave</a>(<span class="keywordtype">void</span>*);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">/* 809F77E4 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#afb4829a1ca7606c88f78cc6a1d8e5f07">talk</a>(<span class="keywordtype">void</span>*);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="comment">/* 809F797C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#a8da19ca729f3976069d5df12a57401aa">test</a>(<span class="keywordtype">void</span>*);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="comment">/* 809F7A30 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#a7e2e380bec72f2471e3181e3dc55cf2c">getGroundSlope</a>(<a class="code hl_struct" href="classdBgS__ObjAcch.html">dBgS_ObjAcch</a>&amp;, <a class="code hl_typedef" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">/* 809F32C0 */</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#a7a2f472d52182de6e22ec6a150387835">~daNpc_GWolf_c</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="comment">/* 809F4258 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#a3987e7f16b4534d9d893d5424055f373">setParam</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="comment">/* 809F4390 */</span> <a class="code hl_typedef" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> <a class="code hl_function" href="classdaNpc__GWolf__c.html#a4b6d3a0acb6a2e7542c81a35b62953e9">main</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="comment">/* 809F4558 */</span> <a class="code hl_typedef" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> <a class="code hl_function" href="classdaNpc__GWolf__c.html#a08f309e19ca8e689ac26eca54bb8f4bf">ctrlBtk</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="comment">/* 809F4638 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#a6d05939ae82a1d28185c7ac45a3c3a98">adjustShapeAngle</a>();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">/* 809F4698 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#ad95e1b76f104ddd0dc1b48f32b0d6418">setAttnPos</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">/* 809F4BB0 */</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#abc3e4f0f928158d65930848a67772934">setExpressionAnm</a>(<span class="keywordtype">int</span>, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment">/* 809F4BB8 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#a51b5e28b7e493dbab4b85512348e1d80">setExpression</a>(<span class="keywordtype">int</span>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">/* 809F4BBC */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#a168f2848b7f577e737062726be67a436">setMotionAnm</a>(<span class="keywordtype">int</span>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="comment">/* 809F4DE8 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#ab9849f931ab045d3da3cc9d2d16d531b">setMotion</a>(<span class="keywordtype">int</span>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">/* 809F4E2C */</span> <a class="code hl_typedef" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> <a class="code hl_function" href="classdaNpc__GWolf__c.html#a1ebcd500c2806803d5725637b7611daf">drawDbgInfo</a>();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="comment">/* 809F4E34 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#afe17ee5a21ad035e91bc8c28f085b9a1">drawOtherMdls</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classdaNpc__GWolf__c.html#ac39c459af877f699243de6923e940cce">   55</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#ac39c459af877f699243de6923e940cce">setHowlingEndFlag</a>() { <a class="code hl_variable" href="classdaNpc__GWolf__c.html#ac22b0ef1f75acf907184f7fcfabc1526">field_0xe1c</a> = 2; }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classdaNpc__GWolf__c.html#aa74783ddb4c05c82d8421693d8d6ecf0">   56</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classdaNpc__GWolf__c.html#aa74783ddb4c05c82d8421693d8d6ecf0">setHowlingFlag</a>() { <a class="code hl_variable" href="classdaNpc__GWolf__c.html#ac22b0ef1f75acf907184f7fcfabc1526">field_0xe1c</a> = 1; }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">static</span> <span class="keywordtype">void</span>* <a class="code hl_variable" href="classdaNpc__GWolf__c.html#aad71e4ec17e0af4f7d88d066c1bd552c">mEvtCutNameList</a>[5];</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">static</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaNpc__GWolf__c.html#aa274c89e8d52f70014985f246e287648">mEvtCutList</a>[60];</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classdaNpc__GWolf__c.html#a5f08ae786fbb680e29be2a386ee12237">   61</a></span>    <span class="comment">/* 0xB48 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaNpc__GWolf__c.html#a5f08ae786fbb680e29be2a386ee12237">field_0xb48</a>[0xE1C - 0xB48];</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classdaNpc__GWolf__c.html#ac22b0ef1f75acf907184f7fcfabc1526">   62</a></span>    <span class="comment">/* 0xE1C */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaNpc__GWolf__c.html#ac22b0ef1f75acf907184f7fcfabc1526">field_0xe1c</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>};</div>
+</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#endif </span><span class="comment">/* D_A_NPC_GWOLF_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassJ3DJoint_html"><div class="ttname"><a href="classJ3DJoint.html">J3DJoint</a></div><div class="ttdef"><b>Definition</b> J3DJoint.h:66</div></div>
+<div class="ttc" id="aclassJ3DModel_html"><div class="ttname"><a href="classJ3DModel.html">J3DModel</a></div><div class="ttdef"><b>Definition</b> J3DModel.h:42</div></div>
+<div class="ttc" id="aclassdBgS__ObjAcch_html"><div class="ttname"><a href="classdBgS__ObjAcch.html">dBgS_ObjAcch</a></div><div class="ttdef"><b>Definition</b> d_bg_s_acch.h:217</div></div>
+<div class="ttc" id="aclassdaNpcF__c_html"><div class="ttname"><a href="classdaNpcF__c.html">daNpcF_c</a></div><div class="ttdef"><b>Definition</b> d_a_npc.h:607</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html"><div class="ttname"><a href="classdaNpc__GWolf__c.html">daNpc_GWolf_c</a></div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.h:6</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_a02f52abe3e6b2e1d9d310eb12a8f45df"><div class="ttname"><a href="classdaNpc__GWolf__c.html#a02f52abe3e6b2e1d9d310eb12a8f45df">daNpc_GWolf_c::getTypeFromParam</a></div><div class="ttdeci">void getTypeFromParam()</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:1979</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_a07e06f4c2536db1bff6c6162a7b7d1c0"><div class="ttname"><a href="classdaNpc__GWolf__c.html#a07e06f4c2536db1bff6c6162a7b7d1c0">daNpc_GWolf_c::draw</a></div><div class="ttdeci">void draw(int, int, f32, GXColorS10 *, int)</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:1666</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_a08f309e19ca8e689ac26eca54bb8f4bf"><div class="ttname"><a href="classdaNpc__GWolf__c.html#a08f309e19ca8e689ac26eca54bb8f4bf">daNpc_GWolf_c::ctrlBtk</a></div><div class="ttdeci">BOOL ctrlBtk()</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:1746</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_a09dbd472b7ac95a3764aac54cad0e652"><div class="ttname"><a href="classdaNpc__GWolf__c.html#a09dbd472b7ac95a3764aac54cad0e652">daNpc_GWolf_c::lookat</a></div><div class="ttdeci">void lookat()</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:2344</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_a0d91cb386228da62ebb0cd5398040def"><div class="ttname"><a href="classdaNpc__GWolf__c.html#a0d91cb386228da62ebb0cd5398040def">daNpc_GWolf_c::doEvent</a></div><div class="ttdeci">void doEvent()</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:2293</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_a168f2848b7f577e737062726be67a436"><div class="ttname"><a href="classdaNpc__GWolf__c.html#a168f2848b7f577e737062726be67a436">daNpc_GWolf_c::setMotionAnm</a></div><div class="ttdeci">void setMotionAnm(int, f32)</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:1948</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_a1ebcd500c2806803d5725637b7611daf"><div class="ttname"><a href="classdaNpc__GWolf__c.html#a1ebcd500c2806803d5725637b7611daf">daNpc_GWolf_c::drawDbgInfo</a></div><div class="ttdeci">BOOL drawDbgInfo()</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:1965</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_a1edb37811d33f56abeb8734b1e16def4"><div class="ttname"><a href="classdaNpc__GWolf__c.html#a1edb37811d33f56abeb8734b1e16def4">daNpc_GWolf_c::ECut_howlingSessionA</a></div><div class="ttdeci">void ECut_howlingSessionA(int)</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:2467</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_a1f34c0fd11e397b153f774942c631ab3"><div class="ttname"><a href="classdaNpc__GWolf__c.html#a1f34c0fd11e397b153f774942c631ab3">daNpc_GWolf_c::waitHowling</a></div><div class="ttdeci">void waitHowling(void *)</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:2552</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_a1f8893443497f3b758e3cb16dd637cab"><div class="ttname"><a href="classdaNpc__GWolf__c.html#a1f8893443497f3b758e3cb16dd637cab">daNpc_GWolf_c::doNormalAction</a></div><div class="ttdeci">void doNormalAction(int)</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:2283</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_a3987e7f16b4534d9d893d5424055f373"><div class="ttname"><a href="classdaNpc__GWolf__c.html#a3987e7f16b4534d9d893d5424055f373">daNpc_GWolf_c::setParam</a></div><div class="ttdeci">void setParam()</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:1717</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_a4b6d3a0acb6a2e7542c81a35b62953e9"><div class="ttname"><a href="classdaNpc__GWolf__c.html#a4b6d3a0acb6a2e7542c81a35b62953e9">daNpc_GWolf_c::main</a></div><div class="ttdeci">BOOL main()</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:1727</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_a51b5e28b7e493dbab4b85512348e1d80"><div class="ttname"><a href="classdaNpc__GWolf__c.html#a51b5e28b7e493dbab4b85512348e1d80">daNpc_GWolf_c::setExpression</a></div><div class="ttdeci">void setExpression(int, f32)</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:1940</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_a5ce9a7acdf03b2ab76daa859efb40f71"><div class="ttname"><a href="classdaNpc__GWolf__c.html#a5ce9a7acdf03b2ab76daa859efb40f71">daNpc_GWolf_c::ctrlJoint</a></div><div class="ttdeci">void ctrlJoint(J3DJoint *, J3DModel *)</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:1685</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_a5f08ae786fbb680e29be2a386ee12237"><div class="ttname"><a href="classdaNpc__GWolf__c.html#a5f08ae786fbb680e29be2a386ee12237">daNpc_GWolf_c::field_0xb48</a></div><div class="ttdeci">u8 field_0xb48[0xE1C - 0xB48]</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.h:61</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_a6d05939ae82a1d28185c7ac45a3c3a98"><div class="ttname"><a href="classdaNpc__GWolf__c.html#a6d05939ae82a1d28185c7ac45a3c3a98">daNpc_GWolf_c::adjustShapeAngle</a></div><div class="ttdeci">void adjustShapeAngle()</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:1757</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_a785546532d58c52549e6e9dd524f2161"><div class="ttname"><a href="classdaNpc__GWolf__c.html#a785546532d58c52549e6e9dd524f2161">daNpc_GWolf_c::selectAction</a></div><div class="ttdeci">void selectAction()</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:2272</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_a7a2f472d52182de6e22ec6a150387835"><div class="ttname"><a href="classdaNpc__GWolf__c.html#a7a2f472d52182de6e22ec6a150387835">daNpc_GWolf_c::~daNpc_GWolf_c</a></div><div class="ttdeci">~daNpc_GWolf_c()</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:1432</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_a7e2e380bec72f2471e3181e3dc55cf2c"><div class="ttname"><a href="classdaNpc__GWolf__c.html#a7e2e380bec72f2471e3181e3dc55cf2c">daNpc_GWolf_c::getGroundSlope</a></div><div class="ttdeci">void getGroundSlope(dBgS_ObjAcch &amp;, s16)</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:2593</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_a8258f70da8b99b70d7a04e56c7b95585"><div class="ttname"><a href="classdaNpc__GWolf__c.html#a8258f70da8b99b70d7a04e56c7b95585">daNpc_GWolf_c::create</a></div><div class="ttdeci">void create()</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:1485</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_a886cf951872b497403a47a2d6f55c2f0"><div class="ttname"><a href="classdaNpc__GWolf__c.html#a886cf951872b497403a47a2d6f55c2f0">daNpc_GWolf_c::ctrlJointCallBack</a></div><div class="ttdeci">void ctrlJointCallBack(J3DJoint *, int)</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:1707</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_a8927f6c0c30504050dbb111f8b36edd8"><div class="ttname"><a href="classdaNpc__GWolf__c.html#a8927f6c0c30504050dbb111f8b36edd8">daNpc_GWolf_c::daNpc_GWolf_c</a></div><div class="ttdeci">daNpc_GWolf_c()</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:1402</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_a8da19ca729f3976069d5df12a57401aa"><div class="ttname"><a href="classdaNpc__GWolf__c.html#a8da19ca729f3976069d5df12a57401aa">daNpc_GWolf_c::test</a></div><div class="ttdeci">void test(void *)</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:2582</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_a8e0f0d3964dd80386eac49b88d00a7ef"><div class="ttname"><a href="classdaNpc__GWolf__c.html#a8e0f0d3964dd80386eac49b88d00a7ef">daNpc_GWolf_c::Execute</a></div><div class="ttdeci">void Execute()</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:1629</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_a92fc2502e8947413214d0cede4b21e52"><div class="ttname"><a href="classdaNpc__GWolf__c.html#a92fc2502e8947413214d0cede4b21e52">daNpc_GWolf_c::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:2010</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_a9736cd5472ac6162c1303e27ed664f63"><div class="ttname"><a href="classdaNpc__GWolf__c.html#a9736cd5472ac6162c1303e27ed664f63">daNpc_GWolf_c::isDelete</a></div><div class="ttdeci">void isDelete()</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:2000</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_a9a0048706ba1de4a488eaa19c68097a0"><div class="ttname"><a href="classdaNpc__GWolf__c.html#a9a0048706ba1de4a488eaa19c68097a0">daNpc_GWolf_c::meetGWolfSkip</a></div><div class="ttdeci">void meetGWolfSkip()</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:2487</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_aa274c89e8d52f70014985f246e287648"><div class="ttname"><a href="classdaNpc__GWolf__c.html#aa274c89e8d52f70014985f246e287648">daNpc_GWolf_c::mEvtCutList</a></div><div class="ttdeci">static u8 mEvtCutList[60]</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.h:940</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_aa2a5fbbcb8f1ef55d125bc87cb1c79a1"><div class="ttname"><a href="classdaNpc__GWolf__c.html#aa2a5fbbcb8f1ef55d125bc87cb1c79a1">daNpc_GWolf_c::Delete</a></div><div class="ttdeci">void Delete()</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:1619</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_aa511e89367d7027134027c2b2cb9ad2c"><div class="ttname"><a href="classdaNpc__GWolf__c.html#aa511e89367d7027134027c2b2cb9ad2c">daNpc_GWolf_c::CreateHeap</a></div><div class="ttdeci">void CreateHeap()</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:1509</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_aa74783ddb4c05c82d8421693d8d6ecf0"><div class="ttname"><a href="classdaNpc__GWolf__c.html#aa74783ddb4c05c82d8421693d8d6ecf0">daNpc_GWolf_c::setHowlingFlag</a></div><div class="ttdeci">void setHowlingFlag()</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.h:56</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_aa947013fc25b5bbe50ae9a7a8fea52b1"><div class="ttname"><a href="classdaNpc__GWolf__c.html#aa947013fc25b5bbe50ae9a7a8fea52b1">daNpc_GWolf_c::setAction</a></div><div class="ttdeci">void setAction(int(daNpc_GWolf_c::*)(void *))</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:2262</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_aad71e4ec17e0af4f7d88d066c1bd552c"><div class="ttname"><a href="classdaNpc__GWolf__c.html#aad71e4ec17e0af4f7d88d066c1bd552c">daNpc_GWolf_c::mEvtCutNameList</a></div><div class="ttdeci">static void * mEvtCutNameList[5]</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.h:888</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_ab45bd1fde0d64f741e94b8de1602ff55"><div class="ttname"><a href="classdaNpc__GWolf__c.html#ab45bd1fde0d64f741e94b8de1602ff55">daNpc_GWolf_c::chkAction</a></div><div class="ttdeci">void chkAction(int(daNpc_GWolf_c::*)(void *))</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:2251</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_ab4c941b108f919b93ead225895bdb2ec"><div class="ttname"><a href="classdaNpc__GWolf__c.html#ab4c941b108f919b93ead225895bdb2ec">daNpc_GWolf_c::waitBrave</a></div><div class="ttdeci">void waitBrave(void *)</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:2562</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_ab8cff58135667d3172006ee22da5933b"><div class="ttname"><a href="classdaNpc__GWolf__c.html#ab8cff58135667d3172006ee22da5933b">daNpc_GWolf_c::setLookMode</a></div><div class="ttdeci">void setLookMode(int)</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:2303</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_ab9849f931ab045d3da3cc9d2d16d531b"><div class="ttname"><a href="classdaNpc__GWolf__c.html#ab9849f931ab045d3da3cc9d2d16d531b">daNpc_GWolf_c::setMotion</a></div><div class="ttdeci">void setMotion(int, f32, int)</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:1958</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_abc3e4f0f928158d65930848a67772934"><div class="ttname"><a href="classdaNpc__GWolf__c.html#abc3e4f0f928158d65930848a67772934">daNpc_GWolf_c::setExpressionAnm</a></div><div class="ttdeci">bool setExpressionAnm(int, bool)</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:1934</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_ac22b0ef1f75acf907184f7fcfabc1526"><div class="ttname"><a href="classdaNpc__GWolf__c.html#ac22b0ef1f75acf907184f7fcfabc1526">daNpc_GWolf_c::field_0xe1c</a></div><div class="ttdeci">u8 field_0xe1c</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.h:62</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_ac39c459af877f699243de6923e940cce"><div class="ttname"><a href="classdaNpc__GWolf__c.html#ac39c459af877f699243de6923e940cce">daNpc_GWolf_c::setHowlingEndFlag</a></div><div class="ttdeci">void setHowlingEndFlag()</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.h:55</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_aceb13ac814fb6796ac3a12db87762322"><div class="ttname"><a href="classdaNpc__GWolf__c.html#aceb13ac814fb6796ac3a12db87762322">daNpc_GWolf_c::createHeapCallBack</a></div><div class="ttdeci">void createHeapCallBack(fopAc_ac_c *)</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:1696</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_ad14dec10f98131ab4d6764400461f6a5"><div class="ttname"><a href="classdaNpc__GWolf__c.html#ad14dec10f98131ab4d6764400461f6a5">daNpc_GWolf_c::getModeFromParam</a></div><div class="ttdeci">void getModeFromParam()</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:1990</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_ad1580231d0120b08dc199648bea32a53"><div class="ttname"><a href="classdaNpc__GWolf__c.html#ad1580231d0120b08dc199648bea32a53">daNpc_GWolf_c::wait</a></div><div class="ttdeci">void wait(void *)</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:2523</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_ad66ff7e3ee22a60ab5c8eb62a06de029"><div class="ttname"><a href="classdaNpc__GWolf__c.html#ad66ff7e3ee22a60ab5c8eb62a06de029">daNpc_GWolf_c::ECut_attackWarp</a></div><div class="ttdeci">void ECut_attackWarp(int)</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:2369</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_ad95e1b76f104ddd0dc1b48f32b0d6418"><div class="ttname"><a href="classdaNpc__GWolf__c.html#ad95e1b76f104ddd0dc1b48f32b0d6418">daNpc_GWolf_c::setAttnPos</a></div><div class="ttdeci">void setAttnPos()</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:1927</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_ae0f924ec75434dc5a83c1e8f1a67c094"><div class="ttname"><a href="classdaNpc__GWolf__c.html#ae0f924ec75434dc5a83c1e8f1a67c094">daNpc_GWolf_c::ECut_attackWarpHorse</a></div><div class="ttdeci">void ECut_attackWarpHorse(int)</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:2379</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_ae7104cf30ff6daeeaa0620ea7f469edd"><div class="ttname"><a href="classdaNpc__GWolf__c.html#ae7104cf30ff6daeeaa0620ea7f469edd">daNpc_GWolf_c::playMotion</a></div><div class="ttdeci">void playMotion()</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:2240</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_aead2da83992ce580a4048d199bfa04f4"><div class="ttname"><a href="classdaNpc__GWolf__c.html#aead2da83992ce580a4048d199bfa04f4">daNpc_GWolf_c::Draw</a></div><div class="ttdeci">void Draw()</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:1639</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_afb0670ecb683f8e0c81ed5d36d8aaa61"><div class="ttname"><a href="classdaNpc__GWolf__c.html#afb0670ecb683f8e0c81ed5d36d8aaa61">daNpc_GWolf_c::ECut_meetGWolf</a></div><div class="ttdeci">void ECut_meetGWolf(int)</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:2498</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_afb4829a1ca7606c88f78cc6a1d8e5f07"><div class="ttname"><a href="classdaNpc__GWolf__c.html#afb4829a1ca7606c88f78cc6a1d8e5f07">daNpc_GWolf_c::talk</a></div><div class="ttdeci">void talk(void *)</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:2572</div></div>
+<div class="ttc" id="aclassdaNpc__GWolf__c_html_afe17ee5a21ad035e91bc8c28f085b9a1"><div class="ttname"><a href="classdaNpc__GWolf__c.html#afe17ee5a21ad035e91bc8c28f085b9a1">daNpc_GWolf_c::drawOtherMdls</a></div><div class="ttdeci">void drawOtherMdls()</div><div class="ttdef"><b>Definition</b> d_a_npc_gwolf.cpp:1970</div></div>
+<div class="ttc" id="ad__a__npc_8h_html"><div class="ttname"><a href="d__a__npc_8h.html">d_a_npc.h</a></div></div>
+<div class="ttc" id="astruct__GXColorS10_html"><div class="ttname"><a href="struct__GXColorS10.html">_GXColorS10</a></div><div class="ttdef"><b>Definition</b> GXStruct.h:15</div></div>
+<div class="ttc" id="astructfopAc__ac__c_html"><div class="ttname"><a href="structfopAc__ac__c.html">fopAc_ac_c</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:14</div></div>
+<div class="ttc" id="atypes_8h_html_a050c65e107f0c828f856a231f4b4e788"><div class="ttname"><a href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a></div><div class="ttdeci">int BOOL</div><div class="ttdef"><b>Definition</b> types.h:27</div></div>
+<div class="ttc" id="atypes_8h_html_a5f6906312a689f27d70e9d086649d3fd"><div class="ttname"><a href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a></div><div class="ttdeci">float f32</div><div class="ttdef"><b>Definition</b> types.h:22</div></div>
+<div class="ttc" id="atypes_8h_html_a5ffa4f640862b25ba6d4f635b78bdbe1"><div class="ttname"><a href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a></div><div class="ttdeci">signed short s16</div><div class="ttdef"><b>Definition</b> types.h:5</div></div>
+<div class="ttc" id="atypes_8h_html_aed742c436da53c1080638ce6ef7d13de"><div class="ttname"><a href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a></div><div class="ttdeci">unsigned char u8</div><div class="ttdef"><b>Definition</b> types.h:8</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d1e95842203b094e4f127fa85baf24b5.html">rel</a></li><li class="navelem"><a class="el" href="dir_244336746419795862f93731f1699860.html">d</a></li><li class="navelem"><a class="el" href="dir_b81c1d082692bb1b2b34ed3bfe8a0f4a.html">a</a></li><li class="navelem"><a class="el" href="dir_5a8b155b69f32fe1ef42c3ab431b2bcc.html">npc</a></li><li class="navelem"><a class="el" href="dir_ac59906cd09966bd177fbaf9ea388989.html">d_a_npc_gwolf</a></li><li class="navelem"><a class="el" href="d__a__npc__gwolf_8h.html">d_a_npc_gwolf.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

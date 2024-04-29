@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: include/SSystem/SComponent/c_m3d_g_tri.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('c__m3d__g__tri_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">c_m3d_g_tri.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="c__m3d__g__tri_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef C_M3D_G_TRI_H_</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define C_M3D_G_TRI_H_</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="c__m3d__g__pla_8h.html">SSystem/SComponent/c_m3d_g_pla.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">class </span><a class="code hl_struct" href="structcM3dGCyl.html">cM3dGCyl</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="structcM3dGTriS.html">    8</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structcM3dGTriS.html">cM3dGTriS</a> {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="structcM3dGTriS.html#a78176d3c6d93bc04892eff468aa91b0d">    9</a></span>    <a class="code hl_struct" href="structVec.html">Vec</a> <a class="code hl_variable" href="structcM3dGTriS.html#a78176d3c6d93bc04892eff468aa91b0d">a</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="structcM3dGTriS.html#a875a948573224e21120d44434cdde268">   10</a></span>    <a class="code hl_struct" href="structVec.html">Vec</a> <a class="code hl_variable" href="structcM3dGTriS.html#a875a948573224e21120d44434cdde268">b</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="structcM3dGTriS.html#a1616a415ee3d39766d26b8680b11049a">   11</a></span>    <a class="code hl_struct" href="structVec.html">Vec</a> <a class="code hl_variable" href="structcM3dGTriS.html#a1616a415ee3d39766d26b8680b11049a">c</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>};</div>
+</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classcM3dGTri.html">   14</a></span><span class="keyword">class </span><a class="code hl_struct" href="classcM3dGTri.html">cM3dGTri</a> : <span class="keyword">public</span> <a class="code hl_struct" href="classcM3dGPla.html">cM3dGPla</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="comment">// private:</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">// cM3dGPla mPlane;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classcM3dGTri.html#af44e7947fe28587750fb02b5a48d7fb9">   18</a></span>    <a class="code hl_struct" href="structVec.html">Vec</a> <a class="code hl_variable" href="classcM3dGTri.html#af44e7947fe28587750fb02b5a48d7fb9">mA</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classcM3dGTri.html#acd7b9d9c6c3c22c862c0a08a0de3eb0b">   19</a></span>    <a class="code hl_struct" href="structVec.html">Vec</a> <a class="code hl_variable" href="classcM3dGTri.html#acd7b9d9c6c3c22c862c0a08a0de3eb0b">mB</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classcM3dGTri.html#a0a92416fba1c38e506e0cadcb8cc4df0">   20</a></span>    <a class="code hl_struct" href="structVec.html">Vec</a> <a class="code hl_variable" href="classcM3dGTri.html#a0a92416fba1c38e506e0cadcb8cc4df0">mC</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classcM3dGTri.html#a809dbb8f1b8d9e6aac8fb8b9f7b37707">   22</a></span>    <a class="code hl_function" href="classcM3dGTri.html#a809dbb8f1b8d9e6aac8fb8b9f7b37707">cM3dGTri</a>() {}</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classcM3dGTri.html#a56c102927202d25953ebd5619e6706f7">   23</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="classcM3dGTri.html#a56c102927202d25953ebd5619e6706f7">~cM3dGTri</a>() {}</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classcM3dGTri.html#a7c3ab18f4863822431f490cae20742b7">cross</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structcM3dGCyl.html">cM3dGCyl</a>*, <a class="code hl_struct" href="structVec.html">Vec</a>*) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classcM3dGTri.html#a1a202775813089deedea55ed415f9c40">setPos</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structVec.html">Vec</a>*, <span class="keyword">const</span> <a class="code hl_struct" href="structVec.html">Vec</a>*, <span class="keyword">const</span> <a class="code hl_struct" href="structVec.html">Vec</a>*);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classcM3dGTri.html#a23ccf555d6a180db1b75893bcaacb955">setBg</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structVec.html">Vec</a>*, <span class="keyword">const</span> <a class="code hl_struct" href="structVec.html">Vec</a>*, <span class="keyword">const</span> <a class="code hl_struct" href="structVec.html">Vec</a>*, <span class="keyword">const</span> <a class="code hl_struct" href="classcM3dGPla.html">cM3dGPla</a>*);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classcM3dGTri.html#a2169d455eedfeb4d37a04253992f9771">set</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structVec.html">Vec</a>*, <span class="keyword">const</span> <a class="code hl_struct" href="structVec.html">Vec</a>*, <span class="keyword">const</span> <a class="code hl_struct" href="structVec.html">Vec</a>*, <span class="keyword">const</span> <a class="code hl_struct" href="structVec.html">Vec</a>*);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classcM3dGTri.html#a79f0ed1029dfdad70f07a5edc35a1f0f">   28</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classcM3dGTri.html#a79f0ed1029dfdad70f07a5edc35a1f0f">Cross</a>(<a class="code hl_struct" href="structcM3dGCps.html">cM3dGCps</a> <span class="keyword">const</span>&amp; <a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">cps</a>, <a class="code hl_struct" href="structcXyz.html">cXyz</a>* <a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">xyz</a>)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="c__m3d_8cpp.html#a6ed1c9cdcceff68f176be72f40f945d5">cM3d_Cross_CpsTri</a>(<a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">cps</a>, *<span class="keyword">this</span>, <a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">xyz</a>); }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classcM3dGTri.html#a18a2bd07c9c56b44f0f07b6b49d39d53">   29</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classcM3dGTri.html#a18a2bd07c9c56b44f0f07b6b49d39d53">Cross</a>(<a class="code hl_struct" href="structcM3dGCyl.html">cM3dGCyl</a> <span class="keyword">const</span>&amp; <a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">cyl</a>, <a class="code hl_struct" href="structcXyz.html">cXyz</a>* <a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">xyz</a>)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;<a class="code hl_function" href="classcM3dGTri.html#a7c3ab18f4863822431f490cae20742b7">cross</a>(&amp;cyl, <a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">xyz</a>); }</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classcM3dGTri.html#a66d2aa6cb8a6343b9684b076ffe350ca">   30</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classcM3dGTri.html#a66d2aa6cb8a6343b9684b076ffe350ca">Cross</a>(<a class="code hl_struct" href="structcM3dGSph.html">cM3dGSph</a> <span class="keyword">const</span>&amp; <a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">sph</a>, <a class="code hl_struct" href="structcXyz.html">cXyz</a>* <a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">xyz</a>)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="c__m3d_8cpp.html#a7a16d031a0e622086329fbffed6a0abe">cM3d_Cross_SphTri</a>(&amp;<a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">sph</a>, <span class="keyword">this</span>, <a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">xyz</a>); }</div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classcM3dGTri.html#a31d254fa1e7d7f99e65613d74c52d478">   31</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classcM3dGTri.html#a31d254fa1e7d7f99e65613d74c52d478">Cross</a>(<a class="code hl_struct" href="classcM3dGTri.html">cM3dGTri</a> <span class="keyword">const</span>&amp; <a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">other</a>, <a class="code hl_struct" href="structcXyz.html">cXyz</a>* <a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">xyz</a>)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="c__m3d_8cpp.html#a2c5337d2cdac06663cecb26e77aaf515">cM3d_Cross_TriTri</a>(*<span class="keyword">this</span>, <a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">other</a>, <a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">xyz</a>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classcM3dGTri.html#aca46daba6f3b9fd82b6bc5fb82b53fab">   34</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classcM3dGTri.html#aca46daba6f3b9fd82b6bc5fb82b53fab">cross</a>(<span class="keyword">const</span> <a class="code hl_struct" href="classcM3dGLin.html">cM3dGLin</a>* <a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">lin</a>, <a class="code hl_struct" href="structVec.html">Vec</a>* <a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">xyz</a>, <span class="keywordtype">bool</span> <a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_2</a>, <span class="keywordtype">bool</span> param_3)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="c__m3d_8cpp.html#ae45a85b4f8071d8083e8878510a7641d">cM3d_Cross_LinTri</a>(<a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">lin</a>, <span class="keyword">this</span>, <a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">xyz</a>, <a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_2</a>, param_3);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
+</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>};</div>
+</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="ac__m3d_8cpp_html_a2c5337d2cdac06663cecb26e77aaf515"><div class="ttname"><a href="c__m3d_8cpp.html#a2c5337d2cdac06663cecb26e77aaf515">cM3d_Cross_TriTri</a></div><div class="ttdeci">asm bool cM3d_Cross_TriTri(cM3dGTri const &amp;param_0, cM3dGTri const &amp;param_1, Vec *param_2)</div><div class="ttdef"><b>Definition</b> c_m3d.cpp:1143</div></div>
+<div class="ttc" id="ac__m3d_8cpp_html_a6ed1c9cdcceff68f176be72f40f945d5"><div class="ttname"><a href="c__m3d_8cpp.html#a6ed1c9cdcceff68f176be72f40f945d5">cM3d_Cross_CpsTri</a></div><div class="ttdeci">asm bool cM3d_Cross_CpsTri(cM3dGCps const &amp;param_0, cM3dGTri param_1, Vec *param_2)</div><div class="ttdef"><b>Definition</b> c_m3d.cpp:1163</div></div>
+<div class="ttc" id="ac__m3d_8cpp_html_a7a16d031a0e622086329fbffed6a0abe"><div class="ttname"><a href="c__m3d_8cpp.html#a7a16d031a0e622086329fbffed6a0abe">cM3d_Cross_SphTri</a></div><div class="ttdeci">asm bool cM3d_Cross_SphTri(cM3dGSph const *param_0, cM3dGTri const *param_1, Vec *param_2)</div><div class="ttdef"><b>Definition</b> c_m3d.cpp:960</div></div>
+<div class="ttc" id="ac__m3d_8cpp_html_ae45a85b4f8071d8083e8878510a7641d"><div class="ttname"><a href="c__m3d_8cpp.html#ae45a85b4f8071d8083e8878510a7641d">cM3d_Cross_LinTri</a></div><div class="ttdeci">asm bool cM3d_Cross_LinTri(cM3dGLin const *param_0, cM3dGTri const *param_1, Vec *param_2, bool param_3, bool param_4)</div><div class="ttdef"><b>Definition</b> c_m3d.cpp:810</div></div>
+<div class="ttc" id="ac__m3d__g__pla_8h_html"><div class="ttname"><a href="c__m3d__g__pla_8h.html">c_m3d_g_pla.h</a></div></div>
+<div class="ttc" id="aclasscM3dGLin_html"><div class="ttname"><a href="classcM3dGLin.html">cM3dGLin</a></div><div class="ttdef"><b>Definition</b> c_m3d_g_lin.h:8</div></div>
+<div class="ttc" id="aclasscM3dGPla_html"><div class="ttname"><a href="classcM3dGPla.html">cM3dGPla</a></div><div class="ttdef"><b>Definition</b> c_m3d_g_pla.h:8</div></div>
+<div class="ttc" id="aclasscM3dGTri_html"><div class="ttname"><a href="classcM3dGTri.html">cM3dGTri</a></div><div class="ttdef"><b>Definition</b> c_m3d_g_tri.h:14</div></div>
+<div class="ttc" id="aclasscM3dGTri_html_a0a92416fba1c38e506e0cadcb8cc4df0"><div class="ttname"><a href="classcM3dGTri.html#a0a92416fba1c38e506e0cadcb8cc4df0">cM3dGTri::mC</a></div><div class="ttdeci">Vec mC</div><div class="ttdef"><b>Definition</b> c_m3d_g_tri.h:20</div></div>
+<div class="ttc" id="aclasscM3dGTri_html_a18a2bd07c9c56b44f0f07b6b49d39d53"><div class="ttname"><a href="classcM3dGTri.html#a18a2bd07c9c56b44f0f07b6b49d39d53">cM3dGTri::Cross</a></div><div class="ttdeci">bool Cross(cM3dGCyl const &amp;cyl, cXyz *xyz) const</div><div class="ttdef"><b>Definition</b> c_m3d_g_tri.h:29</div></div>
+<div class="ttc" id="aclasscM3dGTri_html_a1a202775813089deedea55ed415f9c40"><div class="ttname"><a href="classcM3dGTri.html#a1a202775813089deedea55ed415f9c40">cM3dGTri::setPos</a></div><div class="ttdeci">void setPos(const Vec *, const Vec *, const Vec *)</div><div class="ttdef"><b>Definition</b> c_m3d_g_tri.cpp:16</div></div>
+<div class="ttc" id="aclasscM3dGTri_html_a2169d455eedfeb4d37a04253992f9771"><div class="ttname"><a href="classcM3dGTri.html#a2169d455eedfeb4d37a04253992f9771">cM3dGTri::set</a></div><div class="ttdeci">void set(const Vec *, const Vec *, const Vec *, const Vec *)</div><div class="ttdef"><b>Definition</b> c_m3d_g_tri.cpp:33</div></div>
+<div class="ttc" id="aclasscM3dGTri_html_a23ccf555d6a180db1b75893bcaacb955"><div class="ttname"><a href="classcM3dGTri.html#a23ccf555d6a180db1b75893bcaacb955">cM3dGTri::setBg</a></div><div class="ttdeci">void setBg(const Vec *, const Vec *, const Vec *, const cM3dGPla *)</div><div class="ttdef"><b>Definition</b> c_m3d_g_tri.cpp:25</div></div>
+<div class="ttc" id="aclasscM3dGTri_html_a31d254fa1e7d7f99e65613d74c52d478"><div class="ttname"><a href="classcM3dGTri.html#a31d254fa1e7d7f99e65613d74c52d478">cM3dGTri::Cross</a></div><div class="ttdeci">bool Cross(cM3dGTri const &amp;other, cXyz *xyz) const</div><div class="ttdef"><b>Definition</b> c_m3d_g_tri.h:31</div></div>
+<div class="ttc" id="aclasscM3dGTri_html_a56c102927202d25953ebd5619e6706f7"><div class="ttname"><a href="classcM3dGTri.html#a56c102927202d25953ebd5619e6706f7">cM3dGTri::~cM3dGTri</a></div><div class="ttdeci">virtual ~cM3dGTri()</div><div class="ttdef"><b>Definition</b> c_m3d_g_tri.h:23</div></div>
+<div class="ttc" id="aclasscM3dGTri_html_a66d2aa6cb8a6343b9684b076ffe350ca"><div class="ttname"><a href="classcM3dGTri.html#a66d2aa6cb8a6343b9684b076ffe350ca">cM3dGTri::Cross</a></div><div class="ttdeci">bool Cross(cM3dGSph const &amp;sph, cXyz *xyz) const</div><div class="ttdef"><b>Definition</b> c_m3d_g_tri.h:30</div></div>
+<div class="ttc" id="aclasscM3dGTri_html_a79f0ed1029dfdad70f07a5edc35a1f0f"><div class="ttname"><a href="classcM3dGTri.html#a79f0ed1029dfdad70f07a5edc35a1f0f">cM3dGTri::Cross</a></div><div class="ttdeci">bool Cross(cM3dGCps const &amp;cps, cXyz *xyz) const</div><div class="ttdef"><b>Definition</b> c_m3d_g_tri.h:28</div></div>
+<div class="ttc" id="aclasscM3dGTri_html_a7c3ab18f4863822431f490cae20742b7"><div class="ttname"><a href="classcM3dGTri.html#a7c3ab18f4863822431f490cae20742b7">cM3dGTri::cross</a></div><div class="ttdeci">bool cross(const cM3dGCyl *, Vec *) const</div><div class="ttdef"><b>Definition</b> c_m3d_g_tri.cpp:11</div></div>
+<div class="ttc" id="aclasscM3dGTri_html_a809dbb8f1b8d9e6aac8fb8b9f7b37707"><div class="ttname"><a href="classcM3dGTri.html#a809dbb8f1b8d9e6aac8fb8b9f7b37707">cM3dGTri::cM3dGTri</a></div><div class="ttdeci">cM3dGTri()</div><div class="ttdef"><b>Definition</b> c_m3d_g_tri.h:22</div></div>
+<div class="ttc" id="aclasscM3dGTri_html_aca46daba6f3b9fd82b6bc5fb82b53fab"><div class="ttname"><a href="classcM3dGTri.html#aca46daba6f3b9fd82b6bc5fb82b53fab">cM3dGTri::cross</a></div><div class="ttdeci">bool cross(const cM3dGLin *lin, Vec *xyz, bool param_2, bool param_3) const</div><div class="ttdef"><b>Definition</b> c_m3d_g_tri.h:34</div></div>
+<div class="ttc" id="aclasscM3dGTri_html_acd7b9d9c6c3c22c862c0a08a0de3eb0b"><div class="ttname"><a href="classcM3dGTri.html#acd7b9d9c6c3c22c862c0a08a0de3eb0b">cM3dGTri::mB</a></div><div class="ttdeci">Vec mB</div><div class="ttdef"><b>Definition</b> c_m3d_g_tri.h:19</div></div>
+<div class="ttc" id="aclasscM3dGTri_html_af44e7947fe28587750fb02b5a48d7fb9"><div class="ttname"><a href="classcM3dGTri.html#af44e7947fe28587750fb02b5a48d7fb9">cM3dGTri::mA</a></div><div class="ttdeci">Vec mA</div><div class="ttdef"><b>Definition</b> c_m3d_g_tri.h:18</div></div>
+<div class="ttc" id="agroup__jsystem-jsupport_html_ga13fa7ef63a40072c7203b3da54a569a2"><div class="ttname"><a href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">JSUConvertOffsetToPtr</a></div><div class="ttdeci">T * JSUConvertOffsetToPtr(const void *, const void *)</div><div class="ttdef"><b>Definition</b> JSupport.h:22</div></div>
+<div class="ttc" id="astructVec_html"><div class="ttname"><a href="structVec.html">Vec</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:47</div></div>
+<div class="ttc" id="astructcM3dGCps_html"><div class="ttname"><a href="structcM3dGCps.html">cM3dGCps</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:155</div></div>
+<div class="ttc" id="astructcM3dGCyl_html"><div class="ttname"><a href="structcM3dGCyl.html">cM3dGCyl</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:148</div></div>
+<div class="ttc" id="astructcM3dGSph_html"><div class="ttname"><a href="structcM3dGSph.html">cM3dGSph</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:141</div></div>
+<div class="ttc" id="astructcM3dGTriS_html"><div class="ttname"><a href="structcM3dGTriS.html">cM3dGTriS</a></div><div class="ttdef"><b>Definition</b> c_m3d_g_tri.h:8</div></div>
+<div class="ttc" id="astructcM3dGTriS_html_a1616a415ee3d39766d26b8680b11049a"><div class="ttname"><a href="structcM3dGTriS.html#a1616a415ee3d39766d26b8680b11049a">cM3dGTriS::c</a></div><div class="ttdeci">Vec c</div><div class="ttdef"><b>Definition</b> c_m3d_g_tri.h:11</div></div>
+<div class="ttc" id="astructcM3dGTriS_html_a78176d3c6d93bc04892eff468aa91b0d"><div class="ttname"><a href="structcM3dGTriS.html#a78176d3c6d93bc04892eff468aa91b0d">cM3dGTriS::a</a></div><div class="ttdeci">Vec a</div><div class="ttdef"><b>Definition</b> c_m3d_g_tri.h:9</div></div>
+<div class="ttc" id="astructcM3dGTriS_html_a875a948573224e21120d44434cdde268"><div class="ttname"><a href="structcM3dGTriS.html#a875a948573224e21120d44434cdde268">cM3dGTriS::b</a></div><div class="ttdeci">Vec b</div><div class="ttdef"><b>Definition</b> c_m3d_g_tri.h:10</div></div>
+<div class="ttc" id="astructcXyz_html"><div class="ttname"><a href="structcXyz.html">cXyz</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:49</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_54283da8a0cf1311a88c964d76512876.html">SSystem</a></li><li class="navelem"><a class="el" href="dir_3827de488e3dc5670df2ba05bd5c1e8a.html">SComponent</a></li><li class="navelem"><a class="el" href="c__m3d__g__tri_8h.html">c_m3d_g_tri.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

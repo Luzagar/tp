@@ -1,0 +1,521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: daObjVolcBall_c::vball_s Struct Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('structdaObjVolcBall__c_1_1vball__s.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="structdaObjVolcBall__c_1_1vball__s-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">daObjVolcBall_c::vball_s Struct Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for daObjVolcBall_c::vball_s:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="structdaObjVolcBall__c_1_1vball__s__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a718cc688168012587a7f95ebd7f87bdf" id="r_a718cc688168012587a7f95ebd7f87bdf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaObjVolcBall__c_1_1vball__s.html#a718cc688168012587a7f95ebd7f87bdf">~vball_s</a> ()</td></tr>
+<tr class="separator:a718cc688168012587a7f95ebd7f87bdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49a1285e1dcee4ff951b4b0bafda753e" id="r_a49a1285e1dcee4ff951b4b0bafda753e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaObjVolcBall__c_1_1vball__s.html#a49a1285e1dcee4ff951b4b0bafda753e">vball_s</a> ()</td></tr>
+<tr class="separator:a49a1285e1dcee4ff951b4b0bafda753e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ae1be292bb76ca79502d656784e5f3727" id="r_ae1be292bb76ca79502d656784e5f3727"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classJ3DModel.html">J3DModel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaObjVolcBall__c_1_1vball__s.html#ae1be292bb76ca79502d656784e5f3727">mpModel</a></td></tr>
+<tr class="separator:ae1be292bb76ca79502d656784e5f3727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acec3e6e1972ebd103ab08fb5e108bb8c" id="r_acec3e6e1972ebd103ab08fb5e108bb8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcXyz.html">cXyz</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaObjVolcBall__c_1_1vball__s.html#acec3e6e1972ebd103ab08fb5e108bb8c">field_0x4</a></td></tr>
+<tr class="separator:acec3e6e1972ebd103ab08fb5e108bb8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af42d8e31d48eb0f4bb3fb997159334f2" id="r_af42d8e31d48eb0f4bb3fb997159334f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcXyz.html">cXyz</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaObjVolcBall__c_1_1vball__s.html#af42d8e31d48eb0f4bb3fb997159334f2">field_0x10</a></td></tr>
+<tr class="separator:af42d8e31d48eb0f4bb3fb997159334f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a909b3f3e2ac9c27f40b58e004eb8a125" id="r_a909b3f3e2ac9c27f40b58e004eb8a125"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcXyz.html">cXyz</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaObjVolcBall__c_1_1vball__s.html#a909b3f3e2ac9c27f40b58e004eb8a125">field_0x1c</a></td></tr>
+<tr class="separator:a909b3f3e2ac9c27f40b58e004eb8a125"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b48e5cd46a9973628491fb6d3b1be79" id="r_a4b48e5cd46a9973628491fb6d3b1be79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcXyz.html">cXyz</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaObjVolcBall__c_1_1vball__s.html#a4b48e5cd46a9973628491fb6d3b1be79">field_0x28</a></td></tr>
+<tr class="separator:a4b48e5cd46a9973628491fb6d3b1be79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8449c793887492b0b0fa9bfcdde1d4e8" id="r_a8449c793887492b0b0fa9bfcdde1d4e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcsXyz.html">csXyz</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaObjVolcBall__c_1_1vball__s.html#a8449c793887492b0b0fa9bfcdde1d4e8">field_0x34</a></td></tr>
+<tr class="separator:a8449c793887492b0b0fa9bfcdde1d4e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbf6075b100c64f0d8f1a22bc8e42931" id="r_abbf6075b100c64f0d8f1a22bc8e42931"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcXyz.html">cXyz</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaObjVolcBall__c_1_1vball__s.html#abbf6075b100c64f0d8f1a22bc8e42931">field_0x3c</a></td></tr>
+<tr class="separator:abbf6075b100c64f0d8f1a22bc8e42931"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53b741d793de07c1523b0e054c8694b7" id="r_a53b741d793de07c1523b0e054c8694b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaObjVolcBall__c_1_1vball__s.html#a53b741d793de07c1523b0e054c8694b7">field_0x48</a></td></tr>
+<tr class="separator:a53b741d793de07c1523b0e054c8694b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05c4b1b237716b045105aaa1bc391c48" id="r_a05c4b1b237716b045105aaa1bc391c48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaObjVolcBall__c_1_1vball__s.html#a05c4b1b237716b045105aaa1bc391c48">field_0x4c</a></td></tr>
+<tr class="separator:a05c4b1b237716b045105aaa1bc391c48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeecd502970e1a7ee09d3638e10e3a92" id="r_abeecd502970e1a7ee09d3638e10e3a92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaObjVolcBall__c_1_1vball__s.html#abeecd502970e1a7ee09d3638e10e3a92">field_0x50</a></td></tr>
+<tr class="separator:abeecd502970e1a7ee09d3638e10e3a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bbabc8dc6ca8f5bef31adc202b13eef" id="r_a0bbabc8dc6ca8f5bef31adc202b13eef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdBgS__ObjAcch.html">dBgS_ObjAcch</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaObjVolcBall__c_1_1vball__s.html#a0bbabc8dc6ca8f5bef31adc202b13eef">mAcch</a></td></tr>
+<tr class="separator:a0bbabc8dc6ca8f5bef31adc202b13eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a970499458724c1cd4266b8b45949c561" id="r_a970499458724c1cd4266b8b45949c561"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdCcD__Sph.html">dCcD_Sph</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaObjVolcBall__c_1_1vball__s.html#a970499458724c1cd4266b8b45949c561">mSphCc</a></td></tr>
+<tr class="separator:a970499458724c1cd4266b8b45949c561"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1535913ec41a6a450a666e8b26a88401" id="r_a1535913ec41a6a450a666e8b26a88401"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcXyz.html">cXyz</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaObjVolcBall__c_1_1vball__s.html#a1535913ec41a6a450a666e8b26a88401">field_0x364</a></td></tr>
+<tr class="separator:a1535913ec41a6a450a666e8b26a88401"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a935bedc53817c84ae9b2ef37dcbf94a8" id="r_a935bedc53817c84ae9b2ef37dcbf94a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaObjVolcBall__c_1_1vball__s.html#a935bedc53817c84ae9b2ef37dcbf94a8">field_0x370</a></td></tr>
+<tr class="separator:a935bedc53817c84ae9b2ef37dcbf94a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af925a85f5546974c09f365e7d93c2369" id="r_af925a85f5546974c09f365e7d93c2369"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaObjVolcBall__c_1_1vball__s.html#af925a85f5546974c09f365e7d93c2369">field_0x374</a></td></tr>
+<tr class="separator:af925a85f5546974c09f365e7d93c2369"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6c88ef0a944842d2060fd91068c8ada" id="r_af6c88ef0a944842d2060fd91068c8ada"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaObjVolcBall__c_1_1vball__s.html#af6c88ef0a944842d2060fd91068c8ada">field_0x376</a></td></tr>
+<tr class="separator:af6c88ef0a944842d2060fd91068c8ada"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e257986eeb806d57199c084e794a3b6" id="r_a9e257986eeb806d57199c084e794a3b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcsXyz.html">csXyz</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaObjVolcBall__c_1_1vball__s.html#a9e257986eeb806d57199c084e794a3b6">field_0x378</a></td></tr>
+<tr class="separator:a9e257986eeb806d57199c084e794a3b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0743c227eb7a0eb54b04f1fa5dcc565" id="r_ae0743c227eb7a0eb54b04f1fa5dcc565"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaObjVolcBall__c_1_1vball__s.html#ae0743c227eb7a0eb54b04f1fa5dcc565">field_0x37E</a> [0x0390 - 0x037E]</td></tr>
+<tr class="separator:ae0743c227eb7a0eb54b04f1fa5dcc565"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9141c0b6455d11f7c441f84ecf4bbab" id="r_aa9141c0b6455d11f7c441f84ecf4bbab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdPa__followEcallBack.html">dPa_followEcallBack</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaObjVolcBall__c_1_1vball__s.html#aa9141c0b6455d11f7c441f84ecf4bbab">field_0x390</a> [4]</td></tr>
+<tr class="separator:aa9141c0b6455d11f7c441f84ecf4bbab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a718cc688168012587a7f95ebd7f87bdf" name="a718cc688168012587a7f95ebd7f87bdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a718cc688168012587a7f95ebd7f87bdf">&#9670;&#160;</a></span>~vball_s()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> daObjVolcBall_c::vball_s::~vball_s </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a49a1285e1dcee4ff951b4b0bafda753e" name="a49a1285e1dcee4ff951b4b0bafda753e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49a1285e1dcee4ff951b4b0bafda753e">&#9670;&#160;</a></span>vball_s()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> daObjVolcBall_c::vball_s::vball_s </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="af42d8e31d48eb0f4bb3fb997159334f2" name="af42d8e31d48eb0f4bb3fb997159334f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af42d8e31d48eb0f4bb3fb997159334f2">&#9670;&#160;</a></span>field_0x10</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcXyz.html">cXyz</a> daObjVolcBall_c::vball_s::field_0x10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a909b3f3e2ac9c27f40b58e004eb8a125" name="a909b3f3e2ac9c27f40b58e004eb8a125"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a909b3f3e2ac9c27f40b58e004eb8a125">&#9670;&#160;</a></span>field_0x1c</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcXyz.html">cXyz</a> daObjVolcBall_c::vball_s::field_0x1c</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b48e5cd46a9973628491fb6d3b1be79" name="a4b48e5cd46a9973628491fb6d3b1be79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b48e5cd46a9973628491fb6d3b1be79">&#9670;&#160;</a></span>field_0x28</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcXyz.html">cXyz</a> daObjVolcBall_c::vball_s::field_0x28</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8449c793887492b0b0fa9bfcdde1d4e8" name="a8449c793887492b0b0fa9bfcdde1d4e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8449c793887492b0b0fa9bfcdde1d4e8">&#9670;&#160;</a></span>field_0x34</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcsXyz.html">csXyz</a> daObjVolcBall_c::vball_s::field_0x34</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1535913ec41a6a450a666e8b26a88401" name="a1535913ec41a6a450a666e8b26a88401"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1535913ec41a6a450a666e8b26a88401">&#9670;&#160;</a></span>field_0x364</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcXyz.html">cXyz</a> daObjVolcBall_c::vball_s::field_0x364</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a935bedc53817c84ae9b2ef37dcbf94a8" name="a935bedc53817c84ae9b2ef37dcbf94a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a935bedc53817c84ae9b2ef37dcbf94a8">&#9670;&#160;</a></span>field_0x370</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> daObjVolcBall_c::vball_s::field_0x370</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af925a85f5546974c09f365e7d93c2369" name="af925a85f5546974c09f365e7d93c2369"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af925a85f5546974c09f365e7d93c2369">&#9670;&#160;</a></span>field_0x374</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> daObjVolcBall_c::vball_s::field_0x374</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6c88ef0a944842d2060fd91068c8ada" name="af6c88ef0a944842d2060fd91068c8ada"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6c88ef0a944842d2060fd91068c8ada">&#9670;&#160;</a></span>field_0x376</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> daObjVolcBall_c::vball_s::field_0x376</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e257986eeb806d57199c084e794a3b6" name="a9e257986eeb806d57199c084e794a3b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e257986eeb806d57199c084e794a3b6">&#9670;&#160;</a></span>field_0x378</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcsXyz.html">csXyz</a> daObjVolcBall_c::vball_s::field_0x378</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0743c227eb7a0eb54b04f1fa5dcc565" name="ae0743c227eb7a0eb54b04f1fa5dcc565"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0743c227eb7a0eb54b04f1fa5dcc565">&#9670;&#160;</a></span>field_0x37E</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> daObjVolcBall_c::vball_s::field_0x37E[0x0390 - 0x037E]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa9141c0b6455d11f7c441f84ecf4bbab" name="aa9141c0b6455d11f7c441f84ecf4bbab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9141c0b6455d11f7c441f84ecf4bbab">&#9670;&#160;</a></span>field_0x390</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdPa__followEcallBack.html">dPa_followEcallBack</a> daObjVolcBall_c::vball_s::field_0x390[4]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abbf6075b100c64f0d8f1a22bc8e42931" name="abbf6075b100c64f0d8f1a22bc8e42931"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbf6075b100c64f0d8f1a22bc8e42931">&#9670;&#160;</a></span>field_0x3c</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcXyz.html">cXyz</a> daObjVolcBall_c::vball_s::field_0x3c</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acec3e6e1972ebd103ab08fb5e108bb8c" name="acec3e6e1972ebd103ab08fb5e108bb8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acec3e6e1972ebd103ab08fb5e108bb8c">&#9670;&#160;</a></span>field_0x4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcXyz.html">cXyz</a> daObjVolcBall_c::vball_s::field_0x4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a53b741d793de07c1523b0e054c8694b7" name="a53b741d793de07c1523b0e054c8694b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53b741d793de07c1523b0e054c8694b7">&#9670;&#160;</a></span>field_0x48</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daObjVolcBall_c::vball_s::field_0x48</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05c4b1b237716b045105aaa1bc391c48" name="a05c4b1b237716b045105aaa1bc391c48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05c4b1b237716b045105aaa1bc391c48">&#9670;&#160;</a></span>field_0x4c</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daObjVolcBall_c::vball_s::field_0x4c</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abeecd502970e1a7ee09d3638e10e3a92" name="abeecd502970e1a7ee09d3638e10e3a92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abeecd502970e1a7ee09d3638e10e3a92">&#9670;&#160;</a></span>field_0x50</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daObjVolcBall_c::vball_s::field_0x50</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0bbabc8dc6ca8f5bef31adc202b13eef" name="a0bbabc8dc6ca8f5bef31adc202b13eef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bbabc8dc6ca8f5bef31adc202b13eef">&#9670;&#160;</a></span>mAcch</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdBgS__ObjAcch.html">dBgS_ObjAcch</a> daObjVolcBall_c::vball_s::mAcch</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae1be292bb76ca79502d656784e5f3727" name="ae1be292bb76ca79502d656784e5f3727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1be292bb76ca79502d656784e5f3727">&#9670;&#160;</a></span>mpModel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classJ3DModel.html">J3DModel</a>* daObjVolcBall_c::vball_s::mpModel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a970499458724c1cd4266b8b45949c561" name="a970499458724c1cd4266b8b45949c561"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a970499458724c1cd4266b8b45949c561">&#9670;&#160;</a></span>mSphCc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdCcD__Sph.html">dCcD_Sph</a> daObjVolcBall_c::vball_s::mSphCc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>rel/d/a/obj/d_a_obj_volcball/<a class="el" href="d__a__obj__volcball_8cpp.html">d_a_obj_volcball.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classdaObjVolcBall__c.html">daObjVolcBall_c</a></li><li class="navelem"><a class="el" href="structdaObjVolcBall__c_1_1vball__s.html">vball_s</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+var struct__FILE =
+[
+    [ "buffer", "struct__FILE.html#ae68cb81f3037049519f2848bd4b89d19", null ],
+    [ "buffer_alignment", "struct__FILE.html#a24b86388789babeff1fb1dc5b06b2700", null ],
+    [ "buffer_length", "struct__FILE.html#a77f6d5351f0d68c30000862ce0f3bc53", null ],
+    [ "buffer_position", "struct__FILE.html#adf232956034ad25ed31f52a83f5c6e20", null ],
+    [ "buffer_ptr", "struct__FILE.html#ad75c3b01e9cf3d809327ec593131a4d3", null ],
+    [ "buffer_size", "struct__FILE.html#a4c60861222a9d19a12fe2560153ac443", null ],
+    [ "char_buffer", "struct__FILE.html#a73c133dd342079fcea21d3372834d890", null ],
+    [ "char_buffer_overflow", "struct__FILE.html#a521eb35421ace13043529c90ddd32077", null ],
+    [ "close_fn", "struct__FILE.html#a6caf596d9296c6122b7791a10b929bca", null ],
+    [ "file_mode", "struct__FILE.html#aee3021dfa6b5695694777f4e91f16c2d", null ],
+    [ "file_state", "struct__FILE.html#a471be8f89ef7853f25d7ac39d638fc6d", null ],
+    [ "handle", "struct__FILE.html#a650486106be3f2e24c2396f25e85af84", null ],
+    [ "idle_fn", "struct__FILE.html#a97eea58c511ed88518c60fa4cfd6fcdf", null ],
+    [ "is_dynamically_allocated", "struct__FILE.html#a048eada350705902e7baa53822ff9593", null ],
+    [ "next_file", "struct__FILE.html#a6ef8fecf6994b0308d7e5cf5c8f2dd44", null ],
+    [ "position", "struct__FILE.html#a496841b32e88458d0bc737f08c16b92e", null ],
+    [ "position_fn", "struct__FILE.html#a949308a2fbe2b78e09da0e7380f526df", null ],
+    [ "read_fn", "struct__FILE.html#a42eac0bd200619a198dfb855c6680cb7", null ],
+    [ "save_buffer_length", "struct__FILE.html#a4169b719f9144e583134829d1443cc76", null ],
+    [ "ungetc_buffer", "struct__FILE.html#a0b9a4a9f8d7196b9a4343e6cd0b4682a", null ],
+    [ "ungetc_wide_buffer", "struct__FILE.html#ae70f599ecd9efacb0610e70d26ad0449", null ],
+    [ "write_fn", "struct__FILE.html#a9fdb8e5a0e9bc8b2a0bd8367c919bc97", null ]
+];

@@ -1,0 +1,733 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: src/m_Do/m_Do_main.cpp File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('m__Do__main_8cpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">m_Do_main.cpp File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a10063473718eef78eaf8995fa87db5f6" id="r_a10063473718eef78eaf8995fa87db5f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__main_8cpp.html#a10063473718eef78eaf8995fa87db5f6">version_check</a> ()</td></tr>
+<tr class="separator:a10063473718eef78eaf8995fa87db5f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b67290da619ead04d34d29d81d84784" id="r_a0b67290da619ead04d34d29d81d84784"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__main_8cpp.html#a0b67290da619ead04d34d29d81d84784">CheckHeap</a> (<a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_padNo</a>)</td></tr>
+<tr class="separator:a0b67290da619ead04d34d29d81d84784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e950f84d7a3c3edc9a85a69468a7e32" id="r_a4e950f84d7a3c3edc9a85a69468a7e32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__main_8cpp.html#a4e950f84d7a3c3edc9a85a69468a7e32">countUsed</a> (<a class="el" href="structJKRExpHeap.html">JKRExpHeap</a> *heap)</td></tr>
+<tr class="separator:a4e950f84d7a3c3edc9a85a69468a7e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7255ce0362d1ed6f342cef46aae6438f" id="r_a7255ce0362d1ed6f342cef46aae6438f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__main_8cpp.html#a7255ce0362d1ed6f342cef46aae6438f">debugDisplay</a> ()</td></tr>
+<tr class="separator:a7255ce0362d1ed6f342cef46aae6438f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae225ccb7a929faf4c93d6fa02194d2e1" id="r_ae225ccb7a929faf4c93d6fa02194d2e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__main_8cpp.html#ae225ccb7a929faf4c93d6fa02194d2e1">Debug_console</a> (<a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_padNo</a>)</td></tr>
+<tr class="separator:ae225ccb7a929faf4c93d6fa02194d2e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f286d279f6b2de0b3b4b91d7a1181aa" id="r_a4f286d279f6b2de0b3b4b91d7a1181aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__main_8cpp.html#a4f286d279f6b2de0b3b4b91d7a1181aa">LOAD_COPYDATE</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *)</td></tr>
+<tr class="separator:a4f286d279f6b2de0b3b4b91d7a1181aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77d673013b4dfacf2b27be553cb010ff" id="r_a77d673013b4dfacf2b27be553cb010ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__main_8cpp.html#a77d673013b4dfacf2b27be553cb010ff">debug</a> ()</td></tr>
+<tr class="separator:a77d673013b4dfacf2b27be553cb010ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fac080b2a17a5aee9b6d3c040b19125" id="r_a8fac080b2a17a5aee9b6d3c040b19125"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__main_8cpp.html#a8fac080b2a17a5aee9b6d3c040b19125">main01</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>)</td></tr>
+<tr class="separator:a8fac080b2a17a5aee9b6d3c040b19125"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdef7a1fd863a6d3770c1268cb06add3" id="r_acdef7a1fd863a6d3770c1268cb06add3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__main_8cpp.html#acdef7a1fd863a6d3770c1268cb06add3">main</a> ()</td></tr>
+<tr class="separator:acdef7a1fd863a6d3770c1268cb06add3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a21828c702eb8459cfda5290e312ba294" id="r_a21828c702eb8459cfda5290e312ba294"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="classHeapCheck.html">HeapCheck</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__main_8cpp.html#a21828c702eb8459cfda5290e312ba294">RootHeapCheck</a> = <a class="el" href="classHeapCheck.html">HeapCheck</a>(0,&quot;Root&quot;,&quot;ルート&quot;)</td></tr>
+<tr class="separator:a21828c702eb8459cfda5290e312ba294"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe6a58b8d470aa16fe54dfbadd049ebb" id="r_abe6a58b8d470aa16fe54dfbadd049ebb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="classHeapCheck.html">HeapCheck</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__main_8cpp.html#abe6a58b8d470aa16fe54dfbadd049ebb">SystemHeapCheck</a> = <a class="el" href="classHeapCheck.html">HeapCheck</a>(0,&quot;System&quot;,&quot;システム&quot;)</td></tr>
+<tr class="separator:abe6a58b8d470aa16fe54dfbadd049ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57b0c4588dae8f90d9d21c7e47234b7c" id="r_a57b0c4588dae8f90d9d21c7e47234b7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="classHeapCheck.html">HeapCheck</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__main_8cpp.html#a57b0c4588dae8f90d9d21c7e47234b7c">ZeldaHeapCheck</a> = <a class="el" href="classHeapCheck.html">HeapCheck</a>(0,&quot;Zelda&quot;,&quot;ゼルダ&quot;)</td></tr>
+<tr class="separator:a57b0c4588dae8f90d9d21c7e47234b7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd94e3f3ca410c8bdd1cde3c2418d035" id="r_acd94e3f3ca410c8bdd1cde3c2418d035"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="classHeapCheck.html">HeapCheck</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__main_8cpp.html#acd94e3f3ca410c8bdd1cde3c2418d035">GameHeapCheck</a> = <a class="el" href="classHeapCheck.html">HeapCheck</a>(0,&quot;Game&quot;,&quot;ゲーム&quot;)</td></tr>
+<tr class="separator:acd94e3f3ca410c8bdd1cde3c2418d035"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7dcd90e096875ab759edf1da91ee781" id="r_aa7dcd90e096875ab759edf1da91ee781"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="classHeapCheck.html">HeapCheck</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__main_8cpp.html#aa7dcd90e096875ab759edf1da91ee781">ArchiveHeapCheck</a> = <a class="el" href="classHeapCheck.html">HeapCheck</a>(0,&quot;Archive&quot;,&quot;アーカイブ&quot;)</td></tr>
+<tr class="separator:aa7dcd90e096875ab759edf1da91ee781"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05b83dda83af2d339f979013450efa44" id="r_a05b83dda83af2d339f979013450efa44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="classHeapCheck.html">HeapCheck</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__main_8cpp.html#a05b83dda83af2d339f979013450efa44">J2dHeapCheck</a> = <a class="el" href="classHeapCheck.html">HeapCheck</a>(0,&quot;J2d&quot;,&quot;J2D&quot;)</td></tr>
+<tr class="separator:a05b83dda83af2d339f979013450efa44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad568117e23a4fec2df28f4aef875d8cd" id="r_ad568117e23a4fec2df28f4aef875d8cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="classHeapCheck.html">HeapCheck</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__main_8cpp.html#ad568117e23a4fec2df28f4aef875d8cd">HostioHeapCheck</a> = <a class="el" href="classHeapCheck.html">HeapCheck</a>(0,&quot;Hostio&quot;,&quot;ホストIO&quot;)</td></tr>
+<tr class="separator:ad568117e23a4fec2df28f4aef875d8cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a2f4731cdcb049eb30f0f36819675a6" id="r_a6a2f4731cdcb049eb30f0f36819675a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="classHeapCheck.html">HeapCheck</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__main_8cpp.html#a6a2f4731cdcb049eb30f0f36819675a6">CommandHeapCheck</a> = <a class="el" href="classHeapCheck.html">HeapCheck</a>(0,&quot;Command&quot;,&quot;コマンド&quot;)</td></tr>
+<tr class="separator:a6a2f4731cdcb049eb30f0f36819675a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad10fa4f4ac1fb17baca8b0f1f52b296d" id="r_ad10fa4f4ac1fb17baca8b0f1f52b296d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="classHeapCheck.html">HeapCheck</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__main_8cpp.html#ad10fa4f4ac1fb17baca8b0f1f52b296d">HeapCheckTable</a> [8]</td></tr>
+<tr class="separator:ad10fa4f4ac1fb17baca8b0f1f52b296d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a546e935d86014e350a5f15fbbda23dff" id="r_a546e935d86014e350a5f15fbbda23dff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__main_8cpp.html#a546e935d86014e350a5f15fbbda23dff">fillcheck_check_frame</a></td></tr>
+<tr class="separator:a546e935d86014e350a5f15fbbda23dff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5ca695eebd8790e9de5dcd77e201e94" id="r_ad5ca695eebd8790e9de5dcd77e201e94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__main_8cpp.html#ad5ca695eebd8790e9de5dcd77e201e94">mDisplayHeapSize</a></td></tr>
+<tr class="separator:ad5ca695eebd8790e9de5dcd77e201e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfea3ae89461b4eda82174010a318573" id="r_abfea3ae89461b4eda82174010a318573"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__main_8cpp.html#abfea3ae89461b4eda82174010a318573">mSelectHeapBar</a></td></tr>
+<tr class="separator:abfea3ae89461b4eda82174010a318573"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8bb6ba10236715e1f90116f008cf841" id="r_af8bb6ba10236715e1f90116f008cf841"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__main_8cpp.html#af8bb6ba10236715e1f90116f008cf841">mCheckHeap</a></td></tr>
+<tr class="separator:af8bb6ba10236715e1f90116f008cf841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45573f7c35ed0c0a09705abcdb557322" id="r_a45573f7c35ed0c0a09705abcdb557322"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__main_8cpp.html#a45573f7c35ed0c0a09705abcdb557322">mainThreadStack</a> [32768]</td></tr>
+<tr class="separator:a45573f7c35ed0c0a09705abcdb557322"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef492d2d31999a311aa97910fc9df0db" id="r_aef492d2d31999a311aa97910fc9df0db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="structOSThread.html">OSThread</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__main_8cpp.html#aef492d2d31999a311aa97910fc9df0db">mainThread</a></td></tr>
+<tr class="separator:aef492d2d31999a311aa97910fc9df0db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a0b67290da619ead04d34d29d81d84784" name="a0b67290da619ead04d34d29d81d84784"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b67290da619ead04d34d29d81d84784">&#9670;&#160;</a></span>CheckHeap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> CheckHeap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramname"><em>i_padNo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e950f84d7a3c3edc9a85a69468a7e32" name="a4e950f84d7a3c3edc9a85a69468a7e32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e950f84d7a3c3edc9a85a69468a7e32">&#9670;&#160;</a></span>countUsed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> countUsed </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJKRExpHeap.html">JKRExpHeap</a> *&#160;</td>
+          <td class="paramname"><em>heap</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77d673013b4dfacf2b27be553cb010ff" name="a77d673013b4dfacf2b27be553cb010ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77d673013b4dfacf2b27be553cb010ff">&#9670;&#160;</a></span>debug()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> debug </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae225ccb7a929faf4c93d6fa02194d2e1" name="ae225ccb7a929faf4c93d6fa02194d2e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae225ccb7a929faf4c93d6fa02194d2e1">&#9670;&#160;</a></span>Debug_console()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a> Debug_console </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramname"><em>i_padNo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7255ce0362d1ed6f342cef46aae6438f" name="a7255ce0362d1ed6f342cef46aae6438f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7255ce0362d1ed6f342cef46aae6438f">&#9670;&#160;</a></span>debugDisplay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> debugDisplay </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4f286d279f6b2de0b3b4b91d7a1181aa" name="a4f286d279f6b2de0b3b4b91d7a1181aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f286d279f6b2de0b3b4b91d7a1181aa">&#9670;&#160;</a></span>LOAD_COPYDATE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> LOAD_COPYDATE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acdef7a1fd863a6d3770c1268cb06add3" name="acdef7a1fd863a6d3770c1268cb06add3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdef7a1fd863a6d3770c1268cb06add3">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8fac080b2a17a5aee9b6d3c040b19125" name="a8fac080b2a17a5aee9b6d3c040b19125"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fac080b2a17a5aee9b6d3c040b19125">&#9670;&#160;</a></span>main01()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> main01 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a10063473718eef78eaf8995fa87db5f6" name="a10063473718eef78eaf8995fa87db5f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10063473718eef78eaf8995fa87db5f6">&#9670;&#160;</a></span>version_check()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> version_check </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="m__Do__main_8cpp.html">m_Do_main.cpp</a> Main Initialization </p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="aa7dcd90e096875ab759edf1da91ee781" name="aa7dcd90e096875ab759edf1da91ee781"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7dcd90e096875ab759edf1da91ee781">&#9670;&#160;</a></span>ArchiveHeapCheck</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classHeapCheck.html">HeapCheck</a> ArchiveHeapCheck = <a class="el" href="classHeapCheck.html">HeapCheck</a>(0,&quot;Archive&quot;,&quot;アーカイブ&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a2f4731cdcb049eb30f0f36819675a6" name="a6a2f4731cdcb049eb30f0f36819675a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a2f4731cdcb049eb30f0f36819675a6">&#9670;&#160;</a></span>CommandHeapCheck</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classHeapCheck.html">HeapCheck</a> CommandHeapCheck = <a class="el" href="classHeapCheck.html">HeapCheck</a>(0,&quot;Command&quot;,&quot;コマンド&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a546e935d86014e350a5f15fbbda23dff" name="a546e935d86014e350a5f15fbbda23dff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a546e935d86014e350a5f15fbbda23dff">&#9670;&#160;</a></span>fillcheck_check_frame</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> fillcheck_check_frame</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd94e3f3ca410c8bdd1cde3c2418d035" name="acd94e3f3ca410c8bdd1cde3c2418d035"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd94e3f3ca410c8bdd1cde3c2418d035">&#9670;&#160;</a></span>GameHeapCheck</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classHeapCheck.html">HeapCheck</a> GameHeapCheck = <a class="el" href="classHeapCheck.html">HeapCheck</a>(0,&quot;Game&quot;,&quot;ゲーム&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad10fa4f4ac1fb17baca8b0f1f52b296d" name="ad10fa4f4ac1fb17baca8b0f1f52b296d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad10fa4f4ac1fb17baca8b0f1f52b296d">&#9670;&#160;</a></span>HeapCheckTable</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classHeapCheck.html">HeapCheck</a>* HeapCheckTable[8]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    &amp;<a class="code hl_variable" href="m__Do__main_8cpp.html#a21828c702eb8459cfda5290e312ba294">RootHeapCheck</a>,    &amp;<a class="code hl_variable" href="m__Do__main_8cpp.html#abe6a58b8d470aa16fe54dfbadd049ebb">SystemHeapCheck</a>, &amp;<a class="code hl_variable" href="m__Do__main_8cpp.html#a57b0c4588dae8f90d9d21c7e47234b7c">ZeldaHeapCheck</a>,  &amp;<a class="code hl_variable" href="m__Do__main_8cpp.html#acd94e3f3ca410c8bdd1cde3c2418d035">GameHeapCheck</a>,</div>
+<div class="line">    &amp;<a class="code hl_variable" href="m__Do__main_8cpp.html#aa7dcd90e096875ab759edf1da91ee781">ArchiveHeapCheck</a>, &amp;<a class="code hl_variable" href="m__Do__main_8cpp.html#a05b83dda83af2d339f979013450efa44">J2dHeapCheck</a>,    &amp;<a class="code hl_variable" href="m__Do__main_8cpp.html#ad568117e23a4fec2df28f4aef875d8cd">HostioHeapCheck</a>, &amp;<a class="code hl_variable" href="m__Do__main_8cpp.html#a6a2f4731cdcb049eb30f0f36819675a6">CommandHeapCheck</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="am__Do__main_8cpp_html_a05b83dda83af2d339f979013450efa44"><div class="ttname"><a href="m__Do__main_8cpp.html#a05b83dda83af2d339f979013450efa44">J2dHeapCheck</a></div><div class="ttdeci">static HeapCheck J2dHeapCheck</div><div class="ttdef"><b>Definition</b> m_Do_main.cpp:76</div></div>
+<div class="ttc" id="am__Do__main_8cpp_html_a21828c702eb8459cfda5290e312ba294"><div class="ttname"><a href="m__Do__main_8cpp.html#a21828c702eb8459cfda5290e312ba294">RootHeapCheck</a></div><div class="ttdeci">static HeapCheck RootHeapCheck</div><div class="ttdef"><b>Definition</b> m_Do_main.cpp:56</div></div>
+<div class="ttc" id="am__Do__main_8cpp_html_a57b0c4588dae8f90d9d21c7e47234b7c"><div class="ttname"><a href="m__Do__main_8cpp.html#a57b0c4588dae8f90d9d21c7e47234b7c">ZeldaHeapCheck</a></div><div class="ttdeci">static HeapCheck ZeldaHeapCheck</div><div class="ttdef"><b>Definition</b> m_Do_main.cpp:64</div></div>
+<div class="ttc" id="am__Do__main_8cpp_html_a6a2f4731cdcb049eb30f0f36819675a6"><div class="ttname"><a href="m__Do__main_8cpp.html#a6a2f4731cdcb049eb30f0f36819675a6">CommandHeapCheck</a></div><div class="ttdeci">static HeapCheck CommandHeapCheck</div><div class="ttdef"><b>Definition</b> m_Do_main.cpp:84</div></div>
+<div class="ttc" id="am__Do__main_8cpp_html_aa7dcd90e096875ab759edf1da91ee781"><div class="ttname"><a href="m__Do__main_8cpp.html#aa7dcd90e096875ab759edf1da91ee781">ArchiveHeapCheck</a></div><div class="ttdeci">static HeapCheck ArchiveHeapCheck</div><div class="ttdef"><b>Definition</b> m_Do_main.cpp:72</div></div>
+<div class="ttc" id="am__Do__main_8cpp_html_abe6a58b8d470aa16fe54dfbadd049ebb"><div class="ttname"><a href="m__Do__main_8cpp.html#abe6a58b8d470aa16fe54dfbadd049ebb">SystemHeapCheck</a></div><div class="ttdeci">static HeapCheck SystemHeapCheck</div><div class="ttdef"><b>Definition</b> m_Do_main.cpp:60</div></div>
+<div class="ttc" id="am__Do__main_8cpp_html_acd94e3f3ca410c8bdd1cde3c2418d035"><div class="ttname"><a href="m__Do__main_8cpp.html#acd94e3f3ca410c8bdd1cde3c2418d035">GameHeapCheck</a></div><div class="ttdeci">static HeapCheck GameHeapCheck</div><div class="ttdef"><b>Definition</b> m_Do_main.cpp:68</div></div>
+<div class="ttc" id="am__Do__main_8cpp_html_ad568117e23a4fec2df28f4aef875d8cd"><div class="ttname"><a href="m__Do__main_8cpp.html#ad568117e23a4fec2df28f4aef875d8cd">HostioHeapCheck</a></div><div class="ttdeci">static HeapCheck HostioHeapCheck</div><div class="ttdef"><b>Definition</b> m_Do_main.cpp:80</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad568117e23a4fec2df28f4aef875d8cd" name="ad568117e23a4fec2df28f4aef875d8cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad568117e23a4fec2df28f4aef875d8cd">&#9670;&#160;</a></span>HostioHeapCheck</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classHeapCheck.html">HeapCheck</a> HostioHeapCheck = <a class="el" href="classHeapCheck.html">HeapCheck</a>(0,&quot;Hostio&quot;,&quot;ホストIO&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05b83dda83af2d339f979013450efa44" name="a05b83dda83af2d339f979013450efa44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05b83dda83af2d339f979013450efa44">&#9670;&#160;</a></span>J2dHeapCheck</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classHeapCheck.html">HeapCheck</a> J2dHeapCheck = <a class="el" href="classHeapCheck.html">HeapCheck</a>(0,&quot;J2d&quot;,&quot;J2D&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef492d2d31999a311aa97910fc9df0db" name="aef492d2d31999a311aa97910fc9df0db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef492d2d31999a311aa97910fc9df0db">&#9670;&#160;</a></span>mainThread</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structOSThread.html">OSThread</a> mainThread</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a45573f7c35ed0c0a09705abcdb557322" name="a45573f7c35ed0c0a09705abcdb557322"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45573f7c35ed0c0a09705abcdb557322">&#9670;&#160;</a></span>mainThreadStack</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> mainThreadStack[32768]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af8bb6ba10236715e1f90116f008cf841" name="af8bb6ba10236715e1f90116f008cf841"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8bb6ba10236715e1f90116f008cf841">&#9670;&#160;</a></span>mCheckHeap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a> mCheckHeap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5ca695eebd8790e9de5dcd77e201e94" name="ad5ca695eebd8790e9de5dcd77e201e94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5ca695eebd8790e9de5dcd77e201e94">&#9670;&#160;</a></span>mDisplayHeapSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a> mDisplayHeapSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abfea3ae89461b4eda82174010a318573" name="abfea3ae89461b4eda82174010a318573"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfea3ae89461b4eda82174010a318573">&#9670;&#160;</a></span>mSelectHeapBar</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> mSelectHeapBar</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a21828c702eb8459cfda5290e312ba294" name="a21828c702eb8459cfda5290e312ba294"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21828c702eb8459cfda5290e312ba294">&#9670;&#160;</a></span>RootHeapCheck</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classHeapCheck.html">HeapCheck</a> RootHeapCheck = <a class="el" href="classHeapCheck.html">HeapCheck</a>(0,&quot;Root&quot;,&quot;ルート&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe6a58b8d470aa16fe54dfbadd049ebb" name="abe6a58b8d470aa16fe54dfbadd049ebb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe6a58b8d470aa16fe54dfbadd049ebb">&#9670;&#160;</a></span>SystemHeapCheck</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classHeapCheck.html">HeapCheck</a> SystemHeapCheck = <a class="el" href="classHeapCheck.html">HeapCheck</a>(0,&quot;System&quot;,&quot;システム&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57b0c4588dae8f90d9d21c7e47234b7c" name="a57b0c4588dae8f90d9d21c7e47234b7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57b0c4588dae8f90d9d21c7e47234b7c">&#9670;&#160;</a></span>ZeldaHeapCheck</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classHeapCheck.html">HeapCheck</a> ZeldaHeapCheck = <a class="el" href="classHeapCheck.html">HeapCheck</a>(0,&quot;Zelda&quot;,&quot;ゼルダ&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_dcdb77ba6fb06ec0e151211097de4f1f.html">m_Do</a></li><li class="navelem"><a class="el" href="m__Do__main_8cpp.html">m_Do_main.cpp</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

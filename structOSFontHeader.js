@@ -1,0 +1,26 @@
+var structOSFontHeader =
+[
+    [ "ascent", "structOSFontHeader.html#ad0aff1bafa46fb366ee98cbed7895657", null ],
+    [ "c0", "structOSFontHeader.html#af6f1e5c63bc6d8e9a02867914e8392b6", null ],
+    [ "c1", "structOSFontHeader.html#a1487064e1b998556d010fb1a26ecf664", null ],
+    [ "c2", "structOSFontHeader.html#a2510e3e9dca1c64a367d1c194f959de3", null ],
+    [ "c3", "structOSFontHeader.html#ac7d808a3a726f4c719e78d5a65d9c43e", null ],
+    [ "cellHeight", "structOSFontHeader.html#ab37b177c7bd3563e7cf443600b15c312", null ],
+    [ "cellWidth", "structOSFontHeader.html#af1b5bc062f714812755ab6dad0b027e5", null ],
+    [ "descent", "structOSFontHeader.html#ae10071f855e9d7f09d1cee104890cb12", null ],
+    [ "firstChar", "structOSFontHeader.html#a4bcba8ce7352f11c5302ba020a290861", null ],
+    [ "invalidChar", "structOSFontHeader.html#a32e53f2910b135e165f9ac7b0071be77", null ],
+    [ "lastChar", "structOSFontHeader.html#aa66f018efd446be9b9070b9ddc6abd5d", null ],
+    [ "leading", "structOSFontHeader.html#a07852a7a2eeb9ff0708a186bf85bff6d", null ],
+    [ "sheetFormat", "structOSFontHeader.html#a18895f8115c43f4ee4ba4712f2b26408", null ],
+    [ "sheetFullSize", "structOSFontHeader.html#a3b76c8164519366feea7cc84f73f9696", null ],
+    [ "sheetHeight", "structOSFontHeader.html#a84935197b0a8b93474cde48370c2066d", null ],
+    [ "sheetImageOfs", "structOSFontHeader.html#a9e50abcf0dedb93eb7405057365e123e", null ],
+    [ "sheetNumCol", "structOSFontHeader.html#a6376a0f827113040d273bb99a55c1610", null ],
+    [ "sheetNumRow", "structOSFontHeader.html#a5fdbd1add36628413b4d0fd0023d208e", null ],
+    [ "sheetSize", "structOSFontHeader.html#a18af9f7711ef168fa10074878cfd1a8d", null ],
+    [ "sheetWidth", "structOSFontHeader.html#aee382cfc1c0703b62ce771cf568a8fa2", null ],
+    [ "type", "structOSFontHeader.html#a136b9f9279d10f9e382cec6117251595", null ],
+    [ "width", "structOSFontHeader.html#aa654472af7959c92ec270d55a7f94188", null ],
+    [ "widthTableOfs", "structOSFontHeader.html#a5d42583eb0ab03f4b1c9f88cf46539e2", null ]
+];

@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: include/rel/d/a/b/d_a_b_yo/d_a_b_yo.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d__a__b__yo_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">d_a_b_yo.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="d__a__b__yo_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef D_A_B_YO_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define D_A_B_YO_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">dolphin/types.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="f__op__actor__mng_8h.html">f_op/f_op_actor_mng.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classdaB__YO__c.html">   15</a></span><span class="keyword">class </span><a class="code hl_class" href="classdaB__YO__c.html">daB_YO_c</a> : <span class="keyword">public</span> <a class="code hl_struct" href="classfopEn__enemy__c.html">fopEn_enemy_c</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">/* 8062F51C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#a3850b14c94dd4be678d8d7d87fe4049d">draw</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="comment">/* 8062FBEC */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#a4f4b2ce691cbd5e812e63c66d28db8c1">onIceBreak</a>(<a class="code hl_typedef" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="comment">/* 8062FC08 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#afcf76831b4fc67cc5e553fb5e255a489">setBck</a>(<span class="keywordtype">int</span>, <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="comment">/* 8062FE0C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#ac1ba65879f36e31a088450c973ead4fb">setActionMode</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">/* 8062FE18 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#a8f2403244596e31ba32608cf18d5e177">damage_check</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">/* 806300F4 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#afe1e18565577635ec9464515c19864ef">setBreakFrizad</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="comment">/* 8063022C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#a3bf1afbfa53dab692395410685c590ce">setIcicleOperate</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">/* 806302B4 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#a2472e75bc44055e65d63a7ef2028312f">setIcicleSubNumber</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment">/* 80630330 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#a8dfdb50a417b49c6014b15e56eb63a57">setWindowBreakEffect</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="comment">/* 8063040C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#abc37899a9e701f48eeb7a041d26b7dfe">setHensinEffect</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">/* 806305B8 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#a7270491e6232cbd283d53193f655d991">setLandingEffect</a>(<a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">/* 806306F0 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#ac34ec7ab09927f893df79a6d6a0bfed9">setBreakIceEffect</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">/* 8063089C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#a7bda880279431145f117c7e149b15f8c">setWallHitEffect</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">/* 80630A9C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#a3e39bc89fda50b6bc9863d13a62c165e">setChillEffect</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">/* 80630BF0 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#af9554b245d464080511a22d1eb5f5f90">setApperEffect</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">/* 80630CA0 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#a623958aa349a1c4112b98a94d3d3a8a8">setApperEffect2</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="comment">/* 80630DD8 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#ae6fe2580f3faaa8acc01dcfccf46c35a">demo_skip</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="comment">/* 80630E3C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#aa559457ea2739631eaba78ca472214fc">DemoSkipCallBack</a>(<span class="keywordtype">void</span>*, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">/* 80630E70 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#a6ef2625f80b855732208f7cf6356fcc3">setYoMessage</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">/* 80630EAC */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#a6953c99d9666642ef4aaafd27b982483">doYoMessage</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment">/* 80630F28 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#a040aee8a5a8c6d26b0e82f57fdaed85c">executeOpening</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">/* 80632598 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#ad64633ef648ba2605f49fe85c9a3be80">reflectFreeMove</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="comment">/* 80632660 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#aa3c6744316549b84f32ea519ea20cf0c">calcFreeMove</a>(<a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="comment">/* 8063290C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#a72915ee997e701aeabd475355a6728e1">setReflectAngle</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">/* 806329CC */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#a02d2ab5420abfd49ed2de2f9b0ed8ee9">executeChase</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">/* 806331CC */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#a0cded06287a835a2730a18ad67492f7f">executeSeriousDemo</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="comment">/* 80633EDC */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#ab6113c569d24189882c0ffdfb4a25c27">checkIcecleRevival</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="comment">/* 80633F50 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#ab0f3cb8397a0b8cc234e44531018daab">createIcecleRevival</a>(<a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="comment">/* 80634040 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#a8b4c80e531a42463684d8923dcbf580c">executeJump</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="comment">/* 80634548 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#ab1b0bc7894f9aeb36bb3401a4154cafd">executeAttackIce</a>();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">/* 8063476C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#a6d6c70f94097a0d3f44c692a8dd01bf4">executeAttackYose</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">/* 80634CEC */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#a93074866269c34daf2d6d10140c192f1">checkDamageWithIceBreak</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment">/* 80634E04 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#a849e9937a235e60a020de680351da4e5">executeAttackBody</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">/* 806352C8 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#a6f4fe298483a5a49f341e2729de9173b">executeDemoRevival</a>();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="comment">/* 80635798 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#ae8e6459e0aca836036213979b982cc30">executeDamage</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">/* 80635ABC */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#a346f435a5ab65b4d5d1842da6404a1a5">executeDeath</a>();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="comment">/* 80636E9C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#a5546278c7ad3ac96f7b99c31405170e4">reviseIceCenterPos</a>(<a class="code hl_struct" href="structcXyz.html">cXyz</a>*);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="comment">/* 80637048 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#ac3a80a6b00c7ad6397e143e9d7e3f433">calcPlayerBufPos</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">/* 806374BC */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#a8d95e59bed7d513d14045c33bfdbebd6">action</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">/* 80637990 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#a0650e0616c044518cd488fdb30662bae">mtx_set</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">/* 80637B30 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#af17373119b7f92e7892e75bdd9a26428">cc_set</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="comment">/* 80637E10 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#a072f798097b75699285e694992496285">execute</a>();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment">/* 80637FC8 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#aa04554d78146bce6d29027ce93eb5cdc">_delete</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">/* 806380F8 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#ae8b816f53950dbdb9370d8b1f4809b23">CreateHeap</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="comment">/* 806388A0 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#a13b569764a7da3c6d2522b8b62f6a221">CreateHeap2</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="comment">/* 806389C0 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaB__YO__c.html#af8a272dec02afae61d73026dfd9e7b49">create</a>();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classdaB__YO__c.html#a95b1cf85c1e2dac87091f38159235cae">   64</a></span>    <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_function" href="classdaB__YO__c.html#a95b1cf85c1e2dac87091f38159235cae">getModelNo</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="classdaB__YO__c.html#a6ec11850bf624a617cfedbbafc2a56ad">mModelNo</a>;}</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classdaB__YO__c.html#a638e45134749db2dffd5b8aa2122e537">   65</a></span>    <a class="code hl_typedef" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> <a class="code hl_function" href="classdaB__YO__c.html#a638e45134749db2dffd5b8aa2122e537">getFrizadRollAngle</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="classdaB__YO__c.html#adeb81ccca078ead277035ec3388aa55c">mRollAngle</a>;}</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classdaB__YO__c.html#a3a2b7d7de41e7b0efbf1a6892720f71d">   66</a></span>    <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="code hl_function" href="classdaB__YO__c.html#a3a2b7d7de41e7b0efbf1a6892720f71d">getModeRarius</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="classdaB__YO__c.html#a44a69b7d087b589504de8e87eac5a8b8">mModeRarius</a>;}</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classdaB__YO__c.html#a607d8d0ba0537b5a185eda7320e8a2f6">   67</a></span>    <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_function" href="classdaB__YO__c.html#a607d8d0ba0537b5a185eda7320e8a2f6">getFrizadAttack</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="classdaB__YO__c.html#a55b13e9410f03ef2306495a786dab491">mFrizadAttack</a>;}</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classdaB__YO__c.html#a704b4eb0b23dca3ce53ba48999cef717">   70</a></span>    <span class="comment">/* 0x5AC */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaB__YO__c.html#a704b4eb0b23dca3ce53ba48999cef717">field_0x5ac</a>[0xF54 - 0x5AC];</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classdaB__YO__c.html#a44a69b7d087b589504de8e87eac5a8b8">   71</a></span>    <span class="comment">/* 0xF54 */</span> <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="code hl_variable" href="classdaB__YO__c.html#a44a69b7d087b589504de8e87eac5a8b8">mModeRarius</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classdaB__YO__c.html#a6a71931944ffea2757bc8de025a23f16">   72</a></span>    <span class="comment">/* 0xF58 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaB__YO__c.html#a6a71931944ffea2757bc8de025a23f16">field_0xf58</a>[0xF5C - 0xF58];</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classdaB__YO__c.html#adeb81ccca078ead277035ec3388aa55c">   73</a></span>    <span class="comment">/* 0xF5C */</span> <a class="code hl_typedef" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> <a class="code hl_variable" href="classdaB__YO__c.html#adeb81ccca078ead277035ec3388aa55c">mRollAngle</a>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classdaB__YO__c.html#a48caf4bd8855ed005f9f644d9dafab40">   74</a></span>    <span class="comment">/* 0xF5E */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaB__YO__c.html#a48caf4bd8855ed005f9f644d9dafab40">field_0xf5e</a>[0xFA8 - 0xF5E];</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classdaB__YO__c.html#a6ec11850bf624a617cfedbbafc2a56ad">   75</a></span>    <span class="comment">/* 0xFA8 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaB__YO__c.html#a6ec11850bf624a617cfedbbafc2a56ad">mModelNo</a>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="classdaB__YO__c.html#a96becb347cb9ccdd8d64c88b612d8ec8">   76</a></span>    <span class="comment">/* 0xFA9 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaB__YO__c.html#a96becb347cb9ccdd8d64c88b612d8ec8">field_0xfa9</a>[0xFAD - 0xFA9];</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classdaB__YO__c.html#a55b13e9410f03ef2306495a786dab491">   77</a></span>    <span class="comment">/* 0xFAD */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaB__YO__c.html#a55b13e9410f03ef2306495a786dab491">mFrizadAttack</a>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>};</div>
+</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="foldopen" id="foldopen00080" data-start="{" data-end="};">
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="structdaB__YO__HIO__c.html">   80</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structdaB__YO__HIO__c.html">daB_YO_HIO_c</a> {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="comment">/* 8062F46C */</span> <a class="code hl_function" href="structdaB__YO__HIO__c.html#af0c03f3147dc5fecaf7fcc51e357b539">daB_YO_HIO_c</a>();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="comment">/* 806395E4 */</span> <a class="code hl_function" href="structdaB__YO__HIO__c.html#a64d1e6f783a6bd78e6cee1912a23cce3">~daB_YO_HIO_c</a>();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>};</div>
+</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="foldopen" id="foldopen00085" data-start="{" data-end="};">
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="structdaB__YOI__c.html">   85</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structdaB__YOI__c.html">daB_YOI_c</a> {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="comment">/* 8063A480 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structdaB__YOI__c.html#ae4b70113fcb59aa62e7a4ead82e65a20">setOperate</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>};</div>
+</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#endif </span><span class="comment">/* D_A_B_YO_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassdaB__YO__c_html"><div class="ttname"><a href="classdaB__YO__c.html">daB_YO_c</a></div><div class="ttdoc">Blizzeta.</div><div class="ttdef"><b>Definition</b> d_a_b_yo.h:15</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a02d2ab5420abfd49ed2de2f9b0ed8ee9"><div class="ttname"><a href="classdaB__YO__c.html#a02d2ab5420abfd49ed2de2f9b0ed8ee9">daB_YO_c::executeChase</a></div><div class="ttdeci">void executeChase()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:1723</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a040aee8a5a8c6d26b0e82f57fdaed85c"><div class="ttname"><a href="classdaB__YO__c.html#a040aee8a5a8c6d26b0e82f57fdaed85c">daB_YO_c::executeOpening</a></div><div class="ttdeci">void executeOpening()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:1241</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a0650e0616c044518cd488fdb30662bae"><div class="ttname"><a href="classdaB__YO__c.html#a0650e0616c044518cd488fdb30662bae">daB_YO_c::mtx_set</a></div><div class="ttdeci">void mtx_set()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:2217</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a072f798097b75699285e694992496285"><div class="ttname"><a href="classdaB__YO__c.html#a072f798097b75699285e694992496285">daB_YO_c::execute</a></div><div class="ttdeci">void execute()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:2245</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a0cded06287a835a2730a18ad67492f7f"><div class="ttname"><a href="classdaB__YO__c.html#a0cded06287a835a2730a18ad67492f7f">daB_YO_c::executeSeriousDemo</a></div><div class="ttdeci">void executeSeriousDemo()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:1832</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a13b569764a7da3c6d2522b8b62f6a221"><div class="ttname"><a href="classdaB__YO__c.html#a13b569764a7da3c6d2522b8b62f6a221">daB_YO_c::CreateHeap2</a></div><div class="ttdeci">void CreateHeap2()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:2331</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a2472e75bc44055e65d63a7ef2028312f"><div class="ttname"><a href="classdaB__YO__c.html#a2472e75bc44055e65d63a7ef2028312f">daB_YO_c::setIcicleSubNumber</a></div><div class="ttdeci">void setIcicleSubNumber()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:949</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a346f435a5ab65b4d5d1842da6404a1a5"><div class="ttname"><a href="classdaB__YO__c.html#a346f435a5ab65b4d5d1842da6404a1a5">daB_YO_c::executeDeath</a></div><div class="ttdeci">void executeDeath()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:2110</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a3850b14c94dd4be678d8d7d87fe4049d"><div class="ttname"><a href="classdaB__YO__c.html#a3850b14c94dd4be678d8d7d87fe4049d">daB_YO_c::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:823</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a3a2b7d7de41e7b0efbf1a6892720f71d"><div class="ttname"><a href="classdaB__YO__c.html#a3a2b7d7de41e7b0efbf1a6892720f71d">daB_YO_c::getModeRarius</a></div><div class="ttdeci">f32 getModeRarius()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.h:66</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a3bf1afbfa53dab692395410685c590ce"><div class="ttname"><a href="classdaB__YO__c.html#a3bf1afbfa53dab692395410685c590ce">daB_YO_c::setIcicleOperate</a></div><div class="ttdeci">void setIcicleOperate(int)</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:939</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a3e39bc89fda50b6bc9863d13a62c165e"><div class="ttname"><a href="classdaB__YO__c.html#a3e39bc89fda50b6bc9863d13a62c165e">daB_YO_c::setChillEffect</a></div><div class="ttdeci">void setChillEffect()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:1125</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a44a69b7d087b589504de8e87eac5a8b8"><div class="ttname"><a href="classdaB__YO__c.html#a44a69b7d087b589504de8e87eac5a8b8">daB_YO_c::mModeRarius</a></div><div class="ttdeci">f32 mModeRarius</div><div class="ttdef"><b>Definition</b> d_a_b_yo.h:71</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a48caf4bd8855ed005f9f644d9dafab40"><div class="ttname"><a href="classdaB__YO__c.html#a48caf4bd8855ed005f9f644d9dafab40">daB_YO_c::field_0xf5e</a></div><div class="ttdeci">u8 field_0xf5e[0xFA8 - 0xF5E]</div><div class="ttdef"><b>Definition</b> d_a_b_yo.h:74</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a4f4b2ce691cbd5e812e63c66d28db8c1"><div class="ttname"><a href="classdaB__YO__c.html#a4f4b2ce691cbd5e812e63c66d28db8c1">daB_YO_c::onIceBreak</a></div><div class="ttdeci">void onIceBreak(u16)</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:854</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a5546278c7ad3ac96f7b99c31405170e4"><div class="ttname"><a href="classdaB__YO__c.html#a5546278c7ad3ac96f7b99c31405170e4">daB_YO_c::reviseIceCenterPos</a></div><div class="ttdeci">void reviseIceCenterPos(cXyz *)</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:2128</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a55b13e9410f03ef2306495a786dab491"><div class="ttname"><a href="classdaB__YO__c.html#a55b13e9410f03ef2306495a786dab491">daB_YO_c::mFrizadAttack</a></div><div class="ttdeci">u8 mFrizadAttack</div><div class="ttdef"><b>Definition</b> d_a_b_yo.h:77</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a607d8d0ba0537b5a185eda7320e8a2f6"><div class="ttname"><a href="classdaB__YO__c.html#a607d8d0ba0537b5a185eda7320e8a2f6">daB_YO_c::getFrizadAttack</a></div><div class="ttdeci">u8 getFrizadAttack()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.h:67</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a623958aa349a1c4112b98a94d3d3a8a8"><div class="ttname"><a href="classdaB__YO__c.html#a623958aa349a1c4112b98a94d3d3a8a8">daB_YO_c::setApperEffect2</a></div><div class="ttdeci">void setApperEffect2()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:1145</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a638e45134749db2dffd5b8aa2122e537"><div class="ttname"><a href="classdaB__YO__c.html#a638e45134749db2dffd5b8aa2122e537">daB_YO_c::getFrizadRollAngle</a></div><div class="ttdeci">s16 getFrizadRollAngle()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.h:65</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a6953c99d9666642ef4aaafd27b982483"><div class="ttname"><a href="classdaB__YO__c.html#a6953c99d9666642ef4aaafd27b982483">daB_YO_c::doYoMessage</a></div><div class="ttdeci">void doYoMessage()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:1195</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a6a71931944ffea2757bc8de025a23f16"><div class="ttname"><a href="classdaB__YO__c.html#a6a71931944ffea2757bc8de025a23f16">daB_YO_c::field_0xf58</a></div><div class="ttdeci">u8 field_0xf58[0xF5C - 0xF58]</div><div class="ttdef"><b>Definition</b> d_a_b_yo.h:72</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a6d6c70f94097a0d3f44c692a8dd01bf4"><div class="ttname"><a href="classdaB__YO__c.html#a6d6c70f94097a0d3f44c692a8dd01bf4">daB_YO_c::executeAttackYose</a></div><div class="ttdeci">void executeAttackYose()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:1906</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a6ec11850bf624a617cfedbbafc2a56ad"><div class="ttname"><a href="classdaB__YO__c.html#a6ec11850bf624a617cfedbbafc2a56ad">daB_YO_c::mModelNo</a></div><div class="ttdeci">u8 mModelNo</div><div class="ttdef"><b>Definition</b> d_a_b_yo.h:75</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a6ef2625f80b855732208f7cf6356fcc3"><div class="ttname"><a href="classdaB__YO__c.html#a6ef2625f80b855732208f7cf6356fcc3">daB_YO_c::setYoMessage</a></div><div class="ttdeci">void setYoMessage(int)</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:1185</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a6f4fe298483a5a49f341e2729de9173b"><div class="ttname"><a href="classdaB__YO__c.html#a6f4fe298483a5a49f341e2729de9173b">daB_YO_c::executeDemoRevival</a></div><div class="ttdeci">void executeDemoRevival()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:1956</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a704b4eb0b23dca3ce53ba48999cef717"><div class="ttname"><a href="classdaB__YO__c.html#a704b4eb0b23dca3ce53ba48999cef717">daB_YO_c::field_0x5ac</a></div><div class="ttdeci">u8 field_0x5ac[0xF54 - 0x5AC]</div><div class="ttdef"><b>Definition</b> d_a_b_yo.h:70</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a7270491e6232cbd283d53193f655d991"><div class="ttname"><a href="classdaB__YO__c.html#a7270491e6232cbd283d53193f655d991">daB_YO_c::setLandingEffect</a></div><div class="ttdeci">void setLandingEffect(f32)</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:993</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a72915ee997e701aeabd475355a6728e1"><div class="ttname"><a href="classdaB__YO__c.html#a72915ee997e701aeabd475355a6728e1">daB_YO_c::setReflectAngle</a></div><div class="ttdeci">void setReflectAngle()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:1671</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a7bda880279431145f117c7e149b15f8c"><div class="ttname"><a href="classdaB__YO__c.html#a7bda880279431145f117c7e149b15f8c">daB_YO_c::setWallHitEffect</a></div><div class="ttdeci">void setWallHitEffect()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:1115</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a849e9937a235e60a020de680351da4e5"><div class="ttname"><a href="classdaB__YO__c.html#a849e9937a235e60a020de680351da4e5">daB_YO_c::executeAttackBody</a></div><div class="ttdeci">void executeAttackBody()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:1931</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a8b4c80e531a42463684d8923dcbf580c"><div class="ttname"><a href="classdaB__YO__c.html#a8b4c80e531a42463684d8923dcbf580c">daB_YO_c::executeJump</a></div><div class="ttdeci">void executeJump()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:1863</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a8d95e59bed7d513d14045c33bfdbebd6"><div class="ttname"><a href="classdaB__YO__c.html#a8d95e59bed7d513d14045c33bfdbebd6">daB_YO_c::action</a></div><div class="ttdeci">void action()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:2164</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a8dfdb50a417b49c6014b15e56eb63a57"><div class="ttname"><a href="classdaB__YO__c.html#a8dfdb50a417b49c6014b15e56eb63a57">daB_YO_c::setWindowBreakEffect</a></div><div class="ttdeci">void setWindowBreakEffect(int)</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:960</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a8f2403244596e31ba32608cf18d5e177"><div class="ttname"><a href="classdaB__YO__c.html#a8f2403244596e31ba32608cf18d5e177">daB_YO_c::damage_check</a></div><div class="ttdeci">void damage_check()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:898</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a93074866269c34daf2d6d10140c192f1"><div class="ttname"><a href="classdaB__YO__c.html#a93074866269c34daf2d6d10140c192f1">daB_YO_c::checkDamageWithIceBreak</a></div><div class="ttdeci">void checkDamageWithIceBreak()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:1921</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a95b1cf85c1e2dac87091f38159235cae"><div class="ttname"><a href="classdaB__YO__c.html#a95b1cf85c1e2dac87091f38159235cae">daB_YO_c::getModelNo</a></div><div class="ttdeci">u8 getModelNo()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.h:64</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_a96becb347cb9ccdd8d64c88b612d8ec8"><div class="ttname"><a href="classdaB__YO__c.html#a96becb347cb9ccdd8d64c88b612d8ec8">daB_YO_c::field_0xfa9</a></div><div class="ttdeci">u8 field_0xfa9[0xFAD - 0xFA9]</div><div class="ttdef"><b>Definition</b> d_a_b_yo.h:76</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_aa04554d78146bce6d29027ce93eb5cdc"><div class="ttname"><a href="classdaB__YO__c.html#aa04554d78146bce6d29027ce93eb5cdc">daB_YO_c::_delete</a></div><div class="ttdeci">void _delete()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:2280</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_aa3c6744316549b84f32ea519ea20cf0c"><div class="ttname"><a href="classdaB__YO__c.html#aa3c6744316549b84f32ea519ea20cf0c">daB_YO_c::calcFreeMove</a></div><div class="ttdeci">void calcFreeMove(f32)</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:1661</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_aa559457ea2739631eaba78ca472214fc"><div class="ttname"><a href="classdaB__YO__c.html#aa559457ea2739631eaba78ca472214fc">daB_YO_c::DemoSkipCallBack</a></div><div class="ttdeci">void DemoSkipCallBack(void *, int)</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:1175</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_ab0f3cb8397a0b8cc234e44531018daab"><div class="ttname"><a href="classdaB__YO__c.html#ab0f3cb8397a0b8cc234e44531018daab">daB_YO_c::createIcecleRevival</a></div><div class="ttdeci">void createIcecleRevival(u8)</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:1853</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_ab1b0bc7894f9aeb36bb3401a4154cafd"><div class="ttname"><a href="classdaB__YO__c.html#ab1b0bc7894f9aeb36bb3401a4154cafd">daB_YO_c::executeAttackIce</a></div><div class="ttdeci">void executeAttackIce()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:1881</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_ab6113c569d24189882c0ffdfb4a25c27"><div class="ttname"><a href="classdaB__YO__c.html#ab6113c569d24189882c0ffdfb4a25c27">daB_YO_c::checkIcecleRevival</a></div><div class="ttdeci">void checkIcecleRevival()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:1842</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_abc37899a9e701f48eeb7a041d26b7dfe"><div class="ttname"><a href="classdaB__YO__c.html#abc37899a9e701f48eeb7a041d26b7dfe">daB_YO_c::setHensinEffect</a></div><div class="ttdeci">void setHensinEffect()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:978</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_ac1ba65879f36e31a088450c973ead4fb"><div class="ttname"><a href="classdaB__YO__c.html#ac1ba65879f36e31a088450c973ead4fb">daB_YO_c::setActionMode</a></div><div class="ttdeci">void setActionMode(int, int)</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:888</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_ac34ec7ab09927f893df79a6d6a0bfed9"><div class="ttname"><a href="classdaB__YO__c.html#ac34ec7ab09927f893df79a6d6a0bfed9">daB_YO_c::setBreakIceEffect</a></div><div class="ttdeci">void setBreakIceEffect()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:1105</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_ac3a80a6b00c7ad6397e143e9d7e3f433"><div class="ttname"><a href="classdaB__YO__c.html#ac3a80a6b00c7ad6397e143e9d7e3f433">daB_YO_c::calcPlayerBufPos</a></div><div class="ttdeci">void calcPlayerBufPos()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:2146</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_ad64633ef648ba2605f49fe85c9a3be80"><div class="ttname"><a href="classdaB__YO__c.html#ad64633ef648ba2605f49fe85c9a3be80">daB_YO_c::reflectFreeMove</a></div><div class="ttdeci">void reflectFreeMove()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:1651</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_adeb81ccca078ead277035ec3388aa55c"><div class="ttname"><a href="classdaB__YO__c.html#adeb81ccca078ead277035ec3388aa55c">daB_YO_c::mRollAngle</a></div><div class="ttdeci">s16 mRollAngle</div><div class="ttdef"><b>Definition</b> d_a_b_yo.h:73</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_ae6fe2580f3faaa8acc01dcfccf46c35a"><div class="ttname"><a href="classdaB__YO__c.html#ae6fe2580f3faaa8acc01dcfccf46c35a">daB_YO_c::demo_skip</a></div><div class="ttdeci">void demo_skip(int)</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:1165</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_ae8b816f53950dbdb9370d8b1f4809b23"><div class="ttname"><a href="classdaB__YO__c.html#ae8b816f53950dbdb9370d8b1f4809b23">daB_YO_c::CreateHeap</a></div><div class="ttdeci">void CreateHeap()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:2300</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_ae8e6459e0aca836036213979b982cc30"><div class="ttname"><a href="classdaB__YO__c.html#ae8e6459e0aca836036213979b982cc30">daB_YO_c::executeDamage</a></div><div class="ttdeci">void executeDamage()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:1981</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_af17373119b7f92e7892e75bdd9a26428"><div class="ttname"><a href="classdaB__YO__c.html#af17373119b7f92e7892e75bdd9a26428">daB_YO_c::cc_set</a></div><div class="ttdeci">void cc_set()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:2235</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_af8a272dec02afae61d73026dfd9e7b49"><div class="ttname"><a href="classdaB__YO__c.html#af8a272dec02afae61d73026dfd9e7b49">daB_YO_c::create</a></div><div class="ttdeci">void create()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:2358</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_af9554b245d464080511a22d1eb5f5f90"><div class="ttname"><a href="classdaB__YO__c.html#af9554b245d464080511a22d1eb5f5f90">daB_YO_c::setApperEffect</a></div><div class="ttdeci">void setApperEffect()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:1135</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_afcf76831b4fc67cc5e553fb5e255a489"><div class="ttname"><a href="classdaB__YO__c.html#afcf76831b4fc67cc5e553fb5e255a489">daB_YO_c::setBck</a></div><div class="ttdeci">void setBck(int, u8, f32, f32)</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:878</div></div>
+<div class="ttc" id="aclassdaB__YO__c_html_afe1e18565577635ec9464515c19864ef"><div class="ttname"><a href="classdaB__YO__c.html#afe1e18565577635ec9464515c19864ef">daB_YO_c::setBreakFrizad</a></div><div class="ttdeci">void setBreakFrizad()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:929</div></div>
+<div class="ttc" id="aclassfopEn__enemy__c_html"><div class="ttname"><a href="classfopEn__enemy__c.html">fopEn_enemy_c</a></div><div class="ttdef"><b>Definition</b> f_op_actor.h:235</div></div>
+<div class="ttc" id="af__op__actor__mng_8h_html"><div class="ttname"><a href="f__op__actor__mng_8h.html">f_op_actor_mng.h</a></div></div>
+<div class="ttc" id="astructcXyz_html"><div class="ttname"><a href="structcXyz.html">cXyz</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:49</div></div>
+<div class="ttc" id="astructdaB__YOI__c_html"><div class="ttname"><a href="structdaB__YOI__c.html">daB_YOI_c</a></div><div class="ttdef"><b>Definition</b> d_a_b_yo.h:85</div></div>
+<div class="ttc" id="astructdaB__YOI__c_html_ae4b70113fcb59aa62e7a4ead82e65a20"><div class="ttname"><a href="structdaB__YOI__c.html#ae4b70113fcb59aa62e7a4ead82e65a20">daB_YOI_c::setOperate</a></div><div class="ttdeci">void setOperate(int)</div><div class="ttdef"><b>Definition</b> d_a_b_yo_ice.cpp:638</div></div>
+<div class="ttc" id="astructdaB__YO__HIO__c_html"><div class="ttname"><a href="structdaB__YO__HIO__c.html">daB_YO_HIO_c</a></div><div class="ttdef"><b>Definition</b> d_a_b_yo.h:80</div></div>
+<div class="ttc" id="astructdaB__YO__HIO__c_html_a64d1e6f783a6bd78e6cee1912a23cce3"><div class="ttname"><a href="structdaB__YO__HIO__c.html#a64d1e6f783a6bd78e6cee1912a23cce3">daB_YO_HIO_c::~daB_YO_HIO_c</a></div><div class="ttdeci">~daB_YO_HIO_c()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:2483</div></div>
+<div class="ttc" id="astructdaB__YO__HIO__c_html_af0c03f3147dc5fecaf7fcc51e357b539"><div class="ttname"><a href="structdaB__YO__HIO__c.html#af0c03f3147dc5fecaf7fcc51e357b539">daB_YO_HIO_c::daB_YO_HIO_c</a></div><div class="ttdeci">daB_YO_HIO_c()</div><div class="ttdef"><b>Definition</b> d_a_b_yo.cpp:791</div></div>
+<div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div></div>
+<div class="ttc" id="atypes_8h_html_a5f6906312a689f27d70e9d086649d3fd"><div class="ttname"><a href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a></div><div class="ttdeci">float f32</div><div class="ttdef"><b>Definition</b> types.h:22</div></div>
+<div class="ttc" id="atypes_8h_html_a5ffa4f640862b25ba6d4f635b78bdbe1"><div class="ttname"><a href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a></div><div class="ttdeci">signed short s16</div><div class="ttdef"><b>Definition</b> types.h:5</div></div>
+<div class="ttc" id="atypes_8h_html_a9e6c91d77e24643b888dbd1a1a590054"><div class="ttname"><a href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a></div><div class="ttdeci">unsigned short u16</div><div class="ttdef"><b>Definition</b> types.h:9</div></div>
+<div class="ttc" id="atypes_8h_html_aed742c436da53c1080638ce6ef7d13de"><div class="ttname"><a href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a></div><div class="ttdeci">unsigned char u8</div><div class="ttdef"><b>Definition</b> types.h:8</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d1e95842203b094e4f127fa85baf24b5.html">rel</a></li><li class="navelem"><a class="el" href="dir_244336746419795862f93731f1699860.html">d</a></li><li class="navelem"><a class="el" href="dir_b81c1d082692bb1b2b34ed3bfe8a0f4a.html">a</a></li><li class="navelem"><a class="el" href="dir_1bc2c6076309d5060e91ecc2fa0132ef.html">b</a></li><li class="navelem"><a class="el" href="dir_bbe3c45eb802b4d04f665d0fdb4723e2.html">d_a_b_yo</a></li><li class="navelem"><a class="el" href="d__a__b__yo_8h.html">d_a_b_yo.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

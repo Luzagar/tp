@@ -1,0 +1,1352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: dMenu_Fishing_c Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classdMenu__Fishing__c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="classdMenu__Fishing__c-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">dMenu_Fishing_c Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="d__menu__fishing_8h_source.html">d_menu_fishing.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for dMenu_Fishing_c:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classdMenu__Fishing__c__inherit__graph.svg" width="135" height="111"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Collaboration diagram for dMenu_Fishing_c:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classdMenu__Fishing__c__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ac5043dd7c32c29f420389e476edd4ccf" id="r_ac5043dd7c32c29f420389e476edd4ccf"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#ac5043dd7c32c29f420389e476edd4ccf">dMenu_Fishing_Status</a> { <a class="el" href="classdMenu__Fishing__c.html#ac5043dd7c32c29f420389e476edd4ccfad2a472e10ef9bb605dd72112c61da9c9">CLOSED</a> = 0
+, <a class="el" href="classdMenu__Fishing__c.html#ac5043dd7c32c29f420389e476edd4ccfa9c7b0c92da6957e962c0d8c2ead5d330">READY_OPEN</a> = 1
+, <a class="el" href="classdMenu__Fishing__c.html#ac5043dd7c32c29f420389e476edd4ccfa40e5c008393b4d2c8a82979e10f0bd98">READY_MOVE</a> = 2
+, <a class="el" href="classdMenu__Fishing__c.html#ac5043dd7c32c29f420389e476edd4ccfa59efb35ab9603895a2f8962d1c503800">READY_CLOSE</a> = 3
+ }</td></tr>
+<tr class="separator:ac5043dd7c32c29f420389e476edd4ccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a10f12bf2af276c87e7677115a8124c0a" id="r_a10f12bf2af276c87e7677115a8124c0a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#a10f12bf2af276c87e7677115a8124c0a">dMenu_Fishing_c</a> (<a class="el" href="structJKRExpHeap.html">JKRExpHeap</a> *, <a class="el" href="structSTControl.html">STControl</a> *, <a class="el" href="structCSTControl.html">CSTControl</a> *)</td></tr>
+<tr class="separator:a10f12bf2af276c87e7677115a8124c0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a785866cf5eff02f654e893025f8f89c5" id="r_a785866cf5eff02f654e893025f8f89c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#a785866cf5eff02f654e893025f8f89c5">_create</a> ()</td></tr>
+<tr class="separator:a785866cf5eff02f654e893025f8f89c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefa2c769274a43c423c9d47e230c51e8" id="r_aefa2c769274a43c423c9d47e230c51e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#aefa2c769274a43c423c9d47e230c51e8">_move</a> ()</td></tr>
+<tr class="separator:aefa2c769274a43c423c9d47e230c51e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33708166ca52aed85f040e7c990ca318" id="r_a33708166ca52aed85f040e7c990ca318"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#a33708166ca52aed85f040e7c990ca318">_draw</a> ()</td></tr>
+<tr class="separator:a33708166ca52aed85f040e7c990ca318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af70dbdd69e5028cdcbc38b14485cfbf6" id="r_af70dbdd69e5028cdcbc38b14485cfbf6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#af70dbdd69e5028cdcbc38b14485cfbf6">isSync</a> ()</td></tr>
+<tr class="separator:af70dbdd69e5028cdcbc38b14485cfbf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6a116978a6e6ab53d57e94031356a1d" id="r_ab6a116978a6e6ab53d57e94031356a1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#ab6a116978a6e6ab53d57e94031356a1d">init</a> ()</td></tr>
+<tr class="separator:ab6a116978a6e6ab53d57e94031356a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeeeafe6c4dbf7a8783d64ace23957706" id="r_aeeeafe6c4dbf7a8783d64ace23957706"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#aeeeafe6c4dbf7a8783d64ace23957706">_open</a> ()</td></tr>
+<tr class="separator:aeeeafe6c4dbf7a8783d64ace23957706"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d5a5907d352697af86832ce129886b4" id="r_a8d5a5907d352697af86832ce129886b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#a8d5a5907d352697af86832ce129886b4">_close</a> ()</td></tr>
+<tr class="separator:a8d5a5907d352697af86832ce129886b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab96d933b63c77719cacb515a568f1090" id="r_ab96d933b63c77719cacb515a568f1090"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#ab96d933b63c77719cacb515a568f1090">wait_init</a> ()</td></tr>
+<tr class="separator:ab96d933b63c77719cacb515a568f1090"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ffea58def66e8b5c13f452c3b0df782" id="r_a9ffea58def66e8b5c13f452c3b0df782"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#a9ffea58def66e8b5c13f452c3b0df782">wait_move</a> ()</td></tr>
+<tr class="separator:a9ffea58def66e8b5c13f452c3b0df782"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d95f33b58d3a24246bb3edcb4d631b9" id="r_a9d95f33b58d3a24246bb3edcb4d631b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#a9d95f33b58d3a24246bb3edcb4d631b9">screenSetBase</a> ()</td></tr>
+<tr class="separator:a9d95f33b58d3a24246bb3edcb4d631b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9be584915d8f2169f71c654b979b8f64" id="r_a9be584915d8f2169f71c654b979b8f64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#a9be584915d8f2169f71c654b979b8f64">screenSetDoIcon</a> ()</td></tr>
+<tr class="separator:a9be584915d8f2169f71c654b979b8f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e26d8b266c2dd4c2e652a3034edf781" id="r_a9e26d8b266c2dd4c2e652a3034edf781"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#a9e26d8b266c2dd4c2e652a3034edf781">setAButtonString</a> (<a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>)</td></tr>
+<tr class="separator:a9e26d8b266c2dd4c2e652a3034edf781"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a61c00327fc97c075e7454e47802c4c" id="r_a2a61c00327fc97c075e7454e47802c4c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#a2a61c00327fc97c075e7454e47802c4c">setBButtonString</a> (<a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>)</td></tr>
+<tr class="separator:a2a61c00327fc97c075e7454e47802c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a725ef56938b41fc81b650f1783dce656" id="r_a725ef56938b41fc81b650f1783dce656"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#a725ef56938b41fc81b650f1783dce656">getFigure</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>)</td></tr>
+<tr class="separator:a725ef56938b41fc81b650f1783dce656"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c497ec327d4c46160cc84d6107841fd" id="r_a4c497ec327d4c46160cc84d6107841fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#a4c497ec327d4c46160cc84d6107841fd">setFishParam</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>, <a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>, <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>)</td></tr>
+<tr class="separator:a4c497ec327d4c46160cc84d6107841fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9993af169210488a1be3d6daae576738" id="r_a9993af169210488a1be3d6daae576738"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#a9993af169210488a1be3d6daae576738">setHIO</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a>)</td></tr>
+<tr class="separator:a9993af169210488a1be3d6daae576738"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a842daf247e9ee8e9ef67d42678583ebe" id="r_a842daf247e9ee8e9ef67d42678583ebe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">virtual</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#a842daf247e9ee8e9ef67d42678583ebe">draw</a> ()</td></tr>
+<tr class="separator:a842daf247e9ee8e9ef67d42678583ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5a7072b21096755ec1b68456d96c15a" id="r_ae5a7072b21096755ec1b68456d96c15a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">virtual</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#ae5a7072b21096755ec1b68456d96c15a">~dMenu_Fishing_c</a> ()</td></tr>
+<tr class="separator:ae5a7072b21096755ec1b68456d96c15a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab447e98a1884a6136da6063dd96238b6" id="r_ab447e98a1884a6136da6063dd96238b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#ab447e98a1884a6136da6063dd96238b6">getStatus</a> ()</td></tr>
+<tr class="separator:ab447e98a1884a6136da6063dd96238b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_structdDlst__base__c"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structdDlst__base__c')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="structdDlst__base__c.html">dDlst_base_c</a></td></tr>
+<tr class="memitem:a26e27416830523b32e7066e76031fa73 inherit pub_methods_structdDlst__base__c" id="r_a26e27416830523b32e7066e76031fa73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdDlst__base__c.html#a26e27416830523b32e7066e76031fa73">draw</a> ()</td></tr>
+<tr class="separator:a26e27416830523b32e7066e76031fa73 inherit pub_methods_structdDlst__base__c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8039f48622af0d3c88dcdadefb9e793 inherit pub_methods_structdDlst__base__c" id="r_ae8039f48622af0d3c88dcdadefb9e793"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdDlst__base__c.html#ae8039f48622af0d3c88dcdadefb9e793">dDlst_base_c</a> ()</td></tr>
+<tr class="separator:ae8039f48622af0d3c88dcdadefb9e793 inherit pub_methods_structdDlst__base__c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26e27416830523b32e7066e76031fa73 inherit pub_methods_structdDlst__base__c" id="r_a26e27416830523b32e7066e76031fa73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdDlst__base__c.html#a26e27416830523b32e7066e76031fa73">draw</a> ()</td></tr>
+<tr class="separator:a26e27416830523b32e7066e76031fa73 inherit pub_methods_structdDlst__base__c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26e27416830523b32e7066e76031fa73 inherit pub_methods_structdDlst__base__c" id="r_a26e27416830523b32e7066e76031fa73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdDlst__base__c.html#a26e27416830523b32e7066e76031fa73">draw</a> ()</td></tr>
+<tr class="separator:a26e27416830523b32e7066e76031fa73 inherit pub_methods_structdDlst__base__c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab73507216423c73715044fef2bd035eb inherit pub_methods_structdDlst__base__c" id="r_ab73507216423c73715044fef2bd035eb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdDlst__base__c.html#ab73507216423c73715044fef2bd035eb">dDlst_base_c</a> ()</td></tr>
+<tr class="separator:ab73507216423c73715044fef2bd035eb inherit pub_methods_structdDlst__base__c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26e27416830523b32e7066e76031fa73 inherit pub_methods_structdDlst__base__c" id="r_a26e27416830523b32e7066e76031fa73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdDlst__base__c.html#a26e27416830523b32e7066e76031fa73">draw</a> ()</td></tr>
+<tr class="separator:a26e27416830523b32e7066e76031fa73 inherit pub_methods_structdDlst__base__c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26e27416830523b32e7066e76031fa73 inherit pub_methods_structdDlst__base__c" id="r_a26e27416830523b32e7066e76031fa73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdDlst__base__c.html#a26e27416830523b32e7066e76031fa73">draw</a> ()</td></tr>
+<tr class="separator:a26e27416830523b32e7066e76031fa73 inherit pub_methods_structdDlst__base__c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a234bfba5fcb01f87db8de8031665736a" id="r_a234bfba5fcb01f87db8de8031665736a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJKRExpHeap.html">JKRExpHeap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#a234bfba5fcb01f87db8de8031665736a">mpHeap</a></td></tr>
+<tr class="separator:a234bfba5fcb01f87db8de8031665736a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd4ee085e9114bf73188ea652129e76e" id="r_acd4ee085e9114bf73188ea652129e76e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJKRArchive.html">JKRArchive</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#acd4ee085e9114bf73188ea652129e76e">mpArchive</a></td></tr>
+<tr class="separator:acd4ee085e9114bf73188ea652129e76e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadeac0b64edd8a08b52ee5fdc02a25a2" id="r_aadeac0b64edd8a08b52ee5fdc02a25a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSTControl.html">STControl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#aadeac0b64edd8a08b52ee5fdc02a25a2">mpStick</a></td></tr>
+<tr class="separator:aadeac0b64edd8a08b52ee5fdc02a25a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed886d69ca812d56fc7c4f422e60160f" id="r_aed886d69ca812d56fc7c4f422e60160f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structCSTControl.html">CSTControl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#aed886d69ca812d56fc7c4f422e60160f">mpCStick</a></td></tr>
+<tr class="separator:aed886d69ca812d56fc7c4f422e60160f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4353371adc50e69782006c88c20c72cc" id="r_a4353371adc50e69782006c88c20c72cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmDoDvdThd__mountArchive__c.html">mDoDvdThd_mountArchive_c</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#a4353371adc50e69782006c88c20c72cc">mpMount</a></td></tr>
+<tr class="separator:a4353371adc50e69782006c88c20c72cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fed2c7e7f44002c876f368a35ed427c" id="r_a0fed2c7e7f44002c876f368a35ed427c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJ2DScreen.html">J2DScreen</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#a0fed2c7e7f44002c876f368a35ed427c">mpScreen</a></td></tr>
+<tr class="separator:a0fed2c7e7f44002c876f368a35ed427c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf1c19ad58c313f05a75011d53977867" id="r_abf1c19ad58c313f05a75011d53977867"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJ2DScreen.html">J2DScreen</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#abf1c19ad58c313f05a75011d53977867">mpIconScreen</a></td></tr>
+<tr class="separator:abf1c19ad58c313f05a75011d53977867"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affbffc30461f76f4439d5023cda2dc69" id="r_affbffc30461f76f4439d5023cda2dc69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJ2DTextBox.html">J2DTextBox</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#affbffc30461f76f4439d5023cda2dc69">mpAButtonString</a> [5]</td></tr>
+<tr class="separator:affbffc30461f76f4439d5023cda2dc69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a718b952821ef578c8338ac77e0050e55" id="r_a718b952821ef578c8338ac77e0050e55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJ2DTextBox.html">J2DTextBox</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#a718b952821ef578c8338ac77e0050e55">mpBButtonString</a> [5]</td></tr>
+<tr class="separator:a718b952821ef578c8338ac77e0050e55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c16bcccca8ed2aa15eedd1c678b0067" id="r_a7c16bcccca8ed2aa15eedd1c678b0067"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structCPaneMgr.html">CPaneMgr</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#a7c16bcccca8ed2aa15eedd1c678b0067">mpParent</a></td></tr>
+<tr class="separator:a7c16bcccca8ed2aa15eedd1c678b0067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a518153f266a7902dd8fdf5be60a0cecc" id="r_a518153f266a7902dd8fdf5be60a0cecc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structCPaneMgr.html">CPaneMgr</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#a518153f266a7902dd8fdf5be60a0cecc">mpFishParent</a> [<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">MAX_FINDABLE_FISHES</a>]</td></tr>
+<tr class="separator:a518153f266a7902dd8fdf5be60a0cecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af040b1ce48ee51f5f76f327f758022c9" id="r_af040b1ce48ee51f5f76f327f758022c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structCPaneMgr.html">CPaneMgr</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#af040b1ce48ee51f5f76f327f758022c9">mpFishParts</a> [6][6]</td></tr>
+<tr class="separator:af040b1ce48ee51f5f76f327f758022c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63a2bc156c58fa2bba2256455f58c56c" id="r_a63a2bc156c58fa2bba2256455f58c56c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structCPaneMgr.html">CPaneMgr</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#a63a2bc156c58fa2bba2256455f58c56c">mpFishInfoParent</a> [2]</td></tr>
+<tr class="separator:a63a2bc156c58fa2bba2256455f58c56c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab598e81d7d6557424ca37d33b614338e" id="r_ab598e81d7d6557424ca37d33b614338e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structCPaneMgr.html">CPaneMgr</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#ab598e81d7d6557424ca37d33b614338e">mpButtonAB</a> [2]</td></tr>
+<tr class="separator:ab598e81d7d6557424ca37d33b614338e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf78d234df30d9d6f593756555d9a694" id="r_aaf78d234df30d9d6f593756555d9a694"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structCPaneMgr.html">CPaneMgr</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#aaf78d234df30d9d6f593756555d9a694">mpButtonText</a> [2]</td></tr>
+<tr class="separator:aaf78d234df30d9d6f593756555d9a694"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae99af14dedf7afc12129c263cecb643e" id="r_ae99af14dedf7afc12129c263cecb643e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJ2DTextBox.html">J2DTextBox</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#ae99af14dedf7afc12129c263cecb643e">field_0x10c</a> [2][6]</td></tr>
+<tr class="separator:ae99af14dedf7afc12129c263cecb643e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbfbfede10eb1221550e009ae89526be" id="r_adbfbfede10eb1221550e009ae89526be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJ2DTextBox.html">J2DTextBox</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#adbfbfede10eb1221550e009ae89526be">field_0x13c</a> [2][6]</td></tr>
+<tr class="separator:adbfbfede10eb1221550e009ae89526be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5089000a348956cfbd3a551fbfb1424" id="r_ad5089000a348956cfbd3a551fbfb1424"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJ2DTextBox.html">J2DTextBox</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#ad5089000a348956cfbd3a551fbfb1424">field_0x16c</a> [2][6]</td></tr>
+<tr class="separator:ad5089000a348956cfbd3a551fbfb1424"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19ea4cbe0c71093b554ea80b23575b57" id="r_a19ea4cbe0c71093b554ea80b23575b57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJ2DTextBox.html">J2DTextBox</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#a19ea4cbe0c71093b554ea80b23575b57">field_0x19c</a> [2][6]</td></tr>
+<tr class="separator:a19ea4cbe0c71093b554ea80b23575b57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f02d5d320d2841de00b873b0019b4f3" id="r_a3f02d5d320d2841de00b873b0019b4f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJ2DTextBox.html">J2DTextBox</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#a3f02d5d320d2841de00b873b0019b4f3">mpFishNameString</a> [<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">MAX_FINDABLE_FISHES</a>]</td></tr>
+<tr class="separator:a3f02d5d320d2841de00b873b0019b4f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab46a2c15fd859e83fc0bae8daffd87c5" id="r_ab46a2c15fd859e83fc0bae8daffd87c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJ2DTextBox.html">J2DTextBox</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#ab46a2c15fd859e83fc0bae8daffd87c5">mpInfoLargestString</a></td></tr>
+<tr class="separator:ab46a2c15fd859e83fc0bae8daffd87c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1977a70fe2f0c687e5bf58366b308424" id="r_a1977a70fe2f0c687e5bf58366b308424"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJ2DTextBox.html">J2DTextBox</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#a1977a70fe2f0c687e5bf58366b308424">mpInfoNumCaughtString</a></td></tr>
+<tr class="separator:a1977a70fe2f0c687e5bf58366b308424"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08d49be6d7ed35aea1190fa58f26c3c6" id="r_a08d49be6d7ed35aea1190fa58f26c3c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJ2DTextBox.html">J2DTextBox</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#a08d49be6d7ed35aea1190fa58f26c3c6">field_0x1ec</a></td></tr>
+<tr class="separator:a08d49be6d7ed35aea1190fa58f26c3c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9bf968942ea9e51dc3cb0c5de36e7e9" id="r_ae9bf968942ea9e51dc3cb0c5de36e7e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJ2DPicture.html">J2DPicture</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#ae9bf968942ea9e51dc3cb0c5de36e7e9">mpBlackTex</a></td></tr>
+<tr class="separator:ae9bf968942ea9e51dc3cb0c5de36e7e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1db60d3b5be4e36bd6febd93eda6fe05" id="r_a1db60d3b5be4e36bd6febd93eda6fe05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdMsgString__c.html">dMsgString_c</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#a1db60d3b5be4e36bd6febd93eda6fe05">mpString</a></td></tr>
+<tr class="separator:a1db60d3b5be4e36bd6febd93eda6fe05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98bc501cdda8262327be3e553807ba9f" id="r_a98bc501cdda8262327be3e553807ba9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#a98bc501cdda8262327be3e553807ba9f">mFishListScreenFrames</a></td></tr>
+<tr class="separator:a98bc501cdda8262327be3e553807ba9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e0b47c91d8a4556f3919c157b10b27d" id="r_a7e0b47c91d8a4556f3919c157b10b27d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#a7e0b47c91d8a4556f3919c157b10b27d">mStatus</a></td></tr>
+<tr class="separator:a7e0b47c91d8a4556f3919c157b10b27d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e3409a5b4f7dc239793def431709e77" id="r_a6e3409a5b4f7dc239793def431709e77"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdMenu__Fishing__c.html#a6e3409a5b4f7dc239793def431709e77">mProcess</a></td></tr>
+<tr class="separator:a6e3409a5b4f7dc239793def431709e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="ac5043dd7c32c29f420389e476edd4ccf" name="ac5043dd7c32c29f420389e476edd4ccf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5043dd7c32c29f420389e476edd4ccf">&#9670;&#160;</a></span>dMenu_Fishing_Status</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">enum</a> <a class="el" href="classdMenu__Fishing__c.html#ac5043dd7c32c29f420389e476edd4ccf">dMenu_Fishing_c::dMenu_Fishing_Status</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ac5043dd7c32c29f420389e476edd4ccfad2a472e10ef9bb605dd72112c61da9c9" name="ac5043dd7c32c29f420389e476edd4ccfad2a472e10ef9bb605dd72112c61da9c9"></a>CLOSED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac5043dd7c32c29f420389e476edd4ccfa9c7b0c92da6957e962c0d8c2ead5d330" name="ac5043dd7c32c29f420389e476edd4ccfa9c7b0c92da6957e962c0d8c2ead5d330"></a>READY_OPEN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac5043dd7c32c29f420389e476edd4ccfa40e5c008393b4d2c8a82979e10f0bd98" name="ac5043dd7c32c29f420389e476edd4ccfa40e5c008393b4d2c8a82979e10f0bd98"></a>READY_MOVE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac5043dd7c32c29f420389e476edd4ccfa59efb35ab9603895a2f8962d1c503800" name="ac5043dd7c32c29f420389e476edd4ccfa59efb35ab9603895a2f8962d1c503800"></a>READY_CLOSE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a10f12bf2af276c87e7677115a8124c0a" name="a10f12bf2af276c87e7677115a8124c0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10f12bf2af276c87e7677115a8124c0a">&#9670;&#160;</a></span>dMenu_Fishing_c()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dMenu_Fishing_c::dMenu_Fishing_c </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJKRExpHeap.html">JKRExpHeap</a> *&#160;</td>
+          <td class="paramname"><em>i_heap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structSTControl.html">STControl</a> *&#160;</td>
+          <td class="paramname"><em>i_stick</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structCSTControl.html">CSTControl</a> *&#160;</td>
+          <td class="paramname"><em>i_cStick</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae5a7072b21096755ec1b68456d96c15a" name="ae5a7072b21096755ec1b68456d96c15a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5a7072b21096755ec1b68456d96c15a">&#9670;&#160;</a></span>~dMenu_Fishing_c()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dMenu_Fishing_c::~dMenu_Fishing_c </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8d5a5907d352697af86832ce129886b4" name="a8d5a5907d352697af86832ce129886b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d5a5907d352697af86832ce129886b4">&#9670;&#160;</a></span>_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> dMenu_Fishing_c::_close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a785866cf5eff02f654e893025f8f89c5" name="a785866cf5eff02f654e893025f8f89c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a785866cf5eff02f654e893025f8f89c5">&#9670;&#160;</a></span>_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dMenu_Fishing_c::_create </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a33708166ca52aed85f040e7c990ca318" name="a33708166ca52aed85f040e7c990ca318"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33708166ca52aed85f040e7c990ca318">&#9670;&#160;</a></span>_draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dMenu_Fishing_c::_draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aefa2c769274a43c423c9d47e230c51e8" name="aefa2c769274a43c423c9d47e230c51e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefa2c769274a43c423c9d47e230c51e8">&#9670;&#160;</a></span>_move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dMenu_Fishing_c::_move </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeeeafe6c4dbf7a8783d64ace23957706" name="aeeeafe6c4dbf7a8783d64ace23957706"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeeeafe6c4dbf7a8783d64ace23957706">&#9670;&#160;</a></span>_open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> dMenu_Fishing_c::_open </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a842daf247e9ee8e9ef67d42678583ebe" name="a842daf247e9ee8e9ef67d42678583ebe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a842daf247e9ee8e9ef67d42678583ebe">&#9670;&#160;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">virtual</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dMenu_Fishing_c::draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="structdDlst__base__c.html#add5f47cba0e639aca904576c25e96e20">dDlst_base_c</a>.</p>
+
+</div>
+</div>
+<a id="a725ef56938b41fc81b650f1783dce656" name="a725ef56938b41fc81b650f1783dce656"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a725ef56938b41fc81b650f1783dce656">&#9670;&#160;</a></span>getFigure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> dMenu_Fishing_c::getFigure </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab447e98a1884a6136da6063dd96238b6" name="ab447e98a1884a6136da6063dd96238b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab447e98a1884a6136da6063dd96238b6">&#9670;&#160;</a></span>getStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> dMenu_Fishing_c::getStatus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab6a116978a6e6ab53d57e94031356a1d" name="ab6a116978a6e6ab53d57e94031356a1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6a116978a6e6ab53d57e94031356a1d">&#9670;&#160;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dMenu_Fishing_c::init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af70dbdd69e5028cdcbc38b14485cfbf6" name="af70dbdd69e5028cdcbc38b14485cfbf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af70dbdd69e5028cdcbc38b14485cfbf6">&#9670;&#160;</a></span>isSync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a> dMenu_Fishing_c::isSync </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d95f33b58d3a24246bb3edcb4d631b9" name="a9d95f33b58d3a24246bb3edcb4d631b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d95f33b58d3a24246bb3edcb4d631b9">&#9670;&#160;</a></span>screenSetBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dMenu_Fishing_c::screenSetBase </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9be584915d8f2169f71c654b979b8f64" name="a9be584915d8f2169f71c654b979b8f64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9be584915d8f2169f71c654b979b8f64">&#9670;&#160;</a></span>screenSetDoIcon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dMenu_Fishing_c::screenSetDoIcon </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e26d8b266c2dd4c2e652a3034edf781" name="a9e26d8b266c2dd4c2e652a3034edf781"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e26d8b266c2dd4c2e652a3034edf781">&#9670;&#160;</a></span>setAButtonString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dMenu_Fishing_c::setAButtonString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td>
+          <td class="paramname"><em>i_stringID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a61c00327fc97c075e7454e47802c4c" name="a2a61c00327fc97c075e7454e47802c4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a61c00327fc97c075e7454e47802c4c">&#9670;&#160;</a></span>setBButtonString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dMenu_Fishing_c::setBButtonString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td>
+          <td class="paramname"><em>i_stringID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4c497ec327d4c46160cc84d6107841fd" name="a4c497ec327d4c46160cc84d6107841fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c497ec327d4c46160cc84d6107841fd">&#9670;&#160;</a></span>setFishParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dMenu_Fishing_c::setFishParam </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td>
+          <td class="paramname"><em>i_fishIdx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td>
+          <td class="paramname"><em>i_fishCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td>
+          <td class="paramname"><em>i_fishSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9993af169210488a1be3d6daae576738" name="a9993af169210488a1be3d6daae576738"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9993af169210488a1be3d6daae576738">&#9670;&#160;</a></span>setHIO()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dMenu_Fishing_c::setHIO </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a>&#160;</td>
+          <td class="paramname"><em>i_useHIO</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab96d933b63c77719cacb515a568f1090" name="ab96d933b63c77719cacb515a568f1090"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab96d933b63c77719cacb515a568f1090">&#9670;&#160;</a></span>wait_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dMenu_Fishing_c::wait_init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9ffea58def66e8b5c13f452c3b0df782" name="a9ffea58def66e8b5c13f452c3b0df782"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ffea58def66e8b5c13f452c3b0df782">&#9670;&#160;</a></span>wait_move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dMenu_Fishing_c::wait_move </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae99af14dedf7afc12129c263cecb643e" name="ae99af14dedf7afc12129c263cecb643e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae99af14dedf7afc12129c263cecb643e">&#9670;&#160;</a></span>field_0x10c</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structJ2DTextBox.html">J2DTextBox</a>* dMenu_Fishing_c::field_0x10c[2][6]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adbfbfede10eb1221550e009ae89526be" name="adbfbfede10eb1221550e009ae89526be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbfbfede10eb1221550e009ae89526be">&#9670;&#160;</a></span>field_0x13c</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structJ2DTextBox.html">J2DTextBox</a>* dMenu_Fishing_c::field_0x13c[2][6]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5089000a348956cfbd3a551fbfb1424" name="ad5089000a348956cfbd3a551fbfb1424"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5089000a348956cfbd3a551fbfb1424">&#9670;&#160;</a></span>field_0x16c</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structJ2DTextBox.html">J2DTextBox</a>* dMenu_Fishing_c::field_0x16c[2][6]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a19ea4cbe0c71093b554ea80b23575b57" name="a19ea4cbe0c71093b554ea80b23575b57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19ea4cbe0c71093b554ea80b23575b57">&#9670;&#160;</a></span>field_0x19c</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structJ2DTextBox.html">J2DTextBox</a>* dMenu_Fishing_c::field_0x19c[2][6]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a08d49be6d7ed35aea1190fa58f26c3c6" name="a08d49be6d7ed35aea1190fa58f26c3c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08d49be6d7ed35aea1190fa58f26c3c6">&#9670;&#160;</a></span>field_0x1ec</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structJ2DTextBox.html">J2DTextBox</a>* dMenu_Fishing_c::field_0x1ec</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a98bc501cdda8262327be3e553807ba9f" name="a98bc501cdda8262327be3e553807ba9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98bc501cdda8262327be3e553807ba9f">&#9670;&#160;</a></span>mFishListScreenFrames</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> dMenu_Fishing_c::mFishListScreenFrames</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="affbffc30461f76f4439d5023cda2dc69" name="affbffc30461f76f4439d5023cda2dc69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affbffc30461f76f4439d5023cda2dc69">&#9670;&#160;</a></span>mpAButtonString</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structJ2DTextBox.html">J2DTextBox</a>* dMenu_Fishing_c::mpAButtonString[5]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd4ee085e9114bf73188ea652129e76e" name="acd4ee085e9114bf73188ea652129e76e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd4ee085e9114bf73188ea652129e76e">&#9670;&#160;</a></span>mpArchive</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structJKRArchive.html">JKRArchive</a>* dMenu_Fishing_c::mpArchive</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a718b952821ef578c8338ac77e0050e55" name="a718b952821ef578c8338ac77e0050e55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a718b952821ef578c8338ac77e0050e55">&#9670;&#160;</a></span>mpBButtonString</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structJ2DTextBox.html">J2DTextBox</a>* dMenu_Fishing_c::mpBButtonString[5]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae9bf968942ea9e51dc3cb0c5de36e7e9" name="ae9bf968942ea9e51dc3cb0c5de36e7e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9bf968942ea9e51dc3cb0c5de36e7e9">&#9670;&#160;</a></span>mpBlackTex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structJ2DPicture.html">J2DPicture</a>* dMenu_Fishing_c::mpBlackTex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab598e81d7d6557424ca37d33b614338e" name="ab598e81d7d6557424ca37d33b614338e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab598e81d7d6557424ca37d33b614338e">&#9670;&#160;</a></span>mpButtonAB</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structCPaneMgr.html">CPaneMgr</a>* dMenu_Fishing_c::mpButtonAB[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf78d234df30d9d6f593756555d9a694" name="aaf78d234df30d9d6f593756555d9a694"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf78d234df30d9d6f593756555d9a694">&#9670;&#160;</a></span>mpButtonText</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structCPaneMgr.html">CPaneMgr</a>* dMenu_Fishing_c::mpButtonText[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed886d69ca812d56fc7c4f422e60160f" name="aed886d69ca812d56fc7c4f422e60160f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed886d69ca812d56fc7c4f422e60160f">&#9670;&#160;</a></span>mpCStick</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structCSTControl.html">CSTControl</a>* dMenu_Fishing_c::mpCStick</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a63a2bc156c58fa2bba2256455f58c56c" name="a63a2bc156c58fa2bba2256455f58c56c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63a2bc156c58fa2bba2256455f58c56c">&#9670;&#160;</a></span>mpFishInfoParent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structCPaneMgr.html">CPaneMgr</a>* dMenu_Fishing_c::mpFishInfoParent[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3f02d5d320d2841de00b873b0019b4f3" name="a3f02d5d320d2841de00b873b0019b4f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f02d5d320d2841de00b873b0019b4f3">&#9670;&#160;</a></span>mpFishNameString</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structJ2DTextBox.html">J2DTextBox</a>* dMenu_Fishing_c::mpFishNameString[<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">MAX_FINDABLE_FISHES</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a518153f266a7902dd8fdf5be60a0cecc" name="a518153f266a7902dd8fdf5be60a0cecc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a518153f266a7902dd8fdf5be60a0cecc">&#9670;&#160;</a></span>mpFishParent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structCPaneMgr.html">CPaneMgr</a>* dMenu_Fishing_c::mpFishParent[<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">MAX_FINDABLE_FISHES</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af040b1ce48ee51f5f76f327f758022c9" name="af040b1ce48ee51f5f76f327f758022c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af040b1ce48ee51f5f76f327f758022c9">&#9670;&#160;</a></span>mpFishParts</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structCPaneMgr.html">CPaneMgr</a>* dMenu_Fishing_c::mpFishParts[6][6]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a234bfba5fcb01f87db8de8031665736a" name="a234bfba5fcb01f87db8de8031665736a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a234bfba5fcb01f87db8de8031665736a">&#9670;&#160;</a></span>mpHeap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structJKRExpHeap.html">JKRExpHeap</a>* dMenu_Fishing_c::mpHeap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf1c19ad58c313f05a75011d53977867" name="abf1c19ad58c313f05a75011d53977867"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf1c19ad58c313f05a75011d53977867">&#9670;&#160;</a></span>mpIconScreen</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structJ2DScreen.html">J2DScreen</a>* dMenu_Fishing_c::mpIconScreen</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab46a2c15fd859e83fc0bae8daffd87c5" name="ab46a2c15fd859e83fc0bae8daffd87c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab46a2c15fd859e83fc0bae8daffd87c5">&#9670;&#160;</a></span>mpInfoLargestString</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structJ2DTextBox.html">J2DTextBox</a>* dMenu_Fishing_c::mpInfoLargestString</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1977a70fe2f0c687e5bf58366b308424" name="a1977a70fe2f0c687e5bf58366b308424"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1977a70fe2f0c687e5bf58366b308424">&#9670;&#160;</a></span>mpInfoNumCaughtString</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structJ2DTextBox.html">J2DTextBox</a>* dMenu_Fishing_c::mpInfoNumCaughtString</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4353371adc50e69782006c88c20c72cc" name="a4353371adc50e69782006c88c20c72cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4353371adc50e69782006c88c20c72cc">&#9670;&#160;</a></span>mpMount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmDoDvdThd__mountArchive__c.html">mDoDvdThd_mountArchive_c</a>* dMenu_Fishing_c::mpMount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7c16bcccca8ed2aa15eedd1c678b0067" name="a7c16bcccca8ed2aa15eedd1c678b0067"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c16bcccca8ed2aa15eedd1c678b0067">&#9670;&#160;</a></span>mpParent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structCPaneMgr.html">CPaneMgr</a>* dMenu_Fishing_c::mpParent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e3409a5b4f7dc239793def431709e77" name="a6e3409a5b4f7dc239793def431709e77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e3409a5b4f7dc239793def431709e77">&#9670;&#160;</a></span>mProcess</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> dMenu_Fishing_c::mProcess</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0fed2c7e7f44002c876f368a35ed427c" name="a0fed2c7e7f44002c876f368a35ed427c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fed2c7e7f44002c876f368a35ed427c">&#9670;&#160;</a></span>mpScreen</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structJ2DScreen.html">J2DScreen</a>* dMenu_Fishing_c::mpScreen</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aadeac0b64edd8a08b52ee5fdc02a25a2" name="aadeac0b64edd8a08b52ee5fdc02a25a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadeac0b64edd8a08b52ee5fdc02a25a2">&#9670;&#160;</a></span>mpStick</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structSTControl.html">STControl</a>* dMenu_Fishing_c::mpStick</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1db60d3b5be4e36bd6febd93eda6fe05" name="a1db60d3b5be4e36bd6febd93eda6fe05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1db60d3b5be4e36bd6febd93eda6fe05">&#9670;&#160;</a></span>mpString</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdMsgString__c.html">dMsgString_c</a>* dMenu_Fishing_c::mpString</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e0b47c91d8a4556f3919c157b10b27d" name="a7e0b47c91d8a4556f3919c157b10b27d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e0b47c91d8a4556f3919c157b10b27d">&#9670;&#160;</a></span>mStatus</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> dMenu_Fishing_c::mStatus</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>include/d/menu/<a class="el" href="d__menu__fishing_8h_source.html">d_menu_fishing.h</a></li>
+<li>src/d/menu/<a class="el" href="d__menu__fishing_8cpp.html">d_menu_fishing.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classdMenu__Fishing__c.html">dMenu_Fishing_c</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

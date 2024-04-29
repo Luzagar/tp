@@ -1,0 +1,1081 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: include/f_pc/f_pc_manager.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('f__pc__manager_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">f_pc_manager.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="f__pc__manager_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ac75a952da717d2bcfbfdbaa70c717fb8" id="r_ac75a952da717d2bcfbfdbaa70c717fb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#ac75a952da717d2bcfbfdbaa70c717fb8">FastCreateReqFunc</a>) (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *)</td></tr>
+<tr class="separator:ac75a952da717d2bcfbfdbaa70c717fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a321b5706acfde21e6fbc629578c7788b" id="r_a321b5706acfde21e6fbc629578c7788b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#a321b5706acfde21e6fbc629578c7788b">fpcM_ManagementFunc</a>) (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>)</td></tr>
+<tr class="separator:a321b5706acfde21e6fbc629578c7788b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8004cac63b5f98215e58e198aa3ee7be" id="r_a8004cac63b5f98215e58e198aa3ee7be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#a8004cac63b5f98215e58e198aa3ee7be">fpcM_DrawIteraterFunc</a>) (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *, <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *)</td></tr>
+<tr class="separator:a8004cac63b5f98215e58e198aa3ee7be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a79e9f285d34216706a748fd7ba8941b7" id="r_a79e9f285d34216706a748fd7ba8941b7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="f__pc__manager_8h.html#a79e9f285d34216706a748fd7ba8941b7acbce6b3cf27a40952dc25b612784cb4f">fpcM_ERROR_PROCESS_ID_e</a> = -1
+ }</td></tr>
+<tr class="separator:a79e9f285d34216706a748fd7ba8941b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a205695b6da0b92154b8d623b3327e7bf" id="r_a205695b6da0b92154b8d623b3327e7bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#a205695b6da0b92154b8d623b3327e7bf">fpcM_GetID</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">pProc</a>)</td></tr>
+<tr class="separator:a205695b6da0b92154b8d623b3327e7bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab10eadf458cdb98cb39007d61c565ebd" id="r_ab10eadf458cdb98cb39007d61c565ebd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#ab10eadf458cdb98cb39007d61c565ebd">fpcM_GetName</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">pActor</a>)</td></tr>
+<tr class="separator:ab10eadf458cdb98cb39007d61c565ebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6876c9209c744219a70c7d0595e7be30" id="r_a6876c9209c744219a70c7d0595e7be30"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#a6876c9209c744219a70c7d0595e7be30">fpcM_GetParam</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">pActor</a>)</td></tr>
+<tr class="separator:a6876c9209c744219a70c7d0595e7be30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed597de46fb8b67bd4ddae11147b4c41" id="r_aed597de46fb8b67bd4ddae11147b4c41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#aed597de46fb8b67bd4ddae11147b4c41">fpcM_SetParam</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">p_actor</a>, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> param)</td></tr>
+<tr class="separator:aed597de46fb8b67bd4ddae11147b4c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc5b237c5e7fa6c13e4fbb930ad5c52b" id="r_afc5b237c5e7fa6c13e4fbb930ad5c52b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#afc5b237c5e7fa6c13e4fbb930ad5c52b">fpcM_GetProfName</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">pActor</a>)</td></tr>
+<tr class="separator:afc5b237c5e7fa6c13e4fbb930ad5c52b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab86fb246828e0d6a00e4e539d460dd34" id="r_ab86fb246828e0d6a00e4e539d460dd34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#ab86fb246828e0d6a00e4e539d460dd34">fpcM_Create</a> (<a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">procName</a>, <a class="el" href="f__pc__manager_8h.html#ac75a952da717d2bcfbfdbaa70c717fb8">FastCreateReqFunc</a> <a class="el" href="f__op__actor__mng_8h.html#a0b41bbbca8c43cd70ec786a2a4314295">createFunc</a>, <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *<a class="el" href="d__menu__collect_8cpp.html#a0d7b414ba8858c5707a752ce5308fbf1">process</a>)</td></tr>
+<tr class="separator:ab86fb246828e0d6a00e4e539d460dd34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58aebe192240b8b25661bc5b57e01488" id="r_a58aebe192240b8b25661bc5b57e01488"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#a58aebe192240b8b25661bc5b57e01488">fpcM_DrawPriority</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_0</a>)</td></tr>
+<tr class="separator:a58aebe192240b8b25661bc5b57e01488"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b9d342ea8c3ac64a3884738ef909ec9" id="r_a8b9d342ea8c3ac64a3884738ef909ec9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#a8b9d342ea8c3ac64a3884738ef909ec9">fpcM_ChangeLayerID</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *proc, <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">layerID</a>)</td></tr>
+<tr class="separator:a8b9d342ea8c3ac64a3884738ef909ec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef96b418f3d6f42be6fea2219ed4863a" id="r_aef96b418f3d6f42be6fea2219ed4863a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#aef96b418f3d6f42be6fea2219ed4863a">fpcM_IsJustType</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">type1</a>, <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">type2</a>)</td></tr>
+<tr class="separator:aef96b418f3d6f42be6fea2219ed4863a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41ad000f83f6b3686bae65503321360d" id="r_a41ad000f83f6b3686bae65503321360d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#a41ad000f83f6b3686bae65503321360d">fpcM_IsFirstCreating</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *proc)</td></tr>
+<tr class="separator:a41ad000f83f6b3686bae65503321360d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d0686bf61ab5c02703afbeb93bf962a" id="r_a5d0686bf61ab5c02703afbeb93bf962a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structprocess__profile__definition.html">process_profile_definition</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#a5d0686bf61ab5c02703afbeb93bf962a">fpcM_GetProfile</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *proc)</td></tr>
+<tr class="separator:a5d0686bf61ab5c02703afbeb93bf962a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f239ee8d5d2b80417b2d201bb7cbbd2" id="r_a7f239ee8d5d2b80417b2d201bb7cbbd2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#a7f239ee8d5d2b80417b2d201bb7cbbd2">fpcM_GetAppend</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *proc)</td></tr>
+<tr class="separator:a7f239ee8d5d2b80417b2d201bb7cbbd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b02ec130dd1891494548e61b11d8878" id="r_a3b02ec130dd1891494548e61b11d8878"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#a3b02ec130dd1891494548e61b11d8878">fpcM_IsExecuting</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">unsigned</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> <a class="el" href="d__a__npc__cd_8cpp.html#ab7710104fe587e0c8b4be67c675f3e0c">id</a>)</td></tr>
+<tr class="separator:a3b02ec130dd1891494548e61b11d8878"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f63f835415e9259753fbb320d0accab" id="r_a7f63f835415e9259753fbb320d0accab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#a7f63f835415e9259753fbb320d0accab">fpcM_LyJudge</a> (<a class="el" href="structprocess__node__class.html">process_node_class</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_node</a>, <a class="el" href="f__pc__layer__iter_8h.html#aa5b610bd876cb95acd22351264408d49">fpcLyIt_JudgeFunc</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_func</a>, <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_data</a>)</td></tr>
+<tr class="separator:a7f63f835415e9259753fbb320d0accab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b5e6edb9f8e5c16d338eb0468910a2d" id="r_a0b5e6edb9f8e5c16d338eb0468910a2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structbase__process__class.html">base_process_class</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#a0b5e6edb9f8e5c16d338eb0468910a2d">fpcM_Search</a> (<a class="el" href="f__pc__layer__iter_8h.html#aa5b610bd876cb95acd22351264408d49">fpcLyIt_JudgeFunc</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">pFunc</a>, <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">pUserData</a>)</td></tr>
+<tr class="separator:a0b5e6edb9f8e5c16d338eb0468910a2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4871a5ac499115809ef08141d31a235" id="r_aa4871a5ac499115809ef08141d31a235"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structbase__process__class.html">base_process_class</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#aa4871a5ac499115809ef08141d31a235">fpcM_SearchByName</a> (<a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> name)</td></tr>
+<tr class="separator:aa4871a5ac499115809ef08141d31a235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb5333f0cbc07bd056c34c2830e1480d" id="r_adb5333f0cbc07bd056c34c2830e1480d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#adb5333f0cbc07bd056c34c2830e1480d">fpcM_Draw</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">pProc</a>)</td></tr>
+<tr class="separator:adb5333f0cbc07bd056c34c2830e1480d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec0c814e61321b3ab5ff09b3de44f766" id="r_aec0c814e61321b3ab5ff09b3de44f766"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#aec0c814e61321b3ab5ff09b3de44f766">fpcM_DrawIterater</a> (<a class="el" href="f__pc__manager_8h.html#a8004cac63b5f98215e58e198aa3ee7be">fpcM_DrawIteraterFunc</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">pFunc</a>)</td></tr>
+<tr class="separator:aec0c814e61321b3ab5ff09b3de44f766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a842d4c8865d799672541db230f2877c6" id="r_a842d4c8865d799672541db230f2877c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#a842d4c8865d799672541db230f2877c6">fpcM_Execute</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">pProc</a>)</td></tr>
+<tr class="separator:a842d4c8865d799672541db230f2877c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4139412fc31678f197e2c005b473d4b" id="r_ae4139412fc31678f197e2c005b473d4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#ae4139412fc31678f197e2c005b473d4b">fpcM_Delete</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">pProc</a>)</td></tr>
+<tr class="separator:ae4139412fc31678f197e2c005b473d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa775592b7e8947714d2c3bc6d286bf57" id="r_aa775592b7e8947714d2c3bc6d286bf57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#aa775592b7e8947714d2c3bc6d286bf57">fpcM_IsCreating</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">unsigned</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">pID</a>)</td></tr>
+<tr class="separator:aa775592b7e8947714d2c3bc6d286bf57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37977777274d083f729c6fa037e8a554" id="r_a37977777274d083f729c6fa037e8a554"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#a37977777274d083f729c6fa037e8a554">fpcM_Management</a> (<a class="el" href="f__pc__manager_8h.html#a321b5706acfde21e6fbc629578c7788b">fpcM_ManagementFunc</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">pFunc1</a>, <a class="el" href="f__pc__manager_8h.html#a321b5706acfde21e6fbc629578c7788b">fpcM_ManagementFunc</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">pFunc2</a>)</td></tr>
+<tr class="separator:a37977777274d083f729c6fa037e8a554"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a13eb6088efce99289e289d22791ca2" id="r_a0a13eb6088efce99289e289d22791ca2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#a0a13eb6088efce99289e289d22791ca2">fpcM_Init</a> ()</td></tr>
+<tr class="separator:a0a13eb6088efce99289e289d22791ca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac1d0c4ce35eb09eddadc6c0a9267b31" id="r_aac1d0c4ce35eb09eddadc6c0a9267b31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structbase__process__class.html">base_process_class</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#aac1d0c4ce35eb09eddadc6c0a9267b31">fpcM_FastCreate</a> (<a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">pProcTypeID</a>, <a class="el" href="f__pc__manager_8h.html#ac75a952da717d2bcfbfdbaa70c717fb8">FastCreateReqFunc</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_2</a>, <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *param_3, <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">pData</a>)</td></tr>
+<tr class="separator:aac1d0c4ce35eb09eddadc6c0a9267b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6977346907e4dba137543cf36e502bbb" id="r_a6977346907e4dba137543cf36e502bbb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#a6977346907e4dba137543cf36e502bbb">fpcM_IsPause</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">pProc</a>, <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_2</a>)</td></tr>
+<tr class="separator:a6977346907e4dba137543cf36e502bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7f32a591d12532d98e7a898815c2b0a" id="r_ac7f32a591d12532d98e7a898815c2b0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#ac7f32a591d12532d98e7a898815c2b0a">fpcM_PauseEnable</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">pProc</a>, <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_2</a>)</td></tr>
+<tr class="separator:ac7f32a591d12532d98e7a898815c2b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c0b6bc76f721551849937d2b70f2e3a" id="r_a6c0b6bc76f721551849937d2b70f2e3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#a6c0b6bc76f721551849937d2b70f2e3a">fpcM_PauseDisable</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">pProc</a>, <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_2</a>)</td></tr>
+<tr class="separator:a6c0b6bc76f721551849937d2b70f2e3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa00c4d5b7c8b76017bd9dee52014c337" id="r_aa00c4d5b7c8b76017bd9dee52014c337"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__manager_8h.html#aa00c4d5b7c8b76017bd9dee52014c337">fpcM_JudgeInLayer</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">unsigned</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">pLayerID</a>, <a class="el" href="f__pc__create__iter_8h.html#abd33bb204004fc72dac813cfc0a4db47">fpcCtIt_JudgeFunc</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">pFunc</a>, <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">pUserData</a>)</td></tr>
+<tr class="separator:aa00c4d5b7c8b76017bd9dee52014c337"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ac75a952da717d2bcfbfdbaa70c717fb8" name="ac75a952da717d2bcfbfdbaa70c717fb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac75a952da717d2bcfbfdbaa70c717fb8">&#9670;&#160;</a></span>FastCreateReqFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>(* FastCreateReqFunc) (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8004cac63b5f98215e58e198aa3ee7be" name="a8004cac63b5f98215e58e198aa3ee7be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8004cac63b5f98215e58e198aa3ee7be">&#9670;&#160;</a></span>fpcM_DrawIteraterFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>(* fpcM_DrawIteraterFunc) (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *, <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a321b5706acfde21e6fbc629578c7788b" name="a321b5706acfde21e6fbc629578c7788b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a321b5706acfde21e6fbc629578c7788b">&#9670;&#160;</a></span>fpcM_ManagementFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>(* fpcM_ManagementFunc) (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a79e9f285d34216706a748fd7ba8941b7" name="a79e9f285d34216706a748fd7ba8941b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79e9f285d34216706a748fd7ba8941b7">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">anonymous</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">enum</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a79e9f285d34216706a748fd7ba8941b7acbce6b3cf27a40952dc25b612784cb4f" name="a79e9f285d34216706a748fd7ba8941b7acbce6b3cf27a40952dc25b612784cb4f"></a>fpcM_ERROR_PROCESS_ID_e&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a8b9d342ea8c3ac64a3884738ef909ec9" name="a8b9d342ea8c3ac64a3884738ef909ec9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b9d342ea8c3ac64a3884738ef909ec9">&#9670;&#160;</a></span>fpcM_ChangeLayerID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> fpcM_ChangeLayerID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td>
+          <td class="paramname"><em>proc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td>
+          <td class="paramname"><em>layerID</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab86fb246828e0d6a00e4e539d460dd34" name="ab86fb246828e0d6a00e4e539d460dd34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab86fb246828e0d6a00e4e539d460dd34">&#9670;&#160;</a></span>fpcM_Create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> fpcM_Create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
+          <td class="paramname"><em>procName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="f__pc__manager_8h.html#ac75a952da717d2bcfbfdbaa70c717fb8">FastCreateReqFunc</a>&#160;</td>
+          <td class="paramname"><em>createFunc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td>
+          <td class="paramname"><em>process</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae4139412fc31678f197e2c005b473d4b" name="ae4139412fc31678f197e2c005b473d4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4139412fc31678f197e2c005b473d4b">&#9670;&#160;</a></span>fpcM_Delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> fpcM_Delete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td>
+          <td class="paramname"><em>pProc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb5333f0cbc07bd056c34c2830e1480d" name="adb5333f0cbc07bd056c34c2830e1480d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb5333f0cbc07bd056c34c2830e1480d">&#9670;&#160;</a></span>fpcM_Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> fpcM_Draw </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td>
+          <td class="paramname"><em>i_proc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="f__pc__manager_8cpp.html">f_pc_manager.cpp</a> Framework - Process Manager </p>
+
+</div>
+</div>
+<a id="aec0c814e61321b3ab5ff09b3de44f766" name="aec0c814e61321b3ab5ff09b3de44f766"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec0c814e61321b3ab5ff09b3de44f766">&#9670;&#160;</a></span>fpcM_DrawIterater()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> fpcM_DrawIterater </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="f__pc__manager_8h.html#a8004cac63b5f98215e58e198aa3ee7be">fpcM_DrawIteraterFunc</a>&#160;</td>
+          <td class="paramname"><em>pFunc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a58aebe192240b8b25661bc5b57e01488" name="a58aebe192240b8b25661bc5b57e01488"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58aebe192240b8b25661bc5b57e01488">&#9670;&#160;</a></span>fpcM_DrawPriority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> fpcM_DrawPriority </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a842d4c8865d799672541db230f2877c6" name="a842d4c8865d799672541db230f2877c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a842d4c8865d799672541db230f2877c6">&#9670;&#160;</a></span>fpcM_Execute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> fpcM_Execute </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td>
+          <td class="paramname"><em>pProc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac1d0c4ce35eb09eddadc6c0a9267b31" name="aac1d0c4ce35eb09eddadc6c0a9267b31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac1d0c4ce35eb09eddadc6c0a9267b31">&#9670;&#160;</a></span>fpcM_FastCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structbase__process__class.html">base_process_class</a> * fpcM_FastCreate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
+          <td class="paramname"><em>pProcTypeID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="f__pc__manager_8h.html#ac75a952da717d2bcfbfdbaa70c717fb8">FastCreateReqFunc</a>&#160;</td>
+          <td class="paramname"><em>param_2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td>
+          <td class="paramname"><em>param_3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td>
+          <td class="paramname"><em>pData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7f239ee8d5d2b80417b2d201bb7cbbd2" name="a7f239ee8d5d2b80417b2d201bb7cbbd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f239ee8d5d2b80417b2d201bb7cbbd2">&#9670;&#160;</a></span>fpcM_GetAppend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> * fpcM_GetAppend </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td>
+          <td class="paramname"><em>proc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a205695b6da0b92154b8d623b3327e7bf" name="a205695b6da0b92154b8d623b3327e7bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a205695b6da0b92154b8d623b3327e7bf">&#9670;&#160;</a></span>fpcM_GetID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> fpcM_GetID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td>
+          <td class="paramname"><em>pProc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab10eadf458cdb98cb39007d61c565ebd" name="ab10eadf458cdb98cb39007d61c565ebd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab10eadf458cdb98cb39007d61c565ebd">&#9670;&#160;</a></span>fpcM_GetName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> fpcM_GetName </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td>
+          <td class="paramname"><em>pActor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6876c9209c744219a70c7d0595e7be30" name="a6876c9209c744219a70c7d0595e7be30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6876c9209c744219a70c7d0595e7be30">&#9670;&#160;</a></span>fpcM_GetParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> fpcM_GetParam </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td>
+          <td class="paramname"><em>pActor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d0686bf61ab5c02703afbeb93bf962a" name="a5d0686bf61ab5c02703afbeb93bf962a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d0686bf61ab5c02703afbeb93bf962a">&#9670;&#160;</a></span>fpcM_GetProfile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structprocess__profile__definition.html">process_profile_definition</a> * fpcM_GetProfile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td>
+          <td class="paramname"><em>proc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc5b237c5e7fa6c13e4fbb930ad5c52b" name="afc5b237c5e7fa6c13e4fbb930ad5c52b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc5b237c5e7fa6c13e4fbb930ad5c52b">&#9670;&#160;</a></span>fpcM_GetProfName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> fpcM_GetProfName </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td>
+          <td class="paramname"><em>pActor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0a13eb6088efce99289e289d22791ca2" name="a0a13eb6088efce99289e289d22791ca2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a13eb6088efce99289e289d22791ca2">&#9670;&#160;</a></span>fpcM_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> fpcM_Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa775592b7e8947714d2c3bc6d286bf57" name="aa775592b7e8947714d2c3bc6d286bf57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa775592b7e8947714d2c3bc6d286bf57">&#9670;&#160;</a></span>fpcM_IsCreating()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> fpcM_IsCreating </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">unsigned</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td>
+          <td class="paramname"><em>pID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b02ec130dd1891494548e61b11d8878" name="a3b02ec130dd1891494548e61b11d8878"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b02ec130dd1891494548e61b11d8878">&#9670;&#160;</a></span>fpcM_IsExecuting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> fpcM_IsExecuting </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">unsigned</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a41ad000f83f6b3686bae65503321360d" name="a41ad000f83f6b3686bae65503321360d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41ad000f83f6b3686bae65503321360d">&#9670;&#160;</a></span>fpcM_IsFirstCreating()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a> fpcM_IsFirstCreating </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td>
+          <td class="paramname"><em>proc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef96b418f3d6f42be6fea2219ed4863a" name="aef96b418f3d6f42be6fea2219ed4863a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef96b418f3d6f42be6fea2219ed4863a">&#9670;&#160;</a></span>fpcM_IsJustType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> fpcM_IsJustType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td>
+          <td class="paramname"><em>type1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td>
+          <td class="paramname"><em>type2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6977346907e4dba137543cf36e502bbb" name="a6977346907e4dba137543cf36e502bbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6977346907e4dba137543cf36e502bbb">&#9670;&#160;</a></span>fpcM_IsPause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> fpcM_IsPause </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td>
+          <td class="paramname"><em>pProc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa00c4d5b7c8b76017bd9dee52014c337" name="aa00c4d5b7c8b76017bd9dee52014c337"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa00c4d5b7c8b76017bd9dee52014c337">&#9670;&#160;</a></span>fpcM_JudgeInLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> * fpcM_JudgeInLayer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">unsigned</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td>
+          <td class="paramname"><em>pLayerID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="f__pc__create__iter_8h.html#abd33bb204004fc72dac813cfc0a4db47">fpcCtIt_JudgeFunc</a>&#160;</td>
+          <td class="paramname"><em>pFunc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td>
+          <td class="paramname"><em>pUserData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7f63f835415e9259753fbb320d0accab" name="a7f63f835415e9259753fbb320d0accab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f63f835415e9259753fbb320d0accab">&#9670;&#160;</a></span>fpcM_LyJudge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> * fpcM_LyJudge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structprocess__node__class.html">process_node_class</a> *&#160;</td>
+          <td class="paramname"><em>i_node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="f__pc__layer__iter_8h.html#aa5b610bd876cb95acd22351264408d49">fpcLyIt_JudgeFunc</a>&#160;</td>
+          <td class="paramname"><em>i_func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td>
+          <td class="paramname"><em>i_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a37977777274d083f729c6fa037e8a554" name="a37977777274d083f729c6fa037e8a554"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37977777274d083f729c6fa037e8a554">&#9670;&#160;</a></span>fpcM_Management()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> fpcM_Management </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="f__pc__manager_8h.html#a321b5706acfde21e6fbc629578c7788b">fpcM_ManagementFunc</a>&#160;</td>
+          <td class="paramname"><em>pFunc1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="f__pc__manager_8h.html#a321b5706acfde21e6fbc629578c7788b">fpcM_ManagementFunc</a>&#160;</td>
+          <td class="paramname"><em>pFunc2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c0b6bc76f721551849937d2b70f2e3a" name="a6c0b6bc76f721551849937d2b70f2e3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c0b6bc76f721551849937d2b70f2e3a">&#9670;&#160;</a></span>fpcM_PauseDisable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> fpcM_PauseDisable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td>
+          <td class="paramname"><em>pProc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7f32a591d12532d98e7a898815c2b0a" name="ac7f32a591d12532d98e7a898815c2b0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7f32a591d12532d98e7a898815c2b0a">&#9670;&#160;</a></span>fpcM_PauseEnable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> fpcM_PauseEnable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td>
+          <td class="paramname"><em>pProc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b5e6edb9f8e5c16d338eb0468910a2d" name="a0b5e6edb9f8e5c16d338eb0468910a2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b5e6edb9f8e5c16d338eb0468910a2d">&#9670;&#160;</a></span>fpcM_Search()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structbase__process__class.html">base_process_class</a> * fpcM_Search </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="f__pc__layer__iter_8h.html#aa5b610bd876cb95acd22351264408d49">fpcLyIt_JudgeFunc</a>&#160;</td>
+          <td class="paramname"><em>pFunc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td>
+          <td class="paramname"><em>pUserData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa4871a5ac499115809ef08141d31a235" name="aa4871a5ac499115809ef08141d31a235"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4871a5ac499115809ef08141d31a235">&#9670;&#160;</a></span>fpcM_SearchByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structbase__process__class.html">base_process_class</a> * fpcM_SearchByName </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed597de46fb8b67bd4ddae11147b4c41" name="aed597de46fb8b67bd4ddae11147b4c41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed597de46fb8b67bd4ddae11147b4c41">&#9670;&#160;</a></span>fpcM_SetParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> fpcM_SetParam </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td>
+          <td class="paramname"><em>p_actor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramname"><em>param</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_14c28d3bb977da9b21a3aa2d366ba228.html">f_pc</a></li><li class="navelem"><a class="el" href="f__pc__manager_8h.html">f_pc_manager.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+var classJKRExpHeap_1_1CMemBlock =
+[
+    [ "_isTempMemBlock", "classJKRExpHeap_1_1CMemBlock.html#a34f9f9bcf847bca9c8cece3aed7a7f85", null ],
+    [ "allocBack", "classJKRExpHeap_1_1CMemBlock.html#a0220214f9fb568ce597a93cf37558ed6", null ],
+    [ "allocFore", "classJKRExpHeap_1_1CMemBlock.html#a28c582f729f08249a43effb24234d1f0", null ],
+    [ "free", "classJKRExpHeap_1_1CMemBlock.html#adc4b0203f9048d46e2f993ac39db1903", null ],
+    [ "getAlignment", "classJKRExpHeap_1_1CMemBlock.html#a483be12cbe2a867a725071972302115a", null ],
+    [ "getBlock", "classJKRExpHeap_1_1CMemBlock.html#ac4ac485cccb49d2ec338d37515157f63", null ],
+    [ "getContent", "classJKRExpHeap_1_1CMemBlock.html#a80dc19b3a08cb88bbda95b6ddd23d8ff", null ],
+    [ "getGroupId", "classJKRExpHeap_1_1CMemBlock.html#a7d1c1e10e23bc8a4425b4563de9c466c", null ],
+    [ "getHeapBlock", "classJKRExpHeap_1_1CMemBlock.html#a3291dc371d24393de6ae0176e2488b5c", null ],
+    [ "getNextBlock", "classJKRExpHeap_1_1CMemBlock.html#af56a0e5885ef8143905a9d1d1b627f65", null ],
+    [ "getPrevBlock", "classJKRExpHeap_1_1CMemBlock.html#a5081bc9a229df32d4900db807d5d9cb0", null ],
+    [ "getSize", "classJKRExpHeap_1_1CMemBlock.html#ad21bad9e5facbe0fc157ab6e41f3c62d", null ],
+    [ "initiate", "classJKRExpHeap_1_1CMemBlock.html#ac90bfcd512ca7bd75e0f8003800d9c57", null ],
+    [ "isValid", "classJKRExpHeap_1_1CMemBlock.html#a0175f1effd1c87651da66d775e6804e4", null ],
+    [ "newGroupId", "classJKRExpHeap_1_1CMemBlock.html#ae5799f4786d07b97c8359495286cfe31", null ],
+    [ "JKRExpHeap", "classJKRExpHeap_1_1CMemBlock.html#a0867ff1dd1b1fb0c0920ad87a6f31443", null ],
+    [ "mFlags", "classJKRExpHeap_1_1CMemBlock.html#a1b469edead415dd77f49ba550d6b35ac", null ],
+    [ "mGroupId", "classJKRExpHeap_1_1CMemBlock.html#a5500a2463af007110e75caccb2f1924c", null ],
+    [ "mMagic", "classJKRExpHeap_1_1CMemBlock.html#af11a921de20f26a5b3858530bb243f9e", null ],
+    [ "mNext", "classJKRExpHeap_1_1CMemBlock.html#aacbbed408f6564b7fe4900309fdf6466", null ],
+    [ "mPrev", "classJKRExpHeap_1_1CMemBlock.html#a4f461ca2b438b9a34b2de816eafc4e3c", null ],
+    [ "size", "classJKRExpHeap_1_1CMemBlock.html#a16f67bdb53e3a3be505fb7eb12b3b670", null ]
+];

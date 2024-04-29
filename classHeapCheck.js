@@ -1,0 +1,28 @@
+var classHeapCheck =
+[
+    [ "HeapCheck", "classHeapCheck.html#ac69852265cdf0952a2e105d1a8b97620", null ],
+    [ "CheckHeap1", "classHeapCheck.html#ae43cd69381f03f3ac2df6e9c3b5020c5", null ],
+    [ "getHeap", "classHeapCheck.html#ad1acc828e2399dfd1cb06aa5fc69057a", null ],
+    [ "getMaxTotalFreeSize", "classHeapCheck.html#aef08d107feb911fb0abd8af6ecfd2f8d", null ],
+    [ "getMaxTotalUsedSize", "classHeapCheck.html#a8f87aefa658caff330de34176d8e6c71", null ],
+    [ "getName", "classHeapCheck.html#aabaf8c3dc8fb104eed908cd07d3e7410", null ],
+    [ "getRelTotalUsedSize", "classHeapCheck.html#a5ee35bfac80eb6ac38bc29e7c3e5f96e", null ],
+    [ "getRelUsedCount", "classHeapCheck.html#a3d122a35067e408203d6c00c245cf72e", null ],
+    [ "getTotalUsedSizeRef", "classHeapCheck.html#ad42f63a768227ebf4e1aff61200ec102", null ],
+    [ "getUsedCount", "classHeapCheck.html#a4a6d1a04db59ab4a6ab2dfdda7d07537", null ],
+    [ "getUsedCountRef", "classHeapCheck.html#a302aaea5f2b397b5d6a3b8ab22ef4d52", null ],
+    [ "heapDisplay", "classHeapCheck.html#a6161d92d9d59982d72fc33ac24039b1c", null ],
+    [ "saveRelBase", "classHeapCheck.html#a43956b532fa74707067d99d1752aee59", null ],
+    [ "setHeap", "classHeapCheck.html#a0dfc0db7cd947af1f0c46f7e8a8ac297", null ],
+    [ "setHeapSize", "classHeapCheck.html#a809e319818d9d3ee97866584c5307687", null ],
+    [ "field_0x14", "classHeapCheck.html#a5047e7afe08ebca7629c358b11181061", null ],
+    [ "field_0x18", "classHeapCheck.html#a68b99c4edadb910035d101613b9620c6", null ],
+    [ "mHeap", "classHeapCheck.html#a0d3099c85bd5655d479c1958e500a456", null ],
+    [ "mJName", "classHeapCheck.html#ac87eea3df928901bfa649ee17e32b8fa", null ],
+    [ "mMaxTotalFreeSize", "classHeapCheck.html#a90378fdb80fa9e0938d17db10dd9cc15", null ],
+    [ "mMaxTotalUsedSize", "classHeapCheck.html#afe6b5ff1dda0317c531aa3df562accce", null ],
+    [ "mName", "classHeapCheck.html#ae8777fe27c8dc4277ccd789a8576a8af", null ],
+    [ "mTargetHeapSize", "classHeapCheck.html#acf168fb54946e8f151398578616ffa82", null ],
+    [ "mTotalUsedSize", "classHeapCheck.html#ac61c5e0552fdd289216dc5eb7ad5097a", null ],
+    [ "mUsedCount", "classHeapCheck.html#a8cbc6a9d99052bd53d4da983c8366eaa", null ]
+];

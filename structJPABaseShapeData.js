@@ -1,0 +1,27 @@
+var structJPABaseShapeData =
+[
+    [ "mAlphaCompareCfg", "structJPABaseShapeData.html#ad38e2dc45c3464776a6220b2ce31c130", null ],
+    [ "mAlphaRef0", "structJPABaseShapeData.html#a974aa71257e2a5826ca668d55e20d9f9", null ],
+    [ "mAlphaRef1", "structJPABaseShapeData.html#acee20cf18a53f7f47398b031a0cdde79", null ],
+    [ "mAnmRndm", "structJPABaseShapeData.html#abdcf2e14def263e59d7a3d5ebb924e73", null ],
+    [ "mBaseSizeX", "structJPABaseShapeData.html#af2d578ed441708e999c5a21fbba90b77", null ],
+    [ "mBaseSizeY", "structJPABaseShapeData.html#ad93b1e759c76b79ca097d1bc23749167", null ],
+    [ "mBlendModeCfg", "structJPABaseShapeData.html#a4da12165b6032eee95b15a4581f44086", null ],
+    [ "mClrAnmFrmMax", "structJPABaseShapeData.html#a27abfef2e6b345cc4c074d8c79aba1ab", null ],
+    [ "mClrAnmRndmMask", "structJPABaseShapeData.html#a02b153251754091999dbf8cc3d64ad6d", null ],
+    [ "mClrEnv", "structJPABaseShapeData.html#a8ed43abdc1eda7a4bb219333c45c6031", null ],
+    [ "mClrEnvAnmOffset", "structJPABaseShapeData.html#a0eb536082b3903834273021dd778f4a3", null ],
+    [ "mClrEnvKeyNum", "structJPABaseShapeData.html#a21dd84ee5da4a45c2a2aea4d3c52decc", null ],
+    [ "mClrFlg", "structJPABaseShapeData.html#a0feaec117503d246d15cf59bee1aec12", null ],
+    [ "mClrPrm", "structJPABaseShapeData.html#ae2ade205a5f7ea871727e172d7819224", null ],
+    [ "mClrPrmAnmOffset", "structJPABaseShapeData.html#a5b52704ee16cb730e0a26c7f472ad975", null ],
+    [ "mClrPrmKeyNum", "structJPABaseShapeData.html#a69f029eeba8e99f287a2d7c34b611e5d", null ],
+    [ "mFlags", "structJPABaseShapeData.html#aa9df4e0ff0317fd59dc3648800300861", null ],
+    [ "mMagic", "structJPABaseShapeData.html#a007d7021561a4a7515387fcba6e2b9b3", null ],
+    [ "mSize", "structJPABaseShapeData.html#aa5c58de1c560d6722c3678c136fdb90b", null ],
+    [ "mTexAnmNum", "structJPABaseShapeData.html#af2e2eaf692194f049bac4c9820da883c", null ],
+    [ "mTexAnmRndmMask", "structJPABaseShapeData.html#aa0d3f4c7ee9454eebc4e4c4c5d6b4254", null ],
+    [ "mTexFlg", "structJPABaseShapeData.html#a40e3681c61333f0334473148cd3e74ad", null ],
+    [ "mTexIdx", "structJPABaseShapeData.html#a3ddd30a59d125390d39f269c62f035bf", null ],
+    [ "mZModeCfg", "structJPABaseShapeData.html#a46251022ddd99c5aa4dc44e33208e9a7", null ]
+];

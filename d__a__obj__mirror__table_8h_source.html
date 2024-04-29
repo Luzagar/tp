@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: include/rel/d/a/obj/mirror/d_a_obj_mirror_table/d_a_obj_mirror_table.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d__a__obj__mirror__table_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">d_a_obj_mirror_table.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="d__a__obj__mirror__table_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef D_A_OBJ_MIRROR_TABLE_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define D_A_OBJ_MIRROR_TABLE_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="f__op__actor__mng_8h.html">f_op/f_op_actor_mng.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="d__bg__w_8h.html">d/bg/d_bg_w.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classdaObjMirrorTable__c.html">    7</a></span><span class="keyword">class </span><a class="code hl_class" href="classdaObjMirrorTable__c.html">daObjMirrorTable_c</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structfopAc__ac__c.html">fopAc_ac_c</a> {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="comment">/* 80C99938 */</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classdaObjMirrorTable__c.html#a2eea81731106c8ff3c416ee594959df6">createHeap</a>();</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="comment">/* 80C99F7C */</span> <span class="comment">/* inline */</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classdaObjMirrorTable__c.html#a52ace15649d95ac015e69368493025c1">isSwitch</a>();  <span class="comment">// should be inlined once createHeap matches</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObjMirrorTable__c.html#aa65943dd4d10b50923bc9975bb1ae61c">checkOnPanel</a>();</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="comment">/* 80C9A298 */</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classdaObjMirrorTable__c.html#a8b31043ffd0227ac646a7f4a1c8c4c2e">draw</a>();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObjMirrorTable__c.html#aa0d8ee2f2ff73e52d90699fd8ea1df55">setBaseMtx</a>();</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="comment">/* 80C9A4D0 */</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classdaObjMirrorTable__c.html#a57458014fb6952d6a8c3da51d890e879">execute</a>();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">inline</span> <a class="code hl_function" href="classdaObjMirrorTable__c.html#a4e8de2d22b7b98bff809980a2715c7b4">~daObjMirrorTable_c</a>();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="comment">/* 80C9AB30 */</span> <a class="code hl_enumeration" href="c__phase_8h.html#a9f111b636d6afcaba75f303583cc8340">cPhs__Step</a> <a class="code hl_function" href="classdaObjMirrorTable__c.html#a42c1520207ba02110aaa81ccb96deac9">create</a>();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">/* 80C9ABFC */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObjMirrorTable__c.html#a2bf893535f44bce2589ae5a25b7ea2d7">create_init</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="comment">/* 80C9AFD0 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObjMirrorTable__c.html#ad82d94ab11afb1c447e8648550db9003">initBaseMtx</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classdaObjMirrorTable__c.html#a41f5b8c22e626b3713e2c7210cb79a8a">   20</a></span>    <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_function" href="classdaObjMirrorTable__c.html#a41f5b8c22e626b3713e2c7210cb79a8a">getSwitchNo</a>() { <span class="keywordflow">return</span> (<a class="code hl_function" href="f__op__actor__mng_8h.html#a10e09178f3c592d39f7cba7acd57d34f">fopAcM_GetParam</a>(<span class="keyword">this</span>) &gt;&gt; 8) &amp; 0xff; }</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classdaObjMirrorTable__c.html#a8c249cc1eaa56ec3ce7c2ec3fed7438b">   21</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObjMirrorTable__c.html#a8c249cc1eaa56ec3ce7c2ec3fed7438b">setAnmSpeed</a>(<a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="code hl_variable" href="structfopAc__ac__c.html#a470982203cfe8ab0c79ff6fe2474d0c3">speed</a>) { <a class="code hl_variable" href="classdaObjMirrorTable__c.html#ab61955010465a23a6c321116ab86153a">mpTableUpBckAnm</a>-&gt;<a class="code hl_function" href="classmDoExt__baseAnm.html#af61a802dbaf17072cfdf31ed619505fb">setPlaySpeed</a>(<a class="code hl_variable" href="structfopAc__ac__c.html#a470982203cfe8ab0c79ff6fe2474d0c3">speed</a>); }</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classdaObjMirrorTable__c.html#a5c2333512502b3a9f965a4744d16a315">   23</a></span>    <span class="comment">/* 0x568 */</span> <a class="code hl_struct" href="classJ3DModel.html">J3DModel</a>* <a class="code hl_variable" href="classdaObjMirrorTable__c.html#a5c2333512502b3a9f965a4744d16a315">mpTableModel</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classdaObjMirrorTable__c.html#aaef319c6e454dff1a6e58f8b48994480">   24</a></span>    <span class="comment">/* 0x56C */</span> <a class="code hl_struct" href="classJ3DModel.html">J3DModel</a>* <a class="code hl_variable" href="classdaObjMirrorTable__c.html#aaef319c6e454dff1a6e58f8b48994480">mpMirrorModel</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classdaObjMirrorTable__c.html#a58470fc0666bfbed9fd915346e9cdf45">   25</a></span>    <span class="comment">/* 0x570 */</span> <a class="code hl_struct" href="classJ3DModel.html">J3DModel</a>* <a class="code hl_variable" href="classdaObjMirrorTable__c.html#a58470fc0666bfbed9fd915346e9cdf45">mpStairModel</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classdaObjMirrorTable__c.html#aa08ea659ad4226912eada24439817fe9">   26</a></span>    <span class="comment">/* 0x574 */</span> <a class="code hl_struct" href="classJ3DModel.html">J3DModel</a>* <a class="code hl_variable" href="classdaObjMirrorTable__c.html#aa08ea659ad4226912eada24439817fe9">mpPanelModel</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classdaObjMirrorTable__c.html#a0527ab6b26d30c23da346d6b90f68b81">   27</a></span>    <span class="comment">/* 0x578 */</span> <a class="code hl_struct" href="classJ3DModel.html">J3DModel</a>* <a class="code hl_variable" href="classdaObjMirrorTable__c.html#a0527ab6b26d30c23da346d6b90f68b81">mpLightModel</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classdaObjMirrorTable__c.html#a86a1ed108d34b80658ca887f9f313da3">   28</a></span>    <span class="comment">/* 0x57C */</span> <a class="code hl_struct" href="classJ3DModel.html">J3DModel</a>* <a class="code hl_variable" href="classdaObjMirrorTable__c.html#a86a1ed108d34b80658ca887f9f313da3">mpMSquareModel</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classdaObjMirrorTable__c.html#ab61955010465a23a6c321116ab86153a">   29</a></span>    <span class="comment">/* 0x580 */</span> <a class="code hl_struct" href="classmDoExt__bckAnm.html">mDoExt_bckAnm</a>* <a class="code hl_variable" href="classdaObjMirrorTable__c.html#ab61955010465a23a6c321116ab86153a">mpTableUpBckAnm</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classdaObjMirrorTable__c.html#acd1f9c3931f10c956e0ca9de17d9e943">   30</a></span>    <span class="comment">/* 0x584 */</span> <a class="code hl_struct" href="classmDoExt__bckAnm.html">mDoExt_bckAnm</a>* <a class="code hl_variable" href="classdaObjMirrorTable__c.html#acd1f9c3931f10c956e0ca9de17d9e943">mpMSquareBckAnm</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classdaObjMirrorTable__c.html#a308728b0c7fc2c7df9cb1cd0d3a50ddc">   31</a></span>    <span class="comment">/* 0x588 */</span> <a class="code hl_struct" href="classmDoExt__brkAnm.html">mDoExt_brkAnm</a>* <a class="code hl_variable" href="classdaObjMirrorTable__c.html#a308728b0c7fc2c7df9cb1cd0d3a50ddc">mpStairBrkAnm</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classdaObjMirrorTable__c.html#a50b15d86271be997afc5a549ecfc2bf3">   32</a></span>    <span class="comment">/* 0x58C */</span> <a class="code hl_struct" href="classmDoExt__brkAnm.html">mDoExt_brkAnm</a>* <a class="code hl_variable" href="classdaObjMirrorTable__c.html#a50b15d86271be997afc5a549ecfc2bf3">mpMSquareBrkAnm</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classdaObjMirrorTable__c.html#adaf3b864e4b479303c556b77c9821cff">   33</a></span>    <span class="comment">/* 0x590 */</span> <a class="code hl_struct" href="classmDoExt__btkAnm.html">mDoExt_btkAnm</a>* <a class="code hl_variable" href="classdaObjMirrorTable__c.html#adaf3b864e4b479303c556b77c9821cff">mpLightBtkAnm</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classdaObjMirrorTable__c.html#a97a42bb73070a3dc9b5bb750b963b1b6">   34</a></span>    <span class="comment">/* 0x594 */</span> <a class="code hl_struct" href="structrequest__of__phase__process__class.html">request_of_phase_process_class</a> <a class="code hl_variable" href="classdaObjMirrorTable__c.html#a97a42bb73070a3dc9b5bb750b963b1b6">mPhaseReq</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classdaObjMirrorTable__c.html#a83bfff2769824dc060cc6328d2dd1116">   35</a></span>    <span class="comment">/* 0x59C */</span> <a class="code hl_struct" href="classdBgW.html">dBgW</a> <a class="code hl_variable" href="classdaObjMirrorTable__c.html#a83bfff2769824dc060cc6328d2dd1116">mBgW</a>[3];</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classdaObjMirrorTable__c.html#a4c4831c2399102f0ccb20cc4e201ab0f">   36</a></span>    <span class="comment">/* 0x7DC */</span> <a class="code hl_typedef" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a> <a class="code hl_variable" href="classdaObjMirrorTable__c.html#a4c4831c2399102f0ccb20cc4e201ab0f">mMtx</a>[3];</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classdaObjMirrorTable__c.html#a074d2d4970ac9b8dd83185135f058b03">   37</a></span>    <span class="comment">/* 0x86C */</span> <a class="code hl_struct" href="classJPABaseEmitter.html">JPABaseEmitter</a>* <a class="code hl_variable" href="classdaObjMirrorTable__c.html#a074d2d4970ac9b8dd83185135f058b03">mpEmitter1</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classdaObjMirrorTable__c.html#a0de8744ddb9a4ea16913b7513b29bb3a">   38</a></span>    <span class="comment">/* 0x870 */</span> <a class="code hl_struct" href="classJPABaseEmitter.html">JPABaseEmitter</a>* <a class="code hl_variable" href="classdaObjMirrorTable__c.html#a0de8744ddb9a4ea16913b7513b29bb3a">mpEmitter2</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classdaObjMirrorTable__c.html#a5ab92185ee4a934acd454fb917b703de">   39</a></span>    <span class="comment">/* 0x874 */</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="classdaObjMirrorTable__c.html#a5ab92185ee4a934acd454fb917b703de">field_0x874</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classdaObjMirrorTable__c.html#a89deec943a9a2b4d313f93392e83c0f2">   40</a></span>    <span class="comment">/* 0x875 */</span> <a class="code hl_typedef" href="types_8h.html#a151f780fb455885061d3b77ec1c90c03">s8</a> <a class="code hl_variable" href="classdaObjMirrorTable__c.html#a89deec943a9a2b4d313f93392e83c0f2">field_0x875</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>};</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="d__a__obj__mirror__table_8h.html#a2551a8d994e583af170abdee4ee04b65">   43</a></span><a class="code hl_function" href="d__a__obj__mirror__table_8h.html#a2551a8d994e583af170abdee4ee04b65">STATIC_ASSERT</a>(<span class="keyword">sizeof</span>(<a class="code hl_class" href="classdaObjMirrorTable__c.html">daObjMirrorTable_c</a>) == 0x878);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#endif </span><span class="comment">/* D_A_OBJ_MIRROR_TABLE_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="ac__phase_8h_html_a9f111b636d6afcaba75f303583cc8340"><div class="ttname"><a href="c__phase_8h.html#a9f111b636d6afcaba75f303583cc8340">cPhs__Step</a></div><div class="ttdeci">cPhs__Step</div><div class="ttdef"><b>Definition</b> c_phase.h:8</div></div>
+<div class="ttc" id="aclassJ3DModel_html"><div class="ttname"><a href="classJ3DModel.html">J3DModel</a></div><div class="ttdef"><b>Definition</b> J3DModel.h:42</div></div>
+<div class="ttc" id="aclassJPABaseEmitter_html"><div class="ttname"><a href="classJPABaseEmitter.html">JPABaseEmitter</a></div><div class="ttdef"><b>Definition</b> JPAEmitter.h:92</div></div>
+<div class="ttc" id="aclassdBgW_html"><div class="ttname"><a href="classdBgW.html">dBgW</a></div><div class="ttdef"><b>Definition</b> d_bg_w.h:250</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html"><div class="ttname"><a href="classdaObjMirrorTable__c.html">daObjMirrorTable_c</a></div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.h:7</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_a0527ab6b26d30c23da346d6b90f68b81"><div class="ttname"><a href="classdaObjMirrorTable__c.html#a0527ab6b26d30c23da346d6b90f68b81">daObjMirrorTable_c::mpLightModel</a></div><div class="ttdeci">J3DModel * mpLightModel</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.h:27</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_a074d2d4970ac9b8dd83185135f058b03"><div class="ttname"><a href="classdaObjMirrorTable__c.html#a074d2d4970ac9b8dd83185135f058b03">daObjMirrorTable_c::mpEmitter1</a></div><div class="ttdeci">JPABaseEmitter * mpEmitter1</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.h:37</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_a0de8744ddb9a4ea16913b7513b29bb3a"><div class="ttname"><a href="classdaObjMirrorTable__c.html#a0de8744ddb9a4ea16913b7513b29bb3a">daObjMirrorTable_c::mpEmitter2</a></div><div class="ttdeci">JPABaseEmitter * mpEmitter2</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.h:38</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_a2bf893535f44bce2589ae5a25b7ea2d7"><div class="ttname"><a href="classdaObjMirrorTable__c.html#a2bf893535f44bce2589ae5a25b7ea2d7">daObjMirrorTable_c::create_init</a></div><div class="ttdeci">void create_init()</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.cpp:608</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_a2eea81731106c8ff3c416ee594959df6"><div class="ttname"><a href="classdaObjMirrorTable__c.html#a2eea81731106c8ff3c416ee594959df6">daObjMirrorTable_c::createHeap</a></div><div class="ttdeci">int createHeap()</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.cpp:137</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_a308728b0c7fc2c7df9cb1cd0d3a50ddc"><div class="ttname"><a href="classdaObjMirrorTable__c.html#a308728b0c7fc2c7df9cb1cd0d3a50ddc">daObjMirrorTable_c::mpStairBrkAnm</a></div><div class="ttdeci">mDoExt_brkAnm * mpStairBrkAnm</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.h:31</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_a41f5b8c22e626b3713e2c7210cb79a8a"><div class="ttname"><a href="classdaObjMirrorTable__c.html#a41f5b8c22e626b3713e2c7210cb79a8a">daObjMirrorTable_c::getSwitchNo</a></div><div class="ttdeci">u8 getSwitchNo()</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.h:20</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_a42c1520207ba02110aaa81ccb96deac9"><div class="ttname"><a href="classdaObjMirrorTable__c.html#a42c1520207ba02110aaa81ccb96deac9">daObjMirrorTable_c::create</a></div><div class="ttdeci">cPhs__Step create()</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.cpp:557</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_a4c4831c2399102f0ccb20cc4e201ab0f"><div class="ttname"><a href="classdaObjMirrorTable__c.html#a4c4831c2399102f0ccb20cc4e201ab0f">daObjMirrorTable_c::mMtx</a></div><div class="ttdeci">Mtx mMtx[3]</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.h:36</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_a4e8de2d22b7b98bff809980a2715c7b4"><div class="ttname"><a href="classdaObjMirrorTable__c.html#a4e8de2d22b7b98bff809980a2715c7b4">daObjMirrorTable_c::~daObjMirrorTable_c</a></div><div class="ttdeci">~daObjMirrorTable_c()</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.cpp:531</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_a50b15d86271be997afc5a549ecfc2bf3"><div class="ttname"><a href="classdaObjMirrorTable__c.html#a50b15d86271be997afc5a549ecfc2bf3">daObjMirrorTable_c::mpMSquareBrkAnm</a></div><div class="ttdeci">mDoExt_brkAnm * mpMSquareBrkAnm</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.h:32</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_a52ace15649d95ac015e69368493025c1"><div class="ttname"><a href="classdaObjMirrorTable__c.html#a52ace15649d95ac015e69368493025c1">daObjMirrorTable_c::isSwitch</a></div><div class="ttdeci">bool isSwitch()</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.cpp:257</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_a57458014fb6952d6a8c3da51d890e879"><div class="ttname"><a href="classdaObjMirrorTable__c.html#a57458014fb6952d6a8c3da51d890e879">daObjMirrorTable_c::execute</a></div><div class="ttdeci">int execute()</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.cpp:464</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_a58470fc0666bfbed9fd915346e9cdf45"><div class="ttname"><a href="classdaObjMirrorTable__c.html#a58470fc0666bfbed9fd915346e9cdf45">daObjMirrorTable_c::mpStairModel</a></div><div class="ttdeci">J3DModel * mpStairModel</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.h:25</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_a5ab92185ee4a934acd454fb917b703de"><div class="ttname"><a href="classdaObjMirrorTable__c.html#a5ab92185ee4a934acd454fb917b703de">daObjMirrorTable_c::field_0x874</a></div><div class="ttdeci">bool field_0x874</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.h:39</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_a5c2333512502b3a9f965a4744d16a315"><div class="ttname"><a href="classdaObjMirrorTable__c.html#a5c2333512502b3a9f965a4744d16a315">daObjMirrorTable_c::mpTableModel</a></div><div class="ttdeci">J3DModel * mpTableModel</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.h:23</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_a83bfff2769824dc060cc6328d2dd1116"><div class="ttname"><a href="classdaObjMirrorTable__c.html#a83bfff2769824dc060cc6328d2dd1116">daObjMirrorTable_c::mBgW</a></div><div class="ttdeci">dBgW mBgW[3]</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.h:35</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_a86a1ed108d34b80658ca887f9f313da3"><div class="ttname"><a href="classdaObjMirrorTable__c.html#a86a1ed108d34b80658ca887f9f313da3">daObjMirrorTable_c::mpMSquareModel</a></div><div class="ttdeci">J3DModel * mpMSquareModel</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.h:28</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_a89deec943a9a2b4d313f93392e83c0f2"><div class="ttname"><a href="classdaObjMirrorTable__c.html#a89deec943a9a2b4d313f93392e83c0f2">daObjMirrorTable_c::field_0x875</a></div><div class="ttdeci">s8 field_0x875</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.h:40</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_a8b31043ffd0227ac646a7f4a1c8c4c2e"><div class="ttname"><a href="classdaObjMirrorTable__c.html#a8b31043ffd0227ac646a7f4a1c8c4c2e">daObjMirrorTable_c::draw</a></div><div class="ttdeci">int draw()</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.cpp:340</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_a8c249cc1eaa56ec3ce7c2ec3fed7438b"><div class="ttname"><a href="classdaObjMirrorTable__c.html#a8c249cc1eaa56ec3ce7c2ec3fed7438b">daObjMirrorTable_c::setAnmSpeed</a></div><div class="ttdeci">void setAnmSpeed(f32 speed)</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.h:21</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_a97a42bb73070a3dc9b5bb750b963b1b6"><div class="ttname"><a href="classdaObjMirrorTable__c.html#a97a42bb73070a3dc9b5bb750b963b1b6">daObjMirrorTable_c::mPhaseReq</a></div><div class="ttdeci">request_of_phase_process_class mPhaseReq</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.h:34</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_aa08ea659ad4226912eada24439817fe9"><div class="ttname"><a href="classdaObjMirrorTable__c.html#aa08ea659ad4226912eada24439817fe9">daObjMirrorTable_c::mpPanelModel</a></div><div class="ttdeci">J3DModel * mpPanelModel</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.h:26</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_aa0d8ee2f2ff73e52d90699fd8ea1df55"><div class="ttname"><a href="classdaObjMirrorTable__c.html#aa0d8ee2f2ff73e52d90699fd8ea1df55">daObjMirrorTable_c::setBaseMtx</a></div><div class="ttdeci">void setBaseMtx()</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.cpp:378</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_aa65943dd4d10b50923bc9975bb1ae61c"><div class="ttname"><a href="classdaObjMirrorTable__c.html#aa65943dd4d10b50923bc9975bb1ae61c">daObjMirrorTable_c::checkOnPanel</a></div><div class="ttdeci">void checkOnPanel()</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.cpp:264</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_aaef319c6e454dff1a6e58f8b48994480"><div class="ttname"><a href="classdaObjMirrorTable__c.html#aaef319c6e454dff1a6e58f8b48994480">daObjMirrorTable_c::mpMirrorModel</a></div><div class="ttdeci">J3DModel * mpMirrorModel</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.h:24</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_ab61955010465a23a6c321116ab86153a"><div class="ttname"><a href="classdaObjMirrorTable__c.html#ab61955010465a23a6c321116ab86153a">daObjMirrorTable_c::mpTableUpBckAnm</a></div><div class="ttdeci">mDoExt_bckAnm * mpTableUpBckAnm</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.h:29</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_acd1f9c3931f10c956e0ca9de17d9e943"><div class="ttname"><a href="classdaObjMirrorTable__c.html#acd1f9c3931f10c956e0ca9de17d9e943">daObjMirrorTable_c::mpMSquareBckAnm</a></div><div class="ttdeci">mDoExt_bckAnm * mpMSquareBckAnm</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.h:30</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_ad82d94ab11afb1c447e8648550db9003"><div class="ttname"><a href="classdaObjMirrorTable__c.html#ad82d94ab11afb1c447e8648550db9003">daObjMirrorTable_c::initBaseMtx</a></div><div class="ttdeci">void initBaseMtx()</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.cpp:674</div></div>
+<div class="ttc" id="aclassdaObjMirrorTable__c_html_adaf3b864e4b479303c556b77c9821cff"><div class="ttname"><a href="classdaObjMirrorTable__c.html#adaf3b864e4b479303c556b77c9821cff">daObjMirrorTable_c::mpLightBtkAnm</a></div><div class="ttdeci">mDoExt_btkAnm * mpLightBtkAnm</div><div class="ttdef"><b>Definition</b> d_a_obj_mirror_table.h:33</div></div>
+<div class="ttc" id="aclassmDoExt__baseAnm_html_af61a802dbaf17072cfdf31ed619505fb"><div class="ttname"><a href="classmDoExt__baseAnm.html#af61a802dbaf17072cfdf31ed619505fb">mDoExt_baseAnm::setPlaySpeed</a></div><div class="ttdeci">void setPlaySpeed(f32 speed)</div><div class="ttdef"><b>Definition</b> m_Do_ext.h:27</div></div>
+<div class="ttc" id="aclassmDoExt__bckAnm_html"><div class="ttname"><a href="classmDoExt__bckAnm.html">mDoExt_bckAnm</a></div><div class="ttdef"><b>Definition</b> m_Do_ext.h:139</div></div>
+<div class="ttc" id="aclassmDoExt__brkAnm_html"><div class="ttname"><a href="classmDoExt__brkAnm.html">mDoExt_brkAnm</a></div><div class="ttdef"><b>Definition</b> m_Do_ext.h:82</div></div>
+<div class="ttc" id="aclassmDoExt__btkAnm_html"><div class="ttname"><a href="classmDoExt__btkAnm.html">mDoExt_btkAnm</a></div><div class="ttdef"><b>Definition</b> m_Do_ext.h:53</div></div>
+<div class="ttc" id="ad__a__obj__mirror__table_8h_html_a2551a8d994e583af170abdee4ee04b65"><div class="ttname"><a href="d__a__obj__mirror__table_8h.html#a2551a8d994e583af170abdee4ee04b65">STATIC_ASSERT</a></div><div class="ttdeci">STATIC_ASSERT(sizeof(daObjMirrorTable_c)==0x878)</div></div>
+<div class="ttc" id="ad__bg__w_8h_html"><div class="ttname"><a href="d__bg__w_8h.html">d_bg_w.h</a></div></div>
+<div class="ttc" id="af__op__actor__mng_8h_html"><div class="ttname"><a href="f__op__actor__mng_8h.html">f_op_actor_mng.h</a></div></div>
+<div class="ttc" id="af__op__actor__mng_8h_html_a10e09178f3c592d39f7cba7acd57d34f"><div class="ttname"><a href="f__op__actor__mng_8h.html#a10e09178f3c592d39f7cba7acd57d34f">fopAcM_GetParam</a></div><div class="ttdeci">u32 fopAcM_GetParam(const void *pActor)</div><div class="ttdef"><b>Definition</b> f_op_actor_mng.h:197</div></div>
+<div class="ttc" id="amtx_8h_html_afc58fc7f5dd84f97da2dab35156849ae"><div class="ttname"><a href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a></div><div class="ttdeci">f32 Mtx[3][4]</div><div class="ttdef"><b>Definition</b> mtx.h:15</div></div>
+<div class="ttc" id="astructfopAc__ac__c_html"><div class="ttname"><a href="structfopAc__ac__c.html">fopAc_ac_c</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:14</div></div>
+<div class="ttc" id="astructfopAc__ac__c_html_a470982203cfe8ab0c79ff6fe2474d0c3"><div class="ttname"><a href="structfopAc__ac__c.html#a470982203cfe8ab0c79ff6fe2474d0c3">fopAc_ac_c::speed</a></div><div class="ttdeci">cXyz speed</div><div class="ttdef"><b>Definition</b> f_op_actor.h:206</div></div>
+<div class="ttc" id="astructrequest__of__phase__process__class_html"><div class="ttname"><a href="structrequest__of__phase__process__class.html">request_of_phase_process_class</a></div><div class="ttdef"><b>Definition</b> c_phase.h:17</div></div>
+<div class="ttc" id="atypes_8h_html_a151f780fb455885061d3b77ec1c90c03"><div class="ttname"><a href="types_8h.html#a151f780fb455885061d3b77ec1c90c03">s8</a></div><div class="ttdeci">signed char s8</div><div class="ttdef"><b>Definition</b> types.h:4</div></div>
+<div class="ttc" id="atypes_8h_html_a5f6906312a689f27d70e9d086649d3fd"><div class="ttname"><a href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a></div><div class="ttdeci">float f32</div><div class="ttdef"><b>Definition</b> types.h:22</div></div>
+<div class="ttc" id="atypes_8h_html_aed742c436da53c1080638ce6ef7d13de"><div class="ttname"><a href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a></div><div class="ttdeci">unsigned char u8</div><div class="ttdef"><b>Definition</b> types.h:8</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d1e95842203b094e4f127fa85baf24b5.html">rel</a></li><li class="navelem"><a class="el" href="dir_244336746419795862f93731f1699860.html">d</a></li><li class="navelem"><a class="el" href="dir_b81c1d082692bb1b2b34ed3bfe8a0f4a.html">a</a></li><li class="navelem"><a class="el" href="dir_837b79828d4d0cae6e2581b9ebbbcbf8.html">obj</a></li><li class="navelem"><a class="el" href="dir_314e9829a9253b6870df6eee21ee702e.html">mirror</a></li><li class="navelem"><a class="el" href="dir_a441f59e9de769d4fe842984b3b9aa62.html">d_a_obj_mirror_table</a></li><li class="navelem"><a class="el" href="d__a__obj__mirror__table_8h.html">d_a_obj_mirror_table.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,564 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: File Members</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('globals_func_w.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="contents">
+<div class="textblock">Here is a list of all functions with links to the files they belong to:</div>
+
+<h3><a id="index_w" name="index_w"></a>- w -</h3><ul>
+<li>W_DeathAction__8daE_HM_cFv()&#160;:&#160;<a class="el" href="d__a__e__hm_8cpp.html#a8b1afa5b455f648af450101014b8e596">d_a_e_hm.cpp</a></li>
+<li>W_DeathMotion__8daE_HM_cFv()&#160;:&#160;<a class="el" href="d__a__e__hm_8cpp.html#a7bcc6f1c441babbcb1664a71490d5342">d_a_e_hm.cpp</a></li>
+<li>W_DeathSpSet__8daE_HM_cFv()&#160;:&#160;<a class="el" href="d__a__e__hm_8cpp.html#a2e24085e7f752d74022fb662955c330e">d_a_e_hm.cpp</a></li>
+<li>W_MoveCheckWall__8daE_HM_cFv()&#160;:&#160;<a class="el" href="d__a__e__hm_8cpp.html#adfcb11bc12234e8a89caf81bd26c3564">d_a_e_hm.cpp</a></li>
+<li>W_TargetAngle__8daE_HM_cF4cXyz4cXyz()&#160;:&#160;<a class="el" href="d__a__e__hm_8cpp.html#a219e2119186fe8906ee3dea94582b21a">d_a_e_hm.cpp</a></li>
+<li>W_WallCheck__8daE_HM_cFv()&#160;:&#160;<a class="el" href="d__a__e__hm_8cpp.html#a49158d2dc0786c321fece94ec0c19691">d_a_e_hm.cpp</a></li>
+<li>wait()&#160;:&#160;<a class="el" href="d__a__b__oh_8cpp.html#a034090352be6b6c0514f6615a3ba3771">d_a_b_oh.cpp</a>, <a class="el" href="d__a__b__gos_8cpp.html#a33ed7659a463b31e26ab1fab3e242972">d_a_b_gos.cpp</a>, <a class="el" href="d__a__b__oh__NONMATCHING_8cpp.html#a74830190881760fc4cb989fcf0a12ef2">d_a_b_oh_NONMATCHING.cpp</a></li>
+<li>wait__10daBullet_cFPv()&#160;:&#160;<a class="el" href="d__a__bullet_8cpp.html#acb50ad8a2781edbb429cac2da114a5f0">d_a_bullet.cpp</a></li>
+<li>wait__10daNpc_Kn_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__kn_8cpp.html#a08476f1a7434be6af75467b3cd9c9f9a">d_a_npc_kn.cpp</a></li>
+<li>wait__10daNpcThe_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__the_8cpp.html#a4dc6c22fe8e2ee99b6db6d6609090432">d_a_npc_the.cpp</a></li>
+<li>wait__10daNpcTkc_cFv()&#160;:&#160;<a class="el" href="d__a__npc__tkc_8cpp.html#a3aed50ec176fe13a81fbf5cdef04407e">d_a_npc_tkc.cpp</a></li>
+<li>wait__10daNpcTkj_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__tkj_8cpp.html#ad081a14bf510f7c682937f858ee62ebb">d_a_npc_tkj.cpp</a></li>
+<li>wait__10daNpcTks_cFv()&#160;:&#160;<a class="el" href="d__a__npc__tks_8cpp.html#a318ddc2e67a4952f9de3fe99fe1b4d0e">d_a_npc_tks.cpp</a></li>
+<li>wait__10daObjKAG_cFv()&#160;:&#160;<a class="el" href="d__a__obj__kag_8cpp.html#a6e1b47c40132cb4c05e0cbb7faf95835">d_a_obj_kag.cpp</a></li>
+<li>wait__10daObjNAN_cFv()&#160;:&#160;<a class="el" href="d__a__obj__nan_8cpp.html#a30f040f919ee276f9b4ed34c23e34599">d_a_obj_nan.cpp</a></li>
+<li>wait__10daObjTks_cFv()&#160;:&#160;<a class="el" href="d__a__obj__tks_8cpp.html#ad0815e83ef3cf82284d1f98956399c10">d_a_obj_tks.cpp</a></li>
+<li>wait__11daNpc_Aru_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__aru_8cpp.html#a1c7840278e6a8e8a5e69afea020d830e">d_a_npc_aru.cpp</a></li>
+<li>wait__11daNpc_Bou_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__bou_8cpp.html#a7b943240a796e3be91b9adc577ec1416">d_a_npc_bou.cpp</a></li>
+<li>wait__11daNpc_Doc_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__doc_8cpp.html#a3f18c7171fecd98cd84291c7b777b7ad">d_a_npc_doc.cpp</a></li>
+<li>wait__11daNpc_Gnd_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__gnd_8cpp.html#a8979ed34fc5d299588e0f5ac49522b73">d_a_npc_gnd.cpp</a></li>
+<li>wait__11daNpc_grA_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__gra_8cpp.html#a03aeabb2429bde65b1e5d47d7356f2e5">d_a_npc_gra.cpp</a></li>
+<li>wait__11daNpc_grC_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__grc_8cpp.html#a9c545a7380441c006d84b2a65b47bf8c">d_a_npc_grc.cpp</a></li>
+<li>wait__11daNpc_Grd_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__grd_8cpp.html#a568b5ef9a1278607684b6f58e3ea4502">d_a_npc_grd.cpp</a></li>
+<li>wait__11daNpc_grO_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__gro_8cpp.html#aba09dfa86d8ff2ec9d262fb424b34ac7">d_a_npc_gro.cpp</a></li>
+<li>wait__11daNpc_grR_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__grr_8cpp.html#a31b7c39e558cdc5e2f984a556110d92f">d_a_npc_grr.cpp</a></li>
+<li>wait__11daNpc_grS_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__grs_8cpp.html#a78ab2edb0d2bd99bf917182f0fe345d3">d_a_npc_grs.cpp</a></li>
+<li>wait__11daNpc_Grz_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__grz_8cpp.html#a102e22705fcce7cb9e7281c89e96da78">d_a_npc_grz.cpp</a></li>
+<li>wait__11daNpc_Hoz_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__hoz_8cpp.html#a4de5a80bcee10f71275fea75e2ff007d">d_a_npc_hoz.cpp</a></li>
+<li>wait__11daNpc_Knj_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__knj_8cpp.html#a850d61585a5738799ec2df1933b89bc0">d_a_npc_knj.cpp</a></li>
+<li>wait__11daNpc_Len_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__len_8cpp.html#a5ec2c59de3ae60dad701e437ee4452f1">d_a_npc_len.cpp</a></li>
+<li>wait__11daNpc_Lud_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__lud_8cpp.html#a19705be96ee3f7ebc07c1bba9267dcfd">d_a_npc_lud.cpp</a></li>
+<li>wait__11daNpc_Moi_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__moi_8cpp.html#ad5f67cedb22d7bf40b5e52d2fd65abc8">d_a_npc_moi.cpp</a></li>
+<li>wait__11daNpc_Sha_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__shaman_8cpp.html#a3b95ae76b22ae4d755bf4030ba3d61e2">d_a_npc_shaman.cpp</a></li>
+<li>wait__11daNpc_Uri_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__uri_8cpp.html#a4a870a1b8541cd68c6b82eb7fd686289">d_a_npc_uri.cpp</a></li>
+<li>wait__11daNpc_ykM_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__ykm_8cpp.html#a83629ed58889874bcd3bff678e18fbd5">d_a_npc_ykm.cpp</a></li>
+<li>wait__11daNpc_ykW_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__ykw_8cpp.html#aaa15863917b7380572d4a9b86a1adcca">d_a_npc_ykw.cpp</a></li>
+<li>wait__11daNpc_zrA_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__zra_8cpp.html#a615ac2b0978431451611985ddfbc3b70">d_a_npc_zra.cpp</a></li>
+<li>wait__11daNpc_zrC_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__zrc_8cpp.html#a6e168427e580145ccf407fabf38d2f3f">d_a_npc_zrc.cpp</a></li>
+<li>wait__11daNpc_zrZ_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__zrz_8cpp.html#a128ff39c8efefe05193d1b95359e86fd">d_a_npc_zrz.cpp</a></li>
+<li>wait__11daNpcAshB_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__ashB_8cpp.html#afb5c6b9b05cf49cf2b19925c9a8935d8">d_a_npc_ashB.cpp</a></li>
+<li>wait__11daNpcBouS_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__bouS_8cpp.html#a1029ca75cea0bc5e4b4d6e48cee8da5f">d_a_npc_bouS.cpp</a></li>
+<li>wait__11daNpcChat_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__chat_8cpp.html#ac60564543758974d56c12478f153f3ef">d_a_npc_chat.cpp</a></li>
+<li>wait__11daNpcChin_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__chin_8cpp.html#a8536dc5c78b6856bd07db1eac4e54e1c">d_a_npc_chin.cpp</a></li>
+<li>wait__11daNpcPray_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__prayer_8cpp.html#a948660095b1203c89ce1a490d1dc42f6">d_a_npc_prayer.cpp</a></li>
+<li>wait__11daNpcShoe_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__shoe_8cpp.html#ab4b821871e0875afaf83e04012d5b388">d_a_npc_shoe.cpp</a></li>
+<li>wait__11daNpcTheB_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__theB_8cpp.html#a9d7df13cb435b973bc6c9c8b38146b2c">d_a_npc_theB.cpp</a></li>
+<li>wait__11daObj_GrA_cFPv()&#160;:&#160;<a class="el" href="d__a__obj__gra2_8cpp.html#a9b20cad6a6422b4debcd9eb27b43bfdc">d_a_obj_gra2.cpp</a></li>
+<li>wait__11daObjMATO_cFi()&#160;:&#160;<a class="el" href="d__a__obj__mato_8cpp.html#afd91564112f95d68673360664a9b1384">d_a_obj_mato.cpp</a></li>
+<li>wait__12daNpc_Bans_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__bans_8cpp.html#a6bffec025acf8a477e54ab44dd26a2ba">d_a_npc_bans.cpp</a></li>
+<li>wait__12daNpc_Besu_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__besu_8cpp.html#a520de90aa817c0158b32f89e91478834">d_a_npc_besu.cpp</a></li>
+<li>wait__12daNpc_Kkri_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__kkri_8cpp.html#a44c3dd286d464728c85364c421a25be8">d_a_npc_kkri.cpp</a></li>
+<li>wait__12daNpc_Maro_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__maro_8cpp.html#ab36b2c19e888d15c518d8c421d82b025">d_a_npc_maro.cpp</a></li>
+<li>wait__12daNpc_midP_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__midp_8cpp.html#a083a2308c2a9c66d70224590015ea730">d_a_npc_midp.cpp</a></li>
+<li>wait__12daNpc_Post_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__post_8cpp.html#afce38c962d977196f6585b707aeb1757">d_a_npc_post.cpp</a></li>
+<li>wait__12daNpc_Raca_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__raca_8cpp.html#af94276c39ceb85f09a82f6fa7c8a4e0b">d_a_npc_raca.cpp</a></li>
+<li>wait__12daNpc_Saru_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__saru_8cpp.html#af10c8584b45aa6ef80833013742d44c0">d_a_npc_saru.cpp</a></li>
+<li>wait__12daNpc_seiB_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__seib_8cpp.html#a2cc57981ce7d33170fc73d2c0d73aa72">d_a_npc_seib.cpp</a></li>
+<li>wait__12daNpc_seiC_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__seic_8cpp.html#ab5163eb2762efa6dbb5057d014fbfa6f">d_a_npc_seic.cpp</a></li>
+<li>wait__12daNpc_seiD_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__seid_8cpp.html#aa812158d9ed0b3e2af07f93e8457c9a4">d_a_npc_seid.cpp</a></li>
+<li>wait__12daNpc_solA_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__sola_8cpp.html#ab3f0c8ae074d4bb5a7eb202558d7a5c6">d_a_npc_sola.cpp</a></li>
+<li>wait__12daNpc_Taro_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__taro_8cpp.html#a0a7fbc64d7fbc09a2511dc0f3822ac71">d_a_npc_taro.cpp</a></li>
+<li>wait__12daNpc_Toby_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__toby_8cpp.html#a6d3f39c9d2a40ca64aa29a02be1b91a4">d_a_npc_toby.cpp</a></li>
+<li>wait__12daNpc_zanB_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__zanb_8cpp.html#a864a5d97d42776936b64225128226de6">d_a_npc_zanb.cpp</a></li>
+<li>wait__12daNpc_Zant_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__zant_8cpp.html#a89f281da819b9a048c8d01c46b18bd04">d_a_npc_zant.cpp</a></li>
+<li>wait__12daNpc_ZelR_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__zelR_8cpp.html#ab4751206e8cbf865b851712fc760d77e">d_a_npc_zelR.cpp</a></li>
+<li>wait__12daNpcDrSol_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__drainSol_8cpp.html#a6362fb126d098118338e9c00d4d6401c">d_a_npc_drainSol.cpp</a></li>
+<li>wait__12daNpcImpal_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__impal_8cpp.html#a7837e3985c72f308ea46b367ed202704">d_a_npc_impal.cpp</a></li>
+<li>wait__12daObjBATTA_cFv()&#160;:&#160;<a class="el" href="d__a__obj__batta_8cpp.html#a5988a01e98eadb12e3517af33536e571">d_a_obj_batta.cpp</a></li>
+<li>wait__13daNpc_Fairy_cFi()&#160;:&#160;<a class="el" href="d__a__npc__fairy_8cpp.html#a179f224594e26fbfb43f052ac2eecbbf">d_a_npc_fairy.cpp</a></li>
+<li>wait__13daNpc_GWolf_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__gwolf_8cpp.html#a310c13bec44dd1c95d02a5335a5745b8">d_a_npc_gwolf.cpp</a></li>
+<li>wait__13daNpc_Hanjo_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__hanjo_8cpp.html#a85f06966bb0ba343c925f20cdad41926">d_a_npc_hanjo.cpp</a></li>
+<li>wait__13daNpc_Jagar_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__jagar_8cpp.html#a47bca1e01f99333540b13fc77b7dfbd5">d_a_npc_jagar.cpp</a></li>
+<li>wait__13daNpc_Kolin_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__kolin_8cpp.html#aad4151329aeee80d253d4240fd8ca51f">d_a_npc_kolin.cpp</a></li>
+<li>wait__13daNpc_Kyury_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__kyury_8cpp.html#a37c7d5b4cec3a23927eaf5eba4345bce">d_a_npc_kyury.cpp</a></li>
+<li>wait__13daNpc_myna2_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__myna2_8cpp.html#a093172892bf1996361761be92d4a4d6c">d_a_npc_myna2.cpp</a></li>
+<li>wait__13daNpc_Pouya_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__pouya_8cpp.html#a4e773be1ef3641125d16b796f869eeff">d_a_npc_pouya.cpp</a></li>
+<li>wait__13daNpc_Seira_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__seira_8cpp.html#a93b7cd3b8bd1d6947e6c803e5a5ce69f">d_a_npc_seira.cpp</a></li>
+<li>wait__13daNpc_Shop0_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__shop0_8cpp.html#abb64e9b27c349685d58258284b5f8145">d_a_npc_shop0.cpp</a></li>
+<li>wait__13daNpc_yamiD_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__yamid_8cpp.html#ac5c3bc3ee9edd3cc39cf7e24015f02a9">d_a_npc_yamid.cpp</a></li>
+<li>wait__13daNpc_yamiS_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__yamis_8cpp.html#a5dcae33bc66c2154dbfbcdcdaefb825d">d_a_npc_yamis.cpp</a></li>
+<li>wait__13daNpc_yamiT_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__yamit_8cpp.html#a0de98fdccab3ce3133c5eef7376df548">d_a_npc_yamit.cpp</a></li>
+<li>wait__13daNpc_Yelia_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__yelia_8cpp.html#a09aebf942d775cb08666f47fd75c50f4">d_a_npc_yelia.cpp</a></li>
+<li>wait__13daNpc_Zelda_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__zelda_8cpp.html#aa90a9247cddd1891ead1f4e527f25e7f">d_a_npc_zelda.cpp</a></li>
+<li>wait__13daNpc_ZelRo_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__zelRo_8cpp.html#ac252f6e325b38f6763bdc83828fcf63a">d_a_npc_zelRo.cpp</a></li>
+<li>wait__13daNpcBlueNS_cFi()&#160;:&#160;<a class="el" href="d__a__npc__blue__ns_8cpp.html#a0a1198507984f7ed8afe3b5edb6fe53b">d_a_npc_blue_ns.cpp</a></li>
+<li>wait__13daNpcClerkT_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__clerkt_8cpp.html#a8b87437b2557cc3df99592e542a71621">d_a_npc_clerkt.cpp</a></li>
+<li>Wait__13daObjLv5Key_cFi()&#160;:&#160;<a class="el" href="d__a__obj__Lv5Key_8cpp.html#a6ac6db5d3e90b353bc31e99bd328f070">d_a_obj_Lv5Key.cpp</a></li>
+<li>wait__14daNpc_clerkA_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__clerka_8cpp.html#a79f2de125e41ed5a1ea9fe89d8b7431d">d_a_npc_clerka.cpp</a></li>
+<li>wait__14daNpc_clerkB_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__clerkb_8cpp.html#a7b690d30f534e574579960f1adeaf5ac">d_a_npc_clerkb.cpp</a></li>
+<li>wait__14daNpc_Kolinb_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__kolinb_8cpp.html#aaf9a960268496f53b58256a949c3bfb1">d_a_npc_kolinb.cpp</a></li>
+<li>wait__14daNpc_Seira2_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__seira2_8cpp.html#a2fed5b0a91890c97b44d33a1f9fec4dd">d_a_npc_seira2.cpp</a></li>
+<li>wait__14daNpc_Seirei_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__seirei_8cpp.html#a2adac57c7a8000b6db2a81fb5d2b371a">d_a_npc_seirei.cpp</a></li>
+<li>wait__14daNpcDoorBoy_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__doorboy_8cpp.html#a0649466e4b908e4a7c3b6a306aac0c56">d_a_npc_doorboy.cpp</a></li>
+<li>wait__14daNpcKasiKyu_cFi()&#160;:&#160;<a class="el" href="d__a__npc__kasi__kyu_8cpp.html#a5bb4b0ee64ce1d0ae7712238d739d6e9">d_a_npc_kasi_kyu.cpp</a></li>
+<li>wait__15daNpc_Kakashi_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__kakashi_8cpp.html#a0139e0b1297b3575b10e7c18651a7c98">d_a_npc_kakashi.cpp</a></li>
+<li>wait__15daNpcKasiHana_cFi()&#160;:&#160;<a class="el" href="d__a__npc__kasi__hana_8cpp.html#a187b367e858bd75ceb93b189ec9674ad">d_a_npc_kasi_hana.cpp</a></li>
+<li>wait__15daNpcKasiMich_cFi()&#160;:&#160;<a class="el" href="d__a__npc__kasi__mich_8cpp.html#aa143525c48518550ef7e9e68b619d807">d_a_npc_kasi_mich.cpp</a></li>
+<li>wait__15daNpcWrestler_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__wrestler_8cpp.html#af609bb0f43975cba37166a0cd988484f">d_a_npc_wrestler.cpp</a></li>
+<li>wait__15daObj_Sekizoa_cFPv()&#160;:&#160;<a class="el" href="d__a__obj__sekizoa_8cpp.html#aeb7b5031ee415e0d37f7eca9e3ae76fe">d_a_obj_sekizoa.cpp</a></li>
+<li>wait__15daObj_SSDrink_cFPv()&#160;:&#160;<a class="el" href="d__a__obj__ss__drink_8cpp.html#ae857448761529f4f89dfa794e9fefc86">d_a_obj_ss_drink.cpp</a></li>
+<li>wait__16daNpc_SoldierA_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__soldierA_8cpp.html#abb3d2fee8863da674670643e1815cb78">d_a_npc_soldierA.cpp</a></li>
+<li>wait__16daNpc_SoldierB_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__soldierB_8cpp.html#a757482088456dc06ae38722ac373d3d1">d_a_npc_soldierB.cpp</a></li>
+<li>wait__18daNpc_Pachi_Besu_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__pachi__besu_8cpp.html#a93c237320572e63dbf51bdee89619585">d_a_npc_pachi_besu.cpp</a></li>
+<li>wait__18daNpc_Pachi_Maro_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__pachi__maro_8cpp.html#ab977a8aa97e756c40199b43cd15352e6">d_a_npc_pachi_maro.cpp</a></li>
+<li>wait__18daNpc_Pachi_Taro_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__pachi__taro_8cpp.html#a9d23546808c33dbdf2618fda8b60695d">d_a_npc_pachi_taro.cpp</a></li>
+<li>wait__19daNpc_FairySeirei_cFi()&#160;:&#160;<a class="el" href="d__a__npc__fairy__seirei_8cpp.html#afbbe6c4115bb8781aa7d975d1ea6672f">d_a_npc_fairy_seirei.cpp</a></li>
+<li>wait__6daDr_cFv()&#160;:&#160;<a class="el" href="d__a__L7demo__dr_8cpp.html#ae4ec33ffc5b72e24df05d1927b20b7b3">d_a_L7demo_dr.cpp</a></li>
+<li>Wait__7dName_cFv()&#160;:&#160;<a class="el" href="d__name_8cpp.html#ad34b32d11e59ee4ebed5aa6e14e15271">d_name.cpp</a></li>
+<li>wait__8daE_GM_cFv()&#160;:&#160;<a class="el" href="d__a__e__gm_8cpp.html#ac322a20086f8aede28ffc7c1701786fb">d_a_e_gm.cpp</a></li>
+<li>wait__8daPeru_cFi()&#160;:&#160;<a class="el" href="d__a__peru_8cpp.html#a6aa73d9f215d30410fbc303a31f91ca1">d_a_peru.cpp</a></li>
+<li>wait__9daL7ODR_cFv()&#160;:&#160;<a class="el" href="d__a__L7op__demo__dr_8cpp.html#a65299c1660b0416f2714fbc8b77d3479">d_a_L7op_demo_dr.cpp</a></li>
+<li>wait__FP10b_oh_class()&#160;:&#160;<a class="el" href="d__a__b__oh_8cpp.html#a65377ab5b2265d388c61d5b19ec73cea">d_a_b_oh.cpp</a>, <a class="el" href="d__a__b__oh__NONMATCHING_8cpp.html#a65377ab5b2265d388c61d5b19ec73cea">d_a_b_oh_NONMATCHING.cpp</a></li>
+<li>wait_dummy__14daNpcKasiKyu_cFi()&#160;:&#160;<a class="el" href="d__a__npc__kasi__kyu_8cpp.html#a07ebc9b09d1a8c011999d11a8ae35fb9">d_a_npc_kasi_kyu.cpp</a></li>
+<li>wait_dummy__15daNpcKasiMich_cFi()&#160;:&#160;<a class="el" href="d__a__npc__kasi__mich_8cpp.html#a544288bf250877c3f9ef9bcc1af8e65e">d_a_npc_kasi_mich.cpp</a></li>
+<li>wait_init__14dMenu_Letter_cFv()&#160;:&#160;<a class="el" href="d__menu__letter_8cpp.html#a6c1a44e63f44a10e99aa6822ccc5e024">d_menu_letter.cpp</a></li>
+<li>wait_init__17dMenu_Collect2D_cFv()&#160;:&#160;<a class="el" href="d__menu__collect_8cpp.html#ab623359fe23eea220e365635c060964f">d_menu_collect.cpp</a></li>
+<li>wait_init_proc__20dMenu_StageMapCtrl_cFv()&#160;:&#160;<a class="el" href="d__menu__dmap__map_8cpp.html#a0573deb95d3dbc665f93a97c52e8e0c1">d_menu_dmap_map.cpp</a></li>
+<li>Wait_Motion__8daE_SB_cFv()&#160;:&#160;<a class="el" href="d__a__e__sb_8cpp.html#a6f9bfa9c80567604ba2666a6de55e21a">d_a_e_sb.cpp</a></li>
+<li>wait_move__14dMenu_Letter_cFv()&#160;:&#160;<a class="el" href="d__menu__letter_8cpp.html#a55af5061ec179ab822880a61dadf1d87">d_menu_letter.cpp</a></li>
+<li>wait_proc__17dMenu_Collect2D_cFv()&#160;:&#160;<a class="el" href="d__menu__collect_8cpp.html#a3b1618a7efdecc701e22a7eed09ad175">d_menu_collect.cpp</a></li>
+<li>wait_proc__20dMenu_StageMapCtrl_cFv()&#160;:&#160;<a class="el" href="d__menu__dmap__map_8cpp.html#a9522e66e569cb2eed26535f0f971d8d5">d_menu_dmap_map.cpp</a></li>
+<li>wait_type01__13daNpcRafrel_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__rafrel_8cpp.html#a4d2447ad825c3e026667deae8627c311">d_a_npc_rafrel.cpp</a></li>
+<li>wait_type0__10daNpcAsh_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__ash_8cpp.html#ac4e5ea60ca0687f2833d9815c5862e6e">d_a_npc_ash.cpp</a></li>
+<li>wait_type0__11daNpcMoiR_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__moir_8cpp.html#a046982d2a5a94f66c2a1d6b9aaf8b752">d_a_npc_moir.cpp</a></li>
+<li>wait_type0__11daNpcShad_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__shad_8cpp.html#a72d869225adedd047199cc9acffd1d14">d_a_npc_shad.cpp</a></li>
+<li>wait_type1__10daNpcAsh_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__ash_8cpp.html#a9a3c52c1ce29e0ae822e3d173bf83627">d_a_npc_ash.cpp</a></li>
+<li>wait_type1__11daNpcMoiR_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__moir_8cpp.html#a28f1abb40ece5c2c4ac5198c9d1ed64a">d_a_npc_moir.cpp</a></li>
+<li>wait_type1__11daNpcShad_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__shad_8cpp.html#a5e08e2e2b5254dd5a3667498df8831da">d_a_npc_shad.cpp</a></li>
+<li>wait_type2__11daNpcMoiR_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__moir_8cpp.html#a75fa2bc3607e868d21f8d92d6b75b496">d_a_npc_moir.cpp</a></li>
+<li>wait_type2__11daNpcShad_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__shad_8cpp.html#afe78235117c3b729d126d361d3568200">d_a_npc_shad.cpp</a></li>
+<li>wait_type2__13daNpcRafrel_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__rafrel_8cpp.html#a3ea4895cace37bdbbc22c4a7e697d68c">d_a_npc_rafrel.cpp</a></li>
+<li>waita__11daNpcCdn3_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__cdn3_8cpp.html#ae4a0cae9df569ac70da2078d1fa94d52">d_a_npc_cdn3.cpp</a></li>
+<li>waita__13daNpcPasser_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__passer_8cpp.html#aec3020d6255e345e72cae02eb0d367fc">d_a_npc_passer.cpp</a></li>
+<li>WaitAction__10daObjKAM_cFv()&#160;:&#160;<a class="el" href="d__a__obj__kamakiri_8cpp.html#a71f529740d88764bb70a2377784bdcc8">d_a_obj_kamakiri.cpp</a></li>
+<li>WaitAction__10daObjKUW_cFv()&#160;:&#160;<a class="el" href="d__a__obj__kuwagata_8cpp.html#ae8d415d2b00c80089c5ca825e0b454bf">d_a_obj_kuwagata.cpp</a></li>
+<li>WaitAction__10daObjTEN_cFv()&#160;:&#160;<a class="el" href="d__a__obj__ten_8cpp.html#a75433532ce2a943bdfe2c8b447cf37a1">d_a_obj_ten.cpp</a></li>
+<li>WaitAction__12daObjTOMBO_cFv()&#160;:&#160;<a class="el" href="d__a__obj__tombo_8cpp.html#a045473dcbe0d030745ab3d226dfe9923">d_a_obj_tombo.cpp</a></li>
+<li>WaitAction__13daObjYOUSEI_cFv()&#160;:&#160;<a class="el" href="d__a__obj__yousei_8cpp.html#a7a09f2d59fdcf6f63280da6515314c85">d_a_obj_yousei.cpp</a></li>
+<li>WaitAction__15daObjGOMIKABE_cFv()&#160;:&#160;<a class="el" href="d__a__obj__gomikabe_8cpp.html#a6a63ad55d4d7d9237ad716ab88d458a1">d_a_obj_gomikabe.cpp</a></li>
+<li>WaitAction__16daObjRIVERROCK_cFv()&#160;:&#160;<a class="el" href="d__a__obj__riverrock_8cpp.html#a37d98365f888b68555ae31423bb2dec3">d_a_obj_riverrock.cpp</a></li>
+<li>WaitAction__8daE_DF_cFv()&#160;:&#160;<a class="el" href="d__a__e__df_8cpp.html#ad53909057eb6a9cb6c8d0071d3e6d296">d_a_e_df.cpp</a></li>
+<li>WaitAction__8daE_HM_cFv()&#160;:&#160;<a class="el" href="d__a__e__hm_8cpp.html#a55fc03799830027c9575055e7009707a">d_a_e_hm.cpp</a></li>
+<li>WaitAction__8daE_MD_cFv()&#160;:&#160;<a class="el" href="d__a__e__md_8cpp.html#a664e699ff29b14a0ee5745d52b562e53">d_a_e_md.cpp</a></li>
+<li>WaitAction__8daE_PM_cFv()&#160;:&#160;<a class="el" href="d__a__e__pm_8cpp.html#a3ef7b9f33c8b7e6c6c9ddc0d2d8d8dd5">d_a_e_pm.cpp</a></li>
+<li>waitb__11daNpcCdn3_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__cdn3_8cpp.html#a9925a8eeb9fcf154172b08a2e00ef769">d_a_npc_cdn3.cpp</a></li>
+<li>waitb__13daNpcPasser_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__passer_8cpp.html#a79f5b6581711807f4866214141eb81f9">d_a_npc_passer.cpp</a></li>
+<li>waitBattle__11daNpc_Hoz_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__hoz_8cpp.html#adfc5cee8c7da70c13a0a5de18c483817">d_a_npc_hoz.cpp</a></li>
+<li>WaitBeforeRead()&#160;:&#160;<a class="el" href="dvdlow_8c.html#a6c5085ceebdeaec56b6bf6e22331147b">dvdlow.c</a></li>
+<li>waitBoat1_5__11daNpc_Hoz_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__hoz_8cpp.html#ae67174437e01411c093de5e5b4899407">d_a_npc_hoz.cpp</a></li>
+<li>waitBoat2__11daNpc_Hoz_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__hoz_8cpp.html#a2f021036fdc7cee8a289521426277430">d_a_npc_hoz.cpp</a></li>
+<li>waitBoat__11daNpc_Hoz_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__hoz_8cpp.html#a5976bd9a22d05822a0423115ce6e0128">d_a_npc_hoz.cpp</a></li>
+<li>waitBrave__13daNpc_GWolf_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__gwolf_8cpp.html#a9ac97f89f4e359308ba8907f520034fd">d_a_npc_gwolf.cpp</a></li>
+<li>waitBuyer__11daNpc_grA_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__gra_8cpp.html#a887db61c81504922ba0bdd3ab34ddf1c">d_a_npc_gra.cpp</a></li>
+<li>waitBuyer__11daNpc_grC_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__grc_8cpp.html#afd6be50ae82ad8a594c5693cefe81d0b">d_a_npc_grc.cpp</a></li>
+<li>waitCalc__11daNpc_zrA_cFv()&#160;:&#160;<a class="el" href="d__a__npc__zra_8cpp.html#a93b932a150aa4c0cd51b80481f4f21d0">d_a_npc_zra.cpp</a></li>
+<li>waitCheer__11daNpc_grA_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__gra_8cpp.html#a090ebac58c0e7967c0c5e956a3ea5489">d_a_npc_gra.cpp</a></li>
+<li>waitDemo__11daObj_GrA_cFPv()&#160;:&#160;<a class="el" href="d__a__obj__gra2_8cpp.html#a472f71b952e1cf653d794bac7f9f5945">d_a_obj_gra2.cpp</a></li>
+<li>waitFailure__13daNpc_myna2_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__myna2_8cpp.html#ada70ed7defe525333a12888f807fb0cf">d_a_npc_myna2.cpp</a></li>
+<li>waitForTick()&#160;:&#160;<a class="el" href="JFWDisplay_8cpp.html#a98f15c3d6f90953b135c74c30aeb5551">JFWDisplay.cpp</a>, <a class="el" href="JFWDisplay_8h.html#afa1f5b052f4a8c7c512a3a6d86550bfa">JFWDisplay.h</a></li>
+<li>waitGate__11daNpc_grA_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__gra_8cpp.html#a018c11c2ee4e098d47f5be9a7cafe538">d_a_npc_gra.cpp</a></li>
+<li>waitGoal__13daNpc_myna2_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__myna2_8cpp.html#ab859828c052e270ee1f0c0d4aed43d31">d_a_npc_myna2.cpp</a></li>
+<li>waitHovering__13daNpc_myna2_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__myna2_8cpp.html#acec8e12e5f0107498729c85ea6f1d234">d_a_npc_myna2.cpp</a></li>
+<li>waitHowling__13daNpc_GWolf_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__gwolf_8cpp.html#a68a7f09ac943f65cbf383c6f4d0b6529">d_a_npc_gwolf.cpp</a></li>
+<li>waitKickOut__11daNpc_grA_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__gra_8cpp.html#a33e850c302dee0bf55ac43b31c236f8b">d_a_npc_gra.cpp</a></li>
+<li>waitLake__11daNpc_zrA_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__zra_8cpp.html#a0acbcade4a2fa05c6177213d2d7ac351">d_a_npc_zra.cpp</a></li>
+<li>waitLv6__10daNpcTks_cFv()&#160;:&#160;<a class="el" href="d__a__npc__tks_8cpp.html#ac93102923de94ca16e29f77921e0fe2e">d_a_npc_tks.cpp</a></li>
+<li>waitMaro__11daNpc_grO_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__gro_8cpp.html#a7f1b667c036bd5aee6eb56ce669369db">d_a_npc_gro.cpp</a></li>
+<li>waitMaro__11daNpc_grR_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__grr_8cpp.html#adec34a8d4051050f0f1181f6c9339eb2">d_a_npc_grr.cpp</a></li>
+<li>waitNude__10daNpcTks_cFv()&#160;:&#160;<a class="el" href="d__a__npc__tks_8cpp.html#aba8883b8d0851a7c7ff52aad2c8b43e9">d_a_npc_tks.cpp</a></li>
+<li>waitOutSide1__10daNpcIns_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__ins_8cpp.html#a035f151c8234374772cad067d07ea282">d_a_npc_ins.cpp</a></li>
+<li>waitOutSide2__10daNpcIns_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__ins_8cpp.html#a345c12cc668eba805f1ed421dc270189">d_a_npc_ins.cpp</a></li>
+<li>waitPray__11daNpc_zrC_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__zrc_8cpp.html#a1922b19464b81c2124a63b0d8b182a9f">d_a_npc_zrc.cpp</a></li>
+<li>waitPresent__10daNpcIns_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__ins_8cpp.html#ac4b91583ed59e4f9cd4afe6a39d2f3b5">d_a_npc_ins.cpp</a></li>
+<li>waitProc__12dMsgObject_cFv()&#160;:&#160;<a class="el" href="d__msg__object_8cpp.html#a3f63e866e77ea3e02d183e253953c713">d_msg_object.cpp</a></li>
+<li>waitProc__17dMsgScrn3Select_cFv()&#160;:&#160;<a class="el" href="d__msg__scrn__3select_8cpp.html#a437b66951cc99a5bb7e51d6f1e115249">d_msg_scrn_3select.cpp</a></li>
+<li>waitRiverDescend__11daNpc_zrA_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__zra_8cpp.html#a93336718f25c6fa79d84d31218e2b52d">d_a_npc_zra.cpp</a></li>
+<li>WaitRollSpeed__11dCamSetup_cFv()&#160;:&#160;<a class="el" href="d__camera_8cpp.html#a3b5e45cfc385cad1531a8124dd38649a">d_camera.cpp</a></li>
+<li>WaitRollTimer__11dCamSetup_cFv()&#160;:&#160;<a class="el" href="d__camera_8cpp.html#abd194ebf75d742ae3289b7d1cf005f2f">d_camera.cpp</a></li>
+<li>waitSearch__11daNpc_zrA_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__zra_8cpp.html#ae9f246fbca04e89335a2dc6bca1be0e9">d_a_npc_zra.cpp</a></li>
+<li>waitShop__10daNpcIns_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__ins_8cpp.html#aca72f2637f5ed1c3494e8dd1182c155b">d_a_npc_ins.cpp</a></li>
+<li>waitSick__11daNpc_zrC_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__zrc_8cpp.html#af1275358679b5fc70297e84b5c6e5517">d_a_npc_zrc.cpp</a></li>
+<li>waitSmash__11daNpc_Grz_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__grz_8cpp.html#a835a4d0e9c6ee0935bd061b8b5840b16">d_a_npc_grz.cpp</a></li>
+<li>waitSpa__11daNpc_grC_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__grc_8cpp.html#acd3cede45471ec9ef368c4988ed96331">d_a_npc_grc.cpp</a></li>
+<li>waitSpa__11daNpc_zrA_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__zra_8cpp.html#ab7c522b7420791bd503807a6fef9b2c4">d_a_npc_zra.cpp</a></li>
+<li>waitSpaBuyer__11daNpc_grA_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__gra_8cpp.html#a48201e171d14c7c3de1eb21c1ee98dd0">d_a_npc_gra.cpp</a></li>
+<li>waitSpaBuyerTW__11daNpc_grA_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__gra_8cpp.html#a08898bb2fa036dd85539859e54178e8b">d_a_npc_gra.cpp</a></li>
+<li>waitSpaWater__11daNpc_grA_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__gra_8cpp.html#a6050f7285d0a6a4bf69a7aeac11df950">d_a_npc_gra.cpp</a></li>
+<li>waitSubFrame__9JASDriverFv()&#160;:&#160;<a class="el" href="Z2SoundMgr_8cpp.html#abcce801cb13347c9424c32d52ab9fc68">Z2SoundMgr.cpp</a></li>
+<li>waitSwim__11daNpc_zrA_cFv()&#160;:&#160;<a class="el" href="d__a__npc__zra_8cpp.html#acca4efd6bf3cf77ff679efbd393ee833">d_a_npc_zra.cpp</a></li>
+<li>waitThrone__11daNpc_zrC_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__zrc_8cpp.html#a6d5f5085a03926bcb45963049c47e3c8">d_a_npc_zrc.cpp</a></li>
+<li>waitTime__12JUTExceptionFl()&#160;:&#160;<a class="el" href="m__Do__machine_8cpp.html#a4e47c5eab540de9463bda35787506837">m_Do_machine.cpp</a></li>
+<li>waitTime__13daNpcPasser_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__passer_8cpp.html#a4d9d750b4612959d6cb22aa0caf06d22">d_a_npc_passer.cpp</a></li>
+<li>waitTW__10daNpcThe_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__the_8cpp.html#af78b318d33c9eaba73286e22cb023cfa">d_a_npc_the.cpp</a></li>
+<li>waitTW__11daNpc_grA_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__gra_8cpp.html#a02d9db1042dcf5cdbfd2ce13a19f41fa">d_a_npc_gra.cpp</a></li>
+<li>waitTW__11daNpc_grC_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__grc_8cpp.html#aa29a9830f03c35946d5ce39557cbea09">d_a_npc_grc.cpp</a></li>
+<li>waitTw__11daNpc_Hoz_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__hoz_8cpp.html#a202ed3953fc769c1a3e82af5331b6c8a">d_a_npc_hoz.cpp</a></li>
+<li>waitTwilightBattle__11daNpc_Hoz_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__hoz_8cpp.html#a8ee3a97efab197ce50c48647a1a137d5">d_a_npc_hoz.cpp</a></li>
+<li>waitwall__11daNpcCdn3_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__cdn3_8cpp.html#a59faaa18d1ebafba8744e37092bd3cd0">d_a_npc_cdn3.cpp</a></li>
+<li>waitwall__13daNpcPasser_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__passer_8cpp.html#a1a0e260d55df5a822b2c85f5ccceb85c">d_a_npc_passer.cpp</a></li>
+<li>waitWaterfall__11daNpc_zrA_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__zra_8cpp.html#a5269bb422c954478223cbf0a294e52b0">d_a_npc_zra.cpp</a></li>
+<li>waitWeak__11daNpc_Grz_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__grz_8cpp.html#ab3e4277b41b92262c0fc4a8c573708fc">d_a_npc_grz.cpp</a></li>
+<li>walk()&#160;:&#160;<a class="el" href="d__a__b__gos_8cpp.html#a585de5885d1c157d8c268a56c4905b8d">d_a_b_gos.cpp</a></li>
+<li>walk2__8daE_GM_cFv()&#160;:&#160;<a class="el" href="d__a__e__gm_8cpp.html#acb66bd4848891fdcba192b1211b09b42">d_a_e_gm.cpp</a></li>
+<li>walk__10daObjKAG_cFv()&#160;:&#160;<a class="el" href="d__a__obj__kag_8cpp.html#a3c7c19a1fbc691ad5d899ab2d76c8666">d_a_obj_kag.cpp</a></li>
+<li>walk__10daObjNAN_cFv()&#160;:&#160;<a class="el" href="d__a__obj__nan_8cpp.html#a89445a312535c4f453b460251aba7105">d_a_obj_nan.cpp</a></li>
+<li>walk__11daNpc_Doc_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__doc_8cpp.html#a5b855eb9cde3713ccd596ea280a7caff">d_a_npc_doc.cpp</a></li>
+<li>walk__11daNpc_Moi_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__moi_8cpp.html#a67dbab163d9964b6167dfffc26a892f7">d_a_npc_moi.cpp</a></li>
+<li>walk__11daNpc_Uri_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__uri_8cpp.html#a58688c4afdce5f343efd11941c933feb">d_a_npc_uri.cpp</a></li>
+<li>walk__11daNpc_ykW_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__ykw_8cpp.html#a33093b72cfb2293485f5773200669b62">d_a_npc_ykw.cpp</a></li>
+<li>walk__11daObj_GrA_cFPv()&#160;:&#160;<a class="el" href="d__a__obj__gra2_8cpp.html#a8c710cf1c3030bd1f688454fdcf48f58">d_a_obj_gra2.cpp</a></li>
+<li>walk__12daNpc_Raca_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__raca_8cpp.html#a9d36c7c41613a0da495fb4d8747c2d65">d_a_npc_raca.cpp</a></li>
+<li>walk__12daNpc_Toby_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__toby_8cpp.html#a0a76536f1f06647b7dbf6239d972769e">d_a_npc_toby.cpp</a></li>
+<li>walk__8daE_GM_cFv()&#160;:&#160;<a class="el" href="d__a__e__gm_8cpp.html#a3f5f31ec05c904e7859c971b9f92f11f">d_a_e_gm.cpp</a></li>
+<li>walka__11daNpcCdn3_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__cdn3_8cpp.html#a0e5440df27f97ff091c497aa83c03875">d_a_npc_cdn3.cpp</a></li>
+<li>walka__13daNpcPasser_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__passer_8cpp.html#a6b62791bf13c2e9b51ebce64da67f5c8">d_a_npc_passer.cpp</a></li>
+<li>WalkAction__10daObjKAM_cFv()&#160;:&#160;<a class="el" href="d__a__obj__kamakiri_8cpp.html#a57a9e7e018be29db25d6bf5c07bc6716">d_a_obj_kamakiri.cpp</a></li>
+<li>WalkAction__10daObjKUW_cFv()&#160;:&#160;<a class="el" href="d__a__obj__kuwagata_8cpp.html#aed832149480eb875a65ac73c5d709693">d_a_obj_kuwagata.cpp</a></li>
+<li>WalkAction__10daObjTEN_cFv()&#160;:&#160;<a class="el" href="d__a__obj__ten_8cpp.html#afc2581062940d96b87a1b06e993ac502">d_a_obj_ten.cpp</a></li>
+<li>walkb__11daNpcCdn3_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__cdn3_8cpp.html#a0397031d22563f4388ba3740cd460816">d_a_npc_cdn3.cpp</a></li>
+<li>walkb__13daNpcPasser_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__passer_8cpp.html#aa05be7d6c361f45ed3f3ed2de4a1ae52">d_a_npc_passer.cpp</a></li>
+<li>walkCalc__11daNpc_zrA_cFv()&#160;:&#160;<a class="el" href="d__a__npc__zra_8cpp.html#a1d7ebb106ae2e39fe0393e18fce6703d">d_a_npc_zra.cpp</a></li>
+<li>walkOnEggshell__11daNpc_Moi_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__moi_8cpp.html#af1df136b7447522019d47fc3a2424f0c">d_a_npc_moi.cpp</a></li>
+<li>wall_angle_get()&#160;:&#160;<a class="el" href="d__a__e__mm__mt_8cpp.html#ab91226b5639e595cfd3f30ccb65a489a">d_a_e_mm_mt.cpp</a>, <a class="el" href="d__a__obj__hb_8cpp.html#a7e82a19b425c54d4d91c9b57322d848a">d_a_obj_hb.cpp</a>, <a class="el" href="d__a__obj__gm_8cpp.html#ae5a9286b244fce0e05a96dae5cb691b6">d_a_obj_gm.cpp</a>, <a class="el" href="d__a__obj__food_8cpp.html#ab5ac860ce537e81807e4d81e99865a81">d_a_obj_food.cpp</a>, <a class="el" href="d__a__npc__ne_8cpp.html#a92c41d2ae4dafbfaf654c0a7b12c8e4c">d_a_npc_ne.cpp</a>, <a class="el" href="d__a__e__th__ball_8cpp.html#a34d6f98639295ca32db29515cba257b2">d_a_e_th_ball.cpp</a>, <a class="el" href="d__a__e__nest_8cpp.html#a265eb9a01e081f0ac10fafcc75c83ba6">d_a_e_nest.cpp</a></li>
+<li>wall_angle_get__FP12npc_ne_class()&#160;:&#160;<a class="el" href="d__a__npc__ne_8cpp.html#ad98451e51aa0fcab29978a0e1a73cf87">d_a_npc_ne.cpp</a></li>
+<li>wall_angle_get__FP12obj_gm_class()&#160;:&#160;<a class="el" href="d__a__obj__gm_8cpp.html#a8f790abeafd43efdbaaf2b00aa78cf9a">d_a_obj_gm.cpp</a></li>
+<li>wall_angle_get__FP12obj_hb_class()&#160;:&#160;<a class="el" href="d__a__obj__hb_8cpp.html#abba3e69297cefd83aa0218bcd9aa0e6c">d_a_obj_hb.cpp</a></li>
+<li>wall_angle_get__FP13e_mm_mt_class()&#160;:&#160;<a class="el" href="d__a__e__mm__mt_8cpp.html#a149ea96059c3c50b051150d4e194c862">d_a_e_mm_mt.cpp</a></li>
+<li>wall_angle_get__FP15e_th_ball_class()&#160;:&#160;<a class="el" href="d__a__e__th__ball_8cpp.html#ada4def8303db69689b6d9fd9228dc704">d_a_e_th_ball.cpp</a></li>
+<li>wall_check()&#160;:&#160;<a class="el" href="d__a__e__mm_8cpp.html#a4b9277ff2b81b16f473bfba21db9921c">d_a_e_mm.cpp</a></li>
+<li>Wall_Check__13daObjHHASHI_cFs()&#160;:&#160;<a class="el" href="d__a__obj__hhashi_8cpp.html#a82ede4fda15e7397a14c0b83b69e5f20">d_a_obj_hhashi.cpp</a></li>
+<li>Wall_Check__15daObjCRVFENCE_cF4cXyz4cXyz()&#160;:&#160;<a class="el" href="d__a__obj__crvfence_8cpp.html#a81d637947dc3513ff6f1b9f739789a98">d_a_obj_crvfence.cpp</a></li>
+<li>Wall_Check__15daObjCRVHAHEN_cF4cXyz4cXyz()&#160;:&#160;<a class="el" href="d__a__obj__crvhahen_8cpp.html#a74200056fdb96e0b0236cc5d36af8835">d_a_obj_crvhahen.cpp</a></li>
+<li>Wall_Check__7Hahen_cFv()&#160;:&#160;<a class="el" href="d__a__obj__bhashi_8cpp.html#a9863fa0fa4bb134f8b4fbee477aac4be">d_a_obj_bhashi.cpp</a></li>
+<li>wall_check__FP10e_mm_classf()&#160;:&#160;<a class="el" href="d__a__e__mm_8cpp.html#ae5f7e8bdb91280b8421cf501d4bf5c3d">d_a_e_mm.cpp</a></li>
+<li>wall_pos__Q212daObjMovebox5Bgc_cFPCQ212daObjMovebox5Act_cPCQ212daObjMovebox8BgcSrc_cisf()&#160;:&#160;<a class="el" href="d__a__obj__movebox_8cpp.html#a4c8f7881a53a28664e02962b845b5be2">d_a_obj_movebox.cpp</a></li>
+<li>wall_pos__Q29daObjBm_c5Bgc_cFPC10fopAc_ac_cPCQ29daObjBm_c8BgcSrc_cisf()&#160;:&#160;<a class="el" href="d__a__obj__bemos_8cpp.html#a125d19e385b537e323b87ea996c17a99">d_a_obj_bemos.cpp</a></li>
+<li>WallCheck__10daObjKAM_cFv()&#160;:&#160;<a class="el" href="d__a__obj__kamakiri_8cpp.html#a83ce09e187159aa98fb3b9ba1e89ae94">d_a_obj_kamakiri.cpp</a></li>
+<li>WallCheck__10daObjKUW_cFv()&#160;:&#160;<a class="el" href="d__a__obj__kuwagata_8cpp.html#acb7446d03f086ada69796d324d291334">d_a_obj_kuwagata.cpp</a></li>
+<li>WallCheck__10daObjTEN_cFv()&#160;:&#160;<a class="el" href="d__a__obj__ten_8cpp.html#aa36c9bd69cc5a7fb7ad4b992941494e5">d_a_obj_ten.cpp</a></li>
+<li>WallCheck__8daE_HM_cFv()&#160;:&#160;<a class="el" href="d__a__e__hm_8cpp.html#af10856cb54cb8fbc5db6ae27c2625955">d_a_e_hm.cpp</a></li>
+<li>WallCorrect__4dBgWFP9dBgS_Acch()&#160;:&#160;<a class="el" href="d__bg__w_8cpp.html#ac8f5ca92501ece05667b4234004ea592">d_bg_w.cpp</a></li>
+<li>WallCorrect__8dBgWKColFP9dBgS_Acch()&#160;:&#160;<a class="el" href="d__bg__w__kcol_8cpp.html#a7016f771d2a71598a4b3a534b399f647">d_bg_w_kcol.cpp</a></li>
+<li>WallCorrectGrpRp__4dBgWFP9dBgS_Acchii()&#160;:&#160;<a class="el" href="d__bg__w_8cpp.html#a68e5e2326b8002598f4257953aa12aac">d_bg_w.cpp</a></li>
+<li>WallCorrectGrpRpSort__4dBgWFP9dBgS_Acchii()&#160;:&#160;<a class="el" href="d__bg__w_8cpp.html#ae46e94bf820187e715f76dfe8934743b">d_bg_w.cpp</a></li>
+<li>WallCorrectRp__4dBgWFP9dBgS_Acchi()&#160;:&#160;<a class="el" href="d__bg__w_8cpp.html#a4743a9b4adecbfbc626c72bad1836a64">d_bg_w.cpp</a></li>
+<li>WallCorrectRpSort__4dBgWFP9dBgS_Acchi()&#160;:&#160;<a class="el" href="d__bg__w_8cpp.html#ae3ed1811cdc16d42b11a6f490291e155">d_bg_w.cpp</a></li>
+<li>WallCorrectSort__4dBgWFP9dBgS_Acch()&#160;:&#160;<a class="el" href="d__bg__w_8cpp.html#a82186849ae73df405656252c29c4586d">d_bg_w.cpp</a></li>
+<li>WallCorrectSort__8dBgWKColFP9dBgS_Acch()&#160;:&#160;<a class="el" href="d__bg__w__kcol_8cpp.html#a26bf61db7d3263ba0bd538db4a3cfe81">d_bg_w_kcol.cpp</a></li>
+<li>WallCreateExecute__8daE_HM_cFv()&#160;:&#160;<a class="el" href="d__a__e__hm_8cpp.html#a6cbcbfb417e764b1b5605ffd2e4aec4f">d_a_e_hm.cpp</a></li>
+<li>WallExecute__8daE_HM_cFv()&#160;:&#160;<a class="el" href="d__a__e__hm_8cpp.html#ab5f74fc6a58788b7607b048a9ab6c2e7">d_a_e_hm.cpp</a></li>
+<li>wallGrabButton__9daAlink_cFv()&#160;:&#160;<a class="el" href="d__a__alink_8cpp.html#ab9a6627981c67f4554d347d7319ed748">d_a_alink.cpp</a></li>
+<li>wallGrabTrigger__9daAlink_cFv()&#160;:&#160;<a class="el" href="d__a__alink_8cpp.html#ad06bbff841de6123742df372ea55e6bf">d_a_alink.cpp</a></li>
+<li>WallWalk__10daObjARI_cFv()&#160;:&#160;<a class="el" href="d__a__obj__ari_8cpp.html#a0c69c2265d27a2057bdac1f0b0b5d623">d_a_obj_ari.cpp</a></li>
+<li>WallWalk__10daObjKAM_cFv()&#160;:&#160;<a class="el" href="d__a__obj__kamakiri_8cpp.html#ad3eaafe4df3ef71c4b256af734a79932">d_a_obj_kamakiri.cpp</a></li>
+<li>WallWalk__10daObjKAT_cFv()&#160;:&#160;<a class="el" href="d__a__obj__katatsumuri_8cpp.html#ae4d43bd77178e8fef39f15ad40b53af2">d_a_obj_katatsumuri.cpp</a></li>
+<li>WallWalk__10daObjKUW_cFv()&#160;:&#160;<a class="el" href="d__a__obj__kuwagata_8cpp.html#a802e6f6ae84a0102a27032b8f598e30a">d_a_obj_kuwagata.cpp</a></li>
+<li>WallWalk__10daObjTEN_cFv()&#160;:&#160;<a class="el" href="d__a__obj__ten_8cpp.html#a95eeb6cc7a35354bb2a96518e18cc723">d_a_obj_ten.cpp</a></li>
+<li>warp__10daObjTks_cFv()&#160;:&#160;<a class="el" href="d__a__obj__tks_8cpp.html#a6d098e993abba3684af516ed98f933a3">d_a_obj_tks.cpp</a></li>
+<li>warpInProc__13dMeter2Info_cFv()&#160;:&#160;<a class="el" href="d__a__alink_8cpp.html#a9160e01d9392607756873ae00b42ba2d">d_a_alink.cpp</a>, <a class="el" href="d__meter2__info_8cpp.html#a9160e01d9392607756873ae00b42ba2d">d_meter2_info.cpp</a>, <a class="el" href="d__a__npc__tks_8cpp.html#a9160e01d9392607756873ae00b42ba2d">d_a_npc_tks.cpp</a></li>
+<li>warpModelTexScroll__9daAlink_cFv()&#160;:&#160;<a class="el" href="d__a__alink_8cpp.html#abaaf0a6a61b272f157eb2bfc15fe6580">d_a_alink.cpp</a></li>
+<li>warpOutProc__13dMeter2Info_cFv()&#160;:&#160;<a class="el" href="d__a__alink_8cpp.html#a48e7649c0c2aae56903931f8a4cefb91">d_a_alink.cpp</a>, <a class="el" href="d__meter2__info_8cpp.html#a48e7649c0c2aae56903931f8a4cefb91">d_meter2_info.cpp</a></li>
+<li>warpTalk__10daNpcTkc_cFv()&#160;:&#160;<a class="el" href="d__a__npc__tkc_8cpp.html#ab61189cd129ef180af0eae67fd8510ae">d_a_npc_tkc.cpp</a></li>
+<li>watch_game__11daNpcChin_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__chin_8cpp.html#a6a2f129adbd24ed9960d5ffed9a06b10">d_a_npc_chin.cpp</a></li>
+<li>watch_tutrial__18daNpc_Pachi_Taro_cFv()&#160;:&#160;<a class="el" href="d__a__npc__pachi__taro_8cpp.html#a99a4b8cf5379aa922d305506f195efc3">d_a_npc_pachi_taro.cpp</a></li>
+<li>watchActorEvCamera__9dCamera_cFv()&#160;:&#160;<a class="el" href="d__camera_8cpp.html#a136e11a3c01904ca83bb2f36bd0597ca">d_camera.cpp</a>, <a class="el" href="d__ev__camera_8cpp.html#a136e11a3c01904ca83bb2f36bd0597ca">d_ev_camera.cpp</a></li>
+<li>water()&#160;:&#160;<a class="el" href="d__a__e__sm2_8cpp.html#a8edb7f500bf6be2d2e60a9e46a43837d">d_a_e_sm2.cpp</a></li>
+<li>water__FP11e_sm2_class()&#160;:&#160;<a class="el" href="d__a__e__sm2_8cpp.html#ac310caa2471b6c919976212212cbb8a2">d_a_e_sm2.cpp</a></li>
+<li>water_check()&#160;:&#160;<a class="el" href="d__a__do_8cpp.html#a6c48782be4371f4582e75fbcdf0d3805">d_a_do.cpp</a>, <a class="el" href="d__a__do__NONMATCHING_8cpp.html#a6c48782be4371f4582e75fbcdf0d3805">d_a_do_NONMATCHING.cpp</a>, <a class="el" href="d__a__e__bi_8cpp.html#ad52a38a670eac7f684e11a0d6f9741c0">d_a_e_bi.cpp</a>, <a class="el" href="d__a__e__nest_8cpp.html#a20817e019123af5d4ededc5a5176305e">d_a_e_nest.cpp</a>, <a class="el" href="d__a__e__st_8cpp.html#a9d9af8669ef3052f29a314dbf2c96573">d_a_e_st.cpp</a>, <a class="el" href="d__a__npc__ks_8cpp.html#aedc82ac5faa83bb6307562904eedc505">d_a_npc_ks.cpp</a>, <a class="el" href="d__a__npc__ne_8cpp.html#a9fa2fa1448322a1817a8bf7bddd193d5">d_a_npc_ne.cpp</a>, <a class="el" href="d__a__obj__fw_8cpp.html#a734590271afc22eb670fbca18d5290b4">d_a_obj_fw.cpp</a>, <a class="el" href="d__a__obj__hb_8cpp.html#a1b366835b850dcda3e7c2f5ec8e7713d">d_a_obj_hb.cpp</a>, <a class="el" href="d__a__obj__kbox_8cpp.html#ae5e2c1f98da63333a5b296dfc51a647f">d_a_obj_kbox.cpp</a></li>
+<li>water_check__FP10e_bi_class()&#160;:&#160;<a class="el" href="d__a__e__bi_8cpp.html#ac581f6cf3360534d9921ceafc85122c6">d_a_e_bi.cpp</a></li>
+<li>water_check__FP10e_st_class()&#160;:&#160;<a class="el" href="d__a__e__st_8cpp.html#a1c8def75d584028df3a85c491b95e54b">d_a_e_st.cpp</a></li>
+<li>water_check__FP12npc_ks_class4cXyzf()&#160;:&#160;<a class="el" href="d__a__npc__ks_8cpp.html#a423b85382c8daed17165559a12d80288">d_a_npc_ks.cpp</a></li>
+<li>water_check__FP12npc_ne_classf()&#160;:&#160;<a class="el" href="d__a__npc__ne_8cpp.html#ad564bd76045671581144ecb8648d5dca">d_a_npc_ne.cpp</a></li>
+<li>water_check__FP12obj_fw_class()&#160;:&#160;<a class="el" href="d__a__obj__fw_8cpp.html#a44fb716dedfebd89e270b9a7acc90612">d_a_obj_fw.cpp</a></li>
+<li>water_check__FP12obj_hb_class()&#160;:&#160;<a class="el" href="d__a__obj__hb_8cpp.html#ab0583112bd9814eb054195a5726b843e">d_a_obj_hb.cpp</a></li>
+<li>water_check__FP14obj_kbox_class()&#160;:&#160;<a class="el" href="d__a__obj__kbox_8cpp.html#ac9856a197448682b74bb750e681991dd">d_a_obj_kbox.cpp</a></li>
+<li>water_check__FP8do_class()&#160;:&#160;<a class="el" href="d__a__do_8cpp.html#a259611ff4370e6a24a57ae46e9df8523">d_a_do.cpp</a></li>
+<li>waterCheck__11fopAcM_wt_cFPC4cXyz()&#160;:&#160;<a class="el" href="d__a__obj__tobyhouse_8cpp.html#ab0fa9a87ba7a0c3d63bc41e5db3e60f0">d_a_obj_tobyhouse.cpp</a>, <a class="el" href="d__a__obj__ita_8cpp.html#ab0fa9a87ba7a0c3d63bc41e5db3e60f0">d_a_obj_ita.cpp</a>, <a class="el" href="f__op__actor__mng_8cpp.html#ab0fa9a87ba7a0c3d63bc41e5db3e60f0">f_op_actor_mng.cpp</a>, <a class="el" href="d__a__obj__ikada_8cpp.html#ab0fa9a87ba7a0c3d63bc41e5db3e60f0">d_a_obj_ikada.cpp</a>, <a class="el" href="d__a__obj__gomikabe_8cpp.html#ab0fa9a87ba7a0c3d63bc41e5db3e60f0">d_a_obj_gomikabe.cpp</a>, <a class="el" href="d__a__obj__dust_8cpp.html#ab0fa9a87ba7a0c3d63bc41e5db3e60f0">d_a_obj_dust.cpp</a>, <a class="el" href="d__a__obj__bky__rock_8cpp.html#ab0fa9a87ba7a0c3d63bc41e5db3e60f0">d_a_obj_bky_rock.cpp</a>, <a class="el" href="d__a__obj__bhbridge_8cpp.html#ab0fa9a87ba7a0c3d63bc41e5db3e60f0">d_a_obj_bhbridge.cpp</a>, <a class="el" href="d__a__e__tt_8cpp.html#ab0fa9a87ba7a0c3d63bc41e5db3e60f0">d_a_e_tt.cpp</a>, <a class="el" href="d__a__door__mbossL1_8cpp.html#ab0fa9a87ba7a0c3d63bc41e5db3e60f0">d_a_door_mbossL1.cpp</a>, <a class="el" href="d__a__door__shutter_8cpp.html#ab0fa9a87ba7a0c3d63bc41e5db3e60f0">d_a_door_shutter.cpp</a>, <a class="el" href="d__a__alink_8cpp.html#ab0fa9a87ba7a0c3d63bc41e5db3e60f0">d_a_alink.cpp</a>, <a class="el" href="d__particle_8cpp.html#ab0fa9a87ba7a0c3d63bc41e5db3e60f0">d_particle.cpp</a>, <a class="el" href="d__a__arrow_8cpp.html#ab0fa9a87ba7a0c3d63bc41e5db3e60f0">d_a_arrow.cpp</a>, <a class="el" href="d__a__canoe_8cpp.html#ab0fa9a87ba7a0c3d63bc41e5db3e60f0">d_a_canoe.cpp</a>, <a class="el" href="d__a__horse_8cpp.html#ab0fa9a87ba7a0c3d63bc41e5db3e60f0">d_a_horse.cpp</a>, <a class="el" href="d__a__boomerang_8cpp.html#ab0fa9a87ba7a0c3d63bc41e5db3e60f0">d_a_boomerang.cpp</a></li>
+<li>way_bg_check()&#160;:&#160;<a class="el" href="d__a__e__rd_8cpp.html#aafda57a302f59952551e463d811da4ff">d_a_e_rd.cpp</a>, <a class="el" href="d__a__npc__ne_8cpp.html#afd217c2f90977e7e9e0d3a69c8fa7508">d_a_npc_ne.cpp</a>, <a class="el" href="d__a__e__tk_8cpp.html#ab1ab1a0304d4464ef2af71eca5617c6b">d_a_e_tk.cpp</a>, <a class="el" href="d__a__e__sm_8cpp.html#a97d50cfc927695122c9170ed08311d7a">d_a_e_sm.cpp</a>, <a class="el" href="d__a__e__sf_8cpp.html#a61322f3255e3ece2ed1aba366a134c82">d_a_e_sf.cpp</a>, <a class="el" href="d__a__e__rdy_8cpp.html#a1998399f07f243ca4ad2599f39366f74">d_a_e_rdy.cpp</a>, <a class="el" href="d__a__e__kg_8cpp.html#afc8bb1bbebb879ebc9cd64996500a13c">d_a_e_kg.cpp</a>, <a class="el" href="d__a__e__fs_8cpp.html#a355155c06443ef22c8414f7675d649fe">d_a_e_fs.cpp</a>, <a class="el" href="d__a__e__dd_8cpp.html#a5d517ec2598b192ff2e21803cf1af854">d_a_e_dd.cpp</a>, <a class="el" href="d__a__e__cr_8cpp.html#ae98c43e6b9fed8e6afa6a3f9ddaf65c3">d_a_e_cr.cpp</a>, <a class="el" href="d__a__e__bs_8cpp.html#aaac430186f7628005f9eca8c172373c9">d_a_e_bs.cpp</a>, <a class="el" href="d__a__sq_8cpp.html#ad485437af0f0ce36747be7a98c81352a">d_a_sq.cpp</a>, <a class="el" href="d__a__fr_8cpp.html#a0e7243a22225b7e4b73a85d95f4228d7">d_a_fr.cpp</a>, <a class="el" href="d__a__bd_8cpp.html#aba32f86ec70c61a51eef61f5008c8e57">d_a_bd.cpp</a></li>
+<li>way_bg_check2()&#160;:&#160;<a class="el" href="d__a__b__gg_8cpp.html#adaa3710fd4c350cd8a83a4299307c574">d_a_b_gg.cpp</a>, <a class="el" href="d__a__e__pm_8cpp.html#ad84c40633c85129c3a8c0609ace37197">d_a_e_pm.cpp</a></li>
+<li>way_bg_check2__FP8daB_GG_c4cXyz4cXyz()&#160;:&#160;<a class="el" href="d__a__b__gg_8cpp.html#a5f5ae871523759a7a73532869c953d8d">d_a_b_gg.cpp</a></li>
+<li>way_bg_check2__FP8daE_PM_c4cXyz4cXyz()&#160;:&#160;<a class="el" href="d__a__e__pm_8cpp.html#aac4a1d261d22e283ec9b0e7e1ac27c72">d_a_e_pm.cpp</a></li>
+<li>way_bg_check__FP10e_bs_classff()&#160;:&#160;<a class="el" href="d__a__e__bs_8cpp.html#aa4b1785744cf766fce4afa69df1907da">d_a_e_bs.cpp</a></li>
+<li>way_bg_check__FP10e_cr_classf()&#160;:&#160;<a class="el" href="d__a__e__cr_8cpp.html#a7c7f525a2bd8800f06498ab06363ec63">d_a_e_cr.cpp</a></li>
+<li>way_bg_check__FP10e_dd_classf()&#160;:&#160;<a class="el" href="d__a__e__dd_8cpp.html#aa31b517663004ff5eb19c6dd2522b487">d_a_e_dd.cpp</a></li>
+<li>way_bg_check__FP10e_fs_classfs()&#160;:&#160;<a class="el" href="d__a__e__fs_8cpp.html#a683ec8fbb542546df3f2554ea8f1d310">d_a_e_fs.cpp</a></li>
+<li>way_bg_check__FP10e_kg_classf()&#160;:&#160;<a class="el" href="d__a__e__kg_8cpp.html#a0a5fa674ede50217157bebf4eafe5b5f">d_a_e_kg.cpp</a></li>
+<li>way_bg_check__FP10e_rd_classf()&#160;:&#160;<a class="el" href="d__a__e__rd_8cpp.html#aa03b89c844f0096c4ce1fa96fc6f72cd">d_a_e_rd.cpp</a></li>
+<li>way_bg_check__FP10e_sf_classff()&#160;:&#160;<a class="el" href="d__a__e__sf_8cpp.html#a6e0621f46e9d0c506c3ed56f62f81fea">d_a_e_sf.cpp</a></li>
+<li>way_bg_check__FP10e_tk_classf()&#160;:&#160;<a class="el" href="d__a__e__tk_8cpp.html#acd957b7f7faf95a533d8011d2db237a3">d_a_e_tk.cpp</a></li>
+<li>way_bg_check__FP11e_rdy_classf()&#160;:&#160;<a class="el" href="d__a__e__rdy_8cpp.html#a6cec1248466d247196b61f3bfda9ce61">d_a_e_rdy.cpp</a></li>
+<li>way_bg_check__FP12npc_ne_classs()&#160;:&#160;<a class="el" href="d__a__npc__ne_8cpp.html#a23cea02d8dba3a4dc67ee089b0ef691b">d_a_npc_ne.cpp</a></li>
+<li>way_bg_check__FP8bd_class()&#160;:&#160;<a class="el" href="d__a__bd_8cpp.html#ad80a5ea3431c552214a6ffe753ba2bdf">d_a_bd.cpp</a></li>
+<li>way_bg_check__FP8daE_SM_cf4cXyzs()&#160;:&#160;<a class="el" href="d__a__e__sm_8cpp.html#ad28990cce79f9c6b98046f0eec4e1855">d_a_e_sm.cpp</a></li>
+<li>way_bg_check__FP8fr_class()&#160;:&#160;<a class="el" href="d__a__fr_8cpp.html#aedd714fae03ff4ece71e73a0fac8bd7a">d_a_fr.cpp</a></li>
+<li>way_check()&#160;:&#160;<a class="el" href="d__a__e__dn_8cpp.html#a288258c0a53f9fc634d48e2c993b2ba3">d_a_e_dn.cpp</a>, <a class="el" href="d__a__npc__ne_8cpp.html#a921a1330b2f8724496728772af97baa3">d_a_npc_ne.cpp</a>, <a class="el" href="d__a__e__rdy_8cpp.html#a6ba6dd4d499663a061e62d7a5c07ed4c">d_a_e_rdy.cpp</a>, <a class="el" href="d__a__e__rd_8cpp.html#ac290b468f3161558f810ae6d97955c18">d_a_e_rd.cpp</a>, <a class="el" href="d__a__e__mf_8cpp.html#a622726165d521c82fb6e6a2db850f9fd">d_a_e_mf.cpp</a></li>
+<li>way_check__FP10e_dn_class()&#160;:&#160;<a class="el" href="d__a__e__dn_8cpp.html#ae2dad59ae37ec89896ee7d6e999e4152">d_a_e_dn.cpp</a></li>
+<li>way_check__FP10e_mf_class()&#160;:&#160;<a class="el" href="d__a__e__mf_8cpp.html#ab18a9f778582980a9afe3029e4e843a9">d_a_e_mf.cpp</a></li>
+<li>way_check__FP10e_rd_class()&#160;:&#160;<a class="el" href="d__a__e__rd_8cpp.html#a7161f7bffe39661c0af69bc8ed2489fd">d_a_e_rd.cpp</a></li>
+<li>way_check__FP11e_rdy_class()&#160;:&#160;<a class="el" href="d__a__e__rdy_8cpp.html#a2bbf2c9827933581c3264922e458b73b">d_a_e_rdy.cpp</a></li>
+<li>way_check__FP12npc_ne_classs()&#160;:&#160;<a class="el" href="d__a__npc__ne_8cpp.html#abe265a5c637096c107dbe80e5db0f5fc">d_a_npc_ne.cpp</a></li>
+<li>way_gake_check()&#160;:&#160;<a class="el" href="d__a__e__dd_8cpp.html#a068c5073cc7ef4f8afbb9b91f1ec3d88">d_a_e_dd.cpp</a>, <a class="el" href="d__a__e__mm_8cpp.html#a11c83c238130233cfb0a7d691e149e58">d_a_e_mm.cpp</a></li>
+<li>way_gake_check__8daE_FZ_cFv()&#160;:&#160;<a class="el" href="d__a__e__fz_8cpp.html#a214d5e3e3cb40058482b20ec959a7ef0">d_a_e_fz.cpp</a></li>
+<li>way_gake_check__8daE_KK_cFv()&#160;:&#160;<a class="el" href="d__a__e__kk_8cpp.html#a640f02957aea561cf6ab8d488f0f1b99">d_a_e_kk.cpp</a></li>
+<li>way_gake_check__FP10e_dd_classf()&#160;:&#160;<a class="el" href="d__a__e__dd_8cpp.html#a424a51d492a650d9b1d422fff4e1c384">d_a_e_dd.cpp</a></li>
+<li>way_gake_check__FP10e_mm_class()&#160;:&#160;<a class="el" href="d__a__e__mm_8cpp.html#a90f541dcf6331bba9044775fca92f315">d_a_e_mm.cpp</a></li>
+<li>way_set()&#160;:&#160;<a class="el" href="d__a__e__ms_8cpp.html#a13ddf37829233bc8042c8ea1d1585695">d_a_e_ms.cpp</a>, <a class="el" href="d__a__e__yg_8cpp.html#af3e029c1361a8d748c849793c316f53f">d_a_e_yg.cpp</a></li>
+<li>way_set__FP10e_ms_class()&#160;:&#160;<a class="el" href="d__a__e__ms_8cpp.html#a3a4603f84247e37727076721c414b647">d_a_e_ms.cpp</a></li>
+<li>way_set__FP10e_yg_class()&#160;:&#160;<a class="el" href="d__a__e__yg_8cpp.html#a121eb9b708937f937164d92dd7e83095">d_a_e_yg.cpp</a></li>
+<li>WayBgCheck__13daObjYOUSEI_cFffs()&#160;:&#160;<a class="el" href="d__a__obj__yousei_8cpp.html#ac7613896fadf7ab8f53ff9bb8afcd74c">d_a_obj_yousei.cpp</a></li>
+<li>wb_c_rd_reset()&#160;:&#160;<a class="el" href="d__a__e__wb_8cpp.html#aec31947ece94b352b135876874b8497d">d_a_e_wb.cpp</a></li>
+<li>wb_c_rd_reset__FP10e_wb_class()&#160;:&#160;<a class="el" href="d__a__e__wb_8cpp.html#a2179a635344357218f94c28114dde94c">d_a_e_wb.cpp</a></li>
+<li>wb_check()&#160;:&#160;<a class="el" href="d__a__e__rd_8cpp.html#ae4b4151d36d4a83a784ea3fd0177acb4">d_a_e_rd.cpp</a></li>
+<li>wb_check__FP10e_rd_classs()&#160;:&#160;<a class="el" href="d__a__e__rd_8cpp.html#a8370277b639342e9be67d69dcfe2b307">d_a_e_rd.cpp</a></li>
+<li>wb_init_ride()&#160;:&#160;<a class="el" href="d__a__e__rd_8cpp.html#a58ee75064fddf56b0a7fc218eebe2458">d_a_e_rd.cpp</a></li>
+<li>wb_init_ride__FP10e_rd_class()&#160;:&#160;<a class="el" href="d__a__e__rd_8cpp.html#a2a5727fb705520640bcc76b37d1e5397">d_a_e_rd.cpp</a></li>
+<li>wb_rd_reset()&#160;:&#160;<a class="el" href="d__a__e__wb_8cpp.html#a46227420f159eccd6892b3bca7f69f31">d_a_e_wb.cpp</a></li>
+<li>wb_rd_reset__FP10e_wb_class()&#160;:&#160;<a class="el" href="d__a__e__wb_8cpp.html#a455bbb861d8f43743c968612a0b9bbed">d_a_e_wb.cpp</a></li>
+<li>wcstombs()&#160;:&#160;<a class="el" href="mbstring_8h.html#a94ccfc4c29896fa686705c0458a1cf4a">mbstring.h</a>, <a class="el" href="mbstring_8c.html#ab2cb1757e85a0d43f600299ae2fd51cf">mbstring.c</a></li>
+<li>wctomb()&#160;:&#160;<a class="el" href="mbstring_8c.html#a21a6556d63d15b0ec537e60ad2bc4bd3">mbstring.c</a></li>
+<li>wd_action()&#160;:&#160;<a class="el" href="d__a__mg__rod_8cpp.html#abebdde178eeba886a062494e63cadf32">d_a_mg_rod.cpp</a></li>
+<li>wd_action__FP13dmg_rod_classfP5wd_ss()&#160;:&#160;<a class="el" href="d__a__mg__rod_8cpp.html#adf6e8df2c026e4ab8865f666d91b27bb">d_a_mg_rod.cpp</a></li>
+<li>wd_check()&#160;:&#160;<a class="el" href="d__a__fr_8cpp.html#aa50015623b4f7812d570c5cd49f41cc1">d_a_fr.cpp</a>, <a class="el" href="d__a__mg__rod_8cpp.html#a91eb63a91bda6711622aede35d6c7c5f">d_a_mg_rod.cpp</a></li>
+<li>wd_check__FP13dmg_rod_class()&#160;:&#160;<a class="el" href="d__a__mg__rod_8cpp.html#a2ecb029fd8a31ab144e0f03f87a7d553">d_a_mg_rod.cpp</a></li>
+<li>wd_check__FP8fr_class()&#160;:&#160;<a class="el" href="d__a__fr_8cpp.html#a9c1177a118ae4a5dbf7411d9ae7eb1cf">d_a_fr.cpp</a></li>
+<li>weapon_mtx_set__8daE_KK_cFv()&#160;:&#160;<a class="el" href="d__a__e__kk_8cpp.html#ad8ef08ed0fe87a2e1130e9cacdb8e985">d_a_e_kk.cpp</a></li>
+<li>weed_control()&#160;:&#160;<a class="el" href="d__a__mg__fshop_8cpp.html#a0eb9869f787fe2f9f4d64bf1615c4f31">d_a_mg_fshop.cpp</a></li>
+<li>weed_control__FP11fshop_classP9fs_weed_s()&#160;:&#160;<a class="el" href="d__a__mg__fshop_8cpp.html#a67921256a642987fdbbffecf1cf70e5f">d_a_mg_fshop.cpp</a></li>
+<li>week_hit_check__8daB_DR_cFv()&#160;:&#160;<a class="el" href="d__a__b__dr_8cpp.html#a22c3a9cca3b7691afd51da5551bce299">d_a_b_dr.cpp</a></li>
+<li>wepon_anm_init()&#160;:&#160;<a class="el" href="d__a__e__bs_8cpp.html#a92e41e8e425e240d02b5f79b3e3a26f2">d_a_e_bs.cpp</a></li>
+<li>wepon_anm_init__FP10e_bs_classi()&#160;:&#160;<a class="el" href="d__a__e__bs_8cpp.html#ae655d2fc634dbb83e771396e9808378c">d_a_e_bs.cpp</a></li>
+<li>wether_move_evil()&#160;:&#160;<a class="el" href="d__kankyo__wether_8cpp.html#aa7c59ceb25a7e3511c7f3c9ec435e724">d_kankyo_wether.cpp</a></li>
+<li>wether_move_housi()&#160;:&#160;<a class="el" href="d__kankyo__wether_8cpp.html#acaedbdaf2fc3c72af28d72c3b4b4e895">d_kankyo_wether.cpp</a></li>
+<li>wether_move_moya()&#160;:&#160;<a class="el" href="d__kankyo__wether_8cpp.html#ac70cdd131c5bf5e9affeddd9aa0a8b1b">d_kankyo_wether.cpp</a></li>
+<li>wether_move_mud()&#160;:&#160;<a class="el" href="d__kankyo__wether_8cpp.html#a6d837ce47daf8fd4753736819c2d51aa">d_kankyo_wether.cpp</a></li>
+<li>wether_move_odour()&#160;:&#160;<a class="el" href="d__kankyo__wether_8cpp.html#a0bea8b532afcae196dc509c68f78d46c">d_kankyo_wether.cpp</a></li>
+<li>wether_move_rain()&#160;:&#160;<a class="el" href="d__kankyo__wether_8cpp.html#ac660cbe932578169f684afe995548537">d_kankyo_wether.cpp</a></li>
+<li>wether_move_snow()&#160;:&#160;<a class="el" href="d__kankyo__wether_8cpp.html#a3f74e7299f7cde88c948f655a8cc1049">d_kankyo_wether.cpp</a></li>
+<li>wether_move_star()&#160;:&#160;<a class="el" href="d__kankyo__wether_8cpp.html#ab7e996a0cfe5b366061b28a3b3cc3d8e">d_kankyo_wether.cpp</a></li>
+<li>wether_move_sun()&#160;:&#160;<a class="el" href="d__kankyo__wether_8cpp.html#ae3bd3c91a38b9cd2a5c10a762bf46c3c">d_kankyo_wether.cpp</a></li>
+<li>wether_move_thunder()&#160;:&#160;<a class="el" href="d__kankyo__wether_8cpp.html#aa2994ef9be51e3a967a4534db624967c">d_kankyo_wether.cpp</a></li>
+<li>wether_move_vrkumo()&#160;:&#160;<a class="el" href="d__kankyo__wether_8cpp.html#a0ba42c87f6a1fa375235e0aae3b5bf99">d_kankyo_wether.cpp</a></li>
+<li>wether_tag_efect_move()&#160;:&#160;<a class="el" href="d__a__kytag00_8cpp.html#a5235b00c80ff6857a730ab94c74dc2b6">d_a_kytag00.cpp</a></li>
+<li>wether_tag_efect_move__FP13kytag00_class()&#160;:&#160;<a class="el" href="d__a__kytag00_8cpp.html#a2221e5ed9d673575aef1b38ef816977f">d_a_kytag00.cpp</a></li>
+<li>wether_tag_efect_reset()&#160;:&#160;<a class="el" href="d__a__kytag00_8cpp.html#ac8ad36f7566515d878610b2ddf0dc58c">d_a_kytag00.cpp</a></li>
+<li>wether_tag_efect_reset__FP13kytag00_class()&#160;:&#160;<a class="el" href="d__a__kytag00_8cpp.html#a1f8c6037b5691a6c5bef33fdb216b7c3">d_a_kytag00.cpp</a></li>
+<li>wether_tag_move()&#160;:&#160;<a class="el" href="d__a__kytag00_8cpp.html#ab99a693d9fc624687991bcf771576eab">d_a_kytag00.cpp</a></li>
+<li>wether_tag_move__FP13kytag00_class()&#160;:&#160;<a class="el" href="d__a__kytag00_8cpp.html#ac41860cf5d0f81896ac9561aca314cb0">d_a_kytag00.cpp</a></li>
+<li>wether_tag_reset()&#160;:&#160;<a class="el" href="d__a__kytag00_8cpp.html#a27193cc4a0dbd0c5b18904b5d35e9c3a">d_a_kytag00.cpp</a></li>
+<li>wether_tag_reset__FP13kytag00_class()&#160;:&#160;<a class="el" href="d__a__kytag00_8cpp.html#a1b5e406cdb31814415e4127d282e9582">d_a_kytag00.cpp</a></li>
+<li>while()&#160;:&#160;<a class="el" href="e__fmod_8c.html#a910cb68e08664969e39a25cddc23db0f">e_fmod.c</a>, <a class="el" href="e__sqrt_8c.html#a26ef2c563d9a2c5fde8bd81b0a63d376">e_sqrt.c</a></li>
+<li>Wind_effect()&#160;:&#160;<a class="el" href="d__a__npc__tkj2_8cpp.html#a859ca9c10bd1e15883b4b66af5e79d26">d_a_npc_tkj2.cpp</a></li>
+<li>Wind_effect__FP14npc_tkj2_class()&#160;:&#160;<a class="el" href="d__a__npc__tkj2_8cpp.html#a575c63f93c835a8564e74cb9afb02a26">d_a_npc_tkj2.cpp</a></li>
+<li>wind_move()&#160;:&#160;<a class="el" href="d__a__e__bug_8cpp.html#ac9191080232619f265da488ed81c0e27">d_a_e_bug.cpp</a></li>
+<li>wind_move__FP5bug_s()&#160;:&#160;<a class="el" href="d__a__e__bug_8cpp.html#a4202db7848f8c4a2603c74b94b484ff4">d_a_e_bug.cpp</a></li>
+<li>windModelCallBack__13daBoomerang_cFv()&#160;:&#160;<a class="el" href="d__a__boomerang_8cpp.html#a5c3f750b06ea0ceadf762c76900c41ea">d_a_boomerang.cpp</a></li>
+<li>windowProc__12daBmWindow_cFv()&#160;:&#160;<a class="el" href="d__a__obj__bmWindow_8cpp.html#a8db51376823d4b9618a28f1d38c5b59b">d_a_obj_bmWindow.cpp</a></li>
+<li>wing_smoke_set()&#160;:&#160;<a class="el" href="d__a__e__kr_8cpp.html#a183c61eb632e8a1c785dbf0dd5a18efa">d_a_e_kr.cpp</a></li>
+<li>wing_smoke_set__FP10e_kr_class()&#160;:&#160;<a class="el" href="d__a__e__kr_8cpp.html#aee83ae3e1e57dfebaa58c962f871aab5">d_a_e_kr.cpp</a></li>
+<li>wipeIn__12dDlst_list_cFf()&#160;:&#160;<a class="el" href="d__drawlist_8cpp.html#a82e09972ae4066bb9ca65904794cd7c6">d_drawlist.cpp</a></li>
+<li>wipeIn__12dDlst_list_cFfR8_GXColor()&#160;:&#160;<a class="el" href="d__drawlist_8cpp.html#aaf2b37ef70fe0ee43346ba92fe6ec949">d_drawlist.cpp</a></li>
+<li>wolf_talk_init__8daMyna_cFv()&#160;:&#160;<a class="el" href="d__a__myna_8cpp.html#a6271c91637cf7726b653bef39ef07e29">d_a_myna.cpp</a></li>
+<li>wolf_talk_move__8daMyna_cFv()&#160;:&#160;<a class="el" href="d__a__myna_8cpp.html#addbcc66acac5536cc63d4be22077317a">d_a_myna.cpp</a></li>
+<li>wolfBgCheck__9daAlink_cFv()&#160;:&#160;<a class="el" href="d__a__alink_8cpp.html#afae7eb34a42d02e664cd69cb05d25fdb">d_a_alink.cpp</a></li>
+<li>wolfClawTrigger__9daAlink_cFv()&#160;:&#160;<a class="el" href="d__a__alink_8cpp.html#aa7b82da0685bc1b0632f84e6b6c42ec5">d_a_alink.cpp</a></li>
+<li>wolfFootBgCheck__9daAlink_cFv()&#160;:&#160;<a class="el" href="d__a__alink_8cpp.html#abbafdb8031d039d5fffd3ef346f580b7">d_a_alink.cpp</a></li>
+<li>wolfGrabSubjectNoDraw__9daPy_py_cFP10fopAc_ac_c()&#160;:&#160;<a class="el" href="d__a__obj__carry_8cpp.html#ae620f36452b9e917208bbd975e4ae750">d_a_obj_carry.cpp</a></li>
+<li>wolfkick_damage()&#160;:&#160;<a class="el" href="d__a__e__dn_8cpp.html#a1346a0a8f60ba0944c8fe362c1fb3e5c">d_a_e_dn.cpp</a>, <a class="el" href="d__a__e__mf_8cpp.html#a79f3fdd714857398141b8a6e3314c161">d_a_e_mf.cpp</a>, <a class="el" href="d__a__e__rd_8cpp.html#ab444d0a3dd711512e8585237021b880e">d_a_e_rd.cpp</a>, <a class="el" href="d__a__e__rdy_8cpp.html#a07c4f0e0b906bcf7c3ad2195291146f5">d_a_e_rdy.cpp</a></li>
+<li>wolfkick_damage__FP10e_dn_class()&#160;:&#160;<a class="el" href="d__a__e__dn_8cpp.html#a74ecc1bad0b3477f68eecb378785b6f2">d_a_e_dn.cpp</a></li>
+<li>wolfkick_damage__FP10e_mf_class()&#160;:&#160;<a class="el" href="d__a__e__mf_8cpp.html#a765ba3605a6ee9343137ba646701eb59">d_a_e_mf.cpp</a></li>
+<li>wolfkick_damage__FP10e_rd_class()&#160;:&#160;<a class="el" href="d__a__e__rd_8cpp.html#ad3115155d05e204dc84e2a11ed675752">d_a_e_rd.cpp</a></li>
+<li>wolfkick_damage__FP11e_rdy_class()&#160;:&#160;<a class="el" href="d__a__e__rdy_8cpp.html#ad3e467e19d1d7a20252d1771482ee379">d_a_e_rdy.cpp</a></li>
+<li>wolfModelCallBack__9daAlink_cFi()&#160;:&#160;<a class="el" href="d__a__alink_8cpp.html#ab22ff4e0a43642d74774fb4438dd292d">d_a_alink.cpp</a></li>
+<li>wolfRopeSwingInc__9daAlink_cFf()&#160;:&#160;<a class="el" href="d__a__alink_8cpp.html#a722921864db8d8b2aa9d9d8540dc5ce0">d_a_alink.cpp</a></li>
+<li>wolfSenseTrigger__9daAlink_cFv()&#160;:&#160;<a class="el" href="d__a__alink_8cpp.html#aa969ccd10ff83d24bd497a74ffbdbd55">d_a_alink.cpp</a></li>
+<li>wolfSideBgCheck__9daAlink_cFs()&#160;:&#160;<a class="el" href="d__a__alink_8cpp.html#af85533691f88d988a52b9674534458fc">d_a_alink.cpp</a></li>
+<li>WorkAt__13dGrass_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfUs()&#160;:&#160;<a class="el" href="d__a__grass_8cpp.html#a473799ac85509d2380396bba31e1c915">d_a_grass.cpp</a></li>
+<li>WorkAt__14dFlower_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInf()&#160;:&#160;<a class="el" href="d__a__grass_8cpp.html#ace793ca4cc4c2fc47ff0996c425572f1">d_a_grass.cpp</a></li>
+<li>WorkAt_NoCutAnim__13dGrass_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfP8cCcD_Obj()&#160;:&#160;<a class="el" href="d__a__grass_8cpp.html#ad181f9480ddcb8fffbe0cf5ed25f808e">d_a_grass.cpp</a></li>
+<li>WorkAt_NoCutAnim__14dFlower_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfP8cCcD_Obj()&#160;:&#160;<a class="el" href="d__a__grass_8cpp.html#a0f845198b08b3e221a1e57227e669aea">d_a_grass.cpp</a></li>
+<li>WorkCo__13dGrass_data_cFP10fopAc_ac_cUli()&#160;:&#160;<a class="el" href="d__a__grass_8cpp.html#a63d9ffd3102f5a9fce421b8593402d69">d_a_grass.cpp</a></li>
+<li>WorkCo__14dFlower_data_cFP10fopAc_ac_cUli()&#160;:&#160;<a class="el" href="d__a__grass_8cpp.html#a91ac7830f2bb2ccfaf66a917e7575bf1">d_a_grass.cpp</a></li>
+<li>worldGridDraw__18dMenu_Fmap2DBack_cFv()&#160;:&#160;<a class="el" href="d__menu__fmap2D_8cpp.html#a4bf459a7de58a034ff0b0fcac28585b6">d_menu_fmap2D.cpp</a></li>
+<li>worldOriginDraw__18dMenu_Fmap2DBack_cFv()&#160;:&#160;<a class="el" href="d__menu__fmap2D_8cpp.html#ac233c17538dc638d6a695f595c9db2ca">d_menu_fmap2D.cpp</a></li>
+<li>Worm_nodeCallBack()&#160;:&#160;<a class="el" href="d__a__mg__rod_8cpp.html#aaf005a82edf4c649634d766e6e2a961f">d_a_mg_rod.cpp</a></li>
+<li>Worm_nodeCallBack__FP8J3DJointi()&#160;:&#160;<a class="el" href="d__a__mg__rod_8cpp.html#a6a1ab221fa85aaf0c257bb44cff373ed">d_a_mg_rod.cpp</a></li>
+<li>worry__13daNpc_Seira_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__seira_8cpp.html#acb7d1cd9e0047d2999971e57aac0d188">d_a_npc_seira.cpp</a></li>
+<li>worry__14daNpc_Seira2_cFPv()&#160;:&#160;<a class="el" href="d__a__npc__seira2_8cpp.html#ac08a5c84108b5829c30434e3124733bb">d_a_npc_seira2.cpp</a></li>
+<li>write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl()&#160;:&#160;<a class="el" href="JASSeqParser_8cpp.html#a36b37182b35f6442e6e4d8ea48ae14ed">JASSeqParser.cpp</a></li>
+<li>write_StreamToAram_Async__13JKRAramStreamFP18JSUFileInputStreamUlUlUlPUl()&#160;:&#160;<a class="el" href="JKRDvdAramRipper_8cpp.html#a977dacb7d1f9fef9391cdce818bdd4d2">JKRDvdAramRipper.cpp</a></li>
+<li>WriteCallback()&#160;:&#160;<a class="el" href="CARDBlock_8c.html#af72339ee8de94fbb2a7b866acea34a81">CARDBlock.c</a>, <a class="el" href="CARDDir_8c.html#af72339ee8de94fbb2a7b866acea34a81">CARDDir.c</a>, <a class="el" href="CARDWrite_8c.html#af72339ee8de94fbb2a7b866acea34a81">CARDWrite.c</a></li>
+<li>writeExport__12JASTrackPortFUlUs()&#160;:&#160;<a class="el" href="JASTrack_8cpp.html#af6a166b1001109d57484b223403db3b0">JASTrack.cpp</a></li>
+<li>WriteFPSCR()&#160;:&#160;<a class="el" href="targimpl_8c.html#a3dda76a25a790f79e81384840641fc00">targimpl.c</a></li>
+<li>writeImport__12JASTrackPortFUlUs()&#160;:&#160;<a class="el" href="JASTrack_8cpp.html#ac2de4b7b83d25e9984ba3e79508ec764">JASTrack.cpp</a></li>
+<li>WriteMTXPS3x3()&#160;:&#160;<a class="el" href="GXTransform_8c.html#a7f01955ceee8511629a19908681fd269">GXTransform.c</a></li>
+<li>WriteMTXPS4x2()&#160;:&#160;<a class="el" href="GXTransform_8c.html#ae8986a4df67d5b358b9d74a7a54fcbbf">GXTransform.c</a></li>
+<li>WriteMTXPS4x3()&#160;:&#160;<a class="el" href="GXTransform_8c.html#a42aa8eb81d5b1bcfd545a7757267f77c">GXTransform.c</a></li>
+<li>writePort__8JASTrackFUlUs()&#160;:&#160;<a class="el" href="JASTrack_8cpp.html#a561eaa1f925dca5a3a5ad977467fb11b">JASTrack.cpp</a>, <a class="el" href="Z2SoundMgr_8cpp.html#a561eaa1f925dca5a3a5ad977467fb11b">Z2SoundMgr.cpp</a>, <a class="el" href="JASSeqParser_8cpp.html#a561eaa1f925dca5a3a5ad977467fb11b">JASSeqParser.cpp</a></li>
+<li>writePortSelf__8JASTrackFUlUs()&#160;:&#160;<a class="el" href="JASSeqParser_8cpp.html#aac96838092fc4b2a90665653aad224d5">JASSeqParser.cpp</a>, <a class="el" href="JASTrack_8cpp.html#aac96838092fc4b2a90665653aad224d5">JASTrack.cpp</a></li>
+<li>WriteProjPS()&#160;:&#160;<a class="el" href="GXTransform_8c.html#a7f3e8fc47d23f6b5c5e7cac05fbc33b0">GXTransform.c</a></li>
+<li>writeReg__12JASSeqParserFP8JASTrackUlUl()&#160;:&#160;<a class="el" href="JASSeqParser_8cpp.html#a0d5206913ea5f4e92489453785ff70e7">JASSeqParser.cpp</a></li>
+<li>WriteSram()&#160;:&#160;<a class="el" href="OSRtc_8c.html#a6cdb71379a5c86f03761096b899145fc">OSRtc.c</a></li>
+<li>WriteSramCallback()&#160;:&#160;<a class="el" href="OSRtc_8c.html#afb6a71a502d520ea2bb5970fe3a7f429">OSRtc.c</a></li>
+<li>WriteUARTN()&#160;:&#160;<a class="el" href="EXIUart_8c.html#a39334aa83bcf885f46600e74a1b2898c">EXIUart.c</a>, <a class="el" href="uart__console__io__gcn_8c.html#a3905127572175455b5f6025188fed029">uart_console_io_gcn.c</a></li>
+<li>wrt_pos__Q212daObjMovebox5Bgc_cFRC4cXyz()&#160;:&#160;<a class="el" href="d__a__obj__movebox_8cpp.html#ad1994d43cad23c0b394f7bd72290ca4a">d_a_obj_movebox.cpp</a></li>
+<li>ws_action()&#160;:&#160;<a class="el" href="d__a__mg__rod_8cpp.html#ac9a82ff65519607b38dc61398bdd2a9b">d_a_mg_rod.cpp</a></li>
+<li>ws_action__FP13dmg_rod_classf()&#160;:&#160;<a class="el" href="d__a__mg__rod_8cpp.html#aa5563869445a4bed20e726cd733d293e">d_a_mg_rod.cpp</a></li>
+<li>ws_nodeCallBack()&#160;:&#160;<a class="el" href="d__a__mg__rod_8cpp.html#a95402f74f5a12ef7566ea41502a47423">d_a_mg_rod.cpp</a></li>
+<li>ws_nodeCallBack__FP8J3DJointi()&#160;:&#160;<a class="el" href="d__a__mg__rod_8cpp.html#a021424d9660bad9773e4d28907055f90">d_a_mg_rod.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+var JKRAram_8cpp =
+[
+    [ "decompSZS_subroutine", "JKRAram_8cpp.html#a1d421ad22f01afadc50865c0602090d5", null ],
+    [ "firstSrcData", "JKRAram_8cpp.html#ad3708c36f34e870abcbee045f62e72d4", null ],
+    [ "JKRDecompressFromAramToMainRam", "JKRAram_8cpp.html#ace210ddd5f8656130ee2efd72ac9253c", null ],
+    [ "nextSrcData", "JKRAram_8cpp.html#a383ca0b524a4351f5cfae27a4037c6f3", null ],
+    [ "decompMutex", "JKRAram_8cpp.html#afbfaaa844e940cf19b41698c062c0b97", null ],
+    [ "fileOffset", "JKRAram_8cpp.html#a04e998a5c8297b0fa397174ae7f81b4e", null ],
+    [ "maxDest", "JKRAram_8cpp.html#a54f224560bd5797e830670419c42da6e", null ],
+    [ "pad_8039D0B4", "JKRAram_8cpp.html#a707ae4b22c60deb3fc485507a7706a6b", null ],
+    [ "readCount", "JKRAram_8cpp.html#a064af2ccac3265b95bb0f8b19bf218ac", null ],
+    [ "refBuf", "JKRAram_8cpp.html#aca33e8ce1a4108f7b2893e3df38cc067", null ],
+    [ "refCurrent", "JKRAram_8cpp.html#aa013ee2b67918c84c8630cc17c50cea9", null ],
+    [ "refEnd", "JKRAram_8cpp.html#a6480f5f7992753bff4789793342a7d01", null ],
+    [ "s_is_decompress_mutex_initialized", "JKRAram_8cpp.html#a66217cb5958ebcbb8e3bdf20a0a579dd", null ],
+    [ "srcAddress", "JKRAram_8cpp.html#afad57961e31d14b137db20749d995b10", null ],
+    [ "srcLimit", "JKRAram_8cpp.html#a535275e9714167f6d81bcdea721d27e6", null ],
+    [ "srcOffset", "JKRAram_8cpp.html#a23b0adf1b6357593a887cd38eb962660", null ],
+    [ "stringBase_8039D0A6", "JKRAram_8cpp.html#a8803aa8da09103464ed78b6e18498943", null ],
+    [ "szpBuf", "JKRAram_8cpp.html#a55a4b7c2c6b697cc45a78e996b115dcd", null ],
+    [ "szpEnd", "JKRAram_8cpp.html#aa5dcbc86db259e6294fca927c290dc1d", null ],
+    [ "transLeft", "JKRAram_8cpp.html#ab03193c9b6ac14ff6ecb441ea7a57dca", null ],
+    [ "tsArea", "JKRAram_8cpp.html#af11f6523b22f59821b3153be9882efd1", null ],
+    [ "tsPtr", "JKRAram_8cpp.html#a81649c9fec6ffa53b65d968ea2e02b91", null ]
+];

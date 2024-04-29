@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: include/rel/d/a/door/d_a_door_boss/d_a_door_boss.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d__a__door__boss_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">d_a_door_boss.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="d__a__door__boss_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef D_A_DOOR_BOSS_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define D_A_DOOR_BOSS_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="c__phase_8h.html">SSystem/SComponent/c_phase.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="f__op__actor_8h.html">f_op/f_op_actor.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="d__bg__s__acch_8h.html">d/bg/d_bg_s_acch.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="d__bg__w_8h.html">d/bg/d_bg_w.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classdaBdoor__c.html">   17</a></span><span class="keyword">class </span><a class="code hl_class" href="classdaBdoor__c.html">daBdoor_c</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structfopAc__ac__c.html">fopAc_ac_c</a> {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classdaBdoor__c.html#aee5046fd5fe353e3e57fd1f4285d37d3">   19</a></span>    <span class="keyword">enum</span> <a class="code hl_enumeration" href="classdaBdoor__c.html#aee5046fd5fe353e3e57fd1f4285d37d3">Action</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classdaBdoor__c.html#aee5046fd5fe353e3e57fd1f4285d37d3aa32e65239c11081dc01cb55c49125613">   20</a></span>        <span class="comment">/* 0 */</span> <a class="code hl_enumvalue" href="classdaBdoor__c.html#aee5046fd5fe353e3e57fd1f4285d37d3aa32e65239c11081dc01cb55c49125613">ACT_WAIT</a>,</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classdaBdoor__c.html#aee5046fd5fe353e3e57fd1f4285d37d3a5ded10bbd7ca1b01c7ca50e5da1923d6">   21</a></span>        <span class="comment">/* 1 */</span> <a class="code hl_enumvalue" href="classdaBdoor__c.html#aee5046fd5fe353e3e57fd1f4285d37d3a5ded10bbd7ca1b01c7ca50e5da1923d6">ACT_CLOSE_WAIT</a>,</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classdaBdoor__c.html#aee5046fd5fe353e3e57fd1f4285d37d3a6c3dc17da5ac1fd3130e04553b60c2c6">   22</a></span>        <span class="comment">/* 2 */</span> <a class="code hl_enumvalue" href="classdaBdoor__c.html#aee5046fd5fe353e3e57fd1f4285d37d3a6c3dc17da5ac1fd3130e04553b60c2c6">ACT_OPEN</a>,</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classdaBdoor__c.html#aee5046fd5fe353e3e57fd1f4285d37d3aa75b5cf7e17313eba59fc450d98fd050">   23</a></span>        <span class="comment">/* 3 */</span> <a class="code hl_enumvalue" href="classdaBdoor__c.html#aee5046fd5fe353e3e57fd1f4285d37d3aa75b5cf7e17313eba59fc450d98fd050">ACT_END</a>,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    };</div>
+</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="comment">/* 8066F418 */</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="classdaBdoor__c.html#a22213bc8ca8f35e697a43df879c49065">getArcName</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">/* 8066F424 */</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="classdaBdoor__c.html#a0253d31fa5c7b5501781b8f0a2fc9e44">getBmd</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">/* 8066F434 */</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="classdaBdoor__c.html#aad33f56dd4e13137e163997694b77245">getDzb</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">/* 8066F444 */</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="classdaBdoor__c.html#a6fa59ab76479fde7ffb6e00b977ede7a">getBmd2</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">/* 8066F454 */</span> <a class="code hl_struct" href="classJ3DModelData.html">J3DModelData</a>* <a class="code hl_function" href="classdaBdoor__c.html#aa1f13122935474d3fb3d95ddf10956ad">getDoorModelData</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">/* 8066F4E4 */</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classdaBdoor__c.html#af34960b1ff801d5c7388b3aea4aea212">CreateHeap</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">/* 8066F738 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaBdoor__c.html#a62ecaad2d81d2b2f9cd84f0e9a21aefd">calcMtx</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="comment">/* 8066F7EC */</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classdaBdoor__c.html#a674eba9cdae86842dae8a04aeb26c22b">CreateInit</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="comment">/* 8066F8E4 */</span> <a class="code hl_enumeration" href="c__phase_8h.html#a9f111b636d6afcaba75f303583cc8340">cPhs__Step</a> <a class="code hl_function" href="classdaBdoor__c.html#ae9b414adea004653e790325c291a494a">create</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">/* 8066FAB8 */</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classdaBdoor__c.html#a7a7a72f1a6fcc69a474023bb76baaa3c">getDemoAction</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">/* 8066FB00 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaBdoor__c.html#af97d95f133bc4917dd8f5ee59f756394">demoProc</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment">/* 8066FF04 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaBdoor__c.html#a2e6c242381cc2d79419897c313ccc622">calcGoal</a>(<a class="code hl_struct" href="structcXyz.html">cXyz</a>*, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">/* 8067002C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaBdoor__c.html#a89ccc6876d16393727f41fed90a6350d">smokeInit</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="comment">/* 806700C4 */</span> <a class="code hl_typedef" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> <a class="code hl_function" href="classdaBdoor__c.html#a826cc25066cabaf9a869c30e0c6df930">checkArea</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="comment">/* 806701F4 */</span> <a class="code hl_typedef" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> <a class="code hl_function" href="classdaBdoor__c.html#a7654166c0278fb4f17307f49fb3f87a7">checkFront</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">/* 80670294 */</span> <a class="code hl_typedef" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> <a class="code hl_function" href="classdaBdoor__c.html#a5aedc2528f2c1dd49adfe553ab267908">checkOpen</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">/* 80670320 */</span> <a class="code hl_typedef" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> <a class="code hl_function" href="classdaBdoor__c.html#a0a9d7f2bdbcfe27a44f55c79e2d4deaf">actionWait</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="comment">/* 80670328 */</span> <a class="code hl_typedef" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> <a class="code hl_function" href="classdaBdoor__c.html#ad09d5d30d3151358ea3226f2533410fc">actionCloseWait</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="comment">/* 806703C0 */</span> <a class="code hl_typedef" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> <a class="code hl_function" href="classdaBdoor__c.html#a5dbb9406e0dde9af12af33c53cf19a16">actionOpen</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="comment">/* 806703E4 */</span> <a class="code hl_typedef" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> <a class="code hl_function" href="classdaBdoor__c.html#a1f1caa309a0af6bf347728a744a9015e">actionEnd</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="comment">/* 80670544 */</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classdaBdoor__c.html#a16fa4e252965fe23134f9c3faacc1c82">execute</a>();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">/* 80670664 */</span> <a class="code hl_typedef" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> <a class="code hl_function" href="classdaBdoor__c.html#af3104c3b0506a446703635ace2d99a63">checkDraw</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">/* 806706A4 */</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classdaBdoor__c.html#a1132fb55801b97b4108e5735790da404">draw</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment">/* 80670804 */</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classdaBdoor__c.html#a09c775f0949b35cc3ed2c34e7a82f766">Delete</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classdaBdoor__c.html#a5584793f22323725ebddee760b986f68">   51</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classdaBdoor__c.html#a5584793f22323725ebddee760b986f68">setAction</a>(<a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_action</a>) { <a class="code hl_variable" href="classdaBdoor__c.html#af58f9900880ffdd049884a1e30aeaa83">mAction</a> = <a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_action</a>; }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classdaBdoor__c.html#ad6b0223f7a3df5bb5dae1e05cb12ca7f">   53</a></span>    <span class="comment">/* 0x568 */</span> <a class="code hl_struct" href="structrequest__of__phase__process__class.html">request_of_phase_process_class</a> <a class="code hl_variable" href="classdaBdoor__c.html#ad6b0223f7a3df5bb5dae1e05cb12ca7f">mPhaseReq</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classdaBdoor__c.html#ad7e0c719aaf86a171fbd7afb3a676f91">   54</a></span>    <span class="comment">/* 0x570 */</span> <a class="code hl_struct" href="classJ3DModel.html">J3DModel</a>* <a class="code hl_variable" href="classdaBdoor__c.html#ad7e0c719aaf86a171fbd7afb3a676f91">mpDoorModel</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classdaBdoor__c.html#a81d9693c8eebe1db6253d059a3a1bc45">   55</a></span>    <span class="comment">/* 0x574 */</span> <a class="code hl_struct" href="classJ3DModel.html">J3DModel</a>* <a class="code hl_variable" href="classdaBdoor__c.html#a81d9693c8eebe1db6253d059a3a1bc45">mpLockModel</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classdaBdoor__c.html#a36074609d719289ac8247f478ac54c33">   56</a></span>    <span class="comment">/* 0x578 */</span> <a class="code hl_struct" href="classmDoExt__bckAnm.html">mDoExt_bckAnm</a>* <a class="code hl_variable" href="classdaBdoor__c.html#a36074609d719289ac8247f478ac54c33">mpLockAnm</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classdaBdoor__c.html#aaeeec37ec1b5b51ec72e6ef6587f9a86">   57</a></span>    <span class="comment">/* 0x57C */</span> <a class="code hl_struct" href="classdBgW.html">dBgW</a>* <a class="code hl_variable" href="classdaBdoor__c.html#aaeeec37ec1b5b51ec72e6ef6587f9a86">mpBgW</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classdaBdoor__c.html#ad9ea2c227fec579f9a5389d379913060">   58</a></span>    <span class="comment">/* 0x580 */</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="classdaBdoor__c.html#ad9ea2c227fec579f9a5389d379913060">mBgInactive</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classdaBdoor__c.html#af58f9900880ffdd049884a1e30aeaa83">   59</a></span>    <span class="comment">/* 0x581 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaBdoor__c.html#af58f9900880ffdd049884a1e30aeaa83">mAction</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classdaBdoor__c.html#a7e8b49c885ed48bd51676014534824d6">   60</a></span>    <span class="comment">/* 0x582 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaBdoor__c.html#a7e8b49c885ed48bd51676014534824d6">field_0x582</a>[6];</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classdaBdoor__c.html#a7bec3f77bb79b7002ca889ca664354b9">   61</a></span>    <span class="comment">/* 0x588 */</span> <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> <a class="code hl_variable" href="classdaBdoor__c.html#a7bec3f77bb79b7002ca889ca664354b9">mStaffID</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classdaBdoor__c.html#a69230f72eb82aa15dc79a653041abe8b">   62</a></span>    <span class="comment">/* 0x58C */</span> <a class="code hl_typedef" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> <a class="code hl_variable" href="classdaBdoor__c.html#a69230f72eb82aa15dc79a653041abe8b">field_0x58c</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classdaBdoor__c.html#a59867487645b61135866757b3a51c974">   63</a></span>    <span class="comment">/* 0x590 */</span> <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="code hl_variable" href="classdaBdoor__c.html#a59867487645b61135866757b3a51c974">mOffsetY</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classdaBdoor__c.html#a0b2b106266bc2736e9df8b7ad89de517">   64</a></span>    <span class="comment">/* 0x594 */</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="classdaBdoor__c.html#a0b2b106266bc2736e9df8b7ad89de517">mLocked</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classdaBdoor__c.html#a728fb86611fec9deb004bf5da8167d91">   65</a></span>    <span class="comment">/* 0x598 */</span> <a class="code hl_struct" href="structcXyz.html">cXyz</a> <a class="code hl_variable" href="classdaBdoor__c.html#a728fb86611fec9deb004bf5da8167d91">mParticlePos</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classdaBdoor__c.html#a28249942b14120c85088c70a1934f8d1">   66</a></span>    <span class="comment">/* 0x5A4 */</span> <a class="code hl_struct" href="classcsXyz.html">csXyz</a> <a class="code hl_variable" href="classdaBdoor__c.html#a28249942b14120c85088c70a1934f8d1">mParticleAngle</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classdaBdoor__c.html#a997087d69e87c07a6a650f2b6e6826bb">   67</a></span>    <span class="comment">/* 0x5AC */</span> <a class="code hl_struct" href="classdBgS__ObjAcch.html">dBgS_ObjAcch</a> <a class="code hl_variable" href="classdaBdoor__c.html#a997087d69e87c07a6a650f2b6e6826bb">mAcch</a>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classdaBdoor__c.html#a4653446e256ad9da9a4a4a3fa0d22ed0">   68</a></span>    <span class="comment">/* 0x784 */</span> <a class="code hl_struct" href="classdBgS__AcchCir.html">dBgS_AcchCir</a> <a class="code hl_variable" href="classdaBdoor__c.html#a4653446e256ad9da9a4a4a3fa0d22ed0">mAcchCir</a>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>};</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="d__a__door__boss_8h.html#a906b6d3ee45460abf7c3ce0bbc3627a8">   71</a></span><a class="code hl_function" href="d__a__door__boss_8h.html#a906b6d3ee45460abf7c3ce0bbc3627a8">STATIC_ASSERT</a>(<span class="keyword">sizeof</span>(<a class="code hl_class" href="classdaBdoor__c.html">daBdoor_c</a>) == 0x7C4);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#endif </span><span class="comment">/* D_A_DOOR_BOSS_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="ac__phase_8h_html"><div class="ttname"><a href="c__phase_8h.html">c_phase.h</a></div></div>
+<div class="ttc" id="ac__phase_8h_html_a9f111b636d6afcaba75f303583cc8340"><div class="ttname"><a href="c__phase_8h.html#a9f111b636d6afcaba75f303583cc8340">cPhs__Step</a></div><div class="ttdeci">cPhs__Step</div><div class="ttdef"><b>Definition</b> c_phase.h:8</div></div>
+<div class="ttc" id="aclassJ3DModelData_html"><div class="ttname"><a href="classJ3DModelData.html">J3DModelData</a></div><div class="ttdef"><b>Definition</b> J3DModelData.h:17</div></div>
+<div class="ttc" id="aclassJ3DModel_html"><div class="ttname"><a href="classJ3DModel.html">J3DModel</a></div><div class="ttdef"><b>Definition</b> J3DModel.h:42</div></div>
+<div class="ttc" id="aclasscsXyz_html"><div class="ttname"><a href="classcsXyz.html">csXyz</a></div><div class="ttdef"><b>Definition</b> c_sxyz.h:6</div></div>
+<div class="ttc" id="aclassdBgS__AcchCir_html"><div class="ttname"><a href="classdBgS__AcchCir.html">dBgS_AcchCir</a></div><div class="ttdef"><b>Definition</b> d_bg_s_acch.h:14</div></div>
+<div class="ttc" id="aclassdBgS__ObjAcch_html"><div class="ttname"><a href="classdBgS__ObjAcch.html">dBgS_ObjAcch</a></div><div class="ttdef"><b>Definition</b> d_bg_s_acch.h:217</div></div>
+<div class="ttc" id="aclassdBgW_html"><div class="ttname"><a href="classdBgW.html">dBgW</a></div><div class="ttdef"><b>Definition</b> d_bg_w.h:250</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html"><div class="ttname"><a href="classdaBdoor__c.html">daBdoor_c</a></div><div class="ttdoc">Boss Door.</div><div class="ttdef"><b>Definition</b> d_a_door_boss.h:17</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_a0253d31fa5c7b5501781b8f0a2fc9e44"><div class="ttname"><a href="classdaBdoor__c.html#a0253d31fa5c7b5501781b8f0a2fc9e44">daBdoor_c::getBmd</a></div><div class="ttdeci">char * getBmd()</div><div class="ttdef"><b>Definition</b> d_a_door_boss.cpp:34</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_a09c775f0949b35cc3ed2c34e7a82f766"><div class="ttname"><a href="classdaBdoor__c.html#a09c775f0949b35cc3ed2c34e7a82f766">daBdoor_c::Delete</a></div><div class="ttdeci">int Delete()</div><div class="ttdef"><b>Definition</b> d_a_door_boss.cpp:427</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_a0a9d7f2bdbcfe27a44f55c79e2d4deaf"><div class="ttname"><a href="classdaBdoor__c.html#a0a9d7f2bdbcfe27a44f55c79e2d4deaf">daBdoor_c::actionWait</a></div><div class="ttdeci">BOOL actionWait()</div><div class="ttdef"><b>Definition</b> d_a_door_boss.cpp:317</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_a0b2b106266bc2736e9df8b7ad89de517"><div class="ttname"><a href="classdaBdoor__c.html#a0b2b106266bc2736e9df8b7ad89de517">daBdoor_c::mLocked</a></div><div class="ttdeci">bool mLocked</div><div class="ttdef"><b>Definition</b> d_a_door_boss.h:64</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_a1132fb55801b97b4108e5735790da404"><div class="ttname"><a href="classdaBdoor__c.html#a1132fb55801b97b4108e5735790da404">daBdoor_c::draw</a></div><div class="ttdeci">int draw()</div><div class="ttdef"><b>Definition</b> d_a_door_boss.cpp:396</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_a16fa4e252965fe23134f9c3faacc1c82"><div class="ttname"><a href="classdaBdoor__c.html#a16fa4e252965fe23134f9c3faacc1c82">daBdoor_c::execute</a></div><div class="ttdeci">int execute()</div><div class="ttdef"><b>Definition</b> d_a_door_boss.cpp:372</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_a1f1caa309a0af6bf347728a744a9015e"><div class="ttname"><a href="classdaBdoor__c.html#a1f1caa309a0af6bf347728a744a9015e">daBdoor_c::actionEnd</a></div><div class="ttdeci">BOOL actionEnd()</div><div class="ttdef"><b>Definition</b> d_a_door_boss.cpp:349</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_a22213bc8ca8f35e697a43df879c49065"><div class="ttname"><a href="classdaBdoor__c.html#a22213bc8ca8f35e697a43df879c49065">daBdoor_c::getArcName</a></div><div class="ttdeci">char * getArcName()</div><div class="ttdef"><b>Definition</b> d_a_door_boss.cpp:29</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_a28249942b14120c85088c70a1934f8d1"><div class="ttname"><a href="classdaBdoor__c.html#a28249942b14120c85088c70a1934f8d1">daBdoor_c::mParticleAngle</a></div><div class="ttdeci">csXyz mParticleAngle</div><div class="ttdef"><b>Definition</b> d_a_door_boss.h:66</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_a2e6c242381cc2d79419897c313ccc622"><div class="ttname"><a href="classdaBdoor__c.html#a2e6c242381cc2d79419897c313ccc622">daBdoor_c::calcGoal</a></div><div class="ttdeci">void calcGoal(cXyz *, int)</div><div class="ttdef"><b>Definition</b> d_a_door_boss.cpp:246</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_a36074609d719289ac8247f478ac54c33"><div class="ttname"><a href="classdaBdoor__c.html#a36074609d719289ac8247f478ac54c33">daBdoor_c::mpLockAnm</a></div><div class="ttdeci">mDoExt_bckAnm * mpLockAnm</div><div class="ttdef"><b>Definition</b> d_a_door_boss.h:56</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_a4653446e256ad9da9a4a4a3fa0d22ed0"><div class="ttname"><a href="classdaBdoor__c.html#a4653446e256ad9da9a4a4a3fa0d22ed0">daBdoor_c::mAcchCir</a></div><div class="ttdeci">dBgS_AcchCir mAcchCir</div><div class="ttdef"><b>Definition</b> d_a_door_boss.h:68</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_a5584793f22323725ebddee760b986f68"><div class="ttname"><a href="classdaBdoor__c.html#a5584793f22323725ebddee760b986f68">daBdoor_c::setAction</a></div><div class="ttdeci">void setAction(u8 i_action)</div><div class="ttdef"><b>Definition</b> d_a_door_boss.h:51</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_a59867487645b61135866757b3a51c974"><div class="ttname"><a href="classdaBdoor__c.html#a59867487645b61135866757b3a51c974">daBdoor_c::mOffsetY</a></div><div class="ttdeci">f32 mOffsetY</div><div class="ttdef"><b>Definition</b> d_a_door_boss.h:63</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_a5aedc2528f2c1dd49adfe553ab267908"><div class="ttname"><a href="classdaBdoor__c.html#a5aedc2528f2c1dd49adfe553ab267908">daBdoor_c::checkOpen</a></div><div class="ttdeci">BOOL checkOpen()</div><div class="ttdef"><b>Definition</b> d_a_door_boss.cpp:299</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_a5dbb9406e0dde9af12af33c53cf19a16"><div class="ttname"><a href="classdaBdoor__c.html#a5dbb9406e0dde9af12af33c53cf19a16">daBdoor_c::actionOpen</a></div><div class="ttdeci">BOOL actionOpen()</div><div class="ttdef"><b>Definition</b> d_a_door_boss.cpp:343</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_a62ecaad2d81d2b2f9cd84f0e9a21aefd"><div class="ttname"><a href="classdaBdoor__c.html#a62ecaad2d81d2b2f9cd84f0e9a21aefd">daBdoor_c::calcMtx</a></div><div class="ttdeci">void calcMtx()</div><div class="ttdef"><b>Definition</b> d_a_door_boss.cpp:100</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_a674eba9cdae86842dae8a04aeb26c22b"><div class="ttname"><a href="classdaBdoor__c.html#a674eba9cdae86842dae8a04aeb26c22b">daBdoor_c::CreateInit</a></div><div class="ttdeci">int CreateInit()</div><div class="ttdef"><b>Definition</b> d_a_door_boss.cpp:110</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_a69230f72eb82aa15dc79a653041abe8b"><div class="ttname"><a href="classdaBdoor__c.html#a69230f72eb82aa15dc79a653041abe8b">daBdoor_c::field_0x58c</a></div><div class="ttdeci">s16 field_0x58c</div><div class="ttdef"><b>Definition</b> d_a_door_boss.h:62</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_a6fa59ab76479fde7ffb6e00b977ede7a"><div class="ttname"><a href="classdaBdoor__c.html#a6fa59ab76479fde7ffb6e00b977ede7a">daBdoor_c::getBmd2</a></div><div class="ttdeci">char * getBmd2()</div><div class="ttdef"><b>Definition</b> d_a_door_boss.cpp:44</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_a728fb86611fec9deb004bf5da8167d91"><div class="ttname"><a href="classdaBdoor__c.html#a728fb86611fec9deb004bf5da8167d91">daBdoor_c::mParticlePos</a></div><div class="ttdeci">cXyz mParticlePos</div><div class="ttdef"><b>Definition</b> d_a_door_boss.h:65</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_a7654166c0278fb4f17307f49fb3f87a7"><div class="ttname"><a href="classdaBdoor__c.html#a7654166c0278fb4f17307f49fb3f87a7">daBdoor_c::checkFront</a></div><div class="ttdeci">BOOL checkFront()</div><div class="ttdef"><b>Definition</b> d_a_door_boss.cpp:290</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_a7a7a72f1a6fcc69a474023bb76baaa3c"><div class="ttname"><a href="classdaBdoor__c.html#a7a7a72f1a6fcc69a474023bb76baaa3c">daBdoor_c::getDemoAction</a></div><div class="ttdeci">int getDemoAction()</div><div class="ttdef"><b>Definition</b> d_a_door_boss.cpp:145</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_a7bec3f77bb79b7002ca889ca664354b9"><div class="ttname"><a href="classdaBdoor__c.html#a7bec3f77bb79b7002ca889ca664354b9">daBdoor_c::mStaffID</a></div><div class="ttdeci">u32 mStaffID</div><div class="ttdef"><b>Definition</b> d_a_door_boss.h:61</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_a7e8b49c885ed48bd51676014534824d6"><div class="ttname"><a href="classdaBdoor__c.html#a7e8b49c885ed48bd51676014534824d6">daBdoor_c::field_0x582</a></div><div class="ttdeci">u8 field_0x582[6]</div><div class="ttdef"><b>Definition</b> d_a_door_boss.h:60</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_a81d9693c8eebe1db6253d059a3a1bc45"><div class="ttname"><a href="classdaBdoor__c.html#a81d9693c8eebe1db6253d059a3a1bc45">daBdoor_c::mpLockModel</a></div><div class="ttdeci">J3DModel * mpLockModel</div><div class="ttdef"><b>Definition</b> d_a_door_boss.h:55</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_a826cc25066cabaf9a869c30e0c6df930"><div class="ttname"><a href="classdaBdoor__c.html#a826cc25066cabaf9a869c30e0c6df930">daBdoor_c::checkArea</a></div><div class="ttdeci">BOOL checkArea()</div><div class="ttdef"><b>Definition</b> d_a_door_boss.cpp:275</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_a89ccc6876d16393727f41fed90a6350d"><div class="ttname"><a href="classdaBdoor__c.html#a89ccc6876d16393727f41fed90a6350d">daBdoor_c::smokeInit</a></div><div class="ttdeci">void smokeInit()</div><div class="ttdef"><b>Definition</b> d_a_door_boss.cpp:266</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_a997087d69e87c07a6a650f2b6e6826bb"><div class="ttname"><a href="classdaBdoor__c.html#a997087d69e87c07a6a650f2b6e6826bb">daBdoor_c::mAcch</a></div><div class="ttdeci">dBgS_ObjAcch mAcch</div><div class="ttdef"><b>Definition</b> d_a_door_boss.h:67</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_aa1f13122935474d3fb3d95ddf10956ad"><div class="ttname"><a href="classdaBdoor__c.html#aa1f13122935474d3fb3d95ddf10956ad">daBdoor_c::getDoorModelData</a></div><div class="ttdeci">J3DModelData * getDoorModelData()</div><div class="ttdef"><b>Definition</b> d_a_door_boss.cpp:49</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_aad33f56dd4e13137e163997694b77245"><div class="ttname"><a href="classdaBdoor__c.html#aad33f56dd4e13137e163997694b77245">daBdoor_c::getDzb</a></div><div class="ttdeci">char * getDzb()</div><div class="ttdef"><b>Definition</b> d_a_door_boss.cpp:39</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_aaeeec37ec1b5b51ec72e6ef6587f9a86"><div class="ttname"><a href="classdaBdoor__c.html#aaeeec37ec1b5b51ec72e6ef6587f9a86">daBdoor_c::mpBgW</a></div><div class="ttdeci">dBgW * mpBgW</div><div class="ttdef"><b>Definition</b> d_a_door_boss.h:57</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_ad09d5d30d3151358ea3226f2533410fc"><div class="ttname"><a href="classdaBdoor__c.html#ad09d5d30d3151358ea3226f2533410fc">daBdoor_c::actionCloseWait</a></div><div class="ttdeci">BOOL actionCloseWait()</div><div class="ttdef"><b>Definition</b> d_a_door_boss.cpp:328</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_ad6b0223f7a3df5bb5dae1e05cb12ca7f"><div class="ttname"><a href="classdaBdoor__c.html#ad6b0223f7a3df5bb5dae1e05cb12ca7f">daBdoor_c::mPhaseReq</a></div><div class="ttdeci">request_of_phase_process_class mPhaseReq</div><div class="ttdef"><b>Definition</b> d_a_door_boss.h:53</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_ad7e0c719aaf86a171fbd7afb3a676f91"><div class="ttname"><a href="classdaBdoor__c.html#ad7e0c719aaf86a171fbd7afb3a676f91">daBdoor_c::mpDoorModel</a></div><div class="ttdeci">J3DModel * mpDoorModel</div><div class="ttdef"><b>Definition</b> d_a_door_boss.h:54</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_ad9ea2c227fec579f9a5389d379913060"><div class="ttname"><a href="classdaBdoor__c.html#ad9ea2c227fec579f9a5389d379913060">daBdoor_c::mBgInactive</a></div><div class="ttdeci">bool mBgInactive</div><div class="ttdef"><b>Definition</b> d_a_door_boss.h:58</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_ae9b414adea004653e790325c291a494a"><div class="ttname"><a href="classdaBdoor__c.html#ae9b414adea004653e790325c291a494a">daBdoor_c::create</a></div><div class="ttdeci">cPhs__Step create()</div><div class="ttdef"><b>Definition</b> d_a_door_boss.cpp:130</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_aee5046fd5fe353e3e57fd1f4285d37d3"><div class="ttname"><a href="classdaBdoor__c.html#aee5046fd5fe353e3e57fd1f4285d37d3">daBdoor_c::Action</a></div><div class="ttdeci">Action</div><div class="ttdef"><b>Definition</b> d_a_door_boss.h:19</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_aee5046fd5fe353e3e57fd1f4285d37d3a5ded10bbd7ca1b01c7ca50e5da1923d6"><div class="ttname"><a href="classdaBdoor__c.html#aee5046fd5fe353e3e57fd1f4285d37d3a5ded10bbd7ca1b01c7ca50e5da1923d6">daBdoor_c::ACT_CLOSE_WAIT</a></div><div class="ttdeci">@ ACT_CLOSE_WAIT</div><div class="ttdef"><b>Definition</b> d_a_door_boss.h:21</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_aee5046fd5fe353e3e57fd1f4285d37d3a6c3dc17da5ac1fd3130e04553b60c2c6"><div class="ttname"><a href="classdaBdoor__c.html#aee5046fd5fe353e3e57fd1f4285d37d3a6c3dc17da5ac1fd3130e04553b60c2c6">daBdoor_c::ACT_OPEN</a></div><div class="ttdeci">@ ACT_OPEN</div><div class="ttdef"><b>Definition</b> d_a_door_boss.h:22</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_aee5046fd5fe353e3e57fd1f4285d37d3aa32e65239c11081dc01cb55c49125613"><div class="ttname"><a href="classdaBdoor__c.html#aee5046fd5fe353e3e57fd1f4285d37d3aa32e65239c11081dc01cb55c49125613">daBdoor_c::ACT_WAIT</a></div><div class="ttdeci">@ ACT_WAIT</div><div class="ttdef"><b>Definition</b> d_a_door_boss.h:20</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_aee5046fd5fe353e3e57fd1f4285d37d3aa75b5cf7e17313eba59fc450d98fd050"><div class="ttname"><a href="classdaBdoor__c.html#aee5046fd5fe353e3e57fd1f4285d37d3aa75b5cf7e17313eba59fc450d98fd050">daBdoor_c::ACT_END</a></div><div class="ttdeci">@ ACT_END</div><div class="ttdef"><b>Definition</b> d_a_door_boss.h:23</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_af3104c3b0506a446703635ace2d99a63"><div class="ttname"><a href="classdaBdoor__c.html#af3104c3b0506a446703635ace2d99a63">daBdoor_c::checkDraw</a></div><div class="ttdeci">BOOL checkDraw()</div><div class="ttdef"><b>Definition</b> d_a_door_boss.cpp:391</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_af34960b1ff801d5c7388b3aea4aea212"><div class="ttname"><a href="classdaBdoor__c.html#af34960b1ff801d5c7388b3aea4aea212">daBdoor_c::CreateHeap</a></div><div class="ttdeci">int CreateHeap()</div><div class="ttdef"><b>Definition</b> d_a_door_boss.cpp:63</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_af58f9900880ffdd049884a1e30aeaa83"><div class="ttname"><a href="classdaBdoor__c.html#af58f9900880ffdd049884a1e30aeaa83">daBdoor_c::mAction</a></div><div class="ttdeci">u8 mAction</div><div class="ttdef"><b>Definition</b> d_a_door_boss.h:59</div></div>
+<div class="ttc" id="aclassdaBdoor__c_html_af97d95f133bc4917dd8f5ee59f756394"><div class="ttname"><a href="classdaBdoor__c.html#af97d95f133bc4917dd8f5ee59f756394">daBdoor_c::demoProc</a></div><div class="ttdeci">void demoProc()</div><div class="ttdef"><b>Definition</b> d_a_door_boss.cpp:163</div></div>
+<div class="ttc" id="aclassmDoExt__bckAnm_html"><div class="ttname"><a href="classmDoExt__bckAnm.html">mDoExt_bckAnm</a></div><div class="ttdef"><b>Definition</b> m_Do_ext.h:139</div></div>
+<div class="ttc" id="ad__a__door__boss_8h_html_a906b6d3ee45460abf7c3ce0bbc3627a8"><div class="ttname"><a href="d__a__door__boss_8h.html#a906b6d3ee45460abf7c3ce0bbc3627a8">STATIC_ASSERT</a></div><div class="ttdeci">STATIC_ASSERT(sizeof(daBdoor_c)==0x7C4)</div></div>
+<div class="ttc" id="ad__bg__s__acch_8h_html"><div class="ttname"><a href="d__bg__s__acch_8h.html">d_bg_s_acch.h</a></div></div>
+<div class="ttc" id="ad__bg__w_8h_html"><div class="ttname"><a href="d__bg__w_8h.html">d_bg_w.h</a></div></div>
+<div class="ttc" id="af__op__actor_8h_html"><div class="ttname"><a href="f__op__actor_8h.html">f_op_actor.h</a></div></div>
+<div class="ttc" id="agroup__jsystem-jsupport_html_ga13fa7ef63a40072c7203b3da54a569a2"><div class="ttname"><a href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">JSUConvertOffsetToPtr</a></div><div class="ttdeci">T * JSUConvertOffsetToPtr(const void *, const void *)</div><div class="ttdef"><b>Definition</b> JSupport.h:22</div></div>
+<div class="ttc" id="astructcXyz_html"><div class="ttname"><a href="structcXyz.html">cXyz</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:49</div></div>
+<div class="ttc" id="astructfopAc__ac__c_html"><div class="ttname"><a href="structfopAc__ac__c.html">fopAc_ac_c</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:14</div></div>
+<div class="ttc" id="astructrequest__of__phase__process__class_html"><div class="ttname"><a href="structrequest__of__phase__process__class.html">request_of_phase_process_class</a></div><div class="ttdef"><b>Definition</b> c_phase.h:17</div></div>
+<div class="ttc" id="atypes_8h_html_a050c65e107f0c828f856a231f4b4e788"><div class="ttname"><a href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a></div><div class="ttdeci">int BOOL</div><div class="ttdef"><b>Definition</b> types.h:27</div></div>
+<div class="ttc" id="atypes_8h_html_a2caf5cd7bcdbe1eefa727f44ffb10bac"><div class="ttname"><a href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a></div><div class="ttdeci">unsigned long u32</div><div class="ttdef"><b>Definition</b> types.h:10</div></div>
+<div class="ttc" id="atypes_8h_html_a5f6906312a689f27d70e9d086649d3fd"><div class="ttname"><a href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a></div><div class="ttdeci">float f32</div><div class="ttdef"><b>Definition</b> types.h:22</div></div>
+<div class="ttc" id="atypes_8h_html_a5ffa4f640862b25ba6d4f635b78bdbe1"><div class="ttname"><a href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a></div><div class="ttdeci">signed short s16</div><div class="ttdef"><b>Definition</b> types.h:5</div></div>
+<div class="ttc" id="atypes_8h_html_aed742c436da53c1080638ce6ef7d13de"><div class="ttname"><a href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a></div><div class="ttdeci">unsigned char u8</div><div class="ttdef"><b>Definition</b> types.h:8</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d1e95842203b094e4f127fa85baf24b5.html">rel</a></li><li class="navelem"><a class="el" href="dir_244336746419795862f93731f1699860.html">d</a></li><li class="navelem"><a class="el" href="dir_b81c1d082692bb1b2b34ed3bfe8a0f4a.html">a</a></li><li class="navelem"><a class="el" href="dir_525cfad2fbae9f4cf61b85ea6b4f4028.html">door</a></li><li class="navelem"><a class="el" href="dir_e89a64665f1d1516b922fc9e029dcb70.html">d_a_door_boss</a></li><li class="navelem"><a class="el" href="d__a__door__boss_8h.html">d_a_door_boss.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

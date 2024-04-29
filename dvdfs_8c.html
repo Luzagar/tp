@@ -1,0 +1,1035 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: libs/dolphin/dvd/dvdfs.c File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('dvdfs_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">dvdfs.c File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSTEntry.html">FSTEntry</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ade86148c89cb70fba5f7e0163015bb0f" id="r_ade86148c89cb70fba5f7e0163015bb0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">struct</a> <a class="el" href="structFSTEntry.html">FSTEntry</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdfs_8c.html#ade86148c89cb70fba5f7e0163015bb0f">FSTEntry</a></td></tr>
+<tr class="separator:ade86148c89cb70fba5f7e0163015bb0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a67c2c481c14693c56d4f717eea8d2711" id="r_a67c2c481c14693c56d4f717eea8d2711"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdfs_8c.html#a67c2c481c14693c56d4f717eea8d2711">__DVDFSInit</a> ()</td></tr>
+<tr class="separator:a67c2c481c14693c56d4f717eea8d2711"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a955c18d7a80fc4e0803422f03f86531f" id="r_a955c18d7a80fc4e0803422f03f86531f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdfs_8c.html#a955c18d7a80fc4e0803422f03f86531f">DVDConvertPathToEntrynum</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">path</a>)</td></tr>
+<tr class="separator:a955c18d7a80fc4e0803422f03f86531f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e70e0d44a725885bd81652306c3a75c" id="r_a6e70e0d44a725885bd81652306c3a75c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdfs_8c.html#a6e70e0d44a725885bd81652306c3a75c">DVDFastOpen</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">long</a> entryNum, <a class="el" href="structDVDFileInfo.html">DVDFileInfo</a> *info)</td></tr>
+<tr class="separator:a6e70e0d44a725885bd81652306c3a75c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0f978d9b8f2645aba4b5e795f12347f" id="r_ab0f978d9b8f2645aba4b5e795f12347f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdfs_8c.html#ab0f978d9b8f2645aba4b5e795f12347f">DVDOpen</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">filename</a>, <a class="el" href="structDVDFileInfo.html">DVDFileInfo</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">fileinfo</a>)</td></tr>
+<tr class="separator:ab0f978d9b8f2645aba4b5e795f12347f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f800125e52479be0f7df5a5a0851510" id="r_a1f800125e52479be0f7df5a5a0851510"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdfs_8c.html#a1f800125e52479be0f7df5a5a0851510">DVDClose</a> (<a class="el" href="structDVDFileInfo.html">DVDFileInfo</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">fileinfo</a>)</td></tr>
+<tr class="separator:a1f800125e52479be0f7df5a5a0851510"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e6ab7952ffbbae3e7c39661135dc0b2" id="r_a8e6ab7952ffbbae3e7c39661135dc0b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdfs_8c.html#a8e6ab7952ffbbae3e7c39661135dc0b2">entryToPath</a> (<a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> entry, <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">path</a>, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">maxlen</a>)</td></tr>
+<tr class="separator:a8e6ab7952ffbbae3e7c39661135dc0b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4724869bcd7dbd2b81491a8f4e2162ad" id="r_a4724869bcd7dbd2b81491a8f4e2162ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdfs_8c.html#a4724869bcd7dbd2b81491a8f4e2162ad">DVDConvertEntrynumToPath</a> (<a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">entrynum</a>, <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">path</a>, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">maxlen</a>)</td></tr>
+<tr class="separator:a4724869bcd7dbd2b81491a8f4e2162ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a620aa506ed9f8d044d77372cd08c2df1" id="r_a620aa506ed9f8d044d77372cd08c2df1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdfs_8c.html#a620aa506ed9f8d044d77372cd08c2df1">DVDGetCurrentDir</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">path</a>, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">maxlen</a>)</td></tr>
+<tr class="separator:a620aa506ed9f8d044d77372cd08c2df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5240fb0b9481dcf81ec413a3755d4a4b" id="r_a5240fb0b9481dcf81ec413a3755d4a4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdfs_8c.html#a5240fb0b9481dcf81ec413a3755d4a4b">DVDChangeDir</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">dirname</a>)</td></tr>
+<tr class="separator:a5240fb0b9481dcf81ec413a3755d4a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a036a24a390bb610a914d4562af608791" id="r_a036a24a390bb610a914d4562af608791"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdfs_8c.html#a036a24a390bb610a914d4562af608791">DVDReadAsyncPrio</a> (<a class="el" href="structDVDFileInfo.html">DVDFileInfo</a> *fileInfo, <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *addr, <a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> length, <a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> <a class="el" href="d__gameover_8cpp.html#a278744385c8918b3813d6136e5e37b30">offset</a>, <a class="el" href="dvd_8h.html#a218ae313498d4861727ac63f63f8edf7">DVDCallback</a> callback, <a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">prio</a>)</td></tr>
+<tr class="separator:a036a24a390bb610a914d4562af608791"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc4339eb9f15e8d4d734a74221af99d1" id="r_acc4339eb9f15e8d4d734a74221af99d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdfs_8c.html#acc4339eb9f15e8d4d734a74221af99d1">cbForReadAsync</a> ()</td></tr>
+<tr class="separator:acc4339eb9f15e8d4d734a74221af99d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb9e798e39ff53559f3d99be949bbf44" id="r_acb9e798e39ff53559f3d99be949bbf44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdfs_8c.html#acb9e798e39ff53559f3d99be949bbf44">DVDReadPrio</a> (<a class="el" href="structDVDFileInfo.html">DVDFileInfo</a> *fileInfo, <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *addr, <a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> length, <a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> <a class="el" href="d__gameover_8cpp.html#a278744385c8918b3813d6136e5e37b30">offset</a>, <a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">prio</a>)</td></tr>
+<tr class="separator:acb9e798e39ff53559f3d99be949bbf44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae38f008cbbb18fa03868f248a9bd2ead" id="r_ae38f008cbbb18fa03868f248a9bd2ead"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdfs_8c.html#ae38f008cbbb18fa03868f248a9bd2ead">cbForReadSync</a> ()</td></tr>
+<tr class="separator:ae38f008cbbb18fa03868f248a9bd2ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a084b903f36aea9ae7bc6b4df700cdd69" id="r_a084b903f36aea9ae7bc6b4df700cdd69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdfs_8c.html#a084b903f36aea9ae7bc6b4df700cdd69">DVDOpenDir</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *, <a class="el" href="structDVDDirectory.html">DVDDirectory</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">dir</a>)</td></tr>
+<tr class="separator:a084b903f36aea9ae7bc6b4df700cdd69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74313e3cc42cd9255d5a442ff24811fb" id="r_a74313e3cc42cd9255d5a442ff24811fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdfs_8c.html#a74313e3cc42cd9255d5a442ff24811fb">DVDReadDir</a> (<a class="el" href="structDVDDirectory.html">DVDDirectory</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">dir</a>, <a class="el" href="structDVDDirectoryEntry.html">DVDDirectoryEntry</a> *entry)</td></tr>
+<tr class="separator:a74313e3cc42cd9255d5a442ff24811fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a90ff1e06513275c82831234dbd382f" id="r_a4a90ff1e06513275c82831234dbd382f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdfs_8c.html#a4a90ff1e06513275c82831234dbd382f">DVDCloseDir</a> ()</td></tr>
+<tr class="separator:a4a90ff1e06513275c82831234dbd382f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e63d3b5985df979c9e7aa6e9b6a4aa0" id="r_a4e63d3b5985df979c9e7aa6e9b6a4aa0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdfs_8c.html#a4e63d3b5985df979c9e7aa6e9b6a4aa0">isSame</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">path</a>, <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">string</a>)</td></tr>
+<tr class="separator:a4e63d3b5985df979c9e7aa6e9b6a4aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad47e45edab89dbe7009acd9260d009c3" id="r_ad47e45edab89dbe7009acd9260d009c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdfs_8c.html#ad47e45edab89dbe7009acd9260d009c3">DVDFastOpen</a> (<a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">entrynum</a>, <a class="el" href="structDVDFileInfo.html">DVDFileInfo</a> *fileInfo)</td></tr>
+<tr class="separator:ad47e45edab89dbe7009acd9260d009c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa446aa78f15dc030188e0ba578aa617b" id="r_aa446aa78f15dc030188e0ba578aa617b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdfs_8c.html#aa446aa78f15dc030188e0ba578aa617b">myStrncpy</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">dest</a>, <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">src</a>, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">maxlen</a>)</td></tr>
+<tr class="separator:aa446aa78f15dc030188e0ba578aa617b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa25e9949c85f025f0b35f8f0b8d81e40" id="r_aa25e9949c85f025f0b35f8f0b8d81e40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdfs_8c.html#aa25e9949c85f025f0b35f8f0b8d81e40">cbForReadAsync</a> (<a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> result, <a class="el" href="structDVDCommandBlock.html">DVDCommandBlock</a> *<a class="el" href="fstload_8c.html#a0a77fcc63b2130d6926350d37888d7a4">block</a>)</td></tr>
+<tr class="separator:aa25e9949c85f025f0b35f8f0b8d81e40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62c1b7a8b28f263aa56971234896c6d9" id="r_a62c1b7a8b28f263aa56971234896c6d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdfs_8c.html#a62c1b7a8b28f263aa56971234896c6d9">cbForReadSync</a> (<a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> result, <a class="el" href="structDVDCommandBlock.html">DVDCommandBlock</a> *<a class="el" href="fstload_8c.html#a0a77fcc63b2130d6926350d37888d7a4">block</a>)</td></tr>
+<tr class="separator:a62c1b7a8b28f263aa56971234896c6d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a543da2d195a8f0576fe4a625c4d15f39" id="r_a543da2d195a8f0576fe4a625c4d15f39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="structOSBootInfo.html">OSBootInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdfs_8c.html#a543da2d195a8f0576fe4a625c4d15f39">BootInfo</a></td></tr>
+<tr class="separator:a543da2d195a8f0576fe4a625c4d15f39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2bbd1961fee7855c1ff11048f26af78" id="r_ac2bbd1961fee7855c1ff11048f26af78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="structFSTEntry.html">FSTEntry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdfs_8c.html#ac2bbd1961fee7855c1ff11048f26af78">FstStart</a></td></tr>
+<tr class="separator:ac2bbd1961fee7855c1ff11048f26af78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83f4fb45ef35a69aaa37054e1295cf47" id="r_a83f4fb45ef35a69aaa37054e1295cf47"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdfs_8c.html#a83f4fb45ef35a69aaa37054e1295cf47">FstStringStart</a></td></tr>
+<tr class="separator:a83f4fb45ef35a69aaa37054e1295cf47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83a7039cfb07b3f6a147aaa618b5b82e" id="r_a83a7039cfb07b3f6a147aaa618b5b82e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">unsigned</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdfs_8c.html#a83a7039cfb07b3f6a147aaa618b5b82e">MaxEntryNum</a></td></tr>
+<tr class="separator:a83a7039cfb07b3f6a147aaa618b5b82e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94aa7710e24e584747226714bf0389c2" id="r_a94aa7710e24e584747226714bf0389c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdfs_8c.html#a94aa7710e24e584747226714bf0389c2">currentDirectory</a></td></tr>
+<tr class="separator:a94aa7710e24e584747226714bf0389c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0764984f4a23336c239ccbc9fec3e724" id="r_a0764984f4a23336c239ccbc9fec3e724"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structOSThreadQueue.html">OSThreadQueue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdfs_8c.html#a0764984f4a23336c239ccbc9fec3e724">__DVDThreadQueue</a></td></tr>
+<tr class="separator:a0764984f4a23336c239ccbc9fec3e724"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad54dca4cd8b5d4c4caa734dc0c04c435" id="r_ad54dca4cd8b5d4c4caa734dc0c04c435"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdfs_8c.html#ad54dca4cd8b5d4c4caa734dc0c04c435">__DVDLongFileNameFlag</a></td></tr>
+<tr class="separator:ad54dca4cd8b5d4c4caa734dc0c04c435"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ade86148c89cb70fba5f7e0163015bb0f" name="ade86148c89cb70fba5f7e0163015bb0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade86148c89cb70fba5f7e0163015bb0f">&#9670;&#160;</a></span>FSTEntry</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">struct</a> <a class="el" href="structFSTEntry.html">FSTEntry</a> <a class="el" href="structFSTEntry.html">FSTEntry</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a67c2c481c14693c56d4f717eea8d2711" name="a67c2c481c14693c56d4f717eea8d2711"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67c2c481c14693c56d4f717eea8d2711">&#9670;&#160;</a></span>__DVDFSInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> __DVDFSInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acc4339eb9f15e8d4d734a74221af99d1" name="acc4339eb9f15e8d4d734a74221af99d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc4339eb9f15e8d4d734a74221af99d1">&#9670;&#160;</a></span>cbForReadAsync() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> cbForReadAsync </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa25e9949c85f025f0b35f8f0b8d81e40" name="aa25e9949c85f025f0b35f8f0b8d81e40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa25e9949c85f025f0b35f8f0b8d81e40">&#9670;&#160;</a></span>cbForReadAsync() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> cbForReadAsync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structDVDCommandBlock.html">DVDCommandBlock</a> *&#160;</td>
+          <td class="paramname"><em>block</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae38f008cbbb18fa03868f248a9bd2ead" name="ae38f008cbbb18fa03868f248a9bd2ead"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae38f008cbbb18fa03868f248a9bd2ead">&#9670;&#160;</a></span>cbForReadSync() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> cbForReadSync </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a62c1b7a8b28f263aa56971234896c6d9" name="a62c1b7a8b28f263aa56971234896c6d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62c1b7a8b28f263aa56971234896c6d9">&#9670;&#160;</a></span>cbForReadSync() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> cbForReadSync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structDVDCommandBlock.html">DVDCommandBlock</a> *&#160;</td>
+          <td class="paramname"><em>block</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5240fb0b9481dcf81ec413a3755d4a4b" name="a5240fb0b9481dcf81ec413a3755d4a4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5240fb0b9481dcf81ec413a3755d4a4b">&#9670;&#160;</a></span>DVDChangeDir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> DVDChangeDir </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *&#160;</td>
+          <td class="paramname"><em>dirname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f800125e52479be0f7df5a5a0851510" name="a1f800125e52479be0f7df5a5a0851510"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f800125e52479be0f7df5a5a0851510">&#9670;&#160;</a></span>DVDClose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> DVDClose </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structDVDFileInfo.html">DVDFileInfo</a> *&#160;</td>
+          <td class="paramname"><em>fileinfo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a90ff1e06513275c82831234dbd382f" name="a4a90ff1e06513275c82831234dbd382f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a90ff1e06513275c82831234dbd382f">&#9670;&#160;</a></span>DVDCloseDir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> DVDCloseDir </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4724869bcd7dbd2b81491a8f4e2162ad" name="a4724869bcd7dbd2b81491a8f4e2162ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4724869bcd7dbd2b81491a8f4e2162ad">&#9670;&#160;</a></span>DVDConvertEntrynumToPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> DVDConvertEntrynumToPath </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td>
+          <td class="paramname"><em>entrynum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramname"><em>maxlen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a955c18d7a80fc4e0803422f03f86531f" name="a955c18d7a80fc4e0803422f03f86531f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a955c18d7a80fc4e0803422f03f86531f">&#9670;&#160;</a></span>DVDConvertPathToEntrynum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> DVDConvertPathToEntrynum </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e70e0d44a725885bd81652306c3a75c" name="a6e70e0d44a725885bd81652306c3a75c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e70e0d44a725885bd81652306c3a75c">&#9670;&#160;</a></span>DVDFastOpen() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> DVDFastOpen </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">long</a>&#160;</td>
+          <td class="paramname"><em>entryNum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structDVDFileInfo.html">DVDFileInfo</a> *&#160;</td>
+          <td class="paramname"><em>info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad47e45edab89dbe7009acd9260d009c3" name="ad47e45edab89dbe7009acd9260d009c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad47e45edab89dbe7009acd9260d009c3">&#9670;&#160;</a></span>DVDFastOpen() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> DVDFastOpen </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td>
+          <td class="paramname"><em>entrynum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structDVDFileInfo.html">DVDFileInfo</a> *&#160;</td>
+          <td class="paramname"><em>fileInfo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a620aa506ed9f8d044d77372cd08c2df1" name="a620aa506ed9f8d044d77372cd08c2df1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a620aa506ed9f8d044d77372cd08c2df1">&#9670;&#160;</a></span>DVDGetCurrentDir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> DVDGetCurrentDir </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramname"><em>maxlen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab0f978d9b8f2645aba4b5e795f12347f" name="ab0f978d9b8f2645aba4b5e795f12347f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0f978d9b8f2645aba4b5e795f12347f">&#9670;&#160;</a></span>DVDOpen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> DVDOpen </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structDVDFileInfo.html">DVDFileInfo</a> *&#160;</td>
+          <td class="paramname"><em>fileinfo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a084b903f36aea9ae7bc6b4df700cdd69" name="a084b903f36aea9ae7bc6b4df700cdd69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a084b903f36aea9ae7bc6b4df700cdd69">&#9670;&#160;</a></span>DVDOpenDir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> DVDOpenDir </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *&#160;</td>
+          <td class="paramname"><em>dirName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structDVDDirectory.html">DVDDirectory</a> *&#160;</td>
+          <td class="paramname"><em>dir</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a036a24a390bb610a914d4562af608791" name="a036a24a390bb610a914d4562af608791"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a036a24a390bb610a914d4562af608791">&#9670;&#160;</a></span>DVDReadAsyncPrio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> DVDReadAsyncPrio </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structDVDFileInfo.html">DVDFileInfo</a> *&#160;</td>
+          <td class="paramname"><em>fileInfo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td>
+          <td class="paramname"><em>length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dvd_8h.html#a218ae313498d4861727ac63f63f8edf7">DVDCallback</a>&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td>
+          <td class="paramname"><em>prio</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a74313e3cc42cd9255d5a442ff24811fb" name="a74313e3cc42cd9255d5a442ff24811fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74313e3cc42cd9255d5a442ff24811fb">&#9670;&#160;</a></span>DVDReadDir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> DVDReadDir </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structDVDDirectory.html">DVDDirectory</a> *&#160;</td>
+          <td class="paramname"><em>dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structDVDDirectoryEntry.html">DVDDirectoryEntry</a> *&#160;</td>
+          <td class="paramname"><em>entry</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb9e798e39ff53559f3d99be949bbf44" name="acb9e798e39ff53559f3d99be949bbf44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb9e798e39ff53559f3d99be949bbf44">&#9670;&#160;</a></span>DVDReadPrio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> DVDReadPrio </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structDVDFileInfo.html">DVDFileInfo</a> *&#160;</td>
+          <td class="paramname"><em>fileInfo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td>
+          <td class="paramname"><em>length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td>
+          <td class="paramname"><em>prio</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e6ab7952ffbbae3e7c39661135dc0b2" name="a8e6ab7952ffbbae3e7c39661135dc0b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e6ab7952ffbbae3e7c39661135dc0b2">&#9670;&#160;</a></span>entryToPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> entryToPath </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramname"><em>entry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramname"><em>maxlen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e63d3b5985df979c9e7aa6e9b6a4aa0" name="a4e63d3b5985df979c9e7aa6e9b6a4aa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e63d3b5985df979c9e7aa6e9b6a4aa0">&#9670;&#160;</a></span>isSame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> isSame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *&#160;</td>
+          <td class="paramname"><em>string</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa446aa78f15dc030188e0ba578aa617b" name="aa446aa78f15dc030188e0ba578aa617b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa446aa78f15dc030188e0ba578aa617b">&#9670;&#160;</a></span>myStrncpy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> myStrncpy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramname"><em>maxlen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="ad54dca4cd8b5d4c4caa734dc0c04c435" name="ad54dca4cd8b5d4c4caa734dc0c04c435"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad54dca4cd8b5d4c4caa734dc0c04c435">&#9670;&#160;</a></span>__DVDLongFileNameFlag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> __DVDLongFileNameFlag</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0764984f4a23336c239ccbc9fec3e724" name="a0764984f4a23336c239ccbc9fec3e724"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0764984f4a23336c239ccbc9fec3e724">&#9670;&#160;</a></span>__DVDThreadQueue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structOSThreadQueue.html">OSThreadQueue</a> __DVDThreadQueue</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a543da2d195a8f0576fe4a625c4d15f39" name="a543da2d195a8f0576fe4a625c4d15f39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a543da2d195a8f0576fe4a625c4d15f39">&#9670;&#160;</a></span>BootInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structOSBootInfo.html">OSBootInfo</a>* BootInfo</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a94aa7710e24e584747226714bf0389c2" name="a94aa7710e24e584747226714bf0389c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94aa7710e24e584747226714bf0389c2">&#9670;&#160;</a></span>currentDirectory</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> currentDirectory</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac2bbd1961fee7855c1ff11048f26af78" name="ac2bbd1961fee7855c1ff11048f26af78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2bbd1961fee7855c1ff11048f26af78">&#9670;&#160;</a></span>FstStart</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structFSTEntry.html">FSTEntry</a>* FstStart</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a83f4fb45ef35a69aaa37054e1295cf47" name="a83f4fb45ef35a69aaa37054e1295cf47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83f4fb45ef35a69aaa37054e1295cf47">&#9670;&#160;</a></span>FstStringStart</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a>* FstStringStart</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a83a7039cfb07b3f6a147aaa618b5b82e" name="a83a7039cfb07b3f6a147aaa618b5b82e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83a7039cfb07b3f6a147aaa618b5b82e">&#9670;&#160;</a></span>MaxEntryNum</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">unsigned</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> MaxEntryNum</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="dir_22235b545bd11e9cf035754dc4797b88.html">dolphin</a></li><li class="navelem"><a class="el" href="dir_aabd9a37b81f5bb62dc3ef3f6fc89e9e.html">dvd</a></li><li class="navelem"><a class="el" href="dvdfs_8c.html">dvdfs.c</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

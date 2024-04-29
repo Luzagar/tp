@@ -1,0 +1,2688 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: libs/JSystem/JParticle/JPABaseShape.cpp File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('JPABaseShape_8cpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">JPABaseShape.cpp File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a8ca8dc5fdd32825156209161f77d39cc" id="r_a8ca8dc5fdd32825156209161f77d39cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a8ca8dc5fdd32825156209161f77d39cc">projectionFunc</a>) (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *, <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a>)</td></tr>
+<tr class="separator:a8ca8dc5fdd32825156209161f77d39cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae27e9f7f10f8742bdb3ea03a9343bfda" id="r_ae27e9f7f10f8742bdb3ea03a9343bfda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#ae27e9f7f10f8742bdb3ea03a9343bfda">dirTypeFunc</a>) (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *, <a class="el" href="structJGeometry_1_1TVec3.html">JGeometry::TVec3</a>&lt; <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> &gt; *)</td></tr>
+<tr class="separator:ae27e9f7f10f8742bdb3ea03a9343bfda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5b4bb6a69eaac63e2c9b22041aec4aa" id="r_ac5b4bb6a69eaac63e2c9b22041aec4aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#ac5b4bb6a69eaac63e2c9b22041aec4aa">rotTypeFunc</a>) (<a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="el" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a> &amp;)</td></tr>
+<tr class="separator:ac5b4bb6a69eaac63e2c9b22041aec4aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d084dfd855d5889241baeea3e383cfc" id="r_a1d084dfd855d5889241baeea3e383cfc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a1d084dfd855d5889241baeea3e383cfc">planeFunc</a>) (<a class="el" href="mtx_8h.html#a486ec93ad57f76408600fa51e755e290">MtxP</a>, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>)</td></tr>
+<tr class="separator:a1d084dfd855d5889241baeea3e383cfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a607d0f731deac21129cf30f0ed23ee6f" id="r_a607d0f731deac21129cf30f0ed23ee6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="structJPANode.html">JPANode</a>&lt; <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> &gt; *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a607d0f731deac21129cf30f0ed23ee6f">getNodeFunc</a>) (<a class="el" href="structJPANode.html">JPANode</a>&lt; <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> &gt; *)</td></tr>
+<tr class="separator:a607d0f731deac21129cf30f0ed23ee6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a0e3985a9e59ed25aefb12d916ba56b10" id="r_a0e3985a9e59ed25aefb12d916ba56b10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a0e3985a9e59ed25aefb12d916ba56b10">JPASetPointSize</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>)</td></tr>
+<tr class="separator:a0e3985a9e59ed25aefb12d916ba56b10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a519620b24f6c5581cef5fc2c1a07896d" id="r_a519620b24f6c5581cef5fc2c1a07896d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a519620b24f6c5581cef5fc2c1a07896d">JPASetLineWidth</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>)</td></tr>
+<tr class="separator:a519620b24f6c5581cef5fc2c1a07896d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0400b4f3adcf7aa601ede91ecec8fc09" id="r_a0400b4f3adcf7aa601ede91ecec8fc09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a0400b4f3adcf7aa601ede91ecec8fc09">JPASetPointSize</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">ptcl</a>)</td></tr>
+<tr class="separator:a0400b4f3adcf7aa601ede91ecec8fc09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe5adffc0a189e24338295301d493538" id="r_abe5adffc0a189e24338295301d493538"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#abe5adffc0a189e24338295301d493538">JPASetLineWidth</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">ptcl</a>)</td></tr>
+<tr class="separator:abe5adffc0a189e24338295301d493538"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08190050127a21b452e60cc6283b0dae" id="r_a08190050127a21b452e60cc6283b0dae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a08190050127a21b452e60cc6283b0dae">JPARegistPrm</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>)</td></tr>
+<tr class="separator:a08190050127a21b452e60cc6283b0dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a288d0147d4cff84ac286b3f1595c5f61" id="r_a288d0147d4cff84ac286b3f1595c5f61"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a288d0147d4cff84ac286b3f1595c5f61">JPARegistEnv</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>)</td></tr>
+<tr class="separator:a288d0147d4cff84ac286b3f1595c5f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fcb50fa36264a49ff69f71712e95a63" id="r_a2fcb50fa36264a49ff69f71712e95a63"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a2fcb50fa36264a49ff69f71712e95a63">JPARegistPrmEnv</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>)</td></tr>
+<tr class="separator:a2fcb50fa36264a49ff69f71712e95a63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48aa0c3514021c3ce8b1a9f7fb609d6a" id="r_a48aa0c3514021c3ce8b1a9f7fb609d6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a48aa0c3514021c3ce8b1a9f7fb609d6a">JPARegistAlpha</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">ptcl</a>)</td></tr>
+<tr class="separator:a48aa0c3514021c3ce8b1a9f7fb609d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7aaea27541261850eda9b01f6afac38" id="r_aa7aaea27541261850eda9b01f6afac38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#aa7aaea27541261850eda9b01f6afac38">JPARegistPrmAlpha</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">ptcl</a>)</td></tr>
+<tr class="separator:aa7aaea27541261850eda9b01f6afac38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68253ea9a6d540100c5148f57e23f94b" id="r_a68253ea9a6d540100c5148f57e23f94b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a68253ea9a6d540100c5148f57e23f94b">JPARegistPrmAlphaEnv</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">ptcl</a>)</td></tr>
+<tr class="separator:a68253ea9a6d540100c5148f57e23f94b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7628d37bbdd066dd174b1555b62650e" id="r_ad7628d37bbdd066dd174b1555b62650e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#ad7628d37bbdd066dd174b1555b62650e">JPARegistAlphaEnv</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">ptcl</a>)</td></tr>
+<tr class="separator:ad7628d37bbdd066dd174b1555b62650e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0415251f27a4746e46ff8720903fe69" id="r_ac0415251f27a4746e46ff8720903fe69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#ac0415251f27a4746e46ff8720903fe69">JPARegistEnv</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">ptcl</a>)</td></tr>
+<tr class="separator:ac0415251f27a4746e46ff8720903fe69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae59b45fe0036639b6ba3270cd6df7c69" id="r_ae59b45fe0036639b6ba3270cd6df7c69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#ae59b45fe0036639b6ba3270cd6df7c69">JPACalcClrIdxNormal</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>)</td></tr>
+<tr class="separator:ae59b45fe0036639b6ba3270cd6df7c69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c92123fd23732a35a15b11164930f52" id="r_a6c92123fd23732a35a15b11164930f52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a6c92123fd23732a35a15b11164930f52">JPACalcClrIdxNormal</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>)</td></tr>
+<tr class="separator:a6c92123fd23732a35a15b11164930f52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a6eb699b4dfa9c234e86c3290db0665" id="r_a6a6eb699b4dfa9c234e86c3290db0665"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a6a6eb699b4dfa9c234e86c3290db0665">JPACalcClrIdxRepeat</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>)</td></tr>
+<tr class="separator:a6a6eb699b4dfa9c234e86c3290db0665"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5e385e74dfaac40c756dbc88a2833fb" id="r_ad5e385e74dfaac40c756dbc88a2833fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#ad5e385e74dfaac40c756dbc88a2833fb">JPACalcClrIdxRepeat</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>)</td></tr>
+<tr class="separator:ad5e385e74dfaac40c756dbc88a2833fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b076bee1de63a79e3bed3186c5e17ca" id="r_a3b076bee1de63a79e3bed3186c5e17ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a3b076bee1de63a79e3bed3186c5e17ca">JPACalcClrIdxReverse</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>)</td></tr>
+<tr class="separator:a3b076bee1de63a79e3bed3186c5e17ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9292cc3ccd26e74881d60bccb159500e" id="r_a9292cc3ccd26e74881d60bccb159500e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a9292cc3ccd26e74881d60bccb159500e">JPACalcClrIdxReverse</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>)</td></tr>
+<tr class="separator:a9292cc3ccd26e74881d60bccb159500e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6112b8e69e9578d039667b20be3274d1" id="r_a6112b8e69e9578d039667b20be3274d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a6112b8e69e9578d039667b20be3274d1">JPACalcClrIdxMerge</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>)</td></tr>
+<tr class="separator:a6112b8e69e9578d039667b20be3274d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8df7d9ce9a9ad080c8b07ae6ad67c4ef" id="r_a8df7d9ce9a9ad080c8b07ae6ad67c4ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a8df7d9ce9a9ad080c8b07ae6ad67c4ef">JPACalcClrIdxMerge</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>)</td></tr>
+<tr class="separator:a8df7d9ce9a9ad080c8b07ae6ad67c4ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49c984edf61338497666458dec677db4" id="r_a49c984edf61338497666458dec677db4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a49c984edf61338497666458dec677db4">JPACalcClrIdxRandom</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>)</td></tr>
+<tr class="separator:a49c984edf61338497666458dec677db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1ff99da9e215d07978c9cd019bfaf34" id="r_ad1ff99da9e215d07978c9cd019bfaf34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#ad1ff99da9e215d07978c9cd019bfaf34">JPACalcClrIdxRandom</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>)</td></tr>
+<tr class="separator:ad1ff99da9e215d07978c9cd019bfaf34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad022267a3ff429a7ad939d56c40e9ded" id="r_ad022267a3ff429a7ad939d56c40e9ded"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#ad022267a3ff429a7ad939d56c40e9ded">JPACalcPrm</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>)</td></tr>
+<tr class="separator:ad022267a3ff429a7ad939d56c40e9ded"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabb821f16ac2b4c78c7a69c217b0772a" id="r_aabb821f16ac2b4c78c7a69c217b0772a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#aabb821f16ac2b4c78c7a69c217b0772a">JPACalcPrm</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">ptcl</a>)</td></tr>
+<tr class="separator:aabb821f16ac2b4c78c7a69c217b0772a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b717c75fbb59e98f442d89240b68762" id="r_a6b717c75fbb59e98f442d89240b68762"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a6b717c75fbb59e98f442d89240b68762">JPACalcEnv</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>)</td></tr>
+<tr class="separator:a6b717c75fbb59e98f442d89240b68762"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66bb6150ec7d62022f73551495edac15" id="r_a66bb6150ec7d62022f73551495edac15"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a66bb6150ec7d62022f73551495edac15">JPACalcEnv</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">ptcl</a>)</td></tr>
+<tr class="separator:a66bb6150ec7d62022f73551495edac15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52b03c0eb6ac85a6e3c7ef181a2be0a7" id="r_a52b03c0eb6ac85a6e3c7ef181a2be0a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a52b03c0eb6ac85a6e3c7ef181a2be0a7">JPACalcColorCopy</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">ptcl</a>)</td></tr>
+<tr class="separator:a52b03c0eb6ac85a6e3c7ef181a2be0a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad984a3ffc702df413182b1018ac9ede9" id="r_ad984a3ffc702df413182b1018ac9ede9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#ad984a3ffc702df413182b1018ac9ede9">JPAGenTexCrdMtxIdt</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_0</a>)</td></tr>
+<tr class="separator:ad984a3ffc702df413182b1018ac9ede9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aded1a12272d012f9a511a06fbb7955c6" id="r_aded1a12272d012f9a511a06fbb7955c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#aded1a12272d012f9a511a06fbb7955c6">JPAGenTexCrdMtxAnm</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_0</a>)</td></tr>
+<tr class="separator:aded1a12272d012f9a511a06fbb7955c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcc21b0635eeb4e886fe8d395fd66a59" id="r_adcc21b0635eeb4e886fe8d395fd66a59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#adcc21b0635eeb4e886fe8d395fd66a59">JPAGenTexCrdMtxPrj</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_0</a>)</td></tr>
+<tr class="separator:adcc21b0635eeb4e886fe8d395fd66a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3023201cade06ec5a26eb4e2f60f8a40" id="r_a3023201cade06ec5a26eb4e2f60f8a40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a3023201cade06ec5a26eb4e2f60f8a40">JPAGenCalcTexCrdMtxAnm</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>)</td></tr>
+<tr class="separator:a3023201cade06ec5a26eb4e2f60f8a40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab65fe444e9351b8b38866058c9898710" id="r_ab65fe444e9351b8b38866058c9898710"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#ab65fe444e9351b8b38866058c9898710">JPALoadCalcTexCrdMtxAnm</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>)</td></tr>
+<tr class="separator:ab65fe444e9351b8b38866058c9898710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae33359423768a3cf75eb7198409e9333" id="r_ae33359423768a3cf75eb7198409e9333"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#ae33359423768a3cf75eb7198409e9333">JPALoadTex</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>)</td></tr>
+<tr class="separator:ae33359423768a3cf75eb7198409e9333"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af31696aabad9f7af0f234d831da211d0" id="r_af31696aabad9f7af0f234d831da211d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#af31696aabad9f7af0f234d831da211d0">JPALoadTexAnm</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>)</td></tr>
+<tr class="separator:af31696aabad9f7af0f234d831da211d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8374bf719fa30d1803a5dfc445c6751b" id="r_a8374bf719fa30d1803a5dfc445c6751b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a8374bf719fa30d1803a5dfc445c6751b">JPALoadTexAnm</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">ptcl</a>)</td></tr>
+<tr class="separator:a8374bf719fa30d1803a5dfc445c6751b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d3aec4f80abc26e3f582062a39288df" id="r_a3d3aec4f80abc26e3f582062a39288df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a3d3aec4f80abc26e3f582062a39288df">JPACalcTexIdxNormal</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>)</td></tr>
+<tr class="separator:a3d3aec4f80abc26e3f582062a39288df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1ebf39b2a4b4f84273680a22c3c8296" id="r_ae1ebf39b2a4b4f84273680a22c3c8296"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#ae1ebf39b2a4b4f84273680a22c3c8296">JPACalcTexIdxNormal</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>)</td></tr>
+<tr class="separator:ae1ebf39b2a4b4f84273680a22c3c8296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2d51bd13c1966815be52f20f6d3e4aa" id="r_aa2d51bd13c1966815be52f20f6d3e4aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#aa2d51bd13c1966815be52f20f6d3e4aa">JPACalcTexIdxRepeat</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>)</td></tr>
+<tr class="separator:aa2d51bd13c1966815be52f20f6d3e4aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8ad9e9a0fd0329c31c1fb53fe663602" id="r_ad8ad9e9a0fd0329c31c1fb53fe663602"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#ad8ad9e9a0fd0329c31c1fb53fe663602">JPACalcTexIdxRepeat</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>)</td></tr>
+<tr class="separator:ad8ad9e9a0fd0329c31c1fb53fe663602"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83c216556fbfb89d093eed1ae691c33d" id="r_a83c216556fbfb89d093eed1ae691c33d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a83c216556fbfb89d093eed1ae691c33d">JPACalcTexIdxReverse</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>)</td></tr>
+<tr class="separator:a83c216556fbfb89d093eed1ae691c33d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24c200dbade6a3db6dde21e228aee955" id="r_a24c200dbade6a3db6dde21e228aee955"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a24c200dbade6a3db6dde21e228aee955">JPACalcTexIdxReverse</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>)</td></tr>
+<tr class="separator:a24c200dbade6a3db6dde21e228aee955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3624c7bded961b0bd159071925976934" id="r_a3624c7bded961b0bd159071925976934"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a3624c7bded961b0bd159071925976934">JPACalcTexIdxMerge</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>)</td></tr>
+<tr class="separator:a3624c7bded961b0bd159071925976934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a752ebbcbac783f0564ff789297f8c72a" id="r_a752ebbcbac783f0564ff789297f8c72a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a752ebbcbac783f0564ff789297f8c72a">JPACalcTexIdxMerge</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>)</td></tr>
+<tr class="separator:a752ebbcbac783f0564ff789297f8c72a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35251d07c501dc0d0e9b2edd12151f0d" id="r_a35251d07c501dc0d0e9b2edd12151f0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a35251d07c501dc0d0e9b2edd12151f0d">JPACalcTexIdxRandom</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>)</td></tr>
+<tr class="separator:a35251d07c501dc0d0e9b2edd12151f0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ebc108203b49e200d39b7c6292953ad" id="r_a9ebc108203b49e200d39b7c6292953ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a9ebc108203b49e200d39b7c6292953ad">JPACalcTexIdxRandom</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>)</td></tr>
+<tr class="separator:a9ebc108203b49e200d39b7c6292953ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c1728f937535e2522434b6d0820100e" id="r_a9c1728f937535e2522434b6d0820100e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a9c1728f937535e2522434b6d0820100e">JPALoadPosMtxCam</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>)</td></tr>
+<tr class="separator:a9c1728f937535e2522434b6d0820100e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb5136dbf96b816c45d2eefcbf6e869f" id="r_adb5136dbf96b816c45d2eefcbf6e869f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#adb5136dbf96b816c45d2eefcbf6e869f">noLoadPrj</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">srt</a>)</td></tr>
+<tr class="separator:adb5136dbf96b816c45d2eefcbf6e869f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa99543f8d0c48eacaa86109730805961" id="r_aa99543f8d0c48eacaa86109730805961"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#aa99543f8d0c48eacaa86109730805961">loadPrj</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">srt</a>)</td></tr>
+<tr class="separator:aa99543f8d0c48eacaa86109730805961"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0f18e317ea3da16c4c19de3b32c36c0" id="r_ae0f18e317ea3da16c4c19de3b32c36c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#ae0f18e317ea3da16c4c19de3b32c36c0">loadPrjAnm</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">srt</a>)</td></tr>
+<tr class="separator:ae0f18e317ea3da16c4c19de3b32c36c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7236d593e83312efc31711c75420b67c" id="r_a7236d593e83312efc31711c75420b67c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a7236d593e83312efc31711c75420b67c">JPADrawBillboard</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>)</td></tr>
+<tr class="separator:a7236d593e83312efc31711c75420b67c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d633e44780187ab1b2f487d5cd734b6" id="r_a8d633e44780187ab1b2f487d5cd734b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a8d633e44780187ab1b2f487d5cd734b6">JPADrawRotBillboard</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>)</td></tr>
+<tr class="separator:a8d633e44780187ab1b2f487d5cd734b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f61c29653526a0cbe32aecf5cdad9f6" id="r_a2f61c29653526a0cbe32aecf5cdad9f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a2f61c29653526a0cbe32aecf5cdad9f6">JPADrawYBillboard</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>)</td></tr>
+<tr class="separator:a2f61c29653526a0cbe32aecf5cdad9f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8159b113d984feb0498e7d4f693a6b7c" id="r_a8159b113d984feb0498e7d4f693a6b7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a8159b113d984feb0498e7d4f693a6b7c">JPADrawRotYBillboard</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>)</td></tr>
+<tr class="separator:a8159b113d984feb0498e7d4f693a6b7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93755ba6f569d8410c7705af1de45f85" id="r_a93755ba6f569d8410c7705af1de45f85"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a93755ba6f569d8410c7705af1de45f85">dirTypeVel</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>, <a class="el" href="structJGeometry_1_1TVec3.html">JGeometry::TVec3</a>&lt; <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> &gt; *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_2</a>)</td></tr>
+<tr class="separator:a93755ba6f569d8410c7705af1de45f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3c648f0ac0979078735650f5d95a668" id="r_ac3c648f0ac0979078735650f5d95a668"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#ac3c648f0ac0979078735650f5d95a668">dirTypePos</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>, <a class="el" href="structJGeometry_1_1TVec3.html">JGeometry::TVec3</a>&lt; <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> &gt; *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_2</a>)</td></tr>
+<tr class="separator:ac3c648f0ac0979078735650f5d95a668"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae217845a790bc7c7278cf6af7511674b" id="r_ae217845a790bc7c7278cf6af7511674b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#ae217845a790bc7c7278cf6af7511674b">dirTypePosInv</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>, <a class="el" href="structJGeometry_1_1TVec3.html">JGeometry::TVec3</a>&lt; <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> &gt; *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_2</a>)</td></tr>
+<tr class="separator:ae217845a790bc7c7278cf6af7511674b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8036bd8c7135b2f5978d8336d0f83d8" id="r_ae8036bd8c7135b2f5978d8336d0f83d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#ae8036bd8c7135b2f5978d8336d0f83d8">dirTypeEmtrDir</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>, <a class="el" href="structJGeometry_1_1TVec3.html">JGeometry::TVec3</a>&lt; <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> &gt; *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_2</a>)</td></tr>
+<tr class="separator:ae8036bd8c7135b2f5978d8336d0f83d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3c8a9ed068e8324b3d20db97c3d4143" id="r_ab3c8a9ed068e8324b3d20db97c3d4143"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#ab3c8a9ed068e8324b3d20db97c3d4143">dirTypePrevPtcl</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>, <a class="el" href="structJGeometry_1_1TVec3.html">JGeometry::TVec3</a>&lt; <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> &gt; *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_2</a>)</td></tr>
+<tr class="separator:ab3c8a9ed068e8324b3d20db97c3d4143"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80c9c1496897fbd686de606a18fbe6d8" id="r_a80c9c1496897fbd686de606a18fbe6d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a80c9c1496897fbd686de606a18fbe6d8">rotTypeY</a> (<a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_0</a>, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>, <a class="el" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a> &amp;<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_2</a>)</td></tr>
+<tr class="separator:a80c9c1496897fbd686de606a18fbe6d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27f27f8b821ed9478bec815083d5feb5" id="r_a27f27f8b821ed9478bec815083d5feb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a27f27f8b821ed9478bec815083d5feb5">rotTypeX</a> (<a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_0</a>, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>, <a class="el" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a> &amp;<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_2</a>)</td></tr>
+<tr class="separator:a27f27f8b821ed9478bec815083d5feb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bfe16964fa86041d430d02258a814a6" id="r_a9bfe16964fa86041d430d02258a814a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a9bfe16964fa86041d430d02258a814a6">rotTypeZ</a> (<a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_0</a>, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>, <a class="el" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a> &amp;<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_2</a>)</td></tr>
+<tr class="separator:a9bfe16964fa86041d430d02258a814a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b0d9b2d592047fb742c09f346ae6dc6" id="r_a9b0d9b2d592047fb742c09f346ae6dc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a9b0d9b2d592047fb742c09f346ae6dc6">rotTypeXYZ</a> (<a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_0</a>, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>, <a class="el" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a> &amp;<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_2</a>)</td></tr>
+<tr class="separator:a9b0d9b2d592047fb742c09f346ae6dc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2803c7a6ce3a283f7c648442fe10f241" id="r_a2803c7a6ce3a283f7c648442fe10f241"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a2803c7a6ce3a283f7c648442fe10f241">basePlaneTypeXY</a> (<a class="el" href="mtx_8h.html#a486ec93ad57f76408600fa51e755e290">MtxP</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_0</a>, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_2</a>)</td></tr>
+<tr class="separator:a2803c7a6ce3a283f7c648442fe10f241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0acfc1208ce6f63cc755388bbc063222" id="r_a0acfc1208ce6f63cc755388bbc063222"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a0acfc1208ce6f63cc755388bbc063222">basePlaneTypeXZ</a> (<a class="el" href="mtx_8h.html#a486ec93ad57f76408600fa51e755e290">MtxP</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_0</a>, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_2</a>)</td></tr>
+<tr class="separator:a0acfc1208ce6f63cc755388bbc063222"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8b74c1e97a8bc7608cd9983236b022f" id="r_ad8b74c1e97a8bc7608cd9983236b022f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#ad8b74c1e97a8bc7608cd9983236b022f">basePlaneTypeX</a> (<a class="el" href="mtx_8h.html#a486ec93ad57f76408600fa51e755e290">MtxP</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_0</a>, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_2</a>)</td></tr>
+<tr class="separator:ad8b74c1e97a8bc7608cd9983236b022f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acef7b8d8e21509ef4df98d80fe3c6dbd" id="r_acef7b8d8e21509ef4df98d80fe3c6dbd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#acef7b8d8e21509ef4df98d80fe3c6dbd">JPADrawDirection</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_0</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>)</td></tr>
+<tr class="separator:acef7b8d8e21509ef4df98d80fe3c6dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca6442583f6101bcaabfcab0d0cfa20a" id="r_aca6442583f6101bcaabfcab0d0cfa20a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#aca6442583f6101bcaabfcab0d0cfa20a">JPADrawRotDirection</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_0</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>)</td></tr>
+<tr class="separator:aca6442583f6101bcaabfcab0d0cfa20a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2940f96ef025ab6689e66ddd259759e" id="r_ac2940f96ef025ab6689e66ddd259759e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#ac2940f96ef025ab6689e66ddd259759e">JPADrawDBillboard</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_0</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>)</td></tr>
+<tr class="separator:ac2940f96ef025ab6689e66ddd259759e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88d39262613dea644ae098445c8a9954" id="r_a88d39262613dea644ae098445c8a9954"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a88d39262613dea644ae098445c8a9954">JPADrawRotation</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_0</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>)</td></tr>
+<tr class="separator:a88d39262613dea644ae098445c8a9954"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf2b26a37b4a5da9b3771757e5f0e6a8" id="r_acf2b26a37b4a5da9b3771757e5f0e6a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#acf2b26a37b4a5da9b3771757e5f0e6a8">JPADrawPoint</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">ptcl</a>)</td></tr>
+<tr class="separator:acf2b26a37b4a5da9b3771757e5f0e6a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67a097d89821758fd0943b176ea1bf45" id="r_a67a097d89821758fd0943b176ea1bf45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a67a097d89821758fd0943b176ea1bf45">JPADrawLine</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_0</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>)</td></tr>
+<tr class="separator:a67a097d89821758fd0943b176ea1bf45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acccd87a5d5057188a04807a5cafc70b4" id="r_acccd87a5d5057188a04807a5cafc70b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJPANode.html">JPANode</a>&lt; <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#acccd87a5d5057188a04807a5cafc70b4">getNext</a> (<a class="el" href="structJPANode.html">JPANode</a>&lt; <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> &gt; *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_0</a>)</td></tr>
+<tr class="separator:acccd87a5d5057188a04807a5cafc70b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d54f24f1a2ffd27a922d156bbee0fab" id="r_a5d54f24f1a2ffd27a922d156bbee0fab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJPANode.html">JPANode</a>&lt; <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a5d54f24f1a2ffd27a922d156bbee0fab">getPrev</a> (<a class="el" href="structJPANode.html">JPANode</a>&lt; <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> &gt; *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_0</a>)</td></tr>
+<tr class="separator:a5d54f24f1a2ffd27a922d156bbee0fab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fab93508653c151c41790f1054d7467" id="r_a5fab93508653c151c41790f1054d7467"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a5fab93508653c151c41790f1054d7467">JPADrawStripe</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_0</a>)</td></tr>
+<tr class="separator:a5fab93508653c151c41790f1054d7467"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f894cc8f898aec638a9713006cf34a5" id="r_a8f894cc8f898aec638a9713006cf34a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a8f894cc8f898aec638a9713006cf34a5">JPADrawStripeX</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_0</a>)</td></tr>
+<tr class="separator:a8f894cc8f898aec638a9713006cf34a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05bc84bf803f7427c8d1ea21a2ac169d" id="r_a05bc84bf803f7427c8d1ea21a2ac169d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a05bc84bf803f7427c8d1ea21a2ac169d">JPADrawEmitterCallBackB</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>)</td></tr>
+<tr class="separator:a05bc84bf803f7427c8d1ea21a2ac169d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a785c186ab160cc92bf893b4fd1cc1471" id="r_a785c186ab160cc92bf893b4fd1cc1471"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a785c186ab160cc92bf893b4fd1cc1471">JPADrawParticleCallBack</a> (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">work</a>, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">ptcl</a>)</td></tr>
+<tr class="separator:a785c186ab160cc92bf893b4fd1cc1471"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ff81accd927ea4b7da9813f769b1550" id="r_a9ff81accd927ea4b7da9813f769b1550"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a9ff81accd927ea4b7da9813f769b1550">makeColorTable</a> (<a class="el" href="GXStruct_8h.html#a0419d171f4d66c2b2a77bd299ddbdcdc">GXColor</a> **<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">o_color_table</a>, <a class="el" href="structJPAClrAnmKeyData.html">JPAClrAnmKeyData</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_data</a>, <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_2</a>, <a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_size</a>, <a class="el" href="structJKRHeap.html">JKRHeap</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_heap</a>)</td></tr>
+<tr class="separator:a9ff81accd927ea4b7da9813f769b1550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ac64f5cb2ce376a5723ab6543f255fe25" id="r_ac64f5cb2ce376a5723ab6543f255fe25"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#ac64f5cb2ce376a5723ab6543f255fe25">jpa_dl</a> [32]</td></tr>
+<tr class="separator:ac64f5cb2ce376a5723ab6543f255fe25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf752aef41c3e897760d8b89e257e8a7" id="r_aaf752aef41c3e897760d8b89e257e8a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#aaf752aef41c3e897760d8b89e257e8a7">jpa_dl_x</a> [32]</td></tr>
+<tr class="separator:aaf752aef41c3e897760d8b89e257e8a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5d0b26fa866e61439156e0c78de53bf" id="r_ad5d0b26fa866e61439156e0c78de53bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="JPABaseShape_8cpp.html#a8ca8dc5fdd32825156209161f77d39cc">projectionFunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#ad5d0b26fa866e61439156e0c78de53bf">p_prj</a> [3]</td></tr>
+<tr class="separator:ad5d0b26fa866e61439156e0c78de53bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebe52730a8d44854e806e395b3929569" id="r_aebe52730a8d44854e806e395b3929569"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="JPABaseShape_8cpp.html#ae27e9f7f10f8742bdb3ea03a9343bfda">dirTypeFunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#aebe52730a8d44854e806e395b3929569">p_direction</a> [5]</td></tr>
+<tr class="separator:aebe52730a8d44854e806e395b3929569"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae052459d8fad192a19963654f79e95d0" id="r_ae052459d8fad192a19963654f79e95d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="JPABaseShape_8cpp.html#ac5b4bb6a69eaac63e2c9b22041aec4aa">rotTypeFunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#ae052459d8fad192a19963654f79e95d0">p_rot</a> [5]</td></tr>
+<tr class="separator:ae052459d8fad192a19963654f79e95d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b742907e60e956958109846739171bd" id="r_a3b742907e60e956958109846739171bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="JPABaseShape_8cpp.html#a1d084dfd855d5889241baeea3e383cfc">planeFunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#a3b742907e60e956958109846739171bd">p_plane</a> [3]</td></tr>
+<tr class="separator:a3b742907e60e956958109846739171bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab73ab19ecad265b3b023bd606d4c0787" id="r_ab73ab19ecad265b3b023bd606d4c0787"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPABaseShape_8cpp.html#ab73ab19ecad265b3b023bd606d4c0787">p_dl</a> [2]</td></tr>
+<tr class="separator:ab73ab19ecad265b3b023bd606d4c0787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ae27e9f7f10f8742bdb3ea03a9343bfda" name="ae27e9f7f10f8742bdb3ea03a9343bfda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae27e9f7f10f8742bdb3ea03a9343bfda">&#9670;&#160;</a></span>dirTypeFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>(* dirTypeFunc) (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a>  *, <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a>  *, <a class="el" href="structJGeometry_1_1TVec3.html">JGeometry::TVec3</a>&lt; <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> &gt; *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a607d0f731deac21129cf30f0ed23ee6f" name="a607d0f731deac21129cf30f0ed23ee6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a607d0f731deac21129cf30f0ed23ee6f">&#9670;&#160;</a></span>getNodeFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="structJPANode.html">JPANode</a>&lt; <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> &gt; *(* getNodeFunc) (<a class="el" href="structJPANode.html">JPANode</a>&lt; <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> &gt; *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d084dfd855d5889241baeea3e383cfc" name="a1d084dfd855d5889241baeea3e383cfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d084dfd855d5889241baeea3e383cfc">&#9670;&#160;</a></span>planeFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>(* planeFunc) (<a class="el" href="mtx_8h.html#a486ec93ad57f76408600fa51e755e290">MtxP</a>, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8ca8dc5fdd32825156209161f77d39cc" name="a8ca8dc5fdd32825156209161f77d39cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ca8dc5fdd32825156209161f77d39cc">&#9670;&#160;</a></span>projectionFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>(* projectionFunc) (<a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a>  *, <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac5b4bb6a69eaac63e2c9b22041aec4aa" name="ac5b4bb6a69eaac63e2c9b22041aec4aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5b4bb6a69eaac63e2c9b22041aec4aa">&#9670;&#160;</a></span>rotTypeFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>(* rotTypeFunc) (<a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="el" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a> &amp;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ad8b74c1e97a8bc7608cd9983236b022f" name="ad8b74c1e97a8bc7608cd9983236b022f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8b74c1e97a8bc7608cd9983236b022f">&#9670;&#160;</a></span>basePlaneTypeX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> basePlaneTypeX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="mtx_8h.html#a486ec93ad57f76408600fa51e755e290">MtxP</a>&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td>
+          <td class="paramname"><em>param_1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2803c7a6ce3a283f7c648442fe10f241" name="a2803c7a6ce3a283f7c648442fe10f241"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2803c7a6ce3a283f7c648442fe10f241">&#9670;&#160;</a></span>basePlaneTypeXY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> basePlaneTypeXY </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="mtx_8h.html#a486ec93ad57f76408600fa51e755e290">MtxP</a>&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td>
+          <td class="paramname"><em>param_1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0acfc1208ce6f63cc755388bbc063222" name="a0acfc1208ce6f63cc755388bbc063222"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0acfc1208ce6f63cc755388bbc063222">&#9670;&#160;</a></span>basePlaneTypeXZ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> basePlaneTypeXZ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="mtx_8h.html#a486ec93ad57f76408600fa51e755e290">MtxP</a>&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td>
+          <td class="paramname"><em>param_1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae8036bd8c7135b2f5978d8336d0f83d8" name="ae8036bd8c7135b2f5978d8336d0f83d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8036bd8c7135b2f5978d8336d0f83d8">&#9670;&#160;</a></span>dirTypeEmtrDir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dirTypeEmtrDir </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJGeometry_1_1TVec3.html">JGeometry::TVec3</a>&lt; <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> &gt; *&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac3c648f0ac0979078735650f5d95a668" name="ac3c648f0ac0979078735650f5d95a668"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3c648f0ac0979078735650f5d95a668">&#9670;&#160;</a></span>dirTypePos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dirTypePos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJGeometry_1_1TVec3.html">JGeometry::TVec3</a>&lt; <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> &gt; *&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae217845a790bc7c7278cf6af7511674b" name="ae217845a790bc7c7278cf6af7511674b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae217845a790bc7c7278cf6af7511674b">&#9670;&#160;</a></span>dirTypePosInv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dirTypePosInv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJGeometry_1_1TVec3.html">JGeometry::TVec3</a>&lt; <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> &gt; *&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab3c8a9ed068e8324b3d20db97c3d4143" name="ab3c8a9ed068e8324b3d20db97c3d4143"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3c8a9ed068e8324b3d20db97c3d4143">&#9670;&#160;</a></span>dirTypePrevPtcl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dirTypePrevPtcl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJGeometry_1_1TVec3.html">JGeometry::TVec3</a>&lt; <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> &gt; *&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a93755ba6f569d8410c7705af1de45f85" name="a93755ba6f569d8410c7705af1de45f85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93755ba6f569d8410c7705af1de45f85">&#9670;&#160;</a></span>dirTypeVel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dirTypeVel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJGeometry_1_1TVec3.html">JGeometry::TVec3</a>&lt; <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> &gt; *&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acccd87a5d5057188a04807a5cafc70b4" name="acccd87a5d5057188a04807a5cafc70b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acccd87a5d5057188a04807a5cafc70b4">&#9670;&#160;</a></span>getNext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structJPANode.html">JPANode</a>&lt; <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> &gt; * getNext </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPANode.html">JPANode</a>&lt; <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> &gt; *&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d54f24f1a2ffd27a922d156bbee0fab" name="a5d54f24f1a2ffd27a922d156bbee0fab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d54f24f1a2ffd27a922d156bbee0fab">&#9670;&#160;</a></span>getPrev()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structJPANode.html">JPANode</a>&lt; <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> &gt; * getPrev </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPANode.html">JPANode</a>&lt; <a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> &gt; *&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6112b8e69e9578d039667b20be3274d1" name="a6112b8e69e9578d039667b20be3274d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6112b8e69e9578d039667b20be3274d1">&#9670;&#160;</a></span>JPACalcClrIdxMerge() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPACalcClrIdxMerge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8df7d9ce9a9ad080c8b07ae6ad67c4ef" name="a8df7d9ce9a9ad080c8b07ae6ad67c4ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8df7d9ce9a9ad080c8b07ae6ad67c4ef">&#9670;&#160;</a></span>JPACalcClrIdxMerge() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPACalcClrIdxMerge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae59b45fe0036639b6ba3270cd6df7c69" name="ae59b45fe0036639b6ba3270cd6df7c69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae59b45fe0036639b6ba3270cd6df7c69">&#9670;&#160;</a></span>JPACalcClrIdxNormal() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPACalcClrIdxNormal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c92123fd23732a35a15b11164930f52" name="a6c92123fd23732a35a15b11164930f52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c92123fd23732a35a15b11164930f52">&#9670;&#160;</a></span>JPACalcClrIdxNormal() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPACalcClrIdxNormal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a49c984edf61338497666458dec677db4" name="a49c984edf61338497666458dec677db4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49c984edf61338497666458dec677db4">&#9670;&#160;</a></span>JPACalcClrIdxRandom() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPACalcClrIdxRandom </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad1ff99da9e215d07978c9cd019bfaf34" name="ad1ff99da9e215d07978c9cd019bfaf34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1ff99da9e215d07978c9cd019bfaf34">&#9670;&#160;</a></span>JPACalcClrIdxRandom() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPACalcClrIdxRandom </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a6eb699b4dfa9c234e86c3290db0665" name="a6a6eb699b4dfa9c234e86c3290db0665"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a6eb699b4dfa9c234e86c3290db0665">&#9670;&#160;</a></span>JPACalcClrIdxRepeat() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPACalcClrIdxRepeat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5e385e74dfaac40c756dbc88a2833fb" name="ad5e385e74dfaac40c756dbc88a2833fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5e385e74dfaac40c756dbc88a2833fb">&#9670;&#160;</a></span>JPACalcClrIdxRepeat() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPACalcClrIdxRepeat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b076bee1de63a79e3bed3186c5e17ca" name="a3b076bee1de63a79e3bed3186c5e17ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b076bee1de63a79e3bed3186c5e17ca">&#9670;&#160;</a></span>JPACalcClrIdxReverse() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPACalcClrIdxReverse </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9292cc3ccd26e74881d60bccb159500e" name="a9292cc3ccd26e74881d60bccb159500e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9292cc3ccd26e74881d60bccb159500e">&#9670;&#160;</a></span>JPACalcClrIdxReverse() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPACalcClrIdxReverse </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52b03c0eb6ac85a6e3c7ef181a2be0a7" name="a52b03c0eb6ac85a6e3c7ef181a2be0a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52b03c0eb6ac85a6e3c7ef181a2be0a7">&#9670;&#160;</a></span>JPACalcColorCopy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPACalcColorCopy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>ptcl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6b717c75fbb59e98f442d89240b68762" name="a6b717c75fbb59e98f442d89240b68762"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b717c75fbb59e98f442d89240b68762">&#9670;&#160;</a></span>JPACalcEnv() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPACalcEnv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66bb6150ec7d62022f73551495edac15" name="a66bb6150ec7d62022f73551495edac15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66bb6150ec7d62022f73551495edac15">&#9670;&#160;</a></span>JPACalcEnv() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPACalcEnv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>ptcl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad022267a3ff429a7ad939d56c40e9ded" name="ad022267a3ff429a7ad939d56c40e9ded"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad022267a3ff429a7ad939d56c40e9ded">&#9670;&#160;</a></span>JPACalcPrm() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPACalcPrm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aabb821f16ac2b4c78c7a69c217b0772a" name="aabb821f16ac2b4c78c7a69c217b0772a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabb821f16ac2b4c78c7a69c217b0772a">&#9670;&#160;</a></span>JPACalcPrm() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPACalcPrm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>ptcl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3624c7bded961b0bd159071925976934" name="a3624c7bded961b0bd159071925976934"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3624c7bded961b0bd159071925976934">&#9670;&#160;</a></span>JPACalcTexIdxMerge() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPACalcTexIdxMerge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a752ebbcbac783f0564ff789297f8c72a" name="a752ebbcbac783f0564ff789297f8c72a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a752ebbcbac783f0564ff789297f8c72a">&#9670;&#160;</a></span>JPACalcTexIdxMerge() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPACalcTexIdxMerge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d3aec4f80abc26e3f582062a39288df" name="a3d3aec4f80abc26e3f582062a39288df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d3aec4f80abc26e3f582062a39288df">&#9670;&#160;</a></span>JPACalcTexIdxNormal() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPACalcTexIdxNormal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae1ebf39b2a4b4f84273680a22c3c8296" name="ae1ebf39b2a4b4f84273680a22c3c8296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1ebf39b2a4b4f84273680a22c3c8296">&#9670;&#160;</a></span>JPACalcTexIdxNormal() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPACalcTexIdxNormal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35251d07c501dc0d0e9b2edd12151f0d" name="a35251d07c501dc0d0e9b2edd12151f0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35251d07c501dc0d0e9b2edd12151f0d">&#9670;&#160;</a></span>JPACalcTexIdxRandom() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPACalcTexIdxRandom </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9ebc108203b49e200d39b7c6292953ad" name="a9ebc108203b49e200d39b7c6292953ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ebc108203b49e200d39b7c6292953ad">&#9670;&#160;</a></span>JPACalcTexIdxRandom() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPACalcTexIdxRandom </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa2d51bd13c1966815be52f20f6d3e4aa" name="aa2d51bd13c1966815be52f20f6d3e4aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2d51bd13c1966815be52f20f6d3e4aa">&#9670;&#160;</a></span>JPACalcTexIdxRepeat() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPACalcTexIdxRepeat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8ad9e9a0fd0329c31c1fb53fe663602" name="ad8ad9e9a0fd0329c31c1fb53fe663602"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8ad9e9a0fd0329c31c1fb53fe663602">&#9670;&#160;</a></span>JPACalcTexIdxRepeat() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPACalcTexIdxRepeat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a83c216556fbfb89d093eed1ae691c33d" name="a83c216556fbfb89d093eed1ae691c33d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83c216556fbfb89d093eed1ae691c33d">&#9670;&#160;</a></span>JPACalcTexIdxReverse() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPACalcTexIdxReverse </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a24c200dbade6a3db6dde21e228aee955" name="a24c200dbade6a3db6dde21e228aee955"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24c200dbade6a3db6dde21e228aee955">&#9670;&#160;</a></span>JPACalcTexIdxReverse() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPACalcTexIdxReverse </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7236d593e83312efc31711c75420b67c" name="a7236d593e83312efc31711c75420b67c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7236d593e83312efc31711c75420b67c">&#9670;&#160;</a></span>JPADrawBillboard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPADrawBillboard </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac2940f96ef025ab6689e66ddd259759e" name="ac2940f96ef025ab6689e66ddd259759e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2940f96ef025ab6689e66ddd259759e">&#9670;&#160;</a></span>JPADrawDBillboard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPADrawDBillboard </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acef7b8d8e21509ef4df98d80fe3c6dbd" name="acef7b8d8e21509ef4df98d80fe3c6dbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acef7b8d8e21509ef4df98d80fe3c6dbd">&#9670;&#160;</a></span>JPADrawDirection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPADrawDirection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05bc84bf803f7427c8d1ea21a2ac169d" name="a05bc84bf803f7427c8d1ea21a2ac169d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05bc84bf803f7427c8d1ea21a2ac169d">&#9670;&#160;</a></span>JPADrawEmitterCallBackB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPADrawEmitterCallBackB </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a67a097d89821758fd0943b176ea1bf45" name="a67a097d89821758fd0943b176ea1bf45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67a097d89821758fd0943b176ea1bf45">&#9670;&#160;</a></span>JPADrawLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPADrawLine </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a785c186ab160cc92bf893b4fd1cc1471" name="a785c186ab160cc92bf893b4fd1cc1471"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a785c186ab160cc92bf893b4fd1cc1471">&#9670;&#160;</a></span>JPADrawParticleCallBack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPADrawParticleCallBack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>ptcl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acf2b26a37b4a5da9b3771757e5f0e6a8" name="acf2b26a37b4a5da9b3771757e5f0e6a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf2b26a37b4a5da9b3771757e5f0e6a8">&#9670;&#160;</a></span>JPADrawPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPADrawPoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>ptcl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a88d39262613dea644ae098445c8a9954" name="a88d39262613dea644ae098445c8a9954"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88d39262613dea644ae098445c8a9954">&#9670;&#160;</a></span>JPADrawRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPADrawRotation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d633e44780187ab1b2f487d5cd734b6" name="a8d633e44780187ab1b2f487d5cd734b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d633e44780187ab1b2f487d5cd734b6">&#9670;&#160;</a></span>JPADrawRotBillboard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPADrawRotBillboard </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca6442583f6101bcaabfcab0d0cfa20a" name="aca6442583f6101bcaabfcab0d0cfa20a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca6442583f6101bcaabfcab0d0cfa20a">&#9670;&#160;</a></span>JPADrawRotDirection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPADrawRotDirection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8159b113d984feb0498e7d4f693a6b7c" name="a8159b113d984feb0498e7d4f693a6b7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8159b113d984feb0498e7d4f693a6b7c">&#9670;&#160;</a></span>JPADrawRotYBillboard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPADrawRotYBillboard </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5fab93508653c151c41790f1054d7467" name="a5fab93508653c151c41790f1054d7467"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fab93508653c151c41790f1054d7467">&#9670;&#160;</a></span>JPADrawStripe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPADrawStripe </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f894cc8f898aec638a9713006cf34a5" name="a8f894cc8f898aec638a9713006cf34a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f894cc8f898aec638a9713006cf34a5">&#9670;&#160;</a></span>JPADrawStripeX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPADrawStripeX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f61c29653526a0cbe32aecf5cdad9f6" name="a2f61c29653526a0cbe32aecf5cdad9f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f61c29653526a0cbe32aecf5cdad9f6">&#9670;&#160;</a></span>JPADrawYBillboard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPADrawYBillboard </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3023201cade06ec5a26eb4e2f60f8a40" name="a3023201cade06ec5a26eb4e2f60f8a40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3023201cade06ec5a26eb4e2f60f8a40">&#9670;&#160;</a></span>JPAGenCalcTexCrdMtxAnm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPAGenCalcTexCrdMtxAnm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aded1a12272d012f9a511a06fbb7955c6" name="aded1a12272d012f9a511a06fbb7955c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aded1a12272d012f9a511a06fbb7955c6">&#9670;&#160;</a></span>JPAGenTexCrdMtxAnm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPAGenTexCrdMtxAnm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad984a3ffc702df413182b1018ac9ede9" name="ad984a3ffc702df413182b1018ac9ede9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad984a3ffc702df413182b1018ac9ede9">&#9670;&#160;</a></span>JPAGenTexCrdMtxIdt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPAGenTexCrdMtxIdt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adcc21b0635eeb4e886fe8d395fd66a59" name="adcc21b0635eeb4e886fe8d395fd66a59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcc21b0635eeb4e886fe8d395fd66a59">&#9670;&#160;</a></span>JPAGenTexCrdMtxPrj()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPAGenTexCrdMtxPrj </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab65fe444e9351b8b38866058c9898710" name="ab65fe444e9351b8b38866058c9898710"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab65fe444e9351b8b38866058c9898710">&#9670;&#160;</a></span>JPALoadCalcTexCrdMtxAnm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPALoadCalcTexCrdMtxAnm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c1728f937535e2522434b6d0820100e" name="a9c1728f937535e2522434b6d0820100e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c1728f937535e2522434b6d0820100e">&#9670;&#160;</a></span>JPALoadPosMtxCam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPALoadPosMtxCam </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae33359423768a3cf75eb7198409e9333" name="ae33359423768a3cf75eb7198409e9333"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae33359423768a3cf75eb7198409e9333">&#9670;&#160;</a></span>JPALoadTex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPALoadTex </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af31696aabad9f7af0f234d831da211d0" name="af31696aabad9f7af0f234d831da211d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af31696aabad9f7af0f234d831da211d0">&#9670;&#160;</a></span>JPALoadTexAnm() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPALoadTexAnm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8374bf719fa30d1803a5dfc445c6751b" name="a8374bf719fa30d1803a5dfc445c6751b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8374bf719fa30d1803a5dfc445c6751b">&#9670;&#160;</a></span>JPALoadTexAnm() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPALoadTexAnm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>ptcl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a48aa0c3514021c3ce8b1a9f7fb609d6a" name="a48aa0c3514021c3ce8b1a9f7fb609d6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48aa0c3514021c3ce8b1a9f7fb609d6a">&#9670;&#160;</a></span>JPARegistAlpha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPARegistAlpha </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>ptcl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad7628d37bbdd066dd174b1555b62650e" name="ad7628d37bbdd066dd174b1555b62650e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7628d37bbdd066dd174b1555b62650e">&#9670;&#160;</a></span>JPARegistAlphaEnv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPARegistAlphaEnv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>ptcl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a288d0147d4cff84ac286b3f1595c5f61" name="a288d0147d4cff84ac286b3f1595c5f61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a288d0147d4cff84ac286b3f1595c5f61">&#9670;&#160;</a></span>JPARegistEnv() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPARegistEnv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0415251f27a4746e46ff8720903fe69" name="ac0415251f27a4746e46ff8720903fe69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0415251f27a4746e46ff8720903fe69">&#9670;&#160;</a></span>JPARegistEnv() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPARegistEnv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>ptcl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a08190050127a21b452e60cc6283b0dae" name="a08190050127a21b452e60cc6283b0dae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08190050127a21b452e60cc6283b0dae">&#9670;&#160;</a></span>JPARegistPrm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPARegistPrm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa7aaea27541261850eda9b01f6afac38" name="aa7aaea27541261850eda9b01f6afac38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7aaea27541261850eda9b01f6afac38">&#9670;&#160;</a></span>JPARegistPrmAlpha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPARegistPrmAlpha </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>ptcl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a68253ea9a6d540100c5148f57e23f94b" name="a68253ea9a6d540100c5148f57e23f94b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68253ea9a6d540100c5148f57e23f94b">&#9670;&#160;</a></span>JPARegistPrmAlphaEnv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPARegistPrmAlphaEnv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>ptcl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2fcb50fa36264a49ff69f71712e95a63" name="a2fcb50fa36264a49ff69f71712e95a63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fcb50fa36264a49ff69f71712e95a63">&#9670;&#160;</a></span>JPARegistPrmEnv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPARegistPrmEnv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a519620b24f6c5581cef5fc2c1a07896d" name="a519620b24f6c5581cef5fc2c1a07896d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a519620b24f6c5581cef5fc2c1a07896d">&#9670;&#160;</a></span>JPASetLineWidth() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPASetLineWidth </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe5adffc0a189e24338295301d493538" name="abe5adffc0a189e24338295301d493538"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe5adffc0a189e24338295301d493538">&#9670;&#160;</a></span>JPASetLineWidth() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPASetLineWidth </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>ptcl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e3985a9e59ed25aefb12d916ba56b10" name="a0e3985a9e59ed25aefb12d916ba56b10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e3985a9e59ed25aefb12d916ba56b10">&#9670;&#160;</a></span>JPASetPointSize() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPASetPointSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0400b4f3adcf7aa601ede91ecec8fc09" name="a0400b4f3adcf7aa601ede91ecec8fc09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0400b4f3adcf7aa601ede91ecec8fc09">&#9670;&#160;</a></span>JPASetPointSize() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JPASetPointSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a> *&#160;</td>
+          <td class="paramname"><em>ptcl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa99543f8d0c48eacaa86109730805961" name="aa99543f8d0c48eacaa86109730805961"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa99543f8d0c48eacaa86109730805961">&#9670;&#160;</a></span>loadPrj()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> loadPrj </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a>&#160;</td>
+          <td class="paramname"><em>srt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0f18e317ea3da16c4c19de3b32c36c0" name="ae0f18e317ea3da16c4c19de3b32c36c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0f18e317ea3da16c4c19de3b32c36c0">&#9670;&#160;</a></span>loadPrjAnm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> loadPrjAnm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a>&#160;</td>
+          <td class="paramname"><em>srt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9ff81accd927ea4b7da9813f769b1550" name="a9ff81accd927ea4b7da9813f769b1550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ff81accd927ea4b7da9813f769b1550">&#9670;&#160;</a></span>makeColorTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> makeColorTable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="GXStruct_8h.html#a0419d171f4d66c2b2a77bd299ddbdcdc">GXColor</a> **&#160;</td>
+          <td class="paramname"><em>o_color_table</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJPAClrAnmKeyData.html">JPAClrAnmKeyData</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *&#160;</td>
+          <td class="paramname"><em>i_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td>
+          <td class="paramname"><em>param_2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
+          <td class="paramname"><em>i_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJKRHeap.html">JKRHeap</a> *&#160;</td>
+          <td class="paramname"><em>i_heap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb5136dbf96b816c45d2eefcbf6e869f" name="adb5136dbf96b816c45d2eefcbf6e869f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb5136dbf96b816c45d2eefcbf6e869f">&#9670;&#160;</a></span>noLoadPrj()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> noLoadPrj </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a>&#160;</td>
+          <td class="paramname"><em>srt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a27f27f8b821ed9478bec815083d5feb5" name="a27f27f8b821ed9478bec815083d5feb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27f27f8b821ed9478bec815083d5feb5">&#9670;&#160;</a></span>rotTypeX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> rotTypeX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td>
+          <td class="paramname"><em>param_1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a> &amp;&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b0d9b2d592047fb742c09f346ae6dc6" name="a9b0d9b2d592047fb742c09f346ae6dc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b0d9b2d592047fb742c09f346ae6dc6">&#9670;&#160;</a></span>rotTypeXYZ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> rotTypeXYZ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td>
+          <td class="paramname"><em>param_1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a> &amp;&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80c9c1496897fbd686de606a18fbe6d8" name="a80c9c1496897fbd686de606a18fbe6d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80c9c1496897fbd686de606a18fbe6d8">&#9670;&#160;</a></span>rotTypeY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> rotTypeY </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td>
+          <td class="paramname"><em>param_1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a> &amp;&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9bfe16964fa86041d430d02258a814a6" name="a9bfe16964fa86041d430d02258a814a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bfe16964fa86041d430d02258a814a6">&#9670;&#160;</a></span>rotTypeZ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> rotTypeZ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td>
+          <td class="paramname"><em>param_1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a> &amp;&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="ac64f5cb2ce376a5723ab6543f255fe25" name="ac64f5cb2ce376a5723ab6543f255fe25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac64f5cb2ce376a5723ab6543f255fe25">&#9670;&#160;</a></span>jpa_dl</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> jpa_dl[32]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x80, 0x00, 0x04, 0x00, 0x00, 0x01, 0x01, 0x02, 0x02, 0x03, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aaf752aef41c3e897760d8b89e257e8a7" name="aaf752aef41c3e897760d8b89e257e8a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf752aef41c3e897760d8b89e257e8a7">&#9670;&#160;</a></span>jpa_dl_x</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> jpa_dl_x[32]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x80, 0x00, 0x08, 0x00, 0x00, 0x01, 0x01, 0x02, 0x02, 0x03, 0x03, 0x48, 0x00, 0x49, 0x01, 0x4A,</div>
+<div class="line">    0x02, 0x4B, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aebe52730a8d44854e806e395b3929569" name="aebe52730a8d44854e806e395b3929569"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebe52730a8d44854e806e395b3929569">&#9670;&#160;</a></span>p_direction</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="JPABaseShape_8cpp.html#ae27e9f7f10f8742bdb3ea03a9343bfda">dirTypeFunc</a> p_direction[5]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    <a class="code hl_function" href="JPABaseShape_8cpp.html#a93755ba6f569d8410c7705af1de45f85">dirTypeVel</a>, <a class="code hl_function" href="JPABaseShape_8cpp.html#ac3c648f0ac0979078735650f5d95a668">dirTypePos</a>, <a class="code hl_function" href="JPABaseShape_8cpp.html#ae217845a790bc7c7278cf6af7511674b">dirTypePosInv</a>,</div>
+<div class="line">    <a class="code hl_function" href="JPABaseShape_8cpp.html#ae8036bd8c7135b2f5978d8336d0f83d8">dirTypeEmtrDir</a>, <a class="code hl_function" href="JPABaseShape_8cpp.html#ab3c8a9ed068e8324b3d20db97c3d4143">dirTypePrevPtcl</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="aJPABaseShape_8cpp_html_a93755ba6f569d8410c7705af1de45f85"><div class="ttname"><a href="JPABaseShape_8cpp.html#a93755ba6f569d8410c7705af1de45f85">dirTypeVel</a></div><div class="ttdeci">void dirTypeVel(JPAEmitterWorkData const *work, JPABaseParticle const *param_1, JGeometry::TVec3&lt; f32 &gt; *param_2)</div><div class="ttdef"><b>Definition</b> JPABaseShape.cpp:648</div></div>
+<div class="ttc" id="aJPABaseShape_8cpp_html_ab3c8a9ed068e8324b3d20db97c3d4143"><div class="ttname"><a href="JPABaseShape_8cpp.html#ab3c8a9ed068e8324b3d20db97c3d4143">dirTypePrevPtcl</a></div><div class="ttdeci">void dirTypePrevPtcl(JPAEmitterWorkData const *work, JPABaseParticle const *param_1, JGeometry::TVec3&lt; f32 &gt; *param_2)</div><div class="ttdef"><b>Definition</b> JPABaseShape.cpp:677</div></div>
+<div class="ttc" id="aJPABaseShape_8cpp_html_ac3c648f0ac0979078735650f5d95a668"><div class="ttname"><a href="JPABaseShape_8cpp.html#ac3c648f0ac0979078735650f5d95a668">dirTypePos</a></div><div class="ttdeci">void dirTypePos(JPAEmitterWorkData const *work, JPABaseParticle const *param_1, JGeometry::TVec3&lt; f32 &gt; *param_2)</div><div class="ttdef"><b>Definition</b> JPABaseShape.cpp:655</div></div>
+<div class="ttc" id="aJPABaseShape_8cpp_html_ae217845a790bc7c7278cf6af7511674b"><div class="ttname"><a href="JPABaseShape_8cpp.html#ae217845a790bc7c7278cf6af7511674b">dirTypePosInv</a></div><div class="ttdeci">void dirTypePosInv(JPAEmitterWorkData const *work, JPABaseParticle const *param_1, JGeometry::TVec3&lt; f32 &gt; *param_2)</div><div class="ttdef"><b>Definition</b> JPABaseShape.cpp:662</div></div>
+<div class="ttc" id="aJPABaseShape_8cpp_html_ae8036bd8c7135b2f5978d8336d0f83d8"><div class="ttname"><a href="JPABaseShape_8cpp.html#ae8036bd8c7135b2f5978d8336d0f83d8">dirTypeEmtrDir</a></div><div class="ttdeci">void dirTypeEmtrDir(JPAEmitterWorkData const *work, JPABaseParticle const *param_1, JGeometry::TVec3&lt; f32 &gt; *param_2)</div><div class="ttdef"><b>Definition</b> JPABaseShape.cpp:670</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab73ab19ecad265b3b023bd606d4c0787" name="ab73ab19ecad265b3b023bd606d4c0787"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab73ab19ecad265b3b023bd606d4c0787">&#9670;&#160;</a></span>p_dl</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>* p_dl[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    <a class="code hl_variable" href="JPABaseShape_8cpp.html#ac64f5cb2ce376a5723ab6543f255fe25">jpa_dl</a>,</div>
+<div class="line">    <a class="code hl_variable" href="JPABaseShape_8cpp.html#aaf752aef41c3e897760d8b89e257e8a7">jpa_dl_x</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="aJPABaseShape_8cpp_html_aaf752aef41c3e897760d8b89e257e8a7"><div class="ttname"><a href="JPABaseShape_8cpp.html#aaf752aef41c3e897760d8b89e257e8a7">jpa_dl_x</a></div><div class="ttdeci">static u8 jpa_dl_x[32]</div><div class="ttdef"><b>Definition</b> JPABaseShape.cpp:518</div></div>
+<div class="ttc" id="aJPABaseShape_8cpp_html_ac64f5cb2ce376a5723ab6543f255fe25"><div class="ttname"><a href="JPABaseShape_8cpp.html#ac64f5cb2ce376a5723ab6543f255fe25">jpa_dl</a></div><div class="ttdeci">static u8 jpa_dl[32]</div><div class="ttdef"><b>Definition</b> JPABaseShape.cpp:512</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3b742907e60e956958109846739171bd" name="a3b742907e60e956958109846739171bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b742907e60e956958109846739171bd">&#9670;&#160;</a></span>p_plane</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="JPABaseShape_8cpp.html#a1d084dfd855d5889241baeea3e383cfc">planeFunc</a> p_plane[3]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    <a class="code hl_function" href="JPABaseShape_8cpp.html#a2803c7a6ce3a283f7c648442fe10f241">basePlaneTypeXY</a>,</div>
+<div class="line">    <a class="code hl_function" href="JPABaseShape_8cpp.html#a0acfc1208ce6f63cc755388bbc063222">basePlaneTypeXZ</a>,</div>
+<div class="line">    <a class="code hl_function" href="JPABaseShape_8cpp.html#ad8b74c1e97a8bc7608cd9983236b022f">basePlaneTypeX</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="aJPABaseShape_8cpp_html_a0acfc1208ce6f63cc755388bbc063222"><div class="ttname"><a href="JPABaseShape_8cpp.html#a0acfc1208ce6f63cc755388bbc063222">basePlaneTypeXZ</a></div><div class="ttdeci">static void basePlaneTypeXZ(MtxP param_0, f32 param_1, f32 param_2)</div><div class="ttdef"><b>Definition</b> JPABaseShape.cpp:774</div></div>
+<div class="ttc" id="aJPABaseShape_8cpp_html_a2803c7a6ce3a283f7c648442fe10f241"><div class="ttname"><a href="JPABaseShape_8cpp.html#a2803c7a6ce3a283f7c648442fe10f241">basePlaneTypeXY</a></div><div class="ttdeci">static void basePlaneTypeXY(MtxP param_0, f32 param_1, f32 param_2)</div><div class="ttdef"><b>Definition</b> JPABaseShape.cpp:764</div></div>
+<div class="ttc" id="aJPABaseShape_8cpp_html_ad8b74c1e97a8bc7608cd9983236b022f"><div class="ttname"><a href="JPABaseShape_8cpp.html#ad8b74c1e97a8bc7608cd9983236b022f">basePlaneTypeX</a></div><div class="ttdeci">static void basePlaneTypeX(MtxP param_0, f32 param_1, f32 param_2)</div><div class="ttdef"><b>Definition</b> JPABaseShape.cpp:784</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad5d0b26fa866e61439156e0c78de53bf" name="ad5d0b26fa866e61439156e0c78de53bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5d0b26fa866e61439156e0c78de53bf">&#9670;&#160;</a></span>p_prj</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="JPABaseShape_8cpp.html#a8ca8dc5fdd32825156209161f77d39cc">projectionFunc</a> p_prj[3]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    <a class="code hl_function" href="JPABaseShape_8cpp.html#adb5136dbf96b816c45d2eefcbf6e869f">noLoadPrj</a>,</div>
+<div class="line">    <a class="code hl_function" href="JPABaseShape_8cpp.html#aa99543f8d0c48eacaa86109730805961">loadPrj</a>,</div>
+<div class="line">    <a class="code hl_function" href="JPABaseShape_8cpp.html#ae0f18e317ea3da16c4c19de3b32c36c0">loadPrjAnm</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="aJPABaseShape_8cpp_html_aa99543f8d0c48eacaa86109730805961"><div class="ttname"><a href="JPABaseShape_8cpp.html#aa99543f8d0c48eacaa86109730805961">loadPrj</a></div><div class="ttdeci">void loadPrj(JPAEmitterWorkData const *work, const Mtx srt)</div><div class="ttdef"><b>Definition</b> JPABaseShape.cpp:472</div></div>
+<div class="ttc" id="aJPABaseShape_8cpp_html_adb5136dbf96b816c45d2eefcbf6e869f"><div class="ttname"><a href="JPABaseShape_8cpp.html#adb5136dbf96b816c45d2eefcbf6e869f">noLoadPrj</a></div><div class="ttdeci">static void noLoadPrj(JPAEmitterWorkData const *work, const Mtx srt)</div><div class="ttdef"><b>Definition</b> JPABaseShape.cpp:467</div></div>
+<div class="ttc" id="aJPABaseShape_8cpp_html_ae0f18e317ea3da16c4c19de3b32c36c0"><div class="ttname"><a href="JPABaseShape_8cpp.html#ae0f18e317ea3da16c4c19de3b32c36c0">loadPrjAnm</a></div><div class="ttdeci">static void loadPrjAnm(JPAEmitterWorkData const *work, const Mtx srt)</div><div class="ttdef"><b>Definition</b> JPABaseShape.cpp:479</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae052459d8fad192a19963654f79e95d0" name="ae052459d8fad192a19963654f79e95d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae052459d8fad192a19963654f79e95d0">&#9670;&#160;</a></span>p_rot</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="JPABaseShape_8cpp.html#ac5b4bb6a69eaac63e2c9b22041aec4aa">rotTypeFunc</a> p_rot[5]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    <a class="code hl_function" href="JPABaseShape_8cpp.html#a80c9c1496897fbd686de606a18fbe6d8">rotTypeY</a>,   <a class="code hl_function" href="JPABaseShape_8cpp.html#a27f27f8b821ed9478bec815083d5feb5">rotTypeX</a>, <a class="code hl_function" href="JPABaseShape_8cpp.html#a9bfe16964fa86041d430d02258a814a6">rotTypeZ</a>,</div>
+<div class="line">    <a class="code hl_function" href="JPABaseShape_8cpp.html#a9b0d9b2d592047fb742c09f346ae6dc6">rotTypeXYZ</a>, <a class="code hl_function" href="JPABaseShape_8cpp.html#a80c9c1496897fbd686de606a18fbe6d8">rotTypeY</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="aJPABaseShape_8cpp_html_a27f27f8b821ed9478bec815083d5feb5"><div class="ttname"><a href="JPABaseShape_8cpp.html#a27f27f8b821ed9478bec815083d5feb5">rotTypeX</a></div><div class="ttdeci">static void rotTypeX(f32 param_0, f32 param_1, Mtx &amp;param_2)</div><div class="ttdef"><b>Definition</b> JPABaseShape.cpp:710</div></div>
+<div class="ttc" id="aJPABaseShape_8cpp_html_a80c9c1496897fbd686de606a18fbe6d8"><div class="ttname"><a href="JPABaseShape_8cpp.html#a80c9c1496897fbd686de606a18fbe6d8">rotTypeY</a></div><div class="ttdeci">static void rotTypeY(f32 param_0, f32 param_1, Mtx &amp;param_2)</div><div class="ttdef"><b>Definition</b> JPABaseShape.cpp:694</div></div>
+<div class="ttc" id="aJPABaseShape_8cpp_html_a9b0d9b2d592047fb742c09f346ae6dc6"><div class="ttname"><a href="JPABaseShape_8cpp.html#a9b0d9b2d592047fb742c09f346ae6dc6">rotTypeXYZ</a></div><div class="ttdeci">static void rotTypeXYZ(f32 param_0, f32 param_1, Mtx &amp;param_2)</div><div class="ttdef"><b>Definition</b> JPABaseShape.cpp:742</div></div>
+<div class="ttc" id="aJPABaseShape_8cpp_html_a9bfe16964fa86041d430d02258a814a6"><div class="ttname"><a href="JPABaseShape_8cpp.html#a9bfe16964fa86041d430d02258a814a6">rotTypeZ</a></div><div class="ttdeci">static void rotTypeZ(f32 param_0, f32 param_1, Mtx &amp;param_2)</div><div class="ttdef"><b>Definition</b> JPABaseShape.cpp:726</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="dir_003060a984452b2ac376c290647dff95.html">JSystem</a></li><li class="navelem"><a class="el" href="dir_28b5ac907c1471add47f91307113cbf1.html">JParticle</a></li><li class="navelem"><a class="el" href="JPABaseShape_8cpp.html">JPABaseShape.cpp</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

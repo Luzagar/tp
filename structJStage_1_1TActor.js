@@ -1,0 +1,25 @@
+var structJStage_1_1TActor =
+[
+    [ "~TActor", "structJStage_1_1TActor.html#a50133a39adb2ed9e618a80e37a7b71c4", null ],
+    [ "JSGFGetType", "structJStage_1_1TActor.html#ad8104c1f5a05bfe47f36799470ba8a10", null ],
+    [ "JSGGetAnimation", "structJStage_1_1TActor.html#a481064c39bddd1cecdb26fa5a39812d0", null ],
+    [ "JSGGetAnimationFrame", "structJStage_1_1TActor.html#a05452e1bb2428ec873822a861002a3c0", null ],
+    [ "JSGGetAnimationFrameMax", "structJStage_1_1TActor.html#a38185da35bf2a819b54bfdf3e898a13a", null ],
+    [ "JSGGetAnimationTransition", "structJStage_1_1TActor.html#afcd7187a08e30a56d3311250429002f1", null ],
+    [ "JSGGetRotation", "structJStage_1_1TActor.html#aae223a547e4b11001f5092019a712cbc", null ],
+    [ "JSGGetScaling", "structJStage_1_1TActor.html#a7b256b38c5434a63f0d07d1fbb6fefe2", null ],
+    [ "JSGGetShape", "structJStage_1_1TActor.html#a76aa94b1b4d0b8ae4bae6301bd81fab3", null ],
+    [ "JSGGetTextureAnimation", "structJStage_1_1TActor.html#a180e4152022ea062f74be6080b5c5972", null ],
+    [ "JSGGetTextureAnimationFrame", "structJStage_1_1TActor.html#aa8d61306e7bed44000be9eced6e34d77", null ],
+    [ "JSGGetTextureAnimationFrameMax", "structJStage_1_1TActor.html#ad25d1876ddd0d04a51614065514deb53", null ],
+    [ "JSGGetTranslation", "structJStage_1_1TActor.html#a4904d285aa71067dfdda46deb2ff7005", null ],
+    [ "JSGSetAnimation", "structJStage_1_1TActor.html#ab61ec93a80a2612b0e8696dafb7920db", null ],
+    [ "JSGSetAnimationFrame", "structJStage_1_1TActor.html#afa6096ee487452a8f2d05251488da9ad", null ],
+    [ "JSGSetAnimationTransition", "structJStage_1_1TActor.html#a21193bec2fd1ca118019110618bdbaf4", null ],
+    [ "JSGSetRotation", "structJStage_1_1TActor.html#ae43aa0c3a928b8022b7405f91710a81d", null ],
+    [ "JSGSetScaling", "structJStage_1_1TActor.html#a6e5b4378e83fd2cabf5b9e9f7f31164a", null ],
+    [ "JSGSetShape", "structJStage_1_1TActor.html#af4a9e4c74aa321382e9677dea1925df1", null ],
+    [ "JSGSetTextureAnimation", "structJStage_1_1TActor.html#a652cb0ee86c43beaf1e2b095ecf14e24", null ],
+    [ "JSGSetTextureAnimationFrame", "structJStage_1_1TActor.html#a92d60506e74eb4fe1a2fb093a5516a36", null ],
+    [ "JSGSetTranslation", "structJStage_1_1TActor.html#a150901f08431f6aef51cb11bb2714735", null ]
+];

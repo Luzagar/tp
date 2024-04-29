@@ -1,0 +1,1036 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: daObjVolcBom_c Struct Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classdaObjVolcBom__c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="classdaObjVolcBom__c-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">daObjVolcBom_c Struct Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a17a0681a8ddb30224cb088088f0e4f6f" id="r_a17a0681a8ddb30224cb088088f0e4f6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a17a0681a8ddb30224cb088088f0e4f6f">startFall</a> ()</td></tr>
+<tr class="separator:a17a0681a8ddb30224cb088088f0e4f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accf11d9aecb298ac96704a838f18e3a9" id="r_accf11d9aecb298ac96704a838f18e3a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#accf11d9aecb298ac96704a838f18e3a9">startSearch</a> ()</td></tr>
+<tr class="separator:accf11d9aecb298ac96704a838f18e3a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaffe2b73f48fe74a40df71e728f59f89" id="r_aaffe2b73f48fe74a40df71e728f59f89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#aaffe2b73f48fe74a40df71e728f59f89">initBaseMtx</a> ()</td></tr>
+<tr class="separator:aaffe2b73f48fe74a40df71e728f59f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50bfb11b65fe692bdf4618375f69d176" id="r_a50bfb11b65fe692bdf4618375f69d176"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a50bfb11b65fe692bdf4618375f69d176">setBaseMtx</a> ()</td></tr>
+<tr class="separator:a50bfb11b65fe692bdf4618375f69d176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a672a8cde1bdcdca1a5f642cda16efcca" id="r_a672a8cde1bdcdca1a5f642cda16efcca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a672a8cde1bdcdca1a5f642cda16efcca">Create</a> ()</td></tr>
+<tr class="separator:a672a8cde1bdcdca1a5f642cda16efcca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad69d3de0441e05833acc70f4e1f97433" id="r_ad69d3de0441e05833acc70f4e1f97433"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#ad69d3de0441e05833acc70f4e1f97433">CreateHeap</a> ()</td></tr>
+<tr class="separator:ad69d3de0441e05833acc70f4e1f97433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a229dffacd92f0b5c38d6cb230d8b69da" id="r_a229dffacd92f0b5c38d6cb230d8b69da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a229dffacd92f0b5c38d6cb230d8b69da">create1st</a> ()</td></tr>
+<tr class="separator:a229dffacd92f0b5c38d6cb230d8b69da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13d751edb0e72a354653a1c24436bad4" id="r_a13d751edb0e72a354653a1c24436bad4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a13d751edb0e72a354653a1c24436bad4">Execute</a> (<a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>(**)[3][4])</td></tr>
+<tr class="separator:a13d751edb0e72a354653a1c24436bad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff67212f12055105cf7d1d2243b5834f" id="r_aff67212f12055105cf7d1d2243b5834f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#aff67212f12055105cf7d1d2243b5834f">mode_proc_call</a> ()</td></tr>
+<tr class="separator:aff67212f12055105cf7d1d2243b5834f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f027683e1f8d51acdcd27d3c8f37fe9" id="r_a9f027683e1f8d51acdcd27d3c8f37fe9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a9f027683e1f8d51acdcd27d3c8f37fe9">init_modeWaitAppear</a> ()</td></tr>
+<tr class="separator:a9f027683e1f8d51acdcd27d3c8f37fe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b52ebd8869e8099c18932637d2e2ace" id="r_a1b52ebd8869e8099c18932637d2e2ace"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a1b52ebd8869e8099c18932637d2e2ace">modeWaitAppear</a> ()</td></tr>
+<tr class="separator:a1b52ebd8869e8099c18932637d2e2ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e9397e25be7549673bdc09c60b3f2ee" id="r_a9e9397e25be7549673bdc09c60b3f2ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a9e9397e25be7549673bdc09c60b3f2ee">init_modeFall</a> ()</td></tr>
+<tr class="separator:a9e9397e25be7549673bdc09c60b3f2ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a361098ed8931adc49204777ab29394ae" id="r_a361098ed8931adc49204777ab29394ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a361098ed8931adc49204777ab29394ae">modeFall</a> ()</td></tr>
+<tr class="separator:a361098ed8931adc49204777ab29394ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af667e51fe12d169567bd1dd0d556b4f5" id="r_af667e51fe12d169567bd1dd0d556b4f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#af667e51fe12d169567bd1dd0d556b4f5">init_modeWaitEndFallDemo</a> ()</td></tr>
+<tr class="separator:af667e51fe12d169567bd1dd0d556b4f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a077a67f84b26d4921b655e9f20c7fd" id="r_a0a077a67f84b26d4921b655e9f20c7fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a0a077a67f84b26d4921b655e9f20c7fd">modeWaitEndFallDemo</a> ()</td></tr>
+<tr class="separator:a0a077a67f84b26d4921b655e9f20c7fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b8d9e30287c4f55b46e006041b37be7" id="r_a3b8d9e30287c4f55b46e006041b37be7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a3b8d9e30287c4f55b46e006041b37be7">init_modeWait</a> ()</td></tr>
+<tr class="separator:a3b8d9e30287c4f55b46e006041b37be7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae488882ccb6a65d775cbbb0c7b42ede4" id="r_ae488882ccb6a65d775cbbb0c7b42ede4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#ae488882ccb6a65d775cbbb0c7b42ede4">modeWait</a> ()</td></tr>
+<tr class="separator:ae488882ccb6a65d775cbbb0c7b42ede4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70a9e3b31fe385beb3a419a88aae5cf2" id="r_a70a9e3b31fe385beb3a419a88aae5cf2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a70a9e3b31fe385beb3a419a88aae5cf2">clrDzb</a> ()</td></tr>
+<tr class="separator:a70a9e3b31fe385beb3a419a88aae5cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad13906fa3d20c4cb1132515c7536d10c" id="r_ad13906fa3d20c4cb1132515c7536d10c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#ad13906fa3d20c4cb1132515c7536d10c">setDzb</a> ()</td></tr>
+<tr class="separator:ad13906fa3d20c4cb1132515c7536d10c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a877c90219526cc26a8e075116050c337" id="r_a877c90219526cc26a8e075116050c337"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a877c90219526cc26a8e075116050c337">appear</a> ()</td></tr>
+<tr class="separator:a877c90219526cc26a8e075116050c337"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7a4b79868ce776a713c682dfa802abe" id="r_ac7a4b79868ce776a713c682dfa802abe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#ac7a4b79868ce776a713c682dfa802abe">disappear</a> ()</td></tr>
+<tr class="separator:ac7a4b79868ce776a713c682dfa802abe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a879a8ad4f28d7708cd13b73ab98c99" id="r_a8a879a8ad4f28d7708cd13b73ab98c99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a8a879a8ad4f28d7708cd13b73ab98c99">setSmoke</a> ()</td></tr>
+<tr class="separator:a8a879a8ad4f28d7708cd13b73ab98c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65900c3504f07430eed9d8d0df17a5c9" id="r_a65900c3504f07430eed9d8d0df17a5c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a65900c3504f07430eed9d8d0df17a5c9">checkTalkDistance</a> ()</td></tr>
+<tr class="separator:a65900c3504f07430eed9d8d0df17a5c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad86ea700ed3f6b85159ee9cb7aba1318" id="r_ad86ea700ed3f6b85159ee9cb7aba1318"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#ad86ea700ed3f6b85159ee9cb7aba1318">calcMidnaWaitPos</a> ()</td></tr>
+<tr class="separator:ad86ea700ed3f6b85159ee9cb7aba1318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a951270ebfdff12ba84c99bee39e0db07" id="r_a951270ebfdff12ba84c99bee39e0db07"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a951270ebfdff12ba84c99bee39e0db07">setSrcEffect</a> ()</td></tr>
+<tr class="separator:a951270ebfdff12ba84c99bee39e0db07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb8f7109704afdd038296a301bee4283" id="r_acb8f7109704afdd038296a301bee4283"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#acb8f7109704afdd038296a301bee4283">setBindEffect</a> ()</td></tr>
+<tr class="separator:acb8f7109704afdd038296a301bee4283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4f1fa7a2ee3f7a7c18659ebcab3490a" id="r_ad4f1fa7a2ee3f7a7c18659ebcab3490a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#ad4f1fa7a2ee3f7a7c18659ebcab3490a">followBindEffect</a> ()</td></tr>
+<tr class="separator:ad4f1fa7a2ee3f7a7c18659ebcab3490a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81d07757704ff5f927023fefd2db0b6e" id="r_a81d07757704ff5f927023fefd2db0b6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a81d07757704ff5f927023fefd2db0b6e">endBindEffect</a> ()</td></tr>
+<tr class="separator:a81d07757704ff5f927023fefd2db0b6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fab9d7e3653dc2476b7ca21d397ebb4" id="r_a4fab9d7e3653dc2476b7ca21d397ebb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a4fab9d7e3653dc2476b7ca21d397ebb4">followSrcEffect</a> ()</td></tr>
+<tr class="separator:a4fab9d7e3653dc2476b7ca21d397ebb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98e21bf2b30d66c5f4092f428d906b31" id="r_a98e21bf2b30d66c5f4092f428d906b31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a98e21bf2b30d66c5f4092f428d906b31">endSrcEffect</a> ()</td></tr>
+<tr class="separator:a98e21bf2b30d66c5f4092f428d906b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3aeffa475e90c52aecad8afd12ba334" id="r_ac3aeffa475e90c52aecad8afd12ba334"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#ac3aeffa475e90c52aecad8afd12ba334">event_proc_call</a> ()</td></tr>
+<tr class="separator:ac3aeffa475e90c52aecad8afd12ba334"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fe70445cb79a44a5f0da7eb94efa8d2" id="r_a3fe70445cb79a44a5f0da7eb94efa8d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a3fe70445cb79a44a5f0da7eb94efa8d2">orderZHintEvent</a> ()</td></tr>
+<tr class="separator:a3fe70445cb79a44a5f0da7eb94efa8d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af060ffb5b9c7e16381f4cb8e65956a0b" id="r_af060ffb5b9c7e16381f4cb8e65956a0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#af060ffb5b9c7e16381f4cb8e65956a0b">actionWait</a> ()</td></tr>
+<tr class="separator:af060ffb5b9c7e16381f4cb8e65956a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa25afae7c8cd503b2483ca80f36adbf" id="r_afa25afae7c8cd503b2483ca80f36adbf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#afa25afae7c8cd503b2483ca80f36adbf">actionOrderEvent</a> ()</td></tr>
+<tr class="separator:afa25afae7c8cd503b2483ca80f36adbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e4514429a8dc98e14879c1c9352cf6b" id="r_a0e4514429a8dc98e14879c1c9352cf6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a0e4514429a8dc98e14879c1c9352cf6b">actionOrderATalkEvent</a> ()</td></tr>
+<tr class="separator:a0e4514429a8dc98e14879c1c9352cf6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4912d101c5775216ba9037f2325f87aa" id="r_a4912d101c5775216ba9037f2325f87aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a4912d101c5775216ba9037f2325f87aa">actionTalkEvent</a> ()</td></tr>
+<tr class="separator:a4912d101c5775216ba9037f2325f87aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eb101abbc9bb5e3bc793bb8dd682b42" id="r_a0eb101abbc9bb5e3bc793bb8dd682b42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a0eb101abbc9bb5e3bc793bb8dd682b42">actionWarpEvent</a> ()</td></tr>
+<tr class="separator:a0eb101abbc9bb5e3bc793bb8dd682b42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ab3ae96eedaf6921a78cc938e4aca59" id="r_a1ab3ae96eedaf6921a78cc938e4aca59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a1ab3ae96eedaf6921a78cc938e4aca59">actionDead</a> ()</td></tr>
+<tr class="separator:a1ab3ae96eedaf6921a78cc938e4aca59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a939d2a258612508f75ac833f808cc1b7" id="r_a939d2a258612508f75ac833f808cc1b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a939d2a258612508f75ac833f808cc1b7">demoProc</a> ()</td></tr>
+<tr class="separator:a939d2a258612508f75ac833f808cc1b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbdf26701ac51bbbf1288712a2732038" id="r_acbdf26701ac51bbbf1288712a2732038"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#acbdf26701ac51bbbf1288712a2732038">calcObjPos</a> ()</td></tr>
+<tr class="separator:acbdf26701ac51bbbf1288712a2732038"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e584a1e0dd3f52ebbd9505c8cd8dbdd" id="r_a5e584a1e0dd3f52ebbd9505c8cd8dbdd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a5e584a1e0dd3f52ebbd9505c8cd8dbdd">Draw</a> ()</td></tr>
+<tr class="separator:a5e584a1e0dd3f52ebbd9505c8cd8dbdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02ac113b96c31e356c7139074a31debc" id="r_a02ac113b96c31e356c7139074a31debc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a02ac113b96c31e356c7139074a31debc">Delete</a> ()</td></tr>
+<tr class="separator:a02ac113b96c31e356c7139074a31debc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a727eb906101a09abe7bd78d4051aaf42" id="r_a727eb906101a09abe7bd78d4051aaf42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a727eb906101a09abe7bd78d4051aaf42">temp</a> [0x95F]</td></tr>
+<tr class="separator:a727eb906101a09abe7bd78d4051aaf42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09c70710114f09b588d18e973b96dd64" id="r_a09c70710114f09b588d18e973b96dd64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a09c70710114f09b588d18e973b96dd64">field_0x95f</a></td></tr>
+<tr class="separator:a09c70710114f09b588d18e973b96dd64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48c933dbecffdae0731a50e1ffba515a" id="r_a48c933dbecffdae0731a50e1ffba515a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBom__c.html#a48c933dbecffdae0731a50e1ffba515a">field_0x960</a></td></tr>
+<tr class="separator:a48c933dbecffdae0731a50e1ffba515a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1ab3ae96eedaf6921a78cc938e4aca59" name="a1ab3ae96eedaf6921a78cc938e4aca59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ab3ae96eedaf6921a78cc938e4aca59">&#9670;&#160;</a></span>actionDead()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::actionDead </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e4514429a8dc98e14879c1c9352cf6b" name="a0e4514429a8dc98e14879c1c9352cf6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e4514429a8dc98e14879c1c9352cf6b">&#9670;&#160;</a></span>actionOrderATalkEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::actionOrderATalkEvent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afa25afae7c8cd503b2483ca80f36adbf" name="afa25afae7c8cd503b2483ca80f36adbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa25afae7c8cd503b2483ca80f36adbf">&#9670;&#160;</a></span>actionOrderEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::actionOrderEvent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4912d101c5775216ba9037f2325f87aa" name="a4912d101c5775216ba9037f2325f87aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4912d101c5775216ba9037f2325f87aa">&#9670;&#160;</a></span>actionTalkEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::actionTalkEvent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af060ffb5b9c7e16381f4cb8e65956a0b" name="af060ffb5b9c7e16381f4cb8e65956a0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af060ffb5b9c7e16381f4cb8e65956a0b">&#9670;&#160;</a></span>actionWait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::actionWait </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0eb101abbc9bb5e3bc793bb8dd682b42" name="a0eb101abbc9bb5e3bc793bb8dd682b42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0eb101abbc9bb5e3bc793bb8dd682b42">&#9670;&#160;</a></span>actionWarpEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::actionWarpEvent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a877c90219526cc26a8e075116050c337" name="a877c90219526cc26a8e075116050c337"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a877c90219526cc26a8e075116050c337">&#9670;&#160;</a></span>appear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::appear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad86ea700ed3f6b85159ee9cb7aba1318" name="ad86ea700ed3f6b85159ee9cb7aba1318"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad86ea700ed3f6b85159ee9cb7aba1318">&#9670;&#160;</a></span>calcMidnaWaitPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::calcMidnaWaitPos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acbdf26701ac51bbbf1288712a2732038" name="acbdf26701ac51bbbf1288712a2732038"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbdf26701ac51bbbf1288712a2732038">&#9670;&#160;</a></span>calcObjPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::calcObjPos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65900c3504f07430eed9d8d0df17a5c9" name="a65900c3504f07430eed9d8d0df17a5c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65900c3504f07430eed9d8d0df17a5c9">&#9670;&#160;</a></span>checkTalkDistance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::checkTalkDistance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a70a9e3b31fe385beb3a419a88aae5cf2" name="a70a9e3b31fe385beb3a419a88aae5cf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70a9e3b31fe385beb3a419a88aae5cf2">&#9670;&#160;</a></span>clrDzb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::clrDzb </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a672a8cde1bdcdca1a5f642cda16efcca" name="a672a8cde1bdcdca1a5f642cda16efcca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a672a8cde1bdcdca1a5f642cda16efcca">&#9670;&#160;</a></span>Create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::Create </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a229dffacd92f0b5c38d6cb230d8b69da" name="a229dffacd92f0b5c38d6cb230d8b69da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a229dffacd92f0b5c38d6cb230d8b69da">&#9670;&#160;</a></span>create1st()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::create1st </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad69d3de0441e05833acc70f4e1f97433" name="ad69d3de0441e05833acc70f4e1f97433"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad69d3de0441e05833acc70f4e1f97433">&#9670;&#160;</a></span>CreateHeap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::CreateHeap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02ac113b96c31e356c7139074a31debc" name="a02ac113b96c31e356c7139074a31debc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02ac113b96c31e356c7139074a31debc">&#9670;&#160;</a></span>Delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::Delete </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a939d2a258612508f75ac833f808cc1b7" name="a939d2a258612508f75ac833f808cc1b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a939d2a258612508f75ac833f808cc1b7">&#9670;&#160;</a></span>demoProc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::demoProc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7a4b79868ce776a713c682dfa802abe" name="ac7a4b79868ce776a713c682dfa802abe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7a4b79868ce776a713c682dfa802abe">&#9670;&#160;</a></span>disappear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::disappear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5e584a1e0dd3f52ebbd9505c8cd8dbdd" name="a5e584a1e0dd3f52ebbd9505c8cd8dbdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e584a1e0dd3f52ebbd9505c8cd8dbdd">&#9670;&#160;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::Draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a81d07757704ff5f927023fefd2db0b6e" name="a81d07757704ff5f927023fefd2db0b6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81d07757704ff5f927023fefd2db0b6e">&#9670;&#160;</a></span>endBindEffect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::endBindEffect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a98e21bf2b30d66c5f4092f428d906b31" name="a98e21bf2b30d66c5f4092f428d906b31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98e21bf2b30d66c5f4092f428d906b31">&#9670;&#160;</a></span>endSrcEffect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::endSrcEffect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac3aeffa475e90c52aecad8afd12ba334" name="ac3aeffa475e90c52aecad8afd12ba334"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3aeffa475e90c52aecad8afd12ba334">&#9670;&#160;</a></span>event_proc_call()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::event_proc_call </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a13d751edb0e72a354653a1c24436bad4" name="a13d751edb0e72a354653a1c24436bad4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13d751edb0e72a354653a1c24436bad4">&#9670;&#160;</a></span>Execute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::Execute </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>(**)&#160;</td>
+          <td class="paramname"><em>param_0</em>[3][4]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad4f1fa7a2ee3f7a7c18659ebcab3490a" name="ad4f1fa7a2ee3f7a7c18659ebcab3490a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4f1fa7a2ee3f7a7c18659ebcab3490a">&#9670;&#160;</a></span>followBindEffect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::followBindEffect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4fab9d7e3653dc2476b7ca21d397ebb4" name="a4fab9d7e3653dc2476b7ca21d397ebb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fab9d7e3653dc2476b7ca21d397ebb4">&#9670;&#160;</a></span>followSrcEffect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::followSrcEffect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e9397e25be7549673bdc09c60b3f2ee" name="a9e9397e25be7549673bdc09c60b3f2ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e9397e25be7549673bdc09c60b3f2ee">&#9670;&#160;</a></span>init_modeFall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::init_modeFall </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b8d9e30287c4f55b46e006041b37be7" name="a3b8d9e30287c4f55b46e006041b37be7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b8d9e30287c4f55b46e006041b37be7">&#9670;&#160;</a></span>init_modeWait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::init_modeWait </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9f027683e1f8d51acdcd27d3c8f37fe9" name="a9f027683e1f8d51acdcd27d3c8f37fe9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f027683e1f8d51acdcd27d3c8f37fe9">&#9670;&#160;</a></span>init_modeWaitAppear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::init_modeWaitAppear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af667e51fe12d169567bd1dd0d556b4f5" name="af667e51fe12d169567bd1dd0d556b4f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af667e51fe12d169567bd1dd0d556b4f5">&#9670;&#160;</a></span>init_modeWaitEndFallDemo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::init_modeWaitEndFallDemo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaffe2b73f48fe74a40df71e728f59f89" name="aaffe2b73f48fe74a40df71e728f59f89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaffe2b73f48fe74a40df71e728f59f89">&#9670;&#160;</a></span>initBaseMtx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::initBaseMtx </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff67212f12055105cf7d1d2243b5834f" name="aff67212f12055105cf7d1d2243b5834f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff67212f12055105cf7d1d2243b5834f">&#9670;&#160;</a></span>mode_proc_call()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::mode_proc_call </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a361098ed8931adc49204777ab29394ae" name="a361098ed8931adc49204777ab29394ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a361098ed8931adc49204777ab29394ae">&#9670;&#160;</a></span>modeFall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::modeFall </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae488882ccb6a65d775cbbb0c7b42ede4" name="ae488882ccb6a65d775cbbb0c7b42ede4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae488882ccb6a65d775cbbb0c7b42ede4">&#9670;&#160;</a></span>modeWait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::modeWait </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1b52ebd8869e8099c18932637d2e2ace" name="a1b52ebd8869e8099c18932637d2e2ace"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b52ebd8869e8099c18932637d2e2ace">&#9670;&#160;</a></span>modeWaitAppear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::modeWaitAppear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0a077a67f84b26d4921b655e9f20c7fd" name="a0a077a67f84b26d4921b655e9f20c7fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a077a67f84b26d4921b655e9f20c7fd">&#9670;&#160;</a></span>modeWaitEndFallDemo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::modeWaitEndFallDemo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3fe70445cb79a44a5f0da7eb94efa8d2" name="a3fe70445cb79a44a5f0da7eb94efa8d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fe70445cb79a44a5f0da7eb94efa8d2">&#9670;&#160;</a></span>orderZHintEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::orderZHintEvent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a50bfb11b65fe692bdf4618375f69d176" name="a50bfb11b65fe692bdf4618375f69d176"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50bfb11b65fe692bdf4618375f69d176">&#9670;&#160;</a></span>setBaseMtx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::setBaseMtx </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb8f7109704afdd038296a301bee4283" name="acb8f7109704afdd038296a301bee4283"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb8f7109704afdd038296a301bee4283">&#9670;&#160;</a></span>setBindEffect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::setBindEffect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad13906fa3d20c4cb1132515c7536d10c" name="ad13906fa3d20c4cb1132515c7536d10c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad13906fa3d20c4cb1132515c7536d10c">&#9670;&#160;</a></span>setDzb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::setDzb </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8a879a8ad4f28d7708cd13b73ab98c99" name="a8a879a8ad4f28d7708cd13b73ab98c99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a879a8ad4f28d7708cd13b73ab98c99">&#9670;&#160;</a></span>setSmoke()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::setSmoke </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a951270ebfdff12ba84c99bee39e0db07" name="a951270ebfdff12ba84c99bee39e0db07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a951270ebfdff12ba84c99bee39e0db07">&#9670;&#160;</a></span>setSrcEffect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::setSrcEffect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a17a0681a8ddb30224cb088088f0e4f6f" name="a17a0681a8ddb30224cb088088f0e4f6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17a0681a8ddb30224cb088088f0e4f6f">&#9670;&#160;</a></span>startFall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::startFall </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="accf11d9aecb298ac96704a838f18e3a9" name="accf11d9aecb298ac96704a838f18e3a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accf11d9aecb298ac96704a838f18e3a9">&#9670;&#160;</a></span>startSearch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daObjVolcBom_c::startSearch </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a09c70710114f09b588d18e973b96dd64" name="a09c70710114f09b588d18e973b96dd64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09c70710114f09b588d18e973b96dd64">&#9670;&#160;</a></span>field_0x95f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> daObjVolcBom_c::field_0x95f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a48c933dbecffdae0731a50e1ffba515a" name="a48c933dbecffdae0731a50e1ffba515a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48c933dbecffdae0731a50e1ffba515a">&#9670;&#160;</a></span>field_0x960</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> daObjVolcBom_c::field_0x960</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a727eb906101a09abe7bd78d4051aaf42" name="a727eb906101a09abe7bd78d4051aaf42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a727eb906101a09abe7bd78d4051aaf42">&#9670;&#160;</a></span>temp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> daObjVolcBom_c::temp[0x95F]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following files:<ul>
+<li>rel/d/a/obj/d_a_obj_volcball/<a class="el" href="d__a__obj__volcball_8cpp.html">d_a_obj_volcball.cpp</a></li>
+<li>rel/d/a/obj/d_a_obj_volcbom/<a class="el" href="d__a__obj__volcbom_8cpp.html">d_a_obj_volcbom.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classdaObjVolcBom__c.html">daObjVolcBom_c</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

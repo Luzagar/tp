@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: include/dolphin/exi/EXIBios.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('EXIBios_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">EXIBios.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="EXIBios_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef EXIBIOS_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define EXIBIOS_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">dolphin/types.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="EXIBios_8h.html#a924296baf430a531adb5135a5cd54207">   10</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structOSContext.html">OSContext</a> <a class="code hl_struct" href="structOSContext.html">OSContext</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="EXIBios_8h.html#ab67c1b63c4267fc3ef8630aee423c984">   12</a></span><a class="code hl_typedef" href="types_8h.html#abcdd5d61f51cb4c472ac6637916cf72a">vu32</a> <a class="code hl_variable" href="EXIBios_8h.html#ab67c1b63c4267fc3ef8630aee423c984">__EXIRegs</a>[16] : 0xCC006800;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#define EXI_MEMORY_CARD_59 0x00000004</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#define EXI_MEMORY_CARD_123 0x00000008</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#define EXI_MEMORY_CARD_251 0x00000010</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#define EXI_MEMORY_CARD_507 0x00000020</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#define EXI_MEMORY_CARD_1019 0x00000040</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#define EXI_MEMORY_CARD_2043 0x00000080</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#define EXI_MEMORY_CARD_1019A 0x00000140</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#define EXI_MEMORY_CARD_1019B 0x00000240</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define EXI_MEMORY_CARD_1019C 0x00000340</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define EXI_MEMORY_CARD_1019D 0x00000440</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define EXI_MEMORY_CARD_1019E 0x00000540</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#define EXI_MEMORY_CARD_1019F 0x00000640</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#define EXI_MEMORY_CARD_1019G 0x00000740</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#define EXI_MEMORY_CARD_2043A 0x00000180</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#define EXI_MEMORY_CARD_2043B 0x00000280</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#define EXI_MEMORY_CARD_2043C 0x00000380</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#define EXI_MEMORY_CARD_2043D 0x00000480</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#define EXI_MEMORY_CARD_2043E 0x00000580</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#define EXI_MEMORY_CARD_2043F 0x00000680</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#define EXI_MEMORY_CARD_2043G 0x00000780</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#define EXI_USB_ADAPTER 0x01010000</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#define EXI_NPDP_GDEV 0x01020000</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#define EXI_MODEM 0x02020000</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#define EXI_ETHER 0x04020200</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#define EXI_ETHER_VIEWER 0x04220001</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#define EXI_STREAM_HANGER 0x04130000</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#define EXI_MARLIN 0x03010000</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#define EXI_IS_VIEWER 0x05070000</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#define EXI_FREQ_1M 0</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#define EXI_FREQ_2M 1</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#define EXI_FREQ_4M 2</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#define EXI_FREQ_8M 3</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#define EXI_FREQ_16M 4</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#define EXI_FREQ_32M 5</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#define EXI_READ 0</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#define EXI_WRITE 1</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#define EXI_STATE_IDLE 0x00</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#define EXI_STATE_DMA 0x01</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#define EXI_STATE_IMM 0x02</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#define EXI_STATE_BUSY (EXI_STATE_DMA | EXI_STATE_IMM)</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#define EXI_STATE_SELECTED 0x04</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#define EXI_STATE_ATTACHED 0x08</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#define EXI_STATE_LOCKED 0x10</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="EXIBios_8h.html#a7138fa1e7122b3f129311feaafcb13e7">   68</a></span><span class="keyword">typedef</span> void (*<a class="code hl_typedef" href="EXIBios_8h.html#a7138fa1e7122b3f129311feaafcb13e7">EXICallback</a>)(<a class="code hl_typedef" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> chan, <a class="code hl_struct" href="structOSContext.html">OSContext</a>* <a class="code hl_variable" href="JUTException_8cpp.html#ab690e765a841a6d0748e1d5e7146b093">context</a>);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="foldopen" id="foldopen00070" data-start="{" data-end="};">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="structEXIControl.html">   70</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structEXIControl.html">EXIControl</a> {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="structEXIControl.html#a1c9bae5970f2aa0eeb96ef835e86d2c7">   71</a></span>    <a class="code hl_typedef" href="EXIBios_8h.html#a7138fa1e7122b3f129311feaafcb13e7">EXICallback</a> <a class="code hl_variable" href="structEXIControl.html#a1c9bae5970f2aa0eeb96ef835e86d2c7">exiCallback</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="structEXIControl.html#ae16a53b16281e26418091c8847bd0982">   72</a></span>    <a class="code hl_typedef" href="EXIBios_8h.html#a7138fa1e7122b3f129311feaafcb13e7">EXICallback</a> <a class="code hl_variable" href="structEXIControl.html#ae16a53b16281e26418091c8847bd0982">tcCallback</a>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="structEXIControl.html#a9f58b628dbb34ce803bfc27043b490ef">   73</a></span>    <a class="code hl_typedef" href="EXIBios_8h.html#a7138fa1e7122b3f129311feaafcb13e7">EXICallback</a> <a class="code hl_variable" href="structEXIControl.html#a9f58b628dbb34ce803bfc27043b490ef">extCallback</a>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="structEXIControl.html#a87ad566b26715ceb5cd9f2ee94eec870">   74</a></span>    <a class="code hl_typedef" href="types_8h.html#abcdd5d61f51cb4c472ac6637916cf72a">vu32</a> <a class="code hl_variable" href="structEXIControl.html#a87ad566b26715ceb5cd9f2ee94eec870">state</a>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="structEXIControl.html#a17f75c417fe89f529c1fa8c85e79c31b">   75</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structEXIControl.html#a17f75c417fe89f529c1fa8c85e79c31b">immLen</a>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="structEXIControl.html#af4988c15a24381ed3077d23b489ccafa">   76</a></span>    <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>* <a class="code hl_variable" href="structEXIControl.html#af4988c15a24381ed3077d23b489ccafa">immBuf</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="structEXIControl.html#afe941d111782bc2fb175ce3cec46906b">   77</a></span>    <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> <a class="code hl_variable" href="structEXIControl.html#afe941d111782bc2fb175ce3cec46906b">dev</a>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="structEXIControl.html#a7f4a32213dc2534db2c9cf555273853a">   78</a></span>    <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> <a class="code hl_variable" href="structEXIControl.html#a7f4a32213dc2534db2c9cf555273853a">id</a>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="structEXIControl.html#a3ed4057574f59db1d17f105dbef94a01">   79</a></span>    <a class="code hl_typedef" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> <a class="code hl_variable" href="structEXIControl.html#a3ed4057574f59db1d17f105dbef94a01">idTime</a>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="structEXIControl.html#a64479a91f223f337b813eb086214c125">   80</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structEXIControl.html#a64479a91f223f337b813eb086214c125">items</a>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> <a class="code hl_variable" href="structEXIControl.html#afe941d111782bc2fb175ce3cec46906b">dev</a>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="structEXIControl.html#a98045a38fbb081ec6b424784504a68a9">   83</a></span>        <a class="code hl_typedef" href="EXIBios_8h.html#a7138fa1e7122b3f129311feaafcb13e7">EXICallback</a> <a class="code hl_variable" href="structEXIControl.html#a98045a38fbb081ec6b424784504a68a9">callback</a>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="structEXIControl.html#a798b258df20865746c97977622643c6d">   84</a></span>    } <a class="code hl_variable" href="structEXIControl.html#a798b258df20865746c97977622643c6d">queue</a>[3];</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="EXIBios_8h.html#ab9f0f6dce2ee41aa036056b0574b5afa">   85</a></span>} <a class="code hl_struct" href="structEXIControl.html">EXIControl</a>;</div>
+</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><a class="code hl_typedef" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> <a class="code hl_function" href="EXIBios_8h.html#a6489494d5b7fae353f773a797450d670">EXIImm</a>(<a class="code hl_typedef" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> chan, <span class="keywordtype">void</span>* buf, <a class="code hl_typedef" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> len, <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> type, <a class="code hl_typedef" href="EXIBios_8h.html#a7138fa1e7122b3f129311feaafcb13e7">EXICallback</a> callback);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><a class="code hl_typedef" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> <a class="code hl_function" href="EXIBios_8h.html#a87648d14ef971b27f5dca12c83559c67">EXIImmEx</a>(<a class="code hl_typedef" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> chan, <span class="keywordtype">void</span>* buf, <a class="code hl_typedef" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> len, <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> mode);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><a class="code hl_typedef" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> <a class="code hl_function" href="EXIBios_8h.html#a2e27c8d0df4fbce86c883e510010d4f7">EXIDma</a>(<a class="code hl_typedef" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> chan, <span class="keywordtype">void</span>* buf, <a class="code hl_typedef" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> len, <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> type, <a class="code hl_typedef" href="EXIBios_8h.html#a7138fa1e7122b3f129311feaafcb13e7">EXICallback</a> callback);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><a class="code hl_typedef" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> <a class="code hl_function" href="EXIBios_8h.html#a898017357d73846e27f4a09d02b68316">EXISync</a>(<a class="code hl_typedef" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> chan);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><a class="code hl_typedef" href="EXIBios_8h.html#a7138fa1e7122b3f129311feaafcb13e7">EXICallback</a> <a class="code hl_function" href="EXIBios_8h.html#ae565bf6666fdfa22744a0af4a887cea4">EXISetExiCallback</a>(<a class="code hl_typedef" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> chan, <a class="code hl_typedef" href="EXIBios_8h.html#a7138fa1e7122b3f129311feaafcb13e7">EXICallback</a> exiCallback);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><a class="code hl_typedef" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> <a class="code hl_function" href="EXIBios_8h.html#aeaba7ee3a4461a89eaacd6bd9db00963">EXIProbe</a>(<a class="code hl_typedef" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> chan);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><a class="code hl_typedef" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> <a class="code hl_function" href="EXIBios_8h.html#af09bdee73f51957ce24c7d49080d48a3">EXIProbeEx</a>(<a class="code hl_typedef" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> chan);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><a class="code hl_typedef" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> <a class="code hl_function" href="EXIBios_8h.html#a116a86be9e16a724a181c7fa896534ff">EXIAttach</a>(<a class="code hl_typedef" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> chan, <a class="code hl_typedef" href="EXIBios_8h.html#a7138fa1e7122b3f129311feaafcb13e7">EXICallback</a> extCallback);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><a class="code hl_typedef" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> <a class="code hl_function" href="EXIBios_8h.html#ae7e47b9c45c389d3315fcd57da06e5ff">EXIDetach</a>(<a class="code hl_typedef" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> chan);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><a class="code hl_typedef" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> <a class="code hl_function" href="EXIBios_8h.html#a9257f1673e3ceae5d72bd47446840a53">EXISelect</a>(<a class="code hl_typedef" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> chan, <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> dev, <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> freq);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><a class="code hl_typedef" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> <a class="code hl_function" href="EXIBios_8h.html#af125a2c3921a828251052662c98affaf">EXIDeselect</a>(<a class="code hl_typedef" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> chan);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keywordtype">void</span> <a class="code hl_function" href="EXIBios_8h.html#a6554aac16b8310c11bd9106751b29199">EXIInit</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><a class="code hl_typedef" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> <a class="code hl_function" href="EXIBios_8h.html#a484b4209facd185a0cdfbd90c8d8a151">EXILock</a>(<a class="code hl_typedef" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> chan, <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> dev, <a class="code hl_typedef" href="EXIBios_8h.html#a7138fa1e7122b3f129311feaafcb13e7">EXICallback</a> unlockedCallback);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><a class="code hl_typedef" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> <a class="code hl_function" href="EXIBios_8h.html#a77eb40f1f87ecd18ba489cda7714d998">EXIUnlock</a>(<a class="code hl_typedef" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> chan);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> <a class="code hl_function" href="EXIBios_8h.html#abcee88af26aff33c9082de5e4b954cd3">EXIGetState</a>(<a class="code hl_typedef" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> chan);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="EXIBios_8h.html#a4ad3caeb12c7ee282725568d8d0665a4">  102</a></span><span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="EXIBios_8h.html#a4ad3caeb12c7ee282725568d8d0665a4">UnlockedHandler</a>(<a class="code hl_typedef" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> chan, <a class="code hl_struct" href="structOSContext.html">OSContext</a>* <a class="code hl_variable" href="JUTException_8cpp.html#ab690e765a841a6d0748e1d5e7146b093">context</a>);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><a class="code hl_typedef" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> <a class="code hl_function" href="EXIBios_8h.html#aeed43431ee5d1d3124f6b98c4c60ec5b">EXIGetID</a>(<a class="code hl_typedef" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> chan, <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> dev, <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>* <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>};</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="preprocessor">#endif </span><span class="comment">/* EXIBIOS_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aEXIBios_8h_html_a116a86be9e16a724a181c7fa896534ff"><div class="ttname"><a href="EXIBios_8h.html#a116a86be9e16a724a181c7fa896534ff">EXIAttach</a></div><div class="ttdeci">BOOL EXIAttach(s32 chan, EXICallback extCallback)</div><div class="ttdef"><b>Definition</b> EXIBios.c:317</div></div>
+<div class="ttc" id="aEXIBios_8h_html_a2e27c8d0df4fbce86c883e510010d4f7"><div class="ttname"><a href="EXIBios_8h.html#a2e27c8d0df4fbce86c883e510010d4f7">EXIDma</a></div><div class="ttdeci">BOOL EXIDma(s32 chan, void *buf, s32 len, u32 type, EXICallback callback)</div><div class="ttdef"><b>Definition</b> EXIBios.c:117</div></div>
+<div class="ttc" id="aEXIBios_8h_html_a484b4209facd185a0cdfbd90c8d8a151"><div class="ttname"><a href="EXIBios_8h.html#a484b4209facd185a0cdfbd90c8d8a151">EXILock</a></div><div class="ttdeci">BOOL EXILock(s32 chan, u32 dev, EXICallback unlockedCallback)</div><div class="ttdef"><b>Definition</b> EXIBios.c:546</div></div>
+<div class="ttc" id="aEXIBios_8h_html_a4ad3caeb12c7ee282725568d8d0665a4"><div class="ttname"><a href="EXIBios_8h.html#a4ad3caeb12c7ee282725568d8d0665a4">UnlockedHandler</a></div><div class="ttdeci">static void UnlockedHandler(s32 chan, OSContext *context)</div></div>
+<div class="ttc" id="aEXIBios_8h_html_a6489494d5b7fae353f773a797450d670"><div class="ttname"><a href="EXIBios_8h.html#a6489494d5b7fae353f773a797450d670">EXIImm</a></div><div class="ttdeci">s32 EXIImm(s32 chan, void *buf, s32 len, u32 type, EXICallback callback)</div><div class="ttdef"><b>Definition</b> EXIBios.c:57</div></div>
+<div class="ttc" id="aEXIBios_8h_html_a6554aac16b8310c11bd9106751b29199"><div class="ttname"><a href="EXIBios_8h.html#a6554aac16b8310c11bd9106751b29199">EXIInit</a></div><div class="ttdeci">void EXIInit(void)</div><div class="ttdef"><b>Definition</b> EXIBios.c:504</div></div>
+<div class="ttc" id="aEXIBios_8h_html_a7138fa1e7122b3f129311feaafcb13e7"><div class="ttname"><a href="EXIBios_8h.html#a7138fa1e7122b3f129311feaafcb13e7">EXICallback</a></div><div class="ttdeci">void(* EXICallback)(s32 chan, OSContext *context)</div><div class="ttdef"><b>Definition</b> EXIBios.h:68</div></div>
+<div class="ttc" id="aEXIBios_8h_html_a77eb40f1f87ecd18ba489cda7714d998"><div class="ttname"><a href="EXIBios_8h.html#a77eb40f1f87ecd18ba489cda7714d998">EXIUnlock</a></div><div class="ttdeci">BOOL EXIUnlock(s32 chan)</div><div class="ttdef"><b>Definition</b> EXIBios.c:577</div></div>
+<div class="ttc" id="aEXIBios_8h_html_a87648d14ef971b27f5dca12c83559c67"><div class="ttname"><a href="EXIBios_8h.html#a87648d14ef971b27f5dca12c83559c67">EXIImmEx</a></div><div class="ttdeci">s32 EXIImmEx(s32 chan, void *buf, s32 len, u32 mode)</div><div class="ttdef"><b>Definition</b> EXIBios.c:97</div></div>
+<div class="ttc" id="aEXIBios_8h_html_a898017357d73846e27f4a09d02b68316"><div class="ttname"><a href="EXIBios_8h.html#a898017357d73846e27f4a09d02b68316">EXISync</a></div><div class="ttdeci">BOOL EXISync(s32 chan)</div><div class="ttdef"><b>Definition</b> EXIBios.c:164</div></div>
+<div class="ttc" id="aEXIBios_8h_html_a9257f1673e3ceae5d72bd47446840a53"><div class="ttname"><a href="EXIBios_8h.html#a9257f1673e3ceae5d72bd47446840a53">EXISelect</a></div><div class="ttdeci">BOOL EXISelect(s32 chan, u32 dev, u32 freq)</div><div class="ttdef"><b>Definition</b> EXIBios.c:356</div></div>
+<div class="ttc" id="aEXIBios_8h_html_ab67c1b63c4267fc3ef8630aee423c984"><div class="ttname"><a href="EXIBios_8h.html#ab67c1b63c4267fc3ef8630aee423c984">__EXIRegs</a></div><div class="ttdeci">vu32 __EXIRegs[16]</div><div class="ttdef"><b>Definition</b> EXIBios.h:12</div></div>
+<div class="ttc" id="aEXIBios_8h_html_abcee88af26aff33c9082de5e4b954cd3"><div class="ttname"><a href="EXIBios_8h.html#abcee88af26aff33c9082de5e4b954cd3">EXIGetState</a></div><div class="ttdeci">u32 EXIGetState(s32 chan)</div><div class="ttdef"><b>Definition</b> EXIBios.c:603</div></div>
+<div class="ttc" id="aEXIBios_8h_html_ae565bf6666fdfa22744a0af4a887cea4"><div class="ttname"><a href="EXIBios_8h.html#ae565bf6666fdfa22744a0af4a887cea4">EXISetExiCallback</a></div><div class="ttdeci">EXICallback EXISetExiCallback(s32 chan, EXICallback exiCallback)</div><div class="ttdef"><b>Definition</b> EXIBios.c:208</div></div>
+<div class="ttc" id="aEXIBios_8h_html_ae7e47b9c45c389d3315fcd57da06e5ff"><div class="ttname"><a href="EXIBios_8h.html#ae7e47b9c45c389d3315fcd57da06e5ff">EXIDetach</a></div><div class="ttdeci">BOOL EXIDetach(s32 chan)</div><div class="ttdef"><b>Definition</b> EXIBios.c:335</div></div>
+<div class="ttc" id="aEXIBios_8h_html_aeaba7ee3a4461a89eaacd6bd9db00963"><div class="ttname"><a href="EXIBios_8h.html#aeaba7ee3a4461a89eaacd6bd9db00963">EXIProbe</a></div><div class="ttdeci">BOOL EXIProbe(s32 chan)</div><div class="ttdef"><b>Definition</b> EXIBios.c:272</div></div>
+<div class="ttc" id="aEXIBios_8h_html_aeed43431ee5d1d3124f6b98c4c60ec5b"><div class="ttname"><a href="EXIBios_8h.html#aeed43431ee5d1d3124f6b98c4c60ec5b">EXIGetID</a></div><div class="ttdeci">s32 EXIGetID(s32 chan, u32 dev, u32 *id)</div><div class="ttdef"><b>Definition</b> EXIBios.c:617</div></div>
+<div class="ttc" id="aEXIBios_8h_html_af09bdee73f51957ce24c7d49080d48a3"><div class="ttname"><a href="EXIBios_8h.html#af09bdee73f51957ce24c7d49080d48a3">EXIProbeEx</a></div><div class="ttdeci">s32 EXIProbeEx(s32 chan)</div><div class="ttdef"><b>Definition</b> EXIBios.c:286</div></div>
+<div class="ttc" id="aEXIBios_8h_html_af125a2c3921a828251052662c98affaf"><div class="ttname"><a href="EXIBios_8h.html#af125a2c3921a828251052662c98affaf">EXIDeselect</a></div><div class="ttdeci">BOOL EXIDeselect(s32 chan)</div><div class="ttdef"><b>Definition</b> EXIBios.c:392</div></div>
+<div class="ttc" id="aJUTException_8cpp_html_ab690e765a841a6d0748e1d5e7146b093"><div class="ttname"><a href="JUTException_8cpp.html#ab690e765a841a6d0748e1d5e7146b093">context</a></div><div class="ttdeci">static OSContext context</div><div class="ttdef"><b>Definition</b> JUTException.cpp:233</div></div>
+<div class="ttc" id="astructEXIControl_html"><div class="ttname"><a href="structEXIControl.html">EXIControl</a></div><div class="ttdef"><b>Definition</b> EXIBios.h:70</div></div>
+<div class="ttc" id="astructEXIControl_html_a17f75c417fe89f529c1fa8c85e79c31b"><div class="ttname"><a href="structEXIControl.html#a17f75c417fe89f529c1fa8c85e79c31b">EXIControl::immLen</a></div><div class="ttdeci">int immLen</div><div class="ttdef"><b>Definition</b> EXIBios.h:75</div></div>
+<div class="ttc" id="astructEXIControl_html_a1c9bae5970f2aa0eeb96ef835e86d2c7"><div class="ttname"><a href="structEXIControl.html#a1c9bae5970f2aa0eeb96ef835e86d2c7">EXIControl::exiCallback</a></div><div class="ttdeci">EXICallback exiCallback</div><div class="ttdef"><b>Definition</b> EXIBios.h:71</div></div>
+<div class="ttc" id="astructEXIControl_html_a3ed4057574f59db1d17f105dbef94a01"><div class="ttname"><a href="structEXIControl.html#a3ed4057574f59db1d17f105dbef94a01">EXIControl::idTime</a></div><div class="ttdeci">s32 idTime</div><div class="ttdef"><b>Definition</b> EXIBios.h:79</div></div>
+<div class="ttc" id="astructEXIControl_html_a64479a91f223f337b813eb086214c125"><div class="ttname"><a href="structEXIControl.html#a64479a91f223f337b813eb086214c125">EXIControl::items</a></div><div class="ttdeci">int items</div><div class="ttdef"><b>Definition</b> EXIBios.h:80</div></div>
+<div class="ttc" id="astructEXIControl_html_a798b258df20865746c97977622643c6d"><div class="ttname"><a href="structEXIControl.html#a798b258df20865746c97977622643c6d">EXIControl::queue</a></div><div class="ttdeci">struct EXIControl::@72 queue[3]</div></div>
+<div class="ttc" id="astructEXIControl_html_a7f4a32213dc2534db2c9cf555273853a"><div class="ttname"><a href="structEXIControl.html#a7f4a32213dc2534db2c9cf555273853a">EXIControl::id</a></div><div class="ttdeci">u32 id</div><div class="ttdef"><b>Definition</b> EXIBios.h:78</div></div>
+<div class="ttc" id="astructEXIControl_html_a87ad566b26715ceb5cd9f2ee94eec870"><div class="ttname"><a href="structEXIControl.html#a87ad566b26715ceb5cd9f2ee94eec870">EXIControl::state</a></div><div class="ttdeci">vu32 state</div><div class="ttdef"><b>Definition</b> EXIBios.h:74</div></div>
+<div class="ttc" id="astructEXIControl_html_a98045a38fbb081ec6b424784504a68a9"><div class="ttname"><a href="structEXIControl.html#a98045a38fbb081ec6b424784504a68a9">EXIControl::callback</a></div><div class="ttdeci">EXICallback callback</div><div class="ttdef"><b>Definition</b> EXIBios.h:83</div></div>
+<div class="ttc" id="astructEXIControl_html_a9f58b628dbb34ce803bfc27043b490ef"><div class="ttname"><a href="structEXIControl.html#a9f58b628dbb34ce803bfc27043b490ef">EXIControl::extCallback</a></div><div class="ttdeci">EXICallback extCallback</div><div class="ttdef"><b>Definition</b> EXIBios.h:73</div></div>
+<div class="ttc" id="astructEXIControl_html_ae16a53b16281e26418091c8847bd0982"><div class="ttname"><a href="structEXIControl.html#ae16a53b16281e26418091c8847bd0982">EXIControl::tcCallback</a></div><div class="ttdeci">EXICallback tcCallback</div><div class="ttdef"><b>Definition</b> EXIBios.h:72</div></div>
+<div class="ttc" id="astructEXIControl_html_af4988c15a24381ed3077d23b489ccafa"><div class="ttname"><a href="structEXIControl.html#af4988c15a24381ed3077d23b489ccafa">EXIControl::immBuf</a></div><div class="ttdeci">u8 * immBuf</div><div class="ttdef"><b>Definition</b> EXIBios.h:76</div></div>
+<div class="ttc" id="astructEXIControl_html_afe941d111782bc2fb175ce3cec46906b"><div class="ttname"><a href="structEXIControl.html#afe941d111782bc2fb175ce3cec46906b">EXIControl::dev</a></div><div class="ttdeci">u32 dev</div><div class="ttdef"><b>Definition</b> EXIBios.h:77</div></div>
+<div class="ttc" id="astructOSContext_html"><div class="ttname"><a href="structOSContext.html">OSContext</a></div><div class="ttdef"><b>Definition</b> OSContext.h:137</div></div>
+<div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div></div>
+<div class="ttc" id="atypes_8h_html_a050c65e107f0c828f856a231f4b4e788"><div class="ttname"><a href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a></div><div class="ttdeci">int BOOL</div><div class="ttdef"><b>Definition</b> types.h:27</div></div>
+<div class="ttc" id="atypes_8h_html_a2caf5cd7bcdbe1eefa727f44ffb10bac"><div class="ttname"><a href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a></div><div class="ttdeci">unsigned long u32</div><div class="ttdef"><b>Definition</b> types.h:10</div></div>
+<div class="ttc" id="atypes_8h_html_abcdd5d61f51cb4c472ac6637916cf72a"><div class="ttname"><a href="types_8h.html#abcdd5d61f51cb4c472ac6637916cf72a">vu32</a></div><div class="ttdeci">volatile u32 vu32</div><div class="ttdef"><b>Definition</b> types.h:15</div></div>
+<div class="ttc" id="atypes_8h_html_adafe97a8e4be18b0198f234819016582"><div class="ttname"><a href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a></div><div class="ttdeci">signed long s32</div><div class="ttdef"><b>Definition</b> types.h:6</div></div>
+<div class="ttc" id="atypes_8h_html_aed742c436da53c1080638ce6ef7d13de"><div class="ttname"><a href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a></div><div class="ttdeci">unsigned char u8</div><div class="ttdef"><b>Definition</b> types.h:8</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_b778c3f297ab88300258a2935792c8cc.html">dolphin</a></li><li class="navelem"><a class="el" href="dir_6f6beed2686d731e2bd60d8768419109.html">exi</a></li><li class="navelem"><a class="el" href="EXIBios_8h.html">EXIBios.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: include/d/msg/d_msg_scrn_light.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d__msg__scrn__light_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">d_msg_scrn_light.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="d__msg__scrn__light_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef MSG_SCRN_D_MSG_SCRN_LIGHT_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define MSG_SCRN_D_MSG_SCRN_LIGHT_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="TColor_8h.html">JSystem/JUtility/TColor.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">class </span><a class="code hl_struct" href="structJ2DScreen.html">J2DScreen</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">class </span><a class="code hl_class" href="structJ2DAnmTransform.html">J2DAnmTransform</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">class </span><a class="code hl_class" href="structJ2DAnmColorKey.html">J2DAnmColorKey</a>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">class </span><a class="code hl_struct" href="structCPaneMgr.html">CPaneMgr</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">class </span><a class="code hl_struct" href="structdMsgScrnLight__c.html">dMsgScrnLight_c</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structdMsgScrnLight__c.html#ab64e6ec777ee6790322764a352ec162b">   13</a></span>    <span class="comment">/* 80245934 */</span> <a class="code hl_function" href="structdMsgScrnLight__c.html#ab64e6ec777ee6790322764a352ec162b">dMsgScrnLight_c</a>(<a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>, <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structdMsgScrnLight__c.html#a112cf49f5f0f43b1df99216b0dc18a01">   14</a></span>    <span class="comment">/* 80245C04 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structdMsgScrnLight__c.html#a112cf49f5f0f43b1df99216b0dc18a01">draw</a>(<a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>*, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structdMsgScrnLight__c.html#af3f472f2b6f8926c196e7578fe99af9a">   15</a></span>    <span class="comment">/* 80245F90 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structdMsgScrnLight__c.html#af3f472f2b6f8926c196e7578fe99af9a">draw</a>(<a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>*, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_struct" href="structJUtility_1_1TColor.html">JUtility::TColor</a>,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                             <a class="code hl_struct" href="structJUtility_1_1TColor.html">JUtility::TColor</a>);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">/* 802460DC */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structdMsgScrnLight__c.html#ab755ed9556feec71bd205c298dc733b6">drawCommon</a>(<a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="comment">/* 80245B00 */</span> <span class="keyword">virtual</span> <a class="code hl_function" href="structdMsgScrnLight__c.html#a2c6881d11f2947b1589878cbef200fae">~dMsgScrnLight_c</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structdMsgScrnLight__c.html#a72065ef2b1660dffc8ce03b90787dc4c">   21</a></span>    <span class="comment">/* 0x04 */</span> <a class="code hl_struct" href="structJ2DScreen.html">J2DScreen</a>* <a class="code hl_variable" href="structdMsgScrnLight__c.html#a72065ef2b1660dffc8ce03b90787dc4c">mpScreen</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structdMsgScrnLight__c.html#a3dac17c61dfddd2a955423c7dc0fd112">   22</a></span>    <span class="comment">/* 0x08 */</span> <a class="code hl_class" href="structJ2DAnmTransform.html">J2DAnmTransform</a>* <a class="code hl_variable" href="structdMsgScrnLight__c.html#a3dac17c61dfddd2a955423c7dc0fd112">mpBck</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structdMsgScrnLight__c.html#a4d846b74271826fe8b23c2be252a2592">   23</a></span>    <span class="comment">/* 0x0C */</span> <a class="code hl_class" href="structJ2DAnmColorKey.html">J2DAnmColorKey</a>* <a class="code hl_variable" href="structdMsgScrnLight__c.html#a4d846b74271826fe8b23c2be252a2592">mpBpk</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structdMsgScrnLight__c.html#af5b6777902d12c94dc2e2bab7771d382">   24</a></span>    <span class="comment">/* 0x10 */</span> <a class="code hl_struct" href="structCPaneMgr.html">CPaneMgr</a>* <a class="code hl_variable" href="structdMsgScrnLight__c.html#af5b6777902d12c94dc2e2bab7771d382">mpParent_c</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structdMsgScrnLight__c.html#af2da5db6bd2c5be84fb8950e9d284d07">   25</a></span>    <span class="comment">/* 0x14 */</span> <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="code hl_variable" href="structdMsgScrnLight__c.html#af2da5db6bd2c5be84fb8950e9d284d07">mBckFrame</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structdMsgScrnLight__c.html#a76bd363600b36f6e4975b4ddcd41fa06">   26</a></span>    <span class="comment">/* 0x18 */</span> <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="code hl_variable" href="structdMsgScrnLight__c.html#a76bd363600b36f6e4975b4ddcd41fa06">mBpkFrame</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structdMsgScrnLight__c.html#aa35c8d4c3dce088215d769034bc04421">   27</a></span>    <span class="comment">/* 0x1C */</span> <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="code hl_variable" href="structdMsgScrnLight__c.html#aa35c8d4c3dce088215d769034bc04421">mAlpha</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structdMsgScrnLight__c.html#ab4e1a031449a1f4149c214aeca0bfa22">   28</a></span>    <span class="comment">/* 0x20 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="structdMsgScrnLight__c.html#ab4e1a031449a1f4149c214aeca0bfa22">mColorType</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structdMsgScrnLight__c.html#add56be7c4ff78691fef9858651da1789">   29</a></span>    <span class="comment">/* 0x21 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="structdMsgScrnLight__c.html#add56be7c4ff78691fef9858651da1789">field_0x21</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structdMsgScrnLight__c.html#ab904caf151b40cc61661b30420ebd93a">   30</a></span>    <span class="comment">/* 0x22 */</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="structdMsgScrnLight__c.html#ab904caf151b40cc61661b30420ebd93a">mPlayAnim</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>};</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#endif </span><span class="comment">/* MSG_SCRN_D_MSG_SCRN_LIGHT_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aTColor_8h_html"><div class="ttname"><a href="TColor_8h.html">TColor.h</a></div></div>
+<div class="ttc" id="astructCPaneMgr_html"><div class="ttname"><a href="structCPaneMgr.html">CPaneMgr</a></div><div class="ttdef"><b>Definition</b> d_menu_fmap2D.cpp:250</div></div>
+<div class="ttc" id="astructJ2DAnmColorKey_html"><div class="ttname"><a href="structJ2DAnmColorKey.html">J2DAnmColorKey</a></div><div class="ttdef"><b>Definition</b> d_msg_scrn_3select.cpp:46</div></div>
+<div class="ttc" id="astructJ2DAnmTransform_html"><div class="ttname"><a href="structJ2DAnmTransform.html">J2DAnmTransform</a></div><div class="ttdef"><b>Definition</b> d_pane_class_ex.cpp:12</div></div>
+<div class="ttc" id="astructJ2DScreen_html"><div class="ttname"><a href="structJ2DScreen.html">J2DScreen</a></div><div class="ttdef"><b>Definition</b> d_menu_fmap2D.cpp:73</div></div>
+<div class="ttc" id="astructJUtility_1_1TColor_html"><div class="ttname"><a href="structJUtility_1_1TColor.html">JUtility::TColor</a></div><div class="ttdef"><b>Definition</b> d_menu_fmap2D.cpp:211</div></div>
+<div class="ttc" id="astructdMsgScrnLight__c_html"><div class="ttname"><a href="structdMsgScrnLight__c.html">dMsgScrnLight_c</a></div><div class="ttdef"><b>Definition</b> d_gameover.cpp:33</div></div>
+<div class="ttc" id="astructdMsgScrnLight__c_html_a112cf49f5f0f43b1df99216b0dc18a01"><div class="ttname"><a href="structdMsgScrnLight__c.html#a112cf49f5f0f43b1df99216b0dc18a01">dMsgScrnLight_c::draw</a></div><div class="ttdeci">void draw(f32 *, f32, f32, f32, f32, f32, u8)</div></div>
+<div class="ttc" id="astructdMsgScrnLight__c_html_a2c6881d11f2947b1589878cbef200fae"><div class="ttname"><a href="structdMsgScrnLight__c.html#a2c6881d11f2947b1589878cbef200fae">dMsgScrnLight_c::~dMsgScrnLight_c</a></div><div class="ttdeci">virtual ~dMsgScrnLight_c()</div><div class="ttdef"><b>Definition</b> d_msg_scrn_light.cpp:158</div></div>
+<div class="ttc" id="astructdMsgScrnLight__c_html_a3dac17c61dfddd2a955423c7dc0fd112"><div class="ttname"><a href="structdMsgScrnLight__c.html#a3dac17c61dfddd2a955423c7dc0fd112">dMsgScrnLight_c::mpBck</a></div><div class="ttdeci">J2DAnmTransform * mpBck</div><div class="ttdef"><b>Definition</b> d_msg_scrn_light.h:22</div></div>
+<div class="ttc" id="astructdMsgScrnLight__c_html_a4d846b74271826fe8b23c2be252a2592"><div class="ttname"><a href="structdMsgScrnLight__c.html#a4d846b74271826fe8b23c2be252a2592">dMsgScrnLight_c::mpBpk</a></div><div class="ttdeci">J2DAnmColorKey * mpBpk</div><div class="ttdef"><b>Definition</b> d_msg_scrn_light.h:23</div></div>
+<div class="ttc" id="astructdMsgScrnLight__c_html_a72065ef2b1660dffc8ce03b90787dc4c"><div class="ttname"><a href="structdMsgScrnLight__c.html#a72065ef2b1660dffc8ce03b90787dc4c">dMsgScrnLight_c::mpScreen</a></div><div class="ttdeci">J2DScreen * mpScreen</div><div class="ttdef"><b>Definition</b> d_msg_scrn_light.h:21</div></div>
+<div class="ttc" id="astructdMsgScrnLight__c_html_a76bd363600b36f6e4975b4ddcd41fa06"><div class="ttname"><a href="structdMsgScrnLight__c.html#a76bd363600b36f6e4975b4ddcd41fa06">dMsgScrnLight_c::mBpkFrame</a></div><div class="ttdeci">f32 mBpkFrame</div><div class="ttdef"><b>Definition</b> d_msg_scrn_light.h:26</div></div>
+<div class="ttc" id="astructdMsgScrnLight__c_html_aa35c8d4c3dce088215d769034bc04421"><div class="ttname"><a href="structdMsgScrnLight__c.html#aa35c8d4c3dce088215d769034bc04421">dMsgScrnLight_c::mAlpha</a></div><div class="ttdeci">f32 mAlpha</div><div class="ttdef"><b>Definition</b> d_msg_scrn_light.h:27</div></div>
+<div class="ttc" id="astructdMsgScrnLight__c_html_ab4e1a031449a1f4149c214aeca0bfa22"><div class="ttname"><a href="structdMsgScrnLight__c.html#ab4e1a031449a1f4149c214aeca0bfa22">dMsgScrnLight_c::mColorType</a></div><div class="ttdeci">u8 mColorType</div><div class="ttdef"><b>Definition</b> d_msg_scrn_light.h:28</div></div>
+<div class="ttc" id="astructdMsgScrnLight__c_html_ab64e6ec777ee6790322764a352ec162b"><div class="ttname"><a href="structdMsgScrnLight__c.html#ab64e6ec777ee6790322764a352ec162b">dMsgScrnLight_c::dMsgScrnLight_c</a></div><div class="ttdeci">dMsgScrnLight_c(u8, u8)</div></div>
+<div class="ttc" id="astructdMsgScrnLight__c_html_ab755ed9556feec71bd205c298dc733b6"><div class="ttname"><a href="structdMsgScrnLight__c.html#ab755ed9556feec71bd205c298dc733b6">dMsgScrnLight_c::drawCommon</a></div><div class="ttdeci">void drawCommon(f32, f32, f32, f32, f32)</div><div class="ttdef"><b>Definition</b> d_msg_scrn_light.cpp:245</div></div>
+<div class="ttc" id="astructdMsgScrnLight__c_html_ab904caf151b40cc61661b30420ebd93a"><div class="ttname"><a href="structdMsgScrnLight__c.html#ab904caf151b40cc61661b30420ebd93a">dMsgScrnLight_c::mPlayAnim</a></div><div class="ttdeci">bool mPlayAnim</div><div class="ttdef"><b>Definition</b> d_msg_scrn_light.h:30</div></div>
+<div class="ttc" id="astructdMsgScrnLight__c_html_add56be7c4ff78691fef9858651da1789"><div class="ttname"><a href="structdMsgScrnLight__c.html#add56be7c4ff78691fef9858651da1789">dMsgScrnLight_c::field_0x21</a></div><div class="ttdeci">u8 field_0x21</div><div class="ttdef"><b>Definition</b> d_msg_scrn_light.h:29</div></div>
+<div class="ttc" id="astructdMsgScrnLight__c_html_af2da5db6bd2c5be84fb8950e9d284d07"><div class="ttname"><a href="structdMsgScrnLight__c.html#af2da5db6bd2c5be84fb8950e9d284d07">dMsgScrnLight_c::mBckFrame</a></div><div class="ttdeci">f32 mBckFrame</div><div class="ttdef"><b>Definition</b> d_msg_scrn_light.h:25</div></div>
+<div class="ttc" id="astructdMsgScrnLight__c_html_af3f472f2b6f8926c196e7578fe99af9a"><div class="ttname"><a href="structdMsgScrnLight__c.html#af3f472f2b6f8926c196e7578fe99af9a">dMsgScrnLight_c::draw</a></div><div class="ttdeci">void draw(f32 *, f32, f32, f32, f32, f32, f32, JUtility::TColor, JUtility::TColor)</div></div>
+<div class="ttc" id="astructdMsgScrnLight__c_html_af5b6777902d12c94dc2e2bab7771d382"><div class="ttname"><a href="structdMsgScrnLight__c.html#af5b6777902d12c94dc2e2bab7771d382">dMsgScrnLight_c::mpParent_c</a></div><div class="ttdeci">CPaneMgr * mpParent_c</div><div class="ttdef"><b>Definition</b> d_msg_scrn_light.h:24</div></div>
+<div class="ttc" id="atypes_8h_html_a5f6906312a689f27d70e9d086649d3fd"><div class="ttname"><a href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a></div><div class="ttdeci">float f32</div><div class="ttdef"><b>Definition</b> types.h:22</div></div>
+<div class="ttc" id="atypes_8h_html_aed742c436da53c1080638ce6ef7d13de"><div class="ttname"><a href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a></div><div class="ttdeci">unsigned char u8</div><div class="ttdef"><b>Definition</b> types.h:8</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_cc3ad1aed4be3f446fdd7af78322f5bf.html">d</a></li><li class="navelem"><a class="el" href="dir_d6b0d4f987b95c78b3cfcc31952546fc.html">msg</a></li><li class="navelem"><a class="el" href="d__msg__scrn__light_8h.html">d_msg_scrn_light.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

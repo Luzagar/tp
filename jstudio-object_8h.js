@@ -1,0 +1,35 @@
+var jstudio_object_8h =
+[
+    [ "JStudio::TVariableValue", "structJStudio_1_1TVariableValue.html", "structJStudio_1_1TVariableValue" ],
+    [ "JStudio::TVariableValue::TOutput", "structJStudio_1_1TVariableValue_1_1TOutput.html", "structJStudio_1_1TVariableValue_1_1TOutput" ],
+    [ "JStudio::TVariableValue::TOutput_none_", "structJStudio_1_1TVariableValue_1_1TOutput__none__.html", "structJStudio_1_1TVariableValue_1_1TOutput__none__" ],
+    [ "JStudio::TObject", "classJStudio_1_1TObject.html", "classJStudio_1_1TObject" ],
+    [ "JStudio::TAdaptor", "structJStudio_1_1TAdaptor.html", "structJStudio_1_1TAdaptor" ],
+    [ "JStudio::TAdaptor::TSetVariableValue_immediate", "structJStudio_1_1TAdaptor_1_1TSetVariableValue__immediate.html", "structJStudio_1_1TAdaptor_1_1TSetVariableValue__immediate" ],
+    [ "JStudio::TAdaptor_actor", "structJStudio_1_1TAdaptor__actor.html", "structJStudio_1_1TAdaptor__actor" ],
+    [ "JStudio::TObject_actor", "structJStudio_1_1TObject__actor.html", "structJStudio_1_1TObject__actor" ],
+    [ "JStudio::TAdaptor_ambientLight", "structJStudio_1_1TAdaptor__ambientLight.html", "structJStudio_1_1TAdaptor__ambientLight" ],
+    [ "JStudio::TObject_ambientLight", "structJStudio_1_1TObject__ambientLight.html", "structJStudio_1_1TObject__ambientLight" ],
+    [ "JStudio::TAdaptor_camera", "structJStudio_1_1TAdaptor__camera.html", "structJStudio_1_1TAdaptor__camera" ],
+    [ "JStudio::TObject_camera", "structJStudio_1_1TObject__camera.html", "structJStudio_1_1TObject__camera" ],
+    [ "JStudio::TAdaptor_fog", "structJStudio_1_1TAdaptor__fog.html", "structJStudio_1_1TAdaptor__fog" ],
+    [ "JStudio::TObject_fog", "structJStudio_1_1TObject__fog.html", "structJStudio_1_1TObject__fog" ],
+    [ "JStudio::TAdaptor_light", "structJStudio_1_1TAdaptor__light.html", "structJStudio_1_1TAdaptor__light" ],
+    [ "JStudio::TObject_light", "structJStudio_1_1TObject__light.html", "structJStudio_1_1TObject__light" ],
+    [ "JStudio::TAdaptor_message", "structJStudio_1_1TAdaptor__message.html", "structJStudio_1_1TAdaptor__message" ],
+    [ "JStudio::TObject_message", "structJStudio_1_1TObject__message.html", "structJStudio_1_1TObject__message" ],
+    [ "JStudio::TAdaptor_particle", "structJStudio_1_1TAdaptor__particle.html", "structJStudio_1_1TAdaptor__particle" ],
+    [ "JStudio::TObject_particle", "structJStudio_1_1TObject__particle.html", "structJStudio_1_1TObject__particle" ],
+    [ "JStudio::TAdaptor_sound", "structJStudio_1_1TAdaptor__sound.html", "structJStudio_1_1TAdaptor__sound" ],
+    [ "JStudio::TObject_sound", "structJStudio_1_1TObject__sound.html", "structJStudio_1_1TObject__sound" ],
+    [ "GXColor", "jstudio-object_8h.html#a0419d171f4d66c2b2a77bd299ddbdcdc", null ],
+    [ "paragraphFunc", "jstudio-object_8h.html#a3aa5672d8bdd35e5168f4eabf2fe175a", null ],
+    [ "TEOperationData", "jstudio-object_8h.html#a51a0b38eaf25f9657128ffc29b27473e", [
+      [ "UNK_0x1", "jstudio-object_8h.html#a51a0b38eaf25f9657128ffc29b27473ea57ae348cdb5dec5202786d469ba60e9f", null ],
+      [ "UNK_0x2", "jstudio-object_8h.html#a51a0b38eaf25f9657128ffc29b27473eac5fab3f76ae739f496bfe94e1fdcf3b0", null ],
+      [ "UNK_0x3", "jstudio-object_8h.html#a51a0b38eaf25f9657128ffc29b27473eab29e3ad66d27a75b983feeecd3c0b774", null ],
+      [ "UNK_0x10", "jstudio-object_8h.html#a51a0b38eaf25f9657128ffc29b27473eaf28f8dcc073908984f56d91dd1029024", null ],
+      [ "UNK_0x12", "jstudio-object_8h.html#a51a0b38eaf25f9657128ffc29b27473ea5ea93721e75f69d6ca096ad499a41f92", null ],
+      [ "UNK_0x19", "jstudio-object_8h.html#a51a0b38eaf25f9657128ffc29b27473eacf2a924a9b4087b13a160d66f50e8d02", null ]
+    ] ]
+];

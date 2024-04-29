@@ -1,0 +1,38 @@
+var classJUTXfb =
+[
+    [ "EXfbNumber", "classJUTXfb.html#afdd1587f1b4b7c8868f78ac2065e6bc6", [
+      [ "UNK_0", "classJUTXfb.html#afdd1587f1b4b7c8868f78ac2065e6bc6aafeeeac8b28e1cab8d123c1039b5b208", null ],
+      [ "UNK_1", "classJUTXfb.html#afdd1587f1b4b7c8868f78ac2065e6bc6ac2356f7cd8835e304501064c65d1d898", null ],
+      [ "UNK_2", "classJUTXfb.html#afdd1587f1b4b7c8868f78ac2065e6bc6ac366e7d460915b9028731bba36b47ecb", null ],
+      [ "UNK_3", "classJUTXfb.html#afdd1587f1b4b7c8868f78ac2065e6bc6a25efd4df67caef8cfab5861338ce89f0", null ]
+    ] ],
+    [ "JUTXfb", "classJUTXfb.html#a912efd49a24fc81c132250b5f2e8b85d", null ],
+    [ "~JUTXfb", "classJUTXfb.html#a5b3bb9072f90f335296d94be17e6ad39", null ],
+    [ "clearIndex", "classJUTXfb.html#ac6e71adb96bc574e9d8a6a2f62164254", null ],
+    [ "common_init", "classJUTXfb.html#aea07fba440d22097511aaccb3c1f1c9e", null ],
+    [ "createManager", "classJUTXfb.html#a987d5924e626619329b099ae2e28fae3", null ],
+    [ "delXfb", "classJUTXfb.html#affd71da4e6f932bd2d388fd9c0066574", null ],
+    [ "destroyManager", "classJUTXfb.html#a19645fbaaa864331c89d904c0ddc2885", null ],
+    [ "getBufferNum", "classJUTXfb.html#a5557f6eee100a6dc068a09f4be27124b", null ],
+    [ "getDisplayingXfb", "classJUTXfb.html#a10d826ef44e112514f2eae59f65927a3", null ],
+    [ "getDisplayingXfbIndex", "classJUTXfb.html#a14ca3da0a8ca297761d13979f2822699", null ],
+    [ "getDrawingXfb", "classJUTXfb.html#a43d3c9ca785136753efe57cfccf96139", null ],
+    [ "getDrawingXfbIndex", "classJUTXfb.html#a2709b2f7e53bc7582f10a55c9f42fe2b", null ],
+    [ "getDrawnXfb", "classJUTXfb.html#a9b812209a9bd8531f3c3bac48965c864", null ],
+    [ "getDrawnXfbIndex", "classJUTXfb.html#ae4a3d594afc09ed4f4e4aea904ac37c7", null ],
+    [ "getManager", "classJUTXfb.html#a385b930727a7dfeee4b1099b88dccff5", null ],
+    [ "getSDrawingFlag", "classJUTXfb.html#a30ec9000c15ab009f6f40a1a8ff3b143", null ],
+    [ "initiate", "classJUTXfb.html#afd080ec12334931fdea102dc9120e62a", null ],
+    [ "setDisplayingXfbIndex", "classJUTXfb.html#a4f43ae7da291ee5a043389b2959b52c7", null ],
+    [ "setDrawingXfbIndex", "classJUTXfb.html#a3f5853c69b3a968328e1d97812f9b613", null ],
+    [ "setDrawnXfbIndex", "classJUTXfb.html#ad5a0b0f1a774107515f0c2bf82af5dd9", null ],
+    [ "setSDrawingFlag", "classJUTXfb.html#a68857c6ab2852ae50bd1d441e27aa20c", null ],
+    [ "mBuffer", "classJUTXfb.html#af4922d5cbb85afa4ef14fe2bb3b1715f", null ],
+    [ "mBufferNum", "classJUTXfb.html#a3f1869afa038f09523305f489e1da6ec", null ],
+    [ "mDisplayingXfbIndex", "classJUTXfb.html#a46dcb8a874c941775bf71a5c7fbfcc01", null ],
+    [ "mDrawingXfbIndex", "classJUTXfb.html#adbf6238fefbeba47f361d201df6319da", null ],
+    [ "mDrawnXfbIndex", "classJUTXfb.html#a4e4877eecf5e185bcb28d25ebe5f61f8", null ],
+    [ "mSDrawingFlag", "classJUTXfb.html#ad8f80b55bbb8ad5fa128a8417a3ebd01", null ],
+    [ "mXfbAllocated", "classJUTXfb.html#afaa5485a8a173c9c540ca76352c9fc57", null ],
+    [ "sManager", "classJUTXfb.html#a2307543cecfa67aa66076986d2478ed2", null ]
+];

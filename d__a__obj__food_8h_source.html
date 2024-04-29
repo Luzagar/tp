@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: include/rel/d/a/obj/d_a_obj_food/d_a_obj_food.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d__a__obj__food_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">d_a_obj_food.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="d__a__obj__food_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef D_A_OBJ_FOOD_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define D_A_OBJ_FOOD_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="c__phase_8h.html">SSystem/SComponent/c_phase.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="d__bg__s__acch_8h.html">d/bg/d_bg_s_acch.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="d__cc__d_8h.html">d/cc/d_cc_d.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="f__op__actor_8h.html">f_op/f_op_actor.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classobj__food__class.html">    9</a></span><span class="keyword">class </span><a class="code hl_class" href="classobj__food__class.html">obj_food_class</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structfopAc__ac__c.html">fopAc_ac_c</a> {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classobj__food__class.html#a2399ea183e9d3d36e162b4aee2e38633">   11</a></span>    <span class="keyword">enum</span> <a class="code hl_enumeration" href="classobj__food__class.html#a2399ea183e9d3d36e162b4aee2e38633">Type</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classobj__food__class.html#a2399ea183e9d3d36e162b4aee2e38633a436345be0a27cef72f7bc303f2007af7">   12</a></span>        <span class="comment">/* 0 */</span> <a class="code hl_enumvalue" href="classobj__food__class.html#a2399ea183e9d3d36e162b4aee2e38633a436345be0a27cef72f7bc303f2007af7">TYPE_BONE</a>,</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classobj__food__class.html#a2399ea183e9d3d36e162b4aee2e38633a42723cfdd8843d1b9c1448d8b6c06ceb">   13</a></span>        <span class="comment">/* 1 */</span> <a class="code hl_enumvalue" href="classobj__food__class.html#a2399ea183e9d3d36e162b4aee2e38633a42723cfdd8843d1b9c1448d8b6c06ceb">TYPE_BALL</a>,</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    };</div>
+</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classobj__food__class.html#a4089c1e74586a0887886615f9f6541bc">   16</a></span>    <span class="comment">/* 0x568 */</span> <a class="code hl_struct" href="structrequest__of__phase__process__class.html">request_of_phase_process_class</a> <a class="code hl_variable" href="classobj__food__class.html#a4089c1e74586a0887886615f9f6541bc">mPhase</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classobj__food__class.html#a2859f9f077c4254adf58474e270ce476">   17</a></span>    <span class="comment">/* 0x570 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classobj__food__class.html#a2859f9f077c4254adf58474e270ce476">mType</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classobj__food__class.html#aaa8074930ec6a1074907b145a41a3650">   18</a></span>    <span class="comment">/* 0x571 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classobj__food__class.html#aaa8074930ec6a1074907b145a41a3650">mParam1</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classobj__food__class.html#a03d6302ac51a9d6e6e281ca2fd0cb89d">   19</a></span>    <span class="comment">/* 0x572 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classobj__food__class.html#a03d6302ac51a9d6e6e281ca2fd0cb89d">mParam2</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classobj__food__class.html#a94c9472a5f896218167f8e4fffe97bcc">   20</a></span>    <span class="comment">/* 0x574 */</span> <a class="code hl_struct" href="classJ3DModel.html">J3DModel</a>* <a class="code hl_variable" href="classobj__food__class.html#a94c9472a5f896218167f8e4fffe97bcc">mpModel</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classobj__food__class.html#a3f8cc7dce0eb56274aed986db865ae93">   21</a></span>    <span class="comment">/* 0x578 */</span> <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> <a class="code hl_variable" href="classobj__food__class.html#a3f8cc7dce0eb56274aed986db865ae93">mShadowKey</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classobj__food__class.html#a9717c13c4ae91e7b3dbe3957615e4a2c">   22</a></span>    <span class="comment">/* 0x57C */</span> <a class="code hl_typedef" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> <a class="code hl_variable" href="classobj__food__class.html#a9717c13c4ae91e7b3dbe3957615e4a2c">mCounter</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classobj__food__class.html#a40efb4bd36fd2dbe131466e954f543ba">   23</a></span>    <span class="comment">/* 0x57E */</span> <a class="code hl_typedef" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> <a class="code hl_variable" href="classobj__food__class.html#a40efb4bd36fd2dbe131466e954f543ba">mBounces</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classobj__food__class.html#accb6f729857d73c3e95af205dd775ef7">   24</a></span>    <span class="comment">/* 0x580 */</span> <a class="code hl_typedef" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> <a class="code hl_variable" href="classobj__food__class.html#accb6f729857d73c3e95af205dd775ef7">mTimer</a>[4];</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classobj__food__class.html#a990db61bd9c2383a8502d995dcce024d">   25</a></span>    <span class="comment">/* 0x588 */</span> <a class="code hl_struct" href="classcsXyz.html">csXyz</a> <a class="code hl_variable" href="classobj__food__class.html#a990db61bd9c2383a8502d995dcce024d">mRotSpeed</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classobj__food__class.html#a477548200a6f619d13d7adb7b8e35cfa">   26</a></span>    <span class="comment">/* 0x58E */</span> <a class="code hl_typedef" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> <a class="code hl_variable" href="classobj__food__class.html#a477548200a6f619d13d7adb7b8e35cfa">mGroundAngleX</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classobj__food__class.html#a174dc0030c1c6e9f684d7257235c6b3b">   27</a></span>    <span class="comment">/* 0x590 */</span> <a class="code hl_typedef" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> <a class="code hl_variable" href="classobj__food__class.html#a174dc0030c1c6e9f684d7257235c6b3b">mGroundAngleZ</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classobj__food__class.html#af37806860ca49ac765a855ffacf0191c">   28</a></span>    <span class="comment">/* 0x594 */</span> <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="code hl_variable" href="classobj__food__class.html#af37806860ca49ac765a855ffacf0191c">mOldSpeedY</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classobj__food__class.html#a4bb5edc778c6060888b78ab56704021d">   29</a></span>    <span class="comment">/* 0x598 */</span> <a class="code hl_struct" href="classZ2SoundObjSimple.html">Z2SoundObjSimple</a> <a class="code hl_variable" href="classobj__food__class.html#a4bb5edc778c6060888b78ab56704021d">mSound</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classobj__food__class.html#a21937b1822389fa4c4e829b95fcbc6b1">   30</a></span>    <span class="comment">/* 0x5B8 */</span> <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> <a class="code hl_variable" href="classobj__food__class.html#a21937b1822389fa4c4e829b95fcbc6b1">mParticleKey</a>[4];</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classobj__food__class.html#ad1eebdffa6c4e743b0bd7149e945d7a4">   31</a></span>    <span class="comment">/* 0x5C8 */</span> <a class="code hl_struct" href="classdBgS__AcchCir.html">dBgS_AcchCir</a> <a class="code hl_variable" href="classobj__food__class.html#ad1eebdffa6c4e743b0bd7149e945d7a4">mAcchCir</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classobj__food__class.html#a70f58bec00b7eb45479cbd283f597269">   32</a></span>    <span class="comment">/* 0x608 */</span> <a class="code hl_struct" href="classdBgS__ObjAcch.html">dBgS_ObjAcch</a> <a class="code hl_variable" href="classobj__food__class.html#a70f58bec00b7eb45479cbd283f597269">mAcch</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classobj__food__class.html#a4619a028a2801a71b9611f366523457d">   33</a></span>    <span class="comment">/* 0x7E0 */</span> <a class="code hl_struct" href="structdCcD__Stts.html">dCcD_Stts</a> <a class="code hl_variable" href="classobj__food__class.html#a4619a028a2801a71b9611f366523457d">mCcStts</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classobj__food__class.html#a81bdd8c8426648c12e41d29a06a12787">   34</a></span>    <span class="comment">/* 0x81C */</span> <a class="code hl_struct" href="structdCcD__Sph.html">dCcD_Sph</a> <a class="code hl_variable" href="classobj__food__class.html#a81bdd8c8426648c12e41d29a06a12787">mCcSph</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classobj__food__class.html#a503ecbc64e310f2b0b983fae7b84d633">   35</a></span>    <span class="comment">/* 0x954 */</span> <a class="code hl_struct" href="structdCcD__Sph.html">dCcD_Sph</a> <a class="code hl_variable" href="classobj__food__class.html#a503ecbc64e310f2b0b983fae7b84d633">mAtSph</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classobj__food__class.html#a02a0e39525ab0e99b7501dc884a26114">   36</a></span>    <span class="comment">/* 0xA8C */</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="classobj__food__class.html#a02a0e39525ab0e99b7501dc884a26114">mHIOInit</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>};</div>
+</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="d__a__obj__food_8h.html#a80615c98e332a409173875fda81dd0ef">   39</a></span><a class="code hl_function" href="d__a__obj__food_8h.html#a80615c98e332a409173875fda81dd0ef">STATIC_ASSERT</a>(<span class="keyword">sizeof</span>(<a class="code hl_class" href="classobj__food__class.html">obj_food_class</a>) == 0xA90);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="};">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structdaObj__Food__HIO__c.html">   41</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structdaObj__Food__HIO__c.html">daObj_Food_HIO_c</a> {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">/* 80BF070C */</span> <a class="code hl_function" href="structdaObj__Food__HIO__c.html#a43dea06c50686a0190f9d851b22e4b69">daObj_Food_HIO_c</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structdaObj__Food__HIO__c.html#a464b10324c24160ffef76bee63c58e47">   43</a></span>    <span class="comment">/* 80BF1CE8 */</span> <span class="keyword">virtual</span> <a class="code hl_function" href="structdaObj__Food__HIO__c.html#a464b10324c24160ffef76bee63c58e47">~daObj_Food_HIO_c</a>() {}</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structdaObj__Food__HIO__c.html#a455dbf83239f1eab2fa3bf31d8140c06">   45</a></span>    <span class="comment">/* 0x4 */</span> <a class="code hl_typedef" href="types_8h.html#a151f780fb455885061d3b77ec1c90c03">s8</a> <a class="code hl_variable" href="structdaObj__Food__HIO__c.html#a455dbf83239f1eab2fa3bf31d8140c06">field_0x4</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="structdaObj__Food__HIO__c.html#aef2bd53ab7d6b25b4cc932f28e4fc01b">   46</a></span>    <span class="comment">/* 0x8 */</span> <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="code hl_variable" href="structdaObj__Food__HIO__c.html#aef2bd53ab7d6b25b4cc932f28e4fc01b">mBoneScale</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>};</div>
+</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="d__a__obj__food_8h.html#a58f46d68f14f6e6d7fa213a0c8c2891a">   49</a></span><a class="code hl_function" href="d__a__obj__food_8h.html#a80615c98e332a409173875fda81dd0ef">STATIC_ASSERT</a>(<span class="keyword">sizeof</span>(<a class="code hl_struct" href="structdaObj__Food__HIO__c.html">daObj_Food_HIO_c</a>) == 0xC);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#endif </span><span class="comment">/* D_A_OBJ_FOOD_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="ac__phase_8h_html"><div class="ttname"><a href="c__phase_8h.html">c_phase.h</a></div></div>
+<div class="ttc" id="aclassJ3DModel_html"><div class="ttname"><a href="classJ3DModel.html">J3DModel</a></div><div class="ttdef"><b>Definition</b> J3DModel.h:42</div></div>
+<div class="ttc" id="aclassZ2SoundObjSimple_html"><div class="ttname"><a href="classZ2SoundObjSimple.html">Z2SoundObjSimple</a></div><div class="ttdef"><b>Definition</b> Z2SoundObject.h:34</div></div>
+<div class="ttc" id="aclasscsXyz_html"><div class="ttname"><a href="classcsXyz.html">csXyz</a></div><div class="ttdef"><b>Definition</b> c_sxyz.h:6</div></div>
+<div class="ttc" id="aclassdBgS__AcchCir_html"><div class="ttname"><a href="classdBgS__AcchCir.html">dBgS_AcchCir</a></div><div class="ttdef"><b>Definition</b> d_bg_s_acch.h:14</div></div>
+<div class="ttc" id="aclassdBgS__ObjAcch_html"><div class="ttname"><a href="classdBgS__ObjAcch.html">dBgS_ObjAcch</a></div><div class="ttdef"><b>Definition</b> d_bg_s_acch.h:217</div></div>
+<div class="ttc" id="aclassobj__food__class_html"><div class="ttname"><a href="classobj__food__class.html">obj_food_class</a></div><div class="ttdef"><b>Definition</b> d_a_obj_food.h:9</div></div>
+<div class="ttc" id="aclassobj__food__class_html_a02a0e39525ab0e99b7501dc884a26114"><div class="ttname"><a href="classobj__food__class.html#a02a0e39525ab0e99b7501dc884a26114">obj_food_class::mHIOInit</a></div><div class="ttdeci">bool mHIOInit</div><div class="ttdef"><b>Definition</b> d_a_obj_food.h:36</div></div>
+<div class="ttc" id="aclassobj__food__class_html_a03d6302ac51a9d6e6e281ca2fd0cb89d"><div class="ttname"><a href="classobj__food__class.html#a03d6302ac51a9d6e6e281ca2fd0cb89d">obj_food_class::mParam2</a></div><div class="ttdeci">u8 mParam2</div><div class="ttdef"><b>Definition</b> d_a_obj_food.h:19</div></div>
+<div class="ttc" id="aclassobj__food__class_html_a174dc0030c1c6e9f684d7257235c6b3b"><div class="ttname"><a href="classobj__food__class.html#a174dc0030c1c6e9f684d7257235c6b3b">obj_food_class::mGroundAngleZ</a></div><div class="ttdeci">s16 mGroundAngleZ</div><div class="ttdef"><b>Definition</b> d_a_obj_food.h:27</div></div>
+<div class="ttc" id="aclassobj__food__class_html_a21937b1822389fa4c4e829b95fcbc6b1"><div class="ttname"><a href="classobj__food__class.html#a21937b1822389fa4c4e829b95fcbc6b1">obj_food_class::mParticleKey</a></div><div class="ttdeci">u32 mParticleKey[4]</div><div class="ttdef"><b>Definition</b> d_a_obj_food.h:30</div></div>
+<div class="ttc" id="aclassobj__food__class_html_a2399ea183e9d3d36e162b4aee2e38633"><div class="ttname"><a href="classobj__food__class.html#a2399ea183e9d3d36e162b4aee2e38633">obj_food_class::Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition</b> d_a_obj_food.h:11</div></div>
+<div class="ttc" id="aclassobj__food__class_html_a2399ea183e9d3d36e162b4aee2e38633a42723cfdd8843d1b9c1448d8b6c06ceb"><div class="ttname"><a href="classobj__food__class.html#a2399ea183e9d3d36e162b4aee2e38633a42723cfdd8843d1b9c1448d8b6c06ceb">obj_food_class::TYPE_BALL</a></div><div class="ttdeci">@ TYPE_BALL</div><div class="ttdef"><b>Definition</b> d_a_obj_food.h:13</div></div>
+<div class="ttc" id="aclassobj__food__class_html_a2399ea183e9d3d36e162b4aee2e38633a436345be0a27cef72f7bc303f2007af7"><div class="ttname"><a href="classobj__food__class.html#a2399ea183e9d3d36e162b4aee2e38633a436345be0a27cef72f7bc303f2007af7">obj_food_class::TYPE_BONE</a></div><div class="ttdeci">@ TYPE_BONE</div><div class="ttdef"><b>Definition</b> d_a_obj_food.h:12</div></div>
+<div class="ttc" id="aclassobj__food__class_html_a2859f9f077c4254adf58474e270ce476"><div class="ttname"><a href="classobj__food__class.html#a2859f9f077c4254adf58474e270ce476">obj_food_class::mType</a></div><div class="ttdeci">u8 mType</div><div class="ttdef"><b>Definition</b> d_a_obj_food.h:17</div></div>
+<div class="ttc" id="aclassobj__food__class_html_a3f8cc7dce0eb56274aed986db865ae93"><div class="ttname"><a href="classobj__food__class.html#a3f8cc7dce0eb56274aed986db865ae93">obj_food_class::mShadowKey</a></div><div class="ttdeci">u32 mShadowKey</div><div class="ttdef"><b>Definition</b> d_a_obj_food.h:21</div></div>
+<div class="ttc" id="aclassobj__food__class_html_a4089c1e74586a0887886615f9f6541bc"><div class="ttname"><a href="classobj__food__class.html#a4089c1e74586a0887886615f9f6541bc">obj_food_class::mPhase</a></div><div class="ttdeci">request_of_phase_process_class mPhase</div><div class="ttdef"><b>Definition</b> d_a_obj_food.h:16</div></div>
+<div class="ttc" id="aclassobj__food__class_html_a40efb4bd36fd2dbe131466e954f543ba"><div class="ttname"><a href="classobj__food__class.html#a40efb4bd36fd2dbe131466e954f543ba">obj_food_class::mBounces</a></div><div class="ttdeci">s16 mBounces</div><div class="ttdef"><b>Definition</b> d_a_obj_food.h:23</div></div>
+<div class="ttc" id="aclassobj__food__class_html_a4619a028a2801a71b9611f366523457d"><div class="ttname"><a href="classobj__food__class.html#a4619a028a2801a71b9611f366523457d">obj_food_class::mCcStts</a></div><div class="ttdeci">dCcD_Stts mCcStts</div><div class="ttdef"><b>Definition</b> d_a_obj_food.h:33</div></div>
+<div class="ttc" id="aclassobj__food__class_html_a477548200a6f619d13d7adb7b8e35cfa"><div class="ttname"><a href="classobj__food__class.html#a477548200a6f619d13d7adb7b8e35cfa">obj_food_class::mGroundAngleX</a></div><div class="ttdeci">s16 mGroundAngleX</div><div class="ttdef"><b>Definition</b> d_a_obj_food.h:26</div></div>
+<div class="ttc" id="aclassobj__food__class_html_a4bb5edc778c6060888b78ab56704021d"><div class="ttname"><a href="classobj__food__class.html#a4bb5edc778c6060888b78ab56704021d">obj_food_class::mSound</a></div><div class="ttdeci">Z2SoundObjSimple mSound</div><div class="ttdef"><b>Definition</b> d_a_obj_food.h:29</div></div>
+<div class="ttc" id="aclassobj__food__class_html_a503ecbc64e310f2b0b983fae7b84d633"><div class="ttname"><a href="classobj__food__class.html#a503ecbc64e310f2b0b983fae7b84d633">obj_food_class::mAtSph</a></div><div class="ttdeci">dCcD_Sph mAtSph</div><div class="ttdef"><b>Definition</b> d_a_obj_food.h:35</div></div>
+<div class="ttc" id="aclassobj__food__class_html_a70f58bec00b7eb45479cbd283f597269"><div class="ttname"><a href="classobj__food__class.html#a70f58bec00b7eb45479cbd283f597269">obj_food_class::mAcch</a></div><div class="ttdeci">dBgS_ObjAcch mAcch</div><div class="ttdef"><b>Definition</b> d_a_obj_food.h:32</div></div>
+<div class="ttc" id="aclassobj__food__class_html_a81bdd8c8426648c12e41d29a06a12787"><div class="ttname"><a href="classobj__food__class.html#a81bdd8c8426648c12e41d29a06a12787">obj_food_class::mCcSph</a></div><div class="ttdeci">dCcD_Sph mCcSph</div><div class="ttdef"><b>Definition</b> d_a_obj_food.h:34</div></div>
+<div class="ttc" id="aclassobj__food__class_html_a94c9472a5f896218167f8e4fffe97bcc"><div class="ttname"><a href="classobj__food__class.html#a94c9472a5f896218167f8e4fffe97bcc">obj_food_class::mpModel</a></div><div class="ttdeci">J3DModel * mpModel</div><div class="ttdef"><b>Definition</b> d_a_obj_food.h:20</div></div>
+<div class="ttc" id="aclassobj__food__class_html_a9717c13c4ae91e7b3dbe3957615e4a2c"><div class="ttname"><a href="classobj__food__class.html#a9717c13c4ae91e7b3dbe3957615e4a2c">obj_food_class::mCounter</a></div><div class="ttdeci">s16 mCounter</div><div class="ttdef"><b>Definition</b> d_a_obj_food.h:22</div></div>
+<div class="ttc" id="aclassobj__food__class_html_a990db61bd9c2383a8502d995dcce024d"><div class="ttname"><a href="classobj__food__class.html#a990db61bd9c2383a8502d995dcce024d">obj_food_class::mRotSpeed</a></div><div class="ttdeci">csXyz mRotSpeed</div><div class="ttdef"><b>Definition</b> d_a_obj_food.h:25</div></div>
+<div class="ttc" id="aclassobj__food__class_html_aaa8074930ec6a1074907b145a41a3650"><div class="ttname"><a href="classobj__food__class.html#aaa8074930ec6a1074907b145a41a3650">obj_food_class::mParam1</a></div><div class="ttdeci">u8 mParam1</div><div class="ttdef"><b>Definition</b> d_a_obj_food.h:18</div></div>
+<div class="ttc" id="aclassobj__food__class_html_accb6f729857d73c3e95af205dd775ef7"><div class="ttname"><a href="classobj__food__class.html#accb6f729857d73c3e95af205dd775ef7">obj_food_class::mTimer</a></div><div class="ttdeci">s16 mTimer[4]</div><div class="ttdef"><b>Definition</b> d_a_obj_food.h:24</div></div>
+<div class="ttc" id="aclassobj__food__class_html_ad1eebdffa6c4e743b0bd7149e945d7a4"><div class="ttname"><a href="classobj__food__class.html#ad1eebdffa6c4e743b0bd7149e945d7a4">obj_food_class::mAcchCir</a></div><div class="ttdeci">dBgS_AcchCir mAcchCir</div><div class="ttdef"><b>Definition</b> d_a_obj_food.h:31</div></div>
+<div class="ttc" id="aclassobj__food__class_html_af37806860ca49ac765a855ffacf0191c"><div class="ttname"><a href="classobj__food__class.html#af37806860ca49ac765a855ffacf0191c">obj_food_class::mOldSpeedY</a></div><div class="ttdeci">f32 mOldSpeedY</div><div class="ttdef"><b>Definition</b> d_a_obj_food.h:28</div></div>
+<div class="ttc" id="ad__a__obj__food_8h_html_a80615c98e332a409173875fda81dd0ef"><div class="ttname"><a href="d__a__obj__food_8h.html#a80615c98e332a409173875fda81dd0ef">STATIC_ASSERT</a></div><div class="ttdeci">STATIC_ASSERT(sizeof(obj_food_class)==0xA90)</div></div>
+<div class="ttc" id="ad__bg__s__acch_8h_html"><div class="ttname"><a href="d__bg__s__acch_8h.html">d_bg_s_acch.h</a></div></div>
+<div class="ttc" id="ad__cc__d_8h_html"><div class="ttname"><a href="d__cc__d_8h.html">d_cc_d.h</a></div></div>
+<div class="ttc" id="af__op__actor_8h_html"><div class="ttname"><a href="f__op__actor_8h.html">f_op_actor.h</a></div></div>
+<div class="ttc" id="astructdCcD__Sph_html"><div class="ttname"><a href="structdCcD__Sph.html">dCcD_Sph</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:55</div></div>
+<div class="ttc" id="astructdCcD__Stts_html"><div class="ttname"><a href="structdCcD__Stts.html">dCcD_Stts</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:24</div></div>
+<div class="ttc" id="astructdaObj__Food__HIO__c_html"><div class="ttname"><a href="structdaObj__Food__HIO__c.html">daObj_Food_HIO_c</a></div><div class="ttdef"><b>Definition</b> d_a_obj_food.h:41</div></div>
+<div class="ttc" id="astructdaObj__Food__HIO__c_html_a43dea06c50686a0190f9d851b22e4b69"><div class="ttname"><a href="structdaObj__Food__HIO__c.html#a43dea06c50686a0190f9d851b22e4b69">daObj_Food_HIO_c::daObj_Food_HIO_c</a></div><div class="ttdeci">daObj_Food_HIO_c()</div><div class="ttdef"><b>Definition</b> d_a_obj_food.cpp:22</div></div>
+<div class="ttc" id="astructdaObj__Food__HIO__c_html_a455dbf83239f1eab2fa3bf31d8140c06"><div class="ttname"><a href="structdaObj__Food__HIO__c.html#a455dbf83239f1eab2fa3bf31d8140c06">daObj_Food_HIO_c::field_0x4</a></div><div class="ttdeci">s8 field_0x4</div><div class="ttdef"><b>Definition</b> d_a_obj_food.h:45</div></div>
+<div class="ttc" id="astructdaObj__Food__HIO__c_html_a464b10324c24160ffef76bee63c58e47"><div class="ttname"><a href="structdaObj__Food__HIO__c.html#a464b10324c24160ffef76bee63c58e47">daObj_Food_HIO_c::~daObj_Food_HIO_c</a></div><div class="ttdeci">virtual ~daObj_Food_HIO_c()</div><div class="ttdef"><b>Definition</b> d_a_obj_food.h:43</div></div>
+<div class="ttc" id="astructdaObj__Food__HIO__c_html_aef2bd53ab7d6b25b4cc932f28e4fc01b"><div class="ttname"><a href="structdaObj__Food__HIO__c.html#aef2bd53ab7d6b25b4cc932f28e4fc01b">daObj_Food_HIO_c::mBoneScale</a></div><div class="ttdeci">f32 mBoneScale</div><div class="ttdef"><b>Definition</b> d_a_obj_food.h:46</div></div>
+<div class="ttc" id="astructfopAc__ac__c_html"><div class="ttname"><a href="structfopAc__ac__c.html">fopAc_ac_c</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:14</div></div>
+<div class="ttc" id="astructrequest__of__phase__process__class_html"><div class="ttname"><a href="structrequest__of__phase__process__class.html">request_of_phase_process_class</a></div><div class="ttdef"><b>Definition</b> c_phase.h:17</div></div>
+<div class="ttc" id="atypes_8h_html_a151f780fb455885061d3b77ec1c90c03"><div class="ttname"><a href="types_8h.html#a151f780fb455885061d3b77ec1c90c03">s8</a></div><div class="ttdeci">signed char s8</div><div class="ttdef"><b>Definition</b> types.h:4</div></div>
+<div class="ttc" id="atypes_8h_html_a2caf5cd7bcdbe1eefa727f44ffb10bac"><div class="ttname"><a href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a></div><div class="ttdeci">unsigned long u32</div><div class="ttdef"><b>Definition</b> types.h:10</div></div>
+<div class="ttc" id="atypes_8h_html_a5f6906312a689f27d70e9d086649d3fd"><div class="ttname"><a href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a></div><div class="ttdeci">float f32</div><div class="ttdef"><b>Definition</b> types.h:22</div></div>
+<div class="ttc" id="atypes_8h_html_a5ffa4f640862b25ba6d4f635b78bdbe1"><div class="ttname"><a href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a></div><div class="ttdeci">signed short s16</div><div class="ttdef"><b>Definition</b> types.h:5</div></div>
+<div class="ttc" id="atypes_8h_html_aed742c436da53c1080638ce6ef7d13de"><div class="ttname"><a href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a></div><div class="ttdeci">unsigned char u8</div><div class="ttdef"><b>Definition</b> types.h:8</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d1e95842203b094e4f127fa85baf24b5.html">rel</a></li><li class="navelem"><a class="el" href="dir_244336746419795862f93731f1699860.html">d</a></li><li class="navelem"><a class="el" href="dir_b81c1d082692bb1b2b34ed3bfe8a0f4a.html">a</a></li><li class="navelem"><a class="el" href="dir_837b79828d4d0cae6e2581b9ebbbcbf8.html">obj</a></li><li class="navelem"><a class="el" href="dir_00c8171d73626d0931251cd9f3363e2b.html">d_a_obj_food</a></li><li class="navelem"><a class="el" href="d__a__obj__food_8h.html">d_a_obj_food.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

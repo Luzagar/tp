@@ -1,0 +1,412 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: mDoDvdThd_callback_c Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classmDoDvdThd__callback__c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="classmDoDvdThd__callback__c-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">mDoDvdThd_callback_c Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="m__Do__dvd__thread_8h_source.html">m_Do_dvd_thread.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for mDoDvdThd_callback_c:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classmDoDvdThd__callback__c__inherit__graph.svg" width="183" height="184"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Collaboration diagram for mDoDvdThd_callback_c:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classmDoDvdThd__callback__c__coll__graph.svg" width="243" height="191"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:abdd00369a86c178a48fe4668603e2628" id="r_abdd00369a86c178a48fe4668603e2628"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">virtual</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmDoDvdThd__callback__c.html#abdd00369a86c178a48fe4668603e2628">~mDoDvdThd_callback_c</a> ()</td></tr>
+<tr class="separator:abdd00369a86c178a48fe4668603e2628"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af391d9372483c8ff482f8ac5c1da10bd" id="r_af391d9372483c8ff482f8ac5c1da10bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmDoDvdThd__callback__c.html#af391d9372483c8ff482f8ac5c1da10bd">mDoDvdThd_callback_c</a> (<a class="el" href="m__Do__dvd__thread_8h.html#a9603b4d3c483b4a839598edbe21b06be">mDoDvdThd_callback_func</a>, <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *)</td></tr>
+<tr class="separator:af391d9372483c8ff482f8ac5c1da10bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa8012ddaa41a512ace3ef82f96caf95" id="r_afa8012ddaa41a512ace3ef82f96caf95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">virtual</a> <a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmDoDvdThd__callback__c.html#afa8012ddaa41a512ace3ef82f96caf95">execute</a> ()</td></tr>
+<tr class="separator:afa8012ddaa41a512ace3ef82f96caf95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classmDoDvdThd__command__c"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmDoDvdThd__command__c')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmDoDvdThd__command__c.html">mDoDvdThd_command_c</a></td></tr>
+<tr class="memitem:a5e0ddf966aec396b6d0d3113fa63d058 inherit pub_methods_classmDoDvdThd__command__c" id="r_a5e0ddf966aec396b6d0d3113fa63d058"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">virtual</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmDoDvdThd__command__c.html#a5e0ddf966aec396b6d0d3113fa63d058">~mDoDvdThd_command_c</a> ()</td></tr>
+<tr class="separator:a5e0ddf966aec396b6d0d3113fa63d058 inherit pub_methods_classmDoDvdThd__command__c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a7100ef64384d867f0901606cb9360f inherit pub_methods_classmDoDvdThd__command__c" id="r_a5a7100ef64384d867f0901606cb9360f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmDoDvdThd__command__c.html#a5a7100ef64384d867f0901606cb9360f">mDoDvdThd_command_c</a> ()</td></tr>
+<tr class="separator:a5a7100ef64384d867f0901606cb9360f inherit pub_methods_classmDoDvdThd__command__c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f1637a931dce9e26c635ec64fa9d32f inherit pub_methods_classmDoDvdThd__command__c" id="r_a6f1637a931dce9e26c635ec64fa9d32f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmDoDvdThd__command__c.html#a6f1637a931dce9e26c635ec64fa9d32f">sync</a> ()</td></tr>
+<tr class="separator:a6f1637a931dce9e26c635ec64fa9d32f inherit pub_methods_classmDoDvdThd__command__c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65e4606b04636e787ffabf7163b567b7 inherit pub_methods_classmDoDvdThd__command__c" id="r_a65e4606b04636e787ffabf7163b567b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmDoDvdThd__command__c.html#a65e4606b04636e787ffabf7163b567b7">destroy</a> ()</td></tr>
+<tr class="separator:a65e4606b04636e787ffabf7163b567b7 inherit pub_methods_classmDoDvdThd__command__c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a8d41bbbfc53a917347a604bd40f8a606" id="r_a8d41bbbfc53a917347a604bd40f8a606"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="classmDoDvdThd__callback__c.html">mDoDvdThd_callback_c</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmDoDvdThd__callback__c.html#a8d41bbbfc53a917347a604bd40f8a606">create</a> (<a class="el" href="m__Do__dvd__thread_8h.html#a9603b4d3c483b4a839598edbe21b06be">mDoDvdThd_callback_func</a>, <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *)</td></tr>
+<tr class="separator:a8d41bbbfc53a917347a604bd40f8a606"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:afbbbfe7c67ab996b42578de6d7e43254" id="r_afbbbfe7c67ab996b42578de6d7e43254"><td class="memItemLeft" align="right" valign="top"><a class="el" href="m__Do__dvd__thread_8h.html#a9603b4d3c483b4a839598edbe21b06be">mDoDvdThd_callback_func</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmDoDvdThd__callback__c.html#afbbbfe7c67ab996b42578de6d7e43254">mFunction</a></td></tr>
+<tr class="separator:afbbbfe7c67ab996b42578de6d7e43254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae744e63d4a7b20b0737b3be00987944d" id="r_ae744e63d4a7b20b0737b3be00987944d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmDoDvdThd__callback__c.html#ae744e63d4a7b20b0737b3be00987944d">mData</a></td></tr>
+<tr class="separator:ae744e63d4a7b20b0737b3be00987944d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed826b2adbda2809170e8b6382b478f9" id="r_aed826b2adbda2809170e8b6382b478f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmDoDvdThd__callback__c.html#aed826b2adbda2809170e8b6382b478f9">mResult</a></td></tr>
+<tr class="separator:aed826b2adbda2809170e8b6382b478f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_attribs_classmDoDvdThd__command__c"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classmDoDvdThd__command__c')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classmDoDvdThd__command__c.html">mDoDvdThd_command_c</a></td></tr>
+<tr class="memitem:a9cd26f40b11a62137f02a70e2464d3cf inherit pub_attribs_classmDoDvdThd__command__c" id="r_a9cd26f40b11a62137f02a70e2464d3cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmDoDvdThd__command__c.html#a9cd26f40b11a62137f02a70e2464d3cf">mIsDone</a></td></tr>
+<tr class="separator:a9cd26f40b11a62137f02a70e2464d3cf inherit pub_attribs_classmDoDvdThd__command__c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_structnode__class"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_structnode__class')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="structnode__class.html">node_class</a></td></tr>
+<tr class="memitem:a03aab85f7f7bb8e90205dd63a2a1e793 inherit pub_attribs_structnode__class" id="r_a03aab85f7f7bb8e90205dd63a2a1e793"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">struct</a> <a class="el" href="structnode__class.html">node_class</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnode__class.html#a03aab85f7f7bb8e90205dd63a2a1e793">mpPrevNode</a></td></tr>
+<tr class="separator:a03aab85f7f7bb8e90205dd63a2a1e793 inherit pub_attribs_structnode__class"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d3b935e3ab845e8e58b0a789a286c83 inherit pub_attribs_structnode__class" id="r_a1d3b935e3ab845e8e58b0a789a286c83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnode__class.html#a1d3b935e3ab845e8e58b0a789a286c83">mpData</a></td></tr>
+<tr class="separator:a1d3b935e3ab845e8e58b0a789a286c83 inherit pub_attribs_structnode__class"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afec6a1aa4165211ef1d83061319a84b7 inherit pub_attribs_structnode__class" id="r_afec6a1aa4165211ef1d83061319a84b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">struct</a> <a class="el" href="structnode__class.html">node_class</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnode__class.html#afec6a1aa4165211ef1d83061319a84b7">mpNextNode</a></td></tr>
+<tr class="separator:afec6a1aa4165211ef1d83061319a84b7 inherit pub_attribs_structnode__class"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="abdd00369a86c178a48fe4668603e2628" name="abdd00369a86c178a48fe4668603e2628"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdd00369a86c178a48fe4668603e2628">&#9670;&#160;</a></span>~mDoDvdThd_callback_c()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">mDoDvdThd_callback_c::~mDoDvdThd_callback_c </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af391d9372483c8ff482f8ac5c1da10bd" name="af391d9372483c8ff482f8ac5c1da10bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af391d9372483c8ff482f8ac5c1da10bd">&#9670;&#160;</a></span>mDoDvdThd_callback_c()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">mDoDvdThd_callback_c::mDoDvdThd_callback_c </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="m__Do__dvd__thread_8h.html#a9603b4d3c483b4a839598edbe21b06be">mDoDvdThd_callback_func</a>&#160;</td>
+          <td class="paramname"><em>pFunc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td>
+          <td class="paramname"><em>pData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8d41bbbfc53a917347a604bd40f8a606" name="a8d41bbbfc53a917347a604bd40f8a606"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d41bbbfc53a917347a604bd40f8a606">&#9670;&#160;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmDoDvdThd__callback__c.html">mDoDvdThd_callback_c</a> * mDoDvdThd_callback_c::create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="m__Do__dvd__thread_8h.html#a9603b4d3c483b4a839598edbe21b06be">mDoDvdThd_callback_func</a>&#160;</td>
+          <td class="paramname"><em>pFunc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td>
+          <td class="paramname"><em>pData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afa8012ddaa41a512ace3ef82f96caf95" name="afa8012ddaa41a512ace3ef82f96caf95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa8012ddaa41a512ace3ef82f96caf95">&#9670;&#160;</a></span>execute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> mDoDvdThd_callback_c::execute </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classmDoDvdThd__command__c.html#ac8d0a670ce727aa56ba60f8706bfa276">mDoDvdThd_command_c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae744e63d4a7b20b0737b3be00987944d" name="ae744e63d4a7b20b0737b3be00987944d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae744e63d4a7b20b0737b3be00987944d">&#9670;&#160;</a></span>mData</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>* mDoDvdThd_callback_c::mData</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afbbbfe7c67ab996b42578de6d7e43254" name="afbbbfe7c67ab996b42578de6d7e43254"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbbbfe7c67ab996b42578de6d7e43254">&#9670;&#160;</a></span>mFunction</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="m__Do__dvd__thread_8h.html#a9603b4d3c483b4a839598edbe21b06be">mDoDvdThd_callback_func</a> mDoDvdThd_callback_c::mFunction</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed826b2adbda2809170e8b6382b478f9" name="aed826b2adbda2809170e8b6382b478f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed826b2adbda2809170e8b6382b478f9">&#9670;&#160;</a></span>mResult</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>* mDoDvdThd_callback_c::mResult</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>include/m_Do/<a class="el" href="m__Do__dvd__thread_8h_source.html">m_Do_dvd_thread.h</a></li>
+<li>src/m_Do/<a class="el" href="m__Do__dvd__thread_8cpp.html">m_Do_dvd_thread.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classmDoDvdThd__callback__c.html">mDoDvdThd_callback_c</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

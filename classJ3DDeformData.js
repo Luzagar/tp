@@ -1,0 +1,26 @@
+var classJ3DDeformData =
+[
+    [ "J3DDeformData", "classJ3DDeformData.html#acb65bafcdb4a7e01903aed2ee1cf1a31", null ],
+    [ "deform", "classJ3DDeformData.html#a97fe782c86be3e0e9d1a11523d1bfc67", null ],
+    [ "deform", "classJ3DDeformData.html#a93c8520825f104808d894e790d5cbb05", null ],
+    [ "getClusterKeyNum", "classJ3DDeformData.html#afec5787343d9c0d8aab67333369404f6", null ],
+    [ "getClusterKeyPointer", "classJ3DDeformData.html#a69ef996b279b69b921105a880eec4419", null ],
+    [ "getClusterNum", "classJ3DDeformData.html#a49a9dd1b0fa612d8b7d4e729d14598fa", null ],
+    [ "getClusterPointer", "classJ3DDeformData.html#a7c356c6f38a67980cfa8b4b57138840f", null ],
+    [ "getVtxNrm", "classJ3DDeformData.html#ace299e482b0367ce40fe0ef34c6dc34e", null ],
+    [ "getVtxPos", "classJ3DDeformData.html#ac1b228349c689085b479eaf03eb30b6b", null ],
+    [ "offAllFlag", "classJ3DDeformData.html#aa64b40825b9dce837bad7f90867ea9e7", null ],
+    [ "setAnm", "classJ3DDeformData.html#ac62d218ee846a7019b60b8564b3c168f", null ],
+    [ "mClusterKeyName", "classJ3DDeformData.html#aa36b71d447fdbb87ed2d0bd04b3a7175", null ],
+    [ "mClusterKeyNum", "classJ3DDeformData.html#a960f6b1465ea75783da650b1896eb967", null ],
+    [ "mClusterKeyPointer", "classJ3DDeformData.html#a7345926068d7aabc46f6f098886c9fb6", null ],
+    [ "mClusterName", "classJ3DDeformData.html#a9254bfe4f2037fcf8c950903dfd8c0aa", null ],
+    [ "mClusterNum", "classJ3DDeformData.html#a84fd0bf7292f8c7f91b13c9414615f78", null ],
+    [ "mClusterPointer", "classJ3DDeformData.html#ad5b999157382bbbab059c688eb0573a4", null ],
+    [ "mClusterVertex", "classJ3DDeformData.html#a866ea0491f74a30d56ff406de38ae6af", null ],
+    [ "mClusterVertexNum", "classJ3DDeformData.html#aec7bb047b886a72fa396edc82d8994bd", null ],
+    [ "mVtxNrm", "classJ3DDeformData.html#ad8582358bc33d61522a2e9b0ada722d5", null ],
+    [ "mVtxNrmNum", "classJ3DDeformData.html#acf4d95810031080451870e523698c15b", null ],
+    [ "mVtxPos", "classJ3DDeformData.html#a726028dea5b10a907423bf825a567e40", null ],
+    [ "mVtxPosNum", "classJ3DDeformData.html#a4c31a57578932995eb0318965a9402ac", null ]
+];

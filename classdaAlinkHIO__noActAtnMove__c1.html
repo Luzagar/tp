@@ -1,0 +1,521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: daAlinkHIO_noActAtnMove_c1 Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classdaAlinkHIO__noActAtnMove__c1.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="classdaAlinkHIO__noActAtnMove__c1-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">daAlinkHIO_noActAtnMove_c1 Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="d__a__alink_8h_source.html">d_a_alink.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a37032d749e7b0ebfc987c57dc5407349" id="r_a37032d749e7b0ebfc987c57dc5407349"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__noActAtnMove__c1.html#a37032d749e7b0ebfc987c57dc5407349">mMaxTurnAngle</a></td></tr>
+<tr class="separator:a37032d749e7b0ebfc987c57dc5407349"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97bfd93bfffc11fac5826c05fda5808a" id="r_a97bfd93bfffc11fac5826c05fda5808a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__noActAtnMove__c1.html#a97bfd93bfffc11fac5826c05fda5808a">mMinTurnAngle</a></td></tr>
+<tr class="separator:a97bfd93bfffc11fac5826c05fda5808a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab3a490354e4a7957b7d580d5031966e" id="r_aab3a490354e4a7957b7d580d5031966e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__noActAtnMove__c1.html#aab3a490354e4a7957b7d580d5031966e">mTurnAngleRate</a></td></tr>
+<tr class="separator:aab3a490354e4a7957b7d580d5031966e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92a094813fa8e85ae97df2a268f393b5" id="r_a92a094813fa8e85ae97df2a268f393b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__noActAtnMove__c1.html#a92a094813fa8e85ae97df2a268f393b5">mWaitAnmSpeed</a></td></tr>
+<tr class="separator:a92a094813fa8e85ae97df2a268f393b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac088e8d85bdc1a5f09d44285fda2349" id="r_aac088e8d85bdc1a5f09d44285fda2349"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__noActAtnMove__c1.html#aac088e8d85bdc1a5f09d44285fda2349">mWalkAnmSpeed</a></td></tr>
+<tr class="separator:aac088e8d85bdc1a5f09d44285fda2349"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa179eafbaf5bc8af5fd35c58301870d3" id="r_aa179eafbaf5bc8af5fd35c58301870d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__noActAtnMove__c1.html#aa179eafbaf5bc8af5fd35c58301870d3">mRunAnmSpeed</a></td></tr>
+<tr class="separator:aa179eafbaf5bc8af5fd35c58301870d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93f9f3d409fe6cfc6c04c5e92949ac22" id="r_a93f9f3d409fe6cfc6c04c5e92949ac22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__noActAtnMove__c1.html#a93f9f3d409fe6cfc6c04c5e92949ac22">mWalkChangeRate</a></td></tr>
+<tr class="separator:a93f9f3d409fe6cfc6c04c5e92949ac22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b8527cc29beadcce1180253a672ea36" id="r_a8b8527cc29beadcce1180253a672ea36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__noActAtnMove__c1.html#a8b8527cc29beadcce1180253a672ea36">mRunChangeRate</a></td></tr>
+<tr class="separator:a8b8527cc29beadcce1180253a672ea36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbf73ef3168e8dc601dfebf49f46e24d" id="r_abbf73ef3168e8dc601dfebf49f46e24d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__noActAtnMove__c1.html#abbf73ef3168e8dc601dfebf49f46e24d">mMaxSpeed</a></td></tr>
+<tr class="separator:abbf73ef3168e8dc601dfebf49f46e24d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c03e11d6bf0d59d6bcb456e335e59be" id="r_a3c03e11d6bf0d59d6bcb456e335e59be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__noActAtnMove__c1.html#a3c03e11d6bf0d59d6bcb456e335e59be">mAcceleration</a></td></tr>
+<tr class="separator:a3c03e11d6bf0d59d6bcb456e335e59be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63ad658a732928528ce061dd9a7b640f" id="r_a63ad658a732928528ce061dd9a7b640f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__noActAtnMove__c1.html#a63ad658a732928528ce061dd9a7b640f">mDeceleration</a></td></tr>
+<tr class="separator:a63ad658a732928528ce061dd9a7b640f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaf52e01c10668538b5ec09be5c47610" id="r_aaaf52e01c10668538b5ec09be5c47610"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__noActAtnMove__c1.html#aaaf52e01c10668538b5ec09be5c47610">mBackWalkAnmSpeed</a></td></tr>
+<tr class="separator:aaaf52e01c10668538b5ec09be5c47610"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a267552adf8ab937711917b73d278063f" id="r_a267552adf8ab937711917b73d278063f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__noActAtnMove__c1.html#a267552adf8ab937711917b73d278063f">mBackRunAnmSpeed</a></td></tr>
+<tr class="separator:a267552adf8ab937711917b73d278063f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ea214485ef98fab63c83a0ef8e169d4" id="r_a7ea214485ef98fab63c83a0ef8e169d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__noActAtnMove__c1.html#a7ea214485ef98fab63c83a0ef8e169d4">mBackWalkChangeRate</a></td></tr>
+<tr class="separator:a7ea214485ef98fab63c83a0ef8e169d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36e2fa4762fc64d66f1d579aa56e3366" id="r_a36e2fa4762fc64d66f1d579aa56e3366"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__noActAtnMove__c1.html#a36e2fa4762fc64d66f1d579aa56e3366">mBackRunChangeRate</a></td></tr>
+<tr class="separator:a36e2fa4762fc64d66f1d579aa56e3366"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bb5f01bdab37e6154543f60d591ed3f" id="r_a2bb5f01bdab37e6154543f60d591ed3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__noActAtnMove__c1.html#a2bb5f01bdab37e6154543f60d591ed3f">mMaxBackwardsSpeed</a></td></tr>
+<tr class="separator:a2bb5f01bdab37e6154543f60d591ed3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20c712b6e31423ca047e53e6bbee21fc" id="r_a20c712b6e31423ca047e53e6bbee21fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__noActAtnMove__c1.html#a20c712b6e31423ca047e53e6bbee21fc">mBackAcceleration</a></td></tr>
+<tr class="separator:a20c712b6e31423ca047e53e6bbee21fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2ac3c8cf6c98a0991786dfbe1cdded2" id="r_ae2ac3c8cf6c98a0991786dfbe1cdded2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__noActAtnMove__c1.html#ae2ac3c8cf6c98a0991786dfbe1cdded2">mBackDeceleration</a></td></tr>
+<tr class="separator:ae2ac3c8cf6c98a0991786dfbe1cdded2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a445011a22e7bd01767be0cde28cd88de" id="r_a445011a22e7bd01767be0cde28cd88de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__noActAtnMove__c1.html#a445011a22e7bd01767be0cde28cd88de">mMinWalkFrame</a></td></tr>
+<tr class="separator:a445011a22e7bd01767be0cde28cd88de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dfe8dd1c092ced4d490f3c2b26f3e42" id="r_a5dfe8dd1c092ced4d490f3c2b26f3e42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__noActAtnMove__c1.html#a5dfe8dd1c092ced4d490f3c2b26f3e42">mMinBackWalkFrame</a></td></tr>
+<tr class="separator:a5dfe8dd1c092ced4d490f3c2b26f3e42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed74796a4ebb5622a6041b0f98a40aa4" id="r_aed74796a4ebb5622a6041b0f98a40aa4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__noActAtnMove__c1.html#aed74796a4ebb5622a6041b0f98a40aa4">mWalkForwardAnmSpeed</a></td></tr>
+<tr class="separator:aed74796a4ebb5622a6041b0f98a40aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dcaaf3aecda19a0bcec3ffe896fa81e" id="r_a5dcaaf3aecda19a0bcec3ffe896fa81e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__noActAtnMove__c1.html#a5dcaaf3aecda19a0bcec3ffe896fa81e">mRunForwardAnmSpeed</a></td></tr>
+<tr class="separator:a5dcaaf3aecda19a0bcec3ffe896fa81e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a3c03e11d6bf0d59d6bcb456e335e59be" name="a3c03e11d6bf0d59d6bcb456e335e59be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c03e11d6bf0d59d6bcb456e335e59be">&#9670;&#160;</a></span>mAcceleration</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_noActAtnMove_c1::mAcceleration</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a20c712b6e31423ca047e53e6bbee21fc" name="a20c712b6e31423ca047e53e6bbee21fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20c712b6e31423ca047e53e6bbee21fc">&#9670;&#160;</a></span>mBackAcceleration</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_noActAtnMove_c1::mBackAcceleration</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae2ac3c8cf6c98a0991786dfbe1cdded2" name="ae2ac3c8cf6c98a0991786dfbe1cdded2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2ac3c8cf6c98a0991786dfbe1cdded2">&#9670;&#160;</a></span>mBackDeceleration</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_noActAtnMove_c1::mBackDeceleration</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a267552adf8ab937711917b73d278063f" name="a267552adf8ab937711917b73d278063f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a267552adf8ab937711917b73d278063f">&#9670;&#160;</a></span>mBackRunAnmSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_noActAtnMove_c1::mBackRunAnmSpeed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a36e2fa4762fc64d66f1d579aa56e3366" name="a36e2fa4762fc64d66f1d579aa56e3366"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36e2fa4762fc64d66f1d579aa56e3366">&#9670;&#160;</a></span>mBackRunChangeRate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_noActAtnMove_c1::mBackRunChangeRate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaaf52e01c10668538b5ec09be5c47610" name="aaaf52e01c10668538b5ec09be5c47610"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaf52e01c10668538b5ec09be5c47610">&#9670;&#160;</a></span>mBackWalkAnmSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_noActAtnMove_c1::mBackWalkAnmSpeed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ea214485ef98fab63c83a0ef8e169d4" name="a7ea214485ef98fab63c83a0ef8e169d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ea214485ef98fab63c83a0ef8e169d4">&#9670;&#160;</a></span>mBackWalkChangeRate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_noActAtnMove_c1::mBackWalkChangeRate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a63ad658a732928528ce061dd9a7b640f" name="a63ad658a732928528ce061dd9a7b640f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63ad658a732928528ce061dd9a7b640f">&#9670;&#160;</a></span>mDeceleration</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_noActAtnMove_c1::mDeceleration</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2bb5f01bdab37e6154543f60d591ed3f" name="a2bb5f01bdab37e6154543f60d591ed3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bb5f01bdab37e6154543f60d591ed3f">&#9670;&#160;</a></span>mMaxBackwardsSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_noActAtnMove_c1::mMaxBackwardsSpeed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abbf73ef3168e8dc601dfebf49f46e24d" name="abbf73ef3168e8dc601dfebf49f46e24d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbf73ef3168e8dc601dfebf49f46e24d">&#9670;&#160;</a></span>mMaxSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_noActAtnMove_c1::mMaxSpeed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a37032d749e7b0ebfc987c57dc5407349" name="a37032d749e7b0ebfc987c57dc5407349"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37032d749e7b0ebfc987c57dc5407349">&#9670;&#160;</a></span>mMaxTurnAngle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> daAlinkHIO_noActAtnMove_c1::mMaxTurnAngle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5dfe8dd1c092ced4d490f3c2b26f3e42" name="a5dfe8dd1c092ced4d490f3c2b26f3e42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dfe8dd1c092ced4d490f3c2b26f3e42">&#9670;&#160;</a></span>mMinBackWalkFrame</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_noActAtnMove_c1::mMinBackWalkFrame</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a97bfd93bfffc11fac5826c05fda5808a" name="a97bfd93bfffc11fac5826c05fda5808a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97bfd93bfffc11fac5826c05fda5808a">&#9670;&#160;</a></span>mMinTurnAngle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> daAlinkHIO_noActAtnMove_c1::mMinTurnAngle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a445011a22e7bd01767be0cde28cd88de" name="a445011a22e7bd01767be0cde28cd88de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a445011a22e7bd01767be0cde28cd88de">&#9670;&#160;</a></span>mMinWalkFrame</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_noActAtnMove_c1::mMinWalkFrame</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa179eafbaf5bc8af5fd35c58301870d3" name="aa179eafbaf5bc8af5fd35c58301870d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa179eafbaf5bc8af5fd35c58301870d3">&#9670;&#160;</a></span>mRunAnmSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_noActAtnMove_c1::mRunAnmSpeed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8b8527cc29beadcce1180253a672ea36" name="a8b8527cc29beadcce1180253a672ea36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b8527cc29beadcce1180253a672ea36">&#9670;&#160;</a></span>mRunChangeRate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_noActAtnMove_c1::mRunChangeRate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5dcaaf3aecda19a0bcec3ffe896fa81e" name="a5dcaaf3aecda19a0bcec3ffe896fa81e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dcaaf3aecda19a0bcec3ffe896fa81e">&#9670;&#160;</a></span>mRunForwardAnmSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_noActAtnMove_c1::mRunForwardAnmSpeed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aab3a490354e4a7957b7d580d5031966e" name="aab3a490354e4a7957b7d580d5031966e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab3a490354e4a7957b7d580d5031966e">&#9670;&#160;</a></span>mTurnAngleRate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> daAlinkHIO_noActAtnMove_c1::mTurnAngleRate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a92a094813fa8e85ae97df2a268f393b5" name="a92a094813fa8e85ae97df2a268f393b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92a094813fa8e85ae97df2a268f393b5">&#9670;&#160;</a></span>mWaitAnmSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_noActAtnMove_c1::mWaitAnmSpeed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac088e8d85bdc1a5f09d44285fda2349" name="aac088e8d85bdc1a5f09d44285fda2349"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac088e8d85bdc1a5f09d44285fda2349">&#9670;&#160;</a></span>mWalkAnmSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_noActAtnMove_c1::mWalkAnmSpeed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a93f9f3d409fe6cfc6c04c5e92949ac22" name="a93f9f3d409fe6cfc6c04c5e92949ac22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93f9f3d409fe6cfc6c04c5e92949ac22">&#9670;&#160;</a></span>mWalkChangeRate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_noActAtnMove_c1::mWalkChangeRate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed74796a4ebb5622a6041b0f98a40aa4" name="aed74796a4ebb5622a6041b0f98a40aa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed74796a4ebb5622a6041b0f98a40aa4">&#9670;&#160;</a></span>mWalkForwardAnmSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_noActAtnMove_c1::mWalkForwardAnmSpeed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>include/d/a/<a class="el" href="d__a__alink_8h_source.html">d_a_alink.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classdaAlinkHIO__noActAtnMove__c1.html">daAlinkHIO_noActAtnMove_c1</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

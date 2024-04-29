@@ -1,0 +1,764 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: src/d/kankyo/d_kankyo_data.cpp File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d__kankyo__data_8cpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">d_kankyo_data.cpp File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdKyd__l__vr__box__data__struct.html">dKyd_l_vr_box_data_struct</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a89f8e118117dbc644ba35396a9444c89" id="r_a89f8e118117dbc644ba35396a9444c89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__kankyo__data_8cpp.html#a89f8e118117dbc644ba35396a9444c89">dKyd_dmpalet_getp</a> ()</td></tr>
+<tr class="separator:a89f8e118117dbc644ba35396a9444c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a112a04c13d64415a9ccac5a0bc7c1f5f" id="r_a112a04c13d64415a9ccac5a0bc7c1f5f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__kankyo__data_8cpp.html#a112a04c13d64415a9ccac5a0bc7c1f5f">dKyd_dmpselect_getp</a> ()</td></tr>
+<tr class="separator:a112a04c13d64415a9ccac5a0bc7c1f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f6a4ec11e58dcb450491043a25d191c" id="r_a9f6a4ec11e58dcb450491043a25d191c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__kankyo__data_8cpp.html#a9f6a4ec11e58dcb450491043a25d191c">dKyd_dmenvr_getp</a> ()</td></tr>
+<tr class="separator:a9f6a4ec11e58dcb450491043a25d191c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab403cab58e0a13a7aef3a8eb5daa4f17" id="r_ab403cab58e0a13a7aef3a8eb5daa4f17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__kankyo__data_8cpp.html#ab403cab58e0a13a7aef3a8eb5daa4f17">dKyd_dmvrbox_getp</a> ()</td></tr>
+<tr class="separator:ab403cab58e0a13a7aef3a8eb5daa4f17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ac041e2be73c4821281e4b443a446fc" id="r_a6ac041e2be73c4821281e4b443a446fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdKyd__lightSchejule.html">dKyd_lightSchejule</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__kankyo__data_8cpp.html#a6ac041e2be73c4821281e4b443a446fc">dKyd_schejule_getp</a> ()</td></tr>
+<tr class="separator:a6ac041e2be73c4821281e4b443a446fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a156bdc295452363c5fd7b5ad7035c420" id="r_a156bdc295452363c5fd7b5ad7035c420"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdKyd__lightSchejule.html">dKyd_lightSchejule</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__kankyo__data_8cpp.html#a156bdc295452363c5fd7b5ad7035c420">dKyd_schejule_boss_getp</a> ()</td></tr>
+<tr class="separator:a156bdc295452363c5fd7b5ad7035c420"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae47e900fbf4071a932eb00b9264219aa" id="r_ae47e900fbf4071a932eb00b9264219aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__kankyo__data_8cpp.html#ae47e900fbf4071a932eb00b9264219aa">dKyd_xfog_table_set</a> (<a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">tblIdx</a>)</td></tr>
+<tr class="separator:ae47e900fbf4071a932eb00b9264219aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55c869ac9666a5419d04fa8d37a882d9" id="r_a55c869ac9666a5419d04fa8d37a882d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__kankyo__data_8cpp.html#a55c869ac9666a5419d04fa8d37a882d9">dKyd_maple_col_getp</a> ()</td></tr>
+<tr class="separator:a55c869ac9666a5419d04fa8d37a882d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b245d6edf07498662ac2253d702947c" id="r_a3b245d6edf07498662ac2253d702947c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdKydata__darkworldInfo__c.html">dKydata_darkworldInfo_c</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__kankyo__data_8cpp.html#a3b245d6edf07498662ac2253d702947c">dKyd_darkworld_tbl_getp</a> ()</td></tr>
+<tr class="separator:a3b245d6edf07498662ac2253d702947c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a081b9780952d264a1bb1be7e6ce03fa0" id="r_a081b9780952d264a1bb1be7e6ce03fa0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdKydata__lightsizeInfo__c.html">dKydata_lightsizeInfo_c</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__kankyo__data_8cpp.html#a081b9780952d264a1bb1be7e6ce03fa0">dKyd_light_size_tbl_getp</a> ()</td></tr>
+<tr class="separator:a081b9780952d264a1bb1be7e6ce03fa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30ab329dca818d293fbfbd2c9df12309" id="r_a30ab329dca818d293fbfbd2c9df12309"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdKydata__lightsizeInfo__c.html">dKydata_lightsizeInfo_c</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__kankyo__data_8cpp.html#a30ab329dca818d293fbfbd2c9df12309">dKyd_light_tw_size_tbl_getp</a> ()</td></tr>
+<tr class="separator:a30ab329dca818d293fbfbd2c9df12309"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3f66de8f4bc4990a2b2c06a1c48ff04" id="r_ad3f66de8f4bc4990a2b2c06a1c48ff04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdkydata__bloomInfo__info__class.html">dkydata_bloomInfo_info_class</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__kankyo__data_8cpp.html#ad3f66de8f4bc4990a2b2c06a1c48ff04">dKyd_BloomInf_tbl_getp</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">tblIdx</a>)</td></tr>
+<tr class="separator:ad3f66de8f4bc4990a2b2c06a1c48ff04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a034bd8156e524675fd45769de2b9c6dc" id="r_a034bd8156e524675fd45769de2b9c6dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="classdkydata__bloomInfo__info__class.html">dkydata_bloomInfo_info_class</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__kankyo__data_8cpp.html#a034bd8156e524675fd45769de2b9c6dc">l_kydata_BloomInf_tbl</a> [<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">BLOOMINFO_MAX</a>]</td></tr>
+<tr class="separator:a034bd8156e524675fd45769de2b9c6dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb2c5fc66971df02bba0761098871c33" id="r_aeb2c5fc66971df02bba0761098871c33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="classdKydata__darkworldInfo__c.html">dKydata_darkworldInfo_c</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__kankyo__data_8cpp.html#aeb2c5fc66971df02bba0761098871c33">l_darkworld_tbl</a> [34]</td></tr>
+<tr class="separator:aeb2c5fc66971df02bba0761098871c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63fbfd5616bbae95e6b090baba52ad0f" id="r_a63fbfd5616bbae95e6b090baba52ad0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="classdKydata__lightsizeInfo__c.html">dKydata_lightsizeInfo_c</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__kankyo__data_8cpp.html#a63fbfd5616bbae95e6b090baba52ad0f">l_light_size_tbl</a> [36]</td></tr>
+<tr class="separator:a63fbfd5616bbae95e6b090baba52ad0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fa7be5428d417416bdd1f5278326713" id="r_a5fa7be5428d417416bdd1f5278326713"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="classdKydata__lightsizeInfo__c.html">dKydata_lightsizeInfo_c</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__kankyo__data_8cpp.html#a5fa7be5428d417416bdd1f5278326713">l_light_size_tbl_tw</a> [9]</td></tr>
+<tr class="separator:a5fa7be5428d417416bdd1f5278326713"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8e4e58deaca0dcb9c80868b3a3cbc1b" id="r_ad8e4e58deaca0dcb9c80868b3a3cbc1b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__kankyo__data_8cpp.html#ad8e4e58deaca0dcb9c80868b3a3cbc1b">l_maple_col</a> [36]</td></tr>
+<tr class="separator:ad8e4e58deaca0dcb9c80868b3a3cbc1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a569784646b697b1cbfb988fb4c3a71af" id="r_a569784646b697b1cbfb988fb4c3a71af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="structdKyd__lightSchejule.html">dKyd_lightSchejule</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__kankyo__data_8cpp.html#a569784646b697b1cbfb988fb4c3a71af">l_time_attribute</a> [11]</td></tr>
+<tr class="separator:a569784646b697b1cbfb988fb4c3a71af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dc05c910b6d402c545fe9ab4a7e1786" id="r_a6dc05c910b6d402c545fe9ab4a7e1786"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="structdKyd__lightSchejule.html">dKyd_lightSchejule</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__kankyo__data_8cpp.html#a6dc05c910b6d402c545fe9ab4a7e1786">l_time_attribute_boss</a> [11]</td></tr>
+<tr class="separator:a6dc05c910b6d402c545fe9ab4a7e1786"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5a6e22fd5abacd2c94c70dba7594589" id="r_ab5a6e22fd5abacd2c94c70dba7594589"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="structstage__palette__info__class.html">stage_palette_info_class</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__kankyo__data_8cpp.html#ab5a6e22fd5abacd2c94c70dba7594589">l_field_data</a> [16]</td></tr>
+<tr class="separator:ab5a6e22fd5abacd2c94c70dba7594589"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6ec3445b24aa2cfb5d982028b693c08" id="r_af6ec3445b24aa2cfb5d982028b693c08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="structstage__pselect__info__class.html">stage_pselect_info_class</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__kankyo__data_8cpp.html#af6ec3445b24aa2cfb5d982028b693c08">l_pselect_default</a> [2]</td></tr>
+<tr class="separator:af6ec3445b24aa2cfb5d982028b693c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59727295ea5f9550e04f212bd3ba3e51" id="r_a59727295ea5f9550e04f212bd3ba3e51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="structstage__envr__info__class.html">stage_envr_info_class</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__kankyo__data_8cpp.html#a59727295ea5f9550e04f212bd3ba3e51">l_envr_default</a> [2]</td></tr>
+<tr class="separator:a59727295ea5f9550e04f212bd3ba3e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bbe100dd0becb8adb96ec5cafa7b065" id="r_a8bbe100dd0becb8adb96ec5cafa7b065"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="structdKyd__l__vr__box__data__struct.html">dKyd_l_vr_box_data_struct</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__kankyo__data_8cpp.html#a8bbe100dd0becb8adb96ec5cafa7b065">l_vr_box_data</a> [18]</td></tr>
+<tr class="separator:a8bbe100dd0becb8adb96ec5cafa7b065"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a207291a5eefe65a600d0722a4cf65239" id="r_a207291a5eefe65a600d0722a4cf65239"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="GXStruct_8h.html#a4f26164126e4de3d81d9c7d65b5ff68e">GXFogAdjTable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__kankyo__data_8cpp.html#a207291a5eefe65a600d0722a4cf65239">S_xfog_table_data</a> [2]</td></tr>
+<tr class="separator:a207291a5eefe65a600d0722a4cf65239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ad3f66de8f4bc4990a2b2c06a1c48ff04" name="ad3f66de8f4bc4990a2b2c06a1c48ff04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3f66de8f4bc4990a2b2c06a1c48ff04">&#9670;&#160;</a></span>dKyd_BloomInf_tbl_getp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdkydata__bloomInfo__info__class.html">dkydata_bloomInfo_info_class</a> * dKyd_BloomInf_tbl_getp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td>
+          <td class="paramname"><em>tblIdx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b245d6edf07498662ac2253d702947c" name="a3b245d6edf07498662ac2253d702947c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b245d6edf07498662ac2253d702947c">&#9670;&#160;</a></span>dKyd_darkworld_tbl_getp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdKydata__darkworldInfo__c.html">dKydata_darkworldInfo_c</a> * dKyd_darkworld_tbl_getp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9f6a4ec11e58dcb450491043a25d191c" name="a9f6a4ec11e58dcb450491043a25d191c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f6a4ec11e58dcb450491043a25d191c">&#9670;&#160;</a></span>dKyd_dmenvr_getp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> * dKyd_dmenvr_getp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89f8e118117dbc644ba35396a9444c89" name="a89f8e118117dbc644ba35396a9444c89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89f8e118117dbc644ba35396a9444c89">&#9670;&#160;</a></span>dKyd_dmpalet_getp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> * dKyd_dmpalet_getp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a112a04c13d64415a9ccac5a0bc7c1f5f" name="a112a04c13d64415a9ccac5a0bc7c1f5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a112a04c13d64415a9ccac5a0bc7c1f5f">&#9670;&#160;</a></span>dKyd_dmpselect_getp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> * dKyd_dmpselect_getp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab403cab58e0a13a7aef3a8eb5daa4f17" name="ab403cab58e0a13a7aef3a8eb5daa4f17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab403cab58e0a13a7aef3a8eb5daa4f17">&#9670;&#160;</a></span>dKyd_dmvrbox_getp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> * dKyd_dmvrbox_getp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a081b9780952d264a1bb1be7e6ce03fa0" name="a081b9780952d264a1bb1be7e6ce03fa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a081b9780952d264a1bb1be7e6ce03fa0">&#9670;&#160;</a></span>dKyd_light_size_tbl_getp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdKydata__lightsizeInfo__c.html">dKydata_lightsizeInfo_c</a> * dKyd_light_size_tbl_getp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a30ab329dca818d293fbfbd2c9df12309" name="a30ab329dca818d293fbfbd2c9df12309"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30ab329dca818d293fbfbd2c9df12309">&#9670;&#160;</a></span>dKyd_light_tw_size_tbl_getp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdKydata__lightsizeInfo__c.html">dKydata_lightsizeInfo_c</a> * dKyd_light_tw_size_tbl_getp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a55c869ac9666a5419d04fa8d37a882d9" name="a55c869ac9666a5419d04fa8d37a882d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55c869ac9666a5419d04fa8d37a882d9">&#9670;&#160;</a></span>dKyd_maple_col_getp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> * dKyd_maple_col_getp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a156bdc295452363c5fd7b5ad7035c420" name="a156bdc295452363c5fd7b5ad7035c420"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a156bdc295452363c5fd7b5ad7035c420">&#9670;&#160;</a></span>dKyd_schejule_boss_getp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdKyd__lightSchejule.html">dKyd_lightSchejule</a> * dKyd_schejule_boss_getp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6ac041e2be73c4821281e4b443a446fc" name="a6ac041e2be73c4821281e4b443a446fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ac041e2be73c4821281e4b443a446fc">&#9670;&#160;</a></span>dKyd_schejule_getp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdKyd__lightSchejule.html">dKyd_lightSchejule</a> * dKyd_schejule_getp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae47e900fbf4071a932eb00b9264219aa" name="ae47e900fbf4071a932eb00b9264219aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae47e900fbf4071a932eb00b9264219aa">&#9670;&#160;</a></span>dKyd_xfog_table_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dKyd_xfog_table_set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td>
+          <td class="paramname"><em>tblIdx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="aeb2c5fc66971df02bba0761098871c33" name="aeb2c5fc66971df02bba0761098871c33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb2c5fc66971df02bba0761098871c33">&#9670;&#160;</a></span>l_darkworld_tbl</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdKydata__darkworldInfo__c.html">dKydata_darkworldInfo_c</a> l_darkworld_tbl[34]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a59727295ea5f9550e04f212bd3ba3e51" name="a59727295ea5f9550e04f212bd3ba3e51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59727295ea5f9550e04f212bd3ba3e51">&#9670;&#160;</a></span>l_envr_default</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structstage__envr__info__class.html">stage_envr_info_class</a> l_envr_default[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    {</div>
+<div class="line">        {0x00, 0x01, 0x02, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00},</div>
+<div class="line">    },</div>
+<div class="line">    {</div>
+<div class="line">        {0x04, 0x05, 0x06, 0x07, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00},</div>
+<div class="line">    },</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab5a6e22fd5abacd2c94c70dba7594589" name="ab5a6e22fd5abacd2c94c70dba7594589"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5a6e22fd5abacd2c94c70dba7594589">&#9670;&#160;</a></span>l_field_data</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structstage__palette__info__class.html">stage_palette_info_class</a> l_field_data[16]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a034bd8156e524675fd45769de2b9c6dc" name="a034bd8156e524675fd45769de2b9c6dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a034bd8156e524675fd45769de2b9c6dc">&#9670;&#160;</a></span>l_kydata_BloomInf_tbl</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdkydata__bloomInfo__info__class.html">dkydata_bloomInfo_info_class</a> l_kydata_BloomInf_tbl[<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">BLOOMINFO_MAX</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a63fbfd5616bbae95e6b090baba52ad0f" name="a63fbfd5616bbae95e6b090baba52ad0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63fbfd5616bbae95e6b090baba52ad0f">&#9670;&#160;</a></span>l_light_size_tbl</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdKydata__lightsizeInfo__c.html">dKydata_lightsizeInfo_c</a> l_light_size_tbl[36]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5fa7be5428d417416bdd1f5278326713" name="a5fa7be5428d417416bdd1f5278326713"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fa7be5428d417416bdd1f5278326713">&#9670;&#160;</a></span>l_light_size_tbl_tw</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdKydata__lightsizeInfo__c.html">dKydata_lightsizeInfo_c</a> l_light_size_tbl_tw[9]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    {<span class="stringliteral">&quot;F_SP109&quot;</span>, 2},  </div>
+<div class="line">    {<span class="stringliteral">&quot;F_SP110&quot;</span>, 2},  </div>
+<div class="line">    {<span class="stringliteral">&quot;R_SP209&quot;</span>, 2},  </div>
+<div class="line">    {<span class="stringliteral">&quot;F_SP113&quot;</span>, 0},  </div>
+<div class="line">    {<span class="stringliteral">&quot;F_SP126&quot;</span>, 2},  </div>
+<div class="line">    {<span class="stringliteral">&quot;F_SP115&quot;</span>, 2},  </div>
+<div class="line">    {<span class="stringliteral">&quot;F_SP121&quot;</span>, 3},  </div>
+<div class="line">    {<span class="stringliteral">&quot;F_SP102&quot;</span>, 3},  </div>
+<div class="line">    {<span class="stringliteral">&quot;F_SP122&quot;</span>, 3},  </div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad8e4e58deaca0dcb9c80868b3a3cbc1b" name="ad8e4e58deaca0dcb9c80868b3a3cbc1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8e4e58deaca0dcb9c80868b3a3cbc1b">&#9670;&#160;</a></span>l_maple_col</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> l_maple_col[36]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    </div>
+<div class="line">    0x56, 0x4B, 0x39,  </div>
+<div class="line">    0x37, 0x28, 0x1E,  </div>
+<div class="line">    0x6E, 0x32, 0x0F,  </div>
+<div class="line">    0x64, 0x64, 0x80,  </div>
+<div class="line">    </div>
+<div class="line">    0x52, 0x41, 0x66,  </div>
+<div class="line">    0x19, 0x0F, 0x00,  </div>
+<div class="line">    0x46, 0x00, 0x0F,  </div>
+<div class="line">    0x64, 0x64, 0x80,  </div>
+<div class="line">    </div>
+<div class="line">    0x65, 0x5E, 0x69,  </div>
+<div class="line">    0x0E, 0x23, 0x0B,  </div>
+<div class="line">    0x28, 0x14, 0x05,  </div>
+<div class="line">    0x5A, 0x5A, 0x6E,  </div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af6ec3445b24aa2cfb5d982028b693c08" name="af6ec3445b24aa2cfb5d982028b693c08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6ec3445b24aa2cfb5d982028b693c08">&#9670;&#160;</a></span>l_pselect_default</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structstage__pselect__info__class.html">stage_pselect_info_class</a> l_pselect_default[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    {</div>
+<div class="line">        {0x00, 0x00, 0x01, 0x02, 0x02, 0x03, 0x00, 0x00},</div>
+<div class="line">        0.0f,</div>
+<div class="line">    },</div>
+<div class="line">    {</div>
+<div class="line">        {0x04, 0x04, 0x05, 0x06, 0x06, 0x07, 0x00, 0x00},</div>
+<div class="line">        0.0f,</div>
+<div class="line">    },</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a569784646b697b1cbfb988fb4c3a71af" name="a569784646b697b1cbfb988fb4c3a71af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a569784646b697b1cbfb988fb4c3a71af">&#9670;&#160;</a></span>l_time_attribute</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdKyd__lightSchejule.html">dKyd_lightSchejule</a> l_time_attribute[11]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    {0.0f, 75.0f, 5, 5},    {75.0f, 90.0f, 5, 0},   {90.0f, 105.0f, 0, 1},  {105.0f, 105.0f, 1, 1},</div>
+<div class="line">    {105.0f, 135.0f, 1, 2}, {135.0f, 240.0f, 2, 2}, {240.0f, 255.0f, 2, 3}, {255.0f, 270.0f, 3, 3},</div>
+<div class="line">    {270.0f, 285.0f, 3, 4}, {285.0f, 300.0f, 4, 5}, {300.0f, 360.0f, 5, 5},</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6dc05c910b6d402c545fe9ab4a7e1786" name="a6dc05c910b6d402c545fe9ab4a7e1786"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dc05c910b6d402c545fe9ab4a7e1786">&#9670;&#160;</a></span>l_time_attribute_boss</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdKyd__lightSchejule.html">dKyd_lightSchejule</a> l_time_attribute_boss[11]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    {0.0f, 45.0f, 0, 1},    {45.0f, 90.0f, 1, 2},   {90.0f, 180.0f, 2, 3},  {180.0f, 225.0f, 3, 4},</div>
+<div class="line">    {225.0f, 270.0f, 4, 5}, {270.0f, 360.0f, 5, 0}, {360.0f, 360.0f, 5, 5}, {360.0f, 360.0f, 5, 5},</div>
+<div class="line">    {360.0f, 360.0f, 5, 5}, {360.0f, 360.0f, 5, 5}, {360.0f, 360.0f, 5, 5},</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8bbe100dd0becb8adb96ec5cafa7b065" name="a8bbe100dd0becb8adb96ec5cafa7b065"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bbe100dd0becb8adb96ec5cafa7b065">&#9670;&#160;</a></span>l_vr_box_data</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdKyd__l__vr__box__data__struct.html">dKyd_l_vr_box_data_struct</a> l_vr_box_data[18]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a207291a5eefe65a600d0722a4cf65239" name="a207291a5eefe65a600d0722a4cf65239"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a207291a5eefe65a600d0722a4cf65239">&#9670;&#160;</a></span>S_xfog_table_data</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="GXStruct_8h.html#a4f26164126e4de3d81d9c7d65b5ff68e">GXFogAdjTable</a> S_xfog_table_data[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    {</div>
+<div class="line">        {260, 260, 270, 280, 290, 300, 310, 320, 330, 340},</div>
+<div class="line">    },</div>
+<div class="line">    {</div>
+<div class="line">        {250, 260, 280, 320, 350, 400, 480, 550, 600, 800},</div>
+<div class="line">    },</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_a921e71f3ef0b46ce159b4549017b167.html">d</a></li><li class="navelem"><a class="el" href="dir_9dad8a7ba3d6f7cc9dc1ad838c5361d6.html">kankyo</a></li><li class="navelem"><a class="el" href="d__kankyo__data_8cpp.html">d_kankyo_data.cpp</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,863 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: libs/PowerPC_EABI_Support/MetroTRK/trk.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('trk_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">trk.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="trk_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structTRKBuffer.html">TRKBuffer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structTRKFramingState.html">TRKFramingState</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structTRKState__PPC.html">TRKState_PPC</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCommandReply.html">CommandReply</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structProcessorRestoreFlags__PPC.html">ProcessorRestoreFlags_PPC</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a88256575d7bc3e8d7fc9ec75628225f7" id="r_a88256575d7bc3e8d7fc9ec75628225f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trk_8h.html#a88256575d7bc3e8d7fc9ec75628225f7">UARTError</a></td></tr>
+<tr class="separator:a88256575d7bc3e8d7fc9ec75628225f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4a440a620f8e1d4ec05d1084d98ef0a" id="r_aa4a440a620f8e1d4ec05d1084d98ef0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trk_8h.html#aa4a440a620f8e1d4ec05d1084d98ef0a">MessageBufferID</a></td></tr>
+<tr class="separator:aa4a440a620f8e1d4ec05d1084d98ef0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a652b973667176a46ca72b1202b3bd678" id="r_a652b973667176a46ca72b1202b3bd678"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">struct</a> <a class="el" href="structTRKBuffer.html">TRKBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trk_8h.html#a652b973667176a46ca72b1202b3bd678">TRKBuffer</a></td></tr>
+<tr class="separator:a652b973667176a46ca72b1202b3bd678"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2733b98442044b4c6ec34fe591468bc3" id="r_a2733b98442044b4c6ec34fe591468bc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">struct</a> <a class="el" href="structTRKFramingState.html">TRKFramingState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trk_8h.html#a2733b98442044b4c6ec34fe591468bc3">TRKFramingState</a></td></tr>
+<tr class="separator:a2733b98442044b4c6ec34fe591468bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4460b486e608f7c5b1e42529f263d00" id="r_ad4460b486e608f7c5b1e42529f263d00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">struct</a> <a class="el" href="structTRKState__PPC.html">TRKState_PPC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trk_8h.html#ad4460b486e608f7c5b1e42529f263d00">TRKState_PPC</a></td></tr>
+<tr class="separator:ad4460b486e608f7c5b1e42529f263d00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae96041c6219459c4fdf2783a343c8160" id="r_ae96041c6219459c4fdf2783a343c8160"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">struct</a> <a class="el" href="structCommandReply.html">CommandReply</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trk_8h.html#ae96041c6219459c4fdf2783a343c8160">CommandReply</a></td></tr>
+<tr class="separator:ae96041c6219459c4fdf2783a343c8160"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5043f9f31119fd4e72a7a7870d88dd9" id="r_ae5043f9f31119fd4e72a7a7870d88dd9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">struct</a> <a class="el" href="structProcessorRestoreFlags__PPC.html">ProcessorRestoreFlags_PPC</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trk_8h.html#ae5043f9f31119fd4e72a7a7870d88dd9">ProcessorRestoreFlags_PPC</a></td></tr>
+<tr class="separator:ae5043f9f31119fd4e72a7a7870d88dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ae4dfd42394001deb6e8a0e60c81d6f7a" id="r_ae4dfd42394001deb6e8a0e60c81d6f7a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trk_8h.html#ae4dfd42394001deb6e8a0e60c81d6f7a">HardwareType</a> { <a class="el" href="trk_8h.html#ae4dfd42394001deb6e8a0e60c81d6f7aa44914a273e6b44f7d97cbd8719df1513">HARDWARE_AMC_DDH</a> = 0
+, <a class="el" href="trk_8h.html#ae4dfd42394001deb6e8a0e60c81d6f7aa181ac37291dea86149f13ddb1d84837e">HARDWARE_GDEV</a> = 1
+, <a class="el" href="trk_8h.html#ae4dfd42394001deb6e8a0e60c81d6f7aa06657a30c689b5ffd0b05fdeed881c43">HARDWARE_BBA</a> = 2
+ }</td></tr>
+<tr class="separator:ae4dfd42394001deb6e8a0e60c81d6f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05b02c582cd96401f80a16293cccd408" id="r_a05b02c582cd96401f80a16293cccd408"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408">DSError</a> { <br />
+&#160;&#160;<a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408a126018271a566021ff0e273aaf7bc81c">DS_NoError</a> = 0x0
+, <a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408aa36a24002695b80a204f28c5bf357aa3">DS_StepError</a> = 0x1
+, <a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408ad70af7fcaf93bb87639a6f6a7a58e22b">DS_ParameterError</a> = 0x2
+, <a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408accfcc12f5b70b0db1632d480500165b5">DS_EventQueueFull</a> = 0x100
+, <br />
+&#160;&#160;<a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408a90e56b0ecc5444629a3da2cf101f3f56">DS_NoMessageBufferAvailable</a> = 0x300
+, <a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408a075db8392a28f8777627f709d656517c">DS_MessageBufferOverflow</a> = 0x301
+, <a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408a12cc95648e00830a5b773a717df40e1a">DS_MessageBufferReadError</a> = 0x302
+, <a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408ab1268c16a407ef863fa2ca5df9011482">DS_DispatchError</a> = 0x500
+, <br />
+&#160;&#160;<a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408a3bf83afc71cde7063a8cb7a86fa6e082">DS_InvalidMemory</a> = 0x700
+, <a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408a618628d92e63da1cc3efe2784e8a8ba1">DS_InvalidRegister</a> = 0x701
+, <a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408a51a9f6ff4a68952d254f5164a8cd60ce">DS_CWDSException</a> = 0x702
+, <a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408a1f3b456c3a20b741429065609f7fc8e6">DS_UnsupportedError</a> = 0x703
+, <br />
+&#160;&#160;<a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408a001d0a79980d1edbb2837921a0b52610">DS_InvalidProcessID</a> = 0x704
+, <a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408a748e609fb95dfad2cce2317c44739449">DS_InvalidThreadID</a> = 0x705
+, <a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408ae0fa54c80ac6313331bd66bbf5755f9a">DS_OSError</a> = 0x706
+, <a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408adb1961643ec37f093427aee7cb5704d8">DS_Error800</a> = 0x800
+<br />
+ }</td></tr>
+<tr class="separator:a05b02c582cd96401f80a16293cccd408"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad05ef16f1f26edddaa833cd6980ea313" id="r_ad05ef16f1f26edddaa833cd6980ea313"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trk_8h.html#ad05ef16f1f26edddaa833cd6980ea313">DSFileHandle</a> { <a class="el" href="trk_8h.html#ad05ef16f1f26edddaa833cd6980ea313adbc2c3a8dc2ca57047c511d79b0d82cd">DS_Stdin</a> = 0
+, <a class="el" href="trk_8h.html#ad05ef16f1f26edddaa833cd6980ea313a0837df2af1bc688b488d4121817b647d">DS_Stdout</a> = 1
+, <a class="el" href="trk_8h.html#ad05ef16f1f26edddaa833cd6980ea313aa530b67c5b39b2fb789ebe740f145a82">DS_Stderr</a> = 2
+ }</td></tr>
+<tr class="separator:ad05ef16f1f26edddaa833cd6980ea313"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb04573ed5817a3349abfeb032fc2384" id="r_abb04573ed5817a3349abfeb032fc2384"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trk_8h.html#abb04573ed5817a3349abfeb032fc2384">DSIOResult</a> { <a class="el" href="trk_8h.html#abb04573ed5817a3349abfeb032fc2384acb1188feeea1a6620028be3681ea915d">DS_IONoError</a> = 0
+, <a class="el" href="trk_8h.html#abb04573ed5817a3349abfeb032fc2384a1d6f7de0285954fcb13d1a7e2b98d129">DS_IOError</a> = 1
+, <a class="el" href="trk_8h.html#abb04573ed5817a3349abfeb032fc2384a7a8b43b120c4d0dc70d79b9a33cde814">DS_IOEOF</a> = 2
+ }</td></tr>
+<tr class="separator:abb04573ed5817a3349abfeb032fc2384"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc50af22b0472f3196fc32f7e85958bf" id="r_abc50af22b0472f3196fc32f7e85958bf"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bf">MessageCommandID</a> { <br />
+&#160;&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfac6f511775fe451bc416cf69bdd6ef0b8">DSMSG_Ping</a> = 0x0
+, <a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfaba3809be9b29075af2b62ef7931b80e9">DSMSG_Connect</a> = 0x1
+, <a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfaa6cab40131e919960687db8fc303bd4c">DSMSG_Disconnect</a> = 0x2
+, <a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa923b2998289aa55f36a04d12c67fa275">DSMSG_Reset</a> = 0x3
+, <br />
+&#160;&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa464aee155200d3b49738e41a2e0a026c">DSMSG_Versions</a> = 0x4
+, <a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfaa7c8588ffc7a8033c3274711bd709e80">DSMSG_SupportMask</a> = 0x5
+, <a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfaf6a94fedbe39f346ea9a9f82c21fad77">DSMSG_Override</a> = 0x7
+, <a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa6e3ec7f65b42e830e2ceb317edf9df11">DSMSG_ReadMemory</a> = 0x10
+, <br />
+&#160;&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa3e21de752395f3390617fccf91368686">DSMSG_WriteMemory</a> = 0x11
+, <a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa28df12cf5614a6925ded1dfe4bd9596c">DSMSG_ReadRegisters</a> = 0x12
+, <a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa73255c34881697f43db0b59cb63f80a9">DSMSG_WriteRegisters</a> = 0x13
+, <a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa2636dff90e23e9bb3cfebb2cbf99d8d9">DSMSG_SetOption</a> = 0x17
+, <br />
+&#160;&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa73717006e499744124fb49a30efbae1d">DSMSG_Continue</a> = 0x18
+, <a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa6382d2ef6f2ef23760d5c51aa9f074ad">DSMSG_Step</a> = 0x19
+, <a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa6c4830a31ab7ab6564f11f30c304a84c">DSMSG_Stop</a> = 0x1A
+, <a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa7d848956e52c016356e74f1155417426">DSMSG_ReplyACK</a> = 0x80
+, <br />
+&#160;&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfaa1c9338b9a6928a005cf7f22c38ac08b">DSMSG_NotifyStopped</a> = 0x90
+, <a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfaec5882c43d837d42f97f56c8ef44c1d7">DSMSG_NotifyException</a> = 0x91
+, <a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa82669fbeea5bcca2fd7d81320608c786">DSMSG_WriteFile</a> = 0xD0
+, <a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa5d8e4eacaf01479931e9b58f72b1ea3b">DSMSG_ReadFile</a> = 0xD1
+, <br />
+&#160;&#160;<a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa814fc0ee3f2a82baf6e61d57a1c23ed3">DSMSG_OpenFile</a> = 0xD2
+, <a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfaedff2a1fc2af7de89651fca5eaf0f9f9">DSMSG_CloseFile</a> = 0xD3
+, <a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfacb9c4e1c203d74a9c5fd2e64ffd7ea3b">DSMSG_PositionFile</a> = 0xD4
+, <a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bfa226068d127f8821f95284d1889d0bcaa">DSMSG_ReplyNAK</a> = 0xFF
+<br />
+ }</td></tr>
+<tr class="separator:abc50af22b0472f3196fc32f7e85958bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34f2f0d330a3f85587fce2aeea6bc07e" id="r_a34f2f0d330a3f85587fce2aeea6bc07e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trk_8h.html#a34f2f0d330a3f85587fce2aeea6bc07e">DSMessageRegisterOptions</a> { <a class="el" href="trk_8h.html#a34f2f0d330a3f85587fce2aeea6bc07eabe55615376383af92e72a82be9788330">DSREG_Default</a> = 0
+, <a class="el" href="trk_8h.html#a34f2f0d330a3f85587fce2aeea6bc07eaf98fe6e0f28986f4966db5c94921d3d8">DSREG_FP</a> = 1
+, <a class="el" href="trk_8h.html#a34f2f0d330a3f85587fce2aeea6bc07ea4f347a30442ff17b798ec5ea905456aa">DSREG_Extended1</a> = 2
+, <a class="el" href="trk_8h.html#a34f2f0d330a3f85587fce2aeea6bc07ea29ec337b5b7e6ed13134f0e3ac7924ce">DSREG_Extended2</a> = 3
+ }</td></tr>
+<tr class="separator:a34f2f0d330a3f85587fce2aeea6bc07e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b538f42a2e6625f06b1dba3dc6f1cbe" id="r_a5b538f42a2e6625f06b1dba3dc6f1cbe"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trk_8h.html#a5b538f42a2e6625f06b1dba3dc6f1cbe">DSMessageStepOptions</a> { <a class="el" href="trk_8h.html#a5b538f42a2e6625f06b1dba3dc6f1cbea974d137adf39e28c45a9cda64ee878f3">DSSTEP_IntoCount</a> = 0x0
+, <a class="el" href="trk_8h.html#a5b538f42a2e6625f06b1dba3dc6f1cbea3f17af0e466e8beacbed701a2edfd2a3">DSSTEP_IntoRange</a> = 0x1
+, <a class="el" href="trk_8h.html#a5b538f42a2e6625f06b1dba3dc6f1cbeae0fdc672b8018a0b2c98881a075dd8db">DSSTEP_OverCount</a> = 0x10
+, <a class="el" href="trk_8h.html#a5b538f42a2e6625f06b1dba3dc6f1cbea4702c1c8d58c35353cd868ce2ecff7b4">DSSTEP_OverRange</a> = 0x11
+ }</td></tr>
+<tr class="separator:a5b538f42a2e6625f06b1dba3dc6f1cbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec22e8e81f3f173090f2c04ac256d143" id="r_aec22e8e81f3f173090f2c04ac256d143"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143">DSReplyError</a> { <br />
+&#160;&#160;<a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a600345694d4558f64efcd1457129395d">DSREPLY_NoError</a> = 0x0
+, <a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a109abd5bc633725c63c6effb67115aeb">DSREPLY_Error</a> = 0x1
+, <a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143afd24ba88534370202c43192561a9fc8c">DSREPLY_PacketSizeError</a> = 0x2
+, <a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a02ba0678819255620581d3647acc53e3">DSREPLY_CWDSError</a> = 0x3
+, <br />
+&#160;&#160;<a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a00687efe369f6ba03eaa9fe13c5b0299">DSREPLY_EscapeError</a> = 0x4
+, <a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a1baaa37edb4e86bda7cb9061105f9fa6">DSREPLY_BadFCS</a> = 0x5
+, <a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a83cc37e351bda5053b4b4978f32c3a43">DSREPLY_Overflow</a> = 0x6
+, <a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a4c9bd3a4a45c03b4cef9f8998fe8a04b">DSREPLY_SequenceMissing</a> = 0x7
+, <br />
+&#160;&#160;<a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a1790073654f7e9775eaf0496a60def6c">DSREPLY_UnsupportedCommandError</a> = 0x10
+, <a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a1ccf8186219f18d443ffe5db6558eb66">DSREPLY_ParameterError</a> = 0x11
+, <a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a3b9a8e283f8537840ffc6220e9c6e4f2">DSREPLY_UnsupportedOptionError</a> = 0x12
+, <a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a59ec8e7ae9e0ddd9409f96b8bc53cbb3">DSREPLY_InvalidMemoryRange</a> = 0x13
+, <br />
+&#160;&#160;<a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a3bba7095edaddb00b2e46c73eceed6fa">DSREPLY_InvalidRegisterRange</a> = 0x14
+, <a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143aec0242ad15f4f848e7bff2665fc66d36">DSREPLY_CWDSException</a> = 0x15
+, <a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a70e994968765c0230b1be620b21dc733">DSREPLY_NotStopped</a> = 0x16
+, <a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143afc4565bbccf84063c9c47bf765a80551">DSREPLY_BreakpointsFull</a> = 0x17
+, <br />
+&#160;&#160;<a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a16513fce41455a26202020308be0801b">DSREPLY_BreakpointConflict</a> = 0x18
+, <a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143af86c1d0d99871e22035e9e49fdfe0487">DSREPLY_OSError</a> = 0x20
+, <a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a2cafe6415ad682851a8dad02e32bf2f4">DSREPLY_InvalidProcessID</a> = 0x21
+, <a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143a6d8ca6553d15c4806402ae0324268641">DSREPLY_InvalidThreadID</a> = 0x22
+, <br />
+&#160;&#160;<a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143ad8dd0be5c60d7ac77611d145fb68d599">DSREPLY_DebugSecurityError</a> = 0x23
+<br />
+ }</td></tr>
+<tr class="separator:aec22e8e81f3f173090f2c04ac256d143"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48ff129248fb802ab462a75ce847c119" id="r_a48ff129248fb802ab462a75ce847c119"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trk_8h.html#a48ff129248fb802ab462a75ce847c119">ReceiverState</a> { <a class="el" href="trk_8h.html#a48ff129248fb802ab462a75ce847c119ae89c3b3c9e10781ee557c231d8358da7">DSRECV_Wait</a> = 0
+, <a class="el" href="trk_8h.html#a48ff129248fb802ab462a75ce847c119af4a3e0440e7ccd3cd93ecc89e4b1e7b3">DSRECV_Found</a> = 1
+, <a class="el" href="trk_8h.html#a48ff129248fb802ab462a75ce847c119a1e40e0d028f03b0efa4db5ae17ab2df3">DSRECV_InFrame</a> = 2
+, <a class="el" href="trk_8h.html#a48ff129248fb802ab462a75ce847c119aa130b593c485f39b1b5c498443df99de">DSRECV_FrameOverflow</a> = 3
+ }</td></tr>
+<tr class="separator:a48ff129248fb802ab462a75ce847c119"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a726ca809ffd3d67ab4b8476646f26635" id="r_a726ca809ffd3d67ab4b8476646f26635"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="trk_8h.html#a726ca809ffd3d67ab4b8476646f26635a024c1b07b5cc2d92c77f69bc1228abc9">DSMSGMEMORY_Segmented</a> = 0x01
+, <a class="el" href="trk_8h.html#a726ca809ffd3d67ab4b8476646f26635a01bb8a771213a2f1e232af6ff2972f88">DSMSGMEMORY_Extended</a> = 0x02
+, <a class="el" href="trk_8h.html#a726ca809ffd3d67ab4b8476646f26635a6161ee4159b150132d6c5828fedd8605">DSMSGMEMORY_Protected</a> = 0x04
+, <a class="el" href="trk_8h.html#a726ca809ffd3d67ab4b8476646f26635a12d21ad24aa57663ac6edafb75735dfa">DSMSGMEMORY_Userview</a> = 0x08
+, <br />
+&#160;&#160;<a class="el" href="trk_8h.html#a726ca809ffd3d67ab4b8476646f26635a02ea7c7b3e43267755d869a49a77bdf1">DSMSGMEMORY_Space_program</a> = 0x00
+, <a class="el" href="trk_8h.html#a726ca809ffd3d67ab4b8476646f26635a22d766b2763f40c41cc75de48b74c302">DSMSGMEMORY_Space_data</a> = 0x40
+, <a class="el" href="trk_8h.html#a726ca809ffd3d67ab4b8476646f26635a7b03347d1ddb900bb81fa15acface712">DSMSGMEMORY_Space_io</a> = 0x80
+<br />
+ }</td></tr>
+<tr class="separator:a726ca809ffd3d67ab4b8476646f26635"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a377fbf6a54d6c3797c7e8b7d13f64127" id="r_a377fbf6a54d6c3797c7e8b7d13f64127"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trk_8h.html#a377fbf6a54d6c3797c7e8b7d13f64127">NubEventType</a> { <br />
+&#160;&#160;<a class="el" href="trk_8h.html#a377fbf6a54d6c3797c7e8b7d13f64127a1ab6b10689a550d00658b00568335a74">NUBEVENT_Null</a> = 0
+, <a class="el" href="trk_8h.html#a377fbf6a54d6c3797c7e8b7d13f64127a753dd1ca19d45f5013180a2b5312f5e8">NUBEVENT_Shutdown</a> = 1
+, <a class="el" href="trk_8h.html#a377fbf6a54d6c3797c7e8b7d13f64127acd386a53a984fdc0d65e02f71f31743e">NUBEVENT_Request</a> = 2
+, <a class="el" href="trk_8h.html#a377fbf6a54d6c3797c7e8b7d13f64127aa660875c25379e47ce86e38c79aad27c">NUBEVENT_Breakpoint</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="trk_8h.html#a377fbf6a54d6c3797c7e8b7d13f64127a93368cd4e38607bee1e07f4a7b7d1948">NUBEVENT_Exception</a> = 4
+, <a class="el" href="trk_8h.html#a377fbf6a54d6c3797c7e8b7d13f64127a635c32cdba4c6f699587ce9753006232">NUBEVENT_Support</a> = 5
+<br />
+ }</td></tr>
+<tr class="separator:a377fbf6a54d6c3797c7e8b7d13f64127"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae9a842ab730926b65d8e5b373142c13" id="r_aae9a842ab730926b65d8e5b373142c13"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trk_8h.html#aae9a842ab730926b65d8e5b373142c13">ValidMemoryOptions</a> { <a class="el" href="trk_8h.html#aae9a842ab730926b65d8e5b373142c13ad2ff140b02a9d3997587b35443b3ae39">VALIDMEM_Readable</a> = 0
+, <a class="el" href="trk_8h.html#aae9a842ab730926b65d8e5b373142c13a92d3e08ada632d034297315849f057a1">VALIDMEM_Writeable</a> = 1
+ }</td></tr>
+<tr class="separator:aae9a842ab730926b65d8e5b373142c13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fb92968028dbeb2bfaf43e5e876a43c" id="r_a6fb92968028dbeb2bfaf43e5e876a43c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trk_8h.html#a6fb92968028dbeb2bfaf43e5e876a43c">MemoryAccessOptions</a> { <a class="el" href="trk_8h.html#a6fb92968028dbeb2bfaf43e5e876a43ca2b33bd5041a4cfd7e8cc92b8e93ef81b">MEMACCESS_UserMemory</a> = 0
+, <a class="el" href="trk_8h.html#a6fb92968028dbeb2bfaf43e5e876a43ca17b6bed88cbf09c4e1637508e63ead33">MEMACCESS_DebuggerMemory</a> = 1
+ }</td></tr>
+<tr class="separator:a6fb92968028dbeb2bfaf43e5e876a43c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32c0a23709984e66a3fd4ba6031886cc" id="r_a32c0a23709984e66a3fd4ba6031886cc"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trk_8h.html#a32c0a23709984e66a3fd4ba6031886cc">UARTErrorOptions</a> { <br />
+&#160;&#160;<a class="el" href="trk_8h.html#a32c0a23709984e66a3fd4ba6031886ccac21208343644999f9377a0dce73bb566">UART_NoError</a> = 0
+, <a class="el" href="trk_8h.html#a32c0a23709984e66a3fd4ba6031886cca0e9dde3119e5250a14d041468516bdc3">UART_UnknownBaudRate</a> = 1
+, <a class="el" href="trk_8h.html#a32c0a23709984e66a3fd4ba6031886cca14225ea43fe49cbd8b2e32a8d047f742">UART_ConfigurationError</a> = 2
+, <a class="el" href="trk_8h.html#a32c0a23709984e66a3fd4ba6031886cca2581d0dcdc951cb8d34f694f28950db9">UART_BufferOverflow</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="trk_8h.html#a32c0a23709984e66a3fd4ba6031886cca79b34f29d9f106ac28c14221af4f3b03">UART_NoData</a> = 4
+<br />
+ }</td></tr>
+<tr class="separator:a32c0a23709984e66a3fd4ba6031886cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bd871a9bbeafd0ddf9b66101739986d" id="r_a5bd871a9bbeafd0ddf9b66101739986d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trk_8h.html#a5bd871a9bbeafd0ddf9b66101739986d">UARTBaudRate</a> { <br />
+&#160;&#160;<a class="el" href="trk_8h.html#a5bd871a9bbeafd0ddf9b66101739986da0f1a4c1a04145a5344f7274018ead6a6">kBaudHWSet</a> = -1
+, <a class="el" href="trk_8h.html#a5bd871a9bbeafd0ddf9b66101739986dabb91b0c7572c7967f53dbcf7787ac99a">kBaud300</a> = 300
+, <a class="el" href="trk_8h.html#a5bd871a9bbeafd0ddf9b66101739986dac86de04aec6276261b187a6fb66cb263">kBaud600</a> = 600
+, <a class="el" href="trk_8h.html#a5bd871a9bbeafd0ddf9b66101739986da653952e03037f67dcaeb655d13e373a3">kBaud1200</a> = 1200
+, <br />
+&#160;&#160;<a class="el" href="trk_8h.html#a5bd871a9bbeafd0ddf9b66101739986dac122f6a6a07d0f6c2a4b08b7021cc505">kBaud1800</a> = 1800
+, <a class="el" href="trk_8h.html#a5bd871a9bbeafd0ddf9b66101739986daeec331c13498a7524063717b3686a42f">kBaud2000</a> = 2000
+, <a class="el" href="trk_8h.html#a5bd871a9bbeafd0ddf9b66101739986da4b521d2aa089614a080fc3e8440ea622">kBaud2400</a> = 2400
+, <a class="el" href="trk_8h.html#a5bd871a9bbeafd0ddf9b66101739986da4faae7491b5f4bd1e8542767dea09cef">kBaud3600</a> = 3600
+, <br />
+&#160;&#160;<a class="el" href="trk_8h.html#a5bd871a9bbeafd0ddf9b66101739986daff6280d8197afa309925e4b559af38c7">kBaud4800</a> = 4800
+, <a class="el" href="trk_8h.html#a5bd871a9bbeafd0ddf9b66101739986dacb4e2c004dfa48b91d2d99e5e06655f6">kBaud7200</a> = 7200
+, <a class="el" href="trk_8h.html#a5bd871a9bbeafd0ddf9b66101739986da0f607e5cc0af65e8826ea46786ef0bb3">kBaud9600</a> = 9600
+, <a class="el" href="trk_8h.html#a5bd871a9bbeafd0ddf9b66101739986da0cbc3804097cddb7051a33aaabc6dea4">kBaud19200</a> = 19200
+, <br />
+&#160;&#160;<a class="el" href="trk_8h.html#a5bd871a9bbeafd0ddf9b66101739986da0afdbaf434f644ef6ba0d767ede5e298">kBaud38400</a> = 38400
+, <a class="el" href="trk_8h.html#a5bd871a9bbeafd0ddf9b66101739986da1e2f876b380623c60e12bac291f323b0">kBaud57600</a> = 57600
+, <a class="el" href="trk_8h.html#a5bd871a9bbeafd0ddf9b66101739986da12fcfc442c405356bea2facc0ed84393">kBaud115200</a> = 115200
+, <a class="el" href="trk_8h.html#a5bd871a9bbeafd0ddf9b66101739986daece5834051ac00a5f1b8146e96420e08">kBaud230400</a> = 230400
+<br />
+ }</td></tr>
+<tr class="separator:a5bd871a9bbeafd0ddf9b66101739986d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a9b0b6af4fd78fab6f6992c5946219663" id="r_a9b0b6af4fd78fab6f6992c5946219663"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trk_8h.html#a9b0b6af4fd78fab6f6992c5946219663">TRKSaveExtended1Block</a> ()</td></tr>
+<tr class="separator:a9b0b6af4fd78fab6f6992c5946219663"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ae96041c6219459c4fdf2783a343c8160" name="ae96041c6219459c4fdf2783a343c8160"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae96041c6219459c4fdf2783a343c8160">&#9670;&#160;</a></span>CommandReply</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">struct</a> <a class="el" href="structCommandReply.html">CommandReply</a> <a class="el" href="structCommandReply.html">CommandReply</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa4a440a620f8e1d4ec05d1084d98ef0a" name="aa4a440a620f8e1d4ec05d1084d98ef0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4a440a620f8e1d4ec05d1084d98ef0a">&#9670;&#160;</a></span>MessageBufferID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> <a class="el" href="trk_8h.html#aa4a440a620f8e1d4ec05d1084d98ef0a">MessageBufferID</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae5043f9f31119fd4e72a7a7870d88dd9" name="ae5043f9f31119fd4e72a7a7870d88dd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5043f9f31119fd4e72a7a7870d88dd9">&#9670;&#160;</a></span>ProcessorRestoreFlags_PPC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">struct</a> <a class="el" href="structProcessorRestoreFlags__PPC.html">ProcessorRestoreFlags_PPC</a> <a class="el" href="structProcessorRestoreFlags__PPC.html">ProcessorRestoreFlags_PPC</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a652b973667176a46ca72b1202b3bd678" name="a652b973667176a46ca72b1202b3bd678"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a652b973667176a46ca72b1202b3bd678">&#9670;&#160;</a></span>TRKBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">struct</a> <a class="el" href="structTRKBuffer.html">TRKBuffer</a> <a class="el" href="structTRKBuffer.html">TRKBuffer</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2733b98442044b4c6ec34fe591468bc3" name="a2733b98442044b4c6ec34fe591468bc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2733b98442044b4c6ec34fe591468bc3">&#9670;&#160;</a></span>TRKFramingState</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">struct</a> <a class="el" href="structTRKFramingState.html">TRKFramingState</a> <a class="el" href="structTRKFramingState.html">TRKFramingState</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad4460b486e608f7c5b1e42529f263d00" name="ad4460b486e608f7c5b1e42529f263d00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4460b486e608f7c5b1e42529f263d00">&#9670;&#160;</a></span>TRKState_PPC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">struct</a> <a class="el" href="structTRKState__PPC.html">TRKState_PPC</a> <a class="el" href="structTRKState__PPC.html">TRKState_PPC</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a88256575d7bc3e8d7fc9ec75628225f7" name="a88256575d7bc3e8d7fc9ec75628225f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88256575d7bc3e8d7fc9ec75628225f7">&#9670;&#160;</a></span>UARTError</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> <a class="el" href="trk_8h.html#a88256575d7bc3e8d7fc9ec75628225f7">UARTError</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a726ca809ffd3d67ab4b8476646f26635" name="a726ca809ffd3d67ab4b8476646f26635"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a726ca809ffd3d67ab4b8476646f26635">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">anonymous</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">enum</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a726ca809ffd3d67ab4b8476646f26635a024c1b07b5cc2d92c77f69bc1228abc9" name="a726ca809ffd3d67ab4b8476646f26635a024c1b07b5cc2d92c77f69bc1228abc9"></a>DSMSGMEMORY_Segmented&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a726ca809ffd3d67ab4b8476646f26635a01bb8a771213a2f1e232af6ff2972f88" name="a726ca809ffd3d67ab4b8476646f26635a01bb8a771213a2f1e232af6ff2972f88"></a>DSMSGMEMORY_Extended&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a726ca809ffd3d67ab4b8476646f26635a6161ee4159b150132d6c5828fedd8605" name="a726ca809ffd3d67ab4b8476646f26635a6161ee4159b150132d6c5828fedd8605"></a>DSMSGMEMORY_Protected&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a726ca809ffd3d67ab4b8476646f26635a12d21ad24aa57663ac6edafb75735dfa" name="a726ca809ffd3d67ab4b8476646f26635a12d21ad24aa57663ac6edafb75735dfa"></a>DSMSGMEMORY_Userview&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a726ca809ffd3d67ab4b8476646f26635a02ea7c7b3e43267755d869a49a77bdf1" name="a726ca809ffd3d67ab4b8476646f26635a02ea7c7b3e43267755d869a49a77bdf1"></a>DSMSGMEMORY_Space_program&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a726ca809ffd3d67ab4b8476646f26635a22d766b2763f40c41cc75de48b74c302" name="a726ca809ffd3d67ab4b8476646f26635a22d766b2763f40c41cc75de48b74c302"></a>DSMSGMEMORY_Space_data&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a726ca809ffd3d67ab4b8476646f26635a7b03347d1ddb900bb81fa15acface712" name="a726ca809ffd3d67ab4b8476646f26635a7b03347d1ddb900bb81fa15acface712"></a>DSMSGMEMORY_Space_io&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a05b02c582cd96401f80a16293cccd408" name="a05b02c582cd96401f80a16293cccd408"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05b02c582cd96401f80a16293cccd408">&#9670;&#160;</a></span>DSError</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">enum</a> <a class="el" href="trk_8h.html#a05b02c582cd96401f80a16293cccd408">DSError</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a05b02c582cd96401f80a16293cccd408a126018271a566021ff0e273aaf7bc81c" name="a05b02c582cd96401f80a16293cccd408a126018271a566021ff0e273aaf7bc81c"></a>DS_NoError&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a05b02c582cd96401f80a16293cccd408aa36a24002695b80a204f28c5bf357aa3" name="a05b02c582cd96401f80a16293cccd408aa36a24002695b80a204f28c5bf357aa3"></a>DS_StepError&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a05b02c582cd96401f80a16293cccd408ad70af7fcaf93bb87639a6f6a7a58e22b" name="a05b02c582cd96401f80a16293cccd408ad70af7fcaf93bb87639a6f6a7a58e22b"></a>DS_ParameterError&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a05b02c582cd96401f80a16293cccd408accfcc12f5b70b0db1632d480500165b5" name="a05b02c582cd96401f80a16293cccd408accfcc12f5b70b0db1632d480500165b5"></a>DS_EventQueueFull&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a05b02c582cd96401f80a16293cccd408a90e56b0ecc5444629a3da2cf101f3f56" name="a05b02c582cd96401f80a16293cccd408a90e56b0ecc5444629a3da2cf101f3f56"></a>DS_NoMessageBufferAvailable&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a05b02c582cd96401f80a16293cccd408a075db8392a28f8777627f709d656517c" name="a05b02c582cd96401f80a16293cccd408a075db8392a28f8777627f709d656517c"></a>DS_MessageBufferOverflow&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a05b02c582cd96401f80a16293cccd408a12cc95648e00830a5b773a717df40e1a" name="a05b02c582cd96401f80a16293cccd408a12cc95648e00830a5b773a717df40e1a"></a>DS_MessageBufferReadError&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a05b02c582cd96401f80a16293cccd408ab1268c16a407ef863fa2ca5df9011482" name="a05b02c582cd96401f80a16293cccd408ab1268c16a407ef863fa2ca5df9011482"></a>DS_DispatchError&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a05b02c582cd96401f80a16293cccd408a3bf83afc71cde7063a8cb7a86fa6e082" name="a05b02c582cd96401f80a16293cccd408a3bf83afc71cde7063a8cb7a86fa6e082"></a>DS_InvalidMemory&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a05b02c582cd96401f80a16293cccd408a618628d92e63da1cc3efe2784e8a8ba1" name="a05b02c582cd96401f80a16293cccd408a618628d92e63da1cc3efe2784e8a8ba1"></a>DS_InvalidRegister&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a05b02c582cd96401f80a16293cccd408a51a9f6ff4a68952d254f5164a8cd60ce" name="a05b02c582cd96401f80a16293cccd408a51a9f6ff4a68952d254f5164a8cd60ce"></a>DS_CWDSException&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a05b02c582cd96401f80a16293cccd408a1f3b456c3a20b741429065609f7fc8e6" name="a05b02c582cd96401f80a16293cccd408a1f3b456c3a20b741429065609f7fc8e6"></a>DS_UnsupportedError&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a05b02c582cd96401f80a16293cccd408a001d0a79980d1edbb2837921a0b52610" name="a05b02c582cd96401f80a16293cccd408a001d0a79980d1edbb2837921a0b52610"></a>DS_InvalidProcessID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a05b02c582cd96401f80a16293cccd408a748e609fb95dfad2cce2317c44739449" name="a05b02c582cd96401f80a16293cccd408a748e609fb95dfad2cce2317c44739449"></a>DS_InvalidThreadID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a05b02c582cd96401f80a16293cccd408ae0fa54c80ac6313331bd66bbf5755f9a" name="a05b02c582cd96401f80a16293cccd408ae0fa54c80ac6313331bd66bbf5755f9a"></a>DS_OSError&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a05b02c582cd96401f80a16293cccd408adb1961643ec37f093427aee7cb5704d8" name="a05b02c582cd96401f80a16293cccd408adb1961643ec37f093427aee7cb5704d8"></a>DS_Error800&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="ad05ef16f1f26edddaa833cd6980ea313" name="ad05ef16f1f26edddaa833cd6980ea313"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad05ef16f1f26edddaa833cd6980ea313">&#9670;&#160;</a></span>DSFileHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">enum</a> <a class="el" href="trk_8h.html#ad05ef16f1f26edddaa833cd6980ea313">DSFileHandle</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad05ef16f1f26edddaa833cd6980ea313adbc2c3a8dc2ca57047c511d79b0d82cd" name="ad05ef16f1f26edddaa833cd6980ea313adbc2c3a8dc2ca57047c511d79b0d82cd"></a>DS_Stdin&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad05ef16f1f26edddaa833cd6980ea313a0837df2af1bc688b488d4121817b647d" name="ad05ef16f1f26edddaa833cd6980ea313a0837df2af1bc688b488d4121817b647d"></a>DS_Stdout&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad05ef16f1f26edddaa833cd6980ea313aa530b67c5b39b2fb789ebe740f145a82" name="ad05ef16f1f26edddaa833cd6980ea313aa530b67c5b39b2fb789ebe740f145a82"></a>DS_Stderr&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="abb04573ed5817a3349abfeb032fc2384" name="abb04573ed5817a3349abfeb032fc2384"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb04573ed5817a3349abfeb032fc2384">&#9670;&#160;</a></span>DSIOResult</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">enum</a> <a class="el" href="trk_8h.html#abb04573ed5817a3349abfeb032fc2384">DSIOResult</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="abb04573ed5817a3349abfeb032fc2384acb1188feeea1a6620028be3681ea915d" name="abb04573ed5817a3349abfeb032fc2384acb1188feeea1a6620028be3681ea915d"></a>DS_IONoError&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abb04573ed5817a3349abfeb032fc2384a1d6f7de0285954fcb13d1a7e2b98d129" name="abb04573ed5817a3349abfeb032fc2384a1d6f7de0285954fcb13d1a7e2b98d129"></a>DS_IOError&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abb04573ed5817a3349abfeb032fc2384a7a8b43b120c4d0dc70d79b9a33cde814" name="abb04573ed5817a3349abfeb032fc2384a7a8b43b120c4d0dc70d79b9a33cde814"></a>DS_IOEOF&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a34f2f0d330a3f85587fce2aeea6bc07e" name="a34f2f0d330a3f85587fce2aeea6bc07e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34f2f0d330a3f85587fce2aeea6bc07e">&#9670;&#160;</a></span>DSMessageRegisterOptions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">enum</a> <a class="el" href="trk_8h.html#a34f2f0d330a3f85587fce2aeea6bc07e">DSMessageRegisterOptions</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a34f2f0d330a3f85587fce2aeea6bc07eabe55615376383af92e72a82be9788330" name="a34f2f0d330a3f85587fce2aeea6bc07eabe55615376383af92e72a82be9788330"></a>DSREG_Default&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a34f2f0d330a3f85587fce2aeea6bc07eaf98fe6e0f28986f4966db5c94921d3d8" name="a34f2f0d330a3f85587fce2aeea6bc07eaf98fe6e0f28986f4966db5c94921d3d8"></a>DSREG_FP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a34f2f0d330a3f85587fce2aeea6bc07ea4f347a30442ff17b798ec5ea905456aa" name="a34f2f0d330a3f85587fce2aeea6bc07ea4f347a30442ff17b798ec5ea905456aa"></a>DSREG_Extended1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a34f2f0d330a3f85587fce2aeea6bc07ea29ec337b5b7e6ed13134f0e3ac7924ce" name="a34f2f0d330a3f85587fce2aeea6bc07ea29ec337b5b7e6ed13134f0e3ac7924ce"></a>DSREG_Extended2&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a5b538f42a2e6625f06b1dba3dc6f1cbe" name="a5b538f42a2e6625f06b1dba3dc6f1cbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b538f42a2e6625f06b1dba3dc6f1cbe">&#9670;&#160;</a></span>DSMessageStepOptions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">enum</a> <a class="el" href="trk_8h.html#a5b538f42a2e6625f06b1dba3dc6f1cbe">DSMessageStepOptions</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5b538f42a2e6625f06b1dba3dc6f1cbea974d137adf39e28c45a9cda64ee878f3" name="a5b538f42a2e6625f06b1dba3dc6f1cbea974d137adf39e28c45a9cda64ee878f3"></a>DSSTEP_IntoCount&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5b538f42a2e6625f06b1dba3dc6f1cbea3f17af0e466e8beacbed701a2edfd2a3" name="a5b538f42a2e6625f06b1dba3dc6f1cbea3f17af0e466e8beacbed701a2edfd2a3"></a>DSSTEP_IntoRange&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5b538f42a2e6625f06b1dba3dc6f1cbeae0fdc672b8018a0b2c98881a075dd8db" name="a5b538f42a2e6625f06b1dba3dc6f1cbeae0fdc672b8018a0b2c98881a075dd8db"></a>DSSTEP_OverCount&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5b538f42a2e6625f06b1dba3dc6f1cbea4702c1c8d58c35353cd868ce2ecff7b4" name="a5b538f42a2e6625f06b1dba3dc6f1cbea4702c1c8d58c35353cd868ce2ecff7b4"></a>DSSTEP_OverRange&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="aec22e8e81f3f173090f2c04ac256d143" name="aec22e8e81f3f173090f2c04ac256d143"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec22e8e81f3f173090f2c04ac256d143">&#9670;&#160;</a></span>DSReplyError</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">enum</a> <a class="el" href="trk_8h.html#aec22e8e81f3f173090f2c04ac256d143">DSReplyError</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aec22e8e81f3f173090f2c04ac256d143a600345694d4558f64efcd1457129395d" name="aec22e8e81f3f173090f2c04ac256d143a600345694d4558f64efcd1457129395d"></a>DSREPLY_NoError&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aec22e8e81f3f173090f2c04ac256d143a109abd5bc633725c63c6effb67115aeb" name="aec22e8e81f3f173090f2c04ac256d143a109abd5bc633725c63c6effb67115aeb"></a>DSREPLY_Error&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aec22e8e81f3f173090f2c04ac256d143afd24ba88534370202c43192561a9fc8c" name="aec22e8e81f3f173090f2c04ac256d143afd24ba88534370202c43192561a9fc8c"></a>DSREPLY_PacketSizeError&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aec22e8e81f3f173090f2c04ac256d143a02ba0678819255620581d3647acc53e3" name="aec22e8e81f3f173090f2c04ac256d143a02ba0678819255620581d3647acc53e3"></a>DSREPLY_CWDSError&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aec22e8e81f3f173090f2c04ac256d143a00687efe369f6ba03eaa9fe13c5b0299" name="aec22e8e81f3f173090f2c04ac256d143a00687efe369f6ba03eaa9fe13c5b0299"></a>DSREPLY_EscapeError&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aec22e8e81f3f173090f2c04ac256d143a1baaa37edb4e86bda7cb9061105f9fa6" name="aec22e8e81f3f173090f2c04ac256d143a1baaa37edb4e86bda7cb9061105f9fa6"></a>DSREPLY_BadFCS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aec22e8e81f3f173090f2c04ac256d143a83cc37e351bda5053b4b4978f32c3a43" name="aec22e8e81f3f173090f2c04ac256d143a83cc37e351bda5053b4b4978f32c3a43"></a>DSREPLY_Overflow&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aec22e8e81f3f173090f2c04ac256d143a4c9bd3a4a45c03b4cef9f8998fe8a04b" name="aec22e8e81f3f173090f2c04ac256d143a4c9bd3a4a45c03b4cef9f8998fe8a04b"></a>DSREPLY_SequenceMissing&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aec22e8e81f3f173090f2c04ac256d143a1790073654f7e9775eaf0496a60def6c" name="aec22e8e81f3f173090f2c04ac256d143a1790073654f7e9775eaf0496a60def6c"></a>DSREPLY_UnsupportedCommandError&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aec22e8e81f3f173090f2c04ac256d143a1ccf8186219f18d443ffe5db6558eb66" name="aec22e8e81f3f173090f2c04ac256d143a1ccf8186219f18d443ffe5db6558eb66"></a>DSREPLY_ParameterError&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aec22e8e81f3f173090f2c04ac256d143a3b9a8e283f8537840ffc6220e9c6e4f2" name="aec22e8e81f3f173090f2c04ac256d143a3b9a8e283f8537840ffc6220e9c6e4f2"></a>DSREPLY_UnsupportedOptionError&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aec22e8e81f3f173090f2c04ac256d143a59ec8e7ae9e0ddd9409f96b8bc53cbb3" name="aec22e8e81f3f173090f2c04ac256d143a59ec8e7ae9e0ddd9409f96b8bc53cbb3"></a>DSREPLY_InvalidMemoryRange&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aec22e8e81f3f173090f2c04ac256d143a3bba7095edaddb00b2e46c73eceed6fa" name="aec22e8e81f3f173090f2c04ac256d143a3bba7095edaddb00b2e46c73eceed6fa"></a>DSREPLY_InvalidRegisterRange&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aec22e8e81f3f173090f2c04ac256d143aec0242ad15f4f848e7bff2665fc66d36" name="aec22e8e81f3f173090f2c04ac256d143aec0242ad15f4f848e7bff2665fc66d36"></a>DSREPLY_CWDSException&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aec22e8e81f3f173090f2c04ac256d143a70e994968765c0230b1be620b21dc733" name="aec22e8e81f3f173090f2c04ac256d143a70e994968765c0230b1be620b21dc733"></a>DSREPLY_NotStopped&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aec22e8e81f3f173090f2c04ac256d143afc4565bbccf84063c9c47bf765a80551" name="aec22e8e81f3f173090f2c04ac256d143afc4565bbccf84063c9c47bf765a80551"></a>DSREPLY_BreakpointsFull&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aec22e8e81f3f173090f2c04ac256d143a16513fce41455a26202020308be0801b" name="aec22e8e81f3f173090f2c04ac256d143a16513fce41455a26202020308be0801b"></a>DSREPLY_BreakpointConflict&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aec22e8e81f3f173090f2c04ac256d143af86c1d0d99871e22035e9e49fdfe0487" name="aec22e8e81f3f173090f2c04ac256d143af86c1d0d99871e22035e9e49fdfe0487"></a>DSREPLY_OSError&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aec22e8e81f3f173090f2c04ac256d143a2cafe6415ad682851a8dad02e32bf2f4" name="aec22e8e81f3f173090f2c04ac256d143a2cafe6415ad682851a8dad02e32bf2f4"></a>DSREPLY_InvalidProcessID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aec22e8e81f3f173090f2c04ac256d143a6d8ca6553d15c4806402ae0324268641" name="aec22e8e81f3f173090f2c04ac256d143a6d8ca6553d15c4806402ae0324268641"></a>DSREPLY_InvalidThreadID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aec22e8e81f3f173090f2c04ac256d143ad8dd0be5c60d7ac77611d145fb68d599" name="aec22e8e81f3f173090f2c04ac256d143ad8dd0be5c60d7ac77611d145fb68d599"></a>DSREPLY_DebugSecurityError&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="ae4dfd42394001deb6e8a0e60c81d6f7a" name="ae4dfd42394001deb6e8a0e60c81d6f7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4dfd42394001deb6e8a0e60c81d6f7a">&#9670;&#160;</a></span>HardwareType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">enum</a> <a class="el" href="trk_8h.html#ae4dfd42394001deb6e8a0e60c81d6f7a">HardwareType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae4dfd42394001deb6e8a0e60c81d6f7aa44914a273e6b44f7d97cbd8719df1513" name="ae4dfd42394001deb6e8a0e60c81d6f7aa44914a273e6b44f7d97cbd8719df1513"></a>HARDWARE_AMC_DDH&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae4dfd42394001deb6e8a0e60c81d6f7aa181ac37291dea86149f13ddb1d84837e" name="ae4dfd42394001deb6e8a0e60c81d6f7aa181ac37291dea86149f13ddb1d84837e"></a>HARDWARE_GDEV&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae4dfd42394001deb6e8a0e60c81d6f7aa06657a30c689b5ffd0b05fdeed881c43" name="ae4dfd42394001deb6e8a0e60c81d6f7aa06657a30c689b5ffd0b05fdeed881c43"></a>HARDWARE_BBA&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a6fb92968028dbeb2bfaf43e5e876a43c" name="a6fb92968028dbeb2bfaf43e5e876a43c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fb92968028dbeb2bfaf43e5e876a43c">&#9670;&#160;</a></span>MemoryAccessOptions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">enum</a> <a class="el" href="trk_8h.html#a6fb92968028dbeb2bfaf43e5e876a43c">MemoryAccessOptions</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6fb92968028dbeb2bfaf43e5e876a43ca2b33bd5041a4cfd7e8cc92b8e93ef81b" name="a6fb92968028dbeb2bfaf43e5e876a43ca2b33bd5041a4cfd7e8cc92b8e93ef81b"></a>MEMACCESS_UserMemory&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6fb92968028dbeb2bfaf43e5e876a43ca17b6bed88cbf09c4e1637508e63ead33" name="a6fb92968028dbeb2bfaf43e5e876a43ca17b6bed88cbf09c4e1637508e63ead33"></a>MEMACCESS_DebuggerMemory&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="abc50af22b0472f3196fc32f7e85958bf" name="abc50af22b0472f3196fc32f7e85958bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc50af22b0472f3196fc32f7e85958bf">&#9670;&#160;</a></span>MessageCommandID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">enum</a> <a class="el" href="trk_8h.html#abc50af22b0472f3196fc32f7e85958bf">MessageCommandID</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="abc50af22b0472f3196fc32f7e85958bfac6f511775fe451bc416cf69bdd6ef0b8" name="abc50af22b0472f3196fc32f7e85958bfac6f511775fe451bc416cf69bdd6ef0b8"></a>DSMSG_Ping&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc50af22b0472f3196fc32f7e85958bfaba3809be9b29075af2b62ef7931b80e9" name="abc50af22b0472f3196fc32f7e85958bfaba3809be9b29075af2b62ef7931b80e9"></a>DSMSG_Connect&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc50af22b0472f3196fc32f7e85958bfaa6cab40131e919960687db8fc303bd4c" name="abc50af22b0472f3196fc32f7e85958bfaa6cab40131e919960687db8fc303bd4c"></a>DSMSG_Disconnect&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc50af22b0472f3196fc32f7e85958bfa923b2998289aa55f36a04d12c67fa275" name="abc50af22b0472f3196fc32f7e85958bfa923b2998289aa55f36a04d12c67fa275"></a>DSMSG_Reset&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc50af22b0472f3196fc32f7e85958bfa464aee155200d3b49738e41a2e0a026c" name="abc50af22b0472f3196fc32f7e85958bfa464aee155200d3b49738e41a2e0a026c"></a>DSMSG_Versions&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc50af22b0472f3196fc32f7e85958bfaa7c8588ffc7a8033c3274711bd709e80" name="abc50af22b0472f3196fc32f7e85958bfaa7c8588ffc7a8033c3274711bd709e80"></a>DSMSG_SupportMask&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc50af22b0472f3196fc32f7e85958bfaf6a94fedbe39f346ea9a9f82c21fad77" name="abc50af22b0472f3196fc32f7e85958bfaf6a94fedbe39f346ea9a9f82c21fad77"></a>DSMSG_Override&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc50af22b0472f3196fc32f7e85958bfa6e3ec7f65b42e830e2ceb317edf9df11" name="abc50af22b0472f3196fc32f7e85958bfa6e3ec7f65b42e830e2ceb317edf9df11"></a>DSMSG_ReadMemory&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc50af22b0472f3196fc32f7e85958bfa3e21de752395f3390617fccf91368686" name="abc50af22b0472f3196fc32f7e85958bfa3e21de752395f3390617fccf91368686"></a>DSMSG_WriteMemory&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc50af22b0472f3196fc32f7e85958bfa28df12cf5614a6925ded1dfe4bd9596c" name="abc50af22b0472f3196fc32f7e85958bfa28df12cf5614a6925ded1dfe4bd9596c"></a>DSMSG_ReadRegisters&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc50af22b0472f3196fc32f7e85958bfa73255c34881697f43db0b59cb63f80a9" name="abc50af22b0472f3196fc32f7e85958bfa73255c34881697f43db0b59cb63f80a9"></a>DSMSG_WriteRegisters&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc50af22b0472f3196fc32f7e85958bfa2636dff90e23e9bb3cfebb2cbf99d8d9" name="abc50af22b0472f3196fc32f7e85958bfa2636dff90e23e9bb3cfebb2cbf99d8d9"></a>DSMSG_SetOption&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc50af22b0472f3196fc32f7e85958bfa73717006e499744124fb49a30efbae1d" name="abc50af22b0472f3196fc32f7e85958bfa73717006e499744124fb49a30efbae1d"></a>DSMSG_Continue&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc50af22b0472f3196fc32f7e85958bfa6382d2ef6f2ef23760d5c51aa9f074ad" name="abc50af22b0472f3196fc32f7e85958bfa6382d2ef6f2ef23760d5c51aa9f074ad"></a>DSMSG_Step&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc50af22b0472f3196fc32f7e85958bfa6c4830a31ab7ab6564f11f30c304a84c" name="abc50af22b0472f3196fc32f7e85958bfa6c4830a31ab7ab6564f11f30c304a84c"></a>DSMSG_Stop&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc50af22b0472f3196fc32f7e85958bfa7d848956e52c016356e74f1155417426" name="abc50af22b0472f3196fc32f7e85958bfa7d848956e52c016356e74f1155417426"></a>DSMSG_ReplyACK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc50af22b0472f3196fc32f7e85958bfaa1c9338b9a6928a005cf7f22c38ac08b" name="abc50af22b0472f3196fc32f7e85958bfaa1c9338b9a6928a005cf7f22c38ac08b"></a>DSMSG_NotifyStopped&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc50af22b0472f3196fc32f7e85958bfaec5882c43d837d42f97f56c8ef44c1d7" name="abc50af22b0472f3196fc32f7e85958bfaec5882c43d837d42f97f56c8ef44c1d7"></a>DSMSG_NotifyException&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc50af22b0472f3196fc32f7e85958bfa82669fbeea5bcca2fd7d81320608c786" name="abc50af22b0472f3196fc32f7e85958bfa82669fbeea5bcca2fd7d81320608c786"></a>DSMSG_WriteFile&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc50af22b0472f3196fc32f7e85958bfa5d8e4eacaf01479931e9b58f72b1ea3b" name="abc50af22b0472f3196fc32f7e85958bfa5d8e4eacaf01479931e9b58f72b1ea3b"></a>DSMSG_ReadFile&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc50af22b0472f3196fc32f7e85958bfa814fc0ee3f2a82baf6e61d57a1c23ed3" name="abc50af22b0472f3196fc32f7e85958bfa814fc0ee3f2a82baf6e61d57a1c23ed3"></a>DSMSG_OpenFile&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc50af22b0472f3196fc32f7e85958bfaedff2a1fc2af7de89651fca5eaf0f9f9" name="abc50af22b0472f3196fc32f7e85958bfaedff2a1fc2af7de89651fca5eaf0f9f9"></a>DSMSG_CloseFile&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc50af22b0472f3196fc32f7e85958bfacb9c4e1c203d74a9c5fd2e64ffd7ea3b" name="abc50af22b0472f3196fc32f7e85958bfacb9c4e1c203d74a9c5fd2e64ffd7ea3b"></a>DSMSG_PositionFile&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abc50af22b0472f3196fc32f7e85958bfa226068d127f8821f95284d1889d0bcaa" name="abc50af22b0472f3196fc32f7e85958bfa226068d127f8821f95284d1889d0bcaa"></a>DSMSG_ReplyNAK&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a377fbf6a54d6c3797c7e8b7d13f64127" name="a377fbf6a54d6c3797c7e8b7d13f64127"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a377fbf6a54d6c3797c7e8b7d13f64127">&#9670;&#160;</a></span>NubEventType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">enum</a> <a class="el" href="trk_8h.html#a377fbf6a54d6c3797c7e8b7d13f64127">NubEventType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a377fbf6a54d6c3797c7e8b7d13f64127a1ab6b10689a550d00658b00568335a74" name="a377fbf6a54d6c3797c7e8b7d13f64127a1ab6b10689a550d00658b00568335a74"></a>NUBEVENT_Null&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a377fbf6a54d6c3797c7e8b7d13f64127a753dd1ca19d45f5013180a2b5312f5e8" name="a377fbf6a54d6c3797c7e8b7d13f64127a753dd1ca19d45f5013180a2b5312f5e8"></a>NUBEVENT_Shutdown&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a377fbf6a54d6c3797c7e8b7d13f64127acd386a53a984fdc0d65e02f71f31743e" name="a377fbf6a54d6c3797c7e8b7d13f64127acd386a53a984fdc0d65e02f71f31743e"></a>NUBEVENT_Request&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a377fbf6a54d6c3797c7e8b7d13f64127aa660875c25379e47ce86e38c79aad27c" name="a377fbf6a54d6c3797c7e8b7d13f64127aa660875c25379e47ce86e38c79aad27c"></a>NUBEVENT_Breakpoint&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a377fbf6a54d6c3797c7e8b7d13f64127a93368cd4e38607bee1e07f4a7b7d1948" name="a377fbf6a54d6c3797c7e8b7d13f64127a93368cd4e38607bee1e07f4a7b7d1948"></a>NUBEVENT_Exception&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a377fbf6a54d6c3797c7e8b7d13f64127a635c32cdba4c6f699587ce9753006232" name="a377fbf6a54d6c3797c7e8b7d13f64127a635c32cdba4c6f699587ce9753006232"></a>NUBEVENT_Support&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a48ff129248fb802ab462a75ce847c119" name="a48ff129248fb802ab462a75ce847c119"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48ff129248fb802ab462a75ce847c119">&#9670;&#160;</a></span>ReceiverState</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">enum</a> <a class="el" href="trk_8h.html#a48ff129248fb802ab462a75ce847c119">ReceiverState</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a48ff129248fb802ab462a75ce847c119ae89c3b3c9e10781ee557c231d8358da7" name="a48ff129248fb802ab462a75ce847c119ae89c3b3c9e10781ee557c231d8358da7"></a>DSRECV_Wait&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a48ff129248fb802ab462a75ce847c119af4a3e0440e7ccd3cd93ecc89e4b1e7b3" name="a48ff129248fb802ab462a75ce847c119af4a3e0440e7ccd3cd93ecc89e4b1e7b3"></a>DSRECV_Found&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a48ff129248fb802ab462a75ce847c119a1e40e0d028f03b0efa4db5ae17ab2df3" name="a48ff129248fb802ab462a75ce847c119a1e40e0d028f03b0efa4db5ae17ab2df3"></a>DSRECV_InFrame&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a48ff129248fb802ab462a75ce847c119aa130b593c485f39b1b5c498443df99de" name="a48ff129248fb802ab462a75ce847c119aa130b593c485f39b1b5c498443df99de"></a>DSRECV_FrameOverflow&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a5bd871a9bbeafd0ddf9b66101739986d" name="a5bd871a9bbeafd0ddf9b66101739986d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bd871a9bbeafd0ddf9b66101739986d">&#9670;&#160;</a></span>UARTBaudRate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">enum</a> <a class="el" href="trk_8h.html#a5bd871a9bbeafd0ddf9b66101739986d">UARTBaudRate</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5bd871a9bbeafd0ddf9b66101739986da0f1a4c1a04145a5344f7274018ead6a6" name="a5bd871a9bbeafd0ddf9b66101739986da0f1a4c1a04145a5344f7274018ead6a6"></a>kBaudHWSet&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5bd871a9bbeafd0ddf9b66101739986dabb91b0c7572c7967f53dbcf7787ac99a" name="a5bd871a9bbeafd0ddf9b66101739986dabb91b0c7572c7967f53dbcf7787ac99a"></a>kBaud300&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5bd871a9bbeafd0ddf9b66101739986dac86de04aec6276261b187a6fb66cb263" name="a5bd871a9bbeafd0ddf9b66101739986dac86de04aec6276261b187a6fb66cb263"></a>kBaud600&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5bd871a9bbeafd0ddf9b66101739986da653952e03037f67dcaeb655d13e373a3" name="a5bd871a9bbeafd0ddf9b66101739986da653952e03037f67dcaeb655d13e373a3"></a>kBaud1200&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5bd871a9bbeafd0ddf9b66101739986dac122f6a6a07d0f6c2a4b08b7021cc505" name="a5bd871a9bbeafd0ddf9b66101739986dac122f6a6a07d0f6c2a4b08b7021cc505"></a>kBaud1800&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5bd871a9bbeafd0ddf9b66101739986daeec331c13498a7524063717b3686a42f" name="a5bd871a9bbeafd0ddf9b66101739986daeec331c13498a7524063717b3686a42f"></a>kBaud2000&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5bd871a9bbeafd0ddf9b66101739986da4b521d2aa089614a080fc3e8440ea622" name="a5bd871a9bbeafd0ddf9b66101739986da4b521d2aa089614a080fc3e8440ea622"></a>kBaud2400&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5bd871a9bbeafd0ddf9b66101739986da4faae7491b5f4bd1e8542767dea09cef" name="a5bd871a9bbeafd0ddf9b66101739986da4faae7491b5f4bd1e8542767dea09cef"></a>kBaud3600&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5bd871a9bbeafd0ddf9b66101739986daff6280d8197afa309925e4b559af38c7" name="a5bd871a9bbeafd0ddf9b66101739986daff6280d8197afa309925e4b559af38c7"></a>kBaud4800&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5bd871a9bbeafd0ddf9b66101739986dacb4e2c004dfa48b91d2d99e5e06655f6" name="a5bd871a9bbeafd0ddf9b66101739986dacb4e2c004dfa48b91d2d99e5e06655f6"></a>kBaud7200&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5bd871a9bbeafd0ddf9b66101739986da0f607e5cc0af65e8826ea46786ef0bb3" name="a5bd871a9bbeafd0ddf9b66101739986da0f607e5cc0af65e8826ea46786ef0bb3"></a>kBaud9600&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5bd871a9bbeafd0ddf9b66101739986da0cbc3804097cddb7051a33aaabc6dea4" name="a5bd871a9bbeafd0ddf9b66101739986da0cbc3804097cddb7051a33aaabc6dea4"></a>kBaud19200&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5bd871a9bbeafd0ddf9b66101739986da0afdbaf434f644ef6ba0d767ede5e298" name="a5bd871a9bbeafd0ddf9b66101739986da0afdbaf434f644ef6ba0d767ede5e298"></a>kBaud38400&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5bd871a9bbeafd0ddf9b66101739986da1e2f876b380623c60e12bac291f323b0" name="a5bd871a9bbeafd0ddf9b66101739986da1e2f876b380623c60e12bac291f323b0"></a>kBaud57600&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5bd871a9bbeafd0ddf9b66101739986da12fcfc442c405356bea2facc0ed84393" name="a5bd871a9bbeafd0ddf9b66101739986da12fcfc442c405356bea2facc0ed84393"></a>kBaud115200&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5bd871a9bbeafd0ddf9b66101739986daece5834051ac00a5f1b8146e96420e08" name="a5bd871a9bbeafd0ddf9b66101739986daece5834051ac00a5f1b8146e96420e08"></a>kBaud230400&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a32c0a23709984e66a3fd4ba6031886cc" name="a32c0a23709984e66a3fd4ba6031886cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32c0a23709984e66a3fd4ba6031886cc">&#9670;&#160;</a></span>UARTErrorOptions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">enum</a> <a class="el" href="trk_8h.html#a32c0a23709984e66a3fd4ba6031886cc">UARTErrorOptions</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a32c0a23709984e66a3fd4ba6031886ccac21208343644999f9377a0dce73bb566" name="a32c0a23709984e66a3fd4ba6031886ccac21208343644999f9377a0dce73bb566"></a>UART_NoError&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a32c0a23709984e66a3fd4ba6031886cca0e9dde3119e5250a14d041468516bdc3" name="a32c0a23709984e66a3fd4ba6031886cca0e9dde3119e5250a14d041468516bdc3"></a>UART_UnknownBaudRate&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a32c0a23709984e66a3fd4ba6031886cca14225ea43fe49cbd8b2e32a8d047f742" name="a32c0a23709984e66a3fd4ba6031886cca14225ea43fe49cbd8b2e32a8d047f742"></a>UART_ConfigurationError&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a32c0a23709984e66a3fd4ba6031886cca2581d0dcdc951cb8d34f694f28950db9" name="a32c0a23709984e66a3fd4ba6031886cca2581d0dcdc951cb8d34f694f28950db9"></a>UART_BufferOverflow&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a32c0a23709984e66a3fd4ba6031886cca79b34f29d9f106ac28c14221af4f3b03" name="a32c0a23709984e66a3fd4ba6031886cca79b34f29d9f106ac28c14221af4f3b03"></a>UART_NoData&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="aae9a842ab730926b65d8e5b373142c13" name="aae9a842ab730926b65d8e5b373142c13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae9a842ab730926b65d8e5b373142c13">&#9670;&#160;</a></span>ValidMemoryOptions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">enum</a> <a class="el" href="trk_8h.html#aae9a842ab730926b65d8e5b373142c13">ValidMemoryOptions</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aae9a842ab730926b65d8e5b373142c13ad2ff140b02a9d3997587b35443b3ae39" name="aae9a842ab730926b65d8e5b373142c13ad2ff140b02a9d3997587b35443b3ae39"></a>VALIDMEM_Readable&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aae9a842ab730926b65d8e5b373142c13a92d3e08ada632d034297315849f057a1" name="aae9a842ab730926b65d8e5b373142c13a92d3e08ada632d034297315849f057a1"></a>VALIDMEM_Writeable&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a9b0b6af4fd78fab6f6992c5946219663" name="a9b0b6af4fd78fab6f6992c5946219663"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b0b6af4fd78fab6f6992c5946219663">&#9670;&#160;</a></span>TRKSaveExtended1Block()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> TRKSaveExtended1Block </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="dir_db1709413e4853dbf382363385ab04a7.html">PowerPC_EABI_Support</a></li><li class="navelem"><a class="el" href="dir_d0c6b9239c52c1da1fbeb5576216eda4.html">MetroTRK</a></li><li class="navelem"><a class="el" href="trk_8h.html">trk.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

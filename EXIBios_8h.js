@@ -1,0 +1,25 @@
+var EXIBios_8h =
+[
+    [ "EXIControl", "structEXIControl.html", "structEXIControl" ],
+    [ "EXICallback", "EXIBios_8h.html#a7138fa1e7122b3f129311feaafcb13e7", null ],
+    [ "EXIControl", "EXIBios_8h.html#ab9f0f6dce2ee41aa036056b0574b5afa", null ],
+    [ "OSContext", "EXIBios_8h.html#a924296baf430a531adb5135a5cd54207", null ],
+    [ "EXIAttach", "EXIBios_8h.html#a116a86be9e16a724a181c7fa896534ff", null ],
+    [ "EXIDeselect", "EXIBios_8h.html#af125a2c3921a828251052662c98affaf", null ],
+    [ "EXIDetach", "EXIBios_8h.html#ae7e47b9c45c389d3315fcd57da06e5ff", null ],
+    [ "EXIDma", "EXIBios_8h.html#a2e27c8d0df4fbce86c883e510010d4f7", null ],
+    [ "EXIGetID", "EXIBios_8h.html#aeed43431ee5d1d3124f6b98c4c60ec5b", null ],
+    [ "EXIGetState", "EXIBios_8h.html#abcee88af26aff33c9082de5e4b954cd3", null ],
+    [ "EXIImm", "EXIBios_8h.html#a6489494d5b7fae353f773a797450d670", null ],
+    [ "EXIImmEx", "EXIBios_8h.html#a87648d14ef971b27f5dca12c83559c67", null ],
+    [ "EXIInit", "EXIBios_8h.html#a6554aac16b8310c11bd9106751b29199", null ],
+    [ "EXILock", "EXIBios_8h.html#a484b4209facd185a0cdfbd90c8d8a151", null ],
+    [ "EXIProbe", "EXIBios_8h.html#aeaba7ee3a4461a89eaacd6bd9db00963", null ],
+    [ "EXIProbeEx", "EXIBios_8h.html#af09bdee73f51957ce24c7d49080d48a3", null ],
+    [ "EXISelect", "EXIBios_8h.html#a9257f1673e3ceae5d72bd47446840a53", null ],
+    [ "EXISetExiCallback", "EXIBios_8h.html#ae565bf6666fdfa22744a0af4a887cea4", null ],
+    [ "EXISync", "EXIBios_8h.html#a898017357d73846e27f4a09d02b68316", null ],
+    [ "EXIUnlock", "EXIBios_8h.html#a77eb40f1f87ecd18ba489cda7714d998", null ],
+    [ "UnlockedHandler", "EXIBios_8h.html#a4ad3caeb12c7ee282725568d8d0665a4", null ],
+    [ "__EXIRegs", "EXIBios_8h.html#ab67c1b63c4267fc3ef8630aee423c984", null ]
+];

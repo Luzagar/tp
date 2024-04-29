@@ -1,0 +1,28 @@
+var structdMapInfo__n =
+[
+    [ "chkGetCompass", "structdMapInfo__n.html#ac286cc77e71b84b31758587246e303d4", null ],
+    [ "chkGetCompass", "structdMapInfo__n.html#ae28bedac875be78332c3fc9b24b055c2", null ],
+    [ "chkGetMap", "structdMapInfo__n.html#a7bac3043f5cab1aadf7873cc021308c7", null ],
+    [ "chkGetMap", "structdMapInfo__n.html#ac6e0c75694b097b461435f4967da6cd0", null ],
+    [ "correctionOriginPos", "structdMapInfo__n.html#aa6a678f738eec953384bc4c3c0fd07b3", null ],
+    [ "getConstRestartIconPointer", "structdMapInfo__n.html#a03e7b8bc90718201ce7681886712d1e1", null ],
+    [ "getFloorParameter", "structdMapInfo__n.html#a9abcea7b0097fbdae91ce0bbc120054a", null ],
+    [ "getMapPlayerAngleY", "structdMapInfo__n.html#ad60a872aa3ebf2a40c4d430c2090975a", null ],
+    [ "getMapPlayerAngleY", "structdMapInfo__n.html#a0dac2cdf8090df22391a73e0afb8bba7", null ],
+    [ "getMapPlayerPos", "structdMapInfo__n.html#a05c17c4d6675d2389b7f55f8b55714d0", null ],
+    [ "getMapPlayerPos", "structdMapInfo__n.html#a37690cce4aa2c46d709db2e3143bfb2f", null ],
+    [ "getMapPlayerPos", "structdMapInfo__n.html#af4d5cfbcb6e237a1d4830f82be2af114", null ],
+    [ "getMapRestartAngleY", "structdMapInfo__n.html#a941eb26f8d987e4cf94ace93bf343d3f", null ],
+    [ "getMapRestartAngleY", "structdMapInfo__n.html#ad129b617d7e874d2d476e8227e24ec2e", null ],
+    [ "getMapRestartPos", "structdMapInfo__n.html#adcfb44dd99566cfc58fa2cf7c03d2d38", null ],
+    [ "getMapRestartPos", "structdMapInfo__n.html#ac8f94604069cad95ae0c65b5efde5b3d", null ],
+    [ "getMapRestartPos", "structdMapInfo__n.html#a286113e7a1f7b3db43ceb912f4d3de64", null ],
+    [ "getRoomCenter", "structdMapInfo__n.html#a4f6958a998caaabb4358c083a50ef7bb", null ],
+    [ "getRoomCenter", "structdMapInfo__n.html#aec66c894b1efe8a169a601a32b788495", null ],
+    [ "getRoomMinMaxXZ", "structdMapInfo__n.html#acdb6422cf679a523fd112686476c87ad", null ],
+    [ "getRoomMinMaxXZ", "structdMapInfo__n.html#afe82fa1cfd5c68eb71dc156deeda160b", null ],
+    [ "isVisitedRoom", "structdMapInfo__n.html#a00add6ab6b87ddf080a66fab48fe1199", null ],
+    [ "isVisitedRoom", "structdMapInfo__n.html#ad7ac36b27327f495a6c0c5b8f71525ac", null ],
+    [ "offsetPlus", "structdMapInfo__n.html#a758cd7f7417d91ebd945dac3d927806d", null ],
+    [ "rotAngle", "structdMapInfo__n.html#af7551a3386869bee08a04acd6de2d613", null ]
+];

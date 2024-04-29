@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: include/d/a/d_a_obj_ss_base.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d__a__obj__ss__base_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">d_a_obj_ss_base.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="d__a__obj__ss__base_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef A_OBJ_D_A_OBJ_SS_BASE_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define A_OBJ_D_A_OBJ_SS_BASE_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="f__op__actor_8h.html">f_op/f_op_actor.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classdaObj__SSBase__c.html">    6</a></span><span class="keyword">class </span><a class="code hl_struct" href="classdaObj__SSBase__c.html">daObj_SSBase_c</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structfopAc__ac__c.html">fopAc_ac_c</a> {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="comment">/* 8015E3F8 */</span> <a class="code hl_function" href="classdaObj__SSBase__c.html#aa218095f8761268b35f375d017a725f0">daObj_SSBase_c</a>();</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="comment">/* 8015E450 */</span> <span class="keyword">virtual</span> <a class="code hl_function" href="classdaObj__SSBase__c.html#a9a5e27ee330c73744ed4536e9ae6afa3">~daObj_SSBase_c</a>();</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="comment">/* 8015E4C8 */</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObj__SSBase__c.html#a1838caef1ff89fbd24ae67911648e28c">setSoldOut</a>();</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="comment">/* 8015E4B0 */</span> <span class="keyword">virtual</span> <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> <a class="code hl_function" href="classdaObj__SSBase__c.html#ab51d8e2ef6c9a56269bcf715a8073a5b">getProcessID</a>();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classdaObj__SSBase__c.html#a00c747c35ddb614c9c2567ce13472aeb">   14</a></span>    <span class="keywordtype">void</span>* <a class="code hl_function" href="classdaObj__SSBase__c.html#a00c747c35ddb614c9c2567ce13472aeb">getParentPtr</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="classdaObj__SSBase__c.html#accc6b9da56f27b8dbb8541a59298ba9f">mpParentPtr</a>; }</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classdaObj__SSBase__c.html#a53087ee57996a9c70437290c90979cf2">   15</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObj__SSBase__c.html#a53087ee57996a9c70437290c90979cf2">setParentPtr</a>(<span class="keywordtype">void</span>* parentPtr) { <a class="code hl_variable" href="classdaObj__SSBase__c.html#accc6b9da56f27b8dbb8541a59298ba9f">mpParentPtr</a> = parentPtr; }</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classdaObj__SSBase__c.html#a5e0fde52ee81f9e3773c72ebcf0819e7">   16</a></span>    <a class="code hl_typedef" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> <a class="code hl_function" href="classdaObj__SSBase__c.html#a5e0fde52ee81f9e3773c72ebcf0819e7">getFlowNodeNumber</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="classdaObj__SSBase__c.html#a906622ba577a5af931f93d055a610bd6">mFlowNodeNum</a>; }</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classdaObj__SSBase__c.html#ab2d89a1bd163069751cc3fa54be89c20">   17</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObj__SSBase__c.html#ab2d89a1bd163069751cc3fa54be89c20">setFlowNodeNumber</a>(<a class="code hl_typedef" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> flowNodeNum) { <a class="code hl_variable" href="classdaObj__SSBase__c.html#a906622ba577a5af931f93d055a610bd6">mFlowNodeNum</a> = flowNodeNum; }</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classdaObj__SSBase__c.html#abbf2f0d3f4b7107d01f02759c5e480bb">   18</a></span>    <a class="code hl_typedef" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> <a class="code hl_function" href="classdaObj__SSBase__c.html#abbf2f0d3f4b7107d01f02759c5e480bb">getValueNumber</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="classdaObj__SSBase__c.html#abc6cdda83c6dc2d95373666580c981c1">mValueNum</a>; }</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classdaObj__SSBase__c.html#a4170838f6bc939480c01a623fb3e8ef0">   19</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObj__SSBase__c.html#a4170838f6bc939480c01a623fb3e8ef0">setValueNumber</a>(<a class="code hl_typedef" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> valueNum) { <a class="code hl_variable" href="classdaObj__SSBase__c.html#abc6cdda83c6dc2d95373666580c981c1">mValueNum</a> = valueNum; }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classdaObj__SSBase__c.html#accc6b9da56f27b8dbb8541a59298ba9f">   22</a></span>    <span class="comment">/* 0x56C */</span> <span class="keywordtype">void</span>* <a class="code hl_variable" href="classdaObj__SSBase__c.html#accc6b9da56f27b8dbb8541a59298ba9f">mpParentPtr</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classdaObj__SSBase__c.html#a5a6cfc03d49f0d1c6b22f0dca5447b9a">   23</a></span>    <span class="comment">/* 0x570 */</span> <a class="code hl_typedef" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> <a class="code hl_variable" href="classdaObj__SSBase__c.html#a5a6cfc03d49f0d1c6b22f0dca5447b9a">field_0x570</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classdaObj__SSBase__c.html#a906622ba577a5af931f93d055a610bd6">   24</a></span>    <span class="comment">/* 0x572 */</span> <a class="code hl_typedef" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> <a class="code hl_variable" href="classdaObj__SSBase__c.html#a906622ba577a5af931f93d055a610bd6">mFlowNodeNum</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classdaObj__SSBase__c.html#abc6cdda83c6dc2d95373666580c981c1">   25</a></span>    <span class="comment">/* 0x574 */</span> <a class="code hl_typedef" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> <a class="code hl_variable" href="classdaObj__SSBase__c.html#abc6cdda83c6dc2d95373666580c981c1">mValueNum</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>};</div>
+</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#endif </span><span class="comment">/* A_OBJ_D_A_OBJ_SS_BASE_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassdaObj__SSBase__c_html"><div class="ttname"><a href="classdaObj__SSBase__c.html">daObj_SSBase_c</a></div><div class="ttdef"><b>Definition</b> d_a_obj_ss_base.h:6</div></div>
+<div class="ttc" id="aclassdaObj__SSBase__c_html_a00c747c35ddb614c9c2567ce13472aeb"><div class="ttname"><a href="classdaObj__SSBase__c.html#a00c747c35ddb614c9c2567ce13472aeb">daObj_SSBase_c::getParentPtr</a></div><div class="ttdeci">void * getParentPtr()</div><div class="ttdef"><b>Definition</b> d_a_obj_ss_base.h:14</div></div>
+<div class="ttc" id="aclassdaObj__SSBase__c_html_a1838caef1ff89fbd24ae67911648e28c"><div class="ttname"><a href="classdaObj__SSBase__c.html#a1838caef1ff89fbd24ae67911648e28c">daObj_SSBase_c::setSoldOut</a></div><div class="ttdeci">virtual void setSoldOut()</div><div class="ttdef"><b>Definition</b> d_a_obj_ss_base.cpp:30</div></div>
+<div class="ttc" id="aclassdaObj__SSBase__c_html_a4170838f6bc939480c01a623fb3e8ef0"><div class="ttname"><a href="classdaObj__SSBase__c.html#a4170838f6bc939480c01a623fb3e8ef0">daObj_SSBase_c::setValueNumber</a></div><div class="ttdeci">void setValueNumber(u16 valueNum)</div><div class="ttdef"><b>Definition</b> d_a_obj_ss_base.h:19</div></div>
+<div class="ttc" id="aclassdaObj__SSBase__c_html_a53087ee57996a9c70437290c90979cf2"><div class="ttname"><a href="classdaObj__SSBase__c.html#a53087ee57996a9c70437290c90979cf2">daObj_SSBase_c::setParentPtr</a></div><div class="ttdeci">void setParentPtr(void *parentPtr)</div><div class="ttdef"><b>Definition</b> d_a_obj_ss_base.h:15</div></div>
+<div class="ttc" id="aclassdaObj__SSBase__c_html_a5a6cfc03d49f0d1c6b22f0dca5447b9a"><div class="ttname"><a href="classdaObj__SSBase__c.html#a5a6cfc03d49f0d1c6b22f0dca5447b9a">daObj_SSBase_c::field_0x570</a></div><div class="ttdeci">u16 field_0x570</div><div class="ttdef"><b>Definition</b> d_a_obj_ss_base.h:23</div></div>
+<div class="ttc" id="aclassdaObj__SSBase__c_html_a5e0fde52ee81f9e3773c72ebcf0819e7"><div class="ttname"><a href="classdaObj__SSBase__c.html#a5e0fde52ee81f9e3773c72ebcf0819e7">daObj_SSBase_c::getFlowNodeNumber</a></div><div class="ttdeci">u16 getFlowNodeNumber()</div><div class="ttdef"><b>Definition</b> d_a_obj_ss_base.h:16</div></div>
+<div class="ttc" id="aclassdaObj__SSBase__c_html_a906622ba577a5af931f93d055a610bd6"><div class="ttname"><a href="classdaObj__SSBase__c.html#a906622ba577a5af931f93d055a610bd6">daObj_SSBase_c::mFlowNodeNum</a></div><div class="ttdeci">u16 mFlowNodeNum</div><div class="ttdef"><b>Definition</b> d_a_obj_ss_base.h:24</div></div>
+<div class="ttc" id="aclassdaObj__SSBase__c_html_a9a5e27ee330c73744ed4536e9ae6afa3"><div class="ttname"><a href="classdaObj__SSBase__c.html#a9a5e27ee330c73744ed4536e9ae6afa3">daObj_SSBase_c::~daObj_SSBase_c</a></div><div class="ttdeci">virtual ~daObj_SSBase_c()</div><div class="ttdef"><b>Definition</b> d_a_obj_ss_base.cpp:22</div></div>
+<div class="ttc" id="aclassdaObj__SSBase__c_html_aa218095f8761268b35f375d017a725f0"><div class="ttname"><a href="classdaObj__SSBase__c.html#aa218095f8761268b35f375d017a725f0">daObj_SSBase_c::daObj_SSBase_c</a></div><div class="ttdeci">daObj_SSBase_c()</div><div class="ttdef"><b>Definition</b> d_a_obj_ss_base.cpp:14</div></div>
+<div class="ttc" id="aclassdaObj__SSBase__c_html_ab2d89a1bd163069751cc3fa54be89c20"><div class="ttname"><a href="classdaObj__SSBase__c.html#ab2d89a1bd163069751cc3fa54be89c20">daObj_SSBase_c::setFlowNodeNumber</a></div><div class="ttdeci">void setFlowNodeNumber(u16 flowNodeNum)</div><div class="ttdef"><b>Definition</b> d_a_obj_ss_base.h:17</div></div>
+<div class="ttc" id="aclassdaObj__SSBase__c_html_ab51d8e2ef6c9a56269bcf715a8073a5b"><div class="ttname"><a href="classdaObj__SSBase__c.html#ab51d8e2ef6c9a56269bcf715a8073a5b">daObj_SSBase_c::getProcessID</a></div><div class="ttdeci">virtual u32 getProcessID()</div><div class="ttdef"><b>Definition</b> d_a_obj_ss_base.cpp:25</div></div>
+<div class="ttc" id="aclassdaObj__SSBase__c_html_abbf2f0d3f4b7107d01f02759c5e480bb"><div class="ttname"><a href="classdaObj__SSBase__c.html#abbf2f0d3f4b7107d01f02759c5e480bb">daObj_SSBase_c::getValueNumber</a></div><div class="ttdeci">u16 getValueNumber()</div><div class="ttdef"><b>Definition</b> d_a_obj_ss_base.h:18</div></div>
+<div class="ttc" id="aclassdaObj__SSBase__c_html_abc6cdda83c6dc2d95373666580c981c1"><div class="ttname"><a href="classdaObj__SSBase__c.html#abc6cdda83c6dc2d95373666580c981c1">daObj_SSBase_c::mValueNum</a></div><div class="ttdeci">u16 mValueNum</div><div class="ttdef"><b>Definition</b> d_a_obj_ss_base.h:25</div></div>
+<div class="ttc" id="aclassdaObj__SSBase__c_html_accc6b9da56f27b8dbb8541a59298ba9f"><div class="ttname"><a href="classdaObj__SSBase__c.html#accc6b9da56f27b8dbb8541a59298ba9f">daObj_SSBase_c::mpParentPtr</a></div><div class="ttdeci">void * mpParentPtr</div><div class="ttdef"><b>Definition</b> d_a_obj_ss_base.h:22</div></div>
+<div class="ttc" id="af__op__actor_8h_html"><div class="ttname"><a href="f__op__actor_8h.html">f_op_actor.h</a></div></div>
+<div class="ttc" id="astructfopAc__ac__c_html"><div class="ttname"><a href="structfopAc__ac__c.html">fopAc_ac_c</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:14</div></div>
+<div class="ttc" id="atypes_8h_html_a2caf5cd7bcdbe1eefa727f44ffb10bac"><div class="ttname"><a href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a></div><div class="ttdeci">unsigned long u32</div><div class="ttdef"><b>Definition</b> types.h:10</div></div>
+<div class="ttc" id="atypes_8h_html_a9e6c91d77e24643b888dbd1a1a590054"><div class="ttname"><a href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a></div><div class="ttdeci">unsigned short u16</div><div class="ttdef"><b>Definition</b> types.h:9</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_cc3ad1aed4be3f446fdd7af78322f5bf.html">d</a></li><li class="navelem"><a class="el" href="dir_1143e3c0b4538a79b135fc5233e4c2a8.html">a</a></li><li class="navelem"><a class="el" href="d__a__obj__ss__base_8h.html">d_a_obj_ss_base.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

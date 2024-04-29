@@ -1,0 +1,28 @@
+var structJ2DMaterialInitData =
+[
+    [ "field_0x0", "structJ2DMaterialInitData.html#abdaf51594330e5e4bcee814af19a5b13", null ],
+    [ "field_0x1", "structJ2DMaterialInitData.html#a59b17a025de08a98a87234c36b352266", null ],
+    [ "field_0x14", "structJ2DMaterialInitData.html#a7bf29706be5d017ca6753c164d54d1fb", null ],
+    [ "field_0x2", "structJ2DMaterialInitData.html#a376eedaf209595fb928aea7169543171", null ],
+    [ "field_0x24", "structJ2DMaterialInitData.html#a46af765aafe908171531fbc133589e8f", null ],
+    [ "field_0x3", "structJ2DMaterialInitData.html#ad1ba7218387092a524c579e216e60420", null ],
+    [ "field_0x38", "structJ2DMaterialInitData.html#af8b1ac13a9c31505d855532cebdc45d8", null ],
+    [ "field_0x4", "structJ2DMaterialInitData.html#ae7584acbca021b90df964710b459604d", null ],
+    [ "field_0x48", "structJ2DMaterialInitData.html#a69ba14609bb87230bb10a768199631f7", null ],
+    [ "field_0x4a", "structJ2DMaterialInitData.html#ae42b0237a605d437bed30b16fcb0de24", null ],
+    [ "field_0x5", "structJ2DMaterialInitData.html#a19ae8818165d464e8cf5bb0b15cbbf98", null ],
+    [ "field_0x52", "structJ2DMaterialInitData.html#a802eb0d31ab381423ec4a299b9867bf1", null ],
+    [ "field_0x6", "structJ2DMaterialInitData.html#ad55c57a710778062db824e04c3927fb3", null ],
+    [ "field_0x62", "structJ2DMaterialInitData.html#a9993800fa107e7a2d87237747b2bb146", null ],
+    [ "field_0x7", "structJ2DMaterialInitData.html#a9850cf0c4f24a21ad3f12c0d5d6bfa28", null ],
+    [ "field_0x72", "structJ2DMaterialInitData.html#a65c3a5ef8230b5dc1d9c34a1205eb768", null ],
+    [ "field_0x8", "structJ2DMaterialInitData.html#a5cdca89cbd57d0964f54ff23ee640f45", null ],
+    [ "field_0x92", "structJ2DMaterialInitData.html#a7b4b3c0df80bad9c1d0d6628fc3477a4", null ],
+    [ "field_0x9a", "structJ2DMaterialInitData.html#a30f7d05dd38b12a0943ccf08534f1a30", null ],
+    [ "field_0xba", "structJ2DMaterialInitData.html#a8970f1974940a7ab92ab54f31d880909", null ],
+    [ "field_0xc", "structJ2DMaterialInitData.html#a957e4cecd352af9477781891ea96e7b7", null ],
+    [ "field_0xda", "structJ2DMaterialInitData.html#a71190ff3c239d9254e5f34cab3dc628c", null ],
+    [ "field_0xe2", "structJ2DMaterialInitData.html#ac54eaba7ac0da50fcdf3e11e46c5be75", null ],
+    [ "field_0xe4", "structJ2DMaterialInitData.html#a9d9741a69cde7d305f5cb8cbd89a3e12", null ],
+    [ "field_0xe6", "structJ2DMaterialInitData.html#a1ec7b495da15988dbc164d21b26f7e48", null ]
+];

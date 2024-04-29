@@ -1,0 +1,46 @@
+var vi_8h =
+[
+    [ "VITimingInfo", "structVITimingInfo.html", "structVITimingInfo" ],
+    [ "VIPositionInfo", "structVIPositionInfo.html", "structVIPositionInfo" ],
+    [ "GXRenderModeObj", "vi_8h.html#a1e9a66640aae9a5e9fc045dac21369a4", null ],
+    [ "VIPositionCallback", "vi_8h.html#a8a3cf2951a43468d97fe700ad69fb912", null ],
+    [ "VIPositionInfo", "vi_8h.html#acfe4710c6a8e76d6abe1888406cb1490", null ],
+    [ "VIRetraceCallback", "vi_8h.html#ad56e725d6c069973a6943492eab84fd0", null ],
+    [ "VITimingInfo", "vi_8h.html#a1df003ceb5b5c9786a54d771fcc1c9f9", null ],
+    [ "VITVMode", "vi_8h.html#abff30bd79dcb2f2ba4293c7630c860ba", [
+      [ "VI_TVMODE_NTSC_INT", "vi_8h.html#abff30bd79dcb2f2ba4293c7630c860baa499c2a221f48dd91fcbded067405f80f", null ],
+      [ "VI_TVMODE_NTSC_DS", "vi_8h.html#abff30bd79dcb2f2ba4293c7630c860baabbd2837a9987a1280650836f4277a3d4", null ],
+      [ "VI_TVMODE_NTSC_PROG", "vi_8h.html#abff30bd79dcb2f2ba4293c7630c860baa9c97d14022ce5a0ecbdad64515d3975d", null ],
+      [ "VI_TVMODE_NTSC_3D", "vi_8h.html#abff30bd79dcb2f2ba4293c7630c860baa193084d6f55b363ce33f2454f22bab4c", null ],
+      [ "VI_TVMODE_PAL_INT", "vi_8h.html#abff30bd79dcb2f2ba4293c7630c860baaae98e92ee2971b124c929b1c1b7d2110", null ],
+      [ "VI_TVMODE_PAL_DS", "vi_8h.html#abff30bd79dcb2f2ba4293c7630c860baa5667e5999a14a27f2d4f0d69ece24843", null ],
+      [ "VI_TVMODE_MPAL_INT", "vi_8h.html#abff30bd79dcb2f2ba4293c7630c860baa8cb152c493a2bc38b65491972534f801", null ],
+      [ "VI_TVMODE_MPAL_DS", "vi_8h.html#abff30bd79dcb2f2ba4293c7630c860baabf8e81f572fe9c34d65ce414ec00d805", null ],
+      [ "VI_TVMODE_DEBUG_INT", "vi_8h.html#abff30bd79dcb2f2ba4293c7630c860baaaaddfefe7f14591ff8844ab6cd7b18cf", null ],
+      [ "VI_TVMODE_DEBUG_PAL_INT", "vi_8h.html#abff30bd79dcb2f2ba4293c7630c860baa653bffbdcce9056f7de3df24fc30e379", null ],
+      [ "VI_TVMODE_DEBUG_PAL_DS", "vi_8h.html#abff30bd79dcb2f2ba4293c7630c860baad1e6f4b113fab28fd3c6775425946b84", null ],
+      [ "VI_TVMODE_EURGB60_INT", "vi_8h.html#abff30bd79dcb2f2ba4293c7630c860baa01510551f82cff0a5b329743995ce079", null ],
+      [ "VI_TVMODE_EURGB60_DS", "vi_8h.html#abff30bd79dcb2f2ba4293c7630c860baac96aadb78c4578b52917f31402bbaa09", null ],
+      [ "VI_TVMODE_GCA_INT", "vi_8h.html#abff30bd79dcb2f2ba4293c7630c860baa7221cfbaa9ac7d358fc41424a21ae53e", null ],
+      [ "VI_TVMODE_GCA_DS", "vi_8h.html#abff30bd79dcb2f2ba4293c7630c860baa145ba8992175b6a249493dddc5d9bc88", null ],
+      [ "VI_TVMODE_GCA_PROG", "vi_8h.html#abff30bd79dcb2f2ba4293c7630c860baaf27ec21d04c6f29cd86413501a3cad7b", null ]
+    ] ],
+    [ "VIXFBMode", "vi_8h.html#ac3a9e2111ea612658c93a9f4c1b43823", [
+      [ "VI_XFBMODE_SF", "vi_8h.html#ac3a9e2111ea612658c93a9f4c1b43823ae2241f4d32b704b934616644312eeda9", null ],
+      [ "VI_XFBMODE_DF", "vi_8h.html#ac3a9e2111ea612658c93a9f4c1b43823add075193663d12f3e20509619f2c3eb0", null ]
+    ] ],
+    [ "VIConfigure", "vi_8h.html#abf636b244c1fdf55bad8f5d42fa3dbff", null ],
+    [ "VIFlush", "vi_8h.html#a1e6c3cd1fbde41e7a7118a69df5e45a0", null ],
+    [ "VIGetCurrentFrameBuffer", "vi_8h.html#ab1cd8a0c1feb990e6da2cab595a0124e", null ],
+    [ "VIGetDTVStatus", "vi_8h.html#a2080530510c088eaccb8f90bffd69537", null ],
+    [ "VIGetNextFrameBuffer", "vi_8h.html#a8c145ba0e2a6d79d418ea45748861fe4", null ],
+    [ "VIGetRetraceCount", "vi_8h.html#aacf60e3156aec493c62bddac6b87e5bf", null ],
+    [ "VIGetTvFormat", "vi_8h.html#add620bb5c265f62e76e4a0520e5b5878", null ],
+    [ "VIInit", "vi_8h.html#add040ebf74d129a616b5dc6ee864af08", null ],
+    [ "VISetBlack", "vi_8h.html#ad8c008d13fa05c794d77f2a718a2a482", null ],
+    [ "VISetNextFrameBuffer", "vi_8h.html#adb5aeec1ac449e1c3426a1fbd3d14ccc", null ],
+    [ "VISetPostRetraceCallback", "vi_8h.html#a2be3f63b3c20b498c0a56af85a26f333", null ],
+    [ "VISetPreRetraceCallback", "vi_8h.html#a7680e981e96e870dd6da7f615bb2eb4b", null ],
+    [ "VIWaitForRetrace", "vi_8h.html#a74418db88ff39a960404059e3d5b93a0", null ],
+    [ "__VIRegs", "vi_8h.html#ac8de80005e0839314bdceb12b48ad3a7", null ]
+];

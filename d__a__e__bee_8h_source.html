@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: include/rel/d/a/e/d_a_e_bee/d_a_e_bee.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d__a__e__bee_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">d_a_e_bee.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="d__a__e__bee_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef D_A_E_BEE_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define D_A_E_BEE_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="f__op__actor_8h.html">f_op/f_op_actor.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="c__phase_8h.html">SSystem/SComponent/c_phase.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="Z2Creature_8h.html">Z2AudioLib/Z2Creature.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="d__cc__d_8h.html">d/cc/d_cc_d.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="structbee__s.html">    9</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structbee__s.html">bee_s</a> {</div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="structbee__s.html#abb0d90e430a9cf4a7e44edc5b4b71c1f">   10</a></span>    <span class="keyword">enum</span> <a class="code hl_enumeration" href="structbee__s.html#abb0d90e430a9cf4a7e44edc5b4b71c1f">Action</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="structbee__s.html#abb0d90e430a9cf4a7e44edc5b4b71c1fa9a6f8ec91e684f7c357e9a41a65a4059">   11</a></span>        <span class="comment">/* 0x0 */</span> <a class="code hl_enumvalue" href="structbee__s.html#abb0d90e430a9cf4a7e44edc5b4b71c1fa9a6f8ec91e684f7c357e9a41a65a4059">ACT_DEAD</a>,</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structbee__s.html#abb0d90e430a9cf4a7e44edc5b4b71c1fa8a8ecdec2c187aa299401f34222e9b67">   12</a></span>        <span class="comment">/* 0x1 */</span> <a class="code hl_enumvalue" href="structbee__s.html#abb0d90e430a9cf4a7e44edc5b4b71c1fa8a8ecdec2c187aa299401f34222e9b67">ACT_FLY</a>,</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structbee__s.html#abb0d90e430a9cf4a7e44edc5b4b71c1fa00e8c28de86e02c558465ec3a2ef7152">   13</a></span>        <span class="comment">/* 0x2 */</span> <a class="code hl_enumvalue" href="structbee__s.html#abb0d90e430a9cf4a7e44edc5b4b71c1fa00e8c28de86e02c558465ec3a2ef7152">ACT_FLY_HOME_A</a>,</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structbee__s.html#abb0d90e430a9cf4a7e44edc5b4b71c1fa9c917d67e376222f463798828f52c64b">   14</a></span>        <span class="comment">/* 0x3 */</span> <a class="code hl_enumvalue" href="structbee__s.html#abb0d90e430a9cf4a7e44edc5b4b71c1fa9c917d67e376222f463798828f52c64b">ACT_FLY_HOME_B</a>,</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structbee__s.html#abb0d90e430a9cf4a7e44edc5b4b71c1fa81116b992f53cd24486f79aa400047ea">   15</a></span>        <span class="comment">/* 0x4 */</span> <a class="code hl_enumvalue" href="structbee__s.html#abb0d90e430a9cf4a7e44edc5b4b71c1fa81116b992f53cd24486f79aa400047ea">ACT_FAIL</a>,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structbee__s.html#abb0d90e430a9cf4a7e44edc5b4b71c1fad31b8ec595777e9516871501d2a55e02">   16</a></span>        <span class="comment">/* 0x5 */</span> <a class="code hl_enumvalue" href="structbee__s.html#abb0d90e430a9cf4a7e44edc5b4b71c1fad31b8ec595777e9516871501d2a55e02">ACT_START</a>,</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structbee__s.html#abb0d90e430a9cf4a7e44edc5b4b71c1fabe1f44bc8c7cc6839d78af0ab1b1906c">   17</a></span>        <span class="comment">/* 0xA */</span> <a class="code hl_enumvalue" href="structbee__s.html#abb0d90e430a9cf4a7e44edc5b4b71c1fabe1f44bc8c7cc6839d78af0ab1b1906c">ACT_HOME</a> = 10,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    };</div>
+</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="structbee__s.html#a0ede6675a123963b79d33f9669fb4f8c">   20</a></span>    <span class="comment">/* 80685368 */</span> <a class="code hl_function" href="structbee__s.html#a0ede6675a123963b79d33f9669fb4f8c">bee_s</a>() {}</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structbee__s.html#a9945a264ae8ab6db50e937f087f86b23">   21</a></span>    <span class="comment">/* 806852FC */</span> <a class="code hl_function" href="structbee__s.html#a9945a264ae8ab6db50e937f087f86b23">~bee_s</a>() {}</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structbee__s.html#adaa5bf5eb115b5259de0f13ba9bb58a6">   23</a></span>    <span class="comment">/* 0x00 */</span> <a class="code hl_struct" href="classJ3DModel.html">J3DModel</a>* <a class="code hl_variable" href="structbee__s.html#adaa5bf5eb115b5259de0f13ba9bb58a6">mpModel1</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structbee__s.html#ab4ced47382925232e63763a409248e5b">   24</a></span>    <span class="comment">/* 0x04 */</span> <a class="code hl_struct" href="classJ3DModel.html">J3DModel</a>* <a class="code hl_variable" href="structbee__s.html#ab4ced47382925232e63763a409248e5b">mpModel2</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structbee__s.html#a984f3622780da6ee1064110dfe71b85d">   25</a></span>    <span class="comment">/* 0x08 */</span> <a class="code hl_struct" href="classJ3DModel.html">J3DModel</a>* <a class="code hl_variable" href="structbee__s.html#a984f3622780da6ee1064110dfe71b85d">mpModel3</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structbee__s.html#af8569db5227cb1f6436f336f5b1997b2">   26</a></span>    <span class="comment">/* 0x0C */</span> <a class="code hl_struct" href="classJ3DModel.html">J3DModel</a>* <a class="code hl_variable" href="structbee__s.html#af8569db5227cb1f6436f336f5b1997b2">mpModel4</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structbee__s.html#a95aa30dbba6a27041eee303486160278">   27</a></span>    <span class="comment">/* 0x10 */</span> <a class="code hl_struct" href="structcXyz.html">cXyz</a> <a class="code hl_variable" href="structbee__s.html#a95aa30dbba6a27041eee303486160278">mPos</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structbee__s.html#a98abf65e57c9dbc0523cf781c207b2d5">   28</a></span>    <span class="comment">/* 0x1C */</span> <a class="code hl_struct" href="structcXyz.html">cXyz</a> <a class="code hl_variable" href="structbee__s.html#a98abf65e57c9dbc0523cf781c207b2d5">mTarget</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structbee__s.html#a95c74da71ae0f18bae03dd2a4655954e">   29</a></span>    <span class="comment">/* 0x28 */</span> <a class="code hl_struct" href="structcXyz.html">cXyz</a> <a class="code hl_variable" href="structbee__s.html#a95c74da71ae0f18bae03dd2a4655954e">mSpeed</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structbee__s.html#a89fbc800870356e7c62ddf1381374eb4">   30</a></span>    <span class="comment">/* 0x34 */</span> <a class="code hl_struct" href="classcsXyz.html">csXyz</a> <a class="code hl_variable" href="structbee__s.html#a89fbc800870356e7c62ddf1381374eb4">mAngle</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structbee__s.html#a119065d4f747b2a369fa7632ae0c63e3">   31</a></span>    <span class="comment">/* 0x3C */</span> <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="code hl_variable" href="structbee__s.html#a119065d4f747b2a369fa7632ae0c63e3">mSpeedF</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structbee__s.html#a537635422ae6e4331a3b3424fbac388f">   32</a></span>    <span class="comment">/* 0x40 */</span> <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="code hl_variable" href="structbee__s.html#a537635422ae6e4331a3b3424fbac388f">mScale</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structbee__s.html#a4d925dee162ba7c94ecbff3d3f66a802">   33</a></span>    <span class="comment">/* 0x44 */</span> <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="code hl_variable" href="structbee__s.html#a4d925dee162ba7c94ecbff3d3f66a802">mStartDistance</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structbee__s.html#a117abbb77fc2430c1da90e0f4f877b5e">   34</a></span>    <span class="comment">/* 0x48 */</span> <a class="code hl_typedef" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> <a class="code hl_variable" href="structbee__s.html#a117abbb77fc2430c1da90e0f4f877b5e">mCounter</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structbee__s.html#a076eb2dd86b21e56abe9beb4ce81ddd1">   35</a></span>    <span class="comment">/* 0x4A */</span> <a class="code hl_typedef" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> <a class="code hl_variable" href="structbee__s.html#a076eb2dd86b21e56abe9beb4ce81ddd1">mHomeTimer</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structbee__s.html#a99c3ff486f4a73dac3f0222b78e34643">   36</a></span>    <span class="comment">/* 0x4C */</span> <a class="code hl_typedef" href="types_8h.html#a151f780fb455885061d3b77ec1c90c03">s8</a> <a class="code hl_variable" href="structbee__s.html#a99c3ff486f4a73dac3f0222b78e34643">mAction</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structbee__s.html#abeadffec6ea9508282c95b2503bb9b72">   37</a></span>    <span class="comment">/* 0x4D */</span> <a class="code hl_typedef" href="types_8h.html#a151f780fb455885061d3b77ec1c90c03">s8</a> <a class="code hl_variable" href="structbee__s.html#abeadffec6ea9508282c95b2503bb9b72">mMode</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="structbee__s.html#a2e4845c53df80cce48c150421719c4a5">   38</a></span>    <span class="comment">/* 0x4E */</span> <a class="code hl_typedef" href="types_8h.html#a151f780fb455885061d3b77ec1c90c03">s8</a> <a class="code hl_variable" href="structbee__s.html#a2e4845c53df80cce48c150421719c4a5">mIsFlying</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structbee__s.html#ae93f4add9b183cd079076a8ebc7ed87d">   39</a></span>    <span class="comment">/* 0x4F */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="structbee__s.html#ae93f4add9b183cd079076a8ebc7ed87d">mTimer</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="structbee__s.html#ab6537a50d3d3c989bab29d7785d597a3">   40</a></span>    <span class="comment">/* 0x50 */</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="structbee__s.html#ab6537a50d3d3c989bab29d7785d597a3">mNoDraw</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structbee__s.html#a97918b56151641b9fa314ff63b1f28a8">   41</a></span>    <span class="comment">/* 0x54 */</span> <a class="code hl_struct" href="classZ2SoundObjSimple.html">Z2SoundObjSimple</a> <a class="code hl_variable" href="structbee__s.html#a97918b56151641b9fa314ff63b1f28a8">mSound</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>};</div>
+</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="d__a__e__bee_8h.html#a2ec3c0762d184dbd90b50e6c1bf603a5">   44</a></span><a class="code hl_function" href="d__a__e__bee_8h.html#a2ec3c0762d184dbd90b50e6c1bf603a5">STATIC_ASSERT</a>(<span class="keyword">sizeof</span>(<a class="code hl_struct" href="structbee__s.html">bee_s</a>) == 0x74);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="};">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classe__bee__class.html">   51</a></span><span class="keyword">class </span><a class="code hl_class" href="classe__bee__class.html">e_bee_class</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structfopAc__ac__c.html">fopAc_ac_c</a> {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classe__bee__class.html#af24fea45d84c5b2457f58992ca0de6dd">   53</a></span>    <span class="comment">/* 0x0568 */</span> <a class="code hl_struct" href="structrequest__of__phase__process__class.html">request_of_phase_process_class</a> <a class="code hl_variable" href="classe__bee__class.html#af24fea45d84c5b2457f58992ca0de6dd">mPhase</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classe__bee__class.html#a965fe550be9ef84e00a99d655fadd13e">   54</a></span>    <span class="comment">/* 0x0570 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classe__bee__class.html#a965fe550be9ef84e00a99d655fadd13e">mParam0</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classe__bee__class.html#a6511dd22cd4579c9701949f329a87202">   55</a></span>    <span class="comment">/* 0x0571 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classe__bee__class.html#a6511dd22cd4579c9701949f329a87202">mParam1</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classe__bee__class.html#a0f8817cfdeaea5f836a04051fd6c21b8">   56</a></span>    <span class="comment">/* 0x0572 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classe__bee__class.html#a0f8817cfdeaea5f836a04051fd6c21b8">mParam2</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classe__bee__class.html#a27928bd9149712dbe9a79b2bb476623c">   57</a></span>    <span class="comment">/* 0x0574 */</span> <a class="code hl_struct" href="classZ2SoundObjBeeGroup.html">Z2SoundObjBeeGroup</a> <a class="code hl_variable" href="classe__bee__class.html#a27928bd9149712dbe9a79b2bb476623c">mSound</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classe__bee__class.html#a0fee98f12c3959c7ce1c1c6108447132">   58</a></span>    <span class="comment">/* 0x0594 */</span> <a class="code hl_typedef" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> <a class="code hl_variable" href="classe__bee__class.html#a0fee98f12c3959c7ce1c1c6108447132">mCounter</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classe__bee__class.html#ad746dfc018ee550ccd9417567db5692f">   59</a></span>    <span class="comment">/* 0x0596 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classe__bee__class.html#ad746dfc018ee550ccd9417567db5692f">unused_0x596</a>[4];</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classe__bee__class.html#ad21a20bab87f0167959e1bbd9fd15353">   60</a></span>    <span class="comment">/* 0x059A */</span> <a class="code hl_typedef" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> <a class="code hl_variable" href="classe__bee__class.html#ad21a20bab87f0167959e1bbd9fd15353">mTimers</a>[2];</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classe__bee__class.html#a10fa8d6cd9b2b8616ed8ec911f001031">   61</a></span>    <span class="comment">/* 0x059E */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classe__bee__class.html#a10fa8d6cd9b2b8616ed8ec911f001031">mCcSetTimer</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classe__bee__class.html#a83e462c2745f635c026729772a5774d9">   62</a></span>    <span class="comment">/* 0x059F */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classe__bee__class.html#a83e462c2745f635c026729772a5774d9">mHomeTimer</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classe__bee__class.html#a0ccb8ca9b90f7049f84c3738980eba77">   63</a></span>    <span class="comment">/* 0x05A0 */</span> <a class="code hl_struct" href="structbee__s.html">bee_s</a> <a class="code hl_variable" href="classe__bee__class.html#a0ccb8ca9b90f7049f84c3738980eba77">mBees</a>[0x40];</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classe__bee__class.html#a57a11a530d6741dba875cb733db5681c">   64</a></span>    <span class="comment">/* 0x22A0 */</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classe__bee__class.html#a57a11a530d6741dba875cb733db5681c">mNumBees</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classe__bee__class.html#a5701933ac281aa03ac8ce4f7483e2895">   65</a></span>    <span class="comment">/* 0x22A4 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classe__bee__class.html#a5701933ac281aa03ac8ce4f7483e2895">unused_0x22a4</a>[0x30];</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classe__bee__class.html#a805bbb303aa59de6e5ea22510fd70418">   66</a></span>    <span class="comment">/* 0x22D4 */</span> <a class="code hl_struct" href="structdCcD__Stts.html">dCcD_Stts</a> <a class="code hl_variable" href="classe__bee__class.html#a805bbb303aa59de6e5ea22510fd70418">mCcStts</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classe__bee__class.html#aa0f004c2d397f5fe25d73d21c911fd7e">   67</a></span>    <span class="comment">/* 0x2310 */</span> <a class="code hl_struct" href="structdCcD__Cyl.html">dCcD_Cyl</a> <a class="code hl_variable" href="classe__bee__class.html#aa0f004c2d397f5fe25d73d21c911fd7e">mCcCyl</a>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classe__bee__class.html#acee6c37799faa64dd6ee6a114c82e26b">   68</a></span>    <span class="comment">/* 0x244C */</span> <a class="code hl_struct" href="structdCcD__Sph.html">dCcD_Sph</a> <a class="code hl_variable" href="classe__bee__class.html#acee6c37799faa64dd6ee6a114c82e26b">mCcSph</a>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classe__bee__class.html#a675f636e9eaf762bf24ba77e98e65eeb">   69</a></span>    <span class="comment">/* 0x2584 */</span> <a class="code hl_typedef" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> <a class="code hl_variable" href="classe__bee__class.html#a675f636e9eaf762bf24ba77e98e65eeb">mBoomerangAngle</a>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classe__bee__class.html#a381512a2c933c345c38afc22b64c4022">   70</a></span>    <span class="comment">/* 0x2586 */</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="classe__bee__class.html#a381512a2c933c345c38afc22b64c4022">mHIOInit</a>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classe__bee__class.html#a774aa9a21303fdbc8b28984aaa0fc4ee">   71</a></span>    <span class="comment">/* 0x2587 */</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="classe__bee__class.html#a774aa9a21303fdbc8b28984aaa0fc4ee">mResLoaded</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>};</div>
+</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="d__a__e__bee_8h.html#a0ef3beb789777d6e456c38e9438bf5c1">   74</a></span><a class="code hl_function" href="d__a__e__bee_8h.html#a2ec3c0762d184dbd90b50e6c1bf603a5">STATIC_ASSERT</a>(<span class="keyword">sizeof</span>(<a class="code hl_class" href="classe__bee__class.html">e_bee_class</a>) == 0x2588);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="foldopen" id="foldopen00076" data-start="{" data-end="};">
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="classdaE__Bee__HIO__c.html">   76</a></span><span class="keyword">class </span><a class="code hl_class" href="classdaE__Bee__HIO__c.html">daE_Bee_HIO_c</a> {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="comment">/* 8068286C */</span> <a class="code hl_function" href="classdaE__Bee__HIO__c.html#ac18abc4d0c631ce898b4e52709596616">daE_Bee_HIO_c</a>();</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classdaE__Bee__HIO__c.html#a41afd6bff66b93131836872cb622f227">   79</a></span>    <span class="comment">/* 8068539C */</span> <span class="keyword">virtual</span> <a class="code hl_function" href="classdaE__Bee__HIO__c.html#a41afd6bff66b93131836872cb622f227">~daE_Bee_HIO_c</a>() {}</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classdaE__Bee__HIO__c.html#a52c3ec4c4997d7473f4551d1847dd526">   81</a></span>    <span class="comment">/* 0x4 */</span> <a class="code hl_typedef" href="types_8h.html#a151f780fb455885061d3b77ec1c90c03">s8</a> <a class="code hl_variable" href="classdaE__Bee__HIO__c.html#a52c3ec4c4997d7473f4551d1847dd526">field_0x4</a>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="classdaE__Bee__HIO__c.html#a434b76c1348732710e90f980276494a0">   82</a></span>    <span class="comment">/* 0x8 */</span> <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="code hl_variable" href="classdaE__Bee__HIO__c.html#a434b76c1348732710e90f980276494a0">mScale</a>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classdaE__Bee__HIO__c.html#ac0a57f4f164edd2a3dcf59e9d7fe4ff9">   83</a></span>    <span class="comment">/* 0xC */</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="classdaE__Bee__HIO__c.html#ac0a57f4f164edd2a3dcf59e9d7fe4ff9">mDelete</a>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classdaE__Bee__HIO__c.html#a7503e8e4d31195d633fdb10afa9a8c0c">   84</a></span>    <span class="comment">/* 0xD */</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="classdaE__Bee__HIO__c.html#a7503e8e4d31195d633fdb10afa9a8c0c">mNoKill</a>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>};</div>
+</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="d__a__e__bee_8h.html#a2ee83847f59221aacca2471398178e72">   87</a></span><a class="code hl_function" href="d__a__e__bee_8h.html#a2ec3c0762d184dbd90b50e6c1bf603a5">STATIC_ASSERT</a>(<span class="keyword">sizeof</span>(<a class="code hl_class" href="classdaE__Bee__HIO__c.html">daE_Bee_HIO_c</a>) == 0x10);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#endif </span><span class="comment">/* D_A_E_BEE_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aZ2Creature_8h_html"><div class="ttname"><a href="Z2Creature_8h.html">Z2Creature.h</a></div></div>
+<div class="ttc" id="ac__phase_8h_html"><div class="ttname"><a href="c__phase_8h.html">c_phase.h</a></div></div>
+<div class="ttc" id="aclassJ3DModel_html"><div class="ttname"><a href="classJ3DModel.html">J3DModel</a></div><div class="ttdef"><b>Definition</b> J3DModel.h:42</div></div>
+<div class="ttc" id="aclassZ2SoundObjBeeGroup_html"><div class="ttname"><a href="classZ2SoundObjBeeGroup.html">Z2SoundObjBeeGroup</a></div><div class="ttdef"><b>Definition</b> Z2Creature.h:199</div></div>
+<div class="ttc" id="aclassZ2SoundObjSimple_html"><div class="ttname"><a href="classZ2SoundObjSimple.html">Z2SoundObjSimple</a></div><div class="ttdef"><b>Definition</b> Z2SoundObject.h:34</div></div>
+<div class="ttc" id="aclasscsXyz_html"><div class="ttname"><a href="classcsXyz.html">csXyz</a></div><div class="ttdef"><b>Definition</b> c_sxyz.h:6</div></div>
+<div class="ttc" id="aclassdaE__Bee__HIO__c_html"><div class="ttname"><a href="classdaE__Bee__HIO__c.html">daE_Bee_HIO_c</a></div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:76</div></div>
+<div class="ttc" id="aclassdaE__Bee__HIO__c_html_a41afd6bff66b93131836872cb622f227"><div class="ttname"><a href="classdaE__Bee__HIO__c.html#a41afd6bff66b93131836872cb622f227">daE_Bee_HIO_c::~daE_Bee_HIO_c</a></div><div class="ttdeci">virtual ~daE_Bee_HIO_c()</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:79</div></div>
+<div class="ttc" id="aclassdaE__Bee__HIO__c_html_a434b76c1348732710e90f980276494a0"><div class="ttname"><a href="classdaE__Bee__HIO__c.html#a434b76c1348732710e90f980276494a0">daE_Bee_HIO_c::mScale</a></div><div class="ttdeci">f32 mScale</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:82</div></div>
+<div class="ttc" id="aclassdaE__Bee__HIO__c_html_a52c3ec4c4997d7473f4551d1847dd526"><div class="ttname"><a href="classdaE__Bee__HIO__c.html#a52c3ec4c4997d7473f4551d1847dd526">daE_Bee_HIO_c::field_0x4</a></div><div class="ttdeci">s8 field_0x4</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:81</div></div>
+<div class="ttc" id="aclassdaE__Bee__HIO__c_html_a7503e8e4d31195d633fdb10afa9a8c0c"><div class="ttname"><a href="classdaE__Bee__HIO__c.html#a7503e8e4d31195d633fdb10afa9a8c0c">daE_Bee_HIO_c::mNoKill</a></div><div class="ttdeci">bool mNoKill</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:84</div></div>
+<div class="ttc" id="aclassdaE__Bee__HIO__c_html_ac0a57f4f164edd2a3dcf59e9d7fe4ff9"><div class="ttname"><a href="classdaE__Bee__HIO__c.html#ac0a57f4f164edd2a3dcf59e9d7fe4ff9">daE_Bee_HIO_c::mDelete</a></div><div class="ttdeci">bool mDelete</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:83</div></div>
+<div class="ttc" id="aclassdaE__Bee__HIO__c_html_ac18abc4d0c631ce898b4e52709596616"><div class="ttname"><a href="classdaE__Bee__HIO__c.html#ac18abc4d0c631ce898b4e52709596616">daE_Bee_HIO_c::daE_Bee_HIO_c</a></div><div class="ttdeci">daE_Bee_HIO_c()</div><div class="ttdef"><b>Definition</b> d_a_e_bee.cpp:175</div></div>
+<div class="ttc" id="aclasse__bee__class_html"><div class="ttname"><a href="classe__bee__class.html">e_bee_class</a></div><div class="ttdoc">Bee.</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:51</div></div>
+<div class="ttc" id="aclasse__bee__class_html_a0ccb8ca9b90f7049f84c3738980eba77"><div class="ttname"><a href="classe__bee__class.html#a0ccb8ca9b90f7049f84c3738980eba77">e_bee_class::mBees</a></div><div class="ttdeci">bee_s mBees[0x40]</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:63</div></div>
+<div class="ttc" id="aclasse__bee__class_html_a0f8817cfdeaea5f836a04051fd6c21b8"><div class="ttname"><a href="classe__bee__class.html#a0f8817cfdeaea5f836a04051fd6c21b8">e_bee_class::mParam2</a></div><div class="ttdeci">u8 mParam2</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:56</div></div>
+<div class="ttc" id="aclasse__bee__class_html_a0fee98f12c3959c7ce1c1c6108447132"><div class="ttname"><a href="classe__bee__class.html#a0fee98f12c3959c7ce1c1c6108447132">e_bee_class::mCounter</a></div><div class="ttdeci">s16 mCounter</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:58</div></div>
+<div class="ttc" id="aclasse__bee__class_html_a10fa8d6cd9b2b8616ed8ec911f001031"><div class="ttname"><a href="classe__bee__class.html#a10fa8d6cd9b2b8616ed8ec911f001031">e_bee_class::mCcSetTimer</a></div><div class="ttdeci">u8 mCcSetTimer</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:61</div></div>
+<div class="ttc" id="aclasse__bee__class_html_a27928bd9149712dbe9a79b2bb476623c"><div class="ttname"><a href="classe__bee__class.html#a27928bd9149712dbe9a79b2bb476623c">e_bee_class::mSound</a></div><div class="ttdeci">Z2SoundObjBeeGroup mSound</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:57</div></div>
+<div class="ttc" id="aclasse__bee__class_html_a381512a2c933c345c38afc22b64c4022"><div class="ttname"><a href="classe__bee__class.html#a381512a2c933c345c38afc22b64c4022">e_bee_class::mHIOInit</a></div><div class="ttdeci">bool mHIOInit</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:70</div></div>
+<div class="ttc" id="aclasse__bee__class_html_a5701933ac281aa03ac8ce4f7483e2895"><div class="ttname"><a href="classe__bee__class.html#a5701933ac281aa03ac8ce4f7483e2895">e_bee_class::unused_0x22a4</a></div><div class="ttdeci">u8 unused_0x22a4[0x30]</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:65</div></div>
+<div class="ttc" id="aclasse__bee__class_html_a57a11a530d6741dba875cb733db5681c"><div class="ttname"><a href="classe__bee__class.html#a57a11a530d6741dba875cb733db5681c">e_bee_class::mNumBees</a></div><div class="ttdeci">int mNumBees</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:64</div></div>
+<div class="ttc" id="aclasse__bee__class_html_a6511dd22cd4579c9701949f329a87202"><div class="ttname"><a href="classe__bee__class.html#a6511dd22cd4579c9701949f329a87202">e_bee_class::mParam1</a></div><div class="ttdeci">u8 mParam1</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:55</div></div>
+<div class="ttc" id="aclasse__bee__class_html_a675f636e9eaf762bf24ba77e98e65eeb"><div class="ttname"><a href="classe__bee__class.html#a675f636e9eaf762bf24ba77e98e65eeb">e_bee_class::mBoomerangAngle</a></div><div class="ttdeci">s16 mBoomerangAngle</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:69</div></div>
+<div class="ttc" id="aclasse__bee__class_html_a774aa9a21303fdbc8b28984aaa0fc4ee"><div class="ttname"><a href="classe__bee__class.html#a774aa9a21303fdbc8b28984aaa0fc4ee">e_bee_class::mResLoaded</a></div><div class="ttdeci">bool mResLoaded</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:71</div></div>
+<div class="ttc" id="aclasse__bee__class_html_a805bbb303aa59de6e5ea22510fd70418"><div class="ttname"><a href="classe__bee__class.html#a805bbb303aa59de6e5ea22510fd70418">e_bee_class::mCcStts</a></div><div class="ttdeci">dCcD_Stts mCcStts</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:66</div></div>
+<div class="ttc" id="aclasse__bee__class_html_a83e462c2745f635c026729772a5774d9"><div class="ttname"><a href="classe__bee__class.html#a83e462c2745f635c026729772a5774d9">e_bee_class::mHomeTimer</a></div><div class="ttdeci">u8 mHomeTimer</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:62</div></div>
+<div class="ttc" id="aclasse__bee__class_html_a965fe550be9ef84e00a99d655fadd13e"><div class="ttname"><a href="classe__bee__class.html#a965fe550be9ef84e00a99d655fadd13e">e_bee_class::mParam0</a></div><div class="ttdeci">u8 mParam0</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:54</div></div>
+<div class="ttc" id="aclasse__bee__class_html_aa0f004c2d397f5fe25d73d21c911fd7e"><div class="ttname"><a href="classe__bee__class.html#aa0f004c2d397f5fe25d73d21c911fd7e">e_bee_class::mCcCyl</a></div><div class="ttdeci">dCcD_Cyl mCcCyl</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:67</div></div>
+<div class="ttc" id="aclasse__bee__class_html_acee6c37799faa64dd6ee6a114c82e26b"><div class="ttname"><a href="classe__bee__class.html#acee6c37799faa64dd6ee6a114c82e26b">e_bee_class::mCcSph</a></div><div class="ttdeci">dCcD_Sph mCcSph</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:68</div></div>
+<div class="ttc" id="aclasse__bee__class_html_ad21a20bab87f0167959e1bbd9fd15353"><div class="ttname"><a href="classe__bee__class.html#ad21a20bab87f0167959e1bbd9fd15353">e_bee_class::mTimers</a></div><div class="ttdeci">s16 mTimers[2]</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:60</div></div>
+<div class="ttc" id="aclasse__bee__class_html_ad746dfc018ee550ccd9417567db5692f"><div class="ttname"><a href="classe__bee__class.html#ad746dfc018ee550ccd9417567db5692f">e_bee_class::unused_0x596</a></div><div class="ttdeci">u8 unused_0x596[4]</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:59</div></div>
+<div class="ttc" id="aclasse__bee__class_html_af24fea45d84c5b2457f58992ca0de6dd"><div class="ttname"><a href="classe__bee__class.html#af24fea45d84c5b2457f58992ca0de6dd">e_bee_class::mPhase</a></div><div class="ttdeci">request_of_phase_process_class mPhase</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:53</div></div>
+<div class="ttc" id="ad__a__e__bee_8h_html_a2ec3c0762d184dbd90b50e6c1bf603a5"><div class="ttname"><a href="d__a__e__bee_8h.html#a2ec3c0762d184dbd90b50e6c1bf603a5">STATIC_ASSERT</a></div><div class="ttdeci">STATIC_ASSERT(sizeof(bee_s)==0x74)</div></div>
+<div class="ttc" id="ad__cc__d_8h_html"><div class="ttname"><a href="d__cc__d_8h.html">d_cc_d.h</a></div></div>
+<div class="ttc" id="af__op__actor_8h_html"><div class="ttname"><a href="f__op__actor_8h.html">f_op_actor.h</a></div></div>
+<div class="ttc" id="astructbee__s_html"><div class="ttname"><a href="structbee__s.html">bee_s</a></div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:9</div></div>
+<div class="ttc" id="astructbee__s_html_a076eb2dd86b21e56abe9beb4ce81ddd1"><div class="ttname"><a href="structbee__s.html#a076eb2dd86b21e56abe9beb4ce81ddd1">bee_s::mHomeTimer</a></div><div class="ttdeci">s16 mHomeTimer</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:35</div></div>
+<div class="ttc" id="astructbee__s_html_a0ede6675a123963b79d33f9669fb4f8c"><div class="ttname"><a href="structbee__s.html#a0ede6675a123963b79d33f9669fb4f8c">bee_s::bee_s</a></div><div class="ttdeci">bee_s()</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:20</div></div>
+<div class="ttc" id="astructbee__s_html_a117abbb77fc2430c1da90e0f4f877b5e"><div class="ttname"><a href="structbee__s.html#a117abbb77fc2430c1da90e0f4f877b5e">bee_s::mCounter</a></div><div class="ttdeci">s16 mCounter</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:34</div></div>
+<div class="ttc" id="astructbee__s_html_a119065d4f747b2a369fa7632ae0c63e3"><div class="ttname"><a href="structbee__s.html#a119065d4f747b2a369fa7632ae0c63e3">bee_s::mSpeedF</a></div><div class="ttdeci">f32 mSpeedF</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:31</div></div>
+<div class="ttc" id="astructbee__s_html_a2e4845c53df80cce48c150421719c4a5"><div class="ttname"><a href="structbee__s.html#a2e4845c53df80cce48c150421719c4a5">bee_s::mIsFlying</a></div><div class="ttdeci">s8 mIsFlying</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:38</div></div>
+<div class="ttc" id="astructbee__s_html_a4d925dee162ba7c94ecbff3d3f66a802"><div class="ttname"><a href="structbee__s.html#a4d925dee162ba7c94ecbff3d3f66a802">bee_s::mStartDistance</a></div><div class="ttdeci">f32 mStartDistance</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:33</div></div>
+<div class="ttc" id="astructbee__s_html_a537635422ae6e4331a3b3424fbac388f"><div class="ttname"><a href="structbee__s.html#a537635422ae6e4331a3b3424fbac388f">bee_s::mScale</a></div><div class="ttdeci">f32 mScale</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:32</div></div>
+<div class="ttc" id="astructbee__s_html_a89fbc800870356e7c62ddf1381374eb4"><div class="ttname"><a href="structbee__s.html#a89fbc800870356e7c62ddf1381374eb4">bee_s::mAngle</a></div><div class="ttdeci">csXyz mAngle</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:30</div></div>
+<div class="ttc" id="astructbee__s_html_a95aa30dbba6a27041eee303486160278"><div class="ttname"><a href="structbee__s.html#a95aa30dbba6a27041eee303486160278">bee_s::mPos</a></div><div class="ttdeci">cXyz mPos</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:27</div></div>
+<div class="ttc" id="astructbee__s_html_a95c74da71ae0f18bae03dd2a4655954e"><div class="ttname"><a href="structbee__s.html#a95c74da71ae0f18bae03dd2a4655954e">bee_s::mSpeed</a></div><div class="ttdeci">cXyz mSpeed</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:29</div></div>
+<div class="ttc" id="astructbee__s_html_a97918b56151641b9fa314ff63b1f28a8"><div class="ttname"><a href="structbee__s.html#a97918b56151641b9fa314ff63b1f28a8">bee_s::mSound</a></div><div class="ttdeci">Z2SoundObjSimple mSound</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:41</div></div>
+<div class="ttc" id="astructbee__s_html_a984f3622780da6ee1064110dfe71b85d"><div class="ttname"><a href="structbee__s.html#a984f3622780da6ee1064110dfe71b85d">bee_s::mpModel3</a></div><div class="ttdeci">J3DModel * mpModel3</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:25</div></div>
+<div class="ttc" id="astructbee__s_html_a98abf65e57c9dbc0523cf781c207b2d5"><div class="ttname"><a href="structbee__s.html#a98abf65e57c9dbc0523cf781c207b2d5">bee_s::mTarget</a></div><div class="ttdeci">cXyz mTarget</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:28</div></div>
+<div class="ttc" id="astructbee__s_html_a9945a264ae8ab6db50e937f087f86b23"><div class="ttname"><a href="structbee__s.html#a9945a264ae8ab6db50e937f087f86b23">bee_s::~bee_s</a></div><div class="ttdeci">~bee_s()</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:21</div></div>
+<div class="ttc" id="astructbee__s_html_a99c3ff486f4a73dac3f0222b78e34643"><div class="ttname"><a href="structbee__s.html#a99c3ff486f4a73dac3f0222b78e34643">bee_s::mAction</a></div><div class="ttdeci">s8 mAction</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:36</div></div>
+<div class="ttc" id="astructbee__s_html_ab4ced47382925232e63763a409248e5b"><div class="ttname"><a href="structbee__s.html#ab4ced47382925232e63763a409248e5b">bee_s::mpModel2</a></div><div class="ttdeci">J3DModel * mpModel2</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:24</div></div>
+<div class="ttc" id="astructbee__s_html_ab6537a50d3d3c989bab29d7785d597a3"><div class="ttname"><a href="structbee__s.html#ab6537a50d3d3c989bab29d7785d597a3">bee_s::mNoDraw</a></div><div class="ttdeci">bool mNoDraw</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:40</div></div>
+<div class="ttc" id="astructbee__s_html_abb0d90e430a9cf4a7e44edc5b4b71c1f"><div class="ttname"><a href="structbee__s.html#abb0d90e430a9cf4a7e44edc5b4b71c1f">bee_s::Action</a></div><div class="ttdeci">Action</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:10</div></div>
+<div class="ttc" id="astructbee__s_html_abb0d90e430a9cf4a7e44edc5b4b71c1fa00e8c28de86e02c558465ec3a2ef7152"><div class="ttname"><a href="structbee__s.html#abb0d90e430a9cf4a7e44edc5b4b71c1fa00e8c28de86e02c558465ec3a2ef7152">bee_s::ACT_FLY_HOME_A</a></div><div class="ttdeci">@ ACT_FLY_HOME_A</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:13</div></div>
+<div class="ttc" id="astructbee__s_html_abb0d90e430a9cf4a7e44edc5b4b71c1fa81116b992f53cd24486f79aa400047ea"><div class="ttname"><a href="structbee__s.html#abb0d90e430a9cf4a7e44edc5b4b71c1fa81116b992f53cd24486f79aa400047ea">bee_s::ACT_FAIL</a></div><div class="ttdeci">@ ACT_FAIL</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:15</div></div>
+<div class="ttc" id="astructbee__s_html_abb0d90e430a9cf4a7e44edc5b4b71c1fa8a8ecdec2c187aa299401f34222e9b67"><div class="ttname"><a href="structbee__s.html#abb0d90e430a9cf4a7e44edc5b4b71c1fa8a8ecdec2c187aa299401f34222e9b67">bee_s::ACT_FLY</a></div><div class="ttdeci">@ ACT_FLY</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:12</div></div>
+<div class="ttc" id="astructbee__s_html_abb0d90e430a9cf4a7e44edc5b4b71c1fa9a6f8ec91e684f7c357e9a41a65a4059"><div class="ttname"><a href="structbee__s.html#abb0d90e430a9cf4a7e44edc5b4b71c1fa9a6f8ec91e684f7c357e9a41a65a4059">bee_s::ACT_DEAD</a></div><div class="ttdeci">@ ACT_DEAD</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:11</div></div>
+<div class="ttc" id="astructbee__s_html_abb0d90e430a9cf4a7e44edc5b4b71c1fa9c917d67e376222f463798828f52c64b"><div class="ttname"><a href="structbee__s.html#abb0d90e430a9cf4a7e44edc5b4b71c1fa9c917d67e376222f463798828f52c64b">bee_s::ACT_FLY_HOME_B</a></div><div class="ttdeci">@ ACT_FLY_HOME_B</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:14</div></div>
+<div class="ttc" id="astructbee__s_html_abb0d90e430a9cf4a7e44edc5b4b71c1fabe1f44bc8c7cc6839d78af0ab1b1906c"><div class="ttname"><a href="structbee__s.html#abb0d90e430a9cf4a7e44edc5b4b71c1fabe1f44bc8c7cc6839d78af0ab1b1906c">bee_s::ACT_HOME</a></div><div class="ttdeci">@ ACT_HOME</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:17</div></div>
+<div class="ttc" id="astructbee__s_html_abb0d90e430a9cf4a7e44edc5b4b71c1fad31b8ec595777e9516871501d2a55e02"><div class="ttname"><a href="structbee__s.html#abb0d90e430a9cf4a7e44edc5b4b71c1fad31b8ec595777e9516871501d2a55e02">bee_s::ACT_START</a></div><div class="ttdeci">@ ACT_START</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:16</div></div>
+<div class="ttc" id="astructbee__s_html_abeadffec6ea9508282c95b2503bb9b72"><div class="ttname"><a href="structbee__s.html#abeadffec6ea9508282c95b2503bb9b72">bee_s::mMode</a></div><div class="ttdeci">s8 mMode</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:37</div></div>
+<div class="ttc" id="astructbee__s_html_adaa5bf5eb115b5259de0f13ba9bb58a6"><div class="ttname"><a href="structbee__s.html#adaa5bf5eb115b5259de0f13ba9bb58a6">bee_s::mpModel1</a></div><div class="ttdeci">J3DModel * mpModel1</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:23</div></div>
+<div class="ttc" id="astructbee__s_html_ae93f4add9b183cd079076a8ebc7ed87d"><div class="ttname"><a href="structbee__s.html#ae93f4add9b183cd079076a8ebc7ed87d">bee_s::mTimer</a></div><div class="ttdeci">u8 mTimer</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:39</div></div>
+<div class="ttc" id="astructbee__s_html_af8569db5227cb1f6436f336f5b1997b2"><div class="ttname"><a href="structbee__s.html#af8569db5227cb1f6436f336f5b1997b2">bee_s::mpModel4</a></div><div class="ttdeci">J3DModel * mpModel4</div><div class="ttdef"><b>Definition</b> d_a_e_bee.h:26</div></div>
+<div class="ttc" id="astructcXyz_html"><div class="ttname"><a href="structcXyz.html">cXyz</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:49</div></div>
+<div class="ttc" id="astructdCcD__Cyl_html"><div class="ttname"><a href="structdCcD__Cyl.html">dCcD_Cyl</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:122</div></div>
+<div class="ttc" id="astructdCcD__Sph_html"><div class="ttname"><a href="structdCcD__Sph.html">dCcD_Sph</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:55</div></div>
+<div class="ttc" id="astructdCcD__Stts_html"><div class="ttname"><a href="structdCcD__Stts.html">dCcD_Stts</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:24</div></div>
+<div class="ttc" id="astructfopAc__ac__c_html"><div class="ttname"><a href="structfopAc__ac__c.html">fopAc_ac_c</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:14</div></div>
+<div class="ttc" id="astructrequest__of__phase__process__class_html"><div class="ttname"><a href="structrequest__of__phase__process__class.html">request_of_phase_process_class</a></div><div class="ttdef"><b>Definition</b> c_phase.h:17</div></div>
+<div class="ttc" id="atypes_8h_html_a151f780fb455885061d3b77ec1c90c03"><div class="ttname"><a href="types_8h.html#a151f780fb455885061d3b77ec1c90c03">s8</a></div><div class="ttdeci">signed char s8</div><div class="ttdef"><b>Definition</b> types.h:4</div></div>
+<div class="ttc" id="atypes_8h_html_a5f6906312a689f27d70e9d086649d3fd"><div class="ttname"><a href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a></div><div class="ttdeci">float f32</div><div class="ttdef"><b>Definition</b> types.h:22</div></div>
+<div class="ttc" id="atypes_8h_html_a5ffa4f640862b25ba6d4f635b78bdbe1"><div class="ttname"><a href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a></div><div class="ttdeci">signed short s16</div><div class="ttdef"><b>Definition</b> types.h:5</div></div>
+<div class="ttc" id="atypes_8h_html_aed742c436da53c1080638ce6ef7d13de"><div class="ttname"><a href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a></div><div class="ttdeci">unsigned char u8</div><div class="ttdef"><b>Definition</b> types.h:8</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d1e95842203b094e4f127fa85baf24b5.html">rel</a></li><li class="navelem"><a class="el" href="dir_244336746419795862f93731f1699860.html">d</a></li><li class="navelem"><a class="el" href="dir_b81c1d082692bb1b2b34ed3bfe8a0f4a.html">a</a></li><li class="navelem"><a class="el" href="dir_c199594060f2445ce9809b15df0fd8ff.html">e</a></li><li class="navelem"><a class="el" href="dir_17722023c1c0483893043022df522666.html">d_a_e_bee</a></li><li class="navelem"><a class="el" href="d__a__e__bee_8h.html">d_a_e_bee.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

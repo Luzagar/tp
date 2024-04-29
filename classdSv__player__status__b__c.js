@@ -1,0 +1,26 @@
+var classdSv__player__status__b__c =
+[
+    [ "getDate", "classdSv__player__status__b__c.html#a81deadb489d4197baa3f814ea0951336", null ],
+    [ "getDateIpl", "classdSv__player__status__b__c.html#aad38b45256afa454cc09ba1c7962f3e5", null ],
+    [ "getTime", "classdSv__player__status__b__c.html#aa6c33c4ca4d282ea97ea17e03b8dcf67", null ],
+    [ "init", "classdSv__player__status__b__c.html#aef9d1ef658b94a6b2b1a9982346982fd", null ],
+    [ "isDarkClearLV", "classdSv__player__status__b__c.html#ac0310f9c6457c395507620ac20695557", null ],
+    [ "isDarkClearLV", "classdSv__player__status__b__c.html#acc222c9776bdf31c3aa046c6eddfb310", null ],
+    [ "isDarkClearLV", "classdSv__player__status__b__c.html#acc222c9776bdf31c3aa046c6eddfb310", null ],
+    [ "isDarkClearLV", "classdSv__player__status__b__c.html#acc222c9776bdf31c3aa046c6eddfb310", null ],
+    [ "isTransformLV", "classdSv__player__status__b__c.html#af5bdbdf7ac7c4372efb6c4f2eac760f3", null ],
+    [ "isTransformLV", "classdSv__player__status__b__c.html#a09fb116bbf9c18e28da6d0f3747cadf6", null ],
+    [ "onDarkClearLV", "classdSv__player__status__b__c.html#a81aa6ba876e8a841ac93dacee87e7abd", null ],
+    [ "onTransformLV", "classdSv__player__status__b__c.html#a133b1ace0880f5d8845973ac3c97f602", null ],
+    [ "setDate", "classdSv__player__status__b__c.html#a21eb07bf6110848d1b685326572940cb", null ],
+    [ "setDateIpl", "classdSv__player__status__b__c.html#aa5b2251a209649b099ceeb75a69f5ac9", null ],
+    [ "setTime", "classdSv__player__status__b__c.html#a7c88b5bd3c3ccc3fa6b1c4fa91ad6eca", null ],
+    [ "mDarkClearLevelFlag", "classdSv__player__status__b__c.html#aca18e5f2f4e8f964250407da7f92ad09", null ],
+    [ "mDate", "classdSv__player__status__b__c.html#a5448d917601d6eb25b80757216a17e14", null ],
+    [ "mDateIpl", "classdSv__player__status__b__c.html#a5a2b80ddd8dd7cb77259ae179f77b334", null ],
+    [ "mTime", "classdSv__player__status__b__c.html#aafed110c04924e2e1a042497072f28a8", null ],
+    [ "mTransformLevelFlag", "classdSv__player__status__b__c.html#aa1d1abbc810f4556f4886b6b2b613b1c", null ],
+    [ "unk10", "classdSv__player__status__b__c.html#ad5420bfdf0961366656be1e73bac6b3e", null ],
+    [ "unk11", "classdSv__player__status__b__c.html#a7b15222f07214eb3c4a3815fdbea4b7e", null ],
+    [ "unk18", "classdSv__player__status__b__c.html#a9948867fee37f9de3678bbb2274c8280", null ]
+];

@@ -1,0 +1,519 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: daObjVolcBall_c::volc_param_c Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classdaObjVolcBall__c_1_1volc__param__c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="classdaObjVolcBall__c_1_1volc__param__c-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">daObjVolcBall_c::volc_param_c Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:add59cdcfda03bad28954b64fa7925d04" id="r_add59cdcfda03bad28954b64fa7925d04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBall__c_1_1volc__param__c.html#add59cdcfda03bad28954b64fa7925d04">mGravity</a></td></tr>
+<tr class="separator:add59cdcfda03bad28954b64fa7925d04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3827e020b840519675fa704321556955" id="r_a3827e020b840519675fa704321556955"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBall__c_1_1volc__param__c.html#a3827e020b840519675fa704321556955">mMaxFallSpeed</a></td></tr>
+<tr class="separator:a3827e020b840519675fa704321556955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac07709e3853b313adba351feb12e58be" id="r_ac07709e3853b313adba351feb12e58be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBall__c_1_1volc__param__c.html#ac07709e3853b313adba351feb12e58be">mBallSpeedH</a></td></tr>
+<tr class="separator:ac07709e3853b313adba351feb12e58be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a414fdfdb20bf24f430ca0bed38a743e5" id="r_a414fdfdb20bf24f430ca0bed38a743e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBall__c_1_1volc__param__c.html#a414fdfdb20bf24f430ca0bed38a743e5">mBallSetShortRange</a></td></tr>
+<tr class="separator:a414fdfdb20bf24f430ca0bed38a743e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3af3dc82e4e6074f45b5c93f5498764e" id="r_a3af3dc82e4e6074f45b5c93f5498764e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBall__c_1_1volc__param__c.html#a3af3dc82e4e6074f45b5c93f5498764e">mBallSetRandom</a></td></tr>
+<tr class="separator:a3af3dc82e4e6074f45b5c93f5498764e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a153a252f90792a21fb1c851fb7704212" id="r_a153a252f90792a21fb1c851fb7704212"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBall__c_1_1volc__param__c.html#a153a252f90792a21fb1c851fb7704212">mNormalScale</a></td></tr>
+<tr class="separator:a153a252f90792a21fb1c851fb7704212"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf3ce7ee2482c426ea58af2a6139bdc2" id="r_abf3ce7ee2482c426ea58af2a6139bdc2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBall__c_1_1volc__param__c.html#abf3ce7ee2482c426ea58af2a6139bdc2">mScaleRandValue</a></td></tr>
+<tr class="separator:abf3ce7ee2482c426ea58af2a6139bdc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99de8fab7f03dbe68f62a1c779ded9a4" id="r_a99de8fab7f03dbe68f62a1c779ded9a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBall__c_1_1volc__param__c.html#a99de8fab7f03dbe68f62a1c779ded9a4">mNormalInterval</a></td></tr>
+<tr class="separator:a99de8fab7f03dbe68f62a1c779ded9a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad20e992acce7e81590e278d397134883" id="r_ad20e992acce7e81590e278d397134883"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBall__c_1_1volc__param__c.html#ad20e992acce7e81590e278d397134883">mRandInterval</a></td></tr>
+<tr class="separator:ad20e992acce7e81590e278d397134883"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a9b67bd2431a9800c533411c7570511" id="r_a5a9b67bd2431a9800c533411c7570511"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBall__c_1_1volc__param__c.html#a5a9b67bd2431a9800c533411c7570511">mNormalWaitTime</a></td></tr>
+<tr class="separator:a5a9b67bd2431a9800c533411c7570511"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bdd0e79bd0693ccfda805f0462b731d" id="r_a1bdd0e79bd0693ccfda805f0462b731d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBall__c_1_1volc__param__c.html#a1bdd0e79bd0693ccfda805f0462b731d">mRandWaitTime</a></td></tr>
+<tr class="separator:a1bdd0e79bd0693ccfda805f0462b731d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a675248869e03d79c343007ea439ca616" id="r_a675248869e03d79c343007ea439ca616"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBall__c_1_1volc__param__c.html#a675248869e03d79c343007ea439ca616">mNormalWarningTime</a></td></tr>
+<tr class="separator:a675248869e03d79c343007ea439ca616"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55a8a502636d56794fc1157666bd9dbf" id="r_a55a8a502636d56794fc1157666bd9dbf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBall__c_1_1volc__param__c.html#a55a8a502636d56794fc1157666bd9dbf">mRandWarningTime</a></td></tr>
+<tr class="separator:a55a8a502636d56794fc1157666bd9dbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c76780f21ae90aae4bff2994105bea3" id="r_a0c76780f21ae90aae4bff2994105bea3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBall__c_1_1volc__param__c.html#a0c76780f21ae90aae4bff2994105bea3">mNormalEruptTime</a></td></tr>
+<tr class="separator:a0c76780f21ae90aae4bff2994105bea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53c468357850b7f2fa41bde8cb3ec97d" id="r_a53c468357850b7f2fa41bde8cb3ec97d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBall__c_1_1volc__param__c.html#a53c468357850b7f2fa41bde8cb3ec97d">mRandEruptTime</a></td></tr>
+<tr class="separator:a53c468357850b7f2fa41bde8cb3ec97d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc1800fdfc06a16450854648fc6eeffb" id="r_abc1800fdfc06a16450854648fc6eeffb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBall__c_1_1volc__param__c.html#abc1800fdfc06a16450854648fc6eeffb">mSearchBallFreq</a></td></tr>
+<tr class="separator:abc1800fdfc06a16450854648fc6eeffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a530c72042bd6fae42988297f5d8fa13b" id="r_a530c72042bd6fae42988297f5d8fa13b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBall__c_1_1volc__param__c.html#a530c72042bd6fae42988297f5d8fa13b">mSearchBallBaseScale</a></td></tr>
+<tr class="separator:a530c72042bd6fae42988297f5d8fa13b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f195efddac9f7d7d671619574912c28" id="r_a0f195efddac9f7d7d671619574912c28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBall__c_1_1volc__param__c.html#a0f195efddac9f7d7d671619574912c28">mSearchBallRandScale</a></td></tr>
+<tr class="separator:a0f195efddac9f7d7d671619574912c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2b9385760ca9ca97950e6acfd1243c4" id="r_ab2b9385760ca9ca97950e6acfd1243c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBall__c_1_1volc__param__c.html#ab2b9385760ca9ca97950e6acfd1243c4">mSearchBallSetHeight</a></td></tr>
+<tr class="separator:ab2b9385760ca9ca97950e6acfd1243c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a236e39eafb914d9b90eb5d962f6654ff" id="r_a236e39eafb914d9b90eb5d962f6654ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBall__c_1_1volc__param__c.html#a236e39eafb914d9b90eb5d962f6654ff">mSearchBallShadowIntensity</a></td></tr>
+<tr class="separator:a236e39eafb914d9b90eb5d962f6654ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a027c9ecaddbfe04eb1682a56f7f9ccf7" id="r_a027c9ecaddbfe04eb1682a56f7f9ccf7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBall__c_1_1volc__param__c.html#a027c9ecaddbfe04eb1682a56f7f9ccf7">mSearchBallCreateTime</a></td></tr>
+<tr class="separator:a027c9ecaddbfe04eb1682a56f7f9ccf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cf29b1c2c9750f4a215106753ada937" id="r_a6cf29b1c2c9750f4a215106753ada937"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaObjVolcBall__c_1_1volc__param__c.html#a6cf29b1c2c9750f4a215106753ada937">mPlayerSearchTime</a></td></tr>
+<tr class="separator:a6cf29b1c2c9750f4a215106753ada937"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a3af3dc82e4e6074f45b5c93f5498764e" name="a3af3dc82e4e6074f45b5c93f5498764e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3af3dc82e4e6074f45b5c93f5498764e">&#9670;&#160;</a></span>mBallSetRandom</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daObjVolcBall_c::volc_param_c::mBallSetRandom</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a414fdfdb20bf24f430ca0bed38a743e5" name="a414fdfdb20bf24f430ca0bed38a743e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a414fdfdb20bf24f430ca0bed38a743e5">&#9670;&#160;</a></span>mBallSetShortRange</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daObjVolcBall_c::volc_param_c::mBallSetShortRange</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac07709e3853b313adba351feb12e58be" name="ac07709e3853b313adba351feb12e58be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac07709e3853b313adba351feb12e58be">&#9670;&#160;</a></span>mBallSpeedH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daObjVolcBall_c::volc_param_c::mBallSpeedH</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="add59cdcfda03bad28954b64fa7925d04" name="add59cdcfda03bad28954b64fa7925d04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add59cdcfda03bad28954b64fa7925d04">&#9670;&#160;</a></span>mGravity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daObjVolcBall_c::volc_param_c::mGravity</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3827e020b840519675fa704321556955" name="a3827e020b840519675fa704321556955"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3827e020b840519675fa704321556955">&#9670;&#160;</a></span>mMaxFallSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daObjVolcBall_c::volc_param_c::mMaxFallSpeed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0c76780f21ae90aae4bff2994105bea3" name="a0c76780f21ae90aae4bff2994105bea3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c76780f21ae90aae4bff2994105bea3">&#9670;&#160;</a></span>mNormalEruptTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daObjVolcBall_c::volc_param_c::mNormalEruptTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99de8fab7f03dbe68f62a1c779ded9a4" name="a99de8fab7f03dbe68f62a1c779ded9a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99de8fab7f03dbe68f62a1c779ded9a4">&#9670;&#160;</a></span>mNormalInterval</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daObjVolcBall_c::volc_param_c::mNormalInterval</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a153a252f90792a21fb1c851fb7704212" name="a153a252f90792a21fb1c851fb7704212"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a153a252f90792a21fb1c851fb7704212">&#9670;&#160;</a></span>mNormalScale</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daObjVolcBall_c::volc_param_c::mNormalScale</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a9b67bd2431a9800c533411c7570511" name="a5a9b67bd2431a9800c533411c7570511"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a9b67bd2431a9800c533411c7570511">&#9670;&#160;</a></span>mNormalWaitTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daObjVolcBall_c::volc_param_c::mNormalWaitTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a675248869e03d79c343007ea439ca616" name="a675248869e03d79c343007ea439ca616"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a675248869e03d79c343007ea439ca616">&#9670;&#160;</a></span>mNormalWarningTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daObjVolcBall_c::volc_param_c::mNormalWarningTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6cf29b1c2c9750f4a215106753ada937" name="a6cf29b1c2c9750f4a215106753ada937"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cf29b1c2c9750f4a215106753ada937">&#9670;&#160;</a></span>mPlayerSearchTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> daObjVolcBall_c::volc_param_c::mPlayerSearchTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a53c468357850b7f2fa41bde8cb3ec97d" name="a53c468357850b7f2fa41bde8cb3ec97d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53c468357850b7f2fa41bde8cb3ec97d">&#9670;&#160;</a></span>mRandEruptTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daObjVolcBall_c::volc_param_c::mRandEruptTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad20e992acce7e81590e278d397134883" name="ad20e992acce7e81590e278d397134883"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad20e992acce7e81590e278d397134883">&#9670;&#160;</a></span>mRandInterval</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daObjVolcBall_c::volc_param_c::mRandInterval</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1bdd0e79bd0693ccfda805f0462b731d" name="a1bdd0e79bd0693ccfda805f0462b731d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bdd0e79bd0693ccfda805f0462b731d">&#9670;&#160;</a></span>mRandWaitTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daObjVolcBall_c::volc_param_c::mRandWaitTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a55a8a502636d56794fc1157666bd9dbf" name="a55a8a502636d56794fc1157666bd9dbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55a8a502636d56794fc1157666bd9dbf">&#9670;&#160;</a></span>mRandWarningTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daObjVolcBall_c::volc_param_c::mRandWarningTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf3ce7ee2482c426ea58af2a6139bdc2" name="abf3ce7ee2482c426ea58af2a6139bdc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf3ce7ee2482c426ea58af2a6139bdc2">&#9670;&#160;</a></span>mScaleRandValue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daObjVolcBall_c::volc_param_c::mScaleRandValue</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a530c72042bd6fae42988297f5d8fa13b" name="a530c72042bd6fae42988297f5d8fa13b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a530c72042bd6fae42988297f5d8fa13b">&#9670;&#160;</a></span>mSearchBallBaseScale</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daObjVolcBall_c::volc_param_c::mSearchBallBaseScale</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a027c9ecaddbfe04eb1682a56f7f9ccf7" name="a027c9ecaddbfe04eb1682a56f7f9ccf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a027c9ecaddbfe04eb1682a56f7f9ccf7">&#9670;&#160;</a></span>mSearchBallCreateTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> daObjVolcBall_c::volc_param_c::mSearchBallCreateTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abc1800fdfc06a16450854648fc6eeffb" name="abc1800fdfc06a16450854648fc6eeffb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc1800fdfc06a16450854648fc6eeffb">&#9670;&#160;</a></span>mSearchBallFreq</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daObjVolcBall_c::volc_param_c::mSearchBallFreq</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f195efddac9f7d7d671619574912c28" name="a0f195efddac9f7d7d671619574912c28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f195efddac9f7d7d671619574912c28">&#9670;&#160;</a></span>mSearchBallRandScale</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daObjVolcBall_c::volc_param_c::mSearchBallRandScale</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2b9385760ca9ca97950e6acfd1243c4" name="ab2b9385760ca9ca97950e6acfd1243c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2b9385760ca9ca97950e6acfd1243c4">&#9670;&#160;</a></span>mSearchBallSetHeight</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daObjVolcBall_c::volc_param_c::mSearchBallSetHeight</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a236e39eafb914d9b90eb5d962f6654ff" name="a236e39eafb914d9b90eb5d962f6654ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a236e39eafb914d9b90eb5d962f6654ff">&#9670;&#160;</a></span>mSearchBallShadowIntensity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daObjVolcBall_c::volc_param_c::mSearchBallShadowIntensity</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>rel/d/a/obj/d_a_obj_volcball/<a class="el" href="d__a__obj__volcball_8cpp.html">d_a_obj_volcball.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classdaObjVolcBall__c.html">daObjVolcBall_c</a></li><li class="navelem"><a class="el" href="classdaObjVolcBall__c_1_1volc__param__c.html">volc_param_c</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: File Members</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('globals_vars_b.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="contents">
+<div class="textblock">Here is a list of all variables with links to the files they belong to:</div>
+
+<h3><a id="index_b" name="index_b"></a>- b -</h3><ul>
+<li>B2_ETC_CC_DT&#160;:&#160;<a class="el" href="d__a__b__ds_8cpp.html#ab70811e96a7536bc048cdb216ed7b557">d_a_b_ds.cpp</a></li>
+<li>b_id&#160;:&#160;<a class="el" href="d__a__b__gnd_8cpp.html#ad5293305e6bf60dbd884482dff66011d">d_a_b_gnd.cpp</a>, <a class="el" href="d__a__mg__fish_8cpp.html#a41a606d6bee6e991fa03487a65cbed7a">d_a_mg_fish.cpp</a></li>
+<li>b_id2&#160;:&#160;<a class="el" href="d__a__b__gnd_8cpp.html#a97f1e0e0593382c2d833292b6f22f01e">d_a_b_gnd.cpp</a></li>
+<li>b_id_4252&#160;:&#160;<a class="el" href="d__a__e__hzelda_8cpp.html#a27fad2b25f888835967faff4c0fc61c5">d_a_e_hzelda.cpp</a></li>
+<li>b_id_4879&#160;:&#160;<a class="el" href="d__a__e__hzelda_8cpp.html#acfcfe16ecc3d2120070a1208149491d6">d_a_e_hzelda.cpp</a></li>
+<li>b_id_4905&#160;:&#160;<a class="el" href="d__a__e__hzelda_8cpp.html#afca7294e24558bbe5f5ec7e5743513fd">d_a_e_hzelda.cpp</a></li>
+<li>b_id_4933&#160;:&#160;<a class="el" href="d__a__e__hzelda_8cpp.html#a2badce1bc0a64b5c685024bdf977ed91">d_a_e_hzelda.cpp</a></li>
+<li>b_path&#160;:&#160;<a class="el" href="d__a__b__gnd_8cpp.html#af06bcd4a413ded4d8bf32270175d0248">d_a_b_gnd.cpp</a>, <a class="el" href="d__a__e__wb_8cpp.html#ac084fd65041c59e33e12f968f0bfcc2e">d_a_e_wb.cpp</a></li>
+<li>b_path2&#160;:&#160;<a class="el" href="d__a__e__wb_8cpp.html#a5dc44b8a6c1009d24e392c5963f023d0">d_a_e_wb.cpp</a></li>
+<li>ba_count&#160;:&#160;<a class="el" href="d__a__e__fm_8cpp.html#ab753adb90d862ecb19e3de413064322c">d_a_e_fm.cpp</a></li>
+<li>backBornOfst&#160;:&#160;<a class="el" href="d__a__cow_8cpp.html#a756da5fc3c22e440d731824ae1b77500">d_a_cow.cpp</a></li>
+<li>ball_at_sph_src&#160;:&#160;<a class="el" href="d__a__e__hzelda_8cpp.html#a3eba3594c0fc5211e983d950ea9c24ec">d_a_e_hzelda.cpp</a></li>
+<li>ball_tg_sph_src&#160;:&#160;<a class="el" href="d__a__e__hzelda_8cpp.html#a3a396edd2bdf5f2ca45ab9f9b583985a">d_a_e_hzelda.cpp</a></li>
+<li>BallEndPos&#160;:&#160;<a class="el" href="d__a__mg__fshop_8cpp.html#af90cf2d8a2a4d027ffe6fd9320e694f6">d_a_mg_fshop.cpp</a></li>
+<li>balloon_radius&#160;:&#160;<a class="el" href="d__a__obj__balloon_8cpp.html#a1dcffff9ed067e701ae825d224dfc2ee">d_a_obj_balloon.cpp</a></li>
+<li>BallStartPos&#160;:&#160;<a class="el" href="d__a__mg__fshop_8cpp.html#a63a9bf58999128fe43a75a00628ec982">d_a_mg_fshop.cpp</a></li>
+<li>BarnacleEnabled&#160;:&#160;<a class="el" href="EXIUart_8c.html#adb5a9e5085fff050deae55deb20e8bd7">EXIUart.c</a></li>
+<li>BarrelBits&#160;:&#160;<a class="el" href="Pad_8c.html#ae5068d02e6c482a49007158079a7ef90">Pad.c</a></li>
+<li>base_j&#160;:&#160;<a class="el" href="d__a__e__st_8cpp.html#afc177d2369ace41a1909b5a584dbb796">d_a_e_st.cpp</a></li>
+<li>base_sc&#160;:&#160;<a class="el" href="d__a__e__gob_8cpp.html#af94c976c6292778d5006d2692ceae294">d_a_e_gob.cpp</a></li>
+<li>baseRidePos&#160;:&#160;<a class="el" href="d__a__hozelda_8cpp.html#ab55ee2e2988a631616ffa04a6bf4a68b">d_a_hozelda.cpp</a></li>
+<li>baseString&#160;:&#160;<a class="el" href="DynamicLink_8cpp.html#a3c961a9b7af659de8516d214aefb2a4b">DynamicLink.cpp</a></li>
+<li>BaseX__4cXyz&#160;:&#160;<a class="el" href="d__a__tbox_8cpp.html#ab8f8e64b7596d92ef826a05147c37fa3">d_a_tbox.cpp</a>, <a class="el" href="d__a__obj__stone_8cpp.html#ab8f8e64b7596d92ef826a05147c37fa3">d_a_obj_stone.cpp</a>, <a class="el" href="d__a__obj__carry_8cpp.html#ab8f8e64b7596d92ef826a05147c37fa3">d_a_obj_carry.cpp</a>, <a class="el" href="d__a__npc__kn_8cpp.html#ab8f8e64b7596d92ef826a05147c37fa3">d_a_npc_kn.cpp</a>, <a class="el" href="d__a__nbomb_8cpp.html#ab8f8e64b7596d92ef826a05147c37fa3">d_a_nbomb.cpp</a>, <a class="el" href="d__a__midna_8cpp.html#ab8f8e64b7596d92ef826a05147c37fa3">d_a_midna.cpp</a>, <a class="el" href="d__a__horse_8cpp.html#ab8f8e64b7596d92ef826a05147c37fa3">d_a_horse.cpp</a>, <a class="el" href="d__a__alink_8cpp.html#ab8f8e64b7596d92ef826a05147c37fa3">d_a_alink.cpp</a></li>
+<li>BaseY__4cXyz&#160;:&#160;<a class="el" href="d__a__obj__movebox_8cpp.html#a4bee5aa55bce1f03263be5add9f31de0">d_a_obj_movebox.cpp</a>, <a class="el" href="d__camera_8cpp.html#a4bee5aa55bce1f03263be5add9f31de0">d_camera.cpp</a>, <a class="el" href="d__a__obj__lv4chandelier_8cpp.html#a4bee5aa55bce1f03263be5add9f31de0">d_a_obj_lv4chandelier.cpp</a>, <a class="el" href="d__a__obj__firepillar2_8cpp.html#a4bee5aa55bce1f03263be5add9f31de0">d_a_obj_firepillar2.cpp</a>, <a class="el" href="d__a__obj__bemos_8cpp.html#a4bee5aa55bce1f03263be5add9f31de0">d_a_obj_bemos.cpp</a>, <a class="el" href="d__a__nbomb_8cpp.html#a4bee5aa55bce1f03263be5add9f31de0">d_a_nbomb.cpp</a>, <a class="el" href="f__op__actor__mng_8cpp.html#a4bee5aa55bce1f03263be5add9f31de0">f_op_actor_mng.cpp</a>, <a class="el" href="d__a__alink_8cpp.html#a4bee5aa55bce1f03263be5add9f31de0">d_a_alink.cpp</a>, <a class="el" href="d__a__tbox_8cpp.html#a4bee5aa55bce1f03263be5add9f31de0">d_a_tbox.cpp</a></li>
+<li>BaseZ__4cXyz&#160;:&#160;<a class="el" href="d__a__alink_8cpp.html#a7845b0520e657fecee62f8f96f88f3a3">d_a_alink.cpp</a>, <a class="el" href="d__cc__s_8cpp.html#a7845b0520e657fecee62f8f96f88f3a3">d_cc_s.cpp</a>, <a class="el" href="d__jnt__col_8cpp.html#a7845b0520e657fecee62f8f96f88f3a3">d_jnt_col.cpp</a>, <a class="el" href="d__a__nbomb_8cpp.html#a7845b0520e657fecee62f8f96f88f3a3">d_a_nbomb.cpp</a>, <a class="el" href="d__a__obj__firepillar2_8cpp.html#a7845b0520e657fecee62f8f96f88f3a3">d_a_obj_firepillar2.cpp</a>, <a class="el" href="d__a__obj__iceblock_8cpp.html#a7845b0520e657fecee62f8f96f88f3a3">d_a_obj_iceblock.cpp</a>, <a class="el" href="d__a__obj__klift00_8cpp.html#a7845b0520e657fecee62f8f96f88f3a3">d_a_obj_klift00.cpp</a>, <a class="el" href="d__a__obj__lv4chandelier_8cpp.html#a7845b0520e657fecee62f8f96f88f3a3">d_a_obj_lv4chandelier.cpp</a></li>
+<li>bb2&#160;:&#160;<a class="el" href="fstload_8c.html#aeb755f9f391b9e20f8edc93c864e6496">fstload.c</a></li>
+<li>bb2Buf&#160;:&#160;<a class="el" href="fstload_8c.html#a1145f1e2759d0cdd9db617630dfc408e">fstload.c</a></li>
+<li>bboxPosX&#160;:&#160;<a class="el" href="d__meter__HIO_8cpp.html#a67ab56f1913af1a2ec09b146a3eddb35">d_meter_HIO.cpp</a></li>
+<li>bboxPosY&#160;:&#160;<a class="el" href="d__meter__HIO_8cpp.html#a3b89a9b61872520454ef4b379ee51ae5">d_meter_HIO.cpp</a></li>
+<li>bboxScale&#160;:&#160;<a class="el" href="d__meter__HIO_8cpp.html#a0c292640c4c9c1b203d4e31dff363342">d_meter_HIO.cpp</a></li>
+<li>bck_d&#160;:&#160;<a class="el" href="d__a__obj__keyhole_8cpp.html#aaebc4018c170b6e4e3534867e2bb031e">d_a_obj_keyhole.cpp</a></li>
+<li>bck_name&#160;:&#160;<a class="el" href="d__select__cursor_8cpp.html#a033309a15b5240f12199f0513f2e1613">d_select_cursor.cpp</a></li>
+<li>bck_name_7583&#160;:&#160;<a class="el" href="d__menu__collect_8cpp.html#a4ca74517a5aba335b637c072b4da3bb8">d_menu_collect.cpp</a></li>
+<li>bck_name_7687&#160;:&#160;<a class="el" href="d__menu__collect_8cpp.html#a1547e7b5b5770f287d14f94b27f3c0ac">d_menu_collect.cpp</a></li>
+<li>bck_name_8683&#160;:&#160;<a class="el" href="d__file__select_8cpp.html#a2ec4064be5d0d72d429548c7d3f5e790">d_file_select.cpp</a></li>
+<li>bck_name_8786&#160;:&#160;<a class="el" href="d__file__select_8cpp.html#aea996f1017cd7db4c208d6124aee5019">d_file_select.cpp</a></li>
+<li>bck_table&#160;:&#160;<a class="el" href="d__a__door__knob00_8cpp.html#a53cde3d4d94ffc3f37e75ab42eeb8b4b">d_a_door_knob00.cpp</a>, <a class="el" href="d__a__door__mbossL1_8cpp.html#a14c91c8499c83f5e3086096b16cc11d3">d_a_door_mbossL1.cpp</a></li>
+<li>bckArcIx&#160;:&#160;<a class="el" href="d__a__obj__automata_8cpp.html#afd498d9f8ae955f90837ee3ad35b8c99">d_a_obj_automata.cpp</a></li>
+<li>BEAM_PARTICLE_NAME&#160;:&#160;<a class="el" href="d__a__obj__scannon__crs_8cpp.html#a1db966846daac41a227f0599cee36d89">d_a_obj_scannon_crs.cpp</a></li>
+<li>beam_sph_src&#160;:&#160;<a class="el" href="d__a__b__gm_8cpp.html#ab6562b5d589c951dde3f4f98f64f5647">d_a_b_gm.cpp</a></li>
+<li>bef_bmd&#160;:&#160;<a class="el" href="d__a__obj__brakeeff_8cpp.html#af6ec1565788fc48a852974620388c76c">d_a_obj_brakeeff.cpp</a></li>
+<li>bef_brk&#160;:&#160;<a class="el" href="d__a__obj__brakeeff_8cpp.html#a5bede76ee9654ff4b0ec289d47a4008f">d_a_obj_brakeeff.cpp</a></li>
+<li>behindCenter&#160;:&#160;<a class="el" href="d__a__cstatue_8cpp.html#a698757cc5799e7c77bf24440c6b511ef">d_a_cstatue.cpp</a></li>
+<li>behindEye&#160;:&#160;<a class="el" href="d__a__cstatue_8cpp.html#aa24cc761d596642bd67e54caf7ef478d">d_a_cstatue.cpp</a></li>
+<li>BEVEL2D_OUTCODE0&#160;:&#160;<a class="el" href="c__m3d_8cpp.html#ad05751333e692d8e5f929a87205ce3f0">c_m3d.cpp</a></li>
+<li>BEVEL2D_OUTCODE1&#160;:&#160;<a class="el" href="c__m3d_8cpp.html#ab5c9009f2b79d847f1daa9c971f2b03a">c_m3d.cpp</a></li>
+<li>BEVEL2D_OUTCODE10&#160;:&#160;<a class="el" href="c__m3d_8cpp.html#ad51668260eb2d93251ddd5aa38743c6e">c_m3d.cpp</a></li>
+<li>BEVEL2D_OUTCODE11&#160;:&#160;<a class="el" href="c__m3d_8cpp.html#a3c1ef28a4b2e8a75fd86208856a6e1fd">c_m3d.cpp</a></li>
+<li>BEVEL2D_OUTCODE2&#160;:&#160;<a class="el" href="c__m3d_8cpp.html#a241ae2c15fd314e834e5672f5c7b34ca">c_m3d.cpp</a></li>
+<li>BEVEL2D_OUTCODE3&#160;:&#160;<a class="el" href="c__m3d_8cpp.html#a3f65377bd3f4b5de92a419bbbdde32cb">c_m3d.cpp</a></li>
+<li>BEVEL2D_OUTCODE4&#160;:&#160;<a class="el" href="c__m3d_8cpp.html#ad6e0f64222b9192860738adc01307db3">c_m3d.cpp</a></li>
+<li>BEVEL2D_OUTCODE5&#160;:&#160;<a class="el" href="c__m3d_8cpp.html#a085b1382f3c50ee90c6352f7d1bb567d">c_m3d.cpp</a></li>
+<li>BEVEL2D_OUTCODE6&#160;:&#160;<a class="el" href="c__m3d_8cpp.html#a36407ab3a57666530fbc12ed766dbfe3">c_m3d.cpp</a></li>
+<li>BEVEL2D_OUTCODE7&#160;:&#160;<a class="el" href="c__m3d_8cpp.html#a711c15f102fbc9e8cfdbe7e070833657">c_m3d.cpp</a></li>
+<li>BEVEL2D_OUTCODE8&#160;:&#160;<a class="el" href="c__m3d_8cpp.html#a4dff96ff29e60fa0309b60fbbe2e9cba">c_m3d.cpp</a></li>
+<li>BEVEL2D_OUTCODE9&#160;:&#160;<a class="el" href="c__m3d_8cpp.html#a877aa0fd25d2946360c6f5a0bca6019a">c_m3d.cpp</a></li>
+<li>BEVEL3D_OUTCODE0&#160;:&#160;<a class="el" href="c__m3d_8cpp.html#a7652bb39d95a420bdffa849faac00771">c_m3d.cpp</a></li>
+<li>BEVEL3D_OUTCODE1&#160;:&#160;<a class="el" href="c__m3d_8cpp.html#a1c2882b07074817652d2a0bed7f0d247">c_m3d.cpp</a></li>
+<li>BEVEL3D_OUTCODE2&#160;:&#160;<a class="el" href="c__m3d_8cpp.html#a95c6b49d38887857391e9df9521bbc27">c_m3d.cpp</a></li>
+<li>BEVEL3D_OUTCODE3&#160;:&#160;<a class="el" href="c__m3d_8cpp.html#a7db7f2c511e770e277e90de39f96baa6">c_m3d.cpp</a></li>
+<li>BEVEL3D_OUTCODE4&#160;:&#160;<a class="el" href="c__m3d_8cpp.html#a0f43f4f0dd2c6607248e43817aa5874c">c_m3d.cpp</a></li>
+<li>BEVEL3D_OUTCODE5&#160;:&#160;<a class="el" href="c__m3d_8cpp.html#a26696c5363554bede87dd7b24229a605">c_m3d.cpp</a></li>
+<li>BEVEL3D_OUTCODE6&#160;:&#160;<a class="el" href="c__m3d_8cpp.html#a8528e4f8e58138ec84464fc2e2c02ea1">c_m3d.cpp</a></li>
+<li>BEVEL3D_OUTCODE7&#160;:&#160;<a class="el" href="c__m3d_8cpp.html#a891fcbf01d364bc8c862753e2c4a4eae">c_m3d.cpp</a></li>
+<li>bf_ct&#160;:&#160;<a class="el" href="d__a__b__ob_8cpp.html#ad4e2fc5fe4df069cff39617336f6d391">d_a_b_ob.cpp</a></li>
+<li>bFootJoint&#160;:&#160;<a class="el" href="d__a__alink_8cpp.html#a9551ab4e42c9a7207294886f77d288cf">d_a_alink.cpp</a></li>
+<li>bg_cross&#160;:&#160;<a class="el" href="d__a__e__sg_8cpp.html#a1baeff3c835979e62297be3d708c377c">d_a_e_sg.cpp</a></li>
+<li>bg_h&#160;:&#160;<a class="el" href="d__a__e__sm2_8cpp.html#acacb5ce572c66d4030d16a9e29b655ea">d_a_e_sm2.cpp</a></li>
+<li>bg_on&#160;:&#160;<a class="el" href="d__a__e__sg_8cpp.html#abfe05918f28fa094358766808334d725">d_a_e_sg.cpp</a></li>
+<li>bg_r&#160;:&#160;<a class="el" href="d__a__e__sm2_8cpp.html#a46d600697cd16921158700fe2c4e8f66">d_a_e_sm2.cpp</a></li>
+<li>bg_x&#160;:&#160;<a class="el" href="d__a__e__gob_8cpp.html#ae3ec56ee41de762c547534b4c7f6a0b9">d_a_e_gob.cpp</a></li>
+<li>bg_z&#160;:&#160;<a class="el" href="d__a__e__gob_8cpp.html#abd11933c077a7eb3a0216cd7efafa05b">d_a_e_gob.cpp</a></li>
+<li>bgmLabel&#160;:&#160;<a class="el" href="d__a__alink_8cpp.html#a73e326b42bae2fbe592938e9e855d743">d_a_alink.cpp</a></li>
+<li>bgWaitFlg&#160;:&#160;<a class="el" href="d__a__alink_8cpp.html#a76f4eb962a57afb4894ab94542a3a9af">d_a_alink.cpp</a></li>
+<li>bh&#160;:&#160;<a class="el" href="d__a__b__bh_8cpp.html#ad1f5b660f71d79b02bd00faee4258fcf">d_a_b_bh.cpp</a></li>
+<li>BI2DebugFlag&#160;:&#160;<a class="el" href="OS_8c.html#ac962f5657b89ec996587c3c946657865">OS.c</a></li>
+<li>BI2DebugFlagHolder&#160;:&#160;<a class="el" href="OS_8c.html#a0862ac341a42cb1a6c1f7e4fa2a02f63">OS.c</a></li>
+<li>big&#160;:&#160;<a class="el" href="s__ldexp_8c.html#a0104610ca9212f9ca9f844435908c496">s_ldexp.c</a></li>
+<li>BIRTH_DT&#160;:&#160;<a class="el" href="d__a__e__pz_8cpp.html#afe8f4f65def2e6437fb897a719a9f300">d_a_e_pz.cpp</a></li>
+<li>black&#160;:&#160;<a class="el" href="d__menu__fmap__map_8cpp.html#a759d13eaf9a08765fff45a0bc3aeb02e">d_menu_fmap_map.cpp</a></li>
+<li>black_color_4634&#160;:&#160;<a class="el" href="d__meter2__info_8cpp.html#a36ecd418b56a510d6729c8b32afcb4fe">d_meter2_info.cpp</a></li>
+<li>black_color_4675&#160;:&#160;<a class="el" href="d__meter2__info_8cpp.html#a7202e0a94a9134855bede57eeecb93b2">d_meter2_info.cpp</a></li>
+<li>blo_name&#160;:&#160;<a class="el" href="d__select__cursor_8cpp.html#a40742f2cfc67e14ce9a1ed0d97a803a4">d_select_cursor.cpp</a></li>
+<li>block&#160;:&#160;<a class="el" href="fstload_8c.html#a0a77fcc63b2130d6926350d37888d7a4">fstload.c</a></li>
+<li>blur_effect_id_5997&#160;:&#160;<a class="el" href="d__a__b__tn_8cpp.html#ad057a5f0ba4b679e8d2035cde13e9ed3">d_a_b_tn.cpp</a></li>
+<li>blur_effect_id_6035&#160;:&#160;<a class="el" href="d__a__b__tn_8cpp.html#a3e3d6887053bbdef795513f07aa9b945">d_a_b_tn.cpp</a></li>
+<li>blur_model&#160;:&#160;<a class="el" href="d__a__b__gnd_8cpp.html#a471a04954a0e3826b76789363eab82e5">d_a_b_gnd.cpp</a></li>
+<li>bmd&#160;:&#160;<a class="el" href="d__a__obj__gb_8cpp.html#a5bf3ea40e76da3cf849644544cfcb55f">d_a_obj_gb.cpp</a>, <a class="el" href="d__a__obj__tp_8cpp.html#a5bf3ea40e76da3cf849644544cfcb55f">d_a_obj_tp.cpp</a></li>
+<li>bmd_d&#160;:&#160;<a class="el" href="d__a__obj__keyhole_8cpp.html#a3a4a28d0a42fa2de8957ac9b723b14b5">d_a_obj_keyhole.cpp</a></li>
+<li>BMD_IDX&#160;:&#160;<a class="el" href="d__a__obj__bky__rock_8cpp.html#a6ac88337d200eb459363712889ccc5b4">d_a_obj_bky_rock.cpp</a>, <a class="el" href="d__a__obj__prop_8cpp.html#abdd427d5085d1aa017eec579a98d9574">d_a_obj_prop.cpp</a></li>
+<li>bmdd&#160;:&#160;<a class="el" href="d__a__obj__fw_8cpp.html#a7cc0bf8498d80d7de9bf3114b1245a80">d_a_obj_fw.cpp</a>, <a class="el" href="d__a__obj__udoor_8cpp.html#a7cc0bf8498d80d7de9bf3114b1245a80">d_a_obj_udoor.cpp</a></li>
+<li>bmdIdx&#160;:&#160;<a class="el" href="d__a__nbomb_8cpp.html#a27caa1f219a64e620cd46868651cb023">d_a_nbomb.cpp</a>, <a class="el" href="d__a__obj__sekizo_8cpp.html#a80d3f7aedbcc1cbeef9ebdb3b6b917a3">d_a_obj_sekizo.cpp</a></li>
+<li>bmdName&#160;:&#160;<a class="el" href="d__a__door__shutter_8cpp.html#ae319d48242faca00d24362446b984f86">d_a_door_shutter.cpp</a></li>
+<li>bmdTypeList&#160;:&#160;<a class="el" href="d__a__npc__ykm_8cpp.html#a1ad269073a4ad9eeaf9515d3cce8fd79">d_a_npc_ykm.cpp</a>, <a class="el" href="d__a__npc__kyury_8cpp.html#a538b9f712a1bc7edddde3090333e0542">d_a_npc_kyury.cpp</a>, <a class="el" href="d__a__npc__toby_8cpp.html#ae1807cabeeff9b61b91e8da9df761e30">d_a_npc_toby.cpp</a>, <a class="el" href="d__a__npc__saru_8cpp.html#a538b9f712a1bc7edddde3090333e0542">d_a_npc_saru.cpp</a>, <a class="el" href="d__a__npc__pouya_8cpp.html#ae1807cabeeff9b61b91e8da9df761e30">d_a_npc_pouya.cpp</a>, <a class="el" href="d__a__npc__pachi__taro_8cpp.html#a538b9f712a1bc7edddde3090333e0542">d_a_npc_pachi_taro.cpp</a>, <a class="el" href="d__a__npc__post_8cpp.html#a538b9f712a1bc7edddde3090333e0542">d_a_npc_post.cpp</a>, <a class="el" href="d__a__npc__hanjo_8cpp.html#a538b9f712a1bc7edddde3090333e0542">d_a_npc_hanjo.cpp</a>, <a class="el" href="d__a__npc__moi_8cpp.html#a4ad92c6f8c2f57bfa831d67e80e19cbf">d_a_npc_moi.cpp</a></li>
+<li>bo_eno_0&#160;:&#160;<a class="el" href="d__a__e__mk_8cpp.html#a5ce1626097b69a9f769be8692704e794">d_a_e_mk.cpp</a></li>
+<li>bo_eno_1&#160;:&#160;<a class="el" href="d__a__e__mk__bo_8cpp.html#a49af995c8eee864c4684f502684f86eb">d_a_e_mk_bo.cpp</a>, <a class="el" href="d__a__e__mk_8cpp.html#acee03b3218f00abedf32cbacbed510e2">d_a_e_mk.cpp</a></li>
+<li>bo_eno_12&#160;:&#160;<a class="el" href="d__a__e__mk__bo_8cpp.html#ad28c815c5ec18ebf1b09e32ec837c56a">d_a_e_mk_bo.cpp</a></li>
+<li>bo_eno_2&#160;:&#160;<a class="el" href="d__a__e__mk__bo_8cpp.html#a882e944701a269cee40049952060fdec">d_a_e_mk_bo.cpp</a></li>
+<li>bo_eno_end&#160;:&#160;<a class="el" href="d__a__e__mk__bo_8cpp.html#a2780f69ddd4a11bac0273763bf708a4a">d_a_e_mk_bo.cpp</a></li>
+<li>boardLocalEyeFromRoot&#160;:&#160;<a class="el" href="d__a__alink_8cpp.html#aef346568babf9c7ba501253699f348dc">d_a_alink.cpp</a></li>
+<li>boarLocalLeft&#160;:&#160;<a class="el" href="d__a__alink_8cpp.html#a03331130a228f7d8deab8a7e42385927">d_a_alink.cpp</a></li>
+<li>boarLocalRight&#160;:&#160;<a class="el" href="d__a__alink_8cpp.html#a9e12973ad2ce75c39c059a2e12f6e284">d_a_alink.cpp</a></li>
+<li>boarRideOffset&#160;:&#160;<a class="el" href="d__a__alink_8cpp.html#a384d0c7c719b9023021dffa9f007d1bb">d_a_alink.cpp</a></li>
+<li>body_co_sph_src&#160;:&#160;<a class="el" href="d__a__b__bq_8cpp.html#a9a4da49fb287d07989009c4e7e7be82b">d_a_b_bq.cpp</a>, <a class="el" href="d__a__e__kr_8cpp.html#a9a4da49fb287d07989009c4e7e7be82b">d_a_e_kr.cpp</a>, <a class="el" href="d__a__e__yr_8cpp.html#a9a4da49fb287d07989009c4e7e7be82b">d_a_e_yr.cpp</a></li>
+<li>body_cyl_src&#160;:&#160;<a class="el" href="d__a__e__gb_8cpp.html#a7881df5cb0d184ecfee31b1d2deec96d">d_a_e_gb.cpp</a></li>
+<li>body_sph_src&#160;:&#160;<a class="el" href="d__a__b__gm_8cpp.html#a05213b6cc4b16e4283ab0efaf75540f0">d_a_b_gm.cpp</a>, <a class="el" href="d__a__b__ob_8cpp.html#a05213b6cc4b16e4283ab0efaf75540f0">d_a_b_ob.cpp</a></li>
+<li>body_tg_sph_src&#160;:&#160;<a class="el" href="d__a__e__kr_8cpp.html#af3e3b5c60e0734ff364965b6ffebb91b">d_a_e_kr.cpp</a>, <a class="el" href="d__a__e__yr_8cpp.html#af3e3b5c60e0734ff364965b6ffebb91b">d_a_e_yr.cpp</a></li>
+<li>bodyBrkName&#160;:&#160;<a class="el" href="d__a__alink_8cpp.html#a1eb52af946d2c67228be7201b652be25">d_a_alink.cpp</a></li>
+<li>bodyRippleScale&#160;:&#160;<a class="el" href="d__a__canoe_8cpp.html#a0e94733d53b6cd38f96b07d07594dac4">d_a_canoe.cpp</a></li>
+<li>bomb_eff_name&#160;:&#160;<a class="el" href="d__a__e__dd_8cpp.html#a7348f917633fd6b30e927002a1aaebe1">d_a_e_dd.cpp</a></li>
+<li>bombOffset&#160;:&#160;<a class="el" href="d__a__obj__bombf_8cpp.html#a535735017b9a2ebf20922156ffda6d09">d_a_obj_bombf.cpp</a></li>
+<li>BOOT_REGION_END&#160;:&#160;<a class="el" href="os_8h.html#aeafd538a6ea70d1d45cbfb661d7771d0">os.h</a></li>
+<li>BOOT_REGION_START&#160;:&#160;<a class="el" href="os_8h.html#a982f0034f80234c687a227289a768202">os.h</a></li>
+<li>BootInfo&#160;:&#160;<a class="el" href="dvdfs_8c.html#a543da2d195a8f0576fe4a625c4d15f39">dvdfs.c</a>, <a class="el" href="OS_8c.html#a543da2d195a8f0576fe4a625c4d15f39">OS.c</a></li>
+<li>bootInfo&#160;:&#160;<a class="el" href="dvd_8c.html#ae01eb00e7e44cc8852fedb9d075b90e5">dvd.c</a></li>
+<li>bootThisDol&#160;:&#160;<a class="el" href="OSReset_8c.html#ab44038914dc7d78a3ad7c538162ade39">OSReset.c</a></li>
+<li>borderColor0&#160;:&#160;<a class="el" href="d__menu__fmap__map_8cpp.html#a470f4fe0636c68673afc9054326f08a0">d_menu_fmap_map.cpp</a></li>
+<li>borderColor1&#160;:&#160;<a class="el" href="d__menu__fmap__map_8cpp.html#a24ef828e0ab1514b2ebaaca40a05e47e">d_menu_fmap_map.cpp</a></li>
+<li>boss&#160;:&#160;<a class="el" href="d__a__b__gos_8cpp.html#a320eb2b1c01456bf9cc1c1a4c8a1ff7e">d_a_b_gos.cpp</a>, <a class="el" href="d__a__b__oh_8cpp.html#a6dd0a06eb9f764a9cd2f25a24320f561">d_a_b_oh.cpp</a>, <a class="el" href="d__a__b__oh__NONMATCHING_8cpp.html#a6dd0a06eb9f764a9cd2f25a24320f561">d_a_b_oh_NONMATCHING.cpp</a>, <a class="el" href="d__a__b__oh2_8cpp.html#a6dd0a06eb9f764a9cd2f25a24320f561">d_a_b_oh2.cpp</a>, <a class="el" href="d__a__e__rd_8cpp.html#a6b66cafc175e7079ec67c14655d5823e">d_a_e_rd.cpp</a>, <a class="el" href="d__a__e__rdy_8cpp.html#a6b66cafc175e7079ec67c14655d5823e">d_a_e_rdy.cpp</a>, <a class="el" href="d__a__e__sm2_8cpp.html#a6b66cafc175e7079ec67c14655d5823e">d_a_e_sm2.cpp</a></li>
+<li>boss_part_bmd&#160;:&#160;<a class="el" href="d__a__e__rd_8cpp.html#a85ccf3508998e80b016866175eac570d">d_a_e_rd.cpp</a></li>
+<li>boss_part_idx&#160;:&#160;<a class="el" href="d__a__e__rd_8cpp.html#a2538ec73df9f778b7656c156e1c69a97">d_a_e_rd.cpp</a></li>
+<li>boss_tag&#160;:&#160;<a class="el" href="d__menu__dmap_8cpp.html#aea0fdaf848d42636e92487335ea44f15">d_menu_dmap.cpp</a></li>
+<li>bossJntIdx&#160;:&#160;<a class="el" href="d__a__cstatue_8cpp.html#ad5a9eac12ae1b90adde0f880e46282d8">d_a_cstatue.cpp</a></li>
+<li>bossLocalBallPos&#160;:&#160;<a class="el" href="d__a__cstatue_8cpp.html#aa5455d507f91bf834b0f02ebcbca150a">d_a_cstatue.cpp</a></li>
+<li>bossLocalOffset&#160;:&#160;<a class="el" href="d__a__cstatue_8cpp.html#aaf96ebcd25a2fa6f16406175a817b6ae">d_a_cstatue.cpp</a></li>
+<li>bossSphR&#160;:&#160;<a class="el" href="d__a__cstatue_8cpp.html#a98b6ba5833b68753ccb41fb38d3478c6">d_a_cstatue.cpp</a></li>
+<li>bottlAnmData&#160;:&#160;<a class="el" href="d__a__npc__seira_8cpp.html#a9cdd1554c47ce69476b6fdc96bb97fd3">d_a_npc_seira.cpp</a>, <a class="el" href="d__a__npc__seira2_8cpp.html#a5efb7fc800e8033862dfaab356f996c0">d_a_npc_seira2.cpp</a></li>
+<li>bottleTop&#160;:&#160;<a class="el" href="d__a__alink_8cpp.html#a338b960950835e5dcec7e17c5d4341cf">d_a_alink.cpp</a></li>
+<li>bottleTopPos&#160;:&#160;<a class="el" href="d__a__alink_8cpp.html#acb02c353d523e505b66de6eb5cb61afe">d_a_alink.cpp</a></li>
+<li>bound_32KHz&#160;:&#160;<a class="el" href="ai_8c.html#a57899aafc4bb6440db4539650f877194">ai.c</a></li>
+<li>bound_48KHz&#160;:&#160;<a class="el" href="ai_8c.html#aaf2fb6f05bc078045c157fc5c1076d4d">ai.c</a></li>
+<li>bowlAnmData&#160;:&#160;<a class="el" href="d__a__npc__lud_8cpp.html#a9fe48a4ec27b37f7864f2363a1f00ce5">d_a_npc_lud.cpp</a></li>
+<li>bp&#160;:&#160;<a class="el" href="e__pow_8c.html#a6e7ef6854ced1bbafad4f950176aafa1">e_pow.c</a></li>
+<li>BPCP_OUTCODE0&#160;:&#160;<a class="el" href="c__m3d_8cpp.html#aa2647775d13ba023c403657a1b64ea60">c_m3d.cpp</a></li>
+<li>BPCP_OUTCODE1&#160;:&#160;<a class="el" href="c__m3d_8cpp.html#afb25e96dd342e2a9a8178c63f8c47c0c">c_m3d.cpp</a></li>
+<li>BPCP_OUTCODE2&#160;:&#160;<a class="el" href="c__m3d_8cpp.html#ab1dca42102b87b01f9e558219f23ce74">c_m3d.cpp</a></li>
+<li>BPCP_OUTCODE3&#160;:&#160;<a class="el" href="c__m3d_8cpp.html#ad8d8f93b5ba0ec29c6f589e17ffe86ef">c_m3d.cpp</a></li>
+<li>BPCP_OUTCODE4&#160;:&#160;<a class="el" href="c__m3d_8cpp.html#a918a28de4c0307fe9c29dc09603efee9">c_m3d.cpp</a></li>
+<li>BPCP_OUTCODE5&#160;:&#160;<a class="el" href="c__m3d_8cpp.html#a9c4ed593c3a7d3449d78a3655991f831">c_m3d.cpp</a></li>
+<li>bpk_name&#160;:&#160;<a class="el" href="d__select__cursor_8cpp.html#a309b543e8363c7f949098126db997f30">d_select_cursor.cpp</a></li>
+<li>bpkAnmData&#160;:&#160;<a class="el" href="d__a__npc__gnd_8cpp.html#a36cc86bdbc953f5f58dd93c644460421">d_a_npc_gnd.cpp</a></li>
+<li>break_effect_id&#160;:&#160;<a class="el" href="d__a__b__yo__ice_8cpp.html#a00d8d34280b08e8dd742924a039eda00">d_a_b_yo_ice.cpp</a></li>
+<li>break_ice_effect_id&#160;:&#160;<a class="el" href="d__a__b__yo_8cpp.html#a6ea40ab3c2e63c0e215acb9bf8f5655d">d_a_b_yo.cpp</a></li>
+<li>break_part_no&#160;:&#160;<a class="el" href="d__a__b__tn_8cpp.html#a8d7a357ec0f16c04baa7f5cc53f2ae75">d_a_b_tn.cpp</a></li>
+<li>break_part_no2&#160;:&#160;<a class="el" href="d__a__b__tn_8cpp.html#a7ce0a85a66ca7dc506c7a11462821ee3">d_a_b_tn.cpp</a></li>
+<li>break_part_vib&#160;:&#160;<a class="el" href="d__a__b__tn_8cpp.html#ad61ddbf12b170147f3f6e6d1f69a9d5a">d_a_b_tn.cpp</a></li>
+<li>BREAK_PARTS_DT&#160;:&#160;<a class="el" href="d__a__b__dr_8cpp.html#aa95b9e5b3ebab2dccbae24b0e90acd29">d_a_b_dr.cpp</a></li>
+<li>break_sound_id&#160;:&#160;<a class="el" href="d__a__obj__balloon_8cpp.html#aca5d028bd3195db591fe977cf1618df2">d_a_obj_balloon.cpp</a></li>
+<li>Breaking&#160;:&#160;<a class="el" href="dvdlow_8c.html#a377297e22b084c49b478fa3fcbe5daa9">dvdlow.c</a></li>
+<li>BreakPointCB&#160;:&#160;<a class="el" href="GXFifo_8c.html#ab2e65e54ebc762099fd580a1c2b76913">GXFifo.c</a></li>
+<li>breathTimerBase&#160;:&#160;<a class="el" href="d__a__b__ds_8cpp.html#a93be22d83dbde562e66d8afcfead92ef">d_a_b_ds.cpp</a>, <a class="el" href="d__a__b__ds__NONMATCHING_8cpp.html#a93be22d83dbde562e66d8afcfead92ef">d_a_b_ds_NONMATCHING.cpp</a></li>
+<li>brg_init_pos&#160;:&#160;<a class="el" href="d__a__obj__brg_8cpp.html#a2afb8e798e06c2f656538ecca022d41d">d_a_obj_brg.cpp</a></li>
+<li>brIdx&#160;:&#160;<a class="el" href="d__a__cstaF_8cpp.html#a56a949ada960798d144b185719d74b82">d_a_cstaF.cpp</a></li>
+<li>brightChackProc&#160;:&#160;<a class="el" href="d__bright__check_8cpp.html#a41a86194657ebf68f0ba8b52ce1da52e">d_bright_check.cpp</a></li>
+<li>brk&#160;:&#160;<a class="el" href="d__a__e__fm_8cpp.html#abc61ea7072e0b83fa9c202a648c61998">d_a_e_fm.cpp</a>, <a class="el" href="d__a__obj__gb_8cpp.html#a2d58a2168d27665df23787b0512bff5d">d_a_obj_gb.cpp</a>, <a class="el" href="d__a__obj__tp_8cpp.html#a2d58a2168d27665df23787b0512bff5d">d_a_obj_tp.cpp</a></li>
+<li>brk_d&#160;:&#160;<a class="el" href="d__a__e__dd_8cpp.html#af0324df307405a0d1181cc1b254b6e32">d_a_e_dd.cpp</a></li>
+<li>brk_name_7584&#160;:&#160;<a class="el" href="d__menu__collect_8cpp.html#a7d476af138653f1265ce58178114cda2">d_menu_collect.cpp</a></li>
+<li>brk_name_7688&#160;:&#160;<a class="el" href="d__menu__collect_8cpp.html#af33732bdb79e3ba9e1abbf6cf803cc6c">d_menu_collect.cpp</a></li>
+<li>brk_name_8684&#160;:&#160;<a class="el" href="d__file__select_8cpp.html#a8e3bacbefb8c45ffbbae4a7613c453ef">d_file_select.cpp</a></li>
+<li>brk_name_8787&#160;:&#160;<a class="el" href="d__file__select_8cpp.html#aa487d15884016fd20f905adb29b965b1">d_file_select.cpp</a></li>
+<li>brkAnmData&#160;:&#160;<a class="el" href="d__a__obj__sekizoa_8cpp.html#a42369f67411803a32103d1d055fcea82">d_a_obj_sekizoa.cpp</a>, <a class="el" href="d__a__npc__seirei_8cpp.html#afaf1a1c76ed0b133ca6969d52be6c085">d_a_npc_seirei.cpp</a>, <a class="el" href="d__a__npc__seid_8cpp.html#a2d09f4d1870f1d74b3310a4831c25248">d_a_npc_seid.cpp</a>, <a class="el" href="d__a__npc__seic_8cpp.html#a2d09f4d1870f1d74b3310a4831c25248">d_a_npc_seic.cpp</a>, <a class="el" href="d__a__npc__knj_8cpp.html#a2d09f4d1870f1d74b3310a4831c25248">d_a_npc_knj.cpp</a>, <a class="el" href="d__a__npc__gnd_8cpp.html#a2d09f4d1870f1d74b3310a4831c25248">d_a_npc_gnd.cpp</a>, <a class="el" href="d__a__npc__seib_8cpp.html#ab2b7c8171e3c3b8f90c1ff5484f9e5af">d_a_npc_seib.cpp</a></li>
+<li>brkIdx&#160;:&#160;<a class="el" href="d__a__cstaF_8cpp.html#a08aff477a5539c1428d4deba2617516c">d_a_cstaF.cpp</a></li>
+<li>brkIdx_6108&#160;:&#160;<a class="el" href="d__a__cstatue_8cpp.html#afd5399472999161ceaec30f2b3f94f71">d_a_cstatue.cpp</a></li>
+<li>brkIdx_6115&#160;:&#160;<a class="el" href="d__a__cstatue_8cpp.html#a294e02a51d378ff352aa8cbeb1d79721">d_a_cstatue.cpp</a></li>
+<li>brkSeq_koufun01_koufun02&#160;:&#160;<a class="el" href="d__a__npc__pouya_8cpp.html#a8a334f11cbc34d5c9cf65e85e4048f04">d_a_npc_pouya.cpp</a></li>
+<li>brkSeq_normal&#160;:&#160;<a class="el" href="d__a__npc__pouya_8cpp.html#a21ff372bf5405d4aab60e460b41a0596">d_a_npc_pouya.cpp</a></li>
+<li>brkSeq_uttae01_uttae02&#160;:&#160;<a class="el" href="d__a__npc__pouya_8cpp.html#afa830a4351e6c3cad715fe37e23399ce">d_a_npc_pouya.cpp</a></li>
+<li>brkSeqList&#160;:&#160;<a class="el" href="d__a__npc__pouya_8cpp.html#a06c916a08fdca201e20d67b74161e3f8">d_a_npc_pouya.cpp</a></li>
+<li>BROKENBORN_EFF_DT&#160;:&#160;<a class="el" href="d__a__b__ds_8cpp.html#a6a5271bebb6ac6bc371d6d326c8f77eb">d_a_b_ds.cpp</a></li>
+<li>btk&#160;:&#160;<a class="el" href="d__a__e__fm_8cpp.html#aaa39ae4b59a93bb6393e05a704065266">d_a_e_fm.cpp</a>, <a class="el" href="d__a__obj__gb_8cpp.html#a9b8da4f1182be76ef4f1fd74e5153392">d_a_obj_gb.cpp</a></li>
+<li>btk2_name&#160;:&#160;<a class="el" href="d__select__cursor_8cpp.html#a507f3f42aee142ce497202839ab01242">d_select_cursor.cpp</a></li>
+<li>btk_d&#160;:&#160;<a class="el" href="d__a__b__gnd_8cpp.html#a3fadd3a76a169315f39c27310cd68ec1">d_a_b_gnd.cpp</a>, <a class="el" href="d__a__npc__henna_8cpp.html#a7d1d4cf228c79ff60b53277300ec0d6f">d_a_npc_henna.cpp</a></li>
+<li>btk_name&#160;:&#160;<a class="el" href="d__select__cursor_8cpp.html#a26d864436af708b0958a87d21355e869">d_select_cursor.cpp</a></li>
+<li>btkAnmData&#160;:&#160;<a class="el" href="d__a__npc__seib_8cpp.html#a93d5cca9d8a059706e2bb88e6cf5d949">d_a_npc_seib.cpp</a>, <a class="el" href="d__a__npc__seic_8cpp.html#ac77fb8cc646e30193a6aa90355e88812">d_a_npc_seic.cpp</a>, <a class="el" href="d__a__npc__seid_8cpp.html#ac77fb8cc646e30193a6aa90355e88812">d_a_npc_seid.cpp</a>, <a class="el" href="d__a__npc__seirei_8cpp.html#a17171a6f06fe25b7c590a9cee3fd359a">d_a_npc_seirei.cpp</a>, <a class="el" href="d__a__obj__sekizoa_8cpp.html#a38c6733c5fa98fd88be4e143f955c26b">d_a_obj_sekizoa.cpp</a></li>
+<li>btkArcIx&#160;:&#160;<a class="el" href="d__a__obj__automata_8cpp.html#a7d9dfd8d3081921f0d0ccf0b22f68996">d_a_obj_automata.cpp</a></li>
+<li>btp_d&#160;:&#160;<a class="el" href="d__a__npc__henna_8cpp.html#a9328e52c343ef31c4be333f0f19ba4ad">d_a_npc_henna.cpp</a></li>
+<li>btpAnmData&#160;:&#160;<a class="el" href="d__a__npc__knj_8cpp.html#a009bdb312b8cb56b4cd49ac0cecc8a76">d_a_npc_knj.cpp</a></li>
+<li>buf_p&#160;:&#160;<a class="el" href="d__a__b__ob_8cpp.html#a1b28dc9a3ecc7f0221d1ae3005ea2034">d_a_b_ob.cpp</a></li>
+<li>buffer&#160;:&#160;<a class="el" href="ai_8c.html#afacf0f5f5bb482c160a5d05965598d32">ai.c</a></li>
+<li>bun_d&#160;:&#160;<a class="el" href="d__a__e__sm2_8cpp.html#adf4e3bfac3e1bf0484763c14a82ee73a">d_a_e_sm2.cpp</a></li>
+<li>bun_xs&#160;:&#160;<a class="el" href="d__a__b__gnd_8cpp.html#afb4752cfccec36bb09ecbf16352914da">d_a_b_gnd.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

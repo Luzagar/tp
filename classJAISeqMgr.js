@@ -1,0 +1,35 @@
+var classJAISeqMgr =
+[
+    [ "ReleaseSeqResult", "classJAISeqMgr.html#a3be8213056db3439eef7463484be7e19", [
+      [ "RELEASE_SEQ_1", "classJAISeqMgr.html#a3be8213056db3439eef7463484be7e19a74541c721b584e5d7b32d488f2e8cab3", null ],
+      [ "RELEASE_SEQ_2", "classJAISeqMgr.html#a3be8213056db3439eef7463484be7e19a654eb141fa95515533dce05cfdbb6de4", null ]
+    ] ],
+    [ "JAISeqMgr", "classJAISeqMgr.html#a03ec3b9718c8c8982f2cca09f76d77e5", null ],
+    [ "~JAISeqMgr", "classJAISeqMgr.html#a013cc44636d623d33eefff81b335b910", null ],
+    [ "beginStartSeq_", "classJAISeqMgr.html#af94989960b61f66abbf7e6400ef696cb", null ],
+    [ "calc", "classJAISeqMgr.html#a50b33197379e59b2aec547ef5efe87b0", null ],
+    [ "endStartSeq_", "classJAISeqMgr.html#a3985e50c6c12b3898a3a138b903baf13", null ],
+    [ "freeDeadSeq_", "classJAISeqMgr.html#aef8d7fee55c202c8db7cace3f7efd0c6", null ],
+    [ "getNumActiveSeqs", "classJAISeqMgr.html#ade56d3f6bc448c586cf94316b1a91e9c", null ],
+    [ "getParams", "classJAISeqMgr.html#a46c9fa0732b19ea9ec0eedb8fa4cb2fb", null ],
+    [ "getSeqDataMgr", "classJAISeqMgr.html#acaddacf30d031025bf534497d50ce6a7", null ],
+    [ "isActive", "classJAISeqMgr.html#a653f3e171200a63659193811145b306e", null ],
+    [ "isUsingSeqData", "classJAISeqMgr.html#a8a5148faa3553013ebe3de320eae706d", null ],
+    [ "mixOut", "classJAISeqMgr.html#aa4b41a8751400c4f263da116dde28424", null ],
+    [ "pause", "classJAISeqMgr.html#ace4dfee21278b866c7bb943d79baf92d", null ],
+    [ "releaseSeqData", "classJAISeqMgr.html#a6a3c466c90234913c1ae329626ab2e52", null ],
+    [ "resetSeqDataMgr", "classJAISeqMgr.html#a8a2fc675504b9be88b1099e765574e6c", null ],
+    [ "setAudience", "classJAISeqMgr.html#a603c1c96435a233cd841198e0f5e1d0a", null ],
+    [ "setSeqDataMgr", "classJAISeqMgr.html#a00d01783347df0b84e96b78f407a177a", null ],
+    [ "startSound", "classJAISeqMgr.html#a74df23a5e0ec8568573d1f57c2101a54", null ],
+    [ "stop", "classJAISeqMgr.html#a2eca353a348c064b0d7f4e0fbcbbea7c", null ],
+    [ "stop", "classJAISeqMgr.html#aa032fc28da3b72fdcb995c52eeb0d0ba", null ],
+    [ "stopSoundID", "classJAISeqMgr.html#a535569c91419b6c44eba9babdb3f82c4", null ],
+    [ "field_0x10", "classJAISeqMgr.html#af01d69ce9ad3b6bdf56243dd4c970823", null ],
+    [ "field_0x70", "classJAISeqMgr.html#a206966da8386e280689d0153edc3b050", null ],
+    [ "mActivity", "classJAISeqMgr.html#a33c3ad7b74ccc506c360745bc0694d8c", null ],
+    [ "mAudience", "classJAISeqMgr.html#a3193a31069b4e8407bf38c2df15183e1", null ],
+    [ "mMove", "classJAISeqMgr.html#ad97f91deb9499ffa23fa2bc3c318f2f0", null ],
+    [ "mSeqList", "classJAISeqMgr.html#a36d2153d5e035f4b7cdfaaa873116509", null ],
+    [ "seqDataMgr_", "classJAISeqMgr.html#af7dea84800c0276c817730983e53f991", null ]
+];

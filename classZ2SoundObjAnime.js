@@ -1,0 +1,26 @@
+var classZ2SoundObjAnime =
+[
+    [ "Z2SoundObjAnime", "classZ2SoundObjAnime.html#a1ff98824506363c0888737e5b1f29e95", null ],
+    [ "ageSounds_", "classZ2SoundObjAnime.html#a9dcd0517368f3c7b017be9c61766723a", null ],
+    [ "getSoundID", "classZ2SoundObjAnime.html#a72289182a3fbff148dfdfb324f682738", null ],
+    [ "init", "classZ2SoundObjAnime.html#a3a4f974fbf12a2fa76609a464e4bfcf3", null ],
+    [ "initAnime", "classZ2SoundObjAnime.html#a829bbe95a5859c6d845d2084088c9076", null ],
+    [ "playsSound", "classZ2SoundObjAnime.html#a4454ed9b0e90ec23d3bdf8e5ed415e38", null ],
+    [ "setLoopEndFrame", "classZ2SoundObjAnime.html#a55cc1404b123e91010f53edf6b41396d", null ],
+    [ "setLoopFrame", "classZ2SoundObjAnime.html#a95ebfc4e8e5ada890efc26695462fa9f", null ],
+    [ "setLoopStartFrame", "classZ2SoundObjAnime.html#ad3aefb251c1cd6f34f59fa7912f5eb3f", null ],
+    [ "startSoundInner", "classZ2SoundObjAnime.html#a8fa0569c59fed7ed7722a2c2d52d9260", null ],
+    [ "stopAnime", "classZ2SoundObjAnime.html#ae82bb462aa812e2bc37806ffe74e6afa", null ],
+    [ "updateAnime", "classZ2SoundObjAnime.html#a85e4b9f89fab63f9b642255344f626f9", null ],
+    [ "updateSoundLifeTime_", "classZ2SoundObjAnime.html#a52363a95ac61a7860aafc71943ddeedf", null ],
+    [ "field_0x24", "classZ2SoundObjAnime.html#a9509e7f1e6ffcf3a02c198db5da2e17f", null ],
+    [ "field_0x3c", "classZ2SoundObjAnime.html#a54ce2ac67eaad121d57cc07c936c4036", null ],
+    [ "mCurSoundFrame", "classZ2SoundObjAnime.html#a52f8f46e3063a7ca096cb454266cdce7", null ],
+    [ "mCurSoundIndex", "classZ2SoundObjAnime.html#aa0a5cd7c296b4e562356805709e1efb4", null ],
+    [ "mEndSoundFrame", "classZ2SoundObjAnime.html#aaf4b2c0655b41748a9aa5a10fc97237f", null ],
+    [ "mEndSoundIndex", "classZ2SoundObjAnime.html#aa47a0db3bf9b5ee0aaeecc791d19ec06", null ],
+    [ "mpAnimation", "classZ2SoundObjAnime.html#ad829022138edcf3b7e3237f5dfe1de90", null ],
+    [ "mReverse", "classZ2SoundObjAnime.html#aa9d960a8dba1bfd5898bbb1ac309998c", null ],
+    [ "mStartSoundFrame", "classZ2SoundObjAnime.html#a7f7151abc0d43008bb158f4d658a0df8", null ],
+    [ "mStartSoundIndex", "classZ2SoundObjAnime.html#ac99f5f7160dcd6f3cddfe08e7e672610", null ]
+];

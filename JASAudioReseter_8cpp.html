@@ -1,0 +1,464 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: libs/JSystem/JAudio2/JASAudioReseter.cpp File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('JASAudioReseter_8cpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">JASAudioReseter.cpp File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASDSPChannel.html">JASDSPChannel</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ac43b747f19ddc3d343edfe32d6174908" id="r_ac43b747f19ddc3d343edfe32d6174908"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAudioReseter_8cpp.html#ac43b747f19ddc3d343edfe32d6174908">__ct__15JASAudioReseterFv</a> ()</td></tr>
+<tr class="separator:ac43b747f19ddc3d343edfe32d6174908"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4524f4ba353cc1c9e31af9d2bc09dc39" id="r_a4524f4ba353cc1c9e31af9d2bc09dc39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAudioReseter_8cpp.html#a4524f4ba353cc1c9e31af9d2bc09dc39">__dt__15JASAudioReseterFv</a> ()</td></tr>
+<tr class="separator:a4524f4ba353cc1c9e31af9d2bc09dc39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5843080c6753dd7e9f0157e07aaac60e" id="r_a5843080c6753dd7e9f0157e07aaac60e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAudioReseter_8cpp.html#a5843080c6753dd7e9f0157e07aaac60e">start__15JASAudioReseterFUlb</a> ()</td></tr>
+<tr class="separator:a5843080c6753dd7e9f0157e07aaac60e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28d529f63f59c9e197cd0a1a1c7cc951" id="r_a28d529f63f59c9e197cd0a1a1c7cc951"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAudioReseter_8cpp.html#a28d529f63f59c9e197cd0a1a1c7cc951">resume__15JASAudioReseterFv</a> ()</td></tr>
+<tr class="separator:a28d529f63f59c9e197cd0a1a1c7cc951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad77a916b6e6994034f754b4306383d02" id="r_ad77a916b6e6994034f754b4306383d02"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAudioReseter_8cpp.html#ad77a916b6e6994034f754b4306383d02">checkDone__15JASAudioReseterCFv</a> ()</td></tr>
+<tr class="separator:ad77a916b6e6994034f754b4306383d02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a990907464605a030ad0167a7d3a4b76e" id="r_a990907464605a030ad0167a7d3a4b76e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAudioReseter_8cpp.html#a990907464605a030ad0167a7d3a4b76e">calc__15JASAudioReseterFv</a> ()</td></tr>
+<tr class="separator:a990907464605a030ad0167a7d3a4b76e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0adb70781bf8663ae23cb3476c346bb4" id="r_a0adb70781bf8663ae23cb3476c346bb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAudioReseter_8cpp.html#a0adb70781bf8663ae23cb3476c346bb4">callback__15JASAudioReseterFPv</a> ()</td></tr>
+<tr class="separator:a0adb70781bf8663ae23cb3476c346bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a001507cee2941f3bd5ced5f8a1733854" id="r_a001507cee2941f3bd5ced5f8a1733854"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAudioReseter_8cpp.html#a001507cee2941f3bd5ced5f8a1733854">stop__14JASAudioThreadFv</a> ()</td></tr>
+<tr class="separator:a001507cee2941f3bd5ced5f8a1733854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77abe8fd80886d3eb3b01aea6aa1f09a" id="r_a77abe8fd80886d3eb3b01aea6aa1f09a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAudioReseter_8cpp.html#a77abe8fd80886d3eb3b01aea6aa1f09a">drop__13JASDSPChannelFv</a> ()</td></tr>
+<tr class="separator:a77abe8fd80886d3eb3b01aea6aa1f09a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd90465eeb914b16ffff97b95dccfaae" id="r_acd90465eeb914b16ffff97b95dccfaae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAudioReseter_8cpp.html#acd90465eeb914b16ffff97b95dccfaae">getHandle__13JASDSPChannelFUl</a> ()</td></tr>
+<tr class="separator:acd90465eeb914b16ffff97b95dccfaae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dbf3a49bcd5a548ccd88acfe85bcbb7" id="r_a6dbf3a49bcd5a548ccd88acfe85bcbb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAudioReseter_8cpp.html#a6dbf3a49bcd5a548ccd88acfe85bcbb7">setDSPLevel__9JASDriverFf</a> ()</td></tr>
+<tr class="separator:a6dbf3a49bcd5a548ccd88acfe85bcbb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52131bfa1b2c35831330adbbcf0d99fe" id="r_a52131bfa1b2c35831330adbbcf0d99fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAudioReseter_8cpp.html#a52131bfa1b2c35831330adbbcf0d99fe">getDSPLevel__9JASDriverFv</a> ()</td></tr>
+<tr class="separator:a52131bfa1b2c35831330adbbcf0d99fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a312c04a7f091a8daafaaaea098ae0df2" id="r_a312c04a7f091a8daafaaaea098ae0df2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAudioReseter_8cpp.html#a312c04a7f091a8daafaaaea098ae0df2">registerDspSyncCallback__9JASDriverFPFPv_lPv</a> ()</td></tr>
+<tr class="separator:a312c04a7f091a8daafaaaea098ae0df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a498e6440d5c316e2672169ee4ed92309" id="r_a498e6440d5c316e2672169ee4ed92309"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAudioReseter_8cpp.html#a498e6440d5c316e2672169ee4ed92309">__dl__FPv</a> ()</td></tr>
+<tr class="separator:a498e6440d5c316e2672169ee4ed92309"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a2f07d509de9690639dc983c2f4824a33" id="r_a2f07d509de9690639dc983c2f4824a33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJASAudioThread.html">JASAudioThread</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASAudioReseter_8cpp.html#a2f07d509de9690639dc983c2f4824a33">data_80450B8C</a></td></tr>
+<tr class="separator:a2f07d509de9690639dc983c2f4824a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ac43b747f19ddc3d343edfe32d6174908" name="ac43b747f19ddc3d343edfe32d6174908"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac43b747f19ddc3d343edfe32d6174908">&#9670;&#160;</a></span>__ct__15JASAudioReseterFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> __ct__15JASAudioReseterFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a498e6440d5c316e2672169ee4ed92309" name="a498e6440d5c316e2672169ee4ed92309"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a498e6440d5c316e2672169ee4ed92309">&#9670;&#160;</a></span>__dl__FPv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> __dl__FPv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4524f4ba353cc1c9e31af9d2bc09dc39" name="a4524f4ba353cc1c9e31af9d2bc09dc39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4524f4ba353cc1c9e31af9d2bc09dc39">&#9670;&#160;</a></span>__dt__15JASAudioReseterFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> __dt__15JASAudioReseterFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a990907464605a030ad0167a7d3a4b76e" name="a990907464605a030ad0167a7d3a4b76e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a990907464605a030ad0167a7d3a4b76e">&#9670;&#160;</a></span>calc__15JASAudioReseterFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> calc__15JASAudioReseterFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0adb70781bf8663ae23cb3476c346bb4" name="a0adb70781bf8663ae23cb3476c346bb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0adb70781bf8663ae23cb3476c346bb4">&#9670;&#160;</a></span>callback__15JASAudioReseterFPv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> callback__15JASAudioReseterFPv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad77a916b6e6994034f754b4306383d02" name="ad77a916b6e6994034f754b4306383d02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad77a916b6e6994034f754b4306383d02">&#9670;&#160;</a></span>checkDone__15JASAudioReseterCFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> checkDone__15JASAudioReseterCFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77abe8fd80886d3eb3b01aea6aa1f09a" name="a77abe8fd80886d3eb3b01aea6aa1f09a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77abe8fd80886d3eb3b01aea6aa1f09a">&#9670;&#160;</a></span>drop__13JASDSPChannelFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> drop__13JASDSPChannelFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52131bfa1b2c35831330adbbcf0d99fe" name="a52131bfa1b2c35831330adbbcf0d99fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52131bfa1b2c35831330adbbcf0d99fe">&#9670;&#160;</a></span>getDSPLevel__9JASDriverFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> getDSPLevel__9JASDriverFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd90465eeb914b16ffff97b95dccfaae" name="acd90465eeb914b16ffff97b95dccfaae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd90465eeb914b16ffff97b95dccfaae">&#9670;&#160;</a></span>getHandle__13JASDSPChannelFUl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> getHandle__13JASDSPChannelFUl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a312c04a7f091a8daafaaaea098ae0df2" name="a312c04a7f091a8daafaaaea098ae0df2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a312c04a7f091a8daafaaaea098ae0df2">&#9670;&#160;</a></span>registerDspSyncCallback__9JASDriverFPFPv_lPv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> registerDspSyncCallback__9JASDriverFPFPv_lPv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a28d529f63f59c9e197cd0a1a1c7cc951" name="a28d529f63f59c9e197cd0a1a1c7cc951"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28d529f63f59c9e197cd0a1a1c7cc951">&#9670;&#160;</a></span>resume__15JASAudioReseterFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> resume__15JASAudioReseterFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6dbf3a49bcd5a548ccd88acfe85bcbb7" name="a6dbf3a49bcd5a548ccd88acfe85bcbb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dbf3a49bcd5a548ccd88acfe85bcbb7">&#9670;&#160;</a></span>setDSPLevel__9JASDriverFf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> setDSPLevel__9JASDriverFf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5843080c6753dd7e9f0157e07aaac60e" name="a5843080c6753dd7e9f0157e07aaac60e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5843080c6753dd7e9f0157e07aaac60e">&#9670;&#160;</a></span>start__15JASAudioReseterFUlb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> start__15JASAudioReseterFUlb </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a001507cee2941f3bd5ced5f8a1733854" name="a001507cee2941f3bd5ced5f8a1733854"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a001507cee2941f3bd5ced5f8a1733854">&#9670;&#160;</a></span>stop__14JASAudioThreadFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> stop__14JASAudioThreadFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a2f07d509de9690639dc983c2f4824a33" name="a2f07d509de9690639dc983c2f4824a33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f07d509de9690639dc983c2f4824a33">&#9670;&#160;</a></span>data_80450B8C</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structJASAudioThread.html">JASAudioThread</a>* data_80450B8C</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="dir_003060a984452b2ac376c290647dff95.html">JSystem</a></li><li class="navelem"><a class="el" href="dir_306317f4edfeaf36e18ebd9cc521c403.html">JAudio2</a></li><li class="navelem"><a class="el" href="JASAudioReseter_8cpp.html">JASAudioReseter.cpp</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+var classdaAlinkHIO__damage__c1 =
+[
+    [ "mDamageB0", "classdaAlinkHIO__damage__c1.html#a266595a116f30197c9a83185b13b0f1a", null ],
+    [ "mDamageB1", "classdaAlinkHIO__damage__c1.html#a82d92b1155ce4047c1bc5a674252a5e3", null ],
+    [ "mDamageB2", "classdaAlinkHIO__damage__c1.html#a2ac7836a2ae6c65ff4ea702f0e11ec2e", null ],
+    [ "mDamageG0", "classdaAlinkHIO__damage__c1.html#a1fe9364243e4096cd4f1d7cdc17eda80", null ],
+    [ "mDamageG1", "classdaAlinkHIO__damage__c1.html#a415c22e5c9fa6b8aa436d7a7c1441a59", null ],
+    [ "mDamageG2", "classdaAlinkHIO__damage__c1.html#a80a2e2cf4f4d334940b6cbd87ac0e147", null ],
+    [ "mDamageR0", "classdaAlinkHIO__damage__c1.html#a333348fe23b6c8e4ab293dccf1b46063", null ],
+    [ "mDamageR1", "classdaAlinkHIO__damage__c1.html#a8426d7d8bf2a975a5c75f060126e1414", null ],
+    [ "mDamageR2", "classdaAlinkHIO__damage__c1.html#ad305c223f092d50ce5f29c69b54f8df0", null ],
+    [ "mDashDmgAnm", "classdaAlinkHIO__damage__c1.html#a7091c13b179b09348a153385aa568406", null ],
+    [ "mFloorDmgAnm", "classdaAlinkHIO__damage__c1.html#aac33944942dab7fdeefb3b65098186f5", null ],
+    [ "mFreezeB", "classdaAlinkHIO__damage__c1.html#aae1e56ec0bce929f81101bad6c810496", null ],
+    [ "mFreezeG", "classdaAlinkHIO__damage__c1.html#ab0fcc3aec4b965059503e7f86dbb5742", null ],
+    [ "mFreezeInitB", "classdaAlinkHIO__damage__c1.html#ae4a51c76cfedfe521ee75f137870b782", null ],
+    [ "mFreezeInitG", "classdaAlinkHIO__damage__c1.html#a857c7ccc66afd7a667891cfd46ffb39b", null ],
+    [ "mFreezeInitR", "classdaAlinkHIO__damage__c1.html#a913396cdb60245623dd328d0b01cb7d5", null ],
+    [ "mFreezeR", "classdaAlinkHIO__damage__c1.html#a84ceeca7ec59ee81483199aff542c07f", null ],
+    [ "mFreezeTime", "classdaAlinkHIO__damage__c1.html#a7933c1d8dc6b3726a6973e1866df6723", null ],
+    [ "mInvertedFallInterpolation", "classdaAlinkHIO__damage__c1.html#a5a2285f59468f679c88bbed9018e00c9", null ],
+    [ "mInvincible", "classdaAlinkHIO__damage__c1.html#a6a375c9f5fe6efc9c07e84b9f4d2126f", null ],
+    [ "mInvincibleTime", "classdaAlinkHIO__damage__c1.html#a27699617b31757b85007b6a7c1238bbc", null ],
+    [ "mRecoverStandAnmSpeed", "classdaAlinkHIO__damage__c1.html#ab66cadd868125f2a0645587133a4e9b0", null ],
+    [ "mWolfFloorInvincibleTime", "classdaAlinkHIO__damage__c1.html#a68f91f4b0391cc942b6207436faddaa6", null ]
+];

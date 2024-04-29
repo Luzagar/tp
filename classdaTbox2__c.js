@@ -1,0 +1,65 @@
+var classdaTbox2__c =
+[
+    [ "Action_e", "classdaTbox2__c.html#ae4033a938f262cea87ac4747cdaaa145", [
+      [ "ACTION_OPEN_WAIT_e", "classdaTbox2__c.html#ae4033a938f262cea87ac4747cdaaa145aaee1d52b7af31b6f5a99165609dfc7c9", null ],
+      [ "ACTION_OPEN_DEMO_e", "classdaTbox2__c.html#ae4033a938f262cea87ac4747cdaaa145a18424f017ad0c7d9e6490ba658b6a3ee", null ],
+      [ "ACTION_NOT_OPEN_DEMO_e", "classdaTbox2__c.html#ae4033a938f262cea87ac4747cdaaa145a6faa4af79efb1a6f742a5adc2a009fa3", null ],
+      [ "ACTION_WAIT_e", "classdaTbox2__c.html#ae4033a938f262cea87ac4747cdaaa145a2726037601187d913f32afa19b0e8540", null ]
+    ] ],
+    [ "EventAct_e", "classdaTbox2__c.html#a2055275c6a5242078f79fa657005ffd7", [
+      [ "EVACT_WAIT_e", "classdaTbox2__c.html#a2055275c6a5242078f79fa657005ffd7a847b6ec0d5a81bbdf7107eceae3f46ab", null ],
+      [ "EVACT_OPEN_e", "classdaTbox2__c.html#a2055275c6a5242078f79fa657005ffd7a39e83696aeff262cafed659e435bc94d", null ],
+      [ "EVACT_APPEAR_e", "classdaTbox2__c.html#a2055275c6a5242078f79fa657005ffd7a5546650fdf0a314e491ff9fae31ec211", null ],
+      [ "EVACT_OPEN_SHORT_e", "classdaTbox2__c.html#a2055275c6a5242078f79fa657005ffd7a8ebbeef4fcf0ed7154af2a31c8a01ae8", null ]
+    ] ],
+    [ "Mode_e", "classdaTbox2__c.html#a858783bac62bb926086df58d1ce5b6f0", [
+      [ "MODE_EXEC_WAIT_e", "classdaTbox2__c.html#a858783bac62bb926086df58d1ce5b6f0a1b4c765d9afe8bcd32181789bc173a5a", null ],
+      [ "MODE_EXEC_e", "classdaTbox2__c.html#a858783bac62bb926086df58d1ce5b6f0a2053c2400f5532a80d1fa3e3236d5041", null ]
+    ] ],
+    [ "Type_e", "classdaTbox2__c.html#a636a0d0d685043fd3e430ebf28db9413", [
+      [ "TYPE_SMALL_e", "classdaTbox2__c.html#a636a0d0d685043fd3e430ebf28db9413a3aa8f024011bf08d851c2322bcbeaa39", null ],
+      [ "TYPE_BIG_e", "classdaTbox2__c.html#a636a0d0d685043fd3e430ebf28db9413a7c01d9ca112051911800cb2e09d333f5", null ]
+    ] ],
+    [ "action", "classdaTbox2__c.html#aa624e355a031a5695063a17fe74cce0e", null ],
+    [ "actionNotOpenDemo", "classdaTbox2__c.html#ab929493428ad55e6355296d6c03caf50", null ],
+    [ "actionOpenDemo", "classdaTbox2__c.html#a1b680dc85c613b18636bbfca079985e2", null ],
+    [ "actionOpenWait", "classdaTbox2__c.html#ae83c5bcefc49cb3433041f523bd12351", null ],
+    [ "actionWait", "classdaTbox2__c.html#ae39b0a18a95d8fd8ec3a2fb8e5d75893", null ],
+    [ "boxCheck", "classdaTbox2__c.html#a9b88183ff4ad624c0598d85f2f5a5072", null ],
+    [ "checkSmallTbox", "classdaTbox2__c.html#a7b251168e096d0f0403813405be6a3ea", null ],
+    [ "Create", "classdaTbox2__c.html#ab386c32f17fce93e3cb59da9a66e01a2", null ],
+    [ "create1st", "classdaTbox2__c.html#a5df5dd0284d96867f9811e40cfecc51a", null ],
+    [ "CreateHeap", "classdaTbox2__c.html#accb3af677bee1bd0fd0015dab46ddbcc", null ],
+    [ "Delete", "classdaTbox2__c.html#a02e7eb9ffaa111f52cd5aa2012f6fc90", null ],
+    [ "demoProc", "classdaTbox2__c.html#a879d6d1ed4f8ed23afa4ec56b953518f", null ],
+    [ "Draw", "classdaTbox2__c.html#a23cd8bc64e700975912b02223f5fb27d", null ],
+    [ "Execute", "classdaTbox2__c.html#a6e8768d798c7c75d4ceeecaecb00c750", null ],
+    [ "getItemNo", "classdaTbox2__c.html#a479e41d3d641a58e40623ec9e1f4bfb7", null ],
+    [ "getModelType", "classdaTbox2__c.html#ab00ce1020b4b22464a20f9938b3dc959", null ],
+    [ "init_actionNotOpenDemo", "classdaTbox2__c.html#afc5925bb5eff0a6dd651dbf9f30ce177", null ],
+    [ "init_actionOpenDemo", "classdaTbox2__c.html#a41bb8b7bddef4f5ff6d3bd7dbb5372cd", null ],
+    [ "init_actionOpenWait", "classdaTbox2__c.html#ab8248d9f637580d32b4a94e7e8f5714f", null ],
+    [ "init_actionWait", "classdaTbox2__c.html#a558da0f0283d98f37cb01acf0963976b", null ],
+    [ "initBaseMtx", "classdaTbox2__c.html#a456da6e42aea0f964b3644688ed1da27", null ],
+    [ "mode_exec", "classdaTbox2__c.html#a0f6768536112d0a40e74e4eca40f72c5", null ],
+    [ "mode_exec_wait", "classdaTbox2__c.html#a2d3bb464fd9be1ccd0670ed7a3039b1e", null ],
+    [ "mode_proc_call", "classdaTbox2__c.html#ae3a9b5ba43efcbda7faf4138201154d3", null ],
+    [ "openInit", "classdaTbox2__c.html#ac7d6dd092d46653dde0d65d189541b0b", null ],
+    [ "setBaseMtx", "classdaTbox2__c.html#a2e5d08944acce79054927d1227ae4d20", null ],
+    [ "setGetDemoItem", "classdaTbox2__c.html#aa624164823bd16a639497ce6fa5145bf", null ],
+    [ "field_0xAC0", "classdaTbox2__c.html#ab67122eba9cfac6094f45740f5492923", null ],
+    [ "mAcch", "classdaTbox2__c.html#ada6feb7eeaeac158a53623d5a85a3714", null ],
+    [ "mAcchCir", "classdaTbox2__c.html#a620f020ab27ab9ef70f0d206f458e056", null ],
+    [ "mAction", "classdaTbox2__c.html#aa3ebddec62af59465c8490ec2dbbef9a", null ],
+    [ "mBoxBgW", "classdaTbox2__c.html#ad11e2a8261ceab58eb5fd78b9d279c5d", null ],
+    [ "mCcCyl2", "classdaTbox2__c.html#a9d32ba071c3566601aecf57cfae51ef6", null ],
+    [ "mCcStts2", "classdaTbox2__c.html#a79bd3dc7b38c84217d907de8c95877cc", null ],
+    [ "mMode", "classdaTbox2__c.html#a6789db2a57b069811e1ebfacb6eea8c4", null ],
+    [ "mModelType", "classdaTbox2__c.html#ac0ba24a5159fa500dcfdd0ace0e83c9d", null ],
+    [ "mNoDraw", "classdaTbox2__c.html#a528cf7729b57084f9be534c0430d6494", null ],
+    [ "mpBck", "classdaTbox2__c.html#ad824beccd46d54287da8629a28f159cd", null ],
+    [ "mPhase", "classdaTbox2__c.html#ab460fb6a6eff7f1d4f1250babcabde07", null ],
+    [ "mpModel", "classdaTbox2__c.html#a2497a6263d819b7b90d2275703ced52a", null ],
+    [ "mReturnRupee", "classdaTbox2__c.html#ab9e6886350399496a132bc01d71fce47", null ],
+    [ "mStaffIdx", "classdaTbox2__c.html#a3b04a4f737e13ba5a607e767305be07a", null ]
+];

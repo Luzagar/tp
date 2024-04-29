@@ -1,0 +1,27 @@
+var GXInit_8c =
+[
+    [ "__GXDefaultTexRegionCallback", "GXInit_8c.html#ad78c53a72408c0db579d30d841fb3847", null ],
+    [ "__GXDefaultTlutRegionCallback", "GXInit_8c.html#a2b6b909aa3b14a23b812e73a1c7fecde", null ],
+    [ "__GXInitGX", "GXInit_8c.html#a7a04402f8b008b83ec8425d16fd5b485", null ],
+    [ "__GXInitRevisionBits", "GXInit_8c.html#a49ae0505c6dfe709f61c6ede6eb55382", null ],
+    [ "__GXShutdown", "GXInit_8c.html#a290496318bfed4e90b9338ccc230fc5c", null ],
+    [ "ALIGN_DECL", "GXInit_8c.html#a576e9a1776a0a2f6d6e4be688047cfb8", null ],
+    [ "EnableWriteGatherPipe", "GXInit_8c.html#a82d172e62e35848412ce6bccbe7a4e3e", null ],
+    [ "GXInit", "GXInit_8c.html#a1032ee87d0bcac0d8c10eed0a334388a", null ],
+    [ "__cpReg", "GXInit_8c.html#a5c44a96044c83afdb405a82fc607eb27", null ],
+    [ "__GXData", "GXInit_8c.html#acfe3847fe8043ea4e4a9f5b66eb5994a", null ],
+    [ "__GXVersion", "GXInit_8c.html#a6c5aca532385ad9fe343dc7a3e21f110", null ],
+    [ "__memReg", "GXInit_8c.html#a0f417623da38fef804b36f8a58959747", null ],
+    [ "__peReg", "GXInit_8c.html#a3fd92bb2026ec3134ffc55a20e5aa245", null ],
+    [ "__piReg", "GXInit_8c.html#af2ade8bc947673e5c565431e4f2ed4fa", null ],
+    [ "calledOnce", "GXInit_8c.html#afc6487c80be25038b60d478c492b7cc4", null ],
+    [ "FifoObj", "GXInit_8c.html#a9b2b7188d666fcf4d8461aa6744a3b66", null ],
+    [ "gxData", "GXInit_8c.html#a0c7923dae1f208a24d59107c9f1e8cd9", null ],
+    [ "GXDefaultProjData", "GXInit_8c.html#ac6c4c2e41b88605c4e517e0add2578e4", null ],
+    [ "GXDefaultVATList", "GXInit_8c.html#aaa61808370a3dda69aea8278cd85cd9a", null ],
+    [ "GXResetFuncInfo", "GXInit_8c.html#a184049d55c122c20248d82c5bb4440a9", null ],
+    [ "GXTexRegionAddrTable", "GXInit_8c.html#a5047d6bde177249840ca50f5ab4fb584", null ],
+    [ "peCount", "GXInit_8c.html#aac33341b069a06300acd4aeac9dc666a", null ],
+    [ "resetFuncRegistered", "GXInit_8c.html#abc920798dd3c82dd43663701da66fdc5", null ],
+    [ "time", "GXInit_8c.html#aab60385ff6b38344b88c6f0be66e8703", null ]
+];

@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: Class Members - Variables</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('functions_vars_i.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="contents">
+<div class="textblock">Here is a list of all variables with links to the classes they belong to:</div>
+
+<h3><a id="index_i" name="index_i"></a>- i -</h3><ul>
+<li>i&#160;:&#160;<a class="el" href="structJGeometry_1_1TBox.html#ae182a29c52c424565c70d61ab8430134">JGeometry::TBox&lt; T &gt;</a>, <a class="el" href="structJGeometry_1_1TBox_3_01TVec2_3_01f32_01_4_01_4.html#a79cd824827c9183a77041ec28bb4edbf">JGeometry::TBox&lt; TVec2&lt; f32 &gt; &gt;</a></li>
+<li>IABR&#160;:&#160;<a class="el" href="structExtended1__PPC__6xx__7xx.html#ab6d4ba07f40f28b3756fbcaa62d8acdf">Extended1_PPC_6xx_7xx</a></li>
+<li>IBAT0L&#160;:&#160;<a class="el" href="structExtended1__PPC__6xx__7xx.html#a52fd60ce2e84be29e658100a0ce9df60">Extended1_PPC_6xx_7xx</a></li>
+<li>IBAT0U&#160;:&#160;<a class="el" href="structExtended1__PPC__6xx__7xx.html#a62802a33c01ed9c13c35035fc3631299">Extended1_PPC_6xx_7xx</a></li>
+<li>IBAT1L&#160;:&#160;<a class="el" href="structExtended1__PPC__6xx__7xx.html#a1fa12bdbb16d848dae36f75fcfa98dca">Extended1_PPC_6xx_7xx</a></li>
+<li>IBAT1U&#160;:&#160;<a class="el" href="structExtended1__PPC__6xx__7xx.html#afbb14baf8ed3f3647937057ddcd3ee7d">Extended1_PPC_6xx_7xx</a></li>
+<li>IBAT2L&#160;:&#160;<a class="el" href="structExtended1__PPC__6xx__7xx.html#a92f7106668309f66dc89f11e63a9e050">Extended1_PPC_6xx_7xx</a></li>
+<li>IBAT2U&#160;:&#160;<a class="el" href="structExtended1__PPC__6xx__7xx.html#a1e7e0442ad2a79bb226bc1e3cd00d21f">Extended1_PPC_6xx_7xx</a></li>
+<li>IBAT3L&#160;:&#160;<a class="el" href="structExtended1__PPC__6xx__7xx.html#a50477a66b734ec3e52e2c59e75c33cc2">Extended1_PPC_6xx_7xx</a></li>
+<li>IBAT3U&#160;:&#160;<a class="el" href="structExtended1__PPC__6xx__7xx.html#aab6e95ce9d909dfce7f0d960cd7ab9a7">Extended1_PPC_6xx_7xx</a></li>
+<li>iBlock&#160;:&#160;<a class="el" href="structCARDFileInfo.html#ab1f6014758d64a612bbe213c6fcbcd82">CARDFileInfo</a></li>
+<li>ICMP&#160;:&#160;<a class="el" href="structExtended1__PPC__6xx__7xx.html#a6edac281e8255fcfd8216f938b68f5fd">Extended1_PPC_6xx_7xx</a></li>
+<li>iconAddr&#160;:&#160;<a class="el" href="structCARDDir.html#a9bc1290493201f23a39cd314e8e0f0c6">CARDDir</a>, <a class="el" href="structCARDStat.html#aa902254ca8f6379fb6410e303c67d038">CARDStat</a></li>
+<li>iconFormat&#160;:&#160;<a class="el" href="structCARDDir.html#a729bda4d0852a45aaa1164735d97b0a7">CARDDir</a>, <a class="el" href="structCARDStat.html#a938e94128ae305aa06ce2883d0948876">CARDStat</a></li>
+<li>iconSpeed&#160;:&#160;<a class="el" href="structCARDDir.html#ad49516d12cd2db15656765cceca0a1e2">CARDDir</a>, <a class="el" href="structCARDStat.html#a8bd182a4ec3f3afd1493c8e15ba71f4e">CARDStat</a></li>
+<li>ICTC&#160;:&#160;<a class="el" href="structExtended1__PPC__6xx__7xx.html#adb5c4a06dbd6aacec56389aac24b30ba">Extended1_PPC_6xx_7xx</a></li>
+<li>id&#160;:&#160;<a class="el" href="structCARDControl.html#a78a2fbc396a419dbf2819b3b13a8e118">CARDControl</a>, <a class="el" href="structEXIControl.html#a7f4a32213dc2534db2c9cf555273853a">EXIControl</a>, <a class="el" href="structJKRArchive_1_1SDirEntry.html#a227b89e9154ee885b9de70d9313af015">JKRArchive::SDirEntry</a>, <a class="el" href="structJKRThreadName__.html#a27b128b14ae40a9faecdad03e1cdda1d">JKRThreadName_</a>, <a class="el" href="structJStudio_1_1fvb_1_1data_1_1TBlock.html#ae8f314372f766ea07d1b2a6893f5d37a">JStudio::fvb::data::TBlock</a>, <a class="el" href="structJStudio_1_1stb_1_1data_1_1TBlock__object.html#a454c9dbc9393a6fc0eb32f7280d128f2">JStudio::stb::data::TBlock_object</a>, <a class="el" href="structJStudio_1_1stb_1_1data_1_1TParagraph.html#a131d679509ce07196592b6dbf42c7034">JStudio::stb::data::TParagraph</a>, <a class="el" href="structOSImportInfo.html#a12cd2d2fff058939d42db9eaa52bb8bc">OSImportInfo</a>, <a class="el" href="structOSModuleInfo.html#ad113bfa99f7a98fdded4d6ea84e94191">OSModuleInfo</a>, <a class="el" href="structrequest__of__phase__process__class.html#aa867453305c8a400f0c7c8caefc3017f">request_of_phase_process_class</a></li>
+<li>id_size&#160;:&#160;<a class="el" href="structJStudio_1_1fvb_1_1data_1_1TBlock.html#a5e8c76277928dcfdaf646b44080bcd57">JStudio::fvb::data::TBlock</a>, <a class="el" href="structJStudio_1_1stb_1_1data_1_1TBlock__object.html#a818507395db72650509badb78d7a5724">JStudio::stb::data::TBlock_object</a>, <a class="el" href="structJStudio_1_1stb_1_1data_1_1TParagraph.html#a8b4675aa7cd25f95864cabc0bb01e194">JStudio::stb::data::TParagraph</a></li>
+<li>iDataNum&#160;:&#160;<a class="el" href="structevent__binary__data__header.html#aa1d017a38ea2fd71f6af84347153e130">event_binary_data_header</a></li>
+<li>iDataTop&#160;:&#160;<a class="el" href="structevent__binary__data__header.html#a490b122c0aabfe3805542c3e6a2087bb">event_binary_data_header</a></li>
+<li>identifier&#160;:&#160;<a class="el" href="structFuncTable.html#a189900842f2814163bec21b574df3246">FuncTable</a></li>
+<li>idle_fn&#160;:&#160;<a class="el" href="struct__FILE.html#a97eea58c511ed88518c60fa4cfd6fcdf">_FILE</a></li>
+<li>IDSize&#160;:&#160;<a class="el" href="structJStudio_1_1ctb_1_1data_1_1TBlockData.html#af2509c087442c42ee48a18afd9226402">JStudio::ctb::data::TBlockData</a></li>
+<li>idTime&#160;:&#160;<a class="el" href="structEXIControl.html#a3ed4057574f59db1d17f105dbef94a01">EXIControl</a></li>
+<li>idx&#160;:&#160;<a class="el" href="structdaNpcF__c_1_1daNpcF__anmPlayData.html#ab90178eece9e4c82d3fade6fe39b20fc">daNpcF_c::daNpcF_anmPlayData</a></li>
+<li>iir_filter_params&#160;:&#160;<a class="el" href="structJASDsp_1_1TChannel.html#aa9ba5c398acd4b701b4eb71f4ede8fe6">JASDsp::TChannel</a></li>
+<li>imageOffset&#160;:&#160;<a class="el" href="structResTIMG.html#a238f1ae96e37af44c1ae7ffb188fa7bf">ResTIMG</a></li>
+<li>IMISS&#160;:&#160;<a class="el" href="structExtended1__PPC__6xx__7xx.html#a114038474f5510bc9e1c61f63e619a28">Extended1_PPC_6xx_7xx</a></li>
+<li>immBuf&#160;:&#160;<a class="el" href="structEXIControl.html#af4988c15a24381ed3077d23b489ccafa">EXIControl</a></li>
+<li>immLen&#160;:&#160;<a class="el" href="structEXIControl.html#a17f75c417fe89f529c1fa8c85e79c31b">EXIControl</a></li>
+<li>impOffset&#160;:&#160;<a class="el" href="structOSModuleHeader.html#a6ce940ae3d5413f51af697c05bdd1b2f">OSModuleHeader</a></li>
+<li>impSize&#160;:&#160;<a class="el" href="structOSModuleHeader.html#a749a8a40ec1261bb5cbf3dfc8b3f8683">OSModuleHeader</a></li>
+<li>inDarkness&#160;:&#160;<a class="el" href="classZ2SceneMgr.html#a4a39f61bb5cac8597fab456a7ee5f1c2">Z2SceneMgr</a></li>
+<li>index&#160;:&#160;<a class="el" href="structJPAClrAnmKeyData.html#ad2be3307f897ed1f4742e3dea803ae9f">JPAClrAnmKeyData</a>, <a class="el" href="structtbl__entry.html#a610cab6ebc951488a85be974339e2f7b">tbl_entry</a></li>
+<li>indexBase&#160;:&#160;<a class="el" href="struct__GXData.html#af0f9442a1b9b3efd7c55244c80fa734b">_GXData</a></li>
+<li>indexStride&#160;:&#160;<a class="el" href="struct__GXData.html#a40489db2e30f8d2074a78b476739cce0">_GXData</a></li>
+<li>indexTexture&#160;:&#160;<a class="el" href="structResTIMG.html#aa66845d9a5263a06b9ae44c122e5debb">ResTIMG</a></li>
+<li>inDispList&#160;:&#160;<a class="el" href="struct__GXData.html#aca711f11f4a81228634bbe80b1ca21e1">_GXData</a></li>
+<li>IndTexScale0&#160;:&#160;<a class="el" href="struct__GXData.html#acd7a4c2dc415cf032186dc176af2695d">_GXData</a></li>
+<li>IndTexScale1&#160;:&#160;<a class="el" href="struct__GXData.html#a806343fe1c118adc069db6ec7e7c93b6">_GXData</a></li>
+<li>info&#160;:&#160;<a class="el" href="classdComIfG__inf__c.html#a93faeb7c4404fd5175e7eb412fc0dd16">dComIfG_inf_c</a>, <a class="el" href="structOSModuleHeader.html#a13e764d9ae6973d07151006b6125568d">OSModuleHeader</a>, <a class="el" href="structSTRUCT__DSP__TASK.html#a3a3a8becac419639ed37c924c2b2d8cf">STRUCT_DSP_TASK</a></li>
+<li>inGame&#160;:&#160;<a class="el" href="classZ2SceneMgr.html#a011d76b851388a986a8d072a8db6e9d5">Z2SceneMgr</a></li>
+<li>init&#160;:&#160;<a class="el" href="structaction__class.html#a8f512790ee105dfbc7c11a70c970c760">action_class&lt; A0 &gt;</a></li>
+<li>init_cb&#160;:&#160;<a class="el" href="structDSPTaskInfo.html#a96861af66adbf63798cbedfc6c24bfcf">DSPTaskInfo</a></li>
+<li>init_interrupts_func&#160;:&#160;<a class="el" href="structDBCommTable.html#a42df62b918c09698df210a28f48b1f98">DBCommTable</a></li>
+<li>initFn&#160;:&#160;<a class="el" href="structdaObjYobikusa__c_1_1actionFuncEntry.html#ae327c0ede6fed9f4f2c87ed3f31ca60a">daObjYobikusa_c::actionFuncEntry</a></li>
+<li>initialize_func&#160;:&#160;<a class="el" href="structDBCommTable.html#ac28b5f14781abcab55d1430c83e2db5c">DBCommTable</a></li>
+<li>inlngth&#160;:&#160;<a class="el" href="structSIComm__s.html#a00060fa96456776bb1d8193dab19a9d9">SIComm_s</a></li>
+<li>inner_&#160;:&#160;<a class="el" href="classJAISe.html#af5e45cc47e6dd61d379346771f9d6fba">JAISe</a>, <a class="el" href="classJAISeq.html#a7f9723a99a13350f9de948fefe0640b5">JAISeq</a></li>
+<li>input&#160;:&#160;<a class="el" href="structSIControl.html#a2926d46d2168f40b11d211a58c3bea8f">SIControl</a>, <a class="el" href="structSIPacket.html#a1504301e3177b9e3732064be573cbb52">SIPacket</a></li>
+<li>input_arg_area&#160;:&#160;<a class="el" href="struct____va__list__struct.html#a89756c7a8e049c7d704266992a85a75c">__va_list_struct</a></li>
+<li>inputActivated&#160;:&#160;<a class="el" href="structTRKState.html#a55c26a25b50cddc0b6fee421d5555fc7">TRKState</a>, <a class="el" href="structTRKState__PPC.html#a51da5b8a7a2dfffccfeb305b616b25a2">TRKState_PPC</a></li>
+<li>inputAddr&#160;:&#160;<a class="el" href="structDecodeParameters.html#a4d80fe653bd2aa52ad10bd49fa46305c">DecodeParameters</a></li>
+<li>inputBytes&#160;:&#160;<a class="el" href="structSIControl.html#af2ad96c678a7baec2b7b1f63cbc62f4a">SIControl</a>, <a class="el" href="structSIPacket.html#ab81e668ac7d839699d2d13ccc4ad6b12">SIPacket</a></li>
+<li>inputLength&#160;:&#160;<a class="el" href="structDecodeParameters.html#a4c2f88bd5f92f08e1d35104fee4bdbe8">DecodeParameters</a></li>
+<li>inputPendingPtr&#160;:&#160;<a class="el" href="structTRKState.html#a4603d883d4780a71a328790cde2fcf3f">TRKState</a>, <a class="el" href="structTRKState__PPC.html#a0b481b14441f4bdd91d0c5021c2072b3">TRKState_PPC</a></li>
+<li>interp_&#160;:&#160;<a class="el" href="classJStudio_1_1TFunctionValueAttributeSet__const.html#a26b98ef592f017df7e200346ca6454f1">JStudio::TFunctionValueAttributeSet_const</a></li>
+<li>interpolate_&#160;:&#160;<a class="el" href="classJStudio_1_1TFunctionValueAttribute__interpolate.html#af56b331923754f3d4c5f2dccdcec08e7">JStudio::TFunctionValueAttribute_interpolate</a></li>
+<li>inTRK&#160;:&#160;<a class="el" href="structTRKExceptionStatus.html#a042a7538969ebf798e361340b1aec2ca">TRKExceptionStatus</a></li>
+<li>invalidChar&#160;:&#160;<a class="el" href="structOSFontHeader.html#a32e53f2910b135e165f9ac7b0071be77">OSFontHeader</a></li>
+<li>io_mode&#160;:&#160;<a class="el" href="struct__file__modes.html#a4563a2574a3499fd23509ef297ef969c">_file_modes</a></li>
+<li>io_state&#160;:&#160;<a class="el" href="struct__file__states.html#a7dfd1d88c54a84ac8d4b29c69031c550">_file_states</a></li>
+<li>iram_addr&#160;:&#160;<a class="el" href="structDSPTaskInfo.html#ad2b30220b520fa1408ef6e8e7f5f74a4">DSPTaskInfo</a></li>
+<li>iram_length&#160;:&#160;<a class="el" href="structDSPTaskInfo.html#a087ebe45d045eb02182ba785c4c6247f">DSPTaskInfo</a></li>
+<li>iram_mmem_addr&#160;:&#160;<a class="el" href="structDSPTaskInfo.html#a3b3270f58ff6875ba0d2c6874a4f7a28">DSPTaskInfo</a></li>
+<li>iref&#160;:&#160;<a class="el" href="struct__GXData.html#a19b95aaefd3594474fa7f55cda805406">_GXData</a></li>
+<li>is3D&#160;:&#160;<a class="el" href="structVIPositionInfo.html#a16b342b11dab8a3a926c280f6cadcc5c">VIPositionInfo</a></li>
+<li>is_directory&#160;:&#160;<a class="el" href="structDVDDirectoryEntry.html#ad25ad68016361421f3ad955cf15a0b79">DVDDirectoryEntry</a></li>
+<li>is_dynamically_allocated&#160;:&#160;<a class="el" href="struct__FILE.html#a048eada350705902e7baa53822ff9593">_FILE</a></li>
+<li>is_streaming&#160;:&#160;<a class="el" href="structDVDDiskID.html#abf927e44af83ee032a6bc3ed994906c3">DVDDiskID</a></li>
+<li>isBlack&#160;:&#160;<a class="el" href="structVIPositionInfo.html#a4e767781df6e25f111bfa3aed633206b">VIPositionInfo</a></li>
+<li>isDirAndStringOff&#160;:&#160;<a class="el" href="structFSTEntry.html#af61988b22e6f77926c1964146c11e4f9">FSTEntry</a></li>
+<li>isEscape&#160;:&#160;<a class="el" href="structTRKFramingState.html#ac50d91e497d455e9a2e40b5f33a3cb70">TRKFramingState</a></li>
+<li>isInUse&#160;:&#160;<a class="el" href="structTRKBuffer.html#a21a902bbf8973928f66c8fe23b071714">TRKBuffer</a></li>
+<li>isStopped&#160;:&#160;<a class="el" href="structTRKState.html#aec4785eaa9ea746de151bd0cc1128b93">TRKState</a></li>
+<li>item_info&#160;:&#160;<a class="el" href="structdItem__data.html#ae91f6678744eed2ca359cb6e3a7cf0ce">dItem_data</a></li>
+<li>item_resource&#160;:&#160;<a class="el" href="structdItem__data.html#a756d88538fd1eed6e4fa25c5595a6033">dItem_data</a></li>
+<li>items&#160;:&#160;<a class="el" href="structEXIControl.html#a64479a91f223f337b813eb086214c125">EXIControl</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

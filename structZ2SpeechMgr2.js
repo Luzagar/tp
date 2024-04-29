@@ -1,0 +1,26 @@
+var structZ2SpeechMgr2 =
+[
+    [ "Z2SpeechMgr2", "structZ2SpeechMgr2.html#af6fe2423f05e55e2dc735b2292711ef8", null ],
+    [ "framework", "structZ2SpeechMgr2.html#a33cd19c00951977aaf043d4d5bbdb772", null ],
+    [ "isMidnaSpeak", "structZ2SpeechMgr2.html#a5865fbee0be2abe5efb9fe70c2b6a5d3", null ],
+    [ "isNonVerbal", "structZ2SpeechMgr2.html#ab5986938174ffc36d0ff6f3db7ac4bd0", null ],
+    [ "playOneShotVoice", "structZ2SpeechMgr2.html#a6dc33afd6ab03c9c682350b0939c7b41", null ],
+    [ "selectTail", "structZ2SpeechMgr2.html#a0657c643159c5d2a913fbdd70afc9381", null ],
+    [ "selectUnit", "structZ2SpeechMgr2.html#a5ee579f4e30e8ebf2d64d1cc5e5a48d0", null ],
+    [ "setString", "structZ2SpeechMgr2.html#afbd17b73556ef7cd3b40f6feb22bcab1", null ],
+    [ "setTextCount", "structZ2SpeechMgr2.html#a90293fde1ed1fa8306bfc9099302c527", null ],
+    [ "speakOneWord", "structZ2SpeechMgr2.html#a3d175b469c7ca8c3e3a1f004b210ce96", null ],
+    [ "field_0x0", "structZ2SpeechMgr2.html#a5f1ef81445379a5d78d68bab65915499", null ],
+    [ "field_0x10", "structZ2SpeechMgr2.html#a193935754cfb943a21032fbafc7eb132", null ],
+    [ "field_0x3f8", "structZ2SpeechMgr2.html#a15e68e1516b4e857a2aef90b545f2918", null ],
+    [ "field_0x3fa", "structZ2SpeechMgr2.html#a687a3cdbd37d707908271e6ff8bd8f9d", null ],
+    [ "field_0x3fc", "structZ2SpeechMgr2.html#a1ab681d58fca4874ca8f36fc74ac0235", null ],
+    [ "field_0x3fe", "structZ2SpeechMgr2.html#a87dcb64ce958961a12e328ae84b4273f", null ],
+    [ "field_0x3ff", "structZ2SpeechMgr2.html#a869c72c598d01b3efeabd922cd9f43aa", null ],
+    [ "field_0x4", "structZ2SpeechMgr2.html#aca31a9d5f6e82b922e6c547fb15697bb", null ],
+    [ "field_0x400", "structZ2SpeechMgr2.html#aea977f0f954194793c70db9fd8b7526e", null ],
+    [ "field_0x401", "structZ2SpeechMgr2.html#a5743ff9483464c68691fa0957985d290", null ],
+    [ "field_0x402", "structZ2SpeechMgr2.html#aac10bcc68c410f527012215b012163bd", null ],
+    [ "mSpeech", "structZ2SpeechMgr2.html#a8fa6336f1feba52d06dd66a15ddecc02", null ],
+    [ "random", "structZ2SpeechMgr2.html#a9e56ed52ea38d149be91bffcce0cc9e6", null ]
+];

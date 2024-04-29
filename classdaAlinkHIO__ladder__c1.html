@@ -1,0 +1,496 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: daAlinkHIO_ladder_c1 Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classdaAlinkHIO__ladder__c1.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="classdaAlinkHIO__ladder__c1-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">daAlinkHIO_ladder_c1 Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="d__a__alink_8h_source.html">d_a_alink.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for daAlinkHIO_ladder_c1:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classdaAlinkHIO__ladder__c1__coll__graph.svg" width="163" height="140"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:af11c03a1593468dc4f493846d39d3276" id="r_af11c03a1593468dc4f493846d39d3276"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdaAlinkHIO__anm__c.html">daAlinkHIO_anm_c</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__ladder__c1.html#af11c03a1593468dc4f493846d39d3276">field_0x0</a></td></tr>
+<tr class="separator:af11c03a1593468dc4f493846d39d3276"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c6e33e624040b7a9588e9765bfb4710" id="r_a6c6e33e624040b7a9588e9765bfb4710"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdaAlinkHIO__anm__c.html">daAlinkHIO_anm_c</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__ladder__c1.html#a6c6e33e624040b7a9588e9765bfb4710">field_0x14</a></td></tr>
+<tr class="separator:a6c6e33e624040b7a9588e9765bfb4710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bb9309771fd690d5efdfde7515912be" id="r_a6bb9309771fd690d5efdfde7515912be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__ladder__c1.html#a6bb9309771fd690d5efdfde7515912be">field_0x28</a></td></tr>
+<tr class="separator:a6bb9309771fd690d5efdfde7515912be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8c6cae9c7e8b402232c5ff0cb9fbbd3" id="r_ad8c6cae9c7e8b402232c5ff0cb9fbbd3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__ladder__c1.html#ad8c6cae9c7e8b402232c5ff0cb9fbbd3">field_0x2C</a></td></tr>
+<tr class="separator:ad8c6cae9c7e8b402232c5ff0cb9fbbd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30a4435c0350446fc4ea6d13ecd61df8" id="r_a30a4435c0350446fc4ea6d13ecd61df8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__ladder__c1.html#a30a4435c0350446fc4ea6d13ecd61df8">field_0x30</a></td></tr>
+<tr class="separator:a30a4435c0350446fc4ea6d13ecd61df8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a348c3e5bbb9e4f088d4789dbc36a9c00" id="r_a348c3e5bbb9e4f088d4789dbc36a9c00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__ladder__c1.html#a348c3e5bbb9e4f088d4789dbc36a9c00">field_0x34</a></td></tr>
+<tr class="separator:a348c3e5bbb9e4f088d4789dbc36a9c00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91dd6844a9bce39b4e3e57b5da549f03" id="r_a91dd6844a9bce39b4e3e57b5da549f03"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__ladder__c1.html#a91dd6844a9bce39b4e3e57b5da549f03">field_0x38</a></td></tr>
+<tr class="separator:a91dd6844a9bce39b4e3e57b5da549f03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf0b2adaea86083f637bc0f146a5fdcf" id="r_adf0b2adaea86083f637bc0f146a5fdcf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__ladder__c1.html#adf0b2adaea86083f637bc0f146a5fdcf">field_0x3C</a></td></tr>
+<tr class="separator:adf0b2adaea86083f637bc0f146a5fdcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8672cb26281db96f02bde9e98d4a4b8" id="r_ac8672cb26281db96f02bde9e98d4a4b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__ladder__c1.html#ac8672cb26281db96f02bde9e98d4a4b8">field_0x40</a></td></tr>
+<tr class="separator:ac8672cb26281db96f02bde9e98d4a4b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee9748867e4d0ccb10e6d5efa17b172e" id="r_aee9748867e4d0ccb10e6d5efa17b172e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__ladder__c1.html#aee9748867e4d0ccb10e6d5efa17b172e">field_0x44</a></td></tr>
+<tr class="separator:aee9748867e4d0ccb10e6d5efa17b172e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44ac31b89563e648fde3dd95c2d9adc0" id="r_a44ac31b89563e648fde3dd95c2d9adc0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__ladder__c1.html#a44ac31b89563e648fde3dd95c2d9adc0">field_0x48</a></td></tr>
+<tr class="separator:a44ac31b89563e648fde3dd95c2d9adc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e0b470b6cd831fe1202ded7396009ab" id="r_a6e0b470b6cd831fe1202ded7396009ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__ladder__c1.html#a6e0b470b6cd831fe1202ded7396009ab">field_0x4C</a></td></tr>
+<tr class="separator:a6e0b470b6cd831fe1202ded7396009ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12baec07744a4de32d845f50f42bb367" id="r_a12baec07744a4de32d845f50f42bb367"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__ladder__c1.html#a12baec07744a4de32d845f50f42bb367">field_0x50</a></td></tr>
+<tr class="separator:a12baec07744a4de32d845f50f42bb367"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49b2676e34611dae255fa12a0b9ecd43" id="r_a49b2676e34611dae255fa12a0b9ecd43"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__ladder__c1.html#a49b2676e34611dae255fa12a0b9ecd43">field_0x54</a></td></tr>
+<tr class="separator:a49b2676e34611dae255fa12a0b9ecd43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a27858c3a294c60ff025836206cb61d" id="r_a5a27858c3a294c60ff025836206cb61d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__ladder__c1.html#a5a27858c3a294c60ff025836206cb61d">field_0x58</a></td></tr>
+<tr class="separator:a5a27858c3a294c60ff025836206cb61d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a761a70ca62f1abc42b6b68324784f0c2" id="r_a761a70ca62f1abc42b6b68324784f0c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__ladder__c1.html#a761a70ca62f1abc42b6b68324784f0c2">field_0x5C</a></td></tr>
+<tr class="separator:a761a70ca62f1abc42b6b68324784f0c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83271f5d93e72dcb7da56ab1da9b2c71" id="r_a83271f5d93e72dcb7da56ab1da9b2c71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__ladder__c1.html#a83271f5d93e72dcb7da56ab1da9b2c71">field_0x60</a></td></tr>
+<tr class="separator:a83271f5d93e72dcb7da56ab1da9b2c71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a526dcc4457a4a70469f468f1c21006e8" id="r_a526dcc4457a4a70469f468f1c21006e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__ladder__c1.html#a526dcc4457a4a70469f468f1c21006e8">field_0x64</a></td></tr>
+<tr class="separator:a526dcc4457a4a70469f468f1c21006e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a735af7e35935c364b64d5de35d8b6b16" id="r_a735af7e35935c364b64d5de35d8b6b16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__ladder__c1.html#a735af7e35935c364b64d5de35d8b6b16">field_0x68</a></td></tr>
+<tr class="separator:a735af7e35935c364b64d5de35d8b6b16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af19042ef6f1ad263741c994477190fcb" id="r_af19042ef6f1ad263741c994477190fcb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdaAlinkHIO__ladder__c1.html#af19042ef6f1ad263741c994477190fcb">field_0x6C</a></td></tr>
+<tr class="separator:af19042ef6f1ad263741c994477190fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="af11c03a1593468dc4f493846d39d3276" name="af11c03a1593468dc4f493846d39d3276"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af11c03a1593468dc4f493846d39d3276">&#9670;&#160;</a></span>field_0x0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdaAlinkHIO__anm__c.html">daAlinkHIO_anm_c</a> daAlinkHIO_ladder_c1::field_0x0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c6e33e624040b7a9588e9765bfb4710" name="a6c6e33e624040b7a9588e9765bfb4710"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c6e33e624040b7a9588e9765bfb4710">&#9670;&#160;</a></span>field_0x14</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdaAlinkHIO__anm__c.html">daAlinkHIO_anm_c</a> daAlinkHIO_ladder_c1::field_0x14</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6bb9309771fd690d5efdfde7515912be" name="a6bb9309771fd690d5efdfde7515912be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bb9309771fd690d5efdfde7515912be">&#9670;&#160;</a></span>field_0x28</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_ladder_c1::field_0x28</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8c6cae9c7e8b402232c5ff0cb9fbbd3" name="ad8c6cae9c7e8b402232c5ff0cb9fbbd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8c6cae9c7e8b402232c5ff0cb9fbbd3">&#9670;&#160;</a></span>field_0x2C</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_ladder_c1::field_0x2C</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a30a4435c0350446fc4ea6d13ecd61df8" name="a30a4435c0350446fc4ea6d13ecd61df8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30a4435c0350446fc4ea6d13ecd61df8">&#9670;&#160;</a></span>field_0x30</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_ladder_c1::field_0x30</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a348c3e5bbb9e4f088d4789dbc36a9c00" name="a348c3e5bbb9e4f088d4789dbc36a9c00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a348c3e5bbb9e4f088d4789dbc36a9c00">&#9670;&#160;</a></span>field_0x34</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_ladder_c1::field_0x34</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a91dd6844a9bce39b4e3e57b5da549f03" name="a91dd6844a9bce39b4e3e57b5da549f03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91dd6844a9bce39b4e3e57b5da549f03">&#9670;&#160;</a></span>field_0x38</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_ladder_c1::field_0x38</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf0b2adaea86083f637bc0f146a5fdcf" name="adf0b2adaea86083f637bc0f146a5fdcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf0b2adaea86083f637bc0f146a5fdcf">&#9670;&#160;</a></span>field_0x3C</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_ladder_c1::field_0x3C</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac8672cb26281db96f02bde9e98d4a4b8" name="ac8672cb26281db96f02bde9e98d4a4b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8672cb26281db96f02bde9e98d4a4b8">&#9670;&#160;</a></span>field_0x40</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_ladder_c1::field_0x40</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee9748867e4d0ccb10e6d5efa17b172e" name="aee9748867e4d0ccb10e6d5efa17b172e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee9748867e4d0ccb10e6d5efa17b172e">&#9670;&#160;</a></span>field_0x44</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_ladder_c1::field_0x44</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a44ac31b89563e648fde3dd95c2d9adc0" name="a44ac31b89563e648fde3dd95c2d9adc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44ac31b89563e648fde3dd95c2d9adc0">&#9670;&#160;</a></span>field_0x48</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_ladder_c1::field_0x48</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e0b470b6cd831fe1202ded7396009ab" name="a6e0b470b6cd831fe1202ded7396009ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e0b470b6cd831fe1202ded7396009ab">&#9670;&#160;</a></span>field_0x4C</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_ladder_c1::field_0x4C</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a12baec07744a4de32d845f50f42bb367" name="a12baec07744a4de32d845f50f42bb367"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12baec07744a4de32d845f50f42bb367">&#9670;&#160;</a></span>field_0x50</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_ladder_c1::field_0x50</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a49b2676e34611dae255fa12a0b9ecd43" name="a49b2676e34611dae255fa12a0b9ecd43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49b2676e34611dae255fa12a0b9ecd43">&#9670;&#160;</a></span>field_0x54</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_ladder_c1::field_0x54</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a27858c3a294c60ff025836206cb61d" name="a5a27858c3a294c60ff025836206cb61d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a27858c3a294c60ff025836206cb61d">&#9670;&#160;</a></span>field_0x58</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_ladder_c1::field_0x58</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a761a70ca62f1abc42b6b68324784f0c2" name="a761a70ca62f1abc42b6b68324784f0c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a761a70ca62f1abc42b6b68324784f0c2">&#9670;&#160;</a></span>field_0x5C</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_ladder_c1::field_0x5C</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a83271f5d93e72dcb7da56ab1da9b2c71" name="a83271f5d93e72dcb7da56ab1da9b2c71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83271f5d93e72dcb7da56ab1da9b2c71">&#9670;&#160;</a></span>field_0x60</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_ladder_c1::field_0x60</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a526dcc4457a4a70469f468f1c21006e8" name="a526dcc4457a4a70469f468f1c21006e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a526dcc4457a4a70469f468f1c21006e8">&#9670;&#160;</a></span>field_0x64</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_ladder_c1::field_0x64</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a735af7e35935c364b64d5de35d8b6b16" name="a735af7e35935c364b64d5de35d8b6b16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a735af7e35935c364b64d5de35d8b6b16">&#9670;&#160;</a></span>field_0x68</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_ladder_c1::field_0x68</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af19042ef6f1ad263741c994477190fcb" name="af19042ef6f1ad263741c994477190fcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af19042ef6f1ad263741c994477190fcb">&#9670;&#160;</a></span>field_0x6C</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daAlinkHIO_ladder_c1::field_0x6C</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>include/d/a/<a class="el" href="d__a__alink_8h_source.html">d_a_alink.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classdaAlinkHIO__ladder__c1.html">daAlinkHIO_ladder_c1</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,1972 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: libs/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_pow.c File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('e__pow_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">e_pow.c File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aab3d3243ba906d7d555329b7637ff71e" id="r_aab3d3243ba906d7d555329b7637ff71e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#aab3d3243ba906d7d555329b7637ff71e">__ieee754_pow</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="e__atan2_8c.html#a69bf0237253cf28a9de66969ab9b2fc2">x</a>, <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="e__atan2_8c.html#ad0c8a89970b31aee1615bb4ef6710a45">y</a>) <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> __ieee754_pow(<a class="el" href="e__atan2_8c.html#a69bf0237253cf28a9de66969ab9b2fc2">x</a></td></tr>
+<tr class="separator:aab3d3243ba906d7d555329b7637ff71e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9953dadd8672a6a74f727d58dd443af" id="r_aa9953dadd8672a6a74f727d58dd443af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#aa9953dadd8672a6a74f727d58dd443af">if</a> ((<a class="el" href="e__atan2_8c.html#ac8aa04fd0e503179c0798990a7cd1c53">iy</a>|<a class="el" href="e__atan2_8c.html#a6d5d22bdb3cf920dd706c9a1f94f376c">ly</a>)==0)</td></tr>
+<tr class="separator:aa9953dadd8672a6a74f727d58dd443af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbb7aa9badc91436baf89f717c0b98fc" id="r_afbb7aa9badc91436baf89f717c0b98fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#afbb7aa9badc91436baf89f717c0b98fc">if</a> (<a class="el" href="e__atan2_8c.html#a6d5d22bdb3cf920dd706c9a1f94f376c">ly</a>==0)</td></tr>
+<tr class="separator:afbb7aa9badc91436baf89f717c0b98fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35a7971375a4027a4d67eed7e57f26c8" id="r_a35a7971375a4027a4d67eed7e57f26c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a35a7971375a4027a4d67eed7e57f26c8">if</a> (<a class="el" href="e__atan2_8c.html#af7c2dc72bb970fef4e6313293cadfe95">lx</a>==0)</td></tr>
+<tr class="separator:a35a7971375a4027a4d67eed7e57f26c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27d536ce437165633d6c8eb37b3c993c" id="r_a27d536ce437165633d6c8eb37b3c993c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a27d536ce437165633d6c8eb37b3c993c">if</a> (((((<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>) <a class="el" href="e__acos_8c.html#a08b5eddfd7c1e9cf8bca05061b8a1d14">hx</a> &gt; &gt; 31)+1)|<a class="el" href="e__pow_8c.html#ae48b318a4d1dd001a851c3f715d0b19c">yisint</a>)==0)</td></tr>
+<tr class="separator:a27d536ce437165633d6c8eb37b3c993c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef1cf4b5b3331b0a119f0e7ad55a3281" id="r_aef1cf4b5b3331b0a119f0e7ad55a3281"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#aef1cf4b5b3331b0a119f0e7ad55a3281">if</a> (<a class="el" href="e__atan2_8c.html#ac8aa04fd0e503179c0798990a7cd1c53">iy</a> &gt; 0x41e00000)</td></tr>
+<tr class="separator:aef1cf4b5b3331b0a119f0e7ad55a3281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7aba15a069a96a25627b9cf56f9eb21" id="r_ab7aba15a069a96a25627b9cf56f9eb21"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#ab7aba15a069a96a25627b9cf56f9eb21">if</a> (<a class="el" href="e__acos_8c.html#ae933556a4a64dba6dc33be1422196177">ix</a>&lt; 0x00100000)</td></tr>
+<tr class="separator:ab7aba15a069a96a25627b9cf56f9eb21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cb5f86cbb2cd345c88db35e8a2313c9" id="r_a5cb5f86cbb2cd345c88db35e8a2313c9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a5cb5f86cbb2cd345c88db35e8a2313c9">if</a> (<a class="el" href="e__pow_8c.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>&lt;=0x3988E) <a class="el" href="e__atan2_8c.html#a333de954dda4eeee5fdb7339c9ff6f2f">k</a>=0</td></tr>
+<tr class="separator:a5cb5f86cbb2cd345c88db35e8a2313c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c964516db1abc04653fb965427771be" id="r_a0c964516db1abc04653fb965427771be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a0c964516db1abc04653fb965427771be">__HI</a> (<a class="el" href="e__pow_8c.html#a8fa675eb2fcec5b95d9d21c670da7f30">ax</a>)</td></tr>
+<tr class="separator:a0c964516db1abc04653fb965427771be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43c01afd3ef2e991fc0516051f1be9fd" id="r_a43c01afd3ef2e991fc0516051f1be9fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a43c01afd3ef2e991fc0516051f1be9fd">__LO</a> (<a class="el" href="e__pow_8c.html#a206a4fde66e28459632f15f4997debde">s_h</a>)=0</td></tr>
+<tr class="separator:a43c01afd3ef2e991fc0516051f1be9fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20a9a018457eb1bcd360e1f48be35d7f" id="r_a20a9a018457eb1bcd360e1f48be35d7f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a20a9a018457eb1bcd360e1f48be35d7f">__HI</a> (<a class="el" href="e__pow_8c.html#a2f12d91adff30f5292b045b5c3bfc6bc">t_h</a>)</td></tr>
+<tr class="separator:a20a9a018457eb1bcd360e1f48be35d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35c4222f8c126f7b87e94ae0e9930beb" id="r_a35c4222f8c126f7b87e94ae0e9930beb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a35c4222f8c126f7b87e94ae0e9930beb">__LO</a> (<a class="el" href="e__pow_8c.html#a2f12d91adff30f5292b045b5c3bfc6bc">t_h</a>)=0</td></tr>
+<tr class="separator:a35c4222f8c126f7b87e94ae0e9930beb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bcfcc9aac8b19b80c79293de16cf482" id="r_a0bcfcc9aac8b19b80c79293de16cf482"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a0bcfcc9aac8b19b80c79293de16cf482">__LO</a> (<a class="el" href="e__pow_8c.html#a4811e3b20aa084947e20ad2c10c941ee">p_h</a>)=0</td></tr>
+<tr class="separator:a0bcfcc9aac8b19b80c79293de16cf482"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada7aeca7a32d9552063231339e277358" id="r_ada7aeca7a32d9552063231339e277358"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#ada7aeca7a32d9552063231339e277358">__LO</a> (<a class="el" href="e__pow_8c.html#a469994e78f66a44815c015b7f4b8b2f8">t1</a>)=0</td></tr>
+<tr class="separator:ada7aeca7a32d9552063231339e277358"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26f2f141eef2f5ea4930ed0d658085cf" id="r_a26f2f141eef2f5ea4930ed0d658085cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a26f2f141eef2f5ea4930ed0d658085cf">if</a> (((((<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>) <a class="el" href="e__acos_8c.html#a08b5eddfd7c1e9cf8bca05061b8a1d14">hx</a> &gt; &gt; 31)+1)|(<a class="el" href="e__pow_8c.html#ae48b318a4d1dd001a851c3f715d0b19c">yisint</a> - 1))==0)</td></tr>
+<tr class="separator:a26f2f141eef2f5ea4930ed0d658085cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1346fe04b6b56b8bbd08dc682ef4263" id="r_ad1346fe04b6b56b8bbd08dc682ef4263"><td class="memItemLeft" align="right" valign="top"><a class="el" href="e__acos_8c.html#a0544c3fe466e421738dae463968b70ba">else</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#ad1346fe04b6b56b8bbd08dc682ef4263">if</a> ((<a class="el" href="e__pow_8c.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &amp;0x7fffffff) &gt;=0x4090cc00)</td></tr>
+<tr class="separator:ad1346fe04b6b56b8bbd08dc682ef4263"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeec50fc1935bb7ec8425bec00765c890" id="r_aeec50fc1935bb7ec8425bec00765c890"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#aeec50fc1935bb7ec8425bec00765c890">if</a> (<a class="el" href="e__pow_8c.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a> &gt; 0x3fe00000)</td></tr>
+<tr class="separator:aeec50fc1935bb7ec8425bec00765c890"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bcc09d6ffe31c487803dbdaff9bd3b3" id="r_a3bcc09d6ffe31c487803dbdaff9bd3b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a3bcc09d6ffe31c487803dbdaff9bd3b3">__LO</a> (<a class="el" href="e__asin_8c.html#aaccc9105df5383111407fd5b41255e23">t</a>)=0</td></tr>
+<tr class="separator:a3bcc09d6ffe31c487803dbdaff9bd3b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac3c21fd48a3a4322338b6ab8b2b0605" id="r_aac3c21fd48a3a4322338b6ab8b2b0605"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#aac3c21fd48a3a4322338b6ab8b2b0605">if</a> ((<a class="el" href="e__pow_8c.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &gt; &gt; 20)&lt;=0) <a class="el" href="e__pow_8c.html#ae236e66cf6f1cf95423c52b30bbd6f37">z</a></td></tr>
+<tr class="separator:aac3c21fd48a3a4322338b6ab8b2b0605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeb58f5ce593955d371380a2a2398919" id="r_aaeb58f5ce593955d371380a2a2398919"><td class="memItemLeft" align="right" valign="top"><a class="el" href="e__acos_8c.html#a0544c3fe466e421738dae463968b70ba">else</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#aaeb58f5ce593955d371380a2a2398919">__HI</a> (<a class="el" href="e__pow_8c.html#ae236e66cf6f1cf95423c52b30bbd6f37">z</a>)+</td></tr>
+<tr class="separator:aaeb58f5ce593955d371380a2a2398919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a6e7ef6854ced1bbafad4f950176aafa1" id="r_a6e7ef6854ced1bbafad4f950176aafa1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a6e7ef6854ced1bbafad4f950176aafa1">bp</a> [] = {1.0, 1.5,}</td></tr>
+<tr class="separator:a6e7ef6854ced1bbafad4f950176aafa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab59b2a2234b62529ee07527eea83b019" id="r_ab59b2a2234b62529ee07527eea83b019"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#ab59b2a2234b62529ee07527eea83b019">dp_h</a> [] = { 0.0, 5.84962487220764160156<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-01,}</td></tr>
+<tr class="separator:ab59b2a2234b62529ee07527eea83b019"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cab927c031d673c4c8d8be12291590b" id="r_a9cab927c031d673c4c8d8be12291590b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a9cab927c031d673c4c8d8be12291590b">dp_l</a> [] = { 0.0, 1.35003920212974897128<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-08,}</td></tr>
+<tr class="separator:a9cab927c031d673c4c8d8be12291590b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81f56e7188d96ccb5f409abf8104f5d5" id="r_a81f56e7188d96ccb5f409abf8104f5d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a81f56e7188d96ccb5f409abf8104f5d5">zero</a> = 0.0</td></tr>
+<tr class="separator:a81f56e7188d96ccb5f409abf8104f5d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9fd4781bcde41340d170d181f3a7ebe" id="r_aa9fd4781bcde41340d170d181f3a7ebe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#aa9fd4781bcde41340d170d181f3a7ebe">one</a> = 1.0</td></tr>
+<tr class="separator:aa9fd4781bcde41340d170d181f3a7ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcb166769d679c40d87d4bf06070fb66" id="r_adcb166769d679c40d87d4bf06070fb66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#adcb166769d679c40d87d4bf06070fb66">two</a> = 2.0</td></tr>
+<tr class="separator:adcb166769d679c40d87d4bf06070fb66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5565fa210bda7e3b213e3b754da4ea19" id="r_a5565fa210bda7e3b213e3b754da4ea19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a5565fa210bda7e3b213e3b754da4ea19">two53</a> = 9007199254740992.0</td></tr>
+<tr class="separator:a5565fa210bda7e3b213e3b754da4ea19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf4c3f2608487ad9ec9b5c57280a583e" id="r_abf4c3f2608487ad9ec9b5c57280a583e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#abf4c3f2608487ad9ec9b5c57280a583e">huge</a> = 1.0e300</td></tr>
+<tr class="separator:abf4c3f2608487ad9ec9b5c57280a583e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1362beccebaa4373a2b6307298a2507b" id="r_a1362beccebaa4373a2b6307298a2507b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a1362beccebaa4373a2b6307298a2507b">tiny</a> = 1.0e-300</td></tr>
+<tr class="separator:a1362beccebaa4373a2b6307298a2507b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9193d066c57c254fa780dffa44d6ead2" id="r_a9193d066c57c254fa780dffa44d6ead2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a9193d066c57c254fa780dffa44d6ead2">L1</a> = 5.99999999999994648725<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-01</td></tr>
+<tr class="separator:a9193d066c57c254fa780dffa44d6ead2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4f2af2d03ee993e80af6cd555995ba3" id="r_ab4f2af2d03ee993e80af6cd555995ba3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#ab4f2af2d03ee993e80af6cd555995ba3">L2</a> = 4.28571428578550184252<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-01</td></tr>
+<tr class="separator:ab4f2af2d03ee993e80af6cd555995ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed3752b4dfdf0d73c8373223372cefdf" id="r_aed3752b4dfdf0d73c8373223372cefdf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#aed3752b4dfdf0d73c8373223372cefdf">L3</a> = 3.33333329818377432918<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-01</td></tr>
+<tr class="separator:aed3752b4dfdf0d73c8373223372cefdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8af4e2fa5373a5bb4ec25cf229ea2112" id="r_a8af4e2fa5373a5bb4ec25cf229ea2112"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a8af4e2fa5373a5bb4ec25cf229ea2112">L4</a> = 2.72728123808534006489<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-01</td></tr>
+<tr class="separator:a8af4e2fa5373a5bb4ec25cf229ea2112"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4819421914abb0a987823fa300c91367" id="r_a4819421914abb0a987823fa300c91367"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a4819421914abb0a987823fa300c91367">L5</a> = 2.30660745775561754067<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-01</td></tr>
+<tr class="separator:a4819421914abb0a987823fa300c91367"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abda6613959ce97aa6c27f73c24107f3c" id="r_abda6613959ce97aa6c27f73c24107f3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#abda6613959ce97aa6c27f73c24107f3c">L6</a> = 2.06975017800338417784<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-01</td></tr>
+<tr class="separator:abda6613959ce97aa6c27f73c24107f3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9b9320e33001b4c0a8b3a82bf72a257" id="r_ae9b9320e33001b4c0a8b3a82bf72a257"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#ae9b9320e33001b4c0a8b3a82bf72a257">P1</a> = 1.66666666666666019037<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-01</td></tr>
+<tr class="separator:ae9b9320e33001b4c0a8b3a82bf72a257"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae73c99bbe9a9e26ecd3df2050099de5a" id="r_ae73c99bbe9a9e26ecd3df2050099de5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#ae73c99bbe9a9e26ecd3df2050099de5a">P2</a> = -2.77777777770155933842<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-03</td></tr>
+<tr class="separator:ae73c99bbe9a9e26ecd3df2050099de5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77f33ec819ba1e95f7fd70c5d7674265" id="r_a77f33ec819ba1e95f7fd70c5d7674265"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a77f33ec819ba1e95f7fd70c5d7674265">P3</a> = 6.61375632143793436117<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-05</td></tr>
+<tr class="separator:a77f33ec819ba1e95f7fd70c5d7674265"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c22cde593636615afd131424c876de8" id="r_a6c22cde593636615afd131424c876de8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a6c22cde593636615afd131424c876de8">P4</a> = -1.65339022054652515390e-06</td></tr>
+<tr class="separator:a6c22cde593636615afd131424c876de8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ca102e89dcc2d20adc2fdc191b26238" id="r_a5ca102e89dcc2d20adc2fdc191b26238"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a5ca102e89dcc2d20adc2fdc191b26238">P5</a> = 4.13813679705723846039<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-08</td></tr>
+<tr class="separator:a5ca102e89dcc2d20adc2fdc191b26238"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a198f344bcd8a81db27e27d86b415732c" id="r_a198f344bcd8a81db27e27d86b415732c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a198f344bcd8a81db27e27d86b415732c">lg2</a> = 6.93147180559945286227<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-01</td></tr>
+<tr class="separator:a198f344bcd8a81db27e27d86b415732c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaed368a0586e4b33d77190f6bc0a2c12" id="r_aaed368a0586e4b33d77190f6bc0a2c12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#aaed368a0586e4b33d77190f6bc0a2c12">lg2_h</a> = 6.93147182464599609375<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-01</td></tr>
+<tr class="separator:aaed368a0586e4b33d77190f6bc0a2c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8ccfbb1447cd5a3654caa452b5af06d" id="r_ac8ccfbb1447cd5a3654caa452b5af06d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#ac8ccfbb1447cd5a3654caa452b5af06d">lg2_l</a> = -1.90465429995776804525<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-09</td></tr>
+<tr class="separator:ac8ccfbb1447cd5a3654caa452b5af06d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5881bb79487ca9e4d7be66d8afc0b1ec" id="r_a5881bb79487ca9e4d7be66d8afc0b1ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a5881bb79487ca9e4d7be66d8afc0b1ec">ovt</a> = 8.0085662595372944372<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-0017</td></tr>
+<tr class="separator:a5881bb79487ca9e4d7be66d8afc0b1ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6115063c1e5679414aa6894485ec51e4" id="r_a6115063c1e5679414aa6894485ec51e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a6115063c1e5679414aa6894485ec51e4">cp</a> = 9.61796693925975554329<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-01</td></tr>
+<tr class="separator:a6115063c1e5679414aa6894485ec51e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b08020cf2ce7a9d36a8a0e89a70b854" id="r_a1b08020cf2ce7a9d36a8a0e89a70b854"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a1b08020cf2ce7a9d36a8a0e89a70b854">cp_h</a> = 9.61796700954437255859<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-01</td></tr>
+<tr class="separator:a1b08020cf2ce7a9d36a8a0e89a70b854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7842956f53da31699af7175ea49ecb2" id="r_ab7842956f53da31699af7175ea49ecb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#ab7842956f53da31699af7175ea49ecb2">cp_l</a> = -7.02846165095275826516<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-09</td></tr>
+<tr class="separator:ab7842956f53da31699af7175ea49ecb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd8e4b1315ae255b27404d2c7a5954af" id="r_abd8e4b1315ae255b27404d2c7a5954af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#abd8e4b1315ae255b27404d2c7a5954af">ivln2</a> = 1.44269504088896338700e+00</td></tr>
+<tr class="separator:abd8e4b1315ae255b27404d2c7a5954af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48452badf2d6fe09e040e4255878554c" id="r_a48452badf2d6fe09e040e4255878554c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a48452badf2d6fe09e040e4255878554c">ivln2_h</a> = 1.44269502162933349609<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>+00</td></tr>
+<tr class="separator:a48452badf2d6fe09e040e4255878554c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46c5a6da4ebc55fc6533fdca790fc507" id="r_a46c5a6da4ebc55fc6533fdca790fc507"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a46c5a6da4ebc55fc6533fdca790fc507">ivln2_l</a> = 1.92596299112661746887<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-08</td></tr>
+<tr class="separator:a46c5a6da4ebc55fc6533fdca790fc507"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a238d34746f9536479a2597c534801d39" id="r_a238d34746f9536479a2597c534801d39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="e__atan2_8c.html#ad0c8a89970b31aee1615bb4ef6710a45">y</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a238d34746f9536479a2597c534801d39">x</a></td></tr>
+<tr class="separator:a238d34746f9536479a2597c534801d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06a202d81fdafd8ac3f2518206202eb0" id="r_a06a202d81fdafd8ac3f2518206202eb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> y <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a06a202d81fdafd8ac3f2518206202eb0">y</a></td></tr>
+<tr class="separator:a06a202d81fdafd8ac3f2518206202eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3b72e5b77595ca2340ecf8ccfe5fd99" id="r_ac3b72e5b77595ca2340ecf8ccfe5fd99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#ac3b72e5b77595ca2340ecf8ccfe5fd99">y1</a></td></tr>
+<tr class="separator:ac3b72e5b77595ca2340ecf8ccfe5fd99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a469994e78f66a44815c015b7f4b8b2f8" id="r_a469994e78f66a44815c015b7f4b8b2f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a469994e78f66a44815c015b7f4b8b2f8">t1</a> = (((<a class="el" href="e__pow_8c.html#a66d87b71aebd6356ccbbc29f1b1bacdb">z_h</a> + <a class="el" href="e__pow_8c.html#a5f159f8aa0a9ad389d3320f19cdc9028">z_l</a>) + <a class="el" href="e__pow_8c.html#ab59b2a2234b62529ee07527eea83b019">dp_h</a>[<a class="el" href="e__atan2_8c.html#a333de954dda4eeee5fdb7339c9ff6f2f">k</a>]) + <a class="el" href="e__asin_8c.html#aaccc9105df5383111407fd5b41255e23">t</a>)</td></tr>
+<tr class="separator:a469994e78f66a44815c015b7f4b8b2f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24aeadb733f27244ec14e4cba82eeee9" id="r_a24aeadb733f27244ec14e4cba82eeee9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a24aeadb733f27244ec14e4cba82eeee9">t2</a> = <a class="el" href="e__pow_8c.html#a5f159f8aa0a9ad389d3320f19cdc9028">z_l</a> - (((<a class="el" href="e__pow_8c.html#a469994e78f66a44815c015b7f4b8b2f8">t1</a> - <a class="el" href="e__asin_8c.html#aaccc9105df5383111407fd5b41255e23">t</a>) - <a class="el" href="e__pow_8c.html#ab59b2a2234b62529ee07527eea83b019">dp_h</a>[<a class="el" href="e__atan2_8c.html#a333de954dda4eeee5fdb7339c9ff6f2f">k</a>]) - <a class="el" href="e__pow_8c.html#a66d87b71aebd6356ccbbc29f1b1bacdb">z_h</a>)</td></tr>
+<tr class="separator:a24aeadb733f27244ec14e4cba82eeee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a514f1b439f404f86f77090fa9edc96ce" id="r_a514f1b439f404f86f77090fa9edc96ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a514f1b439f404f86f77090fa9edc96ce">r</a> = <a class="el" href="e__pow_8c.html#a2e63e71737e8b6802b81f6a7c5ca6a0a">s2</a> * <a class="el" href="e__pow_8c.html#a2e63e71737e8b6802b81f6a7c5ca6a0a">s2</a> * (<a class="el" href="e__pow_8c.html#a9193d066c57c254fa780dffa44d6ead2">L1</a> + <a class="el" href="e__pow_8c.html#a2e63e71737e8b6802b81f6a7c5ca6a0a">s2</a> * (<a class="el" href="e__pow_8c.html#ab4f2af2d03ee993e80af6cd555995ba3">L2</a> + <a class="el" href="e__pow_8c.html#a2e63e71737e8b6802b81f6a7c5ca6a0a">s2</a> * (<a class="el" href="e__pow_8c.html#aed3752b4dfdf0d73c8373223372cefdf">L3</a> + <a class="el" href="e__pow_8c.html#a2e63e71737e8b6802b81f6a7c5ca6a0a">s2</a> * (<a class="el" href="e__pow_8c.html#a8af4e2fa5373a5bb4ec25cf229ea2112">L4</a> + <a class="el" href="e__pow_8c.html#a2e63e71737e8b6802b81f6a7c5ca6a0a">s2</a> * (<a class="el" href="e__pow_8c.html#a4819421914abb0a987823fa300c91367">L5</a> + <a class="el" href="e__pow_8c.html#a2e63e71737e8b6802b81f6a7c5ca6a0a">s2</a> * <a class="el" href="e__pow_8c.html#abda6613959ce97aa6c27f73c24107f3c">L6</a>)))))</td></tr>
+<tr class="separator:a514f1b439f404f86f77090fa9edc96ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3691308f2a4c2f6983f2880d32e29c84" id="r_a3691308f2a4c2f6983f2880d32e29c84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a3691308f2a4c2f6983f2880d32e29c84">s</a> = <a class="el" href="e__pow_8c.html#a6277e2a7446059985dc9bcf0a4ac1a8f">u</a> * <a class="el" href="e__pow_8c.html#ac4055e3a20b6b3af3d10590ea446ef6c">v</a></td></tr>
+<tr class="separator:a3691308f2a4c2f6983f2880d32e29c84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaccc9105df5383111407fd5b41255e23" id="r_aaccc9105df5383111407fd5b41255e23"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#aaccc9105df5383111407fd5b41255e23">t</a> = (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>)<a class="el" href="e__fmod_8c.html#aeab71244afb687f16d8c4f5ee9d6ef0e">n</a></td></tr>
+<tr class="separator:aaccc9105df5383111407fd5b41255e23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6277e2a7446059985dc9bcf0a4ac1a8f" id="r_a6277e2a7446059985dc9bcf0a4ac1a8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a6277e2a7446059985dc9bcf0a4ac1a8f">u</a> = <a class="el" href="e__pow_8c.html#a8fa675eb2fcec5b95d9d21c670da7f30">ax</a> - <a class="el" href="e__pow_8c.html#a6e7ef6854ced1bbafad4f950176aafa1">bp</a>[<a class="el" href="e__atan2_8c.html#a333de954dda4eeee5fdb7339c9ff6f2f">k</a>]</td></tr>
+<tr class="separator:a6277e2a7446059985dc9bcf0a4ac1a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4055e3a20b6b3af3d10590ea446ef6c" id="r_ac4055e3a20b6b3af3d10590ea446ef6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#ac4055e3a20b6b3af3d10590ea446ef6c">v</a> = <a class="el" href="JASAramStream_8cpp.html#a6b097ad1e016560fb5641916e593d4bb">one</a> / (<a class="el" href="e__pow_8c.html#a8fa675eb2fcec5b95d9d21c670da7f30">ax</a> + <a class="el" href="e__pow_8c.html#a6e7ef6854ced1bbafad4f950176aafa1">bp</a>[<a class="el" href="e__atan2_8c.html#a333de954dda4eeee5fdb7339c9ff6f2f">k</a>])</td></tr>
+<tr class="separator:ac4055e3a20b6b3af3d10590ea446ef6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad57484016654da87125db86f4227ea3" id="r_aad57484016654da87125db86f4227ea3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#aad57484016654da87125db86f4227ea3">w</a> = <a class="el" href="e__pow_8c.html#ac4055e3a20b6b3af3d10590ea446ef6c">v</a> - (<a class="el" href="e__pow_8c.html#ae236e66cf6f1cf95423c52b30bbd6f37">z</a> - <a class="el" href="e__pow_8c.html#a6277e2a7446059985dc9bcf0a4ac1a8f">u</a>)</td></tr>
+<tr class="separator:aad57484016654da87125db86f4227ea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a343b1c4a3ea721b2d640fc8700db0f36" id="r_a343b1c4a3ea721b2d640fc8700db0f36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a343b1c4a3ea721b2d640fc8700db0f36">qqq</a> = <a class="el" href="e__pow_8c.html#a8fa675eb2fcec5b95d9d21c670da7f30">ax</a></td></tr>
+<tr class="separator:a343b1c4a3ea721b2d640fc8700db0f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12ca08b63dcc7017b61fb55af545a622" id="r_a12ca08b63dcc7017b61fb55af545a622"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a12ca08b63dcc7017b61fb55af545a622">i0</a> = ((*(<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>*)&amp;<a class="el" href="JASAramStream_8cpp.html#a6b097ad1e016560fb5641916e593d4bb">one</a>) &gt;&gt; 29) ^ 1</td></tr>
+<tr class="separator:a12ca08b63dcc7017b61fb55af545a622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6ef61fb0fec52abd81fd71388742cc0" id="r_ac6ef61fb0fec52abd81fd71388742cc0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#ac6ef61fb0fec52abd81fd71388742cc0">i1</a> = 1 - <a class="el" href="e__pow_8c.html#a12ca08b63dcc7017b61fb55af545a622">i0</a></td></tr>
+<tr class="separator:ac6ef61fb0fec52abd81fd71388742cc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e98b8a17c0aad30ba64d47b74e2a6c1" id="r_a7e98b8a17c0aad30ba64d47b74e2a6c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a> = <a class="el" href="e__pow_8c.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &amp; 0x7fffffff</td></tr>
+<tr class="separator:a7e98b8a17c0aad30ba64d47b74e2a6c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf2bc2545a4a5f5683d9ef3ed0d977e0" id="r_abf2bc2545a4a5f5683d9ef3ed0d977e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> = <a class="el" href="e__acos_8c.html#ae933556a4a64dba6dc33be1422196177">ix</a> &amp; 0x000fffff</td></tr>
+<tr class="separator:abf2bc2545a4a5f5683d9ef3ed0d977e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc468c70fb574ebd07287b38d0d0676d" id="r_adc468c70fb574ebd07287b38d0d0676d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#adc468c70fb574ebd07287b38d0d0676d">k</a> = (<a class="el" href="e__pow_8c.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a> &gt;&gt; 20) - 0x3ff</td></tr>
+<tr class="separator:adc468c70fb574ebd07287b38d0d0676d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae48b318a4d1dd001a851c3f715d0b19c" id="r_ae48b318a4d1dd001a851c3f715d0b19c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#ae48b318a4d1dd001a851c3f715d0b19c">yisint</a></td></tr>
+<tr class="separator:ae48b318a4d1dd001a851c3f715d0b19c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeab71244afb687f16d8c4f5ee9d6ef0e" id="r_aeab71244afb687f16d8c4f5ee9d6ef0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#aeab71244afb687f16d8c4f5ee9d6ef0e">n</a> = 0</td></tr>
+<tr class="separator:aeab71244afb687f16d8c4f5ee9d6ef0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08b5eddfd7c1e9cf8bca05061b8a1d14" id="r_a08b5eddfd7c1e9cf8bca05061b8a1d14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a08b5eddfd7c1e9cf8bca05061b8a1d14">hx</a> = <a class="el" href="e__fmod_8c.html#a750cd96cda2ceb10af897f2c8c24870d">__HI</a>(<a class="el" href="e__atan2_8c.html#a69bf0237253cf28a9de66969ab9b2fc2">x</a>)</td></tr>
+<tr class="separator:a08b5eddfd7c1e9cf8bca05061b8a1d14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac54fda0a1f7b8ee11d4a875abdac270a" id="r_ac54fda0a1f7b8ee11d4a875abdac270a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#ac54fda0a1f7b8ee11d4a875abdac270a">hy</a> = <a class="el" href="e__fmod_8c.html#a750cd96cda2ceb10af897f2c8c24870d">__HI</a>(<a class="el" href="e__atan2_8c.html#ad0c8a89970b31aee1615bb4ef6710a45">y</a>)</td></tr>
+<tr class="separator:ac54fda0a1f7b8ee11d4a875abdac270a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae933556a4a64dba6dc33be1422196177" id="r_ae933556a4a64dba6dc33be1422196177"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#ae933556a4a64dba6dc33be1422196177">ix</a> = <a class="el" href="e__acos_8c.html#a08b5eddfd7c1e9cf8bca05061b8a1d14">hx</a> &amp; 0x7fffffff</td></tr>
+<tr class="separator:ae933556a4a64dba6dc33be1422196177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8aa04fd0e503179c0798990a7cd1c53" id="r_ac8aa04fd0e503179c0798990a7cd1c53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#ac8aa04fd0e503179c0798990a7cd1c53">iy</a> = <a class="el" href="e__atan2_8c.html#ac54fda0a1f7b8ee11d4a875abdac270a">hy</a> &amp; 0x7fffffff</td></tr>
+<tr class="separator:ac8aa04fd0e503179c0798990a7cd1c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7c2dc72bb970fef4e6313293cadfe95" id="r_af7c2dc72bb970fef4e6313293cadfe95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#af7c2dc72bb970fef4e6313293cadfe95">lx</a> = <a class="el" href="e__acos_8c.html#a3cca7db54972a137bd79859f611cb1ae">__LO</a>(<a class="el" href="e__atan2_8c.html#a69bf0237253cf28a9de66969ab9b2fc2">x</a>)</td></tr>
+<tr class="separator:af7c2dc72bb970fef4e6313293cadfe95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d5d22bdb3cf920dd706c9a1f94f376c" id="r_a6d5d22bdb3cf920dd706c9a1f94f376c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a6d5d22bdb3cf920dd706c9a1f94f376c">ly</a> = <a class="el" href="e__acos_8c.html#a3cca7db54972a137bd79859f611cb1ae">__LO</a>(<a class="el" href="e__atan2_8c.html#ad0c8a89970b31aee1615bb4ef6710a45">y</a>)</td></tr>
+<tr class="separator:a6d5d22bdb3cf920dd706c9a1f94f376c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fa675eb2fcec5b95d9d21c670da7f30" id="r_a8fa675eb2fcec5b95d9d21c670da7f30"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a8fa675eb2fcec5b95d9d21c670da7f30">ax</a> = <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">__fabs</a>(<a class="el" href="e__atan2_8c.html#a69bf0237253cf28a9de66969ab9b2fc2">x</a>)</td></tr>
+<tr class="separator:a8fa675eb2fcec5b95d9d21c670da7f30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0544c3fe466e421738dae463968b70ba" id="r_a0544c3fe466e421738dae463968b70ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a0544c3fe466e421738dae463968b70ba">else</a></td></tr>
+<tr class="separator:a0544c3fe466e421738dae463968b70ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a206a4fde66e28459632f15f4997debde" id="r_a206a4fde66e28459632f15f4997debde"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a206a4fde66e28459632f15f4997debde">s_h</a> = <a class="el" href="e__acos_8c.html#a3691308f2a4c2f6983f2880d32e29c84">s</a></td></tr>
+<tr class="separator:a206a4fde66e28459632f15f4997debde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f12d91adff30f5292b045b5c3bfc6bc" id="r_a2f12d91adff30f5292b045b5c3bfc6bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a2f12d91adff30f5292b045b5c3bfc6bc">t_h</a> = <a class="el" href="JMATrigonometric_8cpp.html#a2638d670e539e2d2badac3f28d510684">zero</a></td></tr>
+<tr class="separator:a2f12d91adff30f5292b045b5c3bfc6bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a823c4ca9c5d9da38da71c61eef1ecd1d" id="r_a823c4ca9c5d9da38da71c61eef1ecd1d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a823c4ca9c5d9da38da71c61eef1ecd1d">t_l</a> = <a class="el" href="e__pow_8c.html#a8fa675eb2fcec5b95d9d21c670da7f30">ax</a> - (<a class="el" href="e__pow_8c.html#a2f12d91adff30f5292b045b5c3bfc6bc">t_h</a> - <a class="el" href="e__pow_8c.html#a6e7ef6854ced1bbafad4f950176aafa1">bp</a>[<a class="el" href="e__atan2_8c.html#a333de954dda4eeee5fdb7339c9ff6f2f">k</a>])</td></tr>
+<tr class="separator:a823c4ca9c5d9da38da71c61eef1ecd1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7310a9314b4dec4cfeff4fc82f7899a2" id="r_a7310a9314b4dec4cfeff4fc82f7899a2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a7310a9314b4dec4cfeff4fc82f7899a2">s_l</a> = <a class="el" href="e__pow_8c.html#ac4055e3a20b6b3af3d10590ea446ef6c">v</a> * ((<a class="el" href="e__pow_8c.html#a6277e2a7446059985dc9bcf0a4ac1a8f">u</a> - <a class="el" href="e__pow_8c.html#a206a4fde66e28459632f15f4997debde">s_h</a> * <a class="el" href="e__pow_8c.html#a2f12d91adff30f5292b045b5c3bfc6bc">t_h</a>) - <a class="el" href="e__pow_8c.html#a206a4fde66e28459632f15f4997debde">s_h</a> * <a class="el" href="e__pow_8c.html#a823c4ca9c5d9da38da71c61eef1ecd1d">t_l</a>)</td></tr>
+<tr class="separator:a7310a9314b4dec4cfeff4fc82f7899a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e63e71737e8b6802b81f6a7c5ca6a0a" id="r_a2e63e71737e8b6802b81f6a7c5ca6a0a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a2e63e71737e8b6802b81f6a7c5ca6a0a">s2</a> = <a class="el" href="e__acos_8c.html#a3691308f2a4c2f6983f2880d32e29c84">s</a> * <a class="el" href="e__acos_8c.html#a3691308f2a4c2f6983f2880d32e29c84">s</a></td></tr>
+<tr class="separator:a2e63e71737e8b6802b81f6a7c5ca6a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4811e3b20aa084947e20ad2c10c941ee" id="r_a4811e3b20aa084947e20ad2c10c941ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a4811e3b20aa084947e20ad2c10c941ee">p_h</a> = <a class="el" href="e__pow_8c.html#a6277e2a7446059985dc9bcf0a4ac1a8f">u</a> + <a class="el" href="e__pow_8c.html#ac4055e3a20b6b3af3d10590ea446ef6c">v</a></td></tr>
+<tr class="separator:a4811e3b20aa084947e20ad2c10c941ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af14d03723ec22be0994af92b83f1d134" id="r_af14d03723ec22be0994af92b83f1d134"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#af14d03723ec22be0994af92b83f1d134">p_l</a> = <a class="el" href="e__pow_8c.html#ac4055e3a20b6b3af3d10590ea446ef6c">v</a> - (<a class="el" href="e__pow_8c.html#a4811e3b20aa084947e20ad2c10c941ee">p_h</a> - <a class="el" href="e__pow_8c.html#a6277e2a7446059985dc9bcf0a4ac1a8f">u</a>)</td></tr>
+<tr class="separator:af14d03723ec22be0994af92b83f1d134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66d87b71aebd6356ccbbc29f1b1bacdb" id="r_a66d87b71aebd6356ccbbc29f1b1bacdb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a66d87b71aebd6356ccbbc29f1b1bacdb">z_h</a> = <a class="el" href="e__pow_8c.html#a1b08020cf2ce7a9d36a8a0e89a70b854">cp_h</a> * <a class="el" href="e__pow_8c.html#a4811e3b20aa084947e20ad2c10c941ee">p_h</a></td></tr>
+<tr class="separator:a66d87b71aebd6356ccbbc29f1b1bacdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f159f8aa0a9ad389d3320f19cdc9028" id="r_a5f159f8aa0a9ad389d3320f19cdc9028"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#a5f159f8aa0a9ad389d3320f19cdc9028">z_l</a> = <a class="el" href="e__pow_8c.html#ab7842956f53da31699af7175ea49ecb2">cp_l</a> * <a class="el" href="e__pow_8c.html#a4811e3b20aa084947e20ad2c10c941ee">p_h</a> + <a class="el" href="e__pow_8c.html#af14d03723ec22be0994af92b83f1d134">p_l</a> * <a class="el" href="e__pow_8c.html#a6115063c1e5679414aa6894485ec51e4">cp</a> + <a class="el" href="e__pow_8c.html#a9cab927c031d673c4c8d8be12291590b">dp_l</a>[<a class="el" href="e__atan2_8c.html#a333de954dda4eeee5fdb7339c9ff6f2f">k</a>]</td></tr>
+<tr class="separator:a5f159f8aa0a9ad389d3320f19cdc9028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae236e66cf6f1cf95423c52b30bbd6f37" id="r_ae236e66cf6f1cf95423c52b30bbd6f37"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e__pow_8c.html#ae236e66cf6f1cf95423c52b30bbd6f37">z</a> = <a class="el" href="e__pow_8c.html#a6277e2a7446059985dc9bcf0a4ac1a8f">u</a> + <a class="el" href="e__pow_8c.html#ac4055e3a20b6b3af3d10590ea446ef6c">v</a></td></tr>
+<tr class="separator:ae236e66cf6f1cf95423c52b30bbd6f37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a0c964516db1abc04653fb965427771be" name="a0c964516db1abc04653fb965427771be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c964516db1abc04653fb965427771be">&#9670;&#160;</a></span>__HI() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__HI </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="e__pow_8c.html#a8fa675eb2fcec5b95d9d21c670da7f30">ax</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a20a9a018457eb1bcd360e1f48be35d7f" name="a20a9a018457eb1bcd360e1f48be35d7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20a9a018457eb1bcd360e1f48be35d7f">&#9670;&#160;</a></span>__HI() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__HI </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="e__pow_8c.html#a2f12d91adff30f5292b045b5c3bfc6bc">t_h</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaeb58f5ce593955d371380a2a2398919" name="aaeb58f5ce593955d371380a2a2398919"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaeb58f5ce593955d371380a2a2398919">&#9670;&#160;</a></span>__HI() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="e__acos_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> __HI </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="e__pow_8c.html#ae236e66cf6f1cf95423c52b30bbd6f37">z</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aab3d3243ba906d7d555329b7637ff71e" name="aab3d3243ba906d7d555329b7637ff71e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab3d3243ba906d7d555329b7637ff71e">&#9670;&#160;</a></span>__ieee754_pow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> __ieee754_pow </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0bcfcc9aac8b19b80c79293de16cf482" name="a0bcfcc9aac8b19b80c79293de16cf482"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bcfcc9aac8b19b80c79293de16cf482">&#9670;&#160;</a></span>__LO() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">__LO </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="e__pow_8c.html#a4811e3b20aa084947e20ad2c10c941ee">p_h</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a43c01afd3ef2e991fc0516051f1be9fd" name="a43c01afd3ef2e991fc0516051f1be9fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43c01afd3ef2e991fc0516051f1be9fd">&#9670;&#160;</a></span>__LO() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">__LO </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="e__pow_8c.html#a206a4fde66e28459632f15f4997debde">s_h</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3bcc09d6ffe31c487803dbdaff9bd3b3" name="a3bcc09d6ffe31c487803dbdaff9bd3b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bcc09d6ffe31c487803dbdaff9bd3b3">&#9670;&#160;</a></span>__LO() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">__LO </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="e__asin_8c.html#aaccc9105df5383111407fd5b41255e23">t</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada7aeca7a32d9552063231339e277358" name="ada7aeca7a32d9552063231339e277358"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada7aeca7a32d9552063231339e277358">&#9670;&#160;</a></span>__LO() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">__LO </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="e__pow_8c.html#a469994e78f66a44815c015b7f4b8b2f8">t1</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35c4222f8c126f7b87e94ae0e9930beb" name="a35c4222f8c126f7b87e94ae0e9930beb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35c4222f8c126f7b87e94ae0e9930beb">&#9670;&#160;</a></span>__LO() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">__LO </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="e__pow_8c.html#a2f12d91adff30f5292b045b5c3bfc6bc">t_h</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a26f2f141eef2f5ea4930ed0d658085cf" name="a26f2f141eef2f5ea4930ed0d658085cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26f2f141eef2f5ea4930ed0d658085cf">&#9670;&#160;</a></span>if() <span class="overload">[1/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">if </td>
+          <td>(</td>
+          <td class="paramtype">((((<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>) <a class="el" href="e__acos_8c.html#a08b5eddfd7c1e9cf8bca05061b8a1d14">hx</a> &gt; &gt; 31)+1)|(<a class="el" href="e__pow_8c.html#ae48b318a4d1dd001a851c3f715d0b19c">yisint</a> - 1))&#160;</td>
+          <td class="paramname"> = <code>=&#160;0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a27d536ce437165633d6c8eb37b3c993c" name="a27d536ce437165633d6c8eb37b3c993c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27d536ce437165633d6c8eb37b3c993c">&#9670;&#160;</a></span>if() <span class="overload">[2/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">if </td>
+          <td>(</td>
+          <td class="paramtype">((((<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>) <a class="el" href="e__acos_8c.html#a08b5eddfd7c1e9cf8bca05061b8a1d14">hx</a> &gt; &gt; 31)+1)|<a class="el" href="e__pow_8c.html#ae48b318a4d1dd001a851c3f715d0b19c">yisint</a>)&#160;</td>
+          <td class="paramname"> = <code>=&#160;0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa9953dadd8672a6a74f727d58dd443af" name="aa9953dadd8672a6a74f727d58dd443af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9953dadd8672a6a74f727d58dd443af">&#9670;&#160;</a></span>if() <span class="overload">[3/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">if </td>
+          <td>(</td>
+          <td class="paramtype">(<a class="el" href="e__atan2_8c.html#ac8aa04fd0e503179c0798990a7cd1c53">iy</a>|<a class="el" href="e__atan2_8c.html#a6d5d22bdb3cf920dd706c9a1f94f376c">ly</a>)&#160;</td>
+          <td class="paramname"> = <code>=&#160;0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad1346fe04b6b56b8bbd08dc682ef4263" name="ad1346fe04b6b56b8bbd08dc682ef4263"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1346fe04b6b56b8bbd08dc682ef4263">&#9670;&#160;</a></span>if() <span class="overload">[4/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="e__acos_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> if </td>
+          <td>(</td>
+          <td class="paramtype">(<a class="el" href="e__pow_8c.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &amp;0x7fffffff) &gt;=&#160;</td>
+          <td class="paramname"><em>0x4090cc00</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac3c21fd48a3a4322338b6ab8b2b0605" name="aac3c21fd48a3a4322338b6ab8b2b0605"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac3c21fd48a3a4322338b6ab8b2b0605">&#9670;&#160;</a></span>if() <span class="overload">[5/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">if </td>
+          <td>(</td>
+          <td class="paramtype">(<a class="el" href="e__pow_8c.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &gt; &gt; 20)&lt;=&#160;</td>
+          <td class="paramname"><em>0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeec50fc1935bb7ec8425bec00765c890" name="aeec50fc1935bb7ec8425bec00765c890"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeec50fc1935bb7ec8425bec00765c890">&#9670;&#160;</a></span>if() <span class="overload">[6/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">if </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="e__pow_8c.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x3fe00000&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab7aba15a069a96a25627b9cf56f9eb21" name="ab7aba15a069a96a25627b9cf56f9eb21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7aba15a069a96a25627b9cf56f9eb21">&#9670;&#160;</a></span>if() <span class="overload">[7/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">if </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef1cf4b5b3331b0a119f0e7ad55a3281" name="aef1cf4b5b3331b0a119f0e7ad55a3281"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef1cf4b5b3331b0a119f0e7ad55a3281">&#9670;&#160;</a></span>if() <span class="overload">[8/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">if </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="e__atan2_8c.html#ac8aa04fd0e503179c0798990a7cd1c53">iy</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0x41e00000&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5cb5f86cbb2cd345c88db35e8a2313c9" name="a5cb5f86cbb2cd345c88db35e8a2313c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cb5f86cbb2cd345c88db35e8a2313c9">&#9670;&#160;</a></span>if() <span class="overload">[9/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">if </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="e__pow_8c.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>&lt;=&#160;</td>
+          <td class="paramname"><em>0x3988E</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35a7971375a4027a4d67eed7e57f26c8" name="a35a7971375a4027a4d67eed7e57f26c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35a7971375a4027a4d67eed7e57f26c8">&#9670;&#160;</a></span>if() <span class="overload">[10/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">if </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="e__atan2_8c.html#af7c2dc72bb970fef4e6313293cadfe95">lx</a>&#160;</td>
+          <td class="paramname"> = <code>=&#160;0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afbb7aa9badc91436baf89f717c0b98fc" name="afbb7aa9badc91436baf89f717c0b98fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbb7aa9badc91436baf89f717c0b98fc">&#9670;&#160;</a></span>if() <span class="overload">[11/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">if </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="e__atan2_8c.html#a6d5d22bdb3cf920dd706c9a1f94f376c">ly</a>&#160;</td>
+          <td class="paramname"> = <code>=&#160;0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a8fa675eb2fcec5b95d9d21c670da7f30" name="a8fa675eb2fcec5b95d9d21c670da7f30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fa675eb2fcec5b95d9d21c670da7f30">&#9670;&#160;</a></span>ax</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ax = <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">__fabs</a>(<a class="el" href="e__atan2_8c.html#a69bf0237253cf28a9de66969ab9b2fc2">x</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e7ef6854ced1bbafad4f950176aafa1" name="a6e7ef6854ced1bbafad4f950176aafa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e7ef6854ced1bbafad4f950176aafa1">&#9670;&#160;</a></span>bp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> bp[] = {1.0, 1.5,}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6115063c1e5679414aa6894485ec51e4" name="a6115063c1e5679414aa6894485ec51e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6115063c1e5679414aa6894485ec51e4">&#9670;&#160;</a></span>cp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> cp = 9.61796693925975554329<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-01</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1b08020cf2ce7a9d36a8a0e89a70b854" name="a1b08020cf2ce7a9d36a8a0e89a70b854"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b08020cf2ce7a9d36a8a0e89a70b854">&#9670;&#160;</a></span>cp_h</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> cp_h = 9.61796700954437255859<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-01</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab7842956f53da31699af7175ea49ecb2" name="ab7842956f53da31699af7175ea49ecb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7842956f53da31699af7175ea49ecb2">&#9670;&#160;</a></span>cp_l</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> cp_l = -7.02846165095275826516<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-09</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab59b2a2234b62529ee07527eea83b019" name="ab59b2a2234b62529ee07527eea83b019"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab59b2a2234b62529ee07527eea83b019">&#9670;&#160;</a></span>dp_h</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> dp_h[] = { 0.0, 5.84962487220764160156<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-01,}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9cab927c031d673c4c8d8be12291590b" name="a9cab927c031d673c4c8d8be12291590b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cab927c031d673c4c8d8be12291590b">&#9670;&#160;</a></span>dp_l</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> dp_l[] = { 0.0, 1.35003920212974897128<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-08,}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0544c3fe466e421738dae463968b70ba" name="a0544c3fe466e421738dae463968b70ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0544c3fe466e421738dae463968b70ba">&#9670;&#160;</a></span>else</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">else</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div>
+<div class="line">        <span class="keywordtype">double</span> <a class="code hl_variable" href="e__pow_8c.html#a2e63e71737e8b6802b81f6a7c5ca6a0a">s2</a>, <a class="code hl_variable" href="e__pow_8c.html#a206a4fde66e28459632f15f4997debde">s_h</a>, <a class="code hl_variable" href="e__pow_8c.html#a7310a9314b4dec4cfeff4fc82f7899a2">s_l</a>, <a class="code hl_variable" href="e__pow_8c.html#a2f12d91adff30f5292b045b5c3bfc6bc">t_h</a>, <a class="code hl_variable" href="e__pow_8c.html#a823c4ca9c5d9da38da71c61eef1ecd1d">t_l</a></div>
+<div class="ttc" id="ae__pow_8c_html_a206a4fde66e28459632f15f4997debde"><div class="ttname"><a href="e__pow_8c.html#a206a4fde66e28459632f15f4997debde">s_h</a></div><div class="ttdeci">s_h</div><div class="ttdef"><b>Definition</b> e_pow.c:312</div></div>
+<div class="ttc" id="ae__pow_8c_html_a2e63e71737e8b6802b81f6a7c5ca6a0a"><div class="ttname"><a href="e__pow_8c.html#a2e63e71737e8b6802b81f6a7c5ca6a0a">s2</a></div><div class="ttdeci">s2</div><div class="ttdef"><b>Definition</b> e_pow.c:320</div></div>
+<div class="ttc" id="ae__pow_8c_html_a2f12d91adff30f5292b045b5c3bfc6bc"><div class="ttname"><a href="e__pow_8c.html#a2f12d91adff30f5292b045b5c3bfc6bc">t_h</a></div><div class="ttdeci">t_h</div><div class="ttdef"><b>Definition</b> e_pow.c:315</div></div>
+<div class="ttc" id="ae__pow_8c_html_a7310a9314b4dec4cfeff4fc82f7899a2"><div class="ttname"><a href="e__pow_8c.html#a7310a9314b4dec4cfeff4fc82f7899a2">s_l</a></div><div class="ttdeci">s_l</div><div class="ttdef"><b>Definition</b> e_pow.c:318</div></div>
+<div class="ttc" id="ae__pow_8c_html_a823c4ca9c5d9da38da71c61eef1ecd1d"><div class="ttname"><a href="e__pow_8c.html#a823c4ca9c5d9da38da71c61eef1ecd1d">t_l</a></div><div class="ttdeci">t_l</div><div class="ttdef"><b>Definition</b> e_pow.c:317</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abf4c3f2608487ad9ec9b5c57280a583e" name="abf4c3f2608487ad9ec9b5c57280a583e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf4c3f2608487ad9ec9b5c57280a583e">&#9670;&#160;</a></span>huge</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> huge = 1.0e300</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a08b5eddfd7c1e9cf8bca05061b8a1d14" name="a08b5eddfd7c1e9cf8bca05061b8a1d14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08b5eddfd7c1e9cf8bca05061b8a1d14">&#9670;&#160;</a></span>hx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">hx = <a class="el" href="e__fmod_8c.html#a750cd96cda2ceb10af897f2c8c24870d">__HI</a>(<a class="el" href="e__atan2_8c.html#a69bf0237253cf28a9de66969ab9b2fc2">x</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac54fda0a1f7b8ee11d4a875abdac270a" name="ac54fda0a1f7b8ee11d4a875abdac270a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac54fda0a1f7b8ee11d4a875abdac270a">&#9670;&#160;</a></span>hy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">hy = <a class="el" href="e__fmod_8c.html#a750cd96cda2ceb10af897f2c8c24870d">__HI</a>(<a class="el" href="e__atan2_8c.html#ad0c8a89970b31aee1615bb4ef6710a45">y</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e98b8a17c0aad30ba64d47b74e2a6c1" name="a7e98b8a17c0aad30ba64d47b74e2a6c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e98b8a17c0aad30ba64d47b74e2a6c1">&#9670;&#160;</a></span>i</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">i = <a class="el" href="e__pow_8c.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &amp; 0x7fffffff</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a12ca08b63dcc7017b61fb55af545a622" name="a12ca08b63dcc7017b61fb55af545a622"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12ca08b63dcc7017b61fb55af545a622">&#9670;&#160;</a></span>i0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">i0 = ((*(<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>*)&amp;<a class="el" href="JASAramStream_8cpp.html#a6b097ad1e016560fb5641916e593d4bb">one</a>) &gt;&gt; 29) ^ 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6ef61fb0fec52abd81fd71388742cc0" name="ac6ef61fb0fec52abd81fd71388742cc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6ef61fb0fec52abd81fd71388742cc0">&#9670;&#160;</a></span>i1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">i1 = 1 - <a class="el" href="e__pow_8c.html#a12ca08b63dcc7017b61fb55af545a622">i0</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd8e4b1315ae255b27404d2c7a5954af" name="abd8e4b1315ae255b27404d2c7a5954af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd8e4b1315ae255b27404d2c7a5954af">&#9670;&#160;</a></span>ivln2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> ivln2 = 1.44269504088896338700e+00</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a48452badf2d6fe09e040e4255878554c" name="a48452badf2d6fe09e040e4255878554c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48452badf2d6fe09e040e4255878554c">&#9670;&#160;</a></span>ivln2_h</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> ivln2_h = 1.44269502162933349609<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>+00</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a46c5a6da4ebc55fc6533fdca790fc507" name="a46c5a6da4ebc55fc6533fdca790fc507"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46c5a6da4ebc55fc6533fdca790fc507">&#9670;&#160;</a></span>ivln2_l</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> ivln2_l = 1.92596299112661746887<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-08</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae933556a4a64dba6dc33be1422196177" name="ae933556a4a64dba6dc33be1422196177"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae933556a4a64dba6dc33be1422196177">&#9670;&#160;</a></span>ix</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ix = <a class="el" href="e__acos_8c.html#a08b5eddfd7c1e9cf8bca05061b8a1d14">hx</a> &amp; 0x7fffffff</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac8aa04fd0e503179c0798990a7cd1c53" name="ac8aa04fd0e503179c0798990a7cd1c53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8aa04fd0e503179c0798990a7cd1c53">&#9670;&#160;</a></span>iy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">iy = <a class="el" href="e__atan2_8c.html#ac54fda0a1f7b8ee11d4a875abdac270a">hy</a> &amp; 0x7fffffff</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf2bc2545a4a5f5683d9ef3ed0d977e0" name="abf2bc2545a4a5f5683d9ef3ed0d977e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf2bc2545a4a5f5683d9ef3ed0d977e0">&#9670;&#160;</a></span>j</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">j = <a class="el" href="e__acos_8c.html#ae933556a4a64dba6dc33be1422196177">ix</a> &amp; 0x000fffff</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adc468c70fb574ebd07287b38d0d0676d" name="adc468c70fb574ebd07287b38d0d0676d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc468c70fb574ebd07287b38d0d0676d">&#9670;&#160;</a></span>k</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">k = (<a class="el" href="e__pow_8c.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a> &gt;&gt; 20) - 0x3ff</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9193d066c57c254fa780dffa44d6ead2" name="a9193d066c57c254fa780dffa44d6ead2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9193d066c57c254fa780dffa44d6ead2">&#9670;&#160;</a></span>L1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> L1 = 5.99999999999994648725<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-01</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab4f2af2d03ee993e80af6cd555995ba3" name="ab4f2af2d03ee993e80af6cd555995ba3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4f2af2d03ee993e80af6cd555995ba3">&#9670;&#160;</a></span>L2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> L2 = 4.28571428578550184252<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-01</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed3752b4dfdf0d73c8373223372cefdf" name="aed3752b4dfdf0d73c8373223372cefdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed3752b4dfdf0d73c8373223372cefdf">&#9670;&#160;</a></span>L3</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> L3 = 3.33333329818377432918<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-01</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8af4e2fa5373a5bb4ec25cf229ea2112" name="a8af4e2fa5373a5bb4ec25cf229ea2112"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8af4e2fa5373a5bb4ec25cf229ea2112">&#9670;&#160;</a></span>L4</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> L4 = 2.72728123808534006489<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-01</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4819421914abb0a987823fa300c91367" name="a4819421914abb0a987823fa300c91367"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4819421914abb0a987823fa300c91367">&#9670;&#160;</a></span>L5</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> L5 = 2.30660745775561754067<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-01</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abda6613959ce97aa6c27f73c24107f3c" name="abda6613959ce97aa6c27f73c24107f3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abda6613959ce97aa6c27f73c24107f3c">&#9670;&#160;</a></span>L6</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> L6 = 2.06975017800338417784<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-01</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a198f344bcd8a81db27e27d86b415732c" name="a198f344bcd8a81db27e27d86b415732c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a198f344bcd8a81db27e27d86b415732c">&#9670;&#160;</a></span>lg2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> lg2 = 6.93147180559945286227<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-01</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaed368a0586e4b33d77190f6bc0a2c12" name="aaed368a0586e4b33d77190f6bc0a2c12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaed368a0586e4b33d77190f6bc0a2c12">&#9670;&#160;</a></span>lg2_h</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> lg2_h = 6.93147182464599609375<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-01</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac8ccfbb1447cd5a3654caa452b5af06d" name="ac8ccfbb1447cd5a3654caa452b5af06d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8ccfbb1447cd5a3654caa452b5af06d">&#9670;&#160;</a></span>lg2_l</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> lg2_l = -1.90465429995776804525<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-09</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af7c2dc72bb970fef4e6313293cadfe95" name="af7c2dc72bb970fef4e6313293cadfe95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7c2dc72bb970fef4e6313293cadfe95">&#9670;&#160;</a></span>lx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lx = <a class="el" href="e__acos_8c.html#a3cca7db54972a137bd79859f611cb1ae">__LO</a>(<a class="el" href="e__atan2_8c.html#a69bf0237253cf28a9de66969ab9b2fc2">x</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d5d22bdb3cf920dd706c9a1f94f376c" name="a6d5d22bdb3cf920dd706c9a1f94f376c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d5d22bdb3cf920dd706c9a1f94f376c">&#9670;&#160;</a></span>ly</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ly = <a class="el" href="e__acos_8c.html#a3cca7db54972a137bd79859f611cb1ae">__LO</a>(<a class="el" href="e__atan2_8c.html#ad0c8a89970b31aee1615bb4ef6710a45">y</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeab71244afb687f16d8c4f5ee9d6ef0e" name="aeab71244afb687f16d8c4f5ee9d6ef0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeab71244afb687f16d8c4f5ee9d6ef0e">&#9670;&#160;</a></span>n</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">n = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa9fd4781bcde41340d170d181f3a7ebe" name="aa9fd4781bcde41340d170d181f3a7ebe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9fd4781bcde41340d170d181f3a7ebe">&#9670;&#160;</a></span>one</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> one = 1.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5881bb79487ca9e4d7be66d8afc0b1ec" name="a5881bb79487ca9e4d7be66d8afc0b1ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5881bb79487ca9e4d7be66d8afc0b1ec">&#9670;&#160;</a></span>ovt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> ovt = 8.0085662595372944372<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-0017</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae9b9320e33001b4c0a8b3a82bf72a257" name="ae9b9320e33001b4c0a8b3a82bf72a257"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9b9320e33001b4c0a8b3a82bf72a257">&#9670;&#160;</a></span>P1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> P1 = 1.66666666666666019037<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-01</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae73c99bbe9a9e26ecd3df2050099de5a" name="ae73c99bbe9a9e26ecd3df2050099de5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae73c99bbe9a9e26ecd3df2050099de5a">&#9670;&#160;</a></span>P2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> P2 = -2.77777777770155933842<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-03</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77f33ec819ba1e95f7fd70c5d7674265" name="a77f33ec819ba1e95f7fd70c5d7674265"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77f33ec819ba1e95f7fd70c5d7674265">&#9670;&#160;</a></span>P3</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> P3 = 6.61375632143793436117<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-05</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c22cde593636615afd131424c876de8" name="a6c22cde593636615afd131424c876de8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c22cde593636615afd131424c876de8">&#9670;&#160;</a></span>P4</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> P4 = -1.65339022054652515390e-06</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5ca102e89dcc2d20adc2fdc191b26238" name="a5ca102e89dcc2d20adc2fdc191b26238"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ca102e89dcc2d20adc2fdc191b26238">&#9670;&#160;</a></span>P5</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> P5 = 4.13813679705723846039<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">e</a>-08</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4811e3b20aa084947e20ad2c10c941ee" name="a4811e3b20aa084947e20ad2c10c941ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4811e3b20aa084947e20ad2c10c941ee">&#9670;&#160;</a></span>p_h</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">p_h = <a class="el" href="e__pow_8c.html#a6277e2a7446059985dc9bcf0a4ac1a8f">u</a> + <a class="el" href="e__pow_8c.html#ac4055e3a20b6b3af3d10590ea446ef6c">v</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af14d03723ec22be0994af92b83f1d134" name="af14d03723ec22be0994af92b83f1d134"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af14d03723ec22be0994af92b83f1d134">&#9670;&#160;</a></span>p_l</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">p_l = <a class="el" href="e__pow_8c.html#ac4055e3a20b6b3af3d10590ea446ef6c">v</a> - (<a class="el" href="e__pow_8c.html#a4811e3b20aa084947e20ad2c10c941ee">p_h</a> - <a class="el" href="e__pow_8c.html#a6277e2a7446059985dc9bcf0a4ac1a8f">u</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a343b1c4a3ea721b2d640fc8700db0f36" name="a343b1c4a3ea721b2d640fc8700db0f36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a343b1c4a3ea721b2d640fc8700db0f36">&#9670;&#160;</a></span>qqq</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">qqq = <a class="el" href="e__pow_8c.html#a8fa675eb2fcec5b95d9d21c670da7f30">ax</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a514f1b439f404f86f77090fa9edc96ce" name="a514f1b439f404f86f77090fa9edc96ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a514f1b439f404f86f77090fa9edc96ce">&#9670;&#160;</a></span>r</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">r = <a class="el" href="e__pow_8c.html#a2e63e71737e8b6802b81f6a7c5ca6a0a">s2</a> * <a class="el" href="e__pow_8c.html#a2e63e71737e8b6802b81f6a7c5ca6a0a">s2</a> * (<a class="el" href="e__pow_8c.html#a9193d066c57c254fa780dffa44d6ead2">L1</a> + <a class="el" href="e__pow_8c.html#a2e63e71737e8b6802b81f6a7c5ca6a0a">s2</a> * (<a class="el" href="e__pow_8c.html#ab4f2af2d03ee993e80af6cd555995ba3">L2</a> + <a class="el" href="e__pow_8c.html#a2e63e71737e8b6802b81f6a7c5ca6a0a">s2</a> * (<a class="el" href="e__pow_8c.html#aed3752b4dfdf0d73c8373223372cefdf">L3</a> + <a class="el" href="e__pow_8c.html#a2e63e71737e8b6802b81f6a7c5ca6a0a">s2</a> * (<a class="el" href="e__pow_8c.html#a8af4e2fa5373a5bb4ec25cf229ea2112">L4</a> + <a class="el" href="e__pow_8c.html#a2e63e71737e8b6802b81f6a7c5ca6a0a">s2</a> * (<a class="el" href="e__pow_8c.html#a4819421914abb0a987823fa300c91367">L5</a> + <a class="el" href="e__pow_8c.html#a2e63e71737e8b6802b81f6a7c5ca6a0a">s2</a> * <a class="el" href="e__pow_8c.html#abda6613959ce97aa6c27f73c24107f3c">L6</a>)))))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3691308f2a4c2f6983f2880d32e29c84" name="a3691308f2a4c2f6983f2880d32e29c84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3691308f2a4c2f6983f2880d32e29c84">&#9670;&#160;</a></span>s</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">s = <a class="el" href="e__pow_8c.html#a6277e2a7446059985dc9bcf0a4ac1a8f">u</a> * <a class="el" href="e__pow_8c.html#ac4055e3a20b6b3af3d10590ea446ef6c">v</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e63e71737e8b6802b81f6a7c5ca6a0a" name="a2e63e71737e8b6802b81f6a7c5ca6a0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e63e71737e8b6802b81f6a7c5ca6a0a">&#9670;&#160;</a></span>s2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">s2 = <a class="el" href="e__acos_8c.html#a3691308f2a4c2f6983f2880d32e29c84">s</a> * <a class="el" href="e__acos_8c.html#a3691308f2a4c2f6983f2880d32e29c84">s</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a206a4fde66e28459632f15f4997debde" name="a206a4fde66e28459632f15f4997debde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a206a4fde66e28459632f15f4997debde">&#9670;&#160;</a></span>s_h</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">s_h = <a class="el" href="e__acos_8c.html#a3691308f2a4c2f6983f2880d32e29c84">s</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7310a9314b4dec4cfeff4fc82f7899a2" name="a7310a9314b4dec4cfeff4fc82f7899a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7310a9314b4dec4cfeff4fc82f7899a2">&#9670;&#160;</a></span>s_l</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">s_l = <a class="el" href="e__pow_8c.html#ac4055e3a20b6b3af3d10590ea446ef6c">v</a> * ((<a class="el" href="e__pow_8c.html#a6277e2a7446059985dc9bcf0a4ac1a8f">u</a> - <a class="el" href="e__pow_8c.html#a206a4fde66e28459632f15f4997debde">s_h</a> * <a class="el" href="e__pow_8c.html#a2f12d91adff30f5292b045b5c3bfc6bc">t_h</a>) - <a class="el" href="e__pow_8c.html#a206a4fde66e28459632f15f4997debde">s_h</a> * <a class="el" href="e__pow_8c.html#a823c4ca9c5d9da38da71c61eef1ecd1d">t_l</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaccc9105df5383111407fd5b41255e23" name="aaccc9105df5383111407fd5b41255e23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaccc9105df5383111407fd5b41255e23">&#9670;&#160;</a></span>t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t = (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a>)<a class="el" href="e__fmod_8c.html#aeab71244afb687f16d8c4f5ee9d6ef0e">n</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a469994e78f66a44815c015b7f4b8b2f8" name="a469994e78f66a44815c015b7f4b8b2f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a469994e78f66a44815c015b7f4b8b2f8">&#9670;&#160;</a></span>t1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t1 = (((<a class="el" href="e__pow_8c.html#a66d87b71aebd6356ccbbc29f1b1bacdb">z_h</a> + <a class="el" href="e__pow_8c.html#a5f159f8aa0a9ad389d3320f19cdc9028">z_l</a>) + <a class="el" href="e__pow_8c.html#ab59b2a2234b62529ee07527eea83b019">dp_h</a>[<a class="el" href="e__atan2_8c.html#a333de954dda4eeee5fdb7339c9ff6f2f">k</a>]) + <a class="el" href="e__asin_8c.html#aaccc9105df5383111407fd5b41255e23">t</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a24aeadb733f27244ec14e4cba82eeee9" name="a24aeadb733f27244ec14e4cba82eeee9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24aeadb733f27244ec14e4cba82eeee9">&#9670;&#160;</a></span>t2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t2 = <a class="el" href="e__pow_8c.html#a5f159f8aa0a9ad389d3320f19cdc9028">z_l</a> - (((<a class="el" href="e__pow_8c.html#a469994e78f66a44815c015b7f4b8b2f8">t1</a> - <a class="el" href="e__asin_8c.html#aaccc9105df5383111407fd5b41255e23">t</a>) - <a class="el" href="e__pow_8c.html#ab59b2a2234b62529ee07527eea83b019">dp_h</a>[<a class="el" href="e__atan2_8c.html#a333de954dda4eeee5fdb7339c9ff6f2f">k</a>]) - <a class="el" href="e__pow_8c.html#a66d87b71aebd6356ccbbc29f1b1bacdb">z_h</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f12d91adff30f5292b045b5c3bfc6bc" name="a2f12d91adff30f5292b045b5c3bfc6bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f12d91adff30f5292b045b5c3bfc6bc">&#9670;&#160;</a></span>t_h</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t_h = <a class="el" href="JMATrigonometric_8cpp.html#a2638d670e539e2d2badac3f28d510684">zero</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a823c4ca9c5d9da38da71c61eef1ecd1d" name="a823c4ca9c5d9da38da71c61eef1ecd1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a823c4ca9c5d9da38da71c61eef1ecd1d">&#9670;&#160;</a></span>t_l</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">t_l = <a class="el" href="e__pow_8c.html#a8fa675eb2fcec5b95d9d21c670da7f30">ax</a> - (<a class="el" href="e__pow_8c.html#a2f12d91adff30f5292b045b5c3bfc6bc">t_h</a> - <a class="el" href="e__pow_8c.html#a6e7ef6854ced1bbafad4f950176aafa1">bp</a>[<a class="el" href="e__atan2_8c.html#a333de954dda4eeee5fdb7339c9ff6f2f">k</a>])</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1362beccebaa4373a2b6307298a2507b" name="a1362beccebaa4373a2b6307298a2507b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1362beccebaa4373a2b6307298a2507b">&#9670;&#160;</a></span>tiny</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> tiny = 1.0e-300</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adcb166769d679c40d87d4bf06070fb66" name="adcb166769d679c40d87d4bf06070fb66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcb166769d679c40d87d4bf06070fb66">&#9670;&#160;</a></span>two</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> two = 2.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5565fa210bda7e3b213e3b754da4ea19" name="a5565fa210bda7e3b213e3b754da4ea19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5565fa210bda7e3b213e3b754da4ea19">&#9670;&#160;</a></span>two53</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> two53 = 9007199254740992.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6277e2a7446059985dc9bcf0a4ac1a8f" name="a6277e2a7446059985dc9bcf0a4ac1a8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6277e2a7446059985dc9bcf0a4ac1a8f">&#9670;&#160;</a></span>u</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">u = <a class="el" href="e__pow_8c.html#a8fa675eb2fcec5b95d9d21c670da7f30">ax</a> - <a class="el" href="e__pow_8c.html#a6e7ef6854ced1bbafad4f950176aafa1">bp</a>[<a class="el" href="e__atan2_8c.html#a333de954dda4eeee5fdb7339c9ff6f2f">k</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac4055e3a20b6b3af3d10590ea446ef6c" name="ac4055e3a20b6b3af3d10590ea446ef6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4055e3a20b6b3af3d10590ea446ef6c">&#9670;&#160;</a></span>v</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">v = <a class="el" href="JASAramStream_8cpp.html#a6b097ad1e016560fb5641916e593d4bb">one</a> / (<a class="el" href="e__pow_8c.html#a8fa675eb2fcec5b95d9d21c670da7f30">ax</a> + <a class="el" href="e__pow_8c.html#a6e7ef6854ced1bbafad4f950176aafa1">bp</a>[<a class="el" href="e__atan2_8c.html#a333de954dda4eeee5fdb7339c9ff6f2f">k</a>])</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad57484016654da87125db86f4227ea3" name="aad57484016654da87125db86f4227ea3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad57484016654da87125db86f4227ea3">&#9670;&#160;</a></span>w</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">w = <a class="el" href="e__pow_8c.html#ac4055e3a20b6b3af3d10590ea446ef6c">v</a> - (<a class="el" href="e__pow_8c.html#ae236e66cf6f1cf95423c52b30bbd6f37">z</a> - <a class="el" href="e__pow_8c.html#a6277e2a7446059985dc9bcf0a4ac1a8f">u</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a238d34746f9536479a2597c534801d39" name="a238d34746f9536479a2597c534801d39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a238d34746f9536479a2597c534801d39">&#9670;&#160;</a></span>x</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="e__atan2_8c.html#ad0c8a89970b31aee1615bb4ef6710a45">y</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> x</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a06a202d81fdafd8ac3f2518206202eb0" name="a06a202d81fdafd8ac3f2518206202eb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06a202d81fdafd8ac3f2518206202eb0">&#9670;&#160;</a></span>y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> y <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> y</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac3b72e5b77595ca2340ecf8ccfe5fd99" name="ac3b72e5b77595ca2340ecf8ccfe5fd99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3b72e5b77595ca2340ecf8ccfe5fd99">&#9670;&#160;</a></span>y1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> y1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div>
+<div class="line">    <span class="keywordtype">double</span> <a class="code hl_variable" href="e__pow_8c.html#ae236e66cf6f1cf95423c52b30bbd6f37">z</a>, <a class="code hl_variable" href="e__pow_8c.html#a8fa675eb2fcec5b95d9d21c670da7f30">ax</a>, <a class="code hl_variable" href="e__pow_8c.html#a66d87b71aebd6356ccbbc29f1b1bacdb">z_h</a>, <a class="code hl_variable" href="e__pow_8c.html#a5f159f8aa0a9ad389d3320f19cdc9028">z_l</a>, <a class="code hl_variable" href="e__pow_8c.html#a4811e3b20aa084947e20ad2c10c941ee">p_h</a>, <a class="code hl_variable" href="e__pow_8c.html#af14d03723ec22be0994af92b83f1d134">p_l</a></div>
+<div class="ttc" id="ae__pow_8c_html_a4811e3b20aa084947e20ad2c10c941ee"><div class="ttname"><a href="e__pow_8c.html#a4811e3b20aa084947e20ad2c10c941ee">p_h</a></div><div class="ttdeci">p_h</div><div class="ttdef"><b>Definition</b> e_pow.c:331</div></div>
+<div class="ttc" id="ae__pow_8c_html_a5f159f8aa0a9ad389d3320f19cdc9028"><div class="ttname"><a href="e__pow_8c.html#a5f159f8aa0a9ad389d3320f19cdc9028">z_l</a></div><div class="ttdeci">z_l</div><div class="ttdef"><b>Definition</b> e_pow.c:335</div></div>
+<div class="ttc" id="ae__pow_8c_html_a66d87b71aebd6356ccbbc29f1b1bacdb"><div class="ttname"><a href="e__pow_8c.html#a66d87b71aebd6356ccbbc29f1b1bacdb">z_h</a></div><div class="ttdeci">z_h</div><div class="ttdef"><b>Definition</b> e_pow.c:334</div></div>
+<div class="ttc" id="ae__pow_8c_html_a8fa675eb2fcec5b95d9d21c670da7f30"><div class="ttname"><a href="e__pow_8c.html#a8fa675eb2fcec5b95d9d21c670da7f30">ax</a></div><div class="ttdeci">ax</div><div class="ttdef"><b>Definition</b> e_pow.c:233</div></div>
+<div class="ttc" id="ae__pow_8c_html_ae236e66cf6f1cf95423c52b30bbd6f37"><div class="ttname"><a href="e__pow_8c.html#ae236e66cf6f1cf95423c52b30bbd6f37">z</a></div><div class="ttdeci">z</div><div class="ttdef"><b>Definition</b> e_pow.c:390</div></div>
+<div class="ttc" id="ae__pow_8c_html_af14d03723ec22be0994af92b83f1d134"><div class="ttname"><a href="e__pow_8c.html#af14d03723ec22be0994af92b83f1d134">p_l</a></div><div class="ttdeci">p_l</div><div class="ttdef"><b>Definition</b> e_pow.c:333</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae48b318a4d1dd001a851c3f715d0b19c" name="ae48b318a4d1dd001a851c3f715d0b19c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae48b318a4d1dd001a851c3f715d0b19c">&#9670;&#160;</a></span>yisint</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> yisint</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae236e66cf6f1cf95423c52b30bbd6f37" name="ae236e66cf6f1cf95423c52b30bbd6f37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae236e66cf6f1cf95423c52b30bbd6f37">&#9670;&#160;</a></span>z</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">return</a> <a class="el" href="e__acos_8c.html#a3691308f2a4c2f6983f2880d32e29c84">s</a> * z = <a class="el" href="e__pow_8c.html#a6277e2a7446059985dc9bcf0a4ac1a8f">u</a> + <a class="el" href="e__pow_8c.html#ac4055e3a20b6b3af3d10590ea446ef6c">v</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66d87b71aebd6356ccbbc29f1b1bacdb" name="a66d87b71aebd6356ccbbc29f1b1bacdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66d87b71aebd6356ccbbc29f1b1bacdb">&#9670;&#160;</a></span>z_h</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">z_h = <a class="el" href="e__pow_8c.html#a1b08020cf2ce7a9d36a8a0e89a70b854">cp_h</a> * <a class="el" href="e__pow_8c.html#a4811e3b20aa084947e20ad2c10c941ee">p_h</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f159f8aa0a9ad389d3320f19cdc9028" name="a5f159f8aa0a9ad389d3320f19cdc9028"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f159f8aa0a9ad389d3320f19cdc9028">&#9670;&#160;</a></span>z_l</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">z_l = <a class="el" href="e__pow_8c.html#ab7842956f53da31699af7175ea49ecb2">cp_l</a> * <a class="el" href="e__pow_8c.html#a4811e3b20aa084947e20ad2c10c941ee">p_h</a> + <a class="el" href="e__pow_8c.html#af14d03723ec22be0994af92b83f1d134">p_l</a> * <a class="el" href="e__pow_8c.html#a6115063c1e5679414aa6894485ec51e4">cp</a> + <a class="el" href="e__pow_8c.html#a9cab927c031d673c4c8d8be12291590b">dp_l</a>[<a class="el" href="e__atan2_8c.html#a333de954dda4eeee5fdb7339c9ff6f2f">k</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a81f56e7188d96ccb5f409abf8104f5d5" name="a81f56e7188d96ccb5f409abf8104f5d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81f56e7188d96ccb5f409abf8104f5d5">&#9670;&#160;</a></span>zero</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">double</a> zero = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="dir_db1709413e4853dbf382363385ab04a7.html">PowerPC_EABI_Support</a></li><li class="navelem"><a class="el" href="dir_0e4db8b1a28362b634df487c2f26278a.html">MSL</a></li><li class="navelem"><a class="el" href="dir_0d37b77abbd65600f5660cf0deb652c9.html">MSL_C</a></li><li class="navelem"><a class="el" href="dir_060b9706108afa38d31039ae513811f4.html">MSL_Common_Embedded</a></li><li class="navelem"><a class="el" href="dir_dfe3f2e731458260e44080bc5e43588d.html">Math</a></li><li class="navelem"><a class="el" href="dir_ef338b8d3e66a9106d54d7cb9f77afb9.html">Double_precision</a></li><li class="navelem"><a class="el" href="e__pow_8c.html">e_pow.c</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

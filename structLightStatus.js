@@ -1,0 +1,25 @@
+var structLightStatus =
+[
+    [ "field_0x0", "structLightStatus.html#ac34394817a28b105ef385f9306bfc310", null ],
+    [ "field_0x18", "structLightStatus.html#a1e2f6d7412654af0ae838455a2c52585", null ],
+    [ "field_0x1c", "structLightStatus.html#a4a85931544e8e6158794b877a3ff107a", null ],
+    [ "field_0x28", "structLightStatus.html#a7b39a26f117ae646eb20f8991452e43a", null ],
+    [ "field_0x34", "structLightStatus.html#a0c875efb1b75df633a1c9ed3d94d7c58", null ],
+    [ "field_0x58", "structLightStatus.html#a8565b6830ea47f5921602ddff6d8764c", null ],
+    [ "field_0x88", "structLightStatus.html#ab7ac8a4f882f2f27317c2f663ae03daf", null ],
+    [ "field_0x8c", "structLightStatus.html#ac356a97eca2a79ee4768e9a54fe36ddc", null ],
+    [ "field_0x90", "structLightStatus.html#adea5504ffbcdad61967e20a250eb47d6", null ],
+    [ "field_0x94", "structLightStatus.html#a203083f3b925ee5df644318d6f78f361", null ],
+    [ "field_0x98", "structLightStatus.html#a719372e8e2a83fca34ec7f657af957ba", null ],
+    [ "field_0xc", "structLightStatus.html#a81cb745bd880591893bf6c47695e2c79", null ],
+    [ "field_0xd8", "structLightStatus.html#aba9b37f7d239397bba1302c35af1e9eb", null ],
+    [ "field_0xdc", "structLightStatus.html#a6347c2f36b69318459cb0885c1848574", null ],
+    [ "field_0xe0", "structLightStatus.html#ab91266029ae9bdcaf36fd48074558fa3", null ],
+    [ "field_0xe4", "structLightStatus.html#a6b2c8213e5feadd402bb5dd3b5c60a27", null ],
+    [ "mCutoff", "structLightStatus.html#aa5056bc52bdaab6ef8a7199483e4a63e", null ],
+    [ "mDistFn", "structLightStatus.html#ae9452552404c1278fbb72fb6a9c9a67c", null ],
+    [ "mLightDir", "structLightStatus.html#a4c60379c907d440215ae88321158f874", null ],
+    [ "mRefBrightness", "structLightStatus.html#a715ef805e2e637781a6f4314119576ed", null ],
+    [ "mRefDist", "structLightStatus.html#a21910af5c54b07f9009d5e200b41c4cd", null ],
+    [ "mSpotFn", "structLightStatus.html#a73a6d641fee09d76e3facb7201857f38", null ]
+];

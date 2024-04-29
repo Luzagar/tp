@@ -1,0 +1,391 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: include/JSystem/J3DGraphBase/J3DGD.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('J3DGD_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">J3DGD.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="J3DGD_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef J3DGD_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define J3DGD_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="GDBase_8h.html">dolphin/gd/GDBase.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="}">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="J3DGD_8h.html#ad46fc4009717293074af5d154291a988">    6</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#ad46fc4009717293074af5d154291a988">J3DGDWrite_u8</a>(<a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> param) {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <a class="code hl_function" href="GDBase_8h.html#a2baaf49a11d6c7a762db73e7d33d25f7">__GDWrite</a>(param);</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>}</div>
+</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="J3DGD_8h.html#a8f240edb97f53c5205799c6eacb1f307">   10</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#a8f240edb97f53c5205799c6eacb1f307">J3DGDWrite_u16</a>(<a class="code hl_typedef" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> param) {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <a class="code hl_function" href="GDBase_8h.html#a2baaf49a11d6c7a762db73e7d33d25f7">__GDWrite</a>((param &amp; 0xffff) &gt;&gt; 8);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_function" href="GDBase_8h.html#a2baaf49a11d6c7a762db73e7d33d25f7">__GDWrite</a>(param &amp; 0xff);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>}</div>
+</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="J3DGD_8h.html#a2b53f40f6e1000e1e269b820ee286b03">   15</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#a2b53f40f6e1000e1e269b820ee286b03">J3DGDWrite_u32</a>(<a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> param) {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_function" href="GDBase_8h.html#a2baaf49a11d6c7a762db73e7d33d25f7">__GDWrite</a>((param &gt;&gt; 24) &amp; 0xff);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_function" href="GDBase_8h.html#a2baaf49a11d6c7a762db73e7d33d25f7">__GDWrite</a>((param &gt;&gt; 16) &amp; 0xff);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_function" href="GDBase_8h.html#a2baaf49a11d6c7a762db73e7d33d25f7">__GDWrite</a>((param &gt;&gt; 8) &amp; 0xff);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_function" href="GDBase_8h.html#a2baaf49a11d6c7a762db73e7d33d25f7">__GDWrite</a>(param &amp; 0xff);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>}</div>
+</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="J3DGD_8h.html#a1453ae30cdda1afa1994522e45502a9b">   22</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#a1453ae30cdda1afa1994522e45502a9b">J3DGDWrite_f32</a>(<a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> param) {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> tmp = *(<a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>*)&amp;param;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_function" href="J3DGD_8h.html#a2b53f40f6e1000e1e269b820ee286b03">J3DGDWrite_u32</a>(tmp);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}</div>
+</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="J3DGD_8h.html#a5fd7092651797aed5ac6cef8328b7738">   27</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#a5fd7092651797aed5ac6cef8328b7738">J3DGDWriteBPCmd</a>(<a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> cmd) {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_function" href="J3DGD_8h.html#ad46fc4009717293074af5d154291a988">J3DGDWrite_u8</a>(0x61);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_function" href="J3DGD_8h.html#a2b53f40f6e1000e1e269b820ee286b03">J3DGDWrite_u32</a>(cmd);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>}</div>
+</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="J3DGD_8h.html#a5b7c7df06a9c87c0289576cb35714d8d">   32</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#a5b7c7df06a9c87c0289576cb35714d8d">J3DFifoLoadBPCmd</a>(<a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> cmd) {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_variable" href="gx_8h.html#aedd739e8318efcd57fed5334b2981fce">GXWGFifo</a>.<a class="code hl_variable" href="unionPPCWGPipe.html#a7aa5acde9b7fb458a57784be40de5248">u8</a> = 0x61;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_variable" href="gx_8h.html#aedd739e8318efcd57fed5334b2981fce">GXWGFifo</a>.<a class="code hl_variable" href="unionPPCWGPipe.html#a36f6c6095ee0cd5b7e1ad444ecd818af">u32</a> = cmd;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="J3DGD_8h.html#aad8faec2cf54729a6ff51e040f5e2571">   37</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#aad8faec2cf54729a6ff51e040f5e2571">J3DGDWriteXFCmd</a>(<a class="code hl_typedef" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> addr, <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> cmd) {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_function" href="J3DGD_8h.html#ad46fc4009717293074af5d154291a988">J3DGDWrite_u8</a>(0x10);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_function" href="J3DGD_8h.html#a8f240edb97f53c5205799c6eacb1f307">J3DGDWrite_u16</a>(0);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_function" href="J3DGD_8h.html#a8f240edb97f53c5205799c6eacb1f307">J3DGDWrite_u16</a>(addr);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_function" href="J3DGD_8h.html#a2b53f40f6e1000e1e269b820ee286b03">J3DGDWrite_u32</a>(cmd);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>}</div>
+</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="J3DGD_8h.html#a2a4e64522e1990ff86cde1f5b8f1f4cc">   44</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#a2a4e64522e1990ff86cde1f5b8f1f4cc">J3DGDWriteXFCmdHdr</a>(<a class="code hl_typedef" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> addr, <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> len) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_function" href="J3DGD_8h.html#ad46fc4009717293074af5d154291a988">J3DGDWrite_u8</a>(0x10);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_function" href="J3DGD_8h.html#a8f240edb97f53c5205799c6eacb1f307">J3DGDWrite_u16</a>(len - 1);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <a class="code hl_function" href="J3DGD_8h.html#a8f240edb97f53c5205799c6eacb1f307">J3DGDWrite_u16</a>(addr);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>}</div>
+</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="J3DGD_8h.html#ae67a56d8f2716b6d8d1a7054b5522837">   50</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#ae67a56d8f2716b6d8d1a7054b5522837">J3DFifoWriteXFCmdHdr</a>(<a class="code hl_typedef" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> addr, <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> len) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_variable" href="gx_8h.html#aedd739e8318efcd57fed5334b2981fce">GXWGFifo</a>.<a class="code hl_variable" href="unionPPCWGPipe.html#a7aa5acde9b7fb458a57784be40de5248">u8</a> = 0x10;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_variable" href="gx_8h.html#aedd739e8318efcd57fed5334b2981fce">GXWGFifo</a>.<a class="code hl_variable" href="unionPPCWGPipe.html#a54691399b526673acdb012dd9db1b3d1">u16</a> = len - 1;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_variable" href="gx_8h.html#aedd739e8318efcd57fed5334b2981fce">GXWGFifo</a>.<a class="code hl_variable" href="unionPPCWGPipe.html#a54691399b526673acdb012dd9db1b3d1">u16</a> = addr;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="J3DGD_8h.html#a796ecd2d75c60cac8dcb209f78c1de4f">   56</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#a796ecd2d75c60cac8dcb209f78c1de4f">J3DGXCmd1f32ptr</a>(<a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>* value) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_variable" href="gx_8h.html#aedd739e8318efcd57fed5334b2981fce">GXWGFifo</a>.<a class="code hl_variable" href="unionPPCWGPipe.html#a36f6c6095ee0cd5b7e1ad444ecd818af">u32</a> = *(<a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>*)value;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
+</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="J3DGD_8h.html#a54aaf4bd9170f3123bf9d70ad867bfdc">   60</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#a54aaf4bd9170f3123bf9d70ad867bfdc">J3DGXCmd1f32</a>(<a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> value) {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <a class="code hl_variable" href="gx_8h.html#aedd739e8318efcd57fed5334b2981fce">GXWGFifo</a>.<a class="code hl_variable" href="unionPPCWGPipe.html#a36f6c6095ee0cd5b7e1ad444ecd818af">u32</a> = *(<a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>*)&amp;value;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="J3DGD_8h.html#a27c105b04e09ae6090e78c6cb119b909">   64</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#a27c105b04e09ae6090e78c6cb119b909">J3DGDWriteCPCmd</a>(<a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> reg, <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> value) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <a class="code hl_function" href="J3DGD_8h.html#ad46fc4009717293074af5d154291a988">J3DGDWrite_u8</a>(8);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_function" href="J3DGD_8h.html#ad46fc4009717293074af5d154291a988">J3DGDWrite_u8</a>(reg);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_function" href="J3DGD_8h.html#a2b53f40f6e1000e1e269b820ee286b03">J3DGDWrite_u32</a>(value);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
+</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#aec8aee9a0bc659e4db613fc44e8eca66">J3DGDSetGenMode</a>(<a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> texGenNum, <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> colorChanNum, <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> tevStageNum, <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> IndTexStageNum,</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                     <a class="code hl_typedef" href="GXEnum_8h.html#a8ebd97d771f1498dfbabc1a309411fd1">GXCullMode</a> cullMode);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#a22f4333c7347c715b9f2104226d46a39">J3DGDSetGenMode_3Param</a>(<a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> texGenNum, <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> tevStageNum, <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> indTexStageNum);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#ac6cb5f49bd9b8d865c0f299e94aa1f08">J3DGDSetLightAttn</a>(<a class="code hl_typedef" href="GXEnum_8h.html#a8c90da9fe0eb1c207af48ec850c251cd">GXLightID</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#aa35594d7081102797c6dbd22d97c0a17">J3DGDSetLightColor</a>(<a class="code hl_typedef" href="GXEnum_8h.html#a8c90da9fe0eb1c207af48ec850c251cd">GXLightID</a>, <a class="code hl_struct" href="struct__GXColor.html">GXColor</a>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#ab1650c55c110f636f384fc5ff55399e3">J3DGDSetLightPos</a>(<a class="code hl_typedef" href="GXEnum_8h.html#a8c90da9fe0eb1c207af48ec850c251cd">GXLightID</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#aa8f8d11c6c0e7850626f31bbec28d154">J3DGDSetLightDir</a>(<a class="code hl_typedef" href="GXEnum_8h.html#a8c90da9fe0eb1c207af48ec850c251cd">GXLightID</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#afb5606113429afb808cd26f5e880e929">J3DGDSetVtxAttrFmtv</a>(<a class="code hl_typedef" href="GXEnum_8h.html#a8d71c0c78270e3cbcb3055718cc7aaf8">GXVtxFmt</a>, <a class="code hl_struct" href="struct__GXVtxAttrFmtList.html">GXVtxAttrFmtList</a> <span class="keyword">const</span>*, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#a995296c27d077d0cb34b36883dc8759c">J3DGDSetTexCoordGen</a>(<a class="code hl_typedef" href="GXEnum_8h.html#aeb060846c8733660a9e4d636cc96e024">GXTexGenType</a>, <a class="code hl_typedef" href="GXEnum_8h.html#a544eb86bef16f64fc579369f59607bcf">GXTexGenSrc</a>);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#aeaafbc05d2c1f18175c36d2acbc830dc">J3DGDSetTexCoordScale2</a>(<a class="code hl_typedef" href="GXEnum_8h.html#a2f2455ac28878d571f2ab991d5674999">GXTexCoordID</a>, <a class="code hl_typedef" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>, <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>, <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>, <a class="code hl_typedef" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>, <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>, <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#a5d5a20f4a1f9174844ac67418510d312">J3DGDSetTexLookupMode</a>(<a class="code hl_typedef" href="GXEnum_8h.html#a72532f5d20cdea292c5f2f9c296848ab">GXTexMapID</a>, <a class="code hl_typedef" href="GXEnum_8h.html#a941542cd63b0d32e8575d5dc52ff4d3a">GXTexWrapMode</a>, <a class="code hl_typedef" href="GXEnum_8h.html#a941542cd63b0d32e8575d5dc52ff4d3a">GXTexWrapMode</a>, <a class="code hl_typedef" href="GXEnum_8h.html#ae70c71779f89a5d9a1f0766a3bca73ae">GXTexFilter</a>, <a class="code hl_typedef" href="GXEnum_8h.html#ae70c71779f89a5d9a1f0766a3bca73ae">GXTexFilter</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>,</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                           <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>, <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>, <a class="code hl_typedef" href="GXEnum_8h.html#afc5e2b117fc78ae0ea90b91eee3e4ca9">GXAnisotropy</a>);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#aaa6a534354b837f56e038018b0986bac">J3DGDSetTexImgAttr</a>(<a class="code hl_typedef" href="GXEnum_8h.html#a72532f5d20cdea292c5f2f9c296848ab">GXTexMapID</a>, <a class="code hl_typedef" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>, <a class="code hl_typedef" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>, <a class="code hl_typedef" href="GXEnum_8h.html#a723655c1ff5eb6097db962f01fb71adf">GXTexFmt</a>);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#a1705a9ffda1621d44df46519aa408279">J3DGDSetTexImgPtr</a>(<a class="code hl_typedef" href="GXEnum_8h.html#a72532f5d20cdea292c5f2f9c296848ab">GXTexMapID</a>, <span class="keywordtype">void</span>*);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#acd6f22221a8642999d951a74fb19d5b2">J3DGDSetTexImgPtrRaw</a>(<a class="code hl_typedef" href="GXEnum_8h.html#a72532f5d20cdea292c5f2f9c296848ab">GXTexMapID</a>, <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="J3DGD_8h.html#aa3b8b5f3700aeea8b9d3bf43884d261b">   85</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#aa3b8b5f3700aeea8b9d3bf43884d261b">J3DGDSetTexTlut</a>(<a class="code hl_typedef" href="GXEnum_8h.html#a72532f5d20cdea292c5f2f9c296848ab">GXTexMapID</a>, <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>, <a class="code hl_enumeration" href="GXEnum_8h.html#a745250e9e2de58304b8778cfc168f337">_GXTlutFmt</a>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="J3DGD_8h.html#a92fe00d9d309e5c05f9d7c9cfe94dcfc">   86</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#a92fe00d9d309e5c05f9d7c9cfe94dcfc">J3DGDLoadTlut</a>(<span class="keywordtype">void</span>*, <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>, <a class="code hl_enumeration" href="GXEnum_8h.html#a45394af7988176d9397cbbaf1cf06761">_GXTlutSize</a>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="J3DGD_8h.html#a178bb88397a536927e428b0812345572">   87</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#a178bb88397a536927e428b0812345572">J3DGDSetIndTexMtx</a>(<a class="code hl_typedef" href="GXEnum_8h.html#aa6004ad58bbea1d2e745b085ec630a68">GXIndTexMtxID</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> (*)[3], <a class="code hl_typedef" href="types_8h.html#a151f780fb455885061d3b77ec1c90c03">s8</a>);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#a700bdfe53fe7369123b9f04e1e02fdbb">J3DGDSetIndTexCoordScale</a>(<a class="code hl_typedef" href="GXEnum_8h.html#a6071d48e51a41189dc2e4afd7ebcdd53">GXIndTexStageID</a>, <a class="code hl_typedef" href="GXEnum_8h.html#a5f772954bc11a1b271fa039b6bb5bd2d">GXIndTexScale</a>, <a class="code hl_typedef" href="GXEnum_8h.html#a5f772954bc11a1b271fa039b6bb5bd2d">GXIndTexScale</a>, <a class="code hl_typedef" href="GXEnum_8h.html#a5f772954bc11a1b271fa039b6bb5bd2d">GXIndTexScale</a>,</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                              <a class="code hl_typedef" href="GXEnum_8h.html#a5f772954bc11a1b271fa039b6bb5bd2d">GXIndTexScale</a>);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#a6548426033e92ade2aa4559806c5d0d5">J3DGDSetIndTexOrder</a>(<a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>, <a class="code hl_typedef" href="GXEnum_8h.html#a2f2455ac28878d571f2ab991d5674999">GXTexCoordID</a>, <a class="code hl_typedef" href="GXEnum_8h.html#a72532f5d20cdea292c5f2f9c296848ab">GXTexMapID</a>, <a class="code hl_typedef" href="GXEnum_8h.html#a2f2455ac28878d571f2ab991d5674999">GXTexCoordID</a>, <a class="code hl_typedef" href="GXEnum_8h.html#a72532f5d20cdea292c5f2f9c296848ab">GXTexMapID</a>, <a class="code hl_typedef" href="GXEnum_8h.html#a2f2455ac28878d571f2ab991d5674999">GXTexCoordID</a>,</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                         <a class="code hl_typedef" href="GXEnum_8h.html#a72532f5d20cdea292c5f2f9c296848ab">GXTexMapID</a>, <a class="code hl_typedef" href="GXEnum_8h.html#a2f2455ac28878d571f2ab991d5674999">GXTexCoordID</a>, <a class="code hl_typedef" href="GXEnum_8h.html#a72532f5d20cdea292c5f2f9c296848ab">GXTexMapID</a>);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#acae04b18a2561d03fd3bb006cba933d9">J3DGDSetTevOrder</a>(<a class="code hl_typedef" href="GXEnum_8h.html#ae07c276f29b2fd0c65d9f2772cfcbf7e">GXTevStageID</a>, <a class="code hl_typedef" href="GXEnum_8h.html#a2f2455ac28878d571f2ab991d5674999">GXTexCoordID</a>, <a class="code hl_typedef" href="GXEnum_8h.html#a72532f5d20cdea292c5f2f9c296848ab">GXTexMapID</a>, <a class="code hl_typedef" href="GXEnum_8h.html#abc4e79b15060ac94997a8953439ce6d4">GXChannelID</a>, <a class="code hl_typedef" href="GXEnum_8h.html#a2f2455ac28878d571f2ab991d5674999">GXTexCoordID</a>, <a class="code hl_typedef" href="GXEnum_8h.html#a72532f5d20cdea292c5f2f9c296848ab">GXTexMapID</a>,</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                      <a class="code hl_typedef" href="GXEnum_8h.html#abc4e79b15060ac94997a8953439ce6d4">GXChannelID</a>);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#a3e9f2776e9cd889f9b7e1740937c4497">J3DGDSetTevKColor</a>(<a class="code hl_typedef" href="GXEnum_8h.html#a0d886699634c73bdd2e2d872623f81d4">GXTevKColorID</a>, <a class="code hl_struct" href="struct__GXColor.html">GXColor</a>);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#a7748a582b43176cc113c63bcaab1e16a">J3DGDSetTevColorS10</a>(<a class="code hl_typedef" href="GXEnum_8h.html#adbfb165198529fd73511e6934ebb5b15">GXTevRegID</a>, <a class="code hl_struct" href="struct__GXColorS10.html">GXColorS10</a>);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#a94a0cb2794d9873fa2fdca87feee47b7">J3DGDSetFog</a>(<a class="code hl_typedef" href="GXEnum_8h.html#ad275bb84be0072c3ac0b2a3812877e4b">GXFogType</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_struct" href="struct__GXColor.html">GXColor</a>);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#aa39377616097b648ea57006832dd068e">J3DGDSetFogRangeAdj</a>(<a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>, <a class="code hl_typedef" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>, <a class="code hl_struct" href="struct__GXFogAdjTable.html">_GXFogAdjTable</a>*);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="J3DGD_8h.html#af13b10a8bbb5b98eaadab041c54fdad5">   98</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#af13b10a8bbb5b98eaadab041c54fdad5">J3DFifoLoadPosMtxImm</a>(<a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> (*)[4], <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="J3DGD_8h.html#a71277999ef0e72042d5114bb1eb161a6">   99</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#a71277999ef0e72042d5114bb1eb161a6">J3DFifoLoadNrmMtxImm</a>(<a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> (*)[4], <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="J3DGD_8h.html#a2c19be3360bdaed0945d5b743ea715da">  100</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#a2c19be3360bdaed0945d5b743ea715da">J3DFifoLoadNrmMtxImm3x3</a>(<a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> (*)[3], <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="J3DGD_8h.html#adb5c5a5971a9f0c6e1b71a494850794d">  101</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#adb5c5a5971a9f0c6e1b71a494850794d">J3DFifoLoadNrmMtxToTexMtx</a>(<a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> (*)[4], <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="J3DGD_8h.html#a33071156c8547cadf6c7f17de539704c">  102</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#a33071156c8547cadf6c7f17de539704c">J3DFifoLoadNrmMtxToTexMtx3x3</a>(<a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> (*)[3], <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#a9030956a0423dce7823e4ef59e912f68">J3DFifoLoadTexCached</a>(<a class="code hl_typedef" href="GXEnum_8h.html#a72532f5d20cdea292c5f2f9c296848ab">GXTexMapID</a>, <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>, <a class="code hl_typedef" href="GXEnum_8h.html#a7f56843917ede8336a10d8a79c426584">GXTexCacheSize</a>, <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>, <a class="code hl_typedef" href="GXEnum_8h.html#a7f56843917ede8336a10d8a79c426584">GXTexCacheSize</a>);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="foldopen" id="foldopen00105" data-start="{" data-end="}">
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="J3DGD_8h.html#ac03f25f700b96a4075ea28bfca5df842">  105</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#ac03f25f700b96a4075ea28bfca5df842">J3DFifoLoadIndx</a>(<a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> cmd, <a class="code hl_typedef" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> indx, <a class="code hl_typedef" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> addr) {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <a class="code hl_variable" href="gx_8h.html#aedd739e8318efcd57fed5334b2981fce">GXWGFifo</a>.<a class="code hl_variable" href="unionPPCWGPipe.html#a7aa5acde9b7fb458a57784be40de5248">u8</a> = cmd;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <a class="code hl_variable" href="gx_8h.html#aedd739e8318efcd57fed5334b2981fce">GXWGFifo</a>.<a class="code hl_variable" href="unionPPCWGPipe.html#a54691399b526673acdb012dd9db1b3d1">u16</a> = indx;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <a class="code hl_variable" href="gx_8h.html#aedd739e8318efcd57fed5334b2981fce">GXWGFifo</a>.<a class="code hl_variable" href="unionPPCWGPipe.html#a54691399b526673acdb012dd9db1b3d1">u16</a> = addr;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>}</div>
+</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="foldopen" id="foldopen00111" data-start="{" data-end="}">
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="J3DGD_8h.html#aa3b249ffac367d6ea84b6254a58dc49d">  111</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#aa3b249ffac367d6ea84b6254a58dc49d">J3DGDSetNumChans</a>(<a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> numChans) {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <a class="code hl_function" href="J3DGD_8h.html#aad8faec2cf54729a6ff51e040f5e2571">J3DGDWriteXFCmd</a>(0x1009, numChans);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>}</div>
+</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="foldopen" id="foldopen00115" data-start="{" data-end="}">
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="J3DGD_8h.html#a3d59162dea2c78ebb8031fba82144f46">  115</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="J3DGD_8h.html#a3d59162dea2c78ebb8031fba82144f46">J3DGDSetNumTexGens</a>(<a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> numTexGens) {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <a class="code hl_function" href="J3DGD_8h.html#aad8faec2cf54729a6ff51e040f5e2571">J3DGDWriteXFCmd</a>(0x103f, numTexGens);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>}</div>
+</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="preprocessor">#endif </span><span class="comment">/* J3DGD_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aGDBase_8h_html"><div class="ttname"><a href="GDBase_8h.html">GDBase.h</a></div></div>
+<div class="ttc" id="aGDBase_8h_html_a2baaf49a11d6c7a762db73e7d33d25f7"><div class="ttname"><a href="GDBase_8h.html#a2baaf49a11d6c7a762db73e7d33d25f7">__GDWrite</a></div><div class="ttdeci">static void __GDWrite(u8 data)</div><div class="ttdef"><b>Definition</b> GDBase.h:26</div></div>
+<div class="ttc" id="aGXEnum_8h_html_a0d886699634c73bdd2e2d872623f81d4"><div class="ttname"><a href="GXEnum_8h.html#a0d886699634c73bdd2e2d872623f81d4">GXTevKColorID</a></div><div class="ttdeci">enum _GXTevKColorID GXTevKColorID</div></div>
+<div class="ttc" id="aGXEnum_8h_html_a2f2455ac28878d571f2ab991d5674999"><div class="ttname"><a href="GXEnum_8h.html#a2f2455ac28878d571f2ab991d5674999">GXTexCoordID</a></div><div class="ttdeci">enum _GXTexCoordID GXTexCoordID</div></div>
+<div class="ttc" id="aGXEnum_8h_html_a45394af7988176d9397cbbaf1cf06761"><div class="ttname"><a href="GXEnum_8h.html#a45394af7988176d9397cbbaf1cf06761">_GXTlutSize</a></div><div class="ttdeci">_GXTlutSize</div><div class="ttdef"><b>Definition</b> GXEnum.h:818</div></div>
+<div class="ttc" id="aGXEnum_8h_html_a544eb86bef16f64fc579369f59607bcf"><div class="ttname"><a href="GXEnum_8h.html#a544eb86bef16f64fc579369f59607bcf">GXTexGenSrc</a></div><div class="ttdeci">enum _GXTexGenSrc GXTexGenSrc</div></div>
+<div class="ttc" id="aGXEnum_8h_html_a5f772954bc11a1b271fa039b6bb5bd2d"><div class="ttname"><a href="GXEnum_8h.html#a5f772954bc11a1b271fa039b6bb5bd2d">GXIndTexScale</a></div><div class="ttdeci">enum _GXIndTexScale GXIndTexScale</div></div>
+<div class="ttc" id="aGXEnum_8h_html_a6071d48e51a41189dc2e4afd7ebcdd53"><div class="ttname"><a href="GXEnum_8h.html#a6071d48e51a41189dc2e4afd7ebcdd53">GXIndTexStageID</a></div><div class="ttdeci">enum _GXIndTexStageID GXIndTexStageID</div></div>
+<div class="ttc" id="aGXEnum_8h_html_a723655c1ff5eb6097db962f01fb71adf"><div class="ttname"><a href="GXEnum_8h.html#a723655c1ff5eb6097db962f01fb71adf">GXTexFmt</a></div><div class="ttdeci">enum _GXTexFmt GXTexFmt</div></div>
+<div class="ttc" id="aGXEnum_8h_html_a72532f5d20cdea292c5f2f9c296848ab"><div class="ttname"><a href="GXEnum_8h.html#a72532f5d20cdea292c5f2f9c296848ab">GXTexMapID</a></div><div class="ttdeci">enum _GXTexMapID GXTexMapID</div></div>
+<div class="ttc" id="aGXEnum_8h_html_a745250e9e2de58304b8778cfc168f337"><div class="ttname"><a href="GXEnum_8h.html#a745250e9e2de58304b8778cfc168f337">_GXTlutFmt</a></div><div class="ttdeci">_GXTlutFmt</div><div class="ttdef"><b>Definition</b> GXEnum.h:397</div></div>
+<div class="ttc" id="aGXEnum_8h_html_a7f56843917ede8336a10d8a79c426584"><div class="ttname"><a href="GXEnum_8h.html#a7f56843917ede8336a10d8a79c426584">GXTexCacheSize</a></div><div class="ttdeci">enum _GXTexCacheSize GXTexCacheSize</div></div>
+<div class="ttc" id="aGXEnum_8h_html_a8c90da9fe0eb1c207af48ec850c251cd"><div class="ttname"><a href="GXEnum_8h.html#a8c90da9fe0eb1c207af48ec850c251cd">GXLightID</a></div><div class="ttdeci">enum _GXLightID GXLightID</div></div>
+<div class="ttc" id="aGXEnum_8h_html_a8d71c0c78270e3cbcb3055718cc7aaf8"><div class="ttname"><a href="GXEnum_8h.html#a8d71c0c78270e3cbcb3055718cc7aaf8">GXVtxFmt</a></div><div class="ttdeci">enum _GXVtxFmt GXVtxFmt</div></div>
+<div class="ttc" id="aGXEnum_8h_html_a8ebd97d771f1498dfbabc1a309411fd1"><div class="ttname"><a href="GXEnum_8h.html#a8ebd97d771f1498dfbabc1a309411fd1">GXCullMode</a></div><div class="ttdeci">enum _GXCullMode GXCullMode</div></div>
+<div class="ttc" id="aGXEnum_8h_html_a941542cd63b0d32e8575d5dc52ff4d3a"><div class="ttname"><a href="GXEnum_8h.html#a941542cd63b0d32e8575d5dc52ff4d3a">GXTexWrapMode</a></div><div class="ttdeci">enum _GXTexWrapMode GXTexWrapMode</div></div>
+<div class="ttc" id="aGXEnum_8h_html_aa6004ad58bbea1d2e745b085ec630a68"><div class="ttname"><a href="GXEnum_8h.html#aa6004ad58bbea1d2e745b085ec630a68">GXIndTexMtxID</a></div><div class="ttdeci">enum _GXIndTexMtxID GXIndTexMtxID</div></div>
+<div class="ttc" id="aGXEnum_8h_html_abc4e79b15060ac94997a8953439ce6d4"><div class="ttname"><a href="GXEnum_8h.html#abc4e79b15060ac94997a8953439ce6d4">GXChannelID</a></div><div class="ttdeci">enum _GXChannelID GXChannelID</div></div>
+<div class="ttc" id="aGXEnum_8h_html_ad275bb84be0072c3ac0b2a3812877e4b"><div class="ttname"><a href="GXEnum_8h.html#ad275bb84be0072c3ac0b2a3812877e4b">GXFogType</a></div><div class="ttdeci">enum _GXFogType GXFogType</div></div>
+<div class="ttc" id="aGXEnum_8h_html_adbfb165198529fd73511e6934ebb5b15"><div class="ttname"><a href="GXEnum_8h.html#adbfb165198529fd73511e6934ebb5b15">GXTevRegID</a></div><div class="ttdeci">enum _GXTevRegID GXTevRegID</div></div>
+<div class="ttc" id="aGXEnum_8h_html_ae07c276f29b2fd0c65d9f2772cfcbf7e"><div class="ttname"><a href="GXEnum_8h.html#ae07c276f29b2fd0c65d9f2772cfcbf7e">GXTevStageID</a></div><div class="ttdeci">enum _GXTevStageID GXTevStageID</div></div>
+<div class="ttc" id="aGXEnum_8h_html_ae70c71779f89a5d9a1f0766a3bca73ae"><div class="ttname"><a href="GXEnum_8h.html#ae70c71779f89a5d9a1f0766a3bca73ae">GXTexFilter</a></div><div class="ttdeci">enum _GXTexFilter GXTexFilter</div></div>
+<div class="ttc" id="aGXEnum_8h_html_aeb060846c8733660a9e4d636cc96e024"><div class="ttname"><a href="GXEnum_8h.html#aeb060846c8733660a9e4d636cc96e024">GXTexGenType</a></div><div class="ttdeci">enum _GXTexGenType GXTexGenType</div></div>
+<div class="ttc" id="aGXEnum_8h_html_afc5e2b117fc78ae0ea90b91eee3e4ca9"><div class="ttname"><a href="GXEnum_8h.html#afc5e2b117fc78ae0ea90b91eee3e4ca9">GXAnisotropy</a></div><div class="ttdeci">enum _GXAnisotropy GXAnisotropy</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_a1453ae30cdda1afa1994522e45502a9b"><div class="ttname"><a href="J3DGD_8h.html#a1453ae30cdda1afa1994522e45502a9b">J3DGDWrite_f32</a></div><div class="ttdeci">void J3DGDWrite_f32(f32 param)</div><div class="ttdef"><b>Definition</b> J3DGD.h:22</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_a1705a9ffda1621d44df46519aa408279"><div class="ttname"><a href="J3DGD_8h.html#a1705a9ffda1621d44df46519aa408279">J3DGDSetTexImgPtr</a></div><div class="ttdeci">void J3DGDSetTexImgPtr(GXTexMapID, void *)</div><div class="ttdef"><b>Definition</b> J3DGD.cpp:427</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_a178bb88397a536927e428b0812345572"><div class="ttname"><a href="J3DGD_8h.html#a178bb88397a536927e428b0812345572">J3DGDSetIndTexMtx</a></div><div class="ttdeci">void J3DGDSetIndTexMtx(GXIndTexMtxID, f32(*)[3], s8)</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_a22f4333c7347c715b9f2104226d46a39"><div class="ttname"><a href="J3DGD_8h.html#a22f4333c7347c715b9f2104226d46a39">J3DGDSetGenMode_3Param</a></div><div class="ttdeci">void J3DGDSetGenMode_3Param(u8 texGenNum, u8 tevStageNum, u8 indTexStageNum)</div><div class="ttdef"><b>Definition</b> J3DGD.cpp:83</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_a27c105b04e09ae6090e78c6cb119b909"><div class="ttname"><a href="J3DGD_8h.html#a27c105b04e09ae6090e78c6cb119b909">J3DGDWriteCPCmd</a></div><div class="ttdeci">void J3DGDWriteCPCmd(u8 reg, u32 value)</div><div class="ttdef"><b>Definition</b> J3DGD.h:64</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_a2a4e64522e1990ff86cde1f5b8f1f4cc"><div class="ttname"><a href="J3DGD_8h.html#a2a4e64522e1990ff86cde1f5b8f1f4cc">J3DGDWriteXFCmdHdr</a></div><div class="ttdeci">void J3DGDWriteXFCmdHdr(u16 addr, u8 len)</div><div class="ttdef"><b>Definition</b> J3DGD.h:44</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_a2b53f40f6e1000e1e269b820ee286b03"><div class="ttname"><a href="J3DGD_8h.html#a2b53f40f6e1000e1e269b820ee286b03">J3DGDWrite_u32</a></div><div class="ttdeci">void J3DGDWrite_u32(u32 param)</div><div class="ttdef"><b>Definition</b> J3DGD.h:15</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_a2c19be3360bdaed0945d5b743ea715da"><div class="ttname"><a href="J3DGD_8h.html#a2c19be3360bdaed0945d5b743ea715da">J3DFifoLoadNrmMtxImm3x3</a></div><div class="ttdeci">void J3DFifoLoadNrmMtxImm3x3(f32(*)[3], u32)</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_a33071156c8547cadf6c7f17de539704c"><div class="ttname"><a href="J3DGD_8h.html#a33071156c8547cadf6c7f17de539704c">J3DFifoLoadNrmMtxToTexMtx3x3</a></div><div class="ttdeci">void J3DFifoLoadNrmMtxToTexMtx3x3(f32(*)[3], u32)</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_a3d59162dea2c78ebb8031fba82144f46"><div class="ttname"><a href="J3DGD_8h.html#a3d59162dea2c78ebb8031fba82144f46">J3DGDSetNumTexGens</a></div><div class="ttdeci">void J3DGDSetNumTexGens(u8 numTexGens)</div><div class="ttdef"><b>Definition</b> J3DGD.h:115</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_a3e9f2776e9cd889f9b7e1740937c4497"><div class="ttname"><a href="J3DGD_8h.html#a3e9f2776e9cd889f9b7e1740937c4497">J3DGDSetTevKColor</a></div><div class="ttdeci">void J3DGDSetTevKColor(GXTevKColorID, GXColor)</div><div class="ttdef"><b>Definition</b> J3DGD.cpp:562</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_a54aaf4bd9170f3123bf9d70ad867bfdc"><div class="ttname"><a href="J3DGD_8h.html#a54aaf4bd9170f3123bf9d70ad867bfdc">J3DGXCmd1f32</a></div><div class="ttdeci">void J3DGXCmd1f32(f32 value)</div><div class="ttdef"><b>Definition</b> J3DGD.h:60</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_a5b7c7df06a9c87c0289576cb35714d8d"><div class="ttname"><a href="J3DGD_8h.html#a5b7c7df06a9c87c0289576cb35714d8d">J3DFifoLoadBPCmd</a></div><div class="ttdeci">void J3DFifoLoadBPCmd(u32 cmd)</div><div class="ttdef"><b>Definition</b> J3DGD.h:32</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_a5d5a20f4a1f9174844ac67418510d312"><div class="ttname"><a href="J3DGD_8h.html#a5d5a20f4a1f9174844ac67418510d312">J3DGDSetTexLookupMode</a></div><div class="ttdeci">void J3DGDSetTexLookupMode(GXTexMapID, GXTexWrapMode, GXTexWrapMode, GXTexFilter, GXTexFilter, f32, f32, f32, u8, u8, GXAnisotropy)</div><div class="ttdef"><b>Definition</b> J3DGD.cpp:407</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_a5fd7092651797aed5ac6cef8328b7738"><div class="ttname"><a href="J3DGD_8h.html#a5fd7092651797aed5ac6cef8328b7738">J3DGDWriteBPCmd</a></div><div class="ttdeci">void J3DGDWriteBPCmd(u32 cmd)</div><div class="ttdef"><b>Definition</b> J3DGD.h:27</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_a6548426033e92ade2aa4559806c5d0d5"><div class="ttname"><a href="J3DGD_8h.html#a6548426033e92ade2aa4559806c5d0d5">J3DGDSetIndTexOrder</a></div><div class="ttdeci">void J3DGDSetIndTexOrder(u32, GXTexCoordID, GXTexMapID, GXTexCoordID, GXTexMapID, GXTexCoordID, GXTexMapID, GXTexCoordID, GXTexMapID)</div><div class="ttdef"><b>Definition</b> J3DGD.cpp:515</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_a700bdfe53fe7369123b9f04e1e02fdbb"><div class="ttname"><a href="J3DGD_8h.html#a700bdfe53fe7369123b9f04e1e02fdbb">J3DGDSetIndTexCoordScale</a></div><div class="ttdeci">void J3DGDSetIndTexCoordScale(GXIndTexStageID, GXIndTexScale, GXIndTexScale, GXIndTexScale, GXIndTexScale)</div><div class="ttdef"><b>Definition</b> J3DGD.cpp:505</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_a71277999ef0e72042d5114bb1eb161a6"><div class="ttname"><a href="J3DGD_8h.html#a71277999ef0e72042d5114bb1eb161a6">J3DFifoLoadNrmMtxImm</a></div><div class="ttdeci">void J3DFifoLoadNrmMtxImm(f32(*)[4], u32)</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_a7748a582b43176cc113c63bcaab1e16a"><div class="ttname"><a href="J3DGD_8h.html#a7748a582b43176cc113c63bcaab1e16a">J3DGDSetTevColorS10</a></div><div class="ttdeci">void J3DGDSetTevColorS10(GXTevRegID, GXColorS10)</div><div class="ttdef"><b>Definition</b> J3DGD.cpp:572</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_a796ecd2d75c60cac8dcb209f78c1de4f"><div class="ttname"><a href="J3DGD_8h.html#a796ecd2d75c60cac8dcb209f78c1de4f">J3DGXCmd1f32ptr</a></div><div class="ttdeci">void J3DGXCmd1f32ptr(f32 *value)</div><div class="ttdef"><b>Definition</b> J3DGD.h:56</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_a8f240edb97f53c5205799c6eacb1f307"><div class="ttname"><a href="J3DGD_8h.html#a8f240edb97f53c5205799c6eacb1f307">J3DGDWrite_u16</a></div><div class="ttdeci">void J3DGDWrite_u16(u16 param)</div><div class="ttdef"><b>Definition</b> J3DGD.h:10</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_a9030956a0423dce7823e4ef59e912f68"><div class="ttname"><a href="J3DGD_8h.html#a9030956a0423dce7823e4ef59e912f68">J3DFifoLoadTexCached</a></div><div class="ttdeci">void J3DFifoLoadTexCached(GXTexMapID, u32, GXTexCacheSize, u32, GXTexCacheSize)</div><div class="ttdef"><b>Definition</b> J3DGD.cpp:721</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_a92fe00d9d309e5c05f9d7c9cfe94dcfc"><div class="ttname"><a href="J3DGD_8h.html#a92fe00d9d309e5c05f9d7c9cfe94dcfc">J3DGDLoadTlut</a></div><div class="ttdeci">void J3DGDLoadTlut(void *, u32, _GXTlutSize)</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_a94a0cb2794d9873fa2fdca87feee47b7"><div class="ttname"><a href="J3DGD_8h.html#a94a0cb2794d9873fa2fdca87feee47b7">J3DGDSetFog</a></div><div class="ttdeci">void J3DGDSetFog(GXFogType, f32, f32, f32, f32, GXColor)</div><div class="ttdef"><b>Definition</b> J3DGD.cpp:585</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_a995296c27d077d0cb34b36883dc8759c"><div class="ttname"><a href="J3DGD_8h.html#a995296c27d077d0cb34b36883dc8759c">J3DGDSetTexCoordGen</a></div><div class="ttdeci">void J3DGDSetTexCoordGen(GXTexGenType, GXTexGenSrc)</div><div class="ttdef"><b>Definition</b> J3DGD.cpp:252</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_aa35594d7081102797c6dbd22d97c0a17"><div class="ttname"><a href="J3DGD_8h.html#aa35594d7081102797c6dbd22d97c0a17">J3DGDSetLightColor</a></div><div class="ttdeci">void J3DGDSetLightColor(GXLightID, GXColor)</div><div class="ttdef"><b>Definition</b> J3DGD.cpp:102</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_aa39377616097b648ea57006832dd068e"><div class="ttname"><a href="J3DGD_8h.html#aa39377616097b648ea57006832dd068e">J3DGDSetFogRangeAdj</a></div><div class="ttdeci">void J3DGDSetFogRangeAdj(u8, u16, _GXFogAdjTable *)</div><div class="ttdef"><b>Definition</b> J3DGD.cpp:616</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_aa3b249ffac367d6ea84b6254a58dc49d"><div class="ttname"><a href="J3DGD_8h.html#aa3b249ffac367d6ea84b6254a58dc49d">J3DGDSetNumChans</a></div><div class="ttdeci">void J3DGDSetNumChans(u8 numChans)</div><div class="ttdef"><b>Definition</b> J3DGD.h:111</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_aa3b8b5f3700aeea8b9d3bf43884d261b"><div class="ttname"><a href="J3DGD_8h.html#aa3b8b5f3700aeea8b9d3bf43884d261b">J3DGDSetTexTlut</a></div><div class="ttdeci">void J3DGDSetTexTlut(GXTexMapID, u32, _GXTlutFmt)</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_aa8f8d11c6c0e7850626f31bbec28d154"><div class="ttname"><a href="J3DGD_8h.html#aa8f8d11c6c0e7850626f31bbec28d154">J3DGDSetLightDir</a></div><div class="ttdeci">void J3DGDSetLightDir(GXLightID, f32, f32, f32)</div><div class="ttdef"><b>Definition</b> J3DGD.cpp:118</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_aaa6a534354b837f56e038018b0986bac"><div class="ttname"><a href="J3DGD_8h.html#aaa6a534354b837f56e038018b0986bac">J3DGDSetTexImgAttr</a></div><div class="ttdeci">void J3DGDSetTexImgAttr(GXTexMapID, u16, u16, GXTexFmt)</div><div class="ttdef"><b>Definition</b> J3DGD.cpp:420</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_aad8faec2cf54729a6ff51e040f5e2571"><div class="ttname"><a href="J3DGD_8h.html#aad8faec2cf54729a6ff51e040f5e2571">J3DGDWriteXFCmd</a></div><div class="ttdeci">void J3DGDWriteXFCmd(u16 addr, u32 cmd)</div><div class="ttdef"><b>Definition</b> J3DGD.h:37</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_ab1650c55c110f636f384fc5ff55399e3"><div class="ttname"><a href="J3DGD_8h.html#ab1650c55c110f636f384fc5ff55399e3">J3DGDSetLightPos</a></div><div class="ttdeci">void J3DGDSetLightPos(GXLightID, f32, f32, f32)</div><div class="ttdef"><b>Definition</b> J3DGD.cpp:109</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_ac03f25f700b96a4075ea28bfca5df842"><div class="ttname"><a href="J3DGD_8h.html#ac03f25f700b96a4075ea28bfca5df842">J3DFifoLoadIndx</a></div><div class="ttdeci">static void J3DFifoLoadIndx(u8 cmd, u16 indx, u16 addr)</div><div class="ttdef"><b>Definition</b> J3DGD.h:105</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_ac6cb5f49bd9b8d865c0f299e94aa1f08"><div class="ttname"><a href="J3DGD_8h.html#ac6cb5f49bd9b8d865c0f299e94aa1f08">J3DGDSetLightAttn</a></div><div class="ttdeci">void J3DGDSetLightAttn(GXLightID, f32, f32, f32, f32, f32, f32)</div><div class="ttdef"><b>Definition</b> J3DGD.cpp:90</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_acae04b18a2561d03fd3bb006cba933d9"><div class="ttname"><a href="J3DGD_8h.html#acae04b18a2561d03fd3bb006cba933d9">J3DGDSetTevOrder</a></div><div class="ttdeci">void J3DGDSetTevOrder(GXTevStageID, GXTexCoordID, GXTexMapID, GXChannelID, GXTexCoordID, GXTexMapID, GXChannelID)</div><div class="ttdef"><b>Definition</b> J3DGD.cpp:545</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_acd6f22221a8642999d951a74fb19d5b2"><div class="ttname"><a href="J3DGD_8h.html#acd6f22221a8642999d951a74fb19d5b2">J3DGDSetTexImgPtrRaw</a></div><div class="ttdeci">void J3DGDSetTexImgPtrRaw(GXTexMapID, u32)</div><div class="ttdef"><b>Definition</b> J3DGD.cpp:432</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_ad46fc4009717293074af5d154291a988"><div class="ttname"><a href="J3DGD_8h.html#ad46fc4009717293074af5d154291a988">J3DGDWrite_u8</a></div><div class="ttdeci">void J3DGDWrite_u8(u8 param)</div><div class="ttdef"><b>Definition</b> J3DGD.h:6</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_adb5c5a5971a9f0c6e1b71a494850794d"><div class="ttname"><a href="J3DGD_8h.html#adb5c5a5971a9f0c6e1b71a494850794d">J3DFifoLoadNrmMtxToTexMtx</a></div><div class="ttdeci">void J3DFifoLoadNrmMtxToTexMtx(f32(*)[4], u32)</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_ae67a56d8f2716b6d8d1a7054b5522837"><div class="ttname"><a href="J3DGD_8h.html#ae67a56d8f2716b6d8d1a7054b5522837">J3DFifoWriteXFCmdHdr</a></div><div class="ttdeci">void J3DFifoWriteXFCmdHdr(u16 addr, u8 len)</div><div class="ttdef"><b>Definition</b> J3DGD.h:50</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_aeaafbc05d2c1f18175c36d2acbc830dc"><div class="ttname"><a href="J3DGD_8h.html#aeaafbc05d2c1f18175c36d2acbc830dc">J3DGDSetTexCoordScale2</a></div><div class="ttdeci">void J3DGDSetTexCoordScale2(GXTexCoordID, u16, u8, u8, u16, u8, u8)</div><div class="ttdef"><b>Definition</b> J3DGD.cpp:364</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_aec8aee9a0bc659e4db613fc44e8eca66"><div class="ttname"><a href="J3DGD_8h.html#aec8aee9a0bc659e4db613fc44e8eca66">J3DGDSetGenMode</a></div><div class="ttdeci">void J3DGDSetGenMode(u8 texGenNum, u8 colorChanNum, u8 tevStageNum, u8 IndTexStageNum, GXCullMode cullMode)</div><div class="ttdef"><b>Definition</b> J3DGD.cpp:73</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_af13b10a8bbb5b98eaadab041c54fdad5"><div class="ttname"><a href="J3DGD_8h.html#af13b10a8bbb5b98eaadab041c54fdad5">J3DFifoLoadPosMtxImm</a></div><div class="ttdeci">void J3DFifoLoadPosMtxImm(f32(*)[4], u32)</div></div>
+<div class="ttc" id="aJ3DGD_8h_html_afb5606113429afb808cd26f5e880e929"><div class="ttname"><a href="J3DGD_8h.html#afb5606113429afb808cd26f5e880e929">J3DGDSetVtxAttrFmtv</a></div><div class="ttdeci">void J3DGDSetVtxAttrFmtv(GXVtxFmt, GXVtxAttrFmtList const *, bool)</div><div class="ttdef"><b>Definition</b> J3DGD.cpp:127</div></div>
+<div class="ttc" id="agx_8h_html_aedd739e8318efcd57fed5334b2981fce"><div class="ttname"><a href="gx_8h.html#aedd739e8318efcd57fed5334b2981fce">GXWGFifo</a></div><div class="ttdeci">volatile PPCWGPipe GXWGFifo</div><div class="ttdef"><b>Definition</b> gx.h:61</div></div>
+<div class="ttc" id="astruct__GXColorS10_html"><div class="ttname"><a href="struct__GXColorS10.html">_GXColorS10</a></div><div class="ttdef"><b>Definition</b> GXStruct.h:15</div></div>
+<div class="ttc" id="astruct__GXColor_html"><div class="ttname"><a href="struct__GXColor.html">_GXColor</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:291</div></div>
+<div class="ttc" id="astruct__GXFogAdjTable_html"><div class="ttname"><a href="struct__GXFogAdjTable.html">_GXFogAdjTable</a></div><div class="ttdef"><b>Definition</b> GXStruct.h:76</div></div>
+<div class="ttc" id="astruct__GXVtxAttrFmtList_html"><div class="ttname"><a href="struct__GXVtxAttrFmtList.html">_GXVtxAttrFmtList</a></div><div class="ttdef"><b>Definition</b> GXAttr.h:15</div></div>
+<div class="ttc" id="atypes_8h_html_a151f780fb455885061d3b77ec1c90c03"><div class="ttname"><a href="types_8h.html#a151f780fb455885061d3b77ec1c90c03">s8</a></div><div class="ttdeci">signed char s8</div><div class="ttdef"><b>Definition</b> types.h:4</div></div>
+<div class="ttc" id="atypes_8h_html_a2caf5cd7bcdbe1eefa727f44ffb10bac"><div class="ttname"><a href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a></div><div class="ttdeci">unsigned long u32</div><div class="ttdef"><b>Definition</b> types.h:10</div></div>
+<div class="ttc" id="atypes_8h_html_a5f6906312a689f27d70e9d086649d3fd"><div class="ttname"><a href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a></div><div class="ttdeci">float f32</div><div class="ttdef"><b>Definition</b> types.h:22</div></div>
+<div class="ttc" id="atypes_8h_html_a9e6c91d77e24643b888dbd1a1a590054"><div class="ttname"><a href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a></div><div class="ttdeci">unsigned short u16</div><div class="ttdef"><b>Definition</b> types.h:9</div></div>
+<div class="ttc" id="atypes_8h_html_aed742c436da53c1080638ce6ef7d13de"><div class="ttname"><a href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a></div><div class="ttdeci">unsigned char u8</div><div class="ttdef"><b>Definition</b> types.h:8</div></div>
+<div class="ttc" id="aunionPPCWGPipe_html_a36f6c6095ee0cd5b7e1ad444ecd818af"><div class="ttname"><a href="unionPPCWGPipe.html#a36f6c6095ee0cd5b7e1ad444ecd818af">PPCWGPipe::u32</a></div><div class="ttdeci">u32 u32</div><div class="ttdef"><b>Definition</b> gx.h:50</div></div>
+<div class="ttc" id="aunionPPCWGPipe_html_a54691399b526673acdb012dd9db1b3d1"><div class="ttname"><a href="unionPPCWGPipe.html#a54691399b526673acdb012dd9db1b3d1">PPCWGPipe::u16</a></div><div class="ttdeci">u16 u16</div><div class="ttdef"><b>Definition</b> gx.h:49</div></div>
+<div class="ttc" id="aunionPPCWGPipe_html_a7aa5acde9b7fb458a57784be40de5248"><div class="ttname"><a href="unionPPCWGPipe.html#a7aa5acde9b7fb458a57784be40de5248">PPCWGPipe::u8</a></div><div class="ttdeci">u8 u8</div><div class="ttdef"><b>Definition</b> gx.h:48</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_4f0979a7f5e3194619cde56505e372d8.html">JSystem</a></li><li class="navelem"><a class="el" href="dir_4a61573b4bce9188d102de1e22b28aee.html">J3DGraphBase</a></li><li class="navelem"><a class="el" href="J3DGD_8h.html">J3DGD.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

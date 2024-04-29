@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: include/f_op/f_op_camera_mng.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('f__op__camera__mng_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">f_op_camera_mng.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="f__op__camera__mng_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef F_F_OP_CAMERA_MNG_H_</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define F_F_OP_CAMERA_MNG_H_</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="c__phase_8h.html">SSystem/SComponent/c_phase.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="d__camera_8h.html">d/d_camera.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="f__op__view_8h.html">f_op/f_op_view.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="f__op__camera__mng_8h.html#a71acd12c6d7ab61760fb0b4b928fa37f">    8</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structleafdraw__method__class.html">leafdraw_method_class</a> <a class="code hl_struct" href="structleafdraw__method__class.html">leafdraw_method_class</a>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classcamera__process__class.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="classcamera__process__class.html">camera_process_class</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structview__class.html">view_class</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classcamera__process__class.html#ac395536808b72bac3536c695912b0b28">   12</a></span>    <span class="comment">/* 0x210 */</span> <a class="code hl_struct" href="structcreate__tag__class.html">create_tag_class</a> <a class="code hl_variable" href="classcamera__process__class.html#ac395536808b72bac3536c695912b0b28">mCreateTag</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classcamera__process__class.html#acdb55f60e81cbc812edc839dff3b05bd">   13</a></span>    <span class="comment">/* 0x224 */</span> <a class="code hl_struct" href="structleafdraw__method__class.html">leafdraw_method_class</a>* <a class="code hl_variable" href="classcamera__process__class.html#acdb55f60e81cbc812edc839dff3b05bd">mpMtd</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classcamera__process__class.html#aad6cfaf5f9e19557fc1d6de4df736401">   14</a></span>    <span class="comment">/* 0x228 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classcamera__process__class.html#aad6cfaf5f9e19557fc1d6de4df736401">field_0x228</a>[4];</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classcamera__process__class.html#a07b10a6a94e2de73a2a6b8607913d57b">   15</a></span>    <span class="comment">/* 0x22C */</span> <a class="code hl_typedef" href="types_8h.html#a151f780fb455885061d3b77ec1c90c03">s8</a> <a class="code hl_variable" href="classcamera__process__class.html#a07b10a6a94e2de73a2a6b8607913d57b">mPrm1</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classcamera__process__class.html#a0f431273ac3d7b7f5c2636df90fd9e4e">   16</a></span>    <span class="comment">/* 0x22D */</span> <a class="code hl_typedef" href="types_8h.html#a151f780fb455885061d3b77ec1c90c03">s8</a> <a class="code hl_variable" href="classcamera__process__class.html#a0f431273ac3d7b7f5c2636df90fd9e4e">mPrm2</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classcamera__process__class.html#aeea8e0a85a2dedd88233ed43ddc9bb1c">   17</a></span>    <span class="comment">/* 0x22E */</span> <a class="code hl_typedef" href="types_8h.html#a151f780fb455885061d3b77ec1c90c03">s8</a> <a class="code hl_variable" href="classcamera__process__class.html#aeea8e0a85a2dedd88233ed43ddc9bb1c">mPrm3</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classcamera__process__class.html#ad7fa06c5361f615674f9b4179c7c66d6">   18</a></span>    <span class="comment">/* 0x22F */</span> <a class="code hl_typedef" href="types_8h.html#a151f780fb455885061d3b77ec1c90c03">s8</a> <a class="code hl_variable" href="classcamera__process__class.html#ad7fa06c5361f615674f9b4179c7c66d6">field_0x22f</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classcamera__process__class.html#ae5b75f1d5c851e36f285d9b301bc43b5">   19</a></span>    <span class="comment">/* 0x230 */</span> <a class="code hl_struct" href="classcsXyz.html">csXyz</a> <a class="code hl_variable" href="classcamera__process__class.html#ae5b75f1d5c851e36f285d9b301bc43b5">mAngle</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classcamera__process__class.html#a5065ccb162ef741af3b8e0fcaab63929">   20</a></span>    <span class="comment">/* 0x238 */</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classcamera__process__class.html#a5065ccb162ef741af3b8e0fcaab63929">field_0x238</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>};</div>
+</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classcamera__class.html">   23</a></span><span class="keyword">class </span><a class="code hl_struct" href="classcamera__class.html">camera_class</a> : <span class="keyword">public</span> <a class="code hl_class" href="classcamera__process__class.html">camera_process_class</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classcamera__class.html#a579fb33f3d4e2100c36f779e9dd555fa">   25</a></span>    <span class="comment">/* 0x23C */</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classcamera__class.html#a579fb33f3d4e2100c36f779e9dd555fa">field_0x23c</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classcamera__class.html#aeb5c71e443aecb94d7fd1ce43c9aba12">   26</a></span>    <span class="comment">/* 0x240 */</span> <a class="code hl_struct" href="structrequest__of__phase__process__class.html">request_of_phase_process_class</a> <a class="code hl_variable" href="classcamera__class.html#aeb5c71e443aecb94d7fd1ce43c9aba12">mPhaseReq</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classcamera__class.html#abd1adcaedc8e5cdb410ffd16a766a125">   27</a></span>    <span class="comment">/* 0x248 */</span> <a class="code hl_struct" href="classdCamera__c.html">dCamera_c</a> <a class="code hl_variable" href="classcamera__class.html#abd1adcaedc8e5cdb410ffd16a766a125">mCamera</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>};</div>
+</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">/* void fopCamM_SetNear(camera_class* cam, f32 near) {</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">    cam-&gt;mNear = near;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">}</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"></span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">void fopCamM_SetFar(camera_class* cam, f32 far) {</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">    cam-&gt;mFar = far;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">}</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment"></span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">void fopCamM_SetFovy(camera_class* cam, f32 fovy) {</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">    cam-&gt;mFovy = fovy;</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">}</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment"></span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">void fopCamM_SetAspect(camera_class* cam, f32 aspect) {</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">    cam-&gt;mAspect = aspect;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">}</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment"></span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">void fopCamM_SetEye(camera_class* cam, f32 x, f32 y, f32 z) {</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">    cam-&gt;field_0xd8.mEye.set(x, y, z);</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">}</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment"></span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">void fopCamM_SetCenter(camera_class* cam, f32 x, f32 y, f32 z) {</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">    cam-&gt;field_0xd8.mCenter.set(x, y, z);</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">}</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment"></span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">void fopCamM_SetBank(camera_class* cam, s16 bank) {</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">    cam-&gt;mBank = bank;</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">} */</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="f__op__camera__mng_8h.html#a0f3b75ef40bec11027ab8a50a884c4a3">   58</a></span><span class="keyword">inline</span> <a class="code hl_typedef" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> <a class="code hl_function" href="f__op__camera__mng_8h.html#a0f3b75ef40bec11027ab8a50a884c4a3">fopCamM_GetAngleY</a>(<a class="code hl_struct" href="classcamera__class.html">camera_class</a>* i_camera) {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordflow">return</span> i_camera-&gt;<a class="code hl_variable" href="classcamera__process__class.html#ae5b75f1d5c851e36f285d9b301bc43b5">mAngle</a>.<a class="code hl_variable" href="structSVec.html#a859b2828adfc78271dcbeddb0f59e331">y</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="f__op__camera__mng_8h.html#a03f0ecc8adce941089a6f3a0aba862fd">   62</a></span><span class="keyword">inline</span> <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="code hl_function" href="f__op__camera__mng_8h.html#a03f0ecc8adce941089a6f3a0aba862fd">fopCamM_GetFovy</a>(<a class="code hl_struct" href="classcamera__class.html">camera_class</a>* i_camera) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">return</span> i_camera-&gt;<a class="code hl_variable" href="structview__class.html#a67a38e4ae432138673221f103725b511">mFovy</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}</div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="f__op__camera__mng_8h.html#ad1e608b7dabf13ad205de132ef6b8aa9">   66</a></span><span class="keyword">inline</span> <a class="code hl_struct" href="structcXyz.html">cXyz</a>* <a class="code hl_function" href="f__op__camera__mng_8h.html#ad1e608b7dabf13ad205de132ef6b8aa9">fopCamM_GetEye_p</a>(<a class="code hl_struct" href="classcamera__class.html">camera_class</a>* i_camera) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">return</span> &amp;i_camera-&gt;<a class="code hl_variable" href="structview__class.html#ae3b73d88588776667109c77cabb5476b">mLookat</a>.<a class="code hl_variable" href="classlookat__class.html#ad5782a58d289a64193826ca56a14a026">mEye</a>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
+</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="foldopen" id="foldopen00070" data-start="{" data-end="}">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="f__op__camera__mng_8h.html#a6f0a2d1671a8dc78d69033508f4c134c">   70</a></span><span class="keyword">inline</span> <a class="code hl_struct" href="structcXyz.html">cXyz</a>* <a class="code hl_function" href="f__op__camera__mng_8h.html#a6f0a2d1671a8dc78d69033508f4c134c">fopCamM_GetCenter_p</a>(<a class="code hl_struct" href="classcamera__class.html">camera_class</a>* i_camera) {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">return</span> &amp;i_camera-&gt;<a class="code hl_variable" href="structview__class.html#ae3b73d88588776667109c77cabb5476b">mLookat</a>.<a class="code hl_variable" href="classlookat__class.html#aa7f2a5df67e4d746d2785043b1280224">mCenter</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>}</div>
+</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> <a class="code hl_function" href="f__op__camera__mng_8h.html#a4121e513ace023d4c2bde3830b572830">fopCamM_Create</a>(<span class="keywordtype">int</span> i_cameraIdx, <a class="code hl_typedef" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> pProcName, <span class="keywordtype">void</span>* param_3);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keywordtype">void</span> <a class="code hl_function" href="f__op__camera__mng_8h.html#a3d80b8b2f53415d5482bbc22514c4ba7">fopCamM_Management</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> <a class="code hl_function" href="f__op__camera__mng_8h.html#ade25b5f8ec54a4e11bbcdb5695a76301">fopCamM_GetParam</a>(<a class="code hl_struct" href="classcamera__class.html">camera_class</a>* pCamera);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keywordtype">void</span> <a class="code hl_function" href="f__op__camera__mng_8h.html#abd16391c9114485da566faa5a3e81e99">fopCamM_Init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="ac__phase_8h_html"><div class="ttname"><a href="c__phase_8h.html">c_phase.h</a></div></div>
+<div class="ttc" id="aclasscamera__class_html"><div class="ttname"><a href="classcamera__class.html">camera_class</a></div><div class="ttdef"><b>Definition</b> f_op_camera_mng.h:23</div></div>
+<div class="ttc" id="aclasscamera__class_html_a579fb33f3d4e2100c36f779e9dd555fa"><div class="ttname"><a href="classcamera__class.html#a579fb33f3d4e2100c36f779e9dd555fa">camera_class::field_0x23c</a></div><div class="ttdeci">int field_0x23c</div><div class="ttdef"><b>Definition</b> f_op_camera_mng.h:25</div></div>
+<div class="ttc" id="aclasscamera__class_html_abd1adcaedc8e5cdb410ffd16a766a125"><div class="ttname"><a href="classcamera__class.html#abd1adcaedc8e5cdb410ffd16a766a125">camera_class::mCamera</a></div><div class="ttdeci">dCamera_c mCamera</div><div class="ttdef"><b>Definition</b> f_op_camera_mng.h:27</div></div>
+<div class="ttc" id="aclasscamera__class_html_aeb5c71e443aecb94d7fd1ce43c9aba12"><div class="ttname"><a href="classcamera__class.html#aeb5c71e443aecb94d7fd1ce43c9aba12">camera_class::mPhaseReq</a></div><div class="ttdeci">request_of_phase_process_class mPhaseReq</div><div class="ttdef"><b>Definition</b> f_op_camera_mng.h:26</div></div>
+<div class="ttc" id="aclasscamera__process__class_html"><div class="ttname"><a href="classcamera__process__class.html">camera_process_class</a></div><div class="ttdef"><b>Definition</b> f_op_camera_mng.h:10</div></div>
+<div class="ttc" id="aclasscamera__process__class_html_a07b10a6a94e2de73a2a6b8607913d57b"><div class="ttname"><a href="classcamera__process__class.html#a07b10a6a94e2de73a2a6b8607913d57b">camera_process_class::mPrm1</a></div><div class="ttdeci">s8 mPrm1</div><div class="ttdef"><b>Definition</b> f_op_camera_mng.h:15</div></div>
+<div class="ttc" id="aclasscamera__process__class_html_a0f431273ac3d7b7f5c2636df90fd9e4e"><div class="ttname"><a href="classcamera__process__class.html#a0f431273ac3d7b7f5c2636df90fd9e4e">camera_process_class::mPrm2</a></div><div class="ttdeci">s8 mPrm2</div><div class="ttdef"><b>Definition</b> f_op_camera_mng.h:16</div></div>
+<div class="ttc" id="aclasscamera__process__class_html_a5065ccb162ef741af3b8e0fcaab63929"><div class="ttname"><a href="classcamera__process__class.html#a5065ccb162ef741af3b8e0fcaab63929">camera_process_class::field_0x238</a></div><div class="ttdeci">int field_0x238</div><div class="ttdef"><b>Definition</b> f_op_camera_mng.h:20</div></div>
+<div class="ttc" id="aclasscamera__process__class_html_aad6cfaf5f9e19557fc1d6de4df736401"><div class="ttname"><a href="classcamera__process__class.html#aad6cfaf5f9e19557fc1d6de4df736401">camera_process_class::field_0x228</a></div><div class="ttdeci">u8 field_0x228[4]</div><div class="ttdef"><b>Definition</b> f_op_camera_mng.h:14</div></div>
+<div class="ttc" id="aclasscamera__process__class_html_ac395536808b72bac3536c695912b0b28"><div class="ttname"><a href="classcamera__process__class.html#ac395536808b72bac3536c695912b0b28">camera_process_class::mCreateTag</a></div><div class="ttdeci">create_tag_class mCreateTag</div><div class="ttdef"><b>Definition</b> f_op_camera_mng.h:12</div></div>
+<div class="ttc" id="aclasscamera__process__class_html_acdb55f60e81cbc812edc839dff3b05bd"><div class="ttname"><a href="classcamera__process__class.html#acdb55f60e81cbc812edc839dff3b05bd">camera_process_class::mpMtd</a></div><div class="ttdeci">leafdraw_method_class * mpMtd</div><div class="ttdef"><b>Definition</b> f_op_camera_mng.h:13</div></div>
+<div class="ttc" id="aclasscamera__process__class_html_ad7fa06c5361f615674f9b4179c7c66d6"><div class="ttname"><a href="classcamera__process__class.html#ad7fa06c5361f615674f9b4179c7c66d6">camera_process_class::field_0x22f</a></div><div class="ttdeci">s8 field_0x22f</div><div class="ttdef"><b>Definition</b> f_op_camera_mng.h:18</div></div>
+<div class="ttc" id="aclasscamera__process__class_html_ae5b75f1d5c851e36f285d9b301bc43b5"><div class="ttname"><a href="classcamera__process__class.html#ae5b75f1d5c851e36f285d9b301bc43b5">camera_process_class::mAngle</a></div><div class="ttdeci">csXyz mAngle</div><div class="ttdef"><b>Definition</b> f_op_camera_mng.h:19</div></div>
+<div class="ttc" id="aclasscamera__process__class_html_aeea8e0a85a2dedd88233ed43ddc9bb1c"><div class="ttname"><a href="classcamera__process__class.html#aeea8e0a85a2dedd88233ed43ddc9bb1c">camera_process_class::mPrm3</a></div><div class="ttdeci">s8 mPrm3</div><div class="ttdef"><b>Definition</b> f_op_camera_mng.h:17</div></div>
+<div class="ttc" id="aclasscsXyz_html"><div class="ttname"><a href="classcsXyz.html">csXyz</a></div><div class="ttdef"><b>Definition</b> c_sxyz.h:6</div></div>
+<div class="ttc" id="aclassdCamera__c_html"><div class="ttname"><a href="classdCamera__c.html">dCamera_c</a></div><div class="ttdef"><b>Definition</b> d_camera.h:112</div></div>
+<div class="ttc" id="aclasslookat__class_html_aa7f2a5df67e4d746d2785043b1280224"><div class="ttname"><a href="classlookat__class.html#aa7f2a5df67e4d746d2785043b1280224">lookat_class::mCenter</a></div><div class="ttdeci">cXyz mCenter</div><div class="ttdef"><b>Definition</b> f_op_view.h:22</div></div>
+<div class="ttc" id="aclasslookat__class_html_ad5782a58d289a64193826ca56a14a026"><div class="ttname"><a href="classlookat__class.html#ad5782a58d289a64193826ca56a14a026">lookat_class::mEye</a></div><div class="ttdeci">cXyz mEye</div><div class="ttdef"><b>Definition</b> f_op_view.h:21</div></div>
+<div class="ttc" id="ad__camera_8h_html"><div class="ttname"><a href="d__camera_8h.html">d_camera.h</a></div></div>
+<div class="ttc" id="af__op__camera__mng_8h_html_a03f0ecc8adce941089a6f3a0aba862fd"><div class="ttname"><a href="f__op__camera__mng_8h.html#a03f0ecc8adce941089a6f3a0aba862fd">fopCamM_GetFovy</a></div><div class="ttdeci">f32 fopCamM_GetFovy(camera_class *i_camera)</div><div class="ttdef"><b>Definition</b> f_op_camera_mng.h:62</div></div>
+<div class="ttc" id="af__op__camera__mng_8h_html_a0f3b75ef40bec11027ab8a50a884c4a3"><div class="ttname"><a href="f__op__camera__mng_8h.html#a0f3b75ef40bec11027ab8a50a884c4a3">fopCamM_GetAngleY</a></div><div class="ttdeci">s16 fopCamM_GetAngleY(camera_class *i_camera)</div><div class="ttdef"><b>Definition</b> f_op_camera_mng.h:58</div></div>
+<div class="ttc" id="af__op__camera__mng_8h_html_a3d80b8b2f53415d5482bbc22514c4ba7"><div class="ttname"><a href="f__op__camera__mng_8h.html#a3d80b8b2f53415d5482bbc22514c4ba7">fopCamM_Management</a></div><div class="ttdeci">void fopCamM_Management(void)</div><div class="ttdef"><b>Definition</b> f_op_camera_mng.cpp:26</div></div>
+<div class="ttc" id="af__op__camera__mng_8h_html_a4121e513ace023d4c2bde3830b572830"><div class="ttname"><a href="f__op__camera__mng_8h.html#a4121e513ace023d4c2bde3830b572830">fopCamM_Create</a></div><div class="ttdeci">u32 fopCamM_Create(int i_cameraIdx, s16 pProcName, void *param_3)</div><div class="ttdef"><b>Definition</b> f_op_camera_mng.cpp:20</div></div>
+<div class="ttc" id="af__op__camera__mng_8h_html_a6f0a2d1671a8dc78d69033508f4c134c"><div class="ttname"><a href="f__op__camera__mng_8h.html#a6f0a2d1671a8dc78d69033508f4c134c">fopCamM_GetCenter_p</a></div><div class="ttdeci">cXyz * fopCamM_GetCenter_p(camera_class *i_camera)</div><div class="ttdef"><b>Definition</b> f_op_camera_mng.h:70</div></div>
+<div class="ttc" id="af__op__camera__mng_8h_html_abd16391c9114485da566faa5a3e81e99"><div class="ttname"><a href="f__op__camera__mng_8h.html#abd16391c9114485da566faa5a3e81e99">fopCamM_Init</a></div><div class="ttdeci">void fopCamM_Init(void)</div><div class="ttdef"><b>Definition</b> f_op_camera_mng.cpp:29</div></div>
+<div class="ttc" id="af__op__camera__mng_8h_html_ad1e608b7dabf13ad205de132ef6b8aa9"><div class="ttname"><a href="f__op__camera__mng_8h.html#ad1e608b7dabf13ad205de132ef6b8aa9">fopCamM_GetEye_p</a></div><div class="ttdeci">cXyz * fopCamM_GetEye_p(camera_class *i_camera)</div><div class="ttdef"><b>Definition</b> f_op_camera_mng.h:66</div></div>
+<div class="ttc" id="af__op__camera__mng_8h_html_ade25b5f8ec54a4e11bbcdb5695a76301"><div class="ttname"><a href="f__op__camera__mng_8h.html#ade25b5f8ec54a4e11bbcdb5695a76301">fopCamM_GetParam</a></div><div class="ttdeci">u32 fopCamM_GetParam(camera_class *pCamera)</div><div class="ttdef"><b>Definition</b> f_op_camera_mng.cpp:15</div></div>
+<div class="ttc" id="af__op__view_8h_html"><div class="ttname"><a href="f__op__view_8h.html">f_op_view.h</a></div></div>
+<div class="ttc" id="astructSVec_html_a859b2828adfc78271dcbeddb0f59e331"><div class="ttname"><a href="structSVec.html#a859b2828adfc78271dcbeddb0f59e331">SVec::y</a></div><div class="ttdeci">s16 y</div><div class="ttdef"><b>Definition</b> vec.h:19</div></div>
+<div class="ttc" id="astructcXyz_html"><div class="ttname"><a href="structcXyz.html">cXyz</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:49</div></div>
+<div class="ttc" id="astructcreate__tag__class_html"><div class="ttname"><a href="structcreate__tag__class.html">create_tag_class</a></div><div class="ttdef"><b>Definition</b> c_tag.h:10</div></div>
+<div class="ttc" id="astructleafdraw__method__class_html"><div class="ttname"><a href="structleafdraw__method__class.html">leafdraw_method_class</a></div><div class="ttdef"><b>Definition</b> f_pc_leaf.h:11</div></div>
+<div class="ttc" id="astructrequest__of__phase__process__class_html"><div class="ttname"><a href="structrequest__of__phase__process__class.html">request_of_phase_process_class</a></div><div class="ttdef"><b>Definition</b> c_phase.h:17</div></div>
+<div class="ttc" id="astructview__class_html"><div class="ttname"><a href="structview__class.html">view_class</a></div><div class="ttdef"><b>Definition</b> f_op_view.h:43</div></div>
+<div class="ttc" id="astructview__class_html_a67a38e4ae432138673221f103725b511"><div class="ttname"><a href="structview__class.html#a67a38e4ae432138673221f103725b511">view_class::mFovy</a></div><div class="ttdeci">f32 mFovy</div><div class="ttdef"><b>Definition</b> f_op_view.h:48</div></div>
+<div class="ttc" id="astructview__class_html_ae3b73d88588776667109c77cabb5476b"><div class="ttname"><a href="structview__class.html#ae3b73d88588776667109c77cabb5476b">view_class::mLookat</a></div><div class="ttdeci">lookat_class mLookat</div><div class="ttdef"><b>Definition</b> f_op_view.h:50</div></div>
+<div class="ttc" id="atypes_8h_html_a151f780fb455885061d3b77ec1c90c03"><div class="ttname"><a href="types_8h.html#a151f780fb455885061d3b77ec1c90c03">s8</a></div><div class="ttdeci">signed char s8</div><div class="ttdef"><b>Definition</b> types.h:4</div></div>
+<div class="ttc" id="atypes_8h_html_a2caf5cd7bcdbe1eefa727f44ffb10bac"><div class="ttname"><a href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a></div><div class="ttdeci">unsigned long u32</div><div class="ttdef"><b>Definition</b> types.h:10</div></div>
+<div class="ttc" id="atypes_8h_html_a5f6906312a689f27d70e9d086649d3fd"><div class="ttname"><a href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a></div><div class="ttdeci">float f32</div><div class="ttdef"><b>Definition</b> types.h:22</div></div>
+<div class="ttc" id="atypes_8h_html_a5ffa4f640862b25ba6d4f635b78bdbe1"><div class="ttname"><a href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a></div><div class="ttdeci">signed short s16</div><div class="ttdef"><b>Definition</b> types.h:5</div></div>
+<div class="ttc" id="atypes_8h_html_aed742c436da53c1080638ce6ef7d13de"><div class="ttname"><a href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a></div><div class="ttdeci">unsigned char u8</div><div class="ttdef"><b>Definition</b> types.h:8</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_fbb29e8cafd745cbb7106b56de6b5377.html">f_op</a></li><li class="navelem"><a class="el" href="f__op__camera__mng_8h.html">f_op_camera_mng.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

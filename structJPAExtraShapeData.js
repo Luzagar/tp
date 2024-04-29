@@ -1,0 +1,28 @@
+var structJPAExtraShapeData =
+[
+    [ "mAlphaBaseValue", "structJPAExtraShapeData.html#aab597a21202d5119cbd3c8ef97464038", null ],
+    [ "mAlphaInTiming", "structJPAExtraShapeData.html#abd2e0e9bd8435eb8dc18938e9340d0e5", null ],
+    [ "mAlphaInValue", "structJPAExtraShapeData.html#ae70dce15bdc328d8bd65116779ec4b7b", null ],
+    [ "mAlphaOutTiming", "structJPAExtraShapeData.html#a1dc2d9803abce70477424a49c4a19090", null ],
+    [ "mAlphaOutValue", "structJPAExtraShapeData.html#ad5c52675525d94bafa393c998f68d2e4", null ],
+    [ "mAlphaWaveAmplitude", "structJPAExtraShapeData.html#ab933f500e9858b7e4dc577752f7d01ed", null ],
+    [ "mAlphaWaveFrequency", "structJPAExtraShapeData.html#afab2d352b9c4c850a0800195ae4089ac", null ],
+    [ "mAlphaWaveRandom", "structJPAExtraShapeData.html#a1f7350972f3b442502dcf2901aab2d4b", null ],
+    [ "mFlags", "structJPAExtraShapeData.html#a9bdf786104c46147bf1fff243772425e", null ],
+    [ "mMagic", "structJPAExtraShapeData.html#a649ff6048d77b395708db52218f77393", null ],
+    [ "mRotateAngle", "structJPAExtraShapeData.html#a1eecbd11c134b3c1526bd4382ec91a57", null ],
+    [ "mRotateAngleRandom", "structJPAExtraShapeData.html#a7b199bfe40bb996ab9cfe2451c660ed2", null ],
+    [ "mRotateDirection", "structJPAExtraShapeData.html#a6573236571a3ed356877d6e762090b71", null ],
+    [ "mRotateSpeed", "structJPAExtraShapeData.html#a0e23524fd9ee12f58db2f682e4b4fd5d", null ],
+    [ "mRotateSpeedRandom", "structJPAExtraShapeData.html#a19e36998e53aa08ff5409031fe78052e", null ],
+    [ "mScaleAnmCycleX", "structJPAExtraShapeData.html#a0948aaa98875e003cb9f9d55b1be92a4", null ],
+    [ "mScaleAnmCycleY", "structJPAExtraShapeData.html#a16c8cea3d930c4ac65e7a8a5ab1a4027", null ],
+    [ "mScaleInTiming", "structJPAExtraShapeData.html#a27e1dc6b449e7f63f621bb98a377ef09", null ],
+    [ "mScaleInValueX", "structJPAExtraShapeData.html#aa46bb18315fbe9a5f3f4e16d4e284f3f", null ],
+    [ "mScaleInValueY", "structJPAExtraShapeData.html#a2d7afcc39ea7ed33e0874a525feb0ba7", null ],
+    [ "mScaleOutRandom", "structJPAExtraShapeData.html#a2762fe920f9365c27a9720d00289d2ad", null ],
+    [ "mScaleOutTiming", "structJPAExtraShapeData.html#abcbe772029af83dd98d6aae9d2b1db7e", null ],
+    [ "mScaleOutValueX", "structJPAExtraShapeData.html#ad45385b6912b30640b9923e8cc2fcc26", null ],
+    [ "mScaleOutValueY", "structJPAExtraShapeData.html#a668692af935fcf7e1d9a4667f29ccde2", null ],
+    [ "mSize", "structJPAExtraShapeData.html#a77fb91c51f61391be7d4f48a5983944d", null ]
+];

@@ -1,0 +1,28 @@
+var JKRHeap_8h =
+[
+    [ "JKRHeap::TState", "classJKRHeap_1_1TState.html", "classJKRHeap_1_1TState" ],
+    [ "JKRErrorHandler", "JKRHeap_8h.html#a2e55ce63de02b1e205874219e4f65119", null ],
+    [ "JKRAlloc", "JKRHeap_8h.html#a9b99aa6964e7e599f61c5692733cc26c", null ],
+    [ "JKRAllocFromHeap", "JKRHeap_8h.html#abd59298eda32bdf5b90464b02e272c59", null ],
+    [ "JKRAllocFromSysHeap", "JKRHeap_8h.html#a6d1f37f62cda0fbcfdcee2e65a4fb1d1", null ],
+    [ "JKRDefaultMemoryErrorRoutine", "JKRHeap_8h.html#adad2356dccf8789c3ab366996ad5cf7c", null ],
+    [ "JKRFree", "JKRHeap_8h.html#ac462f7ad88ddc8bfbbeac6a5d0d84881", null ],
+    [ "JKRFreeToHeap", "JKRHeap_8h.html#a02e36526cc53cfa5f0f4a3ae1e41861a", null ],
+    [ "JKRFreeToSysHeap", "JKRHeap_8h.html#ab274eb9c630290468a7db359f4dd018b", null ],
+    [ "JKRGetCurrentHeap", "JKRHeap_8h.html#a1254338d1241842233f26d984efc5e58", null ],
+    [ "JKRGetMemBlockSize", "JKRHeap_8h.html#a3f44982af371c444bcdec2eae1e8bc50", null ],
+    [ "JKRGetRootHeap", "JKRHeap_8h.html#a5df5b2b9eed28146d0d1d67cbbd04829", null ],
+    [ "JKRGetSystemHeap", "JKRHeap_8h.html#a1b4b592217e47fead91d427838db866c", null ],
+    [ "JKRResizeMemBlock", "JKRHeap_8h.html#a0a2f5425e392cd38071115a9d8ac97ca", null ],
+    [ "JKRSetCurrentHeap", "JKRHeap_8h.html#a6f130a170b6fb300555b5a0745bd9578", null ],
+    [ "operator delete", "JKRHeap_8h.html#a3d97a7e2a0208075b4b37328c96ed390", null ],
+    [ "operator delete[]", "JKRHeap_8h.html#a1d8b2d6f17242ae0d182b0f7a98ba54f", null ],
+    [ "operator new", "JKRHeap_8h.html#a160dcabc54bbecfc69484678cafadb81", null ],
+    [ "operator new", "JKRHeap_8h.html#a543f99d1c92133fe65492ed99f142377", null ],
+    [ "operator new", "JKRHeap_8h.html#ad8913c54ac27482046a71a94a1d6a406", null ],
+    [ "operator new", "JKRHeap_8h.html#a2c242637e43b0729938e82c847c75b8b", null ],
+    [ "operator new[]", "JKRHeap_8h.html#af2243bb4c2126b7b2b393e06090fbe59", null ],
+    [ "operator new[]", "JKRHeap_8h.html#a55a547e51ad46a0510a4361009ce8834", null ],
+    [ "operator new[]", "JKRHeap_8h.html#acf9a79782222f72b372b23f29dd31640", null ],
+    [ "data_804508B0", "JKRHeap_8h.html#a3eebb4d6e7564529df7d967772468cda", null ]
+];

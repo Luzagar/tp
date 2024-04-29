@@ -1,0 +1,26 @@
+var GXTransform_8c =
+[
+    [ "__GXSetMatrixIndex", "GXTransform_8c.html#a3d8d5e28111923a60908d08e6d38a442", null ],
+    [ "__GXSetMatrixIndex", "GXTransform_8c.html#a590c8b63de7b4ef8a1771c08de2d4781", null ],
+    [ "__GXSetProjection", "GXTransform_8c.html#ab25c007e084888bccb59a74dab39aeae", null ],
+    [ "__GXSetViewport", "GXTransform_8c.html#a554cb1cbc1ef1bcc7927d73dd91f19de", null ],
+    [ "Copy6Floats", "GXTransform_8c.html#a4676a21272bde7d11454f587d162c2f7", null ],
+    [ "GXGetProjectionv", "GXTransform_8c.html#adf4c0a4085c4db2d3d1e2bc6153309d8", null ],
+    [ "GXGetScissor", "GXTransform_8c.html#a15361cf74e88bac6a7cf94b5505fd86f", null ],
+    [ "GXGetViewportv", "GXTransform_8c.html#a67207fff2cc9ef942a0d833d72e495a4", null ],
+    [ "GXLoadNrmMtxImm", "GXTransform_8c.html#ab015ec58c2fc339a73910e4b9dce040e", null ],
+    [ "GXLoadPosMtxImm", "GXTransform_8c.html#a0fbaf33ff235d333d8dcc20cb39f0052", null ],
+    [ "GXLoadTexMtxImm", "GXTransform_8c.html#a83c091593be1e501ece2a13235ad251f", null ],
+    [ "GXProject", "GXTransform_8c.html#a8e14029dcb873acce245da5a11364048", null ],
+    [ "GXSetClipMode", "GXTransform_8c.html#a753911f174eb913f6bd874375de50da9", null ],
+    [ "GXSetCurrentMtx", "GXTransform_8c.html#aec5841c4257d3f244a3b0da4833e47a8", null ],
+    [ "GXSetProjection", "GXTransform_8c.html#aa79d073aaacbecf37a20fab3b7f9a5bc", null ],
+    [ "GXSetProjectionv", "GXTransform_8c.html#a205fcd34356af66a96eb6fb18bb6735c", null ],
+    [ "GXSetScissor", "GXTransform_8c.html#a67c462f55b3f86555becd2ed0386e927", null ],
+    [ "GXSetScissorBoxOffset", "GXTransform_8c.html#af9577e6513d09f1ebd3af8848e21df7a", null ],
+    [ "GXSetViewport", "GXTransform_8c.html#a6a9b41fb6242dcd38de113a55893e4a4", null ],
+    [ "WriteMTXPS3x3", "GXTransform_8c.html#a7f01955ceee8511629a19908681fd269", null ],
+    [ "WriteMTXPS4x2", "GXTransform_8c.html#ae8986a4df67d5b358b9d74a7a54fcbbf", null ],
+    [ "WriteMTXPS4x3", "GXTransform_8c.html#a42aa8eb81d5b1bcfd545a7757267f77c", null ],
+    [ "WriteProjPS", "GXTransform_8c.html#a7f3e8fc47d23f6b5c5e7cac05fbc33b0", null ]
+];

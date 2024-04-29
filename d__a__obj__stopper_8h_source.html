@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: include/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d__a__obj__stopper_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">d_a_obj_stopper.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="d__a__obj__stopper_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef D_A_OBJ_STOPPER_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define D_A_OBJ_STOPPER_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">dolphin/types.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="f__op__actor_8h.html">f_op/f_op_actor.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="structdaObjStopper__c.html">    7</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structdaObjStopper__c.html">daObjStopper_c</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structfopAc__ac__c.html">fopAc_ac_c</a> {</div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="structdaObjStopper__c.html#a2d99cbe348527691784193d78bdc9353">    8</a></span>    <span class="keyword">enum</span> <a class="code hl_enumeration" href="structdaObjStopper__c.html#a2d99cbe348527691784193d78bdc9353">ActionType</a> {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="structdaObjStopper__c.html#a2d99cbe348527691784193d78bdc9353aa4ac0f3d72b61c31450d809ef90a039c">    9</a></span>        <a class="code hl_enumvalue" href="structdaObjStopper__c.html#a2d99cbe348527691784193d78bdc9353aa4ac0f3d72b61c31450d809ef90a039c">ACTION_WAIT</a>,</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="structdaObjStopper__c.html#a2d99cbe348527691784193d78bdc9353aea6f74395a5aaecfa94c8d85c8610a41">   10</a></span>        <a class="code hl_enumvalue" href="structdaObjStopper__c.html#a2d99cbe348527691784193d78bdc9353aea6f74395a5aaecfa94c8d85c8610a41">ACTION_WAIT_ORDER_EVENT</a>,</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="structdaObjStopper__c.html#a2d99cbe348527691784193d78bdc9353a30f7254ed86aa4212222e40c04c7e30a">   11</a></span>        <a class="code hl_enumvalue" href="structdaObjStopper__c.html#a2d99cbe348527691784193d78bdc9353a30f7254ed86aa4212222e40c04c7e30a">ACTION_ORDER_EVENT</a>,</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structdaObjStopper__c.html#a2d99cbe348527691784193d78bdc9353a32f50ac836701668cc82a7fb71279af5">   12</a></span>        <a class="code hl_enumvalue" href="structdaObjStopper__c.html#a2d99cbe348527691784193d78bdc9353a32f50ac836701668cc82a7fb71279af5">ACTION_EVENT</a>,</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structdaObjStopper__c.html#a2d99cbe348527691784193d78bdc9353addfa54d00849163952a73e97cfad7ac6">   13</a></span>        <a class="code hl_enumvalue" href="structdaObjStopper__c.html#a2d99cbe348527691784193d78bdc9353addfa54d00849163952a73e97cfad7ac6">ACTION_DEAD</a>,</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structdaObjStopper__c.html#a2d99cbe348527691784193d78bdc9353a5652a4248abef474bb6ac32204c8170a">   14</a></span>        <a class="code hl_enumvalue" href="structdaObjStopper__c.html#a2d99cbe348527691784193d78bdc9353a5652a4248abef474bb6ac32204c8170a">ACTION_WAIT_CLOSE</a>,</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structdaObjStopper__c.html#a2d99cbe348527691784193d78bdc9353a44dbb1222ac4de5e05b1f466484c9926">   15</a></span>        <a class="code hl_enumvalue" href="structdaObjStopper__c.html#a2d99cbe348527691784193d78bdc9353a44dbb1222ac4de5e05b1f466484c9926">ACTION_CLOSE</a>,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structdaObjStopper__c.html#a2d99cbe348527691784193d78bdc9353a6f9eaebbd82f3531c36bc0367434d1fc">   16</a></span>        <a class="code hl_enumvalue" href="structdaObjStopper__c.html#a2d99cbe348527691784193d78bdc9353a6f9eaebbd82f3531c36bc0367434d1fc">ACTION_CLOSE_INIT</a>,</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    };</div>
+</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="comment">/* 80CECF34 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structdaObjStopper__c.html#a6cb4ec4221d8c7b7c0e14040708919a1">initBaseMtx</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="comment">/* 80CED024 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structdaObjStopper__c.html#a7de7007c3a4790ff79fbf4c15f52b968">setBaseMtx</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">/* 80CED0B8 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structdaObjStopper__c.html#aa284fbe4048e795afe4243cd73fb8eaa">Create</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">/* 80CED20C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structdaObjStopper__c.html#ae32eb2c3feb3157137a4c53e351d2b4b">CreateHeap</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="comment">/* 80CED258 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structdaObjStopper__c.html#ac82e8327df0ddfcfd9efcd0bda631a09">create</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">/* 80CED6BC */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structdaObjStopper__c.html#a26048596c174cb02bc59bcc7ad6b171d">Execute</a>(<a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> (**)[3][4]);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment">/* 80CED708 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structdaObjStopper__c.html#ac1de95dadbf2baff4bab0e2845f438da">action</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="comment">/* 80CED824 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structdaObjStopper__c.html#a753c574c63d80e1f058af77dd02a84d1">actionWait</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">/* 80CEDA24 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structdaObjStopper__c.html#aa5a4d1cbae78f56717da9a630e5973e2">actionWaitOrderEvent</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">/* 80CEDAAC */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structdaObjStopper__c.html#a2fb3c4c6fda43e5e24860225faef830b">actionOrderEvent</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">/* 80CEDB2C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structdaObjStopper__c.html#ae83cc1c5a588dc7b22e471171e145251">actionEvent</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">/* 80CEE048 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structdaObjStopper__c.html#adbe9d533995c185f8f3c204728494f4c">actionDead</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">/* 80CEE04C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structdaObjStopper__c.html#a9eca60c4dd366360d9d4d35919064050">actionWaitClose</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">/* 80CEE05C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structdaObjStopper__c.html#a7e7ef1265d9870d575bbef7b2b91827c">actionCloseInit</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="comment">/* 80CEE0E0 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structdaObjStopper__c.html#aee4d1180dbbe9bcbc804af352be9e7d3">actionClose</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="comment">/* 80CEE148 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structdaObjStopper__c.html#a68297416761395894ccac3deb45be49b">hint_action1</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">/* 80CEE5D0 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structdaObjStopper__c.html#ad7968203e72142d54ab006078fda0cac">hint_action2</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">/* 80CEEA28 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structdaObjStopper__c.html#a262f257a099137ecd68930301aa8d2ea">hint_action3</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment">/* 80CEECFC */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structdaObjStopper__c.html#ab7edaacf0b6c7d7f410045d93b440e17">Draw</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">/* 80CEED60 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structdaObjStopper__c.html#a6f860e9af4e416c8bfbc3cdc5e6c18fd">Delete</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="structdaObjStopper__c.html#aafe9c0561400ff54643608734bfbc904">   40</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="structdaObjStopper__c.html#aafe9c0561400ff54643608734bfbc904">setOpen</a>() { <a class="code hl_variable" href="structdaObjStopper__c.html#a2688092d61e028212002eca3b6149018">mAction</a> = <a class="code hl_enumvalue" href="structdaObjStopper__c.html#a2d99cbe348527691784193d78bdc9353a5652a4248abef474bb6ac32204c8170a">ACTION_WAIT_CLOSE</a>; }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structdaObjStopper__c.html#a2d38893f9b4c7963453be76ef5714e34">   41</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="structdaObjStopper__c.html#a2d38893f9b4c7963453be76ef5714e34">setAction</a>(<a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_function" href="structdaObjStopper__c.html#ac1de95dadbf2baff4bab0e2845f438da">action</a>) { <a class="code hl_variable" href="structdaObjStopper__c.html#a2688092d61e028212002eca3b6149018">mAction</a> = <a class="code hl_function" href="structdaObjStopper__c.html#ac1de95dadbf2baff4bab0e2845f438da">action</a>; }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="structdaObjStopper__c.html#acf9e70af9e1663a11cf7bf58a1f2234c">   42</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="structdaObjStopper__c.html#acf9e70af9e1663a11cf7bf58a1f2234c">startClose</a>() { <a class="code hl_function" href="structdaObjStopper__c.html#a2d38893f9b4c7963453be76ef5714e34">setAction</a>(<a class="code hl_enumvalue" href="structdaObjStopper__c.html#a2d99cbe348527691784193d78bdc9353a6f9eaebbd82f3531c36bc0367434d1fc">ACTION_CLOSE_INIT</a>); }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="structdaObjStopper__c.html#a7ae6411c31b5d8885840052c463946c4">   44</a></span>    <span class="comment">/* 0x568 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="structdaObjStopper__c.html#a7ae6411c31b5d8885840052c463946c4">field_0x568</a>[0x93c - 0x568];</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structdaObjStopper__c.html#a2688092d61e028212002eca3b6149018">   45</a></span>    <span class="comment">/* 0x93C */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="structdaObjStopper__c.html#a2688092d61e028212002eca3b6149018">mAction</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>};</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#endif </span><span class="comment">/* D_A_OBJ_STOPPER_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="af__op__actor_8h_html"><div class="ttname"><a href="f__op__actor_8h.html">f_op_actor.h</a></div></div>
+<div class="ttc" id="astructdaObjStopper__c_html"><div class="ttname"><a href="structdaObjStopper__c.html">daObjStopper_c</a></div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.h:7</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_a26048596c174cb02bc59bcc7ad6b171d"><div class="ttname"><a href="structdaObjStopper__c.html#a26048596c174cb02bc59bcc7ad6b171d">daObjStopper_c::Execute</a></div><div class="ttdeci">void Execute(f32(**)[3][4])</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.cpp:751</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_a262f257a099137ecd68930301aa8d2ea"><div class="ttname"><a href="structdaObjStopper__c.html#a262f257a099137ecd68930301aa8d2ea">daObjStopper_c::hint_action3</a></div><div class="ttdeci">void hint_action3()</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.cpp:968</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_a2688092d61e028212002eca3b6149018"><div class="ttname"><a href="structdaObjStopper__c.html#a2688092d61e028212002eca3b6149018">daObjStopper_c::mAction</a></div><div class="ttdeci">u8 mAction</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.h:45</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_a2d38893f9b4c7963453be76ef5714e34"><div class="ttname"><a href="structdaObjStopper__c.html#a2d38893f9b4c7963453be76ef5714e34">daObjStopper_c::setAction</a></div><div class="ttdeci">void setAction(u8 action)</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.h:41</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_a2d99cbe348527691784193d78bdc9353"><div class="ttname"><a href="structdaObjStopper__c.html#a2d99cbe348527691784193d78bdc9353">daObjStopper_c::ActionType</a></div><div class="ttdeci">ActionType</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.h:8</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_a2d99cbe348527691784193d78bdc9353a30f7254ed86aa4212222e40c04c7e30a"><div class="ttname"><a href="structdaObjStopper__c.html#a2d99cbe348527691784193d78bdc9353a30f7254ed86aa4212222e40c04c7e30a">daObjStopper_c::ACTION_ORDER_EVENT</a></div><div class="ttdeci">@ ACTION_ORDER_EVENT</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.h:11</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_a2d99cbe348527691784193d78bdc9353a32f50ac836701668cc82a7fb71279af5"><div class="ttname"><a href="structdaObjStopper__c.html#a2d99cbe348527691784193d78bdc9353a32f50ac836701668cc82a7fb71279af5">daObjStopper_c::ACTION_EVENT</a></div><div class="ttdeci">@ ACTION_EVENT</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.h:12</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_a2d99cbe348527691784193d78bdc9353a44dbb1222ac4de5e05b1f466484c9926"><div class="ttname"><a href="structdaObjStopper__c.html#a2d99cbe348527691784193d78bdc9353a44dbb1222ac4de5e05b1f466484c9926">daObjStopper_c::ACTION_CLOSE</a></div><div class="ttdeci">@ ACTION_CLOSE</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.h:15</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_a2d99cbe348527691784193d78bdc9353a5652a4248abef474bb6ac32204c8170a"><div class="ttname"><a href="structdaObjStopper__c.html#a2d99cbe348527691784193d78bdc9353a5652a4248abef474bb6ac32204c8170a">daObjStopper_c::ACTION_WAIT_CLOSE</a></div><div class="ttdeci">@ ACTION_WAIT_CLOSE</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.h:14</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_a2d99cbe348527691784193d78bdc9353a6f9eaebbd82f3531c36bc0367434d1fc"><div class="ttname"><a href="structdaObjStopper__c.html#a2d99cbe348527691784193d78bdc9353a6f9eaebbd82f3531c36bc0367434d1fc">daObjStopper_c::ACTION_CLOSE_INIT</a></div><div class="ttdeci">@ ACTION_CLOSE_INIT</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.h:16</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_a2d99cbe348527691784193d78bdc9353aa4ac0f3d72b61c31450d809ef90a039c"><div class="ttname"><a href="structdaObjStopper__c.html#a2d99cbe348527691784193d78bdc9353aa4ac0f3d72b61c31450d809ef90a039c">daObjStopper_c::ACTION_WAIT</a></div><div class="ttdeci">@ ACTION_WAIT</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.h:9</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_a2d99cbe348527691784193d78bdc9353addfa54d00849163952a73e97cfad7ac6"><div class="ttname"><a href="structdaObjStopper__c.html#a2d99cbe348527691784193d78bdc9353addfa54d00849163952a73e97cfad7ac6">daObjStopper_c::ACTION_DEAD</a></div><div class="ttdeci">@ ACTION_DEAD</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.h:13</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_a2d99cbe348527691784193d78bdc9353aea6f74395a5aaecfa94c8d85c8610a41"><div class="ttname"><a href="structdaObjStopper__c.html#a2d99cbe348527691784193d78bdc9353aea6f74395a5aaecfa94c8d85c8610a41">daObjStopper_c::ACTION_WAIT_ORDER_EVENT</a></div><div class="ttdeci">@ ACTION_WAIT_ORDER_EVENT</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.h:10</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_a2fb3c4c6fda43e5e24860225faef830b"><div class="ttname"><a href="structdaObjStopper__c.html#a2fb3c4c6fda43e5e24860225faef830b">daObjStopper_c::actionOrderEvent</a></div><div class="ttdeci">void actionOrderEvent()</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.cpp:842</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_a68297416761395894ccac3deb45be49b"><div class="ttname"><a href="structdaObjStopper__c.html#a68297416761395894ccac3deb45be49b">daObjStopper_c::hint_action1</a></div><div class="ttdeci">void hint_action1()</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.cpp:933</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_a6cb4ec4221d8c7b7c0e14040708919a1"><div class="ttname"><a href="structdaObjStopper__c.html#a6cb4ec4221d8c7b7c0e14040708919a1">daObjStopper_c::initBaseMtx</a></div><div class="ttdeci">void initBaseMtx()</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.cpp:385</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_a6f860e9af4e416c8bfbc3cdc5e6c18fd"><div class="ttname"><a href="structdaObjStopper__c.html#a6f860e9af4e416c8bfbc3cdc5e6c18fd">daObjStopper_c::Delete</a></div><div class="ttdeci">void Delete()</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.cpp:988</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_a753c574c63d80e1f058af77dd02a84d1"><div class="ttname"><a href="structdaObjStopper__c.html#a753c574c63d80e1f058af77dd02a84d1">daObjStopper_c::actionWait</a></div><div class="ttdeci">void actionWait()</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.cpp:822</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_a7ae6411c31b5d8885840052c463946c4"><div class="ttname"><a href="structdaObjStopper__c.html#a7ae6411c31b5d8885840052c463946c4">daObjStopper_c::field_0x568</a></div><div class="ttdeci">u8 field_0x568[0x93c - 0x568]</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.h:44</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_a7de7007c3a4790ff79fbf4c15f52b968"><div class="ttname"><a href="structdaObjStopper__c.html#a7de7007c3a4790ff79fbf4c15f52b968">daObjStopper_c::setBaseMtx</a></div><div class="ttdeci">void setBaseMtx()</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.cpp:406</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_a7e7ef1265d9870d575bbef7b2b91827c"><div class="ttname"><a href="structdaObjStopper__c.html#a7e7ef1265d9870d575bbef7b2b91827c">daObjStopper_c::actionCloseInit</a></div><div class="ttdeci">void actionCloseInit()</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.cpp:884</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_a9eca60c4dd366360d9d4d35919064050"><div class="ttname"><a href="structdaObjStopper__c.html#a9eca60c4dd366360d9d4d35919064050">daObjStopper_c::actionWaitClose</a></div><div class="ttdeci">void actionWaitClose()</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.cpp:873</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_aa284fbe4048e795afe4243cd73fb8eaa"><div class="ttname"><a href="structdaObjStopper__c.html#aa284fbe4048e795afe4243cd73fb8eaa">daObjStopper_c::Create</a></div><div class="ttdeci">void Create()</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.cpp:435</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_aa5a4d1cbae78f56717da9a630e5973e2"><div class="ttname"><a href="structdaObjStopper__c.html#aa5a4d1cbae78f56717da9a630e5973e2">daObjStopper_c::actionWaitOrderEvent</a></div><div class="ttdeci">void actionWaitOrderEvent()</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.cpp:832</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_aafe9c0561400ff54643608734bfbc904"><div class="ttname"><a href="structdaObjStopper__c.html#aafe9c0561400ff54643608734bfbc904">daObjStopper_c::setOpen</a></div><div class="ttdeci">void setOpen()</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.h:40</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_ab7edaacf0b6c7d7f410045d93b440e17"><div class="ttname"><a href="structdaObjStopper__c.html#ab7edaacf0b6c7d7f410045d93b440e17">daObjStopper_c::Draw</a></div><div class="ttdeci">void Draw()</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.cpp:978</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_ac1de95dadbf2baff4bab0e2845f438da"><div class="ttname"><a href="structdaObjStopper__c.html#ac1de95dadbf2baff4bab0e2845f438da">daObjStopper_c::action</a></div><div class="ttdeci">void action()</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.cpp:765</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_ac82e8327df0ddfcfd9efcd0bda631a09"><div class="ttname"><a href="structdaObjStopper__c.html#ac82e8327df0ddfcfd9efcd0bda631a09">daObjStopper_c::create</a></div><div class="ttdeci">void create()</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.cpp:664</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_acf9e70af9e1663a11cf7bf58a1f2234c"><div class="ttname"><a href="structdaObjStopper__c.html#acf9e70af9e1663a11cf7bf58a1f2234c">daObjStopper_c::startClose</a></div><div class="ttdeci">void startClose()</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.h:42</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_ad7968203e72142d54ab006078fda0cac"><div class="ttname"><a href="structdaObjStopper__c.html#ad7968203e72142d54ab006078fda0cac">daObjStopper_c::hint_action2</a></div><div class="ttdeci">void hint_action2()</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.cpp:943</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_adbe9d533995c185f8f3c204728494f4c"><div class="ttname"><a href="structdaObjStopper__c.html#adbe9d533995c185f8f3c204728494f4c">daObjStopper_c::actionDead</a></div><div class="ttdeci">void actionDead()</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.cpp:864</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_ae32eb2c3feb3157137a4c53e351d2b4b"><div class="ttname"><a href="structdaObjStopper__c.html#ae32eb2c3feb3157137a4c53e351d2b4b">daObjStopper_c::CreateHeap</a></div><div class="ttdeci">void CreateHeap()</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.cpp:445</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_ae83cc1c5a588dc7b22e471171e145251"><div class="ttname"><a href="structdaObjStopper__c.html#ae83cc1c5a588dc7b22e471171e145251">daObjStopper_c::actionEvent</a></div><div class="ttdeci">void actionEvent()</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.cpp:857</div></div>
+<div class="ttc" id="astructdaObjStopper__c_html_aee4d1180dbbe9bcbc804af352be9e7d3"><div class="ttname"><a href="structdaObjStopper__c.html#aee4d1180dbbe9bcbc804af352be9e7d3">daObjStopper_c::actionClose</a></div><div class="ttdeci">void actionClose()</div><div class="ttdef"><b>Definition</b> d_a_obj_stopper.cpp:902</div></div>
+<div class="ttc" id="astructfopAc__ac__c_html"><div class="ttname"><a href="structfopAc__ac__c.html">fopAc_ac_c</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:14</div></div>
+<div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div></div>
+<div class="ttc" id="atypes_8h_html_a5f6906312a689f27d70e9d086649d3fd"><div class="ttname"><a href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a></div><div class="ttdeci">float f32</div><div class="ttdef"><b>Definition</b> types.h:22</div></div>
+<div class="ttc" id="atypes_8h_html_aed742c436da53c1080638ce6ef7d13de"><div class="ttname"><a href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a></div><div class="ttdeci">unsigned char u8</div><div class="ttdef"><b>Definition</b> types.h:8</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d1e95842203b094e4f127fa85baf24b5.html">rel</a></li><li class="navelem"><a class="el" href="dir_244336746419795862f93731f1699860.html">d</a></li><li class="navelem"><a class="el" href="dir_b81c1d082692bb1b2b34ed3bfe8a0f4a.html">a</a></li><li class="navelem"><a class="el" href="dir_837b79828d4d0cae6e2581b9ebbbcbf8.html">obj</a></li><li class="navelem"><a class="el" href="dir_8ce713cd022af8cc3e49912683bdfe63.html">d_a_obj_stopper</a></li><li class="navelem"><a class="el" href="d__a__obj__stopper_8h.html">d_a_obj_stopper.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: include/rel/d/a/d_a_cstaF/d_a_cstaF.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d__a__cstaF_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">d_a_cstaF.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="d__a__cstaF_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef D_A_CSTAF_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define D_A_CSTAF_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="Z2Creature_8h.html">Z2AudioLib/Z2Creature.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="d__bg__s__movebg__actor_8h.html">d/bg/d_bg_s_movebg_actor.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="d__particle__copoly_8h.html">d/particle/d_particle_copoly.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html">    8</a></span><span class="keyword">class </span><a class="code hl_class" href="classdaCstaF__c.html">daCstaF_c</a> : <span class="keyword">public</span> <a class="code hl_struct" href="classdBgS__MoveBgActor.html">dBgS_MoveBgActor</a> {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="comment">/* 804DDB48 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaCstaF__c.html#a987d176dfbd38974842dcc6f95d32a79">checkCoverModel</a>();</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="comment">/* 804DDBB4 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaCstaF__c.html#a91e21cbe3a1be39326f6adea768c834a">create</a>();</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="comment">/* 804DE2F8 */</span> <a class="code hl_function" href="classdaCstaF__c.html#aaa9a113805dbf23093182c64a206026e">~daCstaF_c</a>();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="comment">/* 804DE558 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaCstaF__c.html#aecd0d4fbad9a5cc1ec7f2491b5d87d56">setRoomInfo</a>();</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="comment">/* 804DE5F0 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaCstaF__c.html#a63c2d63af0639617c116953a2f65eed4">setMatrix</a>();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="comment">/* 804DE698 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaCstaF__c.html#a561cf846d6fcb93c66477eca0c0008ba">posMove</a>();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="comment">/* 804DEB60 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaCstaF__c.html#a639e1a05bc54aa64fce245fe338ce5a5">setCollision</a>();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">/* 804DEC14 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaCstaF__c.html#af40073b05cc9aae3b15b616686c46ceb">setAnime</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="comment">/* 804DF0D8 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaCstaF__c.html#a0c55fd4afa67af329bbacbd32f9baa29">initBrk</a>(<a class="code hl_typedef" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="comment">/* 804DF150 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaCstaF__c.html#a937b4ab6de779080803118c2945c1f28">initStopBrkBtk</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="comment">/* 804DF1A4 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaCstaF__c.html#a811f093375f770e3922af482f5943e28">initStartBrkBtk</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">/* 804DD978 */</span> <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classdaCstaF__c.html#aab62184aac9ae50cdeb02f20f91ba491">CreateHeap</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="comment">/* 804DF37C */</span> <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classdaCstaF__c.html#a44f15d18358bfb43856fdf93abe90913">Execute</a>(<a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> (**)[3][4]);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">/* 804DF6E4 */</span> <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classdaCstaF__c.html#a7eec6490ccc795b9af075dc98fb5ba69">Draw</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#a4b17bb95abb6c6aba07c62790f066cb8">   26</a></span>    <a class="code hl_struct" href="structcXyz.html">cXyz</a>&amp; <a class="code hl_function" href="classdaCstaF__c.html#a4b17bb95abb6c6aba07c62790f066cb8">getBallPos</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="classdaCstaF__c.html#a25ef10d0235d2acac81d4f6053757584">mBallPos</a>; }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">static</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <span class="keyword">const</span> <a class="code hl_variable" href="classdaCstaF__c.html#ae73771282fec16a34e84273e2f8e9f91">m_bckIdxTable</a>[16];</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#a84c0cc99bed6488c7b26de5efe1cdde6">   31</a></span>    <span class="comment">/* 0x5A0 */</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="classdaCstaF__c.html#a84c0cc99bed6488c7b26de5efe1cdde6">mResName</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#a421fb9425a45db5ac33234d2679416b8">   32</a></span>    <span class="comment">/* 0x5A4 */</span> <a class="code hl_struct" href="structrequest__of__phase__process__class.html">request_of_phase_process_class</a> <a class="code hl_variable" href="classdaCstaF__c.html#a421fb9425a45db5ac33234d2679416b8">mPhase</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#abf461e19f97fb49f8334345ed885d8bb">   33</a></span>    <span class="comment">/* 0x5AC */</span> <a class="code hl_struct" href="classJ3DModel.html">J3DModel</a>* <a class="code hl_variable" href="classdaCstaF__c.html#abf461e19f97fb49f8334345ed885d8bb">field_0x5ac</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#a052a1de5f0148ecbdd3949d7eacb3572">   34</a></span>    <span class="comment">/* 0x5B0 */</span> <a class="code hl_struct" href="classmDoExt__McaMorfSO.html">mDoExt_McaMorfSO</a>* <a class="code hl_variable" href="classdaCstaF__c.html#a052a1de5f0148ecbdd3949d7eacb3572">field_0x5b0</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#ad72f6b3e71e57512e654376a8e1403fd">   35</a></span>    <span class="comment">/* 0x5B4 */</span> <a class="code hl_struct" href="classJ3DModel.html">J3DModel</a>* <a class="code hl_variable" href="classdaCstaF__c.html#ad72f6b3e71e57512e654376a8e1403fd">field_0x5b4</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#a4bf62a0e84f507b478356b230f4790d7">   36</a></span>    <span class="comment">/* 0x5B8 */</span> <a class="code hl_struct" href="classJ3DAnmTextureSRTKey.html">J3DAnmTextureSRTKey</a>* <a class="code hl_variable" href="classdaCstaF__c.html#a4bf62a0e84f507b478356b230f4790d7">m_coverBtk</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#a4113649f56b7da9a8228fe0c95808d29">   37</a></span>    <span class="comment">/* 0x5BC */</span> <a class="code hl_struct" href="classJ3DAnmTevRegKey.html">J3DAnmTevRegKey</a>* <a class="code hl_variable" href="classdaCstaF__c.html#a4113649f56b7da9a8228fe0c95808d29">m_coverBrk</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#ad3ddc4207b1bebb968f842b55cf7474d">   38</a></span>    <span class="comment">/* 0x5C0 */</span> <a class="code hl_struct" href="classmDoExt__btkAnm.html">mDoExt_btkAnm</a> <a class="code hl_variable" href="classdaCstaF__c.html#ad3ddc4207b1bebb968f842b55cf7474d">field_0x5c0</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#a75a20fc896e129b6190c67077ff31dce">   39</a></span>    <span class="comment">/* 0x5D8 */</span> <a class="code hl_struct" href="classmDoExt__brkAnm.html">mDoExt_brkAnm</a> <a class="code hl_variable" href="classdaCstaF__c.html#a75a20fc896e129b6190c67077ff31dce">field_0x5d8</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#acdcc601f781a221b799f87c49ee6af57">   40</a></span>    <span class="comment">/* 0x5F0 */</span> <a class="code hl_struct" href="classdBgS__AcchCir.html">dBgS_AcchCir</a> <a class="code hl_variable" href="classdaCstaF__c.html#acdcc601f781a221b799f87c49ee6af57">mAcchCir</a>[4];</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#a9ee8b0b60a9ea04667584b9b64d11749">   41</a></span>    <span class="comment">/* 0x6F0 */</span> <a class="code hl_class" href="classdBgS__StatueAcch.html">dBgS_StatueAcch</a> <a class="code hl_variable" href="classdaCstaF__c.html#a9ee8b0b60a9ea04667584b9b64d11749">mAcch</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#a5b8a7ce301f23fe67653fa042529ea1d">   42</a></span>    <span class="comment">/* 0x8C8 */</span> <a class="code hl_struct" href="structdCcD__Stts.html">dCcD_Stts</a> <a class="code hl_variable" href="classdaCstaF__c.html#a5b8a7ce301f23fe67653fa042529ea1d">mCcStts</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#a9fcd99455aa007517ca077ef3f3d4c4a">   43</a></span>    <span class="comment">/* 0x904 */</span> <a class="code hl_struct" href="structdCcD__Cyl.html">dCcD_Cyl</a> <a class="code hl_variable" href="classdaCstaF__c.html#a9fcd99455aa007517ca077ef3f3d4c4a">mCylCc</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#af9fcd2dfefd38bfc4f1cc43db1a179bb">   44</a></span>    <span class="comment">/* 0xA40 */</span> <a class="code hl_struct" href="classZ2Creature.html">Z2Creature</a> <a class="code hl_variable" href="classdaCstaF__c.html#af9fcd2dfefd38bfc4f1cc43db1a179bb">mSound</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#a96c8a577ae9739803ad48fdc7886a44e">   45</a></span>    <span class="comment">/* 0xAD0 */</span> <a class="code hl_struct" href="classdPaPo__c.html">dPaPo_c</a> <a class="code hl_variable" href="classdaCstaF__c.html#a96c8a577ae9739803ad48fdc7886a44e">field_0xad0</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#a8e2ef96cb2bca790922093916e1d254b">   46</a></span>    <span class="comment">/* 0xB08 */</span> <a class="code hl_typedef" href="types_8h.html#a151f780fb455885061d3b77ec1c90c03">s8</a> <a class="code hl_variable" href="classdaCstaF__c.html#a8e2ef96cb2bca790922093916e1d254b">mReverb</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#a6be5c10ea1da443998d1f51d4b29dd18">   47</a></span>    <span class="comment">/* 0xB09 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaCstaF__c.html#a6be5c10ea1da443998d1f51d4b29dd18">field_0xb09</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#abbc7e58dd78814bd212a85c2c648375e">   48</a></span>    <span class="comment">/* 0xB0A */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaCstaF__c.html#abbc7e58dd78814bd212a85c2c648375e">field_0xb0a</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#a3ce619b022a44643e34194a7dc91cb63">   49</a></span>    <span class="comment">/* 0xB0B */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaCstaF__c.html#a3ce619b022a44643e34194a7dc91cb63">field_0xb0b</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#a6cec0f1b5ea45e4ab5f73e22e43b016f">   50</a></span>    <span class="comment">/* 0xB0C */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaCstaF__c.html#a6cec0f1b5ea45e4ab5f73e22e43b016f">field_0xb0c</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#a2903613f1b0da2c1aba65d288d8fb3f6">   51</a></span>    <span class="comment">/* 0xB0D */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaCstaF__c.html#a2903613f1b0da2c1aba65d288d8fb3f6">mIsPlayerRide</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#a9cef8165cb5175a76ae9fe9016b46609">   52</a></span>    <span class="comment">/* 0xB0E */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaCstaF__c.html#a9cef8165cb5175a76ae9fe9016b46609">field_0xb0e</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#aac0f2d334c81f6c4ee463ed3fbb2bee1">   53</a></span>    <span class="comment">/* 0xB0F */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaCstaF__c.html#aac0f2d334c81f6c4ee463ed3fbb2bee1">field_0xb0f</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#a882c2f4224725180209a194193845276">   54</a></span>    <span class="comment">/* 0xB10 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaCstaF__c.html#a882c2f4224725180209a194193845276">mCoverVanishFlg</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#a28fc2f59f62cd79564bb90dd731b68ad">   55</a></span>    <span class="comment">/* 0xB12 */</span> <a class="code hl_typedef" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> <a class="code hl_variable" href="classdaCstaF__c.html#a28fc2f59f62cd79564bb90dd731b68ad">field_0xb12</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#a1c4280747f1fd226fce7b75b2e5005fc">   56</a></span>    <span class="comment">/* 0xB14 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaCstaF__c.html#a1c4280747f1fd226fce7b75b2e5005fc">field_0xb14</a>[4];</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#a36d3a41c42a354d8da340b3d9b4a5cc0">   57</a></span>    <span class="comment">/* 0xB18 */</span> <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> <a class="code hl_variable" href="classdaCstaF__c.html#a36d3a41c42a354d8da340b3d9b4a5cc0">mShadowKey</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#a844b0c7d1e146972f676e8ab9b3d917c">   58</a></span>    <span class="comment">/* 0xB1C */</span> <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="code hl_variable" href="classdaCstaF__c.html#a844b0c7d1e146972f676e8ab9b3d917c">field_0xb1c</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#ab5ef3523fdd69e09804c4be7bd6a6cd7">   59</a></span>    <span class="comment">/* 0xB20 */</span> <a class="code hl_struct" href="structcXyz.html">cXyz</a> <a class="code hl_variable" href="classdaCstaF__c.html#ab5ef3523fdd69e09804c4be7bd6a6cd7">field_0xb20</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classdaCstaF__c.html#a25ef10d0235d2acac81d4f6053757584">   60</a></span>    <span class="comment">/* 0xB2C */</span> <a class="code hl_struct" href="structcXyz.html">cXyz</a> <a class="code hl_variable" href="classdaCstaF__c.html#a25ef10d0235d2acac81d4f6053757584">mBallPos</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>};</div>
+</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#endif </span><span class="comment">/* D_A_CSTAF_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aZ2Creature_8h_html"><div class="ttname"><a href="Z2Creature_8h.html">Z2Creature.h</a></div></div>
+<div class="ttc" id="aclassJ3DAnmTevRegKey_html"><div class="ttname"><a href="classJ3DAnmTevRegKey.html">J3DAnmTevRegKey</a></div><div class="ttdef"><b>Definition</b> J3DAnimation.h:638</div></div>
+<div class="ttc" id="aclassJ3DAnmTextureSRTKey_html"><div class="ttname"><a href="classJ3DAnmTextureSRTKey.html">J3DAnmTextureSRTKey</a></div><div class="ttdef"><b>Definition</b> J3DAnimation.h:557</div></div>
+<div class="ttc" id="aclassJ3DModel_html"><div class="ttname"><a href="classJ3DModel.html">J3DModel</a></div><div class="ttdef"><b>Definition</b> J3DModel.h:42</div></div>
+<div class="ttc" id="aclassZ2Creature_html"><div class="ttname"><a href="classZ2Creature.html">Z2Creature</a></div><div class="ttdef"><b>Definition</b> Z2Creature.h:8</div></div>
+<div class="ttc" id="aclassdBgS__AcchCir_html"><div class="ttname"><a href="classdBgS__AcchCir.html">dBgS_AcchCir</a></div><div class="ttdef"><b>Definition</b> d_bg_s_acch.h:14</div></div>
+<div class="ttc" id="aclassdBgS__MoveBgActor_html"><div class="ttname"><a href="classdBgS__MoveBgActor.html">dBgS_MoveBgActor</a></div><div class="ttdef"><b>Definition</b> d_bg_s_movebg_actor.h:10</div></div>
+<div class="ttc" id="aclassdBgS__StatueAcch_html"><div class="ttname"><a href="classdBgS__StatueAcch.html">dBgS_StatueAcch</a></div><div class="ttdef"><b>Definition</b> d_bg_s_acch.h:226</div></div>
+<div class="ttc" id="aclassdPaPo__c_html"><div class="ttname"><a href="classdPaPo__c.html">dPaPo_c</a></div><div class="ttdef"><b>Definition</b> d_particle_copoly.h:10</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html"><div class="ttname"><a href="classdaCstaF__c.html">daCstaF_c</a></div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:8</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a052a1de5f0148ecbdd3949d7eacb3572"><div class="ttname"><a href="classdaCstaF__c.html#a052a1de5f0148ecbdd3949d7eacb3572">daCstaF_c::field_0x5b0</a></div><div class="ttdeci">mDoExt_McaMorfSO * field_0x5b0</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:34</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a0c55fd4afa67af329bbacbd32f9baa29"><div class="ttname"><a href="classdaCstaF__c.html#a0c55fd4afa67af329bbacbd32f9baa29">daCstaF_c::initBrk</a></div><div class="ttdeci">void initBrk(u16)</div><div class="ttdef"><b>Definition</b> d_a_cstaF.cpp:758</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a1c4280747f1fd226fce7b75b2e5005fc"><div class="ttname"><a href="classdaCstaF__c.html#a1c4280747f1fd226fce7b75b2e5005fc">daCstaF_c::field_0xb14</a></div><div class="ttdeci">u8 field_0xb14[4]</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:56</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a25ef10d0235d2acac81d4f6053757584"><div class="ttname"><a href="classdaCstaF__c.html#a25ef10d0235d2acac81d4f6053757584">daCstaF_c::mBallPos</a></div><div class="ttdeci">cXyz mBallPos</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:60</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a28fc2f59f62cd79564bb90dd731b68ad"><div class="ttname"><a href="classdaCstaF__c.html#a28fc2f59f62cd79564bb90dd731b68ad">daCstaF_c::field_0xb12</a></div><div class="ttdeci">s16 field_0xb12</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:55</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a2903613f1b0da2c1aba65d288d8fb3f6"><div class="ttname"><a href="classdaCstaF__c.html#a2903613f1b0da2c1aba65d288d8fb3f6">daCstaF_c::mIsPlayerRide</a></div><div class="ttdeci">u8 mIsPlayerRide</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:51</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a36d3a41c42a354d8da340b3d9b4a5cc0"><div class="ttname"><a href="classdaCstaF__c.html#a36d3a41c42a354d8da340b3d9b4a5cc0">daCstaF_c::mShadowKey</a></div><div class="ttdeci">u32 mShadowKey</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:57</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a3ce619b022a44643e34194a7dc91cb63"><div class="ttname"><a href="classdaCstaF__c.html#a3ce619b022a44643e34194a7dc91cb63">daCstaF_c::field_0xb0b</a></div><div class="ttdeci">u8 field_0xb0b</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:49</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a4113649f56b7da9a8228fe0c95808d29"><div class="ttname"><a href="classdaCstaF__c.html#a4113649f56b7da9a8228fe0c95808d29">daCstaF_c::m_coverBrk</a></div><div class="ttdeci">J3DAnmTevRegKey * m_coverBrk</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:37</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a421fb9425a45db5ac33234d2679416b8"><div class="ttname"><a href="classdaCstaF__c.html#a421fb9425a45db5ac33234d2679416b8">daCstaF_c::mPhase</a></div><div class="ttdeci">request_of_phase_process_class mPhase</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:32</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a44f15d18358bfb43856fdf93abe90913"><div class="ttname"><a href="classdaCstaF__c.html#a44f15d18358bfb43856fdf93abe90913">daCstaF_c::Execute</a></div><div class="ttdeci">virtual int Execute(f32(**)[3][4])</div><div class="ttdef"><b>Definition</b> d_a_cstaF.cpp:825</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a4b17bb95abb6c6aba07c62790f066cb8"><div class="ttname"><a href="classdaCstaF__c.html#a4b17bb95abb6c6aba07c62790f066cb8">daCstaF_c::getBallPos</a></div><div class="ttdeci">cXyz &amp; getBallPos()</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:26</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a4bf62a0e84f507b478356b230f4790d7"><div class="ttname"><a href="classdaCstaF__c.html#a4bf62a0e84f507b478356b230f4790d7">daCstaF_c::m_coverBtk</a></div><div class="ttdeci">J3DAnmTextureSRTKey * m_coverBtk</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:36</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a561cf846d6fcb93c66477eca0c0008ba"><div class="ttname"><a href="classdaCstaF__c.html#a561cf846d6fcb93c66477eca0c0008ba">daCstaF_c::posMove</a></div><div class="ttdeci">void posMove()</div><div class="ttdef"><b>Definition</b> d_a_cstaF.cpp:692</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a5b8a7ce301f23fe67653fa042529ea1d"><div class="ttname"><a href="classdaCstaF__c.html#a5b8a7ce301f23fe67653fa042529ea1d">daCstaF_c::mCcStts</a></div><div class="ttdeci">dCcD_Stts mCcStts</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:42</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a639e1a05bc54aa64fce245fe338ce5a5"><div class="ttname"><a href="classdaCstaF__c.html#a639e1a05bc54aa64fce245fe338ce5a5">daCstaF_c::setCollision</a></div><div class="ttdeci">void setCollision()</div><div class="ttdef"><b>Definition</b> d_a_cstaF.cpp:713</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a63c2d63af0639617c116953a2f65eed4"><div class="ttname"><a href="classdaCstaF__c.html#a63c2d63af0639617c116953a2f65eed4">daCstaF_c::setMatrix</a></div><div class="ttdeci">void setMatrix()</div><div class="ttdef"><b>Definition</b> d_a_cstaF.cpp:611</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a6be5c10ea1da443998d1f51d4b29dd18"><div class="ttname"><a href="classdaCstaF__c.html#a6be5c10ea1da443998d1f51d4b29dd18">daCstaF_c::field_0xb09</a></div><div class="ttdeci">u8 field_0xb09</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:47</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a6cec0f1b5ea45e4ab5f73e22e43b016f"><div class="ttname"><a href="classdaCstaF__c.html#a6cec0f1b5ea45e4ab5f73e22e43b016f">daCstaF_c::field_0xb0c</a></div><div class="ttdeci">u8 field_0xb0c</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:50</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a75a20fc896e129b6190c67077ff31dce"><div class="ttname"><a href="classdaCstaF__c.html#a75a20fc896e129b6190c67077ff31dce">daCstaF_c::field_0x5d8</a></div><div class="ttdeci">mDoExt_brkAnm field_0x5d8</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:39</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a7eec6490ccc795b9af075dc98fb5ba69"><div class="ttname"><a href="classdaCstaF__c.html#a7eec6490ccc795b9af075dc98fb5ba69">daCstaF_c::Draw</a></div><div class="ttdeci">virtual int Draw()</div><div class="ttdef"><b>Definition</b> d_a_cstaF.cpp:853</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a811f093375f770e3922af482f5943e28"><div class="ttname"><a href="classdaCstaF__c.html#a811f093375f770e3922af482f5943e28">daCstaF_c::initStartBrkBtk</a></div><div class="ttdeci">void initStartBrkBtk()</div><div class="ttdef"><b>Definition</b> d_a_cstaF.cpp:815</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a844b0c7d1e146972f676e8ab9b3d917c"><div class="ttname"><a href="classdaCstaF__c.html#a844b0c7d1e146972f676e8ab9b3d917c">daCstaF_c::field_0xb1c</a></div><div class="ttdeci">f32 field_0xb1c</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:58</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a84c0cc99bed6488c7b26de5efe1cdde6"><div class="ttname"><a href="classdaCstaF__c.html#a84c0cc99bed6488c7b26de5efe1cdde6">daCstaF_c::mResName</a></div><div class="ttdeci">const char * mResName</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:31</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a882c2f4224725180209a194193845276"><div class="ttname"><a href="classdaCstaF__c.html#a882c2f4224725180209a194193845276">daCstaF_c::mCoverVanishFlg</a></div><div class="ttdeci">u8 mCoverVanishFlg</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:54</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a8e2ef96cb2bca790922093916e1d254b"><div class="ttname"><a href="classdaCstaF__c.html#a8e2ef96cb2bca790922093916e1d254b">daCstaF_c::mReverb</a></div><div class="ttdeci">s8 mReverb</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:46</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a91e21cbe3a1be39326f6adea768c834a"><div class="ttname"><a href="classdaCstaF__c.html#a91e21cbe3a1be39326f6adea768c834a">daCstaF_c::create</a></div><div class="ttdeci">void create()</div><div class="ttdef"><b>Definition</b> d_a_cstaF.cpp:483</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a937b4ab6de779080803118c2945c1f28"><div class="ttname"><a href="classdaCstaF__c.html#a937b4ab6de779080803118c2945c1f28">daCstaF_c::initStopBrkBtk</a></div><div class="ttdeci">void initStopBrkBtk()</div><div class="ttdef"><b>Definition</b> d_a_cstaF.cpp:778</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a96c8a577ae9739803ad48fdc7886a44e"><div class="ttname"><a href="classdaCstaF__c.html#a96c8a577ae9739803ad48fdc7886a44e">daCstaF_c::field_0xad0</a></div><div class="ttdeci">dPaPo_c field_0xad0</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:45</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a987d176dfbd38974842dcc6f95d32a79"><div class="ttname"><a href="classdaCstaF__c.html#a987d176dfbd38974842dcc6f95d32a79">daCstaF_c::checkCoverModel</a></div><div class="ttdeci">void checkCoverModel()</div><div class="ttdef"><b>Definition</b> d_a_cstaF.cpp:273</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a9cef8165cb5175a76ae9fe9016b46609"><div class="ttname"><a href="classdaCstaF__c.html#a9cef8165cb5175a76ae9fe9016b46609">daCstaF_c::field_0xb0e</a></div><div class="ttdeci">u8 field_0xb0e</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:52</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a9ee8b0b60a9ea04667584b9b64d11749"><div class="ttname"><a href="classdaCstaF__c.html#a9ee8b0b60a9ea04667584b9b64d11749">daCstaF_c::mAcch</a></div><div class="ttdeci">dBgS_StatueAcch mAcch</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:41</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_a9fcd99455aa007517ca077ef3f3d4c4a"><div class="ttname"><a href="classdaCstaF__c.html#a9fcd99455aa007517ca077ef3f3d4c4a">daCstaF_c::mCylCc</a></div><div class="ttdeci">dCcD_Cyl mCylCc</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:43</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_aaa9a113805dbf23093182c64a206026e"><div class="ttname"><a href="classdaCstaF__c.html#aaa9a113805dbf23093182c64a206026e">daCstaF_c::~daCstaF_c</a></div><div class="ttdeci">~daCstaF_c()</div><div class="ttdef"><b>Definition</b> d_a_cstaF.cpp:569</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_aab62184aac9ae50cdeb02f20f91ba491"><div class="ttname"><a href="classdaCstaF__c.html#aab62184aac9ae50cdeb02f20f91ba491">daCstaF_c::CreateHeap</a></div><div class="ttdeci">virtual int CreateHeap()</div><div class="ttdef"><b>Definition</b> d_a_cstaF.cpp:263</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_aac0f2d334c81f6c4ee463ed3fbb2bee1"><div class="ttname"><a href="classdaCstaF__c.html#aac0f2d334c81f6c4ee463ed3fbb2bee1">daCstaF_c::field_0xb0f</a></div><div class="ttdeci">u8 field_0xb0f</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:53</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_ab5ef3523fdd69e09804c4be7bd6a6cd7"><div class="ttname"><a href="classdaCstaF__c.html#ab5ef3523fdd69e09804c4be7bd6a6cd7">daCstaF_c::field_0xb20</a></div><div class="ttdeci">cXyz field_0xb20</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:59</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_abbc7e58dd78814bd212a85c2c648375e"><div class="ttname"><a href="classdaCstaF__c.html#abbc7e58dd78814bd212a85c2c648375e">daCstaF_c::field_0xb0a</a></div><div class="ttdeci">u8 field_0xb0a</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:48</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_abf461e19f97fb49f8334345ed885d8bb"><div class="ttname"><a href="classdaCstaF__c.html#abf461e19f97fb49f8334345ed885d8bb">daCstaF_c::field_0x5ac</a></div><div class="ttdeci">J3DModel * field_0x5ac</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:33</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_acdcc601f781a221b799f87c49ee6af57"><div class="ttname"><a href="classdaCstaF__c.html#acdcc601f781a221b799f87c49ee6af57">daCstaF_c::mAcchCir</a></div><div class="ttdeci">dBgS_AcchCir mAcchCir[4]</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:40</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_ad3ddc4207b1bebb968f842b55cf7474d"><div class="ttname"><a href="classdaCstaF__c.html#ad3ddc4207b1bebb968f842b55cf7474d">daCstaF_c::field_0x5c0</a></div><div class="ttdeci">mDoExt_btkAnm field_0x5c0</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:38</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_ad72f6b3e71e57512e654376a8e1403fd"><div class="ttname"><a href="classdaCstaF__c.html#ad72f6b3e71e57512e654376a8e1403fd">daCstaF_c::field_0x5b4</a></div><div class="ttdeci">J3DModel * field_0x5b4</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:35</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_ae73771282fec16a34e84273e2f8e9f91"><div class="ttname"><a href="classdaCstaF__c.html#ae73771282fec16a34e84273e2f8e9f91">daCstaF_c::m_bckIdxTable</a></div><div class="ttdeci">static u8 const m_bckIdxTable[16]</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:231</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_aecd0d4fbad9a5cc1ec7f2491b5d87d56"><div class="ttname"><a href="classdaCstaF__c.html#aecd0d4fbad9a5cc1ec7f2491b5d87d56">daCstaF_c::setRoomInfo</a></div><div class="ttdeci">void setRoomInfo()</div><div class="ttdef"><b>Definition</b> d_a_cstaF.cpp:594</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_af40073b05cc9aae3b15b616686c46ceb"><div class="ttname"><a href="classdaCstaF__c.html#af40073b05cc9aae3b15b616686c46ceb">daCstaF_c::setAnime</a></div><div class="ttdeci">void setAnime()</div><div class="ttdef"><b>Definition</b> d_a_cstaF.cpp:748</div></div>
+<div class="ttc" id="aclassdaCstaF__c_html_af9fcd2dfefd38bfc4f1cc43db1a179bb"><div class="ttname"><a href="classdaCstaF__c.html#af9fcd2dfefd38bfc4f1cc43db1a179bb">daCstaF_c::mSound</a></div><div class="ttdeci">Z2Creature mSound</div><div class="ttdef"><b>Definition</b> d_a_cstaF.h:44</div></div>
+<div class="ttc" id="aclassmDoExt__McaMorfSO_html"><div class="ttname"><a href="classmDoExt__McaMorfSO.html">mDoExt_McaMorfSO</a></div><div class="ttdef"><b>Definition</b> m_Do_ext.h:303</div></div>
+<div class="ttc" id="aclassmDoExt__brkAnm_html"><div class="ttname"><a href="classmDoExt__brkAnm.html">mDoExt_brkAnm</a></div><div class="ttdef"><b>Definition</b> m_Do_ext.h:82</div></div>
+<div class="ttc" id="aclassmDoExt__btkAnm_html"><div class="ttname"><a href="classmDoExt__btkAnm.html">mDoExt_btkAnm</a></div><div class="ttdef"><b>Definition</b> m_Do_ext.h:53</div></div>
+<div class="ttc" id="ad__bg__s__movebg__actor_8h_html"><div class="ttname"><a href="d__bg__s__movebg__actor_8h.html">d_bg_s_movebg_actor.h</a></div></div>
+<div class="ttc" id="ad__particle__copoly_8h_html"><div class="ttname"><a href="d__particle__copoly_8h.html">d_particle_copoly.h</a></div></div>
+<div class="ttc" id="astructcXyz_html"><div class="ttname"><a href="structcXyz.html">cXyz</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:49</div></div>
+<div class="ttc" id="astructdCcD__Cyl_html"><div class="ttname"><a href="structdCcD__Cyl.html">dCcD_Cyl</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:122</div></div>
+<div class="ttc" id="astructdCcD__Stts_html"><div class="ttname"><a href="structdCcD__Stts.html">dCcD_Stts</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:24</div></div>
+<div class="ttc" id="astructrequest__of__phase__process__class_html"><div class="ttname"><a href="structrequest__of__phase__process__class.html">request_of_phase_process_class</a></div><div class="ttdef"><b>Definition</b> c_phase.h:17</div></div>
+<div class="ttc" id="atypes_8h_html_a151f780fb455885061d3b77ec1c90c03"><div class="ttname"><a href="types_8h.html#a151f780fb455885061d3b77ec1c90c03">s8</a></div><div class="ttdeci">signed char s8</div><div class="ttdef"><b>Definition</b> types.h:4</div></div>
+<div class="ttc" id="atypes_8h_html_a2caf5cd7bcdbe1eefa727f44ffb10bac"><div class="ttname"><a href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a></div><div class="ttdeci">unsigned long u32</div><div class="ttdef"><b>Definition</b> types.h:10</div></div>
+<div class="ttc" id="atypes_8h_html_a5f6906312a689f27d70e9d086649d3fd"><div class="ttname"><a href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a></div><div class="ttdeci">float f32</div><div class="ttdef"><b>Definition</b> types.h:22</div></div>
+<div class="ttc" id="atypes_8h_html_a5ffa4f640862b25ba6d4f635b78bdbe1"><div class="ttname"><a href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a></div><div class="ttdeci">signed short s16</div><div class="ttdef"><b>Definition</b> types.h:5</div></div>
+<div class="ttc" id="atypes_8h_html_a9e6c91d77e24643b888dbd1a1a590054"><div class="ttname"><a href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a></div><div class="ttdeci">unsigned short u16</div><div class="ttdef"><b>Definition</b> types.h:9</div></div>
+<div class="ttc" id="atypes_8h_html_aed742c436da53c1080638ce6ef7d13de"><div class="ttname"><a href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a></div><div class="ttdeci">unsigned char u8</div><div class="ttdef"><b>Definition</b> types.h:8</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d1e95842203b094e4f127fa85baf24b5.html">rel</a></li><li class="navelem"><a class="el" href="dir_244336746419795862f93731f1699860.html">d</a></li><li class="navelem"><a class="el" href="dir_b81c1d082692bb1b2b34ed3bfe8a0f4a.html">a</a></li><li class="navelem"><a class="el" href="dir_2037adae6d1c541d15dbb4bedda65fe7.html">d_a_cstaF</a></li><li class="navelem"><a class="el" href="d__a__cstaF_8h.html">d_a_cstaF.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

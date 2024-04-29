@@ -1,0 +1,2317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: rel/d/a/obj/d_a_obj_lv8KekkaiTrap/d_a_obj_lv8KekkaiTrap.cpp File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d__a__obj__lv8KekkaiTrap_8cpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">d_a_obj_lv8KekkaiTrap.cpp File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrequest__of__phase__process__class.html">request_of_phase_process_class</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmDoMtx__stack__c.html">mDoMtx_stack_c</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmDoHIO__entry__c.html">mDoHIO_entry_c</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfopAc__ac__c.html">fopAc_ac_c</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaKekaiTrap__c.html">daKekaiTrap_c</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaKekaiTrap__HIO__c.html">daKekaiTrap_HIO_c</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdSv__info__c.html">dSv_info_c</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdKy__tevstr__c.html">dKy_tevstr_c</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJ3DModelData.html">J3DModelData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcXyz.html">cXyz</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdScnKy__env__light__c.html">dScnKy_env_light_c</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdRes__info__c.html">dRes_info_c</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdRes__control__c.html">dRes_control_c</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdBgW__Base.html">dBgW_Base</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdBgW.html">dBgW</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcBgS__PolyInfo.html">cBgS_PolyInfo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcsXyz.html">csXyz</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdBgS__MoveBgActor.html">dBgS_MoveBgActor</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdBgS.html">dBgS</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcBgS.html">cBgS</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJ3DModel.html">J3DModel</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a15d5eb05db27c3ed097ce0e24359bb32" id="r_a15d5eb05db27c3ed097ce0e24359bb32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a15d5eb05db27c3ed097ce0e24359bb32">__ct__17daKekaiTrap_HIO_cFv</a> ()</td></tr>
+<tr class="separator:a15d5eb05db27c3ed097ce0e24359bb32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab03d31a00b075440a1da18f54d86f838" id="r_ab03d31a00b075440a1da18f54d86f838"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#ab03d31a00b075440a1da18f54d86f838">__dt__14mDoHIO_entry_cFv</a> ()</td></tr>
+<tr class="separator:ab03d31a00b075440a1da18f54d86f838"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac29cf7ed733f5afd77392bde274f596" id="r_aac29cf7ed733f5afd77392bde274f596"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#aac29cf7ed733f5afd77392bde274f596">setBaseMtx__13daKekaiTrap_cFv</a> ()</td></tr>
+<tr class="separator:aac29cf7ed733f5afd77392bde274f596"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad30cde336489152cb978c9db07b069ea" id="r_ad30cde336489152cb978c9db07b069ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#ad30cde336489152cb978c9db07b069ea">CreateHeap__13daKekaiTrap_cFv</a> ()</td></tr>
+<tr class="separator:ad30cde336489152cb978c9db07b069ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a417d24612c6c08ab105b450b07e6d485" id="r_a417d24612c6c08ab105b450b07e6d485"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a417d24612c6c08ab105b450b07e6d485">create__13daKekaiTrap_cFv</a> ()</td></tr>
+<tr class="separator:a417d24612c6c08ab105b450b07e6d485"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d2cdfda018325321ae480e9a8cca3e0" id="r_a1d2cdfda018325321ae480e9a8cca3e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a1d2cdfda018325321ae480e9a8cca3e0">Execute__13daKekaiTrap_cFPPA3_A4_f</a> ()</td></tr>
+<tr class="separator:a1d2cdfda018325321ae480e9a8cca3e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae74a5e4519896c62b977623ff306b456" id="r_ae74a5e4519896c62b977623ff306b456"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#ae74a5e4519896c62b977623ff306b456">moveMain__13daKekaiTrap_cFv</a> ()</td></tr>
+<tr class="separator:ae74a5e4519896c62b977623ff306b456"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a050b63c2245b951c675223896d05876a" id="r_a050b63c2245b951c675223896d05876a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a050b63c2245b951c675223896d05876a">init_modeWait__13daKekaiTrap_cFv</a> ()</td></tr>
+<tr class="separator:a050b63c2245b951c675223896d05876a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e9def5714b92814ae95ae4156fbf750" id="r_a6e9def5714b92814ae95ae4156fbf750"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a6e9def5714b92814ae95ae4156fbf750">modeWait__13daKekaiTrap_cFv</a> ()</td></tr>
+<tr class="separator:a6e9def5714b92814ae95ae4156fbf750"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcd840dc24aac83d06899a1e18829a00" id="r_abcd840dc24aac83d06899a1e18829a00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#abcd840dc24aac83d06899a1e18829a00">init_modeMoveUp__13daKekaiTrap_cFv</a> ()</td></tr>
+<tr class="separator:abcd840dc24aac83d06899a1e18829a00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb231ebf37b70613b75c049f4f27106f" id="r_afb231ebf37b70613b75c049f4f27106f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#afb231ebf37b70613b75c049f4f27106f">modeMoveUp__13daKekaiTrap_cFv</a> ()</td></tr>
+<tr class="separator:afb231ebf37b70613b75c049f4f27106f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3176916acaac127a8c45613b94db988" id="r_ab3176916acaac127a8c45613b94db988"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#ab3176916acaac127a8c45613b94db988">init_modeMoveDown__13daKekaiTrap_cFv</a> ()</td></tr>
+<tr class="separator:ab3176916acaac127a8c45613b94db988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57a460d2f9a44aec08a9a271dcdbbfd4" id="r_a57a460d2f9a44aec08a9a271dcdbbfd4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a57a460d2f9a44aec08a9a271dcdbbfd4">modeMoveDown__13daKekaiTrap_cFv</a> ()</td></tr>
+<tr class="separator:a57a460d2f9a44aec08a9a271dcdbbfd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a003137a4c515071bd0229da789207dbe" id="r_a003137a4c515071bd0229da789207dbe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a003137a4c515071bd0229da789207dbe">Draw__13daKekaiTrap_cFv</a> ()</td></tr>
+<tr class="separator:a003137a4c515071bd0229da789207dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d8fb8bfb26bb7d56cf2cdd96a8d5309" id="r_a2d8fb8bfb26bb7d56cf2cdd96a8d5309"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a2d8fb8bfb26bb7d56cf2cdd96a8d5309">Delete__13daKekaiTrap_cFv</a> ()</td></tr>
+<tr class="separator:a2d8fb8bfb26bb7d56cf2cdd96a8d5309"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00dbce141226ab91009f626841bff19f" id="r_a00dbce141226ab91009f626841bff19f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a00dbce141226ab91009f626841bff19f">daKekaiTrap_Draw__FP13daKekaiTrap_c</a> ()</td></tr>
+<tr class="separator:a00dbce141226ab91009f626841bff19f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74b3b69edb44e1d3f1ddb1ff21b7a932" id="r_a74b3b69edb44e1d3f1ddb1ff21b7a932"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a74b3b69edb44e1d3f1ddb1ff21b7a932">daKekaiTrap_Execute__FP13daKekaiTrap_c</a> ()</td></tr>
+<tr class="separator:a74b3b69edb44e1d3f1ddb1ff21b7a932"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29681cc3d36bf36f787744e09758d2ef" id="r_a29681cc3d36bf36f787744e09758d2ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a29681cc3d36bf36f787744e09758d2ef">daKekaiTrap_Delete__FP13daKekaiTrap_c</a> ()</td></tr>
+<tr class="separator:a29681cc3d36bf36f787744e09758d2ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab677e6cba39cf326fd9c7be674078a78" id="r_ab677e6cba39cf326fd9c7be674078a78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#ab677e6cba39cf326fd9c7be674078a78">daKekaiTrap_Create__FP10fopAc_ac_c</a> ()</td></tr>
+<tr class="separator:ab677e6cba39cf326fd9c7be674078a78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20ddd1347d53e9b0e36eed23ee7342e6" id="r_a20ddd1347d53e9b0e36eed23ee7342e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a20ddd1347d53e9b0e36eed23ee7342e6">__dt__17daKekaiTrap_HIO_cFv</a> ()</td></tr>
+<tr class="separator:a20ddd1347d53e9b0e36eed23ee7342e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afecd8718370d6d1641da33aefa4eb1f9" id="r_afecd8718370d6d1641da33aefa4eb1f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#afecd8718370d6d1641da33aefa4eb1f9">__sinit_d_a_obj_lv8KekkaiTrap_cpp</a> ()</td></tr>
+<tr class="separator:afecd8718370d6d1641da33aefa4eb1f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac74202994301a317515a4eda55582910" id="r_ac74202994301a317515a4eda55582910"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#ac74202994301a317515a4eda55582910">mDoMtx_ZXYrotM__FPA4_fsss</a> ()</td></tr>
+<tr class="separator:ac74202994301a317515a4eda55582910"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c949b29ce3c185e8353c408b5a31a48" id="r_a6c949b29ce3c185e8353c408b5a31a48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a6c949b29ce3c185e8353c408b5a31a48">mDoExt_modelUpdateDL__FP8J3DModel</a> ()</td></tr>
+<tr class="separator:a6c949b29ce3c185e8353c408b5a31a48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46272bdb6711d736ce226977d5c3dca1" id="r_a46272bdb6711d736ce226977d5c3dca1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a46272bdb6711d736ce226977d5c3dca1">mDoExt_J3DModel__create__FP12J3DModelDataUlUl</a> ()</td></tr>
+<tr class="separator:a46272bdb6711d736ce226977d5c3dca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8af4013ec4fe08ff0a54dfaa4ceffa2" id="r_aa8af4013ec4fe08ff0a54dfaa4ceffa2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#aa8af4013ec4fe08ff0a54dfaa4ceffa2">fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData</a> ()</td></tr>
+<tr class="separator:aa8af4013ec4fe08ff0a54dfaa4ceffa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa754a77e07f518b5e17d203185ceea09" id="r_aa754a77e07f518b5e17d203185ceea09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#aa754a77e07f518b5e17d203185ceea09">dComIfG_resLoad__FP30request_of_phase_process_classPCc</a> ()</td></tr>
+<tr class="separator:aa754a77e07f518b5e17d203185ceea09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01b93c5502abc9d1a4c58f5f1acf94bb" id="r_a01b93c5502abc9d1a4c58f5f1acf94bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a01b93c5502abc9d1a4c58f5f1acf94bb">dComIfG_resDelete__FP30request_of_phase_process_classPCc</a> ()</td></tr>
+<tr class="separator:a01b93c5502abc9d1a4c58f5f1acf94bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef27066acd15f9f4f0793820c0faa7fb" id="r_aef27066acd15f9f4f0793820c0faa7fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#aef27066acd15f9f4f0793820c0faa7fb">isSwitch__10dSv_info_cCFii</a> ()</td></tr>
+<tr class="separator:aef27066acd15f9f4f0793820c0faa7fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59a83dc2646cfbec35f3fb91b2158ad9" id="r_a59a83dc2646cfbec35f3fb91b2158ad9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a59a83dc2646cfbec35f3fb91b2158ad9">getRes__14dRes_control_cFPCclP11dRes_info_ci</a> ()</td></tr>
+<tr class="separator:a59a83dc2646cfbec35f3fb91b2158ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42dca6ebfef78a0efe287b6bd13a9242" id="r_a42dca6ebfef78a0efe287b6bd13a9242"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a42dca6ebfef78a0efe287b6bd13a9242">Release__4cBgSFP9dBgW_Base</a> ()</td></tr>
+<tr class="separator:a42dca6ebfef78a0efe287b6bd13a9242"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60fbe6de6f6c4f7d22dbb269539fd089" id="r_a60fbe6de6f6c4f7d22dbb269539fd089"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a60fbe6de6f6c4f7d22dbb269539fd089">Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c</a> ()</td></tr>
+<tr class="separator:a60fbe6de6f6c4f7d22dbb269539fd089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c09dac9a57e22d3422275a3f60cede9" id="r_a3c09dac9a57e22d3422275a3f60cede9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a3c09dac9a57e22d3422275a3f60cede9">dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz</a> ()</td></tr>
+<tr class="separator:a3c09dac9a57e22d3422275a3f60cede9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34bbae7a63794cd9fb3767df18163b6d" id="r_a34bbae7a63794cd9fb3767df18163b6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a34bbae7a63794cd9fb3767df18163b6d">__ct__16dBgS_MoveBgActorFv</a> ()</td></tr>
+<tr class="separator:a34bbae7a63794cd9fb3767df18163b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99fd4a939d3234f22ac303aa50766078" id="r_a99fd4a939d3234f22ac303aa50766078"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a99fd4a939d3234f22ac303aa50766078">Create__16dBgS_MoveBgActorFv</a> ()</td></tr>
+<tr class="separator:a99fd4a939d3234f22ac303aa50766078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14ede56d388d64d06dfb228d1cc121a9" id="r_a14ede56d388d64d06dfb228d1cc121a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a14ede56d388d64d06dfb228d1cc121a9">IsDelete__16dBgS_MoveBgActorFv</a> ()</td></tr>
+<tr class="separator:a14ede56d388d64d06dfb228d1cc121a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8200e1aa80b8712c74183650476fd77c" id="r_a8200e1aa80b8712c74183650476fd77c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a8200e1aa80b8712c74183650476fd77c">ToFore__16dBgS_MoveBgActorFv</a> ()</td></tr>
+<tr class="separator:a8200e1aa80b8712c74183650476fd77c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6c9e8c9688b69341657586fd8987d71" id="r_ab6c9e8c9688b69341657586fd8987d71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#ab6c9e8c9688b69341657586fd8987d71">ToBack__16dBgS_MoveBgActorFv</a> ()</td></tr>
+<tr class="separator:ab6c9e8c9688b69341657586fd8987d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaa6e144db70a98d777b7db9f8dce362" id="r_aeaa6e144db70a98d777b7db9f8dce362"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#aeaa6e144db70a98d777b7db9f8dce362">MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f</a> ()</td></tr>
+<tr class="separator:aeaa6e144db70a98d777b7db9f8dce362"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a402146e4ef9c6621eb03c2b8d8b5dd68" id="r_a402146e4ef9c6621eb03c2b8d8b5dd68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a402146e4ef9c6621eb03c2b8d8b5dd68">MoveBGDelete__16dBgS_MoveBgActorFv</a> ()</td></tr>
+<tr class="separator:a402146e4ef9c6621eb03c2b8d8b5dd68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f4831ecaa5b4d0bd1be5bc389a22604" id="r_a3f4831ecaa5b4d0bd1be5bc389a22604"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a3f4831ecaa5b4d0bd1be5bc389a22604">MoveBGExecute__16dBgS_MoveBgActorFv</a> ()</td></tr>
+<tr class="separator:a3f4831ecaa5b4d0bd1be5bc389a22604"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa38b8bdba9a933dc787740fdc1fd9330" id="r_aa38b8bdba9a933dc787740fdc1fd9330"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#aa38b8bdba9a933dc787740fdc1fd9330">settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c</a> ()</td></tr>
+<tr class="separator:aa38b8bdba9a933dc787740fdc1fd9330"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a163749e04bb8e727db62fca94d8e8f6e" id="r_a163749e04bb8e727db62fca94d8e8f6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a163749e04bb8e727db62fca94d8e8f6e">setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c</a> ()</td></tr>
+<tr class="separator:a163749e04bb8e727db62fca94d8e8f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e86a1af5f89fa8d7c77a84fa8aea4f3" id="r_a4e86a1af5f89fa8d7c77a84fa8aea4f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a4e86a1af5f89fa8d7c77a84fa8aea4f3">cLib_addCalc__FPfffff</a> ()</td></tr>
+<tr class="separator:a4e86a1af5f89fa8d7c77a84fa8aea4f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d6c6f99b6cbfb3d34970fac0d108956" id="r_a2d6c6f99b6cbfb3d34970fac0d108956"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a2d6c6f99b6cbfb3d34970fac0d108956">cLib_chaseF__FPfff</a> ()</td></tr>
+<tr class="separator:a2d6c6f99b6cbfb3d34970fac0d108956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a498e6440d5c316e2672169ee4ed92309" id="r_a498e6440d5c316e2672169ee4ed92309"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a498e6440d5c316e2672169ee4ed92309">__dl__FPv</a> ()</td></tr>
+<tr class="separator:a498e6440d5c316e2672169ee4ed92309"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ec00f755b69eb1ecdd833e3148126dc" id="r_a9ec00f755b69eb1ecdd833e3148126dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a9ec00f755b69eb1ecdd833e3148126dc">PSMTXCopy</a> ()</td></tr>
+<tr class="separator:a9ec00f755b69eb1ecdd833e3148126dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71457f4c801a39c1b90e6c06e11d5550" id="r_a71457f4c801a39c1b90e6c06e11d5550"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a71457f4c801a39c1b90e6c06e11d5550">PSMTXTrans</a> ()</td></tr>
+<tr class="separator:a71457f4c801a39c1b90e6c06e11d5550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcc1145fa03be95d1df70e96494331d7" id="r_abcc1145fa03be95d1df70e96494331d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#abcc1145fa03be95d1df70e96494331d7">__ptmf_scall</a> ()</td></tr>
+<tr class="separator:abcc1145fa03be95d1df70e96494331d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f3662cd06864ff7627d5424c192e6f2" id="r_a5f3662cd06864ff7627d5424c192e6f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a5f3662cd06864ff7627d5424c192e6f2">_savegpr_29</a> ()</td></tr>
+<tr class="separator:a5f3662cd06864ff7627d5424c192e6f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abed5bd59c54272a132a5b4da4beff66d" id="r_abed5bd59c54272a132a5b4da4beff66d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#abed5bd59c54272a132a5b4da4beff66d">_restgpr_29</a> ()</td></tr>
+<tr class="separator:abed5bd59c54272a132a5b4da4beff66d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75cea59a88b9016eb884c7c20cdc3a21" id="r_a75cea59a88b9016eb884c7c20cdc3a21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a75cea59a88b9016eb884c7c20cdc3a21">__register_global_object</a> ()</td></tr>
+<tr class="separator:a75cea59a88b9016eb884c7c20cdc3a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e1598ba65ab811fdbb18ca8129a1bf6" id="r_a1e1598ba65ab811fdbb18ca8129a1bf6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a1e1598ba65ab811fdbb18ca8129a1bf6">COMPILER_STRIP_GATE</a> (0x80C884E4, &amp;<a class="el" href="d__a__b__oh_8cpp.html#af646a09e803928690b123c998920a7c8">lit_3651</a>)</td></tr>
+<tr class="separator:a1e1598ba65ab811fdbb18ca8129a1bf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e623906e6a105827de4ff00a440d9e1" id="r_a2e623906e6a105827de4ff00a440d9e1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a2e623906e6a105827de4ff00a440d9e1">COMPILER_STRIP_GATE</a> (0x80C884E8, &amp;<a class="el" href="d__a__fr_8cpp.html#a455dacd258581af15c16f94dfff0cb68">lit_3652</a>)</td></tr>
+<tr class="separator:a2e623906e6a105827de4ff00a440d9e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadf89ba5cafb7cd95a60dafbf494487d" id="r_aadf89ba5cafb7cd95a60dafbf494487d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#aadf89ba5cafb7cd95a60dafbf494487d">COMPILER_STRIP_GATE</a> (0x80C884EC, &amp;<a class="el" href="d__a__b__dr_8cpp.html#abc1c829aa5bbb07b79a040cc02bbc07e">lit_3802</a>)</td></tr>
+<tr class="separator:aadf89ba5cafb7cd95a60dafbf494487d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15faf3e7a8a08b8ff419a8b8aaa8e5db" id="r_a15faf3e7a8a08b8ff419a8b8aaa8e5db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a15faf3e7a8a08b8ff419a8b8aaa8e5db">COMPILER_STRIP_GATE</a> (0x80C884F0, &amp;<a class="el" href="d__menu__dmap__map_8cpp.html#a3c8196bfafe08c4c01c008a755fd82f1">lit_3803</a>)</td></tr>
+<tr class="separator:a15faf3e7a8a08b8ff419a8b8aaa8e5db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2c1742ec8153ace9fbc5d520429be9f" id="r_af2c1742ec8153ace9fbc5d520429be9f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#af2c1742ec8153ace9fbc5d520429be9f">COMPILER_STRIP_GATE</a> (0x80C884F4, &amp;<a class="el" href="d__a__b__dr_8cpp.html#a05c4dbe99fa907039b8fc9819fc7047a">lit_3804</a>)</td></tr>
+<tr class="separator:af2c1742ec8153ace9fbc5d520429be9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ac5f72ab829cf6def2581755ad1098f" id="r_a0ac5f72ab829cf6def2581755ad1098f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a0ac5f72ab829cf6def2581755ad1098f">daKekaiTrap_Draw</a> (<a class="el" href="structdaKekaiTrap__c.html">daKekaiTrap_c</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_0</a>)</td></tr>
+<tr class="separator:a0ac5f72ab829cf6def2581755ad1098f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d13ee11f740a7d057a41997ac1afc50" id="r_a1d13ee11f740a7d057a41997ac1afc50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a1d13ee11f740a7d057a41997ac1afc50">daKekaiTrap_Execute</a> (<a class="el" href="structdaKekaiTrap__c.html">daKekaiTrap_c</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_0</a>)</td></tr>
+<tr class="separator:a1d13ee11f740a7d057a41997ac1afc50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59a47f140197177e2d38de118eae4f98" id="r_a59a47f140197177e2d38de118eae4f98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a59a47f140197177e2d38de118eae4f98">daKekaiTrap_Delete</a> (<a class="el" href="structdaKekaiTrap__c.html">daKekaiTrap_c</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_0</a>)</td></tr>
+<tr class="separator:a59a47f140197177e2d38de118eae4f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1046b2bb7c02a69f3f3a7c66fa222c4" id="r_ae1046b2bb7c02a69f3f3a7c66fa222c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#ae1046b2bb7c02a69f3f3a7c66fa222c4">daKekaiTrap_Create</a> (<a class="el" href="structfopAc__ac__c.html">fopAc_ac_c</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_0</a>)</td></tr>
+<tr class="separator:ae1046b2bb7c02a69f3f3a7c66fa222c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a380b864f11c6561512b8db939380f881" id="r_a380b864f11c6561512b8db939380f881"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a380b864f11c6561512b8db939380f881">REGISTER_CTORS</a> (0x80C88494, <a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#afecd8718370d6d1641da33aefa4eb1f9">__sinit_d_a_obj_lv8KekkaiTrap_cpp</a>)</td></tr>
+<tr class="separator:a380b864f11c6561512b8db939380f881"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a829442159215466444725bf1ad63ea6b" id="r_a829442159215466444725bf1ad63ea6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a>  *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a829442159215466444725bf1ad63ea6b">d_a_obj_lv8KekkaiTrap__stringBase0</a></td></tr>
+<tr class="separator:a829442159215466444725bf1ad63ea6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24ce032de2af10b7e92bf464450ddeb7" id="r_a24ce032de2af10b7e92bf464450ddeb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a24ce032de2af10b7e92bf464450ddeb7">g_fopAc_Method</a> [8]</td></tr>
+<tr class="separator:a24ce032de2af10b7e92bf464450ddeb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3de3a374119e8432d211e29713bce0ae" id="r_a3de3a374119e8432d211e29713bce0ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a3de3a374119e8432d211e29713bce0ae">g_fpcLf_Method</a> [5+1]</td></tr>
+<tr class="separator:a3de3a374119e8432d211e29713bce0ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e01467eed17327e0c624b22ccc7ed8f" id="r_a8e01467eed17327e0c624b22ccc7ed8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a8e01467eed17327e0c624b22ccc7ed8f">now__14mDoMtx_stack_c</a> [48]</td></tr>
+<tr class="separator:a8e01467eed17327e0c624b22ccc7ed8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50ad47c26bcc2867f2c14d349753f58e" id="r_a50ad47c26bcc2867f2c14d349753f58e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a50ad47c26bcc2867f2c14d349753f58e">g_dComIfG_gameInfo</a> [122384]</td></tr>
+<tr class="separator:a50ad47c26bcc2867f2c14d349753f58e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bbfcbebab8b50d8b888f8aee1e4a468" id="r_a5bbfcbebab8b50d8b888f8aee1e4a468"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a5bbfcbebab8b50d8b888f8aee1e4a468">g_env_light</a> [4880]</td></tr>
+<tr class="separator:a5bbfcbebab8b50d8b888f8aee1e4a468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae72d2e91667c54fa66f49a18c8aaa30b" id="r_ae72d2e91667c54fa66f49a18c8aaa30b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#ae72d2e91667c54fa66f49a18c8aaa30b">j3dSys</a> [284]</td></tr>
+<tr class="separator:ae72d2e91667c54fa66f49a18c8aaa30b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cd9989a3f135eeff30a715a75e5f9d1" id="r_a3cd9989a3f135eeff30a715a75e5f9d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_RODATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a3cd9989a3f135eeff30a715a75e5f9d1">lit_3651</a> [4]</td></tr>
+<tr class="separator:a3cd9989a3f135eeff30a715a75e5f9d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a455dacd258581af15c16f94dfff0cb68" id="r_a455dacd258581af15c16f94dfff0cb68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_RODATA</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a455dacd258581af15c16f94dfff0cb68">lit_3652</a> = 7.0f / 10.0f</td></tr>
+<tr class="separator:a455dacd258581af15c16f94dfff0cb68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4abf48f419d2029ec33568828de5a38e" id="r_a4abf48f419d2029ec33568828de5a38e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DEAD</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a>  *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a4abf48f419d2029ec33568828de5a38e">stringBase_80C884F8</a> = &quot;Lv8Kekkai&quot;</td></tr>
+<tr class="separator:a4abf48f419d2029ec33568828de5a38e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1d641d5006e9852701e43891c9ccc5c" id="r_af1d641d5006e9852701e43891c9ccc5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#af1d641d5006e9852701e43891c9ccc5c">cNullVec__6Z2Calc</a> [12]</td></tr>
+<tr class="separator:af1d641d5006e9852701e43891c9ccc5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bb5d6a82c2f4d4bb43dbf4d11e60387" id="r_a5bb5d6a82c2f4d4bb43dbf4d11e60387"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DATA</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a5bb5d6a82c2f4d4bb43dbf4d11e60387">lit_1787</a> [1+4]</td></tr>
+<tr class="separator:a5bb5d6a82c2f4d4bb43dbf4d11e60387"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17faaa593b1f428ff4979dbdcffc104c" id="r_a17faaa593b1f428ff4979dbdcffc104c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DATA</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a17faaa593b1f428ff4979dbdcffc104c">l_type</a> = (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>*)&amp;<a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a829442159215466444725bf1ad63ea6b">d_a_obj_lv8KekkaiTrap__stringBase0</a></td></tr>
+<tr class="separator:a17faaa593b1f428ff4979dbdcffc104c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49eaad913d141b9110563e6ffa559ab8" id="r_a49eaad913d141b9110563e6ffa559ab8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DATA</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a49eaad913d141b9110563e6ffa559ab8">l_bmdIdx</a> = 0x00000004</td></tr>
+<tr class="separator:a49eaad913d141b9110563e6ffa559ab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cb9523ac4af900343c1627e48a709e5" id="r_a1cb9523ac4af900343c1627e48a709e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DATA</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a1cb9523ac4af900343c1627e48a709e5">l_dzbIdx</a> = 0x00000007</td></tr>
+<tr class="separator:a1cb9523ac4af900343c1627e48a709e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ad9149440c21557b0aa73dfd91764ea" id="r_a3ad9149440c21557b0aa73dfd91764ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DATA</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a3ad9149440c21557b0aa73dfd91764ea">lit_3756</a> [3]</td></tr>
+<tr class="separator:a3ad9149440c21557b0aa73dfd91764ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a596f912389ad9cef3958093658ce5d8a" id="r_a596f912389ad9cef3958093658ce5d8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DATA</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a596f912389ad9cef3958093658ce5d8a">lit_3757</a> [3]</td></tr>
+<tr class="separator:a596f912389ad9cef3958093658ce5d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfe7372c45e2db6c94ad557bb55db8ae" id="r_adfe7372c45e2db6c94ad557bb55db8ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DATA</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#adfe7372c45e2db6c94ad557bb55db8ae">lit_3758</a> [3]</td></tr>
+<tr class="separator:adfe7372c45e2db6c94ad557bb55db8ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade07b5c77d98f1cfeb9c1b5ee4072d00" id="r_ade07b5c77d98f1cfeb9c1b5ee4072d00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#ade07b5c77d98f1cfeb9c1b5ee4072d00">mode_proc</a> [36]</td></tr>
+<tr class="separator:ade07b5c77d98f1cfeb9c1b5ee4072d00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fbbe6c7fd17e522b87a9307b5d973f7" id="r_a1fbbe6c7fd17e522b87a9307b5d973f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DATA</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a1fbbe6c7fd17e522b87a9307b5d973f7">l_daKekaiTrap_Method</a> [8]</td></tr>
+<tr class="separator:a1fbbe6c7fd17e522b87a9307b5d973f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcdea88f07a89cc1ae8432dec816899e" id="r_adcdea88f07a89cc1ae8432dec816899e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DATA</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#adcdea88f07a89cc1ae8432dec816899e">g_profile_Obj_Lv8KekkaiTrap</a> [12]</td></tr>
+<tr class="separator:adcdea88f07a89cc1ae8432dec816899e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90ec9904184a134729095eb4edfaacc4" id="r_a90ec9904184a134729095eb4edfaacc4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DATA</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a90ec9904184a134729095eb4edfaacc4">__vt__13daKekaiTrap_c</a> [10]</td></tr>
+<tr class="separator:a90ec9904184a134729095eb4edfaacc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a32bac664e9ce3ffa87fb4dfebb3623" id="r_a3a32bac664e9ce3ffa87fb4dfebb3623"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DATA</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a3a32bac664e9ce3ffa87fb4dfebb3623">__vt__17daKekaiTrap_HIO_c</a> [3]</td></tr>
+<tr class="separator:a3a32bac664e9ce3ffa87fb4dfebb3623"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19594ef5c06af043cd28f440388b7b14" id="r_a19594ef5c06af043cd28f440388b7b14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DATA</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a19594ef5c06af043cd28f440388b7b14">__vt__14mDoHIO_entry_c</a> [3]</td></tr>
+<tr class="separator:a19594ef5c06af043cd28f440388b7b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9d87eaafde0af22e5bd1e7b8d0361b1" id="r_ac9d87eaafde0af22e5bd1e7b8d0361b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#ac9d87eaafde0af22e5bd1e7b8d0361b1">lit_3645</a> [12]</td></tr>
+<tr class="separator:ac9d87eaafde0af22e5bd1e7b8d0361b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e7e81fb61cc506f8a9808f6fc15d15b" id="r_a8e7e81fb61cc506f8a9808f6fc15d15b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a8e7e81fb61cc506f8a9808f6fc15d15b">l_HIO</a> [28]</td></tr>
+<tr class="separator:a8e7e81fb61cc506f8a9808f6fc15d15b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81009f3027f4e9134cda5d4cf6a28aaa" id="r_a81009f3027f4e9134cda5d4cf6a28aaa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a81009f3027f4e9134cda5d4cf6a28aaa">data_80C88638</a> [4]</td></tr>
+<tr class="separator:a81009f3027f4e9134cda5d4cf6a28aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc1c829aa5bbb07b79a040cc02bbc07e" id="r_abc1c829aa5bbb07b79a040cc02bbc07e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_RODATA</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#abc1c829aa5bbb07b79a040cc02bbc07e">lit_3802</a> = 30.0f</td></tr>
+<tr class="separator:abc1c829aa5bbb07b79a040cc02bbc07e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3b42acb714db6d6f1c8723b748e63f3" id="r_ac3b42acb714db6d6f1c8723b748e63f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_RODATA</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#ac3b42acb714db6d6f1c8723b748e63f3">lit_3803</a> = 1.0f</td></tr>
+<tr class="separator:ac3b42acb714db6d6f1c8723b748e63f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05c4dbe99fa907039b8fc9819fc7047a" id="r_a05c4dbe99fa907039b8fc9819fc7047a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_RODATA</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a05c4dbe99fa907039b8fc9819fc7047a">lit_3804</a> = 3.0f / 100.0f</td></tr>
+<tr class="separator:a05c4dbe99fa907039b8fc9819fc7047a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a34bbae7a63794cd9fb3767df18163b6d" name="a34bbae7a63794cd9fb3767df18163b6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34bbae7a63794cd9fb3767df18163b6d">&#9670;&#160;</a></span>__ct__16dBgS_MoveBgActorFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> __ct__16dBgS_MoveBgActorFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a15d5eb05db27c3ed097ce0e24359bb32" name="a15d5eb05db27c3ed097ce0e24359bb32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15d5eb05db27c3ed097ce0e24359bb32">&#9670;&#160;</a></span>__ct__17daKekaiTrap_HIO_cFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> __ct__17daKekaiTrap_HIO_cFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a498e6440d5c316e2672169ee4ed92309" name="a498e6440d5c316e2672169ee4ed92309"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a498e6440d5c316e2672169ee4ed92309">&#9670;&#160;</a></span>__dl__FPv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> __dl__FPv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab03d31a00b075440a1da18f54d86f838" name="ab03d31a00b075440a1da18f54d86f838"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab03d31a00b075440a1da18f54d86f838">&#9670;&#160;</a></span>__dt__14mDoHIO_entry_cFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> __dt__14mDoHIO_entry_cFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a20ddd1347d53e9b0e36eed23ee7342e6" name="a20ddd1347d53e9b0e36eed23ee7342e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20ddd1347d53e9b0e36eed23ee7342e6">&#9670;&#160;</a></span>__dt__17daKekaiTrap_HIO_cFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> __dt__17daKekaiTrap_HIO_cFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abcc1145fa03be95d1df70e96494331d7" name="abcc1145fa03be95d1df70e96494331d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcc1145fa03be95d1df70e96494331d7">&#9670;&#160;</a></span>__ptmf_scall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> __ptmf_scall </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a75cea59a88b9016eb884c7c20cdc3a21" name="a75cea59a88b9016eb884c7c20cdc3a21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75cea59a88b9016eb884c7c20cdc3a21">&#9670;&#160;</a></span>__register_global_object()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> __register_global_object </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afecd8718370d6d1641da33aefa4eb1f9" name="afecd8718370d6d1641da33aefa4eb1f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afecd8718370d6d1641da33aefa4eb1f9">&#9670;&#160;</a></span>__sinit_d_a_obj_lv8KekkaiTrap_cpp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> __sinit_d_a_obj_lv8KekkaiTrap_cpp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abed5bd59c54272a132a5b4da4beff66d" name="abed5bd59c54272a132a5b4da4beff66d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abed5bd59c54272a132a5b4da4beff66d">&#9670;&#160;</a></span>_restgpr_29()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> _restgpr_29 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f3662cd06864ff7627d5424c192e6f2" name="a5f3662cd06864ff7627d5424c192e6f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f3662cd06864ff7627d5424c192e6f2">&#9670;&#160;</a></span>_savegpr_29()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> _savegpr_29 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e86a1af5f89fa8d7c77a84fa8aea4f3" name="a4e86a1af5f89fa8d7c77a84fa8aea4f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e86a1af5f89fa8d7c77a84fa8aea4f3">&#9670;&#160;</a></span>cLib_addCalc__FPfffff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> cLib_addCalc__FPfffff </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d6c6f99b6cbfb3d34970fac0d108956" name="a2d6c6f99b6cbfb3d34970fac0d108956"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d6c6f99b6cbfb3d34970fac0d108956">&#9670;&#160;</a></span>cLib_chaseF__FPfff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> cLib_chaseF__FPfff </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e1598ba65ab811fdbb18ca8129a1bf6" name="a1e1598ba65ab811fdbb18ca8129a1bf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e1598ba65ab811fdbb18ca8129a1bf6">&#9670;&#160;</a></span>COMPILER_STRIP_GATE() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">COMPILER_STRIP_GATE </td>
+          <td>(</td>
+          <td class="paramtype">0x80C884E4&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&amp;&#160;</td>
+          <td class="paramname"><em>lit_3651</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e623906e6a105827de4ff00a440d9e1" name="a2e623906e6a105827de4ff00a440d9e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e623906e6a105827de4ff00a440d9e1">&#9670;&#160;</a></span>COMPILER_STRIP_GATE() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">COMPILER_STRIP_GATE </td>
+          <td>(</td>
+          <td class="paramtype">0x80C884E8&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&amp;&#160;</td>
+          <td class="paramname"><em>lit_3652</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aadf89ba5cafb7cd95a60dafbf494487d" name="aadf89ba5cafb7cd95a60dafbf494487d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadf89ba5cafb7cd95a60dafbf494487d">&#9670;&#160;</a></span>COMPILER_STRIP_GATE() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">COMPILER_STRIP_GATE </td>
+          <td>(</td>
+          <td class="paramtype">0x80C884EC&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&amp;&#160;</td>
+          <td class="paramname"><em>lit_3802</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a15faf3e7a8a08b8ff419a8b8aaa8e5db" name="a15faf3e7a8a08b8ff419a8b8aaa8e5db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15faf3e7a8a08b8ff419a8b8aaa8e5db">&#9670;&#160;</a></span>COMPILER_STRIP_GATE() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">COMPILER_STRIP_GATE </td>
+          <td>(</td>
+          <td class="paramtype">0x80C884F0&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&amp;&#160;</td>
+          <td class="paramname"><em>lit_3803</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af2c1742ec8153ace9fbc5d520429be9f" name="af2c1742ec8153ace9fbc5d520429be9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2c1742ec8153ace9fbc5d520429be9f">&#9670;&#160;</a></span>COMPILER_STRIP_GATE() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">COMPILER_STRIP_GATE </td>
+          <td>(</td>
+          <td class="paramtype">0x80C884F4&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&amp;&#160;</td>
+          <td class="paramname"><em>lit_3804</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a417d24612c6c08ab105b450b07e6d485" name="a417d24612c6c08ab105b450b07e6d485"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a417d24612c6c08ab105b450b07e6d485">&#9670;&#160;</a></span>create__13daKekaiTrap_cFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> create__13daKekaiTrap_cFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99fd4a939d3234f22ac303aa50766078" name="a99fd4a939d3234f22ac303aa50766078"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99fd4a939d3234f22ac303aa50766078">&#9670;&#160;</a></span>Create__16dBgS_MoveBgActorFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a> Create__16dBgS_MoveBgActorFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad30cde336489152cb978c9db07b069ea" name="ad30cde336489152cb978c9db07b069ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad30cde336489152cb978c9db07b069ea">&#9670;&#160;</a></span>CreateHeap__13daKekaiTrap_cFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> CreateHeap__13daKekaiTrap_cFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae1046b2bb7c02a69f3f3a7c66fa222c4" name="ae1046b2bb7c02a69f3f3a7c66fa222c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1046b2bb7c02a69f3f3a7c66fa222c4">&#9670;&#160;</a></span>daKekaiTrap_Create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daKekaiTrap_Create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfopAc__ac__c.html">fopAc_ac_c</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab677e6cba39cf326fd9c7be674078a78" name="ab677e6cba39cf326fd9c7be674078a78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab677e6cba39cf326fd9c7be674078a78">&#9670;&#160;</a></span>daKekaiTrap_Create__FP10fopAc_ac_c()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daKekaiTrap_Create__FP10fopAc_ac_c </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a59a47f140197177e2d38de118eae4f98" name="a59a47f140197177e2d38de118eae4f98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59a47f140197177e2d38de118eae4f98">&#9670;&#160;</a></span>daKekaiTrap_Delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daKekaiTrap_Delete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdaKekaiTrap__c.html">daKekaiTrap_c</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29681cc3d36bf36f787744e09758d2ef" name="a29681cc3d36bf36f787744e09758d2ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29681cc3d36bf36f787744e09758d2ef">&#9670;&#160;</a></span>daKekaiTrap_Delete__FP13daKekaiTrap_c()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daKekaiTrap_Delete__FP13daKekaiTrap_c </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ac5f72ab829cf6def2581755ad1098f" name="a0ac5f72ab829cf6def2581755ad1098f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ac5f72ab829cf6def2581755ad1098f">&#9670;&#160;</a></span>daKekaiTrap_Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daKekaiTrap_Draw </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdaKekaiTrap__c.html">daKekaiTrap_c</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a00dbce141226ab91009f626841bff19f" name="a00dbce141226ab91009f626841bff19f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00dbce141226ab91009f626841bff19f">&#9670;&#160;</a></span>daKekaiTrap_Draw__FP13daKekaiTrap_c()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daKekaiTrap_Draw__FP13daKekaiTrap_c </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d13ee11f740a7d057a41997ac1afc50" name="a1d13ee11f740a7d057a41997ac1afc50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d13ee11f740a7d057a41997ac1afc50">&#9670;&#160;</a></span>daKekaiTrap_Execute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">asm</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daKekaiTrap_Execute </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdaKekaiTrap__c.html">daKekaiTrap_c</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a74b3b69edb44e1d3f1ddb1ff21b7a932" name="a74b3b69edb44e1d3f1ddb1ff21b7a932"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74b3b69edb44e1d3f1ddb1ff21b7a932">&#9670;&#160;</a></span>daKekaiTrap_Execute__FP13daKekaiTrap_c()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> daKekaiTrap_Execute__FP13daKekaiTrap_c </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c09dac9a57e22d3422275a3f60cede9" name="a3c09dac9a57e22d3422275a3f60cede9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c09dac9a57e22d3422275a3f60cede9">&#9670;&#160;</a></span>dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a01b93c5502abc9d1a4c58f5f1acf94bb" name="a01b93c5502abc9d1a4c58f5f1acf94bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01b93c5502abc9d1a4c58f5f1acf94bb">&#9670;&#160;</a></span>dComIfG_resDelete__FP30request_of_phase_process_classPCc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dComIfG_resDelete__FP30request_of_phase_process_classPCc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa754a77e07f518b5e17d203185ceea09" name="aa754a77e07f518b5e17d203185ceea09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa754a77e07f518b5e17d203185ceea09">&#9670;&#160;</a></span>dComIfG_resLoad__FP30request_of_phase_process_classPCc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> dComIfG_resLoad__FP30request_of_phase_process_classPCc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d8fb8bfb26bb7d56cf2cdd96a8d5309" name="a2d8fb8bfb26bb7d56cf2cdd96a8d5309"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d8fb8bfb26bb7d56cf2cdd96a8d5309">&#9670;&#160;</a></span>Delete__13daKekaiTrap_cFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> Delete__13daKekaiTrap_cFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a003137a4c515071bd0229da789207dbe" name="a003137a4c515071bd0229da789207dbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a003137a4c515071bd0229da789207dbe">&#9670;&#160;</a></span>Draw__13daKekaiTrap_cFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> Draw__13daKekaiTrap_cFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d2cdfda018325321ae480e9a8cca3e0" name="a1d2cdfda018325321ae480e9a8cca3e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d2cdfda018325321ae480e9a8cca3e0">&#9670;&#160;</a></span>Execute__13daKekaiTrap_cFPPA3_A4_f()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> Execute__13daKekaiTrap_cFPPA3_A4_f </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa8af4013ec4fe08ff0a54dfaa4ceffa2" name="aa8af4013ec4fe08ff0a54dfaa4ceffa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8af4013ec4fe08ff0a54dfaa4ceffa2">&#9670;&#160;</a></span>fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a59a83dc2646cfbec35f3fb91b2158ad9" name="a59a83dc2646cfbec35f3fb91b2158ad9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59a83dc2646cfbec35f3fb91b2158ad9">&#9670;&#160;</a></span>getRes__14dRes_control_cFPCclP11dRes_info_ci()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> getRes__14dRes_control_cFPCclP11dRes_info_ci </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab3176916acaac127a8c45613b94db988" name="ab3176916acaac127a8c45613b94db988"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3176916acaac127a8c45613b94db988">&#9670;&#160;</a></span>init_modeMoveDown__13daKekaiTrap_cFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> init_modeMoveDown__13daKekaiTrap_cFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abcd840dc24aac83d06899a1e18829a00" name="abcd840dc24aac83d06899a1e18829a00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcd840dc24aac83d06899a1e18829a00">&#9670;&#160;</a></span>init_modeMoveUp__13daKekaiTrap_cFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> init_modeMoveUp__13daKekaiTrap_cFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a050b63c2245b951c675223896d05876a" name="a050b63c2245b951c675223896d05876a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a050b63c2245b951c675223896d05876a">&#9670;&#160;</a></span>init_modeWait__13daKekaiTrap_cFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> init_modeWait__13daKekaiTrap_cFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a14ede56d388d64d06dfb228d1cc121a9" name="a14ede56d388d64d06dfb228d1cc121a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14ede56d388d64d06dfb228d1cc121a9">&#9670;&#160;</a></span>IsDelete__16dBgS_MoveBgActorFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a> IsDelete__16dBgS_MoveBgActorFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef27066acd15f9f4f0793820c0faa7fb" name="aef27066acd15f9f4f0793820c0faa7fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef27066acd15f9f4f0793820c0faa7fb">&#9670;&#160;</a></span>isSwitch__10dSv_info_cCFii()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> isSwitch__10dSv_info_cCFii </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a46272bdb6711d736ce226977d5c3dca1" name="a46272bdb6711d736ce226977d5c3dca1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46272bdb6711d736ce226977d5c3dca1">&#9670;&#160;</a></span>mDoExt_J3DModel__create__FP12J3DModelDataUlUl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> mDoExt_J3DModel__create__FP12J3DModelDataUlUl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c949b29ce3c185e8353c408b5a31a48" name="a6c949b29ce3c185e8353c408b5a31a48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c949b29ce3c185e8353c408b5a31a48">&#9670;&#160;</a></span>mDoExt_modelUpdateDL__FP8J3DModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> mDoExt_modelUpdateDL__FP8J3DModel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac74202994301a317515a4eda55582910" name="ac74202994301a317515a4eda55582910"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac74202994301a317515a4eda55582910">&#9670;&#160;</a></span>mDoMtx_ZXYrotM__FPA4_fsss()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> mDoMtx_ZXYrotM__FPA4_fsss </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57a460d2f9a44aec08a9a271dcdbbfd4" name="a57a460d2f9a44aec08a9a271dcdbbfd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57a460d2f9a44aec08a9a271dcdbbfd4">&#9670;&#160;</a></span>modeMoveDown__13daKekaiTrap_cFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> modeMoveDown__13daKekaiTrap_cFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afb231ebf37b70613b75c049f4f27106f" name="afb231ebf37b70613b75c049f4f27106f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb231ebf37b70613b75c049f4f27106f">&#9670;&#160;</a></span>modeMoveUp__13daKekaiTrap_cFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> modeMoveUp__13daKekaiTrap_cFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e9def5714b92814ae95ae4156fbf750" name="a6e9def5714b92814ae95ae4156fbf750"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e9def5714b92814ae95ae4156fbf750">&#9670;&#160;</a></span>modeWait__13daKekaiTrap_cFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> modeWait__13daKekaiTrap_cFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeaa6e144db70a98d777b7db9f8dce362" name="aeaa6e144db70a98d777b7db9f8dce362"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaa6e144db70a98d777b7db9f8dce362">&#9670;&#160;</a></span>MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a402146e4ef9c6621eb03c2b8d8b5dd68" name="a402146e4ef9c6621eb03c2b8d8b5dd68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a402146e4ef9c6621eb03c2b8d8b5dd68">&#9670;&#160;</a></span>MoveBGDelete__16dBgS_MoveBgActorFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> MoveBGDelete__16dBgS_MoveBgActorFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3f4831ecaa5b4d0bd1be5bc389a22604" name="a3f4831ecaa5b4d0bd1be5bc389a22604"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f4831ecaa5b4d0bd1be5bc389a22604">&#9670;&#160;</a></span>MoveBGExecute__16dBgS_MoveBgActorFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> MoveBGExecute__16dBgS_MoveBgActorFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae74a5e4519896c62b977623ff306b456" name="ae74a5e4519896c62b977623ff306b456"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae74a5e4519896c62b977623ff306b456">&#9670;&#160;</a></span>moveMain__13daKekaiTrap_cFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> moveMain__13daKekaiTrap_cFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9ec00f755b69eb1ecdd833e3148126dc" name="a9ec00f755b69eb1ecdd833e3148126dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ec00f755b69eb1ecdd833e3148126dc">&#9670;&#160;</a></span>PSMTXCopy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> PSMTXCopy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71457f4c801a39c1b90e6c06e11d5550" name="a71457f4c801a39c1b90e6c06e11d5550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71457f4c801a39c1b90e6c06e11d5550">&#9670;&#160;</a></span>PSMTXTrans()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> PSMTXTrans </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60fbe6de6f6c4f7d22dbb269539fd089" name="a60fbe6de6f6c4f7d22dbb269539fd089"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60fbe6de6f6c4f7d22dbb269539fd089">&#9670;&#160;</a></span>Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a380b864f11c6561512b8db939380f881" name="a380b864f11c6561512b8db939380f881"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a380b864f11c6561512b8db939380f881">&#9670;&#160;</a></span>REGISTER_CTORS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">REGISTER_CTORS </td>
+          <td>(</td>
+          <td class="paramtype">0x80C88494&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#afecd8718370d6d1641da33aefa4eb1f9">__sinit_d_a_obj_lv8KekkaiTrap_cpp</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a42dca6ebfef78a0efe287b6bd13a9242" name="a42dca6ebfef78a0efe287b6bd13a9242"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42dca6ebfef78a0efe287b6bd13a9242">&#9670;&#160;</a></span>Release__4cBgSFP9dBgW_Base()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> Release__4cBgSFP9dBgW_Base </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac29cf7ed733f5afd77392bde274f596" name="aac29cf7ed733f5afd77392bde274f596"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac29cf7ed733f5afd77392bde274f596">&#9670;&#160;</a></span>setBaseMtx__13daKekaiTrap_cFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> setBaseMtx__13daKekaiTrap_cFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a163749e04bb8e727db62fca94d8e8f6e" name="a163749e04bb8e727db62fca94d8e8f6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a163749e04bb8e727db62fca94d8e8f6e">&#9670;&#160;</a></span>setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa38b8bdba9a933dc787740fdc1fd9330" name="aa38b8bdba9a933dc787740fdc1fd9330"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa38b8bdba9a933dc787740fdc1fd9330">&#9670;&#160;</a></span>settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab6c9e8c9688b69341657586fd8987d71" name="ab6c9e8c9688b69341657586fd8987d71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6c9e8c9688b69341657586fd8987d71">&#9670;&#160;</a></span>ToBack__16dBgS_MoveBgActorFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a> ToBack__16dBgS_MoveBgActorFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8200e1aa80b8712c74183650476fd77c" name="a8200e1aa80b8712c74183650476fd77c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8200e1aa80b8712c74183650476fd77c">&#9670;&#160;</a></span>ToFore__16dBgS_MoveBgActorFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">bool</a> ToFore__16dBgS_MoveBgActorFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a90ec9904184a134729095eb4edfaacc4" name="a90ec9904184a134729095eb4edfaacc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90ec9904184a134729095eb4edfaacc4">&#9670;&#160;</a></span>__vt__13daKekaiTrap_c</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DATA</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>* __vt__13daKekaiTrap_c[10]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">NULL</a> ,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">NULL</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="d__a__obj__lv8KekkaiTrap_8cpp.html#ad30cde336489152cb978c9db07b069ea">CreateHeap__13daKekaiTrap_cFv</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a99fd4a939d3234f22ac303aa50766078">Create__16dBgS_MoveBgActorFv</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a1d2cdfda018325321ae480e9a8cca3e0">Execute__13daKekaiTrap_cFPPA3_A4_f</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a003137a4c515071bd0229da789207dbe">Draw__13daKekaiTrap_cFv</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a2d8fb8bfb26bb7d56cf2cdd96a8d5309">Delete__13daKekaiTrap_cFv</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a14ede56d388d64d06dfb228d1cc121a9">IsDelete__16dBgS_MoveBgActorFv</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a8200e1aa80b8712c74183650476fd77c">ToFore__16dBgS_MoveBgActorFv</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="d__a__obj__lv8KekkaiTrap_8cpp.html#ab6c9e8c9688b69341657586fd8987d71">ToBack__16dBgS_MoveBgActorFv</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="ad__a__obj__lv8KekkaiTrap_8cpp_html_a003137a4c515071bd0229da789207dbe"><div class="ttname"><a href="d__a__obj__lv8KekkaiTrap_8cpp.html#a003137a4c515071bd0229da789207dbe">Draw__13daKekaiTrap_cFv</a></div><div class="ttdeci">void Draw__13daKekaiTrap_cFv()</div></div>
+<div class="ttc" id="ad__a__obj__lv8KekkaiTrap_8cpp_html_a14ede56d388d64d06dfb228d1cc121a9"><div class="ttname"><a href="d__a__obj__lv8KekkaiTrap_8cpp.html#a14ede56d388d64d06dfb228d1cc121a9">IsDelete__16dBgS_MoveBgActorFv</a></div><div class="ttdeci">bool IsDelete__16dBgS_MoveBgActorFv()</div></div>
+<div class="ttc" id="ad__a__obj__lv8KekkaiTrap_8cpp_html_a1d2cdfda018325321ae480e9a8cca3e0"><div class="ttname"><a href="d__a__obj__lv8KekkaiTrap_8cpp.html#a1d2cdfda018325321ae480e9a8cca3e0">Execute__13daKekaiTrap_cFPPA3_A4_f</a></div><div class="ttdeci">void Execute__13daKekaiTrap_cFPPA3_A4_f()</div></div>
+<div class="ttc" id="ad__a__obj__lv8KekkaiTrap_8cpp_html_a2d8fb8bfb26bb7d56cf2cdd96a8d5309"><div class="ttname"><a href="d__a__obj__lv8KekkaiTrap_8cpp.html#a2d8fb8bfb26bb7d56cf2cdd96a8d5309">Delete__13daKekaiTrap_cFv</a></div><div class="ttdeci">void Delete__13daKekaiTrap_cFv()</div></div>
+<div class="ttc" id="ad__a__obj__lv8KekkaiTrap_8cpp_html_a8200e1aa80b8712c74183650476fd77c"><div class="ttname"><a href="d__a__obj__lv8KekkaiTrap_8cpp.html#a8200e1aa80b8712c74183650476fd77c">ToFore__16dBgS_MoveBgActorFv</a></div><div class="ttdeci">bool ToFore__16dBgS_MoveBgActorFv()</div></div>
+<div class="ttc" id="ad__a__obj__lv8KekkaiTrap_8cpp_html_a99fd4a939d3234f22ac303aa50766078"><div class="ttname"><a href="d__a__obj__lv8KekkaiTrap_8cpp.html#a99fd4a939d3234f22ac303aa50766078">Create__16dBgS_MoveBgActorFv</a></div><div class="ttdeci">bool Create__16dBgS_MoveBgActorFv()</div></div>
+<div class="ttc" id="ad__a__obj__lv8KekkaiTrap_8cpp_html_ab6c9e8c9688b69341657586fd8987d71"><div class="ttname"><a href="d__a__obj__lv8KekkaiTrap_8cpp.html#ab6c9e8c9688b69341657586fd8987d71">ToBack__16dBgS_MoveBgActorFv</a></div><div class="ttdeci">bool ToBack__16dBgS_MoveBgActorFv()</div></div>
+<div class="ttc" id="ad__a__obj__lv8KekkaiTrap_8cpp_html_ad30cde336489152cb978c9db07b069ea"><div class="ttname"><a href="d__a__obj__lv8KekkaiTrap_8cpp.html#ad30cde336489152cb978c9db07b069ea">CreateHeap__13daKekaiTrap_cFv</a></div><div class="ttdeci">void CreateHeap__13daKekaiTrap_cFv()</div></div>
+<div class="ttc" id="agroup__jsystem-jsupport_html_ga13fa7ef63a40072c7203b3da54a569a2"><div class="ttname"><a href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">JSUConvertOffsetToPtr</a></div><div class="ttdeci">T * JSUConvertOffsetToPtr(const void *, const void *)</div><div class="ttdef"><b>Definition</b> JSupport.h:22</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a19594ef5c06af043cd28f440388b7b14" name="a19594ef5c06af043cd28f440388b7b14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19594ef5c06af043cd28f440388b7b14">&#9670;&#160;</a></span>__vt__14mDoHIO_entry_c</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DATA</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>* __vt__14mDoHIO_entry_c[3]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">NULL</a> ,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">NULL</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="d__a__obj__lv8KekkaiTrap_8cpp.html#ab03d31a00b075440a1da18f54d86f838">__dt__14mDoHIO_entry_cFv</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="ad__a__obj__lv8KekkaiTrap_8cpp_html_ab03d31a00b075440a1da18f54d86f838"><div class="ttname"><a href="d__a__obj__lv8KekkaiTrap_8cpp.html#ab03d31a00b075440a1da18f54d86f838">__dt__14mDoHIO_entry_cFv</a></div><div class="ttdeci">void __dt__14mDoHIO_entry_cFv()</div><div class="ttdef"><b>Definition</b> d_a_myna.cpp:3737</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3a32bac664e9ce3ffa87fb4dfebb3623" name="a3a32bac664e9ce3ffa87fb4dfebb3623"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a32bac664e9ce3ffa87fb4dfebb3623">&#9670;&#160;</a></span>__vt__17daKekaiTrap_HIO_c</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DATA</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>* __vt__17daKekaiTrap_HIO_c[3]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">NULL</a> ,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">NULL</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a20ddd1347d53e9b0e36eed23ee7342e6">__dt__17daKekaiTrap_HIO_cFv</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="ad__a__obj__lv8KekkaiTrap_8cpp_html_a20ddd1347d53e9b0e36eed23ee7342e6"><div class="ttname"><a href="d__a__obj__lv8KekkaiTrap_8cpp.html#a20ddd1347d53e9b0e36eed23ee7342e6">__dt__17daKekaiTrap_HIO_cFv</a></div><div class="ttdeci">void __dt__17daKekaiTrap_HIO_cFv()</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af1d641d5006e9852701e43891c9ccc5c" name="af1d641d5006e9852701e43891c9ccc5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1d641d5006e9852701e43891c9ccc5c">&#9670;&#160;</a></span>cNullVec__6Z2Calc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> cNullVec__6Z2Calc[12]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a829442159215466444725bf1ad63ea6b" name="a829442159215466444725bf1ad63ea6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a829442159215466444725bf1ad63ea6b">&#9670;&#160;</a></span>d_a_obj_lv8KekkaiTrap__stringBase0</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a>* <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> d_a_obj_lv8KekkaiTrap__stringBase0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a81009f3027f4e9134cda5d4cf6a28aaa" name="a81009f3027f4e9134cda5d4cf6a28aaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81009f3027f4e9134cda5d4cf6a28aaa">&#9670;&#160;</a></span>data_80C88638</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> data_80C88638[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a50ad47c26bcc2867f2c14d349753f58e" name="a50ad47c26bcc2867f2c14d349753f58e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50ad47c26bcc2867f2c14d349753f58e">&#9670;&#160;</a></span>g_dComIfG_gameInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> g_dComIfG_gameInfo[122384]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5bbfcbebab8b50d8b888f8aee1e4a468" name="a5bbfcbebab8b50d8b888f8aee1e4a468"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bbfcbebab8b50d8b888f8aee1e4a468">&#9670;&#160;</a></span>g_env_light</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> g_env_light[4880]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a24ce032de2af10b7e92bf464450ddeb7" name="a24ce032de2af10b7e92bf464450ddeb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24ce032de2af10b7e92bf464450ddeb7">&#9670;&#160;</a></span>g_fopAc_Method</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>* g_fopAc_Method[8]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3de3a374119e8432d211e29713bce0ae" name="a3de3a374119e8432d211e29713bce0ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3de3a374119e8432d211e29713bce0ae">&#9670;&#160;</a></span>g_fpcLf_Method</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>* g_fpcLf_Method[5+1]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adcdea88f07a89cc1ae8432dec816899e" name="adcdea88f07a89cc1ae8432dec816899e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcdea88f07a89cc1ae8432dec816899e">&#9670;&#160;</a></span>g_profile_Obj_Lv8KekkaiTrap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DATA</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>* g_profile_Obj_Lv8KekkaiTrap[12]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    (<span class="keywordtype">void</span>*)0xFFFFFFFD, (<span class="keywordtype">void</span>*)0x0003FFFD,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)0x00A30000, (<span class="keywordtype">void</span>*)&amp;<a class="code hl_variable" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a3de3a374119e8432d211e29713bce0ae">g_fpcLf_Method</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)0x000005B4, (<span class="keywordtype">void</span>*)<a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">NULL</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">NULL</a>,       (<span class="keywordtype">void</span>*)&amp;<a class="code hl_variable" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a24ce032de2af10b7e92bf464450ddeb7">g_fopAc_Method</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)0x02840000, (<span class="keywordtype">void</span>*)&amp;<a class="code hl_variable" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a1fbbe6c7fd17e522b87a9307b5d973f7">l_daKekaiTrap_Method</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)0x00044000, (<span class="keywordtype">void</span>*)0x000E0000,</div>
+<div class="line">}</div>
+<div class="ttc" id="ad__a__obj__lv8KekkaiTrap_8cpp_html_a1fbbe6c7fd17e522b87a9307b5d973f7"><div class="ttname"><a href="d__a__obj__lv8KekkaiTrap_8cpp.html#a1fbbe6c7fd17e522b87a9307b5d973f7">l_daKekaiTrap_Method</a></div><div class="ttdeci">static SECTION_DATA void * l_daKekaiTrap_Method[8]</div><div class="ttdef"><b>Definition</b> d_a_obj_lv8KekkaiTrap.cpp:260</div></div>
+<div class="ttc" id="ad__a__obj__lv8KekkaiTrap_8cpp_html_a24ce032de2af10b7e92bf464450ddeb7"><div class="ttname"><a href="d__a__obj__lv8KekkaiTrap_8cpp.html#a24ce032de2af10b7e92bf464450ddeb7">g_fopAc_Method</a></div><div class="ttdeci">void * g_fopAc_Method[8]</div></div>
+<div class="ttc" id="ad__a__obj__lv8KekkaiTrap_8cpp_html_a3de3a374119e8432d211e29713bce0ae"><div class="ttname"><a href="d__a__obj__lv8KekkaiTrap_8cpp.html#a3de3a374119e8432d211e29713bce0ae">g_fpcLf_Method</a></div><div class="ttdeci">void * g_fpcLf_Method[5+1]</div><div class="ttdef"><b>Definition</b> f_pc_leaf.cpp:65</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae72d2e91667c54fa66f49a18c8aaa30b" name="ae72d2e91667c54fa66f49a18c8aaa30b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae72d2e91667c54fa66f49a18c8aaa30b">&#9670;&#160;</a></span>j3dSys</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> j3dSys[284]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a49eaad913d141b9110563e6ffa559ab8" name="a49eaad913d141b9110563e6ffa559ab8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49eaad913d141b9110563e6ffa559ab8">&#9670;&#160;</a></span>l_bmdIdx</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DATA</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> l_bmdIdx = 0x00000004</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1fbbe6c7fd17e522b87a9307b5d973f7" name="a1fbbe6c7fd17e522b87a9307b5d973f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fbbe6c7fd17e522b87a9307b5d973f7">&#9670;&#160;</a></span>l_daKekaiTrap_Method</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DATA</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>* l_daKekaiTrap_Method[8]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="d__a__obj__lv8KekkaiTrap_8cpp.html#ab677e6cba39cf326fd9c7be674078a78">daKekaiTrap_Create__FP10fopAc_ac_c</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a29681cc3d36bf36f787744e09758d2ef">daKekaiTrap_Delete__FP13daKekaiTrap_c</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a74b3b69edb44e1d3f1ddb1ff21b7a932">daKekaiTrap_Execute__FP13daKekaiTrap_c</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">NULL</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a00dbce141226ab91009f626841bff19f">daKekaiTrap_Draw__FP13daKekaiTrap_c</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">NULL</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">NULL</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">NULL</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="ad__a__obj__lv8KekkaiTrap_8cpp_html_a00dbce141226ab91009f626841bff19f"><div class="ttname"><a href="d__a__obj__lv8KekkaiTrap_8cpp.html#a00dbce141226ab91009f626841bff19f">daKekaiTrap_Draw__FP13daKekaiTrap_c</a></div><div class="ttdeci">static void daKekaiTrap_Draw__FP13daKekaiTrap_c()</div></div>
+<div class="ttc" id="ad__a__obj__lv8KekkaiTrap_8cpp_html_a29681cc3d36bf36f787744e09758d2ef"><div class="ttname"><a href="d__a__obj__lv8KekkaiTrap_8cpp.html#a29681cc3d36bf36f787744e09758d2ef">daKekaiTrap_Delete__FP13daKekaiTrap_c</a></div><div class="ttdeci">static void daKekaiTrap_Delete__FP13daKekaiTrap_c()</div></div>
+<div class="ttc" id="ad__a__obj__lv8KekkaiTrap_8cpp_html_a74b3b69edb44e1d3f1ddb1ff21b7a932"><div class="ttname"><a href="d__a__obj__lv8KekkaiTrap_8cpp.html#a74b3b69edb44e1d3f1ddb1ff21b7a932">daKekaiTrap_Execute__FP13daKekaiTrap_c</a></div><div class="ttdeci">static void daKekaiTrap_Execute__FP13daKekaiTrap_c()</div></div>
+<div class="ttc" id="ad__a__obj__lv8KekkaiTrap_8cpp_html_ab677e6cba39cf326fd9c7be674078a78"><div class="ttname"><a href="d__a__obj__lv8KekkaiTrap_8cpp.html#ab677e6cba39cf326fd9c7be674078a78">daKekaiTrap_Create__FP10fopAc_ac_c</a></div><div class="ttdeci">static void daKekaiTrap_Create__FP10fopAc_ac_c()</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1cb9523ac4af900343c1627e48a709e5" name="a1cb9523ac4af900343c1627e48a709e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cb9523ac4af900343c1627e48a709e5">&#9670;&#160;</a></span>l_dzbIdx</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DATA</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> l_dzbIdx = 0x00000007</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e7e81fb61cc506f8a9808f6fc15d15b" name="a8e7e81fb61cc506f8a9808f6fc15d15b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e7e81fb61cc506f8a9808f6fc15d15b">&#9670;&#160;</a></span>l_HIO</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="el" href="classl__HIO.html">l_HIO</a>[28]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a17faaa593b1f428ff4979dbdcffc104c" name="a17faaa593b1f428ff4979dbdcffc104c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17faaa593b1f428ff4979dbdcffc104c">&#9670;&#160;</a></span>l_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DATA</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>* l_type = (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>*)&amp;<a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a829442159215466444725bf1ad63ea6b">d_a_obj_lv8KekkaiTrap__stringBase0</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5bb5d6a82c2f4d4bb43dbf4d11e60387" name="a5bb5d6a82c2f4d4bb43dbf4d11e60387"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bb5d6a82c2f4d4bb43dbf4d11e60387">&#9670;&#160;</a></span>lit_1787</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DATA</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> lit_1787[1+4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x02000201,</div>
+<div class="line">    </div>
+<div class="line">    0x40080000,</div>
+<div class="line">    0x00000000,</div>
+<div class="line">    0x3FE00000,</div>
+<div class="line">    0x00000000,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac9d87eaafde0af22e5bd1e7b8d0361b1" name="ac9d87eaafde0af22e5bd1e7b8d0361b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9d87eaafde0af22e5bd1e7b8d0361b1">&#9670;&#160;</a></span>lit_3645</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_3645[12]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3cd9989a3f135eeff30a715a75e5f9d1" name="a3cd9989a3f135eeff30a715a75e5f9d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cd9989a3f135eeff30a715a75e5f9d1">&#9670;&#160;</a></span>lit_3651</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_RODATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> lit_3651[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a455dacd258581af15c16f94dfff0cb68" name="a455dacd258581af15c16f94dfff0cb68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a455dacd258581af15c16f94dfff0cb68">&#9670;&#160;</a></span>lit_3652</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_RODATA</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> lit_3652 = 7.0f / 10.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3ad9149440c21557b0aa73dfd91764ea" name="a3ad9149440c21557b0aa73dfd91764ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ad9149440c21557b0aa73dfd91764ea">&#9670;&#160;</a></span>lit_3756</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DATA</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>* lit_3756[3]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">NULL</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)0xFFFFFFFF,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a6e9def5714b92814ae95ae4156fbf750">modeWait__13daKekaiTrap_cFv</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="ad__a__obj__lv8KekkaiTrap_8cpp_html_a6e9def5714b92814ae95ae4156fbf750"><div class="ttname"><a href="d__a__obj__lv8KekkaiTrap_8cpp.html#a6e9def5714b92814ae95ae4156fbf750">modeWait__13daKekaiTrap_cFv</a></div><div class="ttdeci">void modeWait__13daKekaiTrap_cFv()</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a596f912389ad9cef3958093658ce5d8a" name="a596f912389ad9cef3958093658ce5d8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a596f912389ad9cef3958093658ce5d8a">&#9670;&#160;</a></span>lit_3757</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DATA</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>* lit_3757[3]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">NULL</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)0xFFFFFFFF,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="d__a__obj__lv8KekkaiTrap_8cpp.html#afb231ebf37b70613b75c049f4f27106f">modeMoveUp__13daKekaiTrap_cFv</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="ad__a__obj__lv8KekkaiTrap_8cpp_html_afb231ebf37b70613b75c049f4f27106f"><div class="ttname"><a href="d__a__obj__lv8KekkaiTrap_8cpp.html#afb231ebf37b70613b75c049f4f27106f">modeMoveUp__13daKekaiTrap_cFv</a></div><div class="ttdeci">void modeMoveUp__13daKekaiTrap_cFv()</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adfe7372c45e2db6c94ad557bb55db8ae" name="adfe7372c45e2db6c94ad557bb55db8ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfe7372c45e2db6c94ad557bb55db8ae">&#9670;&#160;</a></span>lit_3758</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DATA</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>* lit_3758[3]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">NULL</a>,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)0xFFFFFFFF,</div>
+<div class="line">    (<span class="keywordtype">void</span>*)<a class="code hl_function" href="d__a__obj__lv8KekkaiTrap_8cpp.html#a57a460d2f9a44aec08a9a271dcdbbfd4">modeMoveDown__13daKekaiTrap_cFv</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="ad__a__obj__lv8KekkaiTrap_8cpp_html_a57a460d2f9a44aec08a9a271dcdbbfd4"><div class="ttname"><a href="d__a__obj__lv8KekkaiTrap_8cpp.html#a57a460d2f9a44aec08a9a271dcdbbfd4">modeMoveDown__13daKekaiTrap_cFv</a></div><div class="ttdeci">void modeMoveDown__13daKekaiTrap_cFv()</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abc1c829aa5bbb07b79a040cc02bbc07e" name="abc1c829aa5bbb07b79a040cc02bbc07e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc1c829aa5bbb07b79a040cc02bbc07e">&#9670;&#160;</a></span>lit_3802</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_RODATA</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> lit_3802 = 30.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac3b42acb714db6d6f1c8723b748e63f3" name="ac3b42acb714db6d6f1c8723b748e63f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3b42acb714db6d6f1c8723b748e63f3">&#9670;&#160;</a></span>lit_3803</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_RODATA</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> lit_3803 = 1.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05c4dbe99fa907039b8fc9819fc7047a" name="a05c4dbe99fa907039b8fc9819fc7047a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05c4dbe99fa907039b8fc9819fc7047a">&#9670;&#160;</a></span>lit_3804</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_RODATA</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> lit_3804 = 3.0f / 100.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ade07b5c77d98f1cfeb9c1b5ee4072d00" name="ade07b5c77d98f1cfeb9c1b5ee4072d00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade07b5c77d98f1cfeb9c1b5ee4072d00">&#9670;&#160;</a></span>mode_proc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> mode_proc[36]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8e01467eed17327e0c624b22ccc7ed8f" name="a8e01467eed17327e0c624b22ccc7ed8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e01467eed17327e0c624b22ccc7ed8f">&#9670;&#160;</a></span>now__14mDoMtx_stack_c</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> now__14mDoMtx_stack_c[48]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4abf48f419d2029ec33568828de5a38e" name="a4abf48f419d2029ec33568828de5a38e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4abf48f419d2029ec33568828de5a38e">&#9670;&#160;</a></span>stringBase_80C884F8</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">SECTION_DEAD</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a>* <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">const</a> stringBase_80C884F8 = &quot;Lv8Kekkai&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_0b8cd375c317792b95eba87076cd6518.html">rel</a></li><li class="navelem"><a class="el" href="dir_b8807fde19a2a66bb780b4144be58361.html">d</a></li><li class="navelem"><a class="el" href="dir_4471f359497cf646732c9636f737f558.html">a</a></li><li class="navelem"><a class="el" href="dir_24f224a0a48a490a9b32aca0e2cf4bc9.html">obj</a></li><li class="navelem"><a class="el" href="dir_d70c57c9463d49410f460be1af7d8aeb.html">d_a_obj_lv8KekkaiTrap</a></li><li class="navelem"><a class="el" href="d__a__obj__lv8KekkaiTrap_8cpp.html">d_a_obj_lv8KekkaiTrap.cpp</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

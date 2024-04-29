@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: include/rel/d/a/obj/d_a_obj_lv1Candle00/d_a_obj_lv1Candle00.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d__a__obj__lv1Candle00_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">d_a_obj_lv1Candle00.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="d__a__obj__lv1Candle00_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef D_A_OBJ_LV1CANDLE00_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define D_A_OBJ_LV1CANDLE00_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="c__phase_8h.html">SSystem/SComponent/c_phase.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="f__op__actor_8h.html">f_op/f_op_actor.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="d__cc__d_8h.html">d/cc/d_cc_d.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="m__Do__hostIO_8h.html">m_Do/m_Do_hostIO.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classdaLv1Cdl00__HIO__c.html">    9</a></span><span class="keyword">class </span><a class="code hl_class" href="classdaLv1Cdl00__HIO__c.html">daLv1Cdl00_HIO_c</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structmDoHIO__entry__c.html">mDoHIO_entry_c</a> {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="comment">/* 80C55D0C */</span> <a class="code hl_function" href="classdaLv1Cdl00__HIO__c.html#a2dedc4e4c5e8c147ab0ed25fc73c9b52">daLv1Cdl00_HIO_c</a>();</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classdaLv1Cdl00__HIO__c.html#a142030ed73fa04e614cd75755ba8aad1">   12</a></span>    <span class="comment">/* 80C56970 */</span> <a class="code hl_function" href="classdaLv1Cdl00__HIO__c.html#a142030ed73fa04e614cd75755ba8aad1">~daLv1Cdl00_HIO_c</a>() {}</div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classdaLv1Cdl00__c.html#a619bbec9083f5ac600b90ce0af70ad4d">   13</a></span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classdaLv1Cdl00__HIO__c.html#a9fb1d965b86ac8350691345b4c52b39c">   14</a></span>    <span class="comment">/* 0x4 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaLv1Cdl00__HIO__c.html#a9fb1d965b86ac8350691345b4c52b39c">field_0x4</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classdaLv1Cdl00__HIO__c.html#ae5e8d696143780104606148d24ea2b01">   15</a></span>    <span class="comment">/* 0x5 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaLv1Cdl00__HIO__c.html#ae5e8d696143780104606148d24ea2b01">field_0x5</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>};</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classdaLv1Cdl00__c.html">   18</a></span><span class="keyword">class </span><a class="code hl_class" href="classdaLv1Cdl00__c.html">daLv1Cdl00_c</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structfopAc__ac__c.html">fopAc_ac_c</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="comment">/* 80C55D80 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaLv1Cdl00__c.html#ab5d1141dc84b97205ce9b418dccc1c5e">setBaseMtx</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">/* 80C55E08 */</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classdaLv1Cdl00__c.html#a5ecd7cf63b7e5ee5dc0aff71724b7693">CreateHeap</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">/* 80C55E74 */</span> <a class="code hl_enumeration" href="c__phase_8h.html#a9f111b636d6afcaba75f303583cc8340">cPhs__Step</a> <a class="code hl_function" href="classdaLv1Cdl00__c.html#a52d9f812adc1056985d1341b58f1dfa7">create</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="comment">/* 80C561A0 */</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classdaLv1Cdl00__c.html#a1334c9bbc3137bffe289e4a97b8922a1">createHeapCallBack</a>(<a class="code hl_struct" href="structfopAc__ac__c.html">fopAc_ac_c</a>*);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">/* 80C561C0 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaLv1Cdl00__c.html#a241078f4f7fd418d86bebd484c59caf4">lightInit</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment">/* 80C56268 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaLv1Cdl00__c.html#a833b9b0a93a05c83156d6db9088988d5">setLight</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="comment">/* 80C562A0 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaLv1Cdl00__c.html#ab57297c956aab8e8a10d4ea05e613461">cutLight</a>();</div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classdaLv1Cdl00__c.html#a67760fe4d672a5f5d4c71734a7cdc194">   27</a></span>    <span class="comment">/* 80C562D8 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaLv1Cdl00__c.html#a028d52260e9f27686e77d120b78631c3">pointLightProc</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">/* 80C56388 */</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classdaLv1Cdl00__c.html#af8e51bcf2b43e470d5d2f9b948262eb9">Execute</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">/* 80C567EC */</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classdaLv1Cdl00__c.html#a55fb8c84ffc6e16cba2f24fac01916df">Draw</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">/* 80C56890 */</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classdaLv1Cdl00__c.html#a742269f05d34ff39142a4d2ff749c2a8">Delete</a>();</div>
+</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classdaLv1Cdl00__c.html#aed59a4a767151a6516669bdb197ed274">   32</a></span>    <span class="comment">/* 0x568 */</span> <a class="code hl_struct" href="structrequest__of__phase__process__class.html">request_of_phase_process_class</a> <a class="code hl_variable" href="classdaLv1Cdl00__c.html#aed59a4a767151a6516669bdb197ed274">mPhase</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classdaLv1Cdl00__c.html#ad0204c7a428a513387f494d004c3b41b">   33</a></span>    <span class="comment">/* 0x570 */</span> <a class="code hl_struct" href="classJ3DModel.html">J3DModel</a>* <a class="code hl_variable" href="classdaLv1Cdl00__c.html#ad0204c7a428a513387f494d004c3b41b">mpModel</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classdaLv1Cdl00__c.html#aaac856e6ed712f3e84149b8ca66bd65f">   34</a></span>    <span class="comment">/* 0x574 */</span> <a class="code hl_struct" href="structdCcD__Stts.html">dCcD_Stts</a> <a class="code hl_variable" href="classdaLv1Cdl00__c.html#aaac856e6ed712f3e84149b8ca66bd65f">mStts</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classdaLv1Cdl00__c.html#aae1f793995f3405742d1a8e24d094933">   35</a></span>    <span class="comment">/* 0x5B0 */</span> <a class="code hl_struct" href="structdCcD__Cyl.html">dCcD_Cyl</a> <a class="code hl_variable" href="classdaLv1Cdl00__c.html#aae1f793995f3405742d1a8e24d094933">mCyl</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classdaLv1Cdl00__c.html#a0e3f71943298cf7b61bc3e36c5a9f94e">   36</a></span>    <span class="comment">/* 0x6EC */</span> <a class="code hl_struct" href="structcXyz.html">cXyz</a> <a class="code hl_variable" href="classdaLv1Cdl00__c.html#a0e3f71943298cf7b61bc3e36c5a9f94e">mTorchPos</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classdaLv1Cdl00__c.html#aa04907e1190e588b6afc25f0d89e89ea">   37</a></span>    <span class="comment">/* 0x6F8 */</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="classdaLv1Cdl00__c.html#aa04907e1190e588b6afc25f0d89e89ea">mIsLit</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classdaLv1Cdl00__c.html#a39bcb008a262cd8577447f899759afbc">   38</a></span>    <span class="comment">/* 0x6F9 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaLv1Cdl00__c.html#a39bcb008a262cd8577447f899759afbc">mIsSwitch</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classdaLv1Cdl00__c.html#a91b0f27fbcfc0e70e15982d41b4374f7">   39</a></span>    <span class="comment">/* 0x6FA */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaLv1Cdl00__c.html#a91b0f27fbcfc0e70e15982d41b4374f7">mSwType</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classdaLv1Cdl00__c.html#a45c35da56fb6549c905f1cceec188b9d">   40</a></span>    <span class="comment">/* 0x6FC */</span> <a class="code hl_struct" href="structcXyz.html">cXyz</a> <a class="code hl_variable" href="classdaLv1Cdl00__c.html#a45c35da56fb6549c905f1cceec188b9d">mLightPos</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classdaLv1Cdl00__c.html#acc406f925cc0f56e8596ff1d4aa6c607">   41</a></span>    <span class="comment">/* 0x708 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaLv1Cdl00__c.html#acc406f925cc0f56e8596ff1d4aa6c607">mLightType</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classdaLv1Cdl00__c.html#a1b6921fced8d4e5237f11428cfbfa185">   42</a></span>    <span class="comment">/* 0x70C */</span> <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> <a class="code hl_variable" href="classdaLv1Cdl00__c.html#a1b6921fced8d4e5237f11428cfbfa185">mIntensity</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classdaLv1Cdl00__c.html#a9a172ca0910485f464c1a5d700b26d25">   43</a></span>    <span class="comment">/* 0x710 */</span> <a class="code hl_struct" href="structLIGHT__INFLUENCE.html">LIGHT_INFLUENCE</a> <a class="code hl_variable" href="classdaLv1Cdl00__c.html#a9a172ca0910485f464c1a5d700b26d25">mLight</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classdaLv1Cdl00__c.html#aaf9ca9530ceeafbc766a8de20d95c924">   44</a></span>    <span class="comment">/* 0x730 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaLv1Cdl00__c.html#aaf9ca9530ceeafbc766a8de20d95c924">mTgHit</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classdaLv1Cdl00__c.html#a2decdcfab4d9e46d60b021e13c15919d">   45</a></span>    <span class="comment">/* 0x734 */</span> <a class="code hl_struct" href="classZ2SoundObjSimple.html">Z2SoundObjSimple</a> <a class="code hl_variable" href="classdaLv1Cdl00__c.html#a2decdcfab4d9e46d60b021e13c15919d">mSound</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">static</span> <a class="code hl_struct" href="structdCcD__SrcGObjInf.html">dCcD_SrcGObjInf</a> <span class="keyword">const</span> <a class="code hl_variable" href="classdaLv1Cdl00__c.html#a619bbec9083f5ac600b90ce0af70ad4d">mCcDObjInfo</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">static</span> <a class="code hl_struct" href="structdCcD__SrcCyl.html">dCcD_SrcCyl</a> <a class="code hl_variable" href="classdaLv1Cdl00__c.html#a67760fe4d672a5f5d4c71734a7cdc194">mCcDCyl</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>};</div>
+</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="d__a__obj__lv1Candle00_8h.html#a832f62a4ebc36e7a1ccee8796536ff47">   51</a></span><a class="code hl_function" href="d__a__obj__lv1Candle00_8h.html#a832f62a4ebc36e7a1ccee8796536ff47">STATIC_ASSERT</a>(<span class="keyword">sizeof</span>(<a class="code hl_class" href="classdaLv1Cdl00__c.html">daLv1Cdl00_c</a>) == 0x754);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#endif </span><span class="comment">/* D_A_OBJ_LV1CANDLE00_H */</span><span class="preprocessor"></span></div>
+</div>
+</div>
+<div class="ttc" id="ac__phase_8h_html"><div class="ttname"><a href="c__phase_8h.html">c_phase.h</a></div></div>
+<div class="ttc" id="ac__phase_8h_html_a9f111b636d6afcaba75f303583cc8340"><div class="ttname"><a href="c__phase_8h.html#a9f111b636d6afcaba75f303583cc8340">cPhs__Step</a></div><div class="ttdeci">cPhs__Step</div><div class="ttdef"><b>Definition</b> c_phase.h:8</div></div>
+<div class="ttc" id="aclassJ3DModel_html"><div class="ttname"><a href="classJ3DModel.html">J3DModel</a></div><div class="ttdef"><b>Definition</b> J3DModel.h:42</div></div>
+<div class="ttc" id="aclassZ2SoundObjSimple_html"><div class="ttname"><a href="classZ2SoundObjSimple.html">Z2SoundObjSimple</a></div><div class="ttdef"><b>Definition</b> Z2SoundObject.h:34</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__HIO__c_html"><div class="ttname"><a href="classdaLv1Cdl00__HIO__c.html">daLv1Cdl00_HIO_c</a></div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.h:9</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__HIO__c_html_a142030ed73fa04e614cd75755ba8aad1"><div class="ttname"><a href="classdaLv1Cdl00__HIO__c.html#a142030ed73fa04e614cd75755ba8aad1">daLv1Cdl00_HIO_c::~daLv1Cdl00_HIO_c</a></div><div class="ttdeci">~daLv1Cdl00_HIO_c()</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.h:12</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__HIO__c_html_a2dedc4e4c5e8c147ab0ed25fc73c9b52"><div class="ttname"><a href="classdaLv1Cdl00__HIO__c.html#a2dedc4e4c5e8c147ab0ed25fc73c9b52">daLv1Cdl00_HIO_c::daLv1Cdl00_HIO_c</a></div><div class="ttdeci">daLv1Cdl00_HIO_c()</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.cpp:33</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__HIO__c_html_a9fb1d965b86ac8350691345b4c52b39c"><div class="ttname"><a href="classdaLv1Cdl00__HIO__c.html#a9fb1d965b86ac8350691345b4c52b39c">daLv1Cdl00_HIO_c::field_0x4</a></div><div class="ttdeci">u8 field_0x4</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.h:14</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__HIO__c_html_ae5e8d696143780104606148d24ea2b01"><div class="ttname"><a href="classdaLv1Cdl00__HIO__c.html#ae5e8d696143780104606148d24ea2b01">daLv1Cdl00_HIO_c::field_0x5</a></div><div class="ttdeci">u8 field_0x5</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.h:15</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__c_html"><div class="ttname"><a href="classdaLv1Cdl00__c.html">daLv1Cdl00_c</a></div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.h:18</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__c_html_a028d52260e9f27686e77d120b78631c3"><div class="ttname"><a href="classdaLv1Cdl00__c.html#a028d52260e9f27686e77d120b78631c3">daLv1Cdl00_c::pointLightProc</a></div><div class="ttdeci">void pointLightProc()</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.cpp:144</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__c_html_a0e3f71943298cf7b61bc3e36c5a9f94e"><div class="ttname"><a href="classdaLv1Cdl00__c.html#a0e3f71943298cf7b61bc3e36c5a9f94e">daLv1Cdl00_c::mTorchPos</a></div><div class="ttdeci">cXyz mTorchPos</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.h:36</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__c_html_a1334c9bbc3137bffe289e4a97b8922a1"><div class="ttname"><a href="classdaLv1Cdl00__c.html#a1334c9bbc3137bffe289e4a97b8922a1">daLv1Cdl00_c::createHeapCallBack</a></div><div class="ttdeci">static int createHeapCallBack(fopAc_ac_c *)</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.cpp:106</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__c_html_a1b6921fced8d4e5237f11428cfbfa185"><div class="ttname"><a href="classdaLv1Cdl00__c.html#a1b6921fced8d4e5237f11428cfbfa185">daLv1Cdl00_c::mIntensity</a></div><div class="ttdeci">f32 mIntensity</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.h:42</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__c_html_a241078f4f7fd418d86bebd484c59caf4"><div class="ttname"><a href="classdaLv1Cdl00__c.html#a241078f4f7fd418d86bebd484c59caf4">daLv1Cdl00_c::lightInit</a></div><div class="ttdeci">void lightInit()</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.cpp:111</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__c_html_a2decdcfab4d9e46d60b021e13c15919d"><div class="ttname"><a href="classdaLv1Cdl00__c.html#a2decdcfab4d9e46d60b021e13c15919d">daLv1Cdl00_c::mSound</a></div><div class="ttdeci">Z2SoundObjSimple mSound</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.h:45</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__c_html_a39bcb008a262cd8577447f899759afbc"><div class="ttname"><a href="classdaLv1Cdl00__c.html#a39bcb008a262cd8577447f899759afbc">daLv1Cdl00_c::mIsSwitch</a></div><div class="ttdeci">u8 mIsSwitch</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.h:38</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__c_html_a45c35da56fb6549c905f1cceec188b9d"><div class="ttname"><a href="classdaLv1Cdl00__c.html#a45c35da56fb6549c905f1cceec188b9d">daLv1Cdl00_c::mLightPos</a></div><div class="ttdeci">cXyz mLightPos</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.h:40</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__c_html_a52d9f812adc1056985d1341b58f1dfa7"><div class="ttname"><a href="classdaLv1Cdl00__c.html#a52d9f812adc1056985d1341b58f1dfa7">daLv1Cdl00_c::create</a></div><div class="ttdeci">cPhs__Step create()</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.cpp:57</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__c_html_a55fb8c84ffc6e16cba2f24fac01916df"><div class="ttname"><a href="classdaLv1Cdl00__c.html#a55fb8c84ffc6e16cba2f24fac01916df">daLv1Cdl00_c::Draw</a></div><div class="ttdeci">int Draw()</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.cpp:244</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__c_html_a5ecd7cf63b7e5ee5dc0aff71724b7693"><div class="ttname"><a href="classdaLv1Cdl00__c.html#a5ecd7cf63b7e5ee5dc0aff71724b7693">daLv1Cdl00_c::CreateHeap</a></div><div class="ttdeci">int CreateHeap()</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.cpp:47</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__c_html_a619bbec9083f5ac600b90ce0af70ad4d"><div class="ttname"><a href="classdaLv1Cdl00__c.html#a619bbec9083f5ac600b90ce0af70ad4d">daLv1Cdl00_c::mCcDObjInfo</a></div><div class="ttdeci">static dCcD_SrcGObjInf const mCcDObjInfo</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.h:13</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__c_html_a67760fe4d672a5f5d4c71734a7cdc194"><div class="ttname"><a href="classdaLv1Cdl00__c.html#a67760fe4d672a5f5d4c71734a7cdc194">daLv1Cdl00_c::mCcDCyl</a></div><div class="ttdeci">static dCcD_SrcCyl mCcDCyl</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.h:27</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__c_html_a742269f05d34ff39142a4d2ff749c2a8"><div class="ttname"><a href="classdaLv1Cdl00__c.html#a742269f05d34ff39142a4d2ff749c2a8">daLv1Cdl00_c::Delete</a></div><div class="ttdeci">int Delete()</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.cpp:254</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__c_html_a833b9b0a93a05c83156d6db9088988d5"><div class="ttname"><a href="classdaLv1Cdl00__c.html#a833b9b0a93a05c83156d6db9088988d5">daLv1Cdl00_c::setLight</a></div><div class="ttdeci">void setLight()</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.cpp:130</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__c_html_a91b0f27fbcfc0e70e15982d41b4374f7"><div class="ttname"><a href="classdaLv1Cdl00__c.html#a91b0f27fbcfc0e70e15982d41b4374f7">daLv1Cdl00_c::mSwType</a></div><div class="ttdeci">u8 mSwType</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.h:39</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__c_html_a9a172ca0910485f464c1a5d700b26d25"><div class="ttname"><a href="classdaLv1Cdl00__c.html#a9a172ca0910485f464c1a5d700b26d25">daLv1Cdl00_c::mLight</a></div><div class="ttdeci">LIGHT_INFLUENCE mLight</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.h:43</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__c_html_aa04907e1190e588b6afc25f0d89e89ea"><div class="ttname"><a href="classdaLv1Cdl00__c.html#aa04907e1190e588b6afc25f0d89e89ea">daLv1Cdl00_c::mIsLit</a></div><div class="ttdeci">bool mIsLit</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.h:37</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__c_html_aaac856e6ed712f3e84149b8ca66bd65f"><div class="ttname"><a href="classdaLv1Cdl00__c.html#aaac856e6ed712f3e84149b8ca66bd65f">daLv1Cdl00_c::mStts</a></div><div class="ttdeci">dCcD_Stts mStts</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.h:34</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__c_html_aae1f793995f3405742d1a8e24d094933"><div class="ttname"><a href="classdaLv1Cdl00__c.html#aae1f793995f3405742d1a8e24d094933">daLv1Cdl00_c::mCyl</a></div><div class="ttdeci">dCcD_Cyl mCyl</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.h:35</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__c_html_aaf9ca9530ceeafbc766a8de20d95c924"><div class="ttname"><a href="classdaLv1Cdl00__c.html#aaf9ca9530ceeafbc766a8de20d95c924">daLv1Cdl00_c::mTgHit</a></div><div class="ttdeci">u8 mTgHit</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.h:44</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__c_html_ab57297c956aab8e8a10d4ea05e613461"><div class="ttname"><a href="classdaLv1Cdl00__c.html#ab57297c956aab8e8a10d4ea05e613461">daLv1Cdl00_c::cutLight</a></div><div class="ttdeci">void cutLight()</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.cpp:137</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__c_html_ab5d1141dc84b97205ce9b418dccc1c5e"><div class="ttname"><a href="classdaLv1Cdl00__c.html#ab5d1141dc84b97205ce9b418dccc1c5e">daLv1Cdl00_c::setBaseMtx</a></div><div class="ttdeci">void setBaseMtx()</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.cpp:39</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__c_html_acc406f925cc0f56e8596ff1d4aa6c607"><div class="ttname"><a href="classdaLv1Cdl00__c.html#acc406f925cc0f56e8596ff1d4aa6c607">daLv1Cdl00_c::mLightType</a></div><div class="ttdeci">u8 mLightType</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.h:41</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__c_html_ad0204c7a428a513387f494d004c3b41b"><div class="ttname"><a href="classdaLv1Cdl00__c.html#ad0204c7a428a513387f494d004c3b41b">daLv1Cdl00_c::mpModel</a></div><div class="ttdeci">J3DModel * mpModel</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.h:33</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__c_html_aed59a4a767151a6516669bdb197ed274"><div class="ttname"><a href="classdaLv1Cdl00__c.html#aed59a4a767151a6516669bdb197ed274">daLv1Cdl00_c::mPhase</a></div><div class="ttdeci">request_of_phase_process_class mPhase</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.h:32</div></div>
+<div class="ttc" id="aclassdaLv1Cdl00__c_html_af8e51bcf2b43e470d5d2f9b948262eb9"><div class="ttname"><a href="classdaLv1Cdl00__c.html#af8e51bcf2b43e470d5d2f9b948262eb9">daLv1Cdl00_c::Execute</a></div><div class="ttdeci">int Execute()</div><div class="ttdef"><b>Definition</b> d_a_obj_lv1Candle00.cpp:159</div></div>
+<div class="ttc" id="ad__a__obj__lv1Candle00_8h_html_a832f62a4ebc36e7a1ccee8796536ff47"><div class="ttname"><a href="d__a__obj__lv1Candle00_8h.html#a832f62a4ebc36e7a1ccee8796536ff47">STATIC_ASSERT</a></div><div class="ttdeci">STATIC_ASSERT(sizeof(daLv1Cdl00_c)==0x754)</div></div>
+<div class="ttc" id="ad__cc__d_8h_html"><div class="ttname"><a href="d__cc__d_8h.html">d_cc_d.h</a></div></div>
+<div class="ttc" id="af__op__actor_8h_html"><div class="ttname"><a href="f__op__actor_8h.html">f_op_actor.h</a></div></div>
+<div class="ttc" id="am__Do__hostIO_8h_html"><div class="ttname"><a href="m__Do__hostIO_8h.html">m_Do_hostIO.h</a></div></div>
+<div class="ttc" id="astructLIGHT__INFLUENCE_html"><div class="ttname"><a href="structLIGHT__INFLUENCE.html">LIGHT_INFLUENCE</a></div><div class="ttdef"><b>Definition</b> d_kankyo.h:52</div></div>
+<div class="ttc" id="astructcXyz_html"><div class="ttname"><a href="structcXyz.html">cXyz</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:49</div></div>
+<div class="ttc" id="astructdCcD__Cyl_html"><div class="ttname"><a href="structdCcD__Cyl.html">dCcD_Cyl</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:122</div></div>
+<div class="ttc" id="astructdCcD__SrcCyl_html"><div class="ttname"><a href="structdCcD__SrcCyl.html">dCcD_SrcCyl</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:43</div></div>
+<div class="ttc" id="astructdCcD__SrcGObjInf_html"><div class="ttname"><a href="structdCcD__SrcGObjInf.html">dCcD_SrcGObjInf</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:37</div></div>
+<div class="ttc" id="astructdCcD__Stts_html"><div class="ttname"><a href="structdCcD__Stts.html">dCcD_Stts</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:24</div></div>
+<div class="ttc" id="astructfopAc__ac__c_html"><div class="ttname"><a href="structfopAc__ac__c.html">fopAc_ac_c</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:14</div></div>
+<div class="ttc" id="astructmDoHIO__entry__c_html"><div class="ttname"><a href="structmDoHIO__entry__c.html">mDoHIO_entry_c</a></div><div class="ttdef"><b>Definition</b> d_a_npc_cd.cpp:13</div></div>
+<div class="ttc" id="astructrequest__of__phase__process__class_html"><div class="ttname"><a href="structrequest__of__phase__process__class.html">request_of_phase_process_class</a></div><div class="ttdef"><b>Definition</b> c_phase.h:17</div></div>
+<div class="ttc" id="atypes_8h_html_a5f6906312a689f27d70e9d086649d3fd"><div class="ttname"><a href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a></div><div class="ttdeci">float f32</div><div class="ttdef"><b>Definition</b> types.h:22</div></div>
+<div class="ttc" id="atypes_8h_html_aed742c436da53c1080638ce6ef7d13de"><div class="ttname"><a href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a></div><div class="ttdeci">unsigned char u8</div><div class="ttdef"><b>Definition</b> types.h:8</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d1e95842203b094e4f127fa85baf24b5.html">rel</a></li><li class="navelem"><a class="el" href="dir_244336746419795862f93731f1699860.html">d</a></li><li class="navelem"><a class="el" href="dir_b81c1d082692bb1b2b34ed3bfe8a0f4a.html">a</a></li><li class="navelem"><a class="el" href="dir_837b79828d4d0cae6e2581b9ebbbcbf8.html">obj</a></li><li class="navelem"><a class="el" href="dir_81e37ff668706985075fd84fc2646928.html">d_a_obj_lv1Candle00</a></li><li class="navelem"><a class="el" href="d__a__obj__lv1Candle00_8h.html">d_a_obj_lv1Candle00.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

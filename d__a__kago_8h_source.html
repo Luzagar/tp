@@ -1,0 +1,372 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: include/rel/d/a/d_a_kago/d_a_kago.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d__a__kago_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">d_a_kago.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="d__a__kago_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef D_A_KAGO_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define D_A_KAGO_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="d__path_8h.html">d/d_path.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classdaKago__c.html">    6</a></span><span class="keyword">class </span><a class="code hl_struct" href="classdaKago__c.html">daKago_c</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structfopAc__ac__c.html">fopAc_ac_c</a> {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="comment">/* 80849660 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a124c073860ca30ab4b289773c66b91be">getBckName</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="comment">/* 808496F0 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#af3b87a8311bd40d465f7d8e160128e3a">setBck</a>(<span class="keywordtype">int</span>, <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>);</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="comment">/* 80849798 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a69f9eae971577bcef4c489de47430b84">checkBck</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="comment">/* 808497F8 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#aa0ecd524f9efb460234deab722c8d0be">draw</a>();</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="comment">/* 80849980 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a879c541d7afbe03dbdea2cf3e092e974">executeBalloonMenu</a>();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="comment">/* 80849BA8 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a0e7f8b08bb31fc81b9346f323c029a28">checkGroundHeight</a>(<a class="code hl_struct" href="structcXyz.html">cXyz</a>, <a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>*);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="comment">/* 8084A070 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a4aacdf3c801169b2f0f0eb4476c56716">checkRoofHeight</a>(<a class="code hl_struct" href="structcXyz.html">cXyz</a>);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="comment">/* 8084A210 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a57a2add7c03c7f54e796a943d3b85713">checkMoveHeight</a>();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="comment">/* 8084A2A8 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a588a4291ce9f759d25b2389fd2891417">checkSizeBg</a>();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">/* 8084A6DC */</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classdaKago__c.html#ac78be1aea9bd456bab8d550e3e4ebbaf">getBeforeGroundHeight</a>(<a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="comment">/* 8084A6E4 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#aaefa3d97cecab895466b3405806b5207">demo_skip</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="comment">/* 8084AA64 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#aab2761bc05a40d8fa35ef763faa893b6">DemoSkipCallBack</a>(<span class="keywordtype">void</span>*, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="comment">/* 8084AA98 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a84fbf83d91990fc049f90fb41b453ece">setActionMode</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">/* 8084AAAC */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a7fdf07548cc55aca4f0592c1552e4071">setMidnaTagPos</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">/* 8084AB40 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#acd5f99b9695cd66ac0fef14d559f81c2">setMidnaRideOn</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="comment">/* 8084AB8C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a8f86795e03103bdefb80021c94b762a5">setPlayerRideOn</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">/* 8084ABC8 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a3cf7b945a20bf0940dec128ec24749c3">setRideOff</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment">/* 8084AC2C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a3ee680cdcd51200325da55800018e984">searchNearPassPoint</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="comment">/* 8084AE78 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#ab2d08047c084d2e8fa025b4f2cdee6f2">setSceneChange</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">/* 8084AF40 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a5f5d2a4af38f50843b6754456cad9181">createBalloonScore</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">/* 8084AFB0 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a185bf224b7628ed1e758dceb1192eb67">startBalloonScore</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">/* 8084B024 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#af530ecdbc2abbc6a1f565c4301b103b7">endBalloonScore</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">/* 8084B088 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#afec4904068a57c91b264f6115e89c5cc">checkNextPath</a>(<a class="code hl_struct" href="structcXyz.html">cXyz</a>);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">/* 8084B108 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#adccc4bff1c4337aa0b2ade0b48e67b5a">checkHeight</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">/* 8084B134 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a984e66ef65878f589c9591fe0483c1ff">checkYaguraPos</a>(<a class="code hl_struct" href="structcXyz.html">cXyz</a>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="comment">/* 8084B1E0 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a18b0fe1813f6578d85a86dbdd3f7b860">checkWallHitFall</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="comment">/* 8084B56C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#ad3bb344e1c4038f0e0469e785eb1dbe9">checkAttackStart</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">/* 8084B5DC */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a094a2490872256a7c92030fe68bef3df">getValueY</a>(<a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">/* 8084B6F4 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a41ea1ebad7622fe94d04e65550fd1b9c">getValueX</a>(<a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment">/* 8084B718 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a381b053732639a118a3d04e18d714b81">getValueAbsX</a>(<a class="code hl_typedef" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">/* 8084B744 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a7f0b03d1d33c08748936b4d0b12060a5">flySpeedCalcLockOn</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="comment">/* 8084B96C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#ae42abb73133c2320df678d8696e5f10d">flySpeedCalc</a>(<a class="code hl_typedef" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="comment">/* 8084C078 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a6b7790547cb59a28c6c30057a1960bac">checkFlySceneChange</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">/* 8084C178 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a1d96594dd0cd9b0eecdbe860411ba7f9">setFlyAway</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">/* 8084C204 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a1da55a85bfdcfe2a80803de81762655c">setFlyAnime</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="comment">/* 8084C2CC */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a4da37e11471e12553d3578897a617699">executeFly</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="comment">/* 8084C8FC */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a4fc6f854244cc8e0174a2f14a9878b34">executeStagger</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="comment">/* 8084D108 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a67f3be05325e54cdc641e38a72bab3c0">executeWait</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="comment">/* 8084D354 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#ae5ca20bce615ea2df035abe452a64e49">calcAttackMove</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">/* 8084D50C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a93acdcbb7e9032969ffbd32f7ac2c5b4">executeAttack</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">/* 8084DA18 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#adb496b7858f284d3c80741b683dcde58">calcCircleCamera</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment">/* 8084DBFC */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a8ca63bc89f8b7b2ecfe396706e0e746a">executeEvent</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">/* 8084DD18 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a4ea49f1532723a2343e4119b96ec6a0e">initPerchDemo</a>();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="comment">/* 8084E2D4 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#acc87b26cef66025cc686cbd7855f6fc5">executePerchDemo</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">/* 8084F09C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a2ee5b3dc127bfc2b45061bfb903b5e46">PerchDemoAwayForward</a>();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="comment">/* 8084FA58 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#ac5927eba10c31546f93f8663a3b275b7">executePerch</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="comment">/* 8084FAA8 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a72b61f06581c28e216fe396ac8c989ed">executeEvent2</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">/* 8084FB50 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#af3f279c52c8a48f387cd8e45ce1e8426">initFirstDemo</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">/* 80850384 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a058d31f6210022f5d823baa679b194c4">executeFirstDemo</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">/* 808513E4 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a7508b370b711bb8c5273cbb841168f5c">executePerch2</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="comment">/* 80851434 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a8c1199d64c59815d233eea0c95f0ee93">executeLandingLakeHairia</a>();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment">/* 80851DEC */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a39d21dbb7d0c5a872924e5ea9df51119">executeLandingBoartHouse</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">/* 808525B0 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#acab102ced03a675e0871ac5400df21f0">executeLanding</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="comment">/* 80852610 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a772458a69106ba01d18dcaef68d03d75">moveDemoFly</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="comment">/* 80852D90 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#af64347f7d5b96f9160d0b5ea58a05052">setFlyEffect</a>();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">/* 80852F14 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#ac2f1c6bf62771c19a0a7641b75fc3910">setDashEffect</a>();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">/* 808530A4 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a3f65184c835ce3bf7b83a9d85e80964a">setDamageEffect</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="comment">/* 80853228 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#ace3115a19ff4076d623c4ec9e66ca818">setDashBlurEffect</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="comment">/* 80853460 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a4e93c3fde0eb6394a22996310fb1dd50">setWallHitEffect</a>(<a class="code hl_struct" href="structcXyz.html">cXyz</a>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="comment">/* 8085350C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a9c3516fe3d0802d4a97a6f4c039426ac">setSibukiEffect</a>();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="comment">/* 8085366C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#acf781ba19936ce50bfc4d04f63b8f0dc">setDashSibukiEffect</a>();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="comment">/* 80853730 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a4fec930e0342ac4dc9969d6b1efd86bf">setWaterFallEffect</a>();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">/* 8085392C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#ac17d3169d2fd3e718fe763c1bb1432b8">setFlySound</a>();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="comment">/* 80853BCC */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a675534a5e7a612caadfbd44d0c1cc53d">action</a>();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="comment">/* 80853EF0 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a62fd9587e7b1f001c0020fd7ad364c1c">mtx_set</a>();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="comment">/* 80853FB0 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#af059b9e7273b1f441823917225e031c6">cc_set</a>();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">/* 80854058 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a4b19006709c2218a7b6d2cec789d97e7">execute</a>();</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="comment">/* 80854190 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#addcfeca0f40fa172c92504b95dbdd07c">_delete</a>();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="comment">/* 80854220 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a8ec11a7c43e0d9f6c6f7c217a8e0e6fb">ctrlJoint</a>(<a class="code hl_struct" href="classJ3DJoint.html">J3DJoint</a>*, <a class="code hl_struct" href="classJ3DModel.html">J3DModel</a>*);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="comment">/* 808542DC */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#ad59ccfb8b223b7eea097dad340a11a62">JointCallBack</a>(<a class="code hl_struct" href="classJ3DJoint.html">J3DJoint</a>*, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="comment">/* 80854328 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a88cfebe08f8e8f56fb7676cb22f000d5">CreateHeap</a>();</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="comment">/* 808544D8 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a32767e30426002b4f1fe5da0124f5d4e">create</a>();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classdaKago__c.html#a6d954a65007172c0b7d4b69eb5dc54a9">   81</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a6d954a65007172c0b7d4b69eb5dc54a9">setEvent</a>() {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <a class="code hl_variable" href="classdaKago__c.html#a89227e46a1be4af7f55dcd4b3e85ccef">field_0x6e1</a> = 0;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <a class="code hl_variable" href="classdaKago__c.html#a9be13ba646ccdfb716d4218d063dcd20">field_0x740</a> = 2;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <a class="code hl_variable" href="classdaKago__c.html#a1a1ecd788d8a631624ae57ceced21619">field_0x744</a> = 0;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    }</div>
+</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="foldopen" id="foldopen00087" data-start="{" data-end="}">
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classdaKago__c.html#a8a4cb9f61200526db68df085efed856c">   87</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classdaKago__c.html#a8a4cb9f61200526db68df085efed856c">setKagoPath</a>(<a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_pathNo</a>) {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_pathNo</a> != 0xFF) {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            <a class="code hl_variable" href="classdaKago__c.html#a3aa24b7ddfee72e504d413363f16b77c">field_0x76c</a> = <a class="code hl_function" href="d__path_8cpp.html#a4f9bc87009b89ed91398cd22499d20b0">dPath_GetRoomPath</a>(<a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_pathNo</a>, <a class="code hl_function" href="f__op__actor__mng_8h.html#a11e7643351d75382b7e2ba9d7603ba84">fopAcM_GetRoomNo</a>(<span class="keyword">this</span>));</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    }</div>
+</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classdaKago__c.html#a513c3b3b630aa04d02c6c3ba523466f7">   93</a></span>    <a class="code hl_typedef" href="mtx_8h.html#a486ec93ad57f76408600fa51e755e290">MtxP</a> <a class="code hl_function" href="classdaKago__c.html#a513c3b3b630aa04d02c6c3ba523466f7">getLegR3Mtx</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="classdaKago__c.html#a01813aa33885a9b144fa864f521cdfaf">mLegR3Mtx</a>; }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="classdaKago__c.html#a5832da01693d10afa98c44e9f767ba91">   95</a></span>    <span class="comment">/* 0x568 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaKago__c.html#a5832da01693d10afa98c44e9f767ba91">field_0x568</a>[0x620 - 0x568];</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="classdaKago__c.html#a01813aa33885a9b144fa864f521cdfaf">   96</a></span>    <span class="comment">/* 0x620 */</span> <a class="code hl_typedef" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a> <a class="code hl_variable" href="classdaKago__c.html#a01813aa33885a9b144fa864f521cdfaf">mLegR3Mtx</a>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="classdaKago__c.html#a13f6fe9f174af3aada4bef6f117afc9a">   97</a></span>    <span class="comment">/* 0x650 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaKago__c.html#a13f6fe9f174af3aada4bef6f117afc9a">field_0x650</a>[0x6E1 - 0x650];</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="classdaKago__c.html#a89227e46a1be4af7f55dcd4b3e85ccef">   98</a></span>    <span class="comment">/* 0x6E1 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaKago__c.html#a89227e46a1be4af7f55dcd4b3e85ccef">field_0x6e1</a>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classdaKago__c.html#a5e5f78e7c4da9d1204b9e14545244e2d">   99</a></span>    <span class="comment">/* 0x6E2 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaKago__c.html#a5e5f78e7c4da9d1204b9e14545244e2d">field_0x6E2</a>[0x740 - 0x6E2];</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="classdaKago__c.html#a9be13ba646ccdfb716d4218d063dcd20">  100</a></span>    <span class="comment">/* 0x740 */</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classdaKago__c.html#a9be13ba646ccdfb716d4218d063dcd20">field_0x740</a>;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classdaKago__c.html#a1a1ecd788d8a631624ae57ceced21619">  101</a></span>    <span class="comment">/* 0x744 */</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classdaKago__c.html#a1a1ecd788d8a631624ae57ceced21619">field_0x744</a>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="classdaKago__c.html#a25d1de937c86956a94a874a2c19093f8">  102</a></span>    <span class="comment">/* 0x748 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaKago__c.html#a25d1de937c86956a94a874a2c19093f8">field_0x748</a>[0x76C - 0x748];</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="classdaKago__c.html#a3aa24b7ddfee72e504d413363f16b77c">  103</a></span>    <span class="comment">/* 0x76C */</span> <a class="code hl_struct" href="structdPath.html">dPath</a>* <a class="code hl_variable" href="classdaKago__c.html#a3aa24b7ddfee72e504d413363f16b77c">field_0x76c</a>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>};</div>
+</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">#endif </span><span class="comment">/* D_A_KAGO_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassJ3DJoint_html"><div class="ttname"><a href="classJ3DJoint.html">J3DJoint</a></div><div class="ttdef"><b>Definition</b> J3DJoint.h:66</div></div>
+<div class="ttc" id="aclassJ3DModel_html"><div class="ttname"><a href="classJ3DModel.html">J3DModel</a></div><div class="ttdef"><b>Definition</b> J3DModel.h:42</div></div>
+<div class="ttc" id="aclassdaKago__c_html"><div class="ttname"><a href="classdaKago__c.html">daKago_c</a></div><div class="ttdef"><b>Definition</b> d_a_kago.h:6</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a01813aa33885a9b144fa864f521cdfaf"><div class="ttname"><a href="classdaKago__c.html#a01813aa33885a9b144fa864f521cdfaf">daKago_c::mLegR3Mtx</a></div><div class="ttdeci">Mtx mLegR3Mtx</div><div class="ttdef"><b>Definition</b> d_a_kago.h:96</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a058d31f6210022f5d823baa679b194c4"><div class="ttname"><a href="classdaKago__c.html#a058d31f6210022f5d823baa679b194c4">daKago_c::executeFirstDemo</a></div><div class="ttdeci">void executeFirstDemo()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:2116</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a094a2490872256a7c92030fe68bef3df"><div class="ttname"><a href="classdaKago__c.html#a094a2490872256a7c92030fe68bef3df">daKago_c::getValueY</a></div><div class="ttdeci">void getValueY(f32)</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1537</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a0e7f8b08bb31fc81b9346f323c029a28"><div class="ttname"><a href="classdaKago__c.html#a0e7f8b08bb31fc81b9346f323c029a28">daKago_c::checkGroundHeight</a></div><div class="ttdeci">void checkGroundHeight(cXyz, f32 *)</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1127</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a124c073860ca30ab4b289773c66b91be"><div class="ttname"><a href="classdaKago__c.html#a124c073860ca30ab4b289773c66b91be">daKago_c::getBckName</a></div><div class="ttdeci">void getBckName(int)</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:975</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a13f6fe9f174af3aada4bef6f117afc9a"><div class="ttname"><a href="classdaKago__c.html#a13f6fe9f174af3aada4bef6f117afc9a">daKago_c::field_0x650</a></div><div class="ttdeci">u8 field_0x650[0x6E1 - 0x650]</div><div class="ttdef"><b>Definition</b> d_a_kago.h:97</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a185bf224b7628ed1e758dceb1192eb67"><div class="ttname"><a href="classdaKago__c.html#a185bf224b7628ed1e758dceb1192eb67">daKago_c::startBalloonScore</a></div><div class="ttdeci">void startBalloonScore()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1445</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a18b0fe1813f6578d85a86dbdd3f7b860"><div class="ttname"><a href="classdaKago__c.html#a18b0fe1813f6578d85a86dbdd3f7b860">daKago_c::checkWallHitFall</a></div><div class="ttdeci">void checkWallHitFall(int)</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1510</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a1a1ecd788d8a631624ae57ceced21619"><div class="ttname"><a href="classdaKago__c.html#a1a1ecd788d8a631624ae57ceced21619">daKago_c::field_0x744</a></div><div class="ttdeci">int field_0x744</div><div class="ttdef"><b>Definition</b> d_a_kago.h:101</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a1d96594dd0cd9b0eecdbe860411ba7f9"><div class="ttname"><a href="classdaKago__c.html#a1d96594dd0cd9b0eecdbe860411ba7f9">daKago_c::setFlyAway</a></div><div class="ttdeci">void setFlyAway()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1612</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a1da55a85bfdcfe2a80803de81762655c"><div class="ttname"><a href="classdaKago__c.html#a1da55a85bfdcfe2a80803de81762655c">daKago_c::setFlyAnime</a></div><div class="ttdeci">void setFlyAnime()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1622</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a25d1de937c86956a94a874a2c19093f8"><div class="ttname"><a href="classdaKago__c.html#a25d1de937c86956a94a874a2c19093f8">daKago_c::field_0x748</a></div><div class="ttdeci">u8 field_0x748[0x76C - 0x748]</div><div class="ttdef"><b>Definition</b> d_a_kago.h:102</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a2ee5b3dc127bfc2b45061bfb903b5e46"><div class="ttname"><a href="classdaKago__c.html#a2ee5b3dc127bfc2b45061bfb903b5e46">daKago_c::PerchDemoAwayForward</a></div><div class="ttdeci">void PerchDemoAwayForward()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1930</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a32767e30426002b4f1fe5da0124f5d4e"><div class="ttname"><a href="classdaKago__c.html#a32767e30426002b4f1fe5da0124f5d4e">daKago_c::create</a></div><div class="ttdeci">void create()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:2590</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a381b053732639a118a3d04e18d714b81"><div class="ttname"><a href="classdaKago__c.html#a381b053732639a118a3d04e18d714b81">daKago_c::getValueAbsX</a></div><div class="ttdeci">void getValueAbsX(f32)</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1557</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a39d21dbb7d0c5a872924e5ea9df51119"><div class="ttname"><a href="classdaKago__c.html#a39d21dbb7d0c5a872924e5ea9df51119">daKago_c::executeLandingBoartHouse</a></div><div class="ttdeci">void executeLandingBoartHouse()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:2302</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a3aa24b7ddfee72e504d413363f16b77c"><div class="ttname"><a href="classdaKago__c.html#a3aa24b7ddfee72e504d413363f16b77c">daKago_c::field_0x76c</a></div><div class="ttdeci">dPath * field_0x76c</div><div class="ttdef"><b>Definition</b> d_a_kago.h:103</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a3cf7b945a20bf0940dec128ec24749c3"><div class="ttname"><a href="classdaKago__c.html#a3cf7b945a20bf0940dec128ec24749c3">daKago_c::setRideOff</a></div><div class="ttdeci">void setRideOff()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1271</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a3ee680cdcd51200325da55800018e984"><div class="ttname"><a href="classdaKago__c.html#a3ee680cdcd51200325da55800018e984">daKago_c::searchNearPassPoint</a></div><div class="ttdeci">void searchNearPassPoint()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1415</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a3f65184c835ce3bf7b83a9d85e80964a"><div class="ttname"><a href="classdaKago__c.html#a3f65184c835ce3bf7b83a9d85e80964a">daKago_c::setDamageEffect</a></div><div class="ttdeci">void setDamageEffect()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:2352</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a41ea1ebad7622fe94d04e65550fd1b9c"><div class="ttname"><a href="classdaKago__c.html#a41ea1ebad7622fe94d04e65550fd1b9c">daKago_c::getValueX</a></div><div class="ttdeci">void getValueX(f32)</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1547</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a4aacdf3c801169b2f0f0eb4476c56716"><div class="ttname"><a href="classdaKago__c.html#a4aacdf3c801169b2f0f0eb4476c56716">daKago_c::checkRoofHeight</a></div><div class="ttdeci">void checkRoofHeight(cXyz)</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1152</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a4b19006709c2218a7b6d2cec789d97e7"><div class="ttname"><a href="classdaKago__c.html#a4b19006709c2218a7b6d2cec789d97e7">daKago_c::execute</a></div><div class="ttdeci">void execute()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:2493</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a4da37e11471e12553d3578897a617699"><div class="ttname"><a href="classdaKago__c.html#a4da37e11471e12553d3578897a617699">daKago_c::executeFly</a></div><div class="ttdeci">void executeFly()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1640</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a4e93c3fde0eb6394a22996310fb1dd50"><div class="ttname"><a href="classdaKago__c.html#a4e93c3fde0eb6394a22996310fb1dd50">daKago_c::setWallHitEffect</a></div><div class="ttdeci">void setWallHitEffect(cXyz, int)</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:2373</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a4ea49f1532723a2343e4119b96ec6a0e"><div class="ttname"><a href="classdaKago__c.html#a4ea49f1532723a2343e4119b96ec6a0e">daKago_c::initPerchDemo</a></div><div class="ttdeci">void initPerchDemo()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1851</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a4fc6f854244cc8e0174a2f14a9878b34"><div class="ttname"><a href="classdaKago__c.html#a4fc6f854244cc8e0174a2f14a9878b34">daKago_c::executeStagger</a></div><div class="ttdeci">void executeStagger()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1683</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a4fec930e0342ac4dc9969d6b1efd86bf"><div class="ttname"><a href="classdaKago__c.html#a4fec930e0342ac4dc9969d6b1efd86bf">daKago_c::setWaterFallEffect</a></div><div class="ttdeci">void setWaterFallEffect()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:2403</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a513c3b3b630aa04d02c6c3ba523466f7"><div class="ttname"><a href="classdaKago__c.html#a513c3b3b630aa04d02c6c3ba523466f7">daKago_c::getLegR3Mtx</a></div><div class="ttdeci">MtxP getLegR3Mtx()</div><div class="ttdef"><b>Definition</b> d_a_kago.h:93</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a57a2add7c03c7f54e796a943d3b85713"><div class="ttname"><a href="classdaKago__c.html#a57a2add7c03c7f54e796a943d3b85713">daKago_c::checkMoveHeight</a></div><div class="ttdeci">void checkMoveHeight()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1167</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a5832da01693d10afa98c44e9f767ba91"><div class="ttname"><a href="classdaKago__c.html#a5832da01693d10afa98c44e9f767ba91">daKago_c::field_0x568</a></div><div class="ttdeci">u8 field_0x568[0x620 - 0x568]</div><div class="ttdef"><b>Definition</b> d_a_kago.h:95</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a588a4291ce9f759d25b2389fd2891417"><div class="ttname"><a href="classdaKago__c.html#a588a4291ce9f759d25b2389fd2891417">daKago_c::checkSizeBg</a></div><div class="ttdeci">void checkSizeBg()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1185</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a5e5f78e7c4da9d1204b9e14545244e2d"><div class="ttname"><a href="classdaKago__c.html#a5e5f78e7c4da9d1204b9e14545244e2d">daKago_c::field_0x6E2</a></div><div class="ttdeci">u8 field_0x6E2[0x740 - 0x6E2]</div><div class="ttdef"><b>Definition</b> d_a_kago.h:99</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a5f5d2a4af38f50843b6754456cad9181"><div class="ttname"><a href="classdaKago__c.html#a5f5d2a4af38f50843b6754456cad9181">daKago_c::createBalloonScore</a></div><div class="ttdeci">void createBalloonScore()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1435</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a62fd9587e7b1f001c0020fd7ad364c1c"><div class="ttname"><a href="classdaKago__c.html#a62fd9587e7b1f001c0020fd7ad364c1c">daKago_c::mtx_set</a></div><div class="ttdeci">void mtx_set()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:2473</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a675534a5e7a612caadfbd44d0c1cc53d"><div class="ttname"><a href="classdaKago__c.html#a675534a5e7a612caadfbd44d0c1cc53d">daKago_c::action</a></div><div class="ttdeci">void action()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:2463</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a67f3be05325e54cdc641e38a72bab3c0"><div class="ttname"><a href="classdaKago__c.html#a67f3be05325e54cdc641e38a72bab3c0">daKago_c::executeWait</a></div><div class="ttdeci">void executeWait()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1693</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a69f9eae971577bcef4c489de47430b84"><div class="ttname"><a href="classdaKago__c.html#a69f9eae971577bcef4c489de47430b84">daKago_c::checkBck</a></div><div class="ttdeci">void checkBck(int)</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1000</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a6b7790547cb59a28c6c30057a1960bac"><div class="ttname"><a href="classdaKago__c.html#a6b7790547cb59a28c6c30057a1960bac">daKago_c::checkFlySceneChange</a></div><div class="ttdeci">void checkFlySceneChange()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1602</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a6d954a65007172c0b7d4b69eb5dc54a9"><div class="ttname"><a href="classdaKago__c.html#a6d954a65007172c0b7d4b69eb5dc54a9">daKago_c::setEvent</a></div><div class="ttdeci">void setEvent()</div><div class="ttdef"><b>Definition</b> d_a_kago.h:81</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a72b61f06581c28e216fe396ac8c989ed"><div class="ttname"><a href="classdaKago__c.html#a72b61f06581c28e216fe396ac8c989ed">daKago_c::executeEvent2</a></div><div class="ttdeci">void executeEvent2()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1950</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a7508b370b711bb8c5273cbb841168f5c"><div class="ttname"><a href="classdaKago__c.html#a7508b370b711bb8c5273cbb841168f5c">daKago_c::executePerch2</a></div><div class="ttdeci">void executePerch2()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:2126</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a772458a69106ba01d18dcaef68d03d75"><div class="ttname"><a href="classdaKago__c.html#a772458a69106ba01d18dcaef68d03d75">daKago_c::moveDemoFly</a></div><div class="ttdeci">void moveDemoFly()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:2322</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a7f0b03d1d33c08748936b4d0b12060a5"><div class="ttname"><a href="classdaKago__c.html#a7f0b03d1d33c08748936b4d0b12060a5">daKago_c::flySpeedCalcLockOn</a></div><div class="ttdeci">void flySpeedCalcLockOn()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1567</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a7fdf07548cc55aca4f0592c1552e4071"><div class="ttname"><a href="classdaKago__c.html#a7fdf07548cc55aca4f0592c1552e4071">daKago_c::setMidnaTagPos</a></div><div class="ttdeci">void setMidnaTagPos()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1241</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a84fbf83d91990fc049f90fb41b453ece"><div class="ttname"><a href="classdaKago__c.html#a84fbf83d91990fc049f90fb41b453ece">daKago_c::setActionMode</a></div><div class="ttdeci">void setActionMode(int, int)</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1231</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a879c541d7afbe03dbdea2cf3e092e974"><div class="ttname"><a href="classdaKago__c.html#a879c541d7afbe03dbdea2cf3e092e974">daKago_c::executeBalloonMenu</a></div><div class="ttdeci">void executeBalloonMenu()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1059</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a88cfebe08f8e8f56fb7676cb22f000d5"><div class="ttname"><a href="classdaKago__c.html#a88cfebe08f8e8f56fb7676cb22f000d5">daKago_c::CreateHeap</a></div><div class="ttdeci">void CreateHeap()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:2558</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a89227e46a1be4af7f55dcd4b3e85ccef"><div class="ttname"><a href="classdaKago__c.html#a89227e46a1be4af7f55dcd4b3e85ccef">daKago_c::field_0x6e1</a></div><div class="ttdeci">u8 field_0x6e1</div><div class="ttdef"><b>Definition</b> d_a_kago.h:98</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a8a4cb9f61200526db68df085efed856c"><div class="ttname"><a href="classdaKago__c.html#a8a4cb9f61200526db68df085efed856c">daKago_c::setKagoPath</a></div><div class="ttdeci">void setKagoPath(u8 i_pathNo)</div><div class="ttdef"><b>Definition</b> d_a_kago.h:87</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a8c1199d64c59815d233eea0c95f0ee93"><div class="ttname"><a href="classdaKago__c.html#a8c1199d64c59815d233eea0c95f0ee93">daKago_c::executeLandingLakeHairia</a></div><div class="ttdeci">void executeLandingLakeHairia()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:2193</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a8ca63bc89f8b7b2ecfe396706e0e746a"><div class="ttname"><a href="classdaKago__c.html#a8ca63bc89f8b7b2ecfe396706e0e746a">daKago_c::executeEvent</a></div><div class="ttdeci">void executeEvent()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1798</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a8ec11a7c43e0d9f6c6f7c217a8e0e6fb"><div class="ttname"><a href="classdaKago__c.html#a8ec11a7c43e0d9f6c6f7c217a8e0e6fb">daKago_c::ctrlJoint</a></div><div class="ttdeci">void ctrlJoint(J3DJoint *, J3DModel *)</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:2538</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a8f86795e03103bdefb80021c94b762a5"><div class="ttname"><a href="classdaKago__c.html#a8f86795e03103bdefb80021c94b762a5">daKago_c::setPlayerRideOn</a></div><div class="ttdeci">void setPlayerRideOn()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1261</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a93acdcbb7e9032969ffbd32f7ac2c5b4"><div class="ttname"><a href="classdaKago__c.html#a93acdcbb7e9032969ffbd32f7ac2c5b4">daKago_c::executeAttack</a></div><div class="ttdeci">void executeAttack()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1749</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a984e66ef65878f589c9591fe0483c1ff"><div class="ttname"><a href="classdaKago__c.html#a984e66ef65878f589c9591fe0483c1ff">daKago_c::checkYaguraPos</a></div><div class="ttdeci">void checkYaguraPos(cXyz)</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1500</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a9be13ba646ccdfb716d4218d063dcd20"><div class="ttname"><a href="classdaKago__c.html#a9be13ba646ccdfb716d4218d063dcd20">daKago_c::field_0x740</a></div><div class="ttdeci">int field_0x740</div><div class="ttdef"><b>Definition</b> d_a_kago.h:100</div></div>
+<div class="ttc" id="aclassdaKago__c_html_a9c3516fe3d0802d4a97a6f4c039426ac"><div class="ttname"><a href="classdaKago__c.html#a9c3516fe3d0802d4a97a6f4c039426ac">daKago_c::setSibukiEffect</a></div><div class="ttdeci">void setSibukiEffect()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:2383</div></div>
+<div class="ttc" id="aclassdaKago__c_html_aa0ecd524f9efb460234deab722c8d0be"><div class="ttname"><a href="classdaKago__c.html#aa0ecd524f9efb460234deab722c8d0be">daKago_c::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1022</div></div>
+<div class="ttc" id="aclassdaKago__c_html_aab2761bc05a40d8fa35ef763faa893b6"><div class="ttname"><a href="classdaKago__c.html#aab2761bc05a40d8fa35ef763faa893b6">daKago_c::DemoSkipCallBack</a></div><div class="ttdeci">void DemoSkipCallBack(void *, int)</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1221</div></div>
+<div class="ttc" id="aclassdaKago__c_html_aaefa3d97cecab895466b3405806b5207"><div class="ttname"><a href="classdaKago__c.html#aaefa3d97cecab895466b3405806b5207">daKago_c::demo_skip</a></div><div class="ttdeci">void demo_skip(int)</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1211</div></div>
+<div class="ttc" id="aclassdaKago__c_html_ab2d08047c084d2e8fa025b4f2cdee6f2"><div class="ttname"><a href="classdaKago__c.html#ab2d08047c084d2e8fa025b4f2cdee6f2">daKago_c::setSceneChange</a></div><div class="ttdeci">void setSceneChange(int)</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1425</div></div>
+<div class="ttc" id="aclassdaKago__c_html_ac17d3169d2fd3e718fe763c1bb1432b8"><div class="ttname"><a href="classdaKago__c.html#ac17d3169d2fd3e718fe763c1bb1432b8">daKago_c::setFlySound</a></div><div class="ttdeci">void setFlySound()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:2445</div></div>
+<div class="ttc" id="aclassdaKago__c_html_ac2f1c6bf62771c19a0a7641b75fc3910"><div class="ttname"><a href="classdaKago__c.html#ac2f1c6bf62771c19a0a7641b75fc3910">daKago_c::setDashEffect</a></div><div class="ttdeci">void setDashEffect()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:2342</div></div>
+<div class="ttc" id="aclassdaKago__c_html_ac5927eba10c31546f93f8663a3b275b7"><div class="ttname"><a href="classdaKago__c.html#ac5927eba10c31546f93f8663a3b275b7">daKago_c::executePerch</a></div><div class="ttdeci">void executePerch()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1940</div></div>
+<div class="ttc" id="aclassdaKago__c_html_ac78be1aea9bd456bab8d550e3e4ebbaf"><div class="ttname"><a href="classdaKago__c.html#ac78be1aea9bd456bab8d550e3e4ebbaf">daKago_c::getBeforeGroundHeight</a></div><div class="ttdeci">bool getBeforeGroundHeight(u8)</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1203</div></div>
+<div class="ttc" id="aclassdaKago__c_html_acab102ced03a675e0871ac5400df21f0"><div class="ttname"><a href="classdaKago__c.html#acab102ced03a675e0871ac5400df21f0">daKago_c::executeLanding</a></div><div class="ttdeci">void executeLanding()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:2312</div></div>
+<div class="ttc" id="aclassdaKago__c_html_acc87b26cef66025cc686cbd7855f6fc5"><div class="ttname"><a href="classdaKago__c.html#acc87b26cef66025cc686cbd7855f6fc5">daKago_c::executePerchDemo</a></div><div class="ttdeci">void executePerchDemo()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1876</div></div>
+<div class="ttc" id="aclassdaKago__c_html_acd5f99b9695cd66ac0fef14d559f81c2"><div class="ttname"><a href="classdaKago__c.html#acd5f99b9695cd66ac0fef14d559f81c2">daKago_c::setMidnaRideOn</a></div><div class="ttdeci">void setMidnaRideOn()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1251</div></div>
+<div class="ttc" id="aclassdaKago__c_html_ace3115a19ff4076d623c4ec9e66ca818"><div class="ttname"><a href="classdaKago__c.html#ace3115a19ff4076d623c4ec9e66ca818">daKago_c::setDashBlurEffect</a></div><div class="ttdeci">void setDashBlurEffect(int)</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:2362</div></div>
+<div class="ttc" id="aclassdaKago__c_html_acf781ba19936ce50bfc4d04f63b8f0dc"><div class="ttname"><a href="classdaKago__c.html#acf781ba19936ce50bfc4d04f63b8f0dc">daKago_c::setDashSibukiEffect</a></div><div class="ttdeci">void setDashSibukiEffect()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:2393</div></div>
+<div class="ttc" id="aclassdaKago__c_html_ad3bb344e1c4038f0e0469e785eb1dbe9"><div class="ttname"><a href="classdaKago__c.html#ad3bb344e1c4038f0e0469e785eb1dbe9">daKago_c::checkAttackStart</a></div><div class="ttdeci">void checkAttackStart()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1520</div></div>
+<div class="ttc" id="aclassdaKago__c_html_ad59ccfb8b223b7eea097dad340a11a62"><div class="ttname"><a href="classdaKago__c.html#ad59ccfb8b223b7eea097dad340a11a62">daKago_c::JointCallBack</a></div><div class="ttdeci">void JointCallBack(J3DJoint *, int)</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:2548</div></div>
+<div class="ttc" id="aclassdaKago__c_html_adb496b7858f284d3c80741b683dcde58"><div class="ttname"><a href="classdaKago__c.html#adb496b7858f284d3c80741b683dcde58">daKago_c::calcCircleCamera</a></div><div class="ttdeci">void calcCircleCamera(int)</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1788</div></div>
+<div class="ttc" id="aclassdaKago__c_html_adccc4bff1c4337aa0b2ade0b48e67b5a"><div class="ttname"><a href="classdaKago__c.html#adccc4bff1c4337aa0b2ade0b48e67b5a">daKago_c::checkHeight</a></div><div class="ttdeci">void checkHeight()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1475</div></div>
+<div class="ttc" id="aclassdaKago__c_html_addcfeca0f40fa172c92504b95dbdd07c"><div class="ttname"><a href="classdaKago__c.html#addcfeca0f40fa172c92504b95dbdd07c">daKago_c::_delete</a></div><div class="ttdeci">void _delete()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:2518</div></div>
+<div class="ttc" id="aclassdaKago__c_html_ae42abb73133c2320df678d8696e5f10d"><div class="ttname"><a href="classdaKago__c.html#ae42abb73133c2320df678d8696e5f10d">daKago_c::flySpeedCalc</a></div><div class="ttdeci">void flySpeedCalc(s16, int)</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1592</div></div>
+<div class="ttc" id="aclassdaKago__c_html_ae5ca20bce615ea2df035abe452a64e49"><div class="ttname"><a href="classdaKago__c.html#ae5ca20bce615ea2df035abe452a64e49">daKago_c::calcAttackMove</a></div><div class="ttdeci">void calcAttackMove(int)</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1703</div></div>
+<div class="ttc" id="aclassdaKago__c_html_af059b9e7273b1f441823917225e031c6"><div class="ttname"><a href="classdaKago__c.html#af059b9e7273b1f441823917225e031c6">daKago_c::cc_set</a></div><div class="ttdeci">void cc_set()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:2483</div></div>
+<div class="ttc" id="aclassdaKago__c_html_af3b87a8311bd40d465f7d8e160128e3a"><div class="ttname"><a href="classdaKago__c.html#af3b87a8311bd40d465f7d8e160128e3a">daKago_c::setBck</a></div><div class="ttdeci">void setBck(int, u8, f32, f32)</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:990</div></div>
+<div class="ttc" id="aclassdaKago__c_html_af3f279c52c8a48f387cd8e45ce1e8426"><div class="ttname"><a href="classdaKago__c.html#af3f279c52c8a48f387cd8e45ce1e8426">daKago_c::initFirstDemo</a></div><div class="ttdeci">void initFirstDemo()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:2003</div></div>
+<div class="ttc" id="aclassdaKago__c_html_af530ecdbc2abbc6a1f565c4301b103b7"><div class="ttname"><a href="classdaKago__c.html#af530ecdbc2abbc6a1f565c4301b103b7">daKago_c::endBalloonScore</a></div><div class="ttdeci">void endBalloonScore()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1455</div></div>
+<div class="ttc" id="aclassdaKago__c_html_af64347f7d5b96f9160d0b5ea58a05052"><div class="ttname"><a href="classdaKago__c.html#af64347f7d5b96f9160d0b5ea58a05052">daKago_c::setFlyEffect</a></div><div class="ttdeci">void setFlyEffect()</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:2332</div></div>
+<div class="ttc" id="aclassdaKago__c_html_afec4904068a57c91b264f6115e89c5cc"><div class="ttname"><a href="classdaKago__c.html#afec4904068a57c91b264f6115e89c5cc">daKago_c::checkNextPath</a></div><div class="ttdeci">void checkNextPath(cXyz)</div><div class="ttdef"><b>Definition</b> d_a_kago.cpp:1465</div></div>
+<div class="ttc" id="ad__path_8cpp_html_a4f9bc87009b89ed91398cd22499d20b0"><div class="ttname"><a href="d__path_8cpp.html#a4f9bc87009b89ed91398cd22499d20b0">dPath_GetRoomPath</a></div><div class="ttdeci">dPath * dPath_GetRoomPath(int path_index, int room_no)</div><div class="ttdef"><b>Definition</b> d_path.cpp:19</div></div>
+<div class="ttc" id="ad__path_8h_html"><div class="ttname"><a href="d__path_8h.html">d_path.h</a></div></div>
+<div class="ttc" id="af__op__actor__mng_8h_html_a11e7643351d75382b7e2ba9d7603ba84"><div class="ttname"><a href="f__op__actor__mng_8h.html#a11e7643351d75382b7e2ba9d7603ba84">fopAcM_GetRoomNo</a></div><div class="ttdeci">s32 fopAcM_GetRoomNo(const fopAc_ac_c *pActor)</div><div class="ttdef"><b>Definition</b> f_op_actor_mng.h:154</div></div>
+<div class="ttc" id="agroup__jsystem-jsupport_html_ga13fa7ef63a40072c7203b3da54a569a2"><div class="ttname"><a href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">JSUConvertOffsetToPtr</a></div><div class="ttdeci">T * JSUConvertOffsetToPtr(const void *, const void *)</div><div class="ttdef"><b>Definition</b> JSupport.h:22</div></div>
+<div class="ttc" id="amtx_8h_html_a486ec93ad57f76408600fa51e755e290"><div class="ttname"><a href="mtx_8h.html#a486ec93ad57f76408600fa51e755e290">MtxP</a></div><div class="ttdeci">f32(* MtxP)[4]</div><div class="ttdef"><b>Definition</b> mtx.h:18</div></div>
+<div class="ttc" id="amtx_8h_html_afc58fc7f5dd84f97da2dab35156849ae"><div class="ttname"><a href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a></div><div class="ttdeci">f32 Mtx[3][4]</div><div class="ttdef"><b>Definition</b> mtx.h:15</div></div>
+<div class="ttc" id="astructcXyz_html"><div class="ttname"><a href="structcXyz.html">cXyz</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:49</div></div>
+<div class="ttc" id="astructdPath_html"><div class="ttname"><a href="structdPath.html">dPath</a></div><div class="ttdef"><b>Definition</b> d_a_npc_cd2.cpp:35</div></div>
+<div class="ttc" id="astructfopAc__ac__c_html"><div class="ttname"><a href="structfopAc__ac__c.html">fopAc_ac_c</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:14</div></div>
+<div class="ttc" id="atypes_8h_html_a5f6906312a689f27d70e9d086649d3fd"><div class="ttname"><a href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a></div><div class="ttdeci">float f32</div><div class="ttdef"><b>Definition</b> types.h:22</div></div>
+<div class="ttc" id="atypes_8h_html_a5ffa4f640862b25ba6d4f635b78bdbe1"><div class="ttname"><a href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a></div><div class="ttdeci">signed short s16</div><div class="ttdef"><b>Definition</b> types.h:5</div></div>
+<div class="ttc" id="atypes_8h_html_aed742c436da53c1080638ce6ef7d13de"><div class="ttname"><a href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a></div><div class="ttdeci">unsigned char u8</div><div class="ttdef"><b>Definition</b> types.h:8</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d1e95842203b094e4f127fa85baf24b5.html">rel</a></li><li class="navelem"><a class="el" href="dir_244336746419795862f93731f1699860.html">d</a></li><li class="navelem"><a class="el" href="dir_b81c1d082692bb1b2b34ed3bfe8a0f4a.html">a</a></li><li class="navelem"><a class="el" href="dir_ef639ece41b0ad2a7e2792a260f35a21.html">d_a_kago</a></li><li class="navelem"><a class="el" href="d__a__kago_8h.html">d_a_kago.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

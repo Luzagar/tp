@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: include/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d__a__obj__iceleaf_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">d_a_obj_iceleaf.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="d__a__obj__iceleaf_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef D_A_OBJ_ICELEAF_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define D_A_OBJ_ICELEAF_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="d__cc__d_8h.html">d/cc/d_cc_d.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classdaObjIceLeaf__c.html">    6</a></span><span class="keyword">class </span><a class="code hl_struct" href="classdaObjIceLeaf__c.html">daObjIceLeaf_c</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structfopAc__ac__c.html">fopAc_ac_c</a> {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="comment">/* 80C24738 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObjIceLeaf__c.html#a9c7f8e5a60f4ad008a3091b0fd3cf1f7">initBaseMtx</a>();</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="comment">/* 80C24774 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObjIceLeaf__c.html#a127a3c703a8f4a49355668bbb335dcb0">setBaseMtx</a>();</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="comment">/* 80C249E4 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObjIceLeaf__c.html#acad1e659c49e4df181035821a16097d8">Create</a>();</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="comment">/* 80C24BC4 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObjIceLeaf__c.html#a79ccf3a3d81efc6438bd411b87496cd1">setAnmPos</a>();</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="comment">/* 80C24C9C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObjIceLeaf__c.html#aa9bc0bcaaab5d521b29379f9e8323059">CreateHeap</a>();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="comment">/* 80C24E14 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObjIceLeaf__c.html#a4a08f421db736a13fa9b6d6106ba0f27">create</a>();</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="comment">/* 80C25158 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObjIceLeaf__c.html#a7eee6d9c29a078c4c5fa8bf0e8ea8301">execute</a>();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="comment">/* 80C25360 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObjIceLeaf__c.html#ab71ced45c08561921e83da002ae93734">action</a>();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="comment">/* 80C2541C */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObjIceLeaf__c.html#acf8d3e25c76effbd3e3bdc68e1fa2ca5">modeDropWait</a>();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">/* 80C25614 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObjIceLeaf__c.html#adc2b172dedd329f2828c629179869059">modeDrop</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="comment">/* 80C258F8 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObjIceLeaf__c.html#ad5d26a0587774144cc88593f1af1232a">modePlayerWait</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="comment">/* 80C25904 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObjIceLeaf__c.html#ac6f3d7d8f5d6a8826c8c966980b9fb8b">modeRide</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="comment">/* 80C25908 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObjIceLeaf__c.html#a713ba1fcd39e8ea2c8fcb5345a3c6ab0">event_proc_call</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">/* 80C259C4 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObjIceLeaf__c.html#a4678d94defaa64963454686db225779a">actionWait</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">/* 80C259C8 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObjIceLeaf__c.html#a7d9ba23c6a177c6c0ae8fca8adf4a75f">actionOrderEvent</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="comment">/* 80C25A68 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObjIceLeaf__c.html#af02868a4e3a531575a254c96d013b5ee">actionEvent</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">/* 80C25AC4 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObjIceLeaf__c.html#a854adf4af988d74befcdf46b5cc212dc">actionDead</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment">/* 80C25AC8 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObjIceLeaf__c.html#a7db5fb736e6c69ee39bac4950c4c40be">setFallSE</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="comment">/* 80C25BB8 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObjIceLeaf__c.html#a381c359d80b80d9a5f297b0339fb8244">draw</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">/* 80C25C50 */</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObjIceLeaf__c.html#aa88e4a752622652d87de6cfbc16e1135">_delete</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classdaObjIceLeaf__c.html#aa47e81e716fdef9c429ef0a81ebefc8e">   29</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObjIceLeaf__c.html#aa47e81e716fdef9c429ef0a81ebefc8e">offRide</a>() { <a class="code hl_variable" href="classdaObjIceLeaf__c.html#a6d40bdde65589034c6f4838537bd6c09">mRide</a> = <span class="keyword">false</span>; }</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classdaObjIceLeaf__c.html#a07da75aebde0c84523a50298c360ad2e">   30</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classdaObjIceLeaf__c.html#a07da75aebde0c84523a50298c360ad2e">setBreakEffect</a>() { <a class="code hl_variable" href="classdaObjIceLeaf__c.html#ae7a87cbbc715518800531a67dda27d89">mBreakEffect</a> = <span class="keyword">true</span>; }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classdaObjIceLeaf__c.html#a3454ace1f23c0e607475d73b6de2ab3a">   32</a></span>    <span class="comment">/* 0x568 */</span> <a class="code hl_struct" href="structrequest__of__phase__process__class.html">request_of_phase_process_class</a> <a class="code hl_variable" href="classdaObjIceLeaf__c.html#a3454ace1f23c0e607475d73b6de2ab3a">mPhase</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classdaObjIceLeaf__c.html#a54299a686aee22ad47232d651d3cfe12">   33</a></span>    <span class="comment">/* 0x570 */</span> <a class="code hl_struct" href="classJ3DModel.html">J3DModel</a>* <a class="code hl_variable" href="classdaObjIceLeaf__c.html#a54299a686aee22ad47232d651d3cfe12">mpModel</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classdaObjIceLeaf__c.html#adf50ec91c336c9d304ff0e8fc23df121">   34</a></span>    <span class="comment">/* 0x574 */</span> <a class="code hl_struct" href="classdBgS__ObjAcch.html">dBgS_ObjAcch</a> <a class="code hl_variable" href="classdaObjIceLeaf__c.html#adf50ec91c336c9d304ff0e8fc23df121">mAcch</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classdaObjIceLeaf__c.html#a676ce4cdf8bfc0a6b9134d4c56af0509">   35</a></span>    <span class="comment">/* 0x74C */</span> <a class="code hl_struct" href="classdBgS__AcchCir.html">dBgS_AcchCir</a> <a class="code hl_variable" href="classdaObjIceLeaf__c.html#a676ce4cdf8bfc0a6b9134d4c56af0509">mAcchCir</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classdaObjIceLeaf__c.html#a9100ad5ca6beb28482b422c2a81b8aa1">   36</a></span>    <span class="comment">/* 0x78C */</span> <a class="code hl_struct" href="structdCcD__Stts.html">dCcD_Stts</a> <a class="code hl_variable" href="classdaObjIceLeaf__c.html#a9100ad5ca6beb28482b422c2a81b8aa1">mStts</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classdaObjIceLeaf__c.html#aa4803303eda42a63ff83a2ccb6d86ffa">   37</a></span>    <span class="comment">/* 0x7C8 */</span> <a class="code hl_struct" href="structdCcD__Cyl.html">dCcD_Cyl</a> <a class="code hl_variable" href="classdaObjIceLeaf__c.html#aa4803303eda42a63ff83a2ccb6d86ffa">mCyl</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classdaObjIceLeaf__c.html#acc786e962376ccdbd84118726664ebf8">   38</a></span>    <span class="comment">/* 0x904 */</span> <a class="code hl_struct" href="classmDoExt__bckAnm.html">mDoExt_bckAnm</a>* <a class="code hl_variable" href="classdaObjIceLeaf__c.html#acc786e962376ccdbd84118726664ebf8">mpBck</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classdaObjIceLeaf__c.html#a003ea31a164eee1a77400aa43eaf1e8f">   39</a></span>    <span class="comment">/* 0x908 */</span> <a class="code hl_struct" href="structJ3DTransformInfo.html">J3DTransformInfo</a> <a class="code hl_variable" href="classdaObjIceLeaf__c.html#a003ea31a164eee1a77400aa43eaf1e8f">field_0x908</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classdaObjIceLeaf__c.html#af28617d11ad8bf33977a6d9a0c4c6aa5">   40</a></span>    <span class="comment">/* 0x928 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaObjIceLeaf__c.html#af28617d11ad8bf33977a6d9a0c4c6aa5">mAction</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classdaObjIceLeaf__c.html#a18a78935665ed2aedc2fc6b01fe92948">   41</a></span>    <span class="comment">/* 0x929 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaObjIceLeaf__c.html#a18a78935665ed2aedc2fc6b01fe92948">field_0x929</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classdaObjIceLeaf__c.html#a777800cbfb2a2472bbfadde5035435e5">   42</a></span>    <span class="comment">/* 0x92A */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaObjIceLeaf__c.html#a777800cbfb2a2472bbfadde5035435e5">field_0x92a</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classdaObjIceLeaf__c.html#ac08308258f19e97e6869211f496c23e4">   43</a></span>    <span class="comment">/* 0x92B */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaObjIceLeaf__c.html#ac08308258f19e97e6869211f496c23e4">field_0x92b</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classdaObjIceLeaf__c.html#a517bee28602b17cc1cf27a9b4c02ad9e">   44</a></span>    <span class="comment">/* 0x92C */</span> <a class="code hl_typedef" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> <a class="code hl_variable" href="classdaObjIceLeaf__c.html#a517bee28602b17cc1cf27a9b4c02ad9e">mEventID</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classdaObjIceLeaf__c.html#a6fb3fe623baa62fcf055428e80582b31">   45</a></span>    <span class="comment">/* 0x930 */</span> <a class="code hl_typedef" href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a> <a class="code hl_variable" href="classdaObjIceLeaf__c.html#a6fb3fe623baa62fcf055428e80582b31">field_0x930</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classdaObjIceLeaf__c.html#a6d40bdde65589034c6f4838537bd6c09">   46</a></span>    <span class="comment">/* 0x960 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaObjIceLeaf__c.html#a6d40bdde65589034c6f4838537bd6c09">mRide</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classdaObjIceLeaf__c.html#af147b9c845123ad46e7ed453def2f02c">   47</a></span>    <span class="comment">/* 0x961 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaObjIceLeaf__c.html#af147b9c845123ad46e7ed453def2f02c">field_0x961</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classdaObjIceLeaf__c.html#ae7a87cbbc715518800531a67dda27d89">   48</a></span>    <span class="comment">/* 0x962 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> <a class="code hl_variable" href="classdaObjIceLeaf__c.html#ae7a87cbbc715518800531a67dda27d89">mBreakEffect</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classdaObjIceLeaf__c.html#a1f3d96e3b16116cbd82af78640a863f0">   49</a></span>    <span class="comment">/* 0x964 */</span> <a class="code hl_struct" href="structcXyz.html">cXyz</a> <a class="code hl_variable" href="classdaObjIceLeaf__c.html#a1f3d96e3b16116cbd82af78640a863f0">field_0x964</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classdaObjIceLeaf__c.html#a633858c476337a63cd068d9656949ff4">   50</a></span>    <span class="comment">/* 0x970 */</span> <a class="code hl_struct" href="structcXyz.html">cXyz</a> <a class="code hl_variable" href="classdaObjIceLeaf__c.html#a633858c476337a63cd068d9656949ff4">field_0x970</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>};</div>
+</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#endif </span><span class="comment">/* D_A_OBJ_ICELEAF_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassJ3DModel_html"><div class="ttname"><a href="classJ3DModel.html">J3DModel</a></div><div class="ttdef"><b>Definition</b> J3DModel.h:42</div></div>
+<div class="ttc" id="aclassdBgS__AcchCir_html"><div class="ttname"><a href="classdBgS__AcchCir.html">dBgS_AcchCir</a></div><div class="ttdef"><b>Definition</b> d_bg_s_acch.h:14</div></div>
+<div class="ttc" id="aclassdBgS__ObjAcch_html"><div class="ttname"><a href="classdBgS__ObjAcch.html">dBgS_ObjAcch</a></div><div class="ttdef"><b>Definition</b> d_bg_s_acch.h:217</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html"><div class="ttname"><a href="classdaObjIceLeaf__c.html">daObjIceLeaf_c</a></div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.h:6</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_a003ea31a164eee1a77400aa43eaf1e8f"><div class="ttname"><a href="classdaObjIceLeaf__c.html#a003ea31a164eee1a77400aa43eaf1e8f">daObjIceLeaf_c::field_0x908</a></div><div class="ttdeci">J3DTransformInfo field_0x908</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.h:39</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_a07da75aebde0c84523a50298c360ad2e"><div class="ttname"><a href="classdaObjIceLeaf__c.html#a07da75aebde0c84523a50298c360ad2e">daObjIceLeaf_c::setBreakEffect</a></div><div class="ttdeci">void setBreakEffect()</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.h:30</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_a127a3c703a8f4a49355668bbb335dcb0"><div class="ttname"><a href="classdaObjIceLeaf__c.html#a127a3c703a8f4a49355668bbb335dcb0">daObjIceLeaf_c::setBaseMtx</a></div><div class="ttdeci">void setBaseMtx()</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.cpp:346</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_a18a78935665ed2aedc2fc6b01fe92948"><div class="ttname"><a href="classdaObjIceLeaf__c.html#a18a78935665ed2aedc2fc6b01fe92948">daObjIceLeaf_c::field_0x929</a></div><div class="ttdeci">u8 field_0x929</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.h:41</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_a1f3d96e3b16116cbd82af78640a863f0"><div class="ttname"><a href="classdaObjIceLeaf__c.html#a1f3d96e3b16116cbd82af78640a863f0">daObjIceLeaf_c::field_0x964</a></div><div class="ttdeci">cXyz field_0x964</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.h:49</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_a3454ace1f23c0e607475d73b6de2ab3a"><div class="ttname"><a href="classdaObjIceLeaf__c.html#a3454ace1f23c0e607475d73b6de2ab3a">daObjIceLeaf_c::mPhase</a></div><div class="ttdeci">request_of_phase_process_class mPhase</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.h:32</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_a381c359d80b80d9a5f297b0339fb8244"><div class="ttname"><a href="classdaObjIceLeaf__c.html#a381c359d80b80d9a5f297b0339fb8244">daObjIceLeaf_c::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.cpp:839</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_a4678d94defaa64963454686db225779a"><div class="ttname"><a href="classdaObjIceLeaf__c.html#a4678d94defaa64963454686db225779a">daObjIceLeaf_c::actionWait</a></div><div class="ttdeci">void actionWait()</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.cpp:796</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_a4a08f421db736a13fa9b6d6106ba0f27"><div class="ttname"><a href="classdaObjIceLeaf__c.html#a4a08f421db736a13fa9b6d6106ba0f27">daObjIceLeaf_c::create</a></div><div class="ttdeci">void create()</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.cpp:615</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_a517bee28602b17cc1cf27a9b4c02ad9e"><div class="ttname"><a href="classdaObjIceLeaf__c.html#a517bee28602b17cc1cf27a9b4c02ad9e">daObjIceLeaf_c::mEventID</a></div><div class="ttdeci">s16 mEventID</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.h:44</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_a54299a686aee22ad47232d651d3cfe12"><div class="ttname"><a href="classdaObjIceLeaf__c.html#a54299a686aee22ad47232d651d3cfe12">daObjIceLeaf_c::mpModel</a></div><div class="ttdeci">J3DModel * mpModel</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.h:33</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_a633858c476337a63cd068d9656949ff4"><div class="ttname"><a href="classdaObjIceLeaf__c.html#a633858c476337a63cd068d9656949ff4">daObjIceLeaf_c::field_0x970</a></div><div class="ttdeci">cXyz field_0x970</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.h:50</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_a676ce4cdf8bfc0a6b9134d4c56af0509"><div class="ttname"><a href="classdaObjIceLeaf__c.html#a676ce4cdf8bfc0a6b9134d4c56af0509">daObjIceLeaf_c::mAcchCir</a></div><div class="ttdeci">dBgS_AcchCir mAcchCir</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.h:35</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_a6d40bdde65589034c6f4838537bd6c09"><div class="ttname"><a href="classdaObjIceLeaf__c.html#a6d40bdde65589034c6f4838537bd6c09">daObjIceLeaf_c::mRide</a></div><div class="ttdeci">u8 mRide</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.h:46</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_a6fb3fe623baa62fcf055428e80582b31"><div class="ttname"><a href="classdaObjIceLeaf__c.html#a6fb3fe623baa62fcf055428e80582b31">daObjIceLeaf_c::field_0x930</a></div><div class="ttdeci">Mtx field_0x930</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.h:45</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_a713ba1fcd39e8ea2c8fcb5345a3c6ab0"><div class="ttname"><a href="classdaObjIceLeaf__c.html#a713ba1fcd39e8ea2c8fcb5345a3c6ab0">daObjIceLeaf_c::event_proc_call</a></div><div class="ttdeci">void event_proc_call()</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.cpp:789</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_a777800cbfb2a2472bbfadde5035435e5"><div class="ttname"><a href="classdaObjIceLeaf__c.html#a777800cbfb2a2472bbfadde5035435e5">daObjIceLeaf_c::field_0x92a</a></div><div class="ttdeci">u8 field_0x92a</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.h:42</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_a79ccf3a3d81efc6438bd411b87496cd1"><div class="ttname"><a href="classdaObjIceLeaf__c.html#a79ccf3a3d81efc6438bd411b87496cd1">daObjIceLeaf_c::setAnmPos</a></div><div class="ttdeci">void setAnmPos()</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.cpp:403</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_a7d9ba23c6a177c6c0ae8fca8adf4a75f"><div class="ttname"><a href="classdaObjIceLeaf__c.html#a7d9ba23c6a177c6c0ae8fca8adf4a75f">daObjIceLeaf_c::actionOrderEvent</a></div><div class="ttdeci">void actionOrderEvent()</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.cpp:804</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_a7db5fb736e6c69ee39bac4950c4c40be"><div class="ttname"><a href="classdaObjIceLeaf__c.html#a7db5fb736e6c69ee39bac4950c4c40be">daObjIceLeaf_c::setFallSE</a></div><div class="ttdeci">void setFallSE()</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.cpp:829</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_a7eee6d9c29a078c4c5fa8bf0e8ea8301"><div class="ttname"><a href="classdaObjIceLeaf__c.html#a7eee6d9c29a078c4c5fa8bf0e8ea8301">daObjIceLeaf_c::execute</a></div><div class="ttdeci">void execute()</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.cpp:678</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_a854adf4af988d74befcdf46b5cc212dc"><div class="ttname"><a href="classdaObjIceLeaf__c.html#a854adf4af988d74befcdf46b5cc212dc">daObjIceLeaf_c::actionDead</a></div><div class="ttdeci">void actionDead()</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.cpp:821</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_a9100ad5ca6beb28482b422c2a81b8aa1"><div class="ttname"><a href="classdaObjIceLeaf__c.html#a9100ad5ca6beb28482b422c2a81b8aa1">daObjIceLeaf_c::mStts</a></div><div class="ttdeci">dCcD_Stts mStts</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.h:36</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_a9c7f8e5a60f4ad008a3091b0fd3cf1f7"><div class="ttname"><a href="classdaObjIceLeaf__c.html#a9c7f8e5a60f4ad008a3091b0fd3cf1f7">daObjIceLeaf_c::initBaseMtx</a></div><div class="ttdeci">void initBaseMtx()</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.cpp:295</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_aa47e81e716fdef9c429ef0a81ebefc8e"><div class="ttname"><a href="classdaObjIceLeaf__c.html#aa47e81e716fdef9c429ef0a81ebefc8e">daObjIceLeaf_c::offRide</a></div><div class="ttdeci">void offRide()</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.h:29</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_aa4803303eda42a63ff83a2ccb6d86ffa"><div class="ttname"><a href="classdaObjIceLeaf__c.html#aa4803303eda42a63ff83a2ccb6d86ffa">daObjIceLeaf_c::mCyl</a></div><div class="ttdeci">dCcD_Cyl mCyl</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.h:37</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_aa88e4a752622652d87de6cfbc16e1135"><div class="ttname"><a href="classdaObjIceLeaf__c.html#aa88e4a752622652d87de6cfbc16e1135">daObjIceLeaf_c::_delete</a></div><div class="ttdeci">void _delete()</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.cpp:849</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_aa9bc0bcaaab5d521b29379f9e8323059"><div class="ttname"><a href="classdaObjIceLeaf__c.html#aa9bc0bcaaab5d521b29379f9e8323059">daObjIceLeaf_c::CreateHeap</a></div><div class="ttdeci">void CreateHeap()</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.cpp:595</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_ab71ced45c08561921e83da002ae93734"><div class="ttname"><a href="classdaObjIceLeaf__c.html#ab71ced45c08561921e83da002ae93734">daObjIceLeaf_c::action</a></div><div class="ttdeci">void action()</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.cpp:688</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_ac08308258f19e97e6869211f496c23e4"><div class="ttname"><a href="classdaObjIceLeaf__c.html#ac08308258f19e97e6869211f496c23e4">daObjIceLeaf_c::field_0x92b</a></div><div class="ttdeci">u8 field_0x92b</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.h:43</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_ac6f3d7d8f5d6a8826c8c966980b9fb8b"><div class="ttname"><a href="classdaObjIceLeaf__c.html#ac6f3d7d8f5d6a8826c8c966980b9fb8b">daObjIceLeaf_c::modeRide</a></div><div class="ttdeci">void modeRide()</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.cpp:780</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_acad1e659c49e4df181035821a16097d8"><div class="ttname"><a href="classdaObjIceLeaf__c.html#acad1e659c49e4df181035821a16097d8">daObjIceLeaf_c::Create</a></div><div class="ttdeci">void Create()</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.cpp:393</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_acc786e962376ccdbd84118726664ebf8"><div class="ttname"><a href="classdaObjIceLeaf__c.html#acc786e962376ccdbd84118726664ebf8">daObjIceLeaf_c::mpBck</a></div><div class="ttdeci">mDoExt_bckAnm * mpBck</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.h:38</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_acf8d3e25c76effbd3e3bdc68e1fa2ca5"><div class="ttname"><a href="classdaObjIceLeaf__c.html#acf8d3e25c76effbd3e3bdc68e1fa2ca5">daObjIceLeaf_c::modeDropWait</a></div><div class="ttdeci">void modeDropWait()</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.cpp:733</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_ad5d26a0587774144cc88593f1af1232a"><div class="ttname"><a href="classdaObjIceLeaf__c.html#ad5d26a0587774144cc88593f1af1232a">daObjIceLeaf_c::modePlayerWait</a></div><div class="ttdeci">void modePlayerWait()</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.cpp:773</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_adc2b172dedd329f2828c629179869059"><div class="ttname"><a href="classdaObjIceLeaf__c.html#adc2b172dedd329f2828c629179869059">daObjIceLeaf_c::modeDrop</a></div><div class="ttdeci">void modeDrop()</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.cpp:762</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_adf50ec91c336c9d304ff0e8fc23df121"><div class="ttname"><a href="classdaObjIceLeaf__c.html#adf50ec91c336c9d304ff0e8fc23df121">daObjIceLeaf_c::mAcch</a></div><div class="ttdeci">dBgS_ObjAcch mAcch</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.h:34</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_ae7a87cbbc715518800531a67dda27d89"><div class="ttname"><a href="classdaObjIceLeaf__c.html#ae7a87cbbc715518800531a67dda27d89">daObjIceLeaf_c::mBreakEffect</a></div><div class="ttdeci">u8 mBreakEffect</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.h:48</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_af02868a4e3a531575a254c96d013b5ee"><div class="ttname"><a href="classdaObjIceLeaf__c.html#af02868a4e3a531575a254c96d013b5ee">daObjIceLeaf_c::actionEvent</a></div><div class="ttdeci">void actionEvent()</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.cpp:814</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_af147b9c845123ad46e7ed453def2f02c"><div class="ttname"><a href="classdaObjIceLeaf__c.html#af147b9c845123ad46e7ed453def2f02c">daObjIceLeaf_c::field_0x961</a></div><div class="ttdeci">u8 field_0x961</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.h:47</div></div>
+<div class="ttc" id="aclassdaObjIceLeaf__c_html_af28617d11ad8bf33977a6d9a0c4c6aa5"><div class="ttname"><a href="classdaObjIceLeaf__c.html#af28617d11ad8bf33977a6d9a0c4c6aa5">daObjIceLeaf_c::mAction</a></div><div class="ttdeci">u8 mAction</div><div class="ttdef"><b>Definition</b> d_a_obj_iceleaf.h:40</div></div>
+<div class="ttc" id="aclassmDoExt__bckAnm_html"><div class="ttname"><a href="classmDoExt__bckAnm.html">mDoExt_bckAnm</a></div><div class="ttdef"><b>Definition</b> m_Do_ext.h:139</div></div>
+<div class="ttc" id="ad__cc__d_8h_html"><div class="ttname"><a href="d__cc__d_8h.html">d_cc_d.h</a></div></div>
+<div class="ttc" id="amtx_8h_html_afc58fc7f5dd84f97da2dab35156849ae"><div class="ttname"><a href="mtx_8h.html#afc58fc7f5dd84f97da2dab35156849ae">Mtx</a></div><div class="ttdeci">f32 Mtx[3][4]</div><div class="ttdef"><b>Definition</b> mtx.h:15</div></div>
+<div class="ttc" id="astructJ3DTransformInfo_html"><div class="ttname"><a href="structJ3DTransformInfo.html">J3DTransformInfo</a></div><div class="ttdef"><b>Definition</b> J3DTransform.h:14</div></div>
+<div class="ttc" id="astructcXyz_html"><div class="ttname"><a href="structcXyz.html">cXyz</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:49</div></div>
+<div class="ttc" id="astructdCcD__Cyl_html"><div class="ttname"><a href="structdCcD__Cyl.html">dCcD_Cyl</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:122</div></div>
+<div class="ttc" id="astructdCcD__Stts_html"><div class="ttname"><a href="structdCcD__Stts.html">dCcD_Stts</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:24</div></div>
+<div class="ttc" id="astructfopAc__ac__c_html"><div class="ttname"><a href="structfopAc__ac__c.html">fopAc_ac_c</a></div><div class="ttdef"><b>Definition</b> d_cc_d.cpp:14</div></div>
+<div class="ttc" id="astructrequest__of__phase__process__class_html"><div class="ttname"><a href="structrequest__of__phase__process__class.html">request_of_phase_process_class</a></div><div class="ttdef"><b>Definition</b> c_phase.h:17</div></div>
+<div class="ttc" id="atypes_8h_html_a5ffa4f640862b25ba6d4f635b78bdbe1"><div class="ttname"><a href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a></div><div class="ttdeci">signed short s16</div><div class="ttdef"><b>Definition</b> types.h:5</div></div>
+<div class="ttc" id="atypes_8h_html_aed742c436da53c1080638ce6ef7d13de"><div class="ttname"><a href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a></div><div class="ttdeci">unsigned char u8</div><div class="ttdef"><b>Definition</b> types.h:8</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d1e95842203b094e4f127fa85baf24b5.html">rel</a></li><li class="navelem"><a class="el" href="dir_244336746419795862f93731f1699860.html">d</a></li><li class="navelem"><a class="el" href="dir_b81c1d082692bb1b2b34ed3bfe8a0f4a.html">a</a></li><li class="navelem"><a class="el" href="dir_837b79828d4d0cae6e2581b9ebbbcbf8.html">obj</a></li><li class="navelem"><a class="el" href="dir_92dbb45a61077cd23d30677de4e5bfb8.html">d_a_obj_iceleaf</a></li><li class="navelem"><a class="el" href="d__a__obj__iceleaf_8h.html">d_a_obj_iceleaf.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

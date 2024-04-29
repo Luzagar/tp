@@ -1,0 +1,506 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: src/f_op/f_op_overlap_req.cpp File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('f__op__overlap__req_8cpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">f_op_overlap_req.cpp File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a151d409a9a5adc93e9fd1aa3e08c3bdc" id="r_a151d409a9a5adc93e9fd1aa3e08c3bdc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__overlap__req_8cpp.html#a151d409a9a5adc93e9fd1aa3e08c3bdc">fopOvlpReq_SetPeektime</a> (<a class="el" href="classoverlap__request__class.html">overlap_request_class</a> *, <a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>)</td></tr>
+<tr class="separator:a151d409a9a5adc93e9fd1aa3e08c3bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5204b377b58a22ce85d1ce07ce2186d" id="r_ac5204b377b58a22ce85d1ce07ce2186d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__overlap__req_8cpp.html#ac5204b377b58a22ce85d1ce07ce2186d">fopOvlpReq_phase_Done</a> (<a class="el" href="classoverlap__request__class.html">overlap_request_class</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_overlapReq</a>)</td></tr>
+<tr class="separator:ac5204b377b58a22ce85d1ce07ce2186d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a212f4a637c7e19c427e5934b1200f6fd" id="r_a212f4a637c7e19c427e5934b1200f6fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__overlap__req_8cpp.html#a212f4a637c7e19c427e5934b1200f6fd">fopOvlpReq_phase_IsDone</a> (<a class="el" href="classoverlap__request__class.html">overlap_request_class</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_1</a>)</td></tr>
+<tr class="separator:a212f4a637c7e19c427e5934b1200f6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bdb575904e108a4feed3282bc81cbca" id="r_a6bdb575904e108a4feed3282bc81cbca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__overlap__req_8cpp.html#a6bdb575904e108a4feed3282bc81cbca">fopOvlpReq_phase_IsWaitOfFadeout</a> (<a class="el" href="classoverlap__request__class.html">overlap_request_class</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_overlapReq</a>)</td></tr>
+<tr class="separator:a6bdb575904e108a4feed3282bc81cbca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ab6997d91bc6cd55fd4444060e23a6d" id="r_a7ab6997d91bc6cd55fd4444060e23a6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__overlap__req_8cpp.html#a7ab6997d91bc6cd55fd4444060e23a6d">fopOvlpReq_phase_WaitOfFadeout</a> (<a class="el" href="classoverlap__request__class.html">overlap_request_class</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_overlapReq</a>)</td></tr>
+<tr class="separator:a7ab6997d91bc6cd55fd4444060e23a6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c9191fde68a9bc3ecf0da0f60d497b0" id="r_a3c9191fde68a9bc3ecf0da0f60d497b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__overlap__req_8cpp.html#a3c9191fde68a9bc3ecf0da0f60d497b0">fopOvlpReq_phase_IsComplete</a> (<a class="el" href="classoverlap__request__class.html">overlap_request_class</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_overlapReq</a>)</td></tr>
+<tr class="separator:a3c9191fde68a9bc3ecf0da0f60d497b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46d9e4a502c94f2fd2dd3f7fcc9e06d8" id="r_a46d9e4a502c94f2fd2dd3f7fcc9e06d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__overlap__req_8cpp.html#a46d9e4a502c94f2fd2dd3f7fcc9e06d8">fopOvlpReq_phase_IsCreated</a> (<a class="el" href="classoverlap__request__class.html">overlap_request_class</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_overlapReq</a>)</td></tr>
+<tr class="separator:a46d9e4a502c94f2fd2dd3f7fcc9e06d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51224a5091f46871af110c3609af73a4" id="r_a51224a5091f46871af110c3609af73a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__overlap__req_8cpp.html#a51224a5091f46871af110c3609af73a4">fopOvlpReq_phase_Create</a> (<a class="el" href="classoverlap__request__class.html">overlap_request_class</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_overlapReq</a>)</td></tr>
+<tr class="separator:a51224a5091f46871af110c3609af73a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a113f7b9379badf20aa2fedd6640969" id="r_a6a113f7b9379badf20aa2fedd6640969"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrequest__base__class.html">request_base_class</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__overlap__req_8cpp.html#a6a113f7b9379badf20aa2fedd6640969">fopOvlpReq_Request</a> (<a class="el" href="classoverlap__request__class.html">overlap_request_class</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_overlapReq</a>, <a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">param_2</a>, <a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> param_3)</td></tr>
+<tr class="separator:a6a113f7b9379badf20aa2fedd6640969"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a109c174417db26c7793af5b2fcdf8708" id="r_a109c174417db26c7793af5b2fcdf8708"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__overlap__req_8cpp.html#a109c174417db26c7793af5b2fcdf8708">fopOvlpReq_Handler</a> (<a class="el" href="classoverlap__request__class.html">overlap_request_class</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_overlapReq</a>)</td></tr>
+<tr class="separator:a109c174417db26c7793af5b2fcdf8708"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15ba3e84b7e2a2efcd07df3ca03c3e7c" id="r_a15ba3e84b7e2a2efcd07df3ca03c3e7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__overlap__req_8cpp.html#a15ba3e84b7e2a2efcd07df3ca03c3e7c">fopOvlpReq_Cancel</a> (<a class="el" href="classoverlap__request__class.html">overlap_request_class</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_overlapReq</a>)</td></tr>
+<tr class="separator:a15ba3e84b7e2a2efcd07df3ca03c3e7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8a273bc3c54e348a7616762f9ff6f69" id="r_ab8a273bc3c54e348a7616762f9ff6f69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__overlap__req_8cpp.html#ab8a273bc3c54e348a7616762f9ff6f69">fopOvlpReq_Is_PeektimeLimit</a> (<a class="el" href="classoverlap__request__class.html">overlap_request_class</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_overlapReq</a>)</td></tr>
+<tr class="separator:ab8a273bc3c54e348a7616762f9ff6f69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abac5e69365e6aaa5a6d159e3f6c9bb58" id="r_abac5e69365e6aaa5a6d159e3f6c9bb58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__overlap__req_8cpp.html#abac5e69365e6aaa5a6d159e3f6c9bb58">fopOvlpReq_OverlapClr</a> (<a class="el" href="classoverlap__request__class.html">overlap_request_class</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_overlapReq</a>)</td></tr>
+<tr class="separator:abac5e69365e6aaa5a6d159e3f6c9bb58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a15ba3e84b7e2a2efcd07df3ca03c3e7c" name="a15ba3e84b7e2a2efcd07df3ca03c3e7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15ba3e84b7e2a2efcd07df3ca03c3e7c">&#9670;&#160;</a></span>fopOvlpReq_Cancel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> fopOvlpReq_Cancel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classoverlap__request__class.html">overlap_request_class</a> *&#160;</td>
+          <td class="paramname"><em>i_overlapReq</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a109c174417db26c7793af5b2fcdf8708" name="a109c174417db26c7793af5b2fcdf8708"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a109c174417db26c7793af5b2fcdf8708">&#9670;&#160;</a></span>fopOvlpReq_Handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> fopOvlpReq_Handler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classoverlap__request__class.html">overlap_request_class</a> *&#160;</td>
+          <td class="paramname"><em>i_overlapReq</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab8a273bc3c54e348a7616762f9ff6f69" name="ab8a273bc3c54e348a7616762f9ff6f69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8a273bc3c54e348a7616762f9ff6f69">&#9670;&#160;</a></span>fopOvlpReq_Is_PeektimeLimit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> fopOvlpReq_Is_PeektimeLimit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classoverlap__request__class.html">overlap_request_class</a> *&#160;</td>
+          <td class="paramname"><em>i_overlapReq</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abac5e69365e6aaa5a6d159e3f6c9bb58" name="abac5e69365e6aaa5a6d159e3f6c9bb58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abac5e69365e6aaa5a6d159e3f6c9bb58">&#9670;&#160;</a></span>fopOvlpReq_OverlapClr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> fopOvlpReq_OverlapClr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classoverlap__request__class.html">overlap_request_class</a> *&#160;</td>
+          <td class="paramname"><em>i_overlapReq</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a51224a5091f46871af110c3609af73a4" name="a51224a5091f46871af110c3609af73a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51224a5091f46871af110c3609af73a4">&#9670;&#160;</a></span>fopOvlpReq_phase_Create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> fopOvlpReq_phase_Create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classoverlap__request__class.html">overlap_request_class</a> *&#160;</td>
+          <td class="paramname"><em>i_overlapReq</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac5204b377b58a22ce85d1ce07ce2186d" name="ac5204b377b58a22ce85d1ce07ce2186d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5204b377b58a22ce85d1ce07ce2186d">&#9670;&#160;</a></span>fopOvlpReq_phase_Done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> fopOvlpReq_phase_Done </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classoverlap__request__class.html">overlap_request_class</a> *&#160;</td>
+          <td class="paramname"><em>i_overlapReq</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c9191fde68a9bc3ecf0da0f60d497b0" name="a3c9191fde68a9bc3ecf0da0f60d497b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c9191fde68a9bc3ecf0da0f60d497b0">&#9670;&#160;</a></span>fopOvlpReq_phase_IsComplete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> fopOvlpReq_phase_IsComplete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classoverlap__request__class.html">overlap_request_class</a> *&#160;</td>
+          <td class="paramname"><em>i_overlapReq</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a46d9e4a502c94f2fd2dd3f7fcc9e06d8" name="a46d9e4a502c94f2fd2dd3f7fcc9e06d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46d9e4a502c94f2fd2dd3f7fcc9e06d8">&#9670;&#160;</a></span>fopOvlpReq_phase_IsCreated()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> fopOvlpReq_phase_IsCreated </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classoverlap__request__class.html">overlap_request_class</a> *&#160;</td>
+          <td class="paramname"><em>i_overlapReq</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a212f4a637c7e19c427e5934b1200f6fd" name="a212f4a637c7e19c427e5934b1200f6fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a212f4a637c7e19c427e5934b1200f6fd">&#9670;&#160;</a></span>fopOvlpReq_phase_IsDone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> fopOvlpReq_phase_IsDone </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classoverlap__request__class.html">overlap_request_class</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6bdb575904e108a4feed3282bc81cbca" name="a6bdb575904e108a4feed3282bc81cbca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bdb575904e108a4feed3282bc81cbca">&#9670;&#160;</a></span>fopOvlpReq_phase_IsWaitOfFadeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> fopOvlpReq_phase_IsWaitOfFadeout </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classoverlap__request__class.html">overlap_request_class</a> *&#160;</td>
+          <td class="paramname"><em>i_overlapReq</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ab6997d91bc6cd55fd4444060e23a6d" name="a7ab6997d91bc6cd55fd4444060e23a6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ab6997d91bc6cd55fd4444060e23a6d">&#9670;&#160;</a></span>fopOvlpReq_phase_WaitOfFadeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> fopOvlpReq_phase_WaitOfFadeout </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classoverlap__request__class.html">overlap_request_class</a> *&#160;</td>
+          <td class="paramname"><em>i_overlapReq</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a113f7b9379badf20aa2fedd6640969" name="a6a113f7b9379badf20aa2fedd6640969"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a113f7b9379badf20aa2fedd6640969">&#9670;&#160;</a></span>fopOvlpReq_Request()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structrequest__base__class.html">request_base_class</a> * fopOvlpReq_Request </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classoverlap__request__class.html">overlap_request_class</a> *&#160;</td>
+          <td class="paramname"><em>i_overlapReq</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
+          <td class="paramname"><em>param_2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td>
+          <td class="paramname"><em>param_3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a151d409a9a5adc93e9fd1aa3e08c3bdc" name="a151d409a9a5adc93e9fd1aa3e08c3bdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a151d409a9a5adc93e9fd1aa3e08c3bdc">&#9670;&#160;</a></span>fopOvlpReq_SetPeektime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> fopOvlpReq_SetPeektime </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classoverlap__request__class.html">overlap_request_class</a> *&#160;</td>
+          <td class="paramname"><em>i_overlapReq</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="f__op__overlap__req_8cpp.html">f_op_overlap_req.cpp</a> Overlap Process Request </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_1067c0d41a0230984cbcba896d5e4c43.html">f_op</a></li><li class="navelem"><a class="el" href="f__op__overlap__req_8cpp.html">f_op_overlap_req.cpp</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

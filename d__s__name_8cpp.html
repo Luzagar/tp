@@ -1,0 +1,630 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: src/d/s/d_s_name.cpp File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d__s__name_8cpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">d_s_name.cpp File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a6cf98e4cfc4f98741d96c70ea8cc4b1b" id="r_a6cf98e4cfc4f98741d96c70ea8cc4b1b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>(dScnName_c::*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__s__name_8cpp.html#a6cf98e4cfc4f98741d96c70ea8cc4b1b">mainProcFunc</a>) (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>)</td></tr>
+<tr class="separator:a6cf98e4cfc4f98741d96c70ea8cc4b1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a4e4a0215859cc37392b6d3456c99e32e" id="r_a4e4a0215859cc37392b6d3456c99e32e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__s__name_8cpp.html#a4e4a0215859cc37392b6d3456c99e32e">phase_1</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">resName</a>)</td></tr>
+<tr class="separator:a4e4a0215859cc37392b6d3456c99e32e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a910c16edb7acc4b4aa60f41a7c0a80f3" id="r_a910c16edb7acc4b4aa60f41a7c0a80f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__s__name_8cpp.html#a910c16edb7acc4b4aa60f41a7c0a80f3">phase_2</a> (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">resName</a>)</td></tr>
+<tr class="separator:a910c16edb7acc4b4aa60f41a7c0a80f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad500ae607b33c2c631922fad38df18ab" id="r_ad500ae607b33c2c631922fad38df18ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__s__name_8cpp.html#ad500ae607b33c2c631922fad38df18ab">resLoad</a> (<a class="el" href="structrequest__of__phase__process__class.html">request_of_phase_process_class</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_phase</a>, <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_resName</a>)</td></tr>
+<tr class="separator:ad500ae607b33c2c631922fad38df18ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49513da6c3c8fcd27ac6d838e40c6539" id="r_a49513da6c3c8fcd27ac6d838e40c6539"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__s__name_8cpp.html#a49513da6c3c8fcd27ac6d838e40c6539">dScnName_Draw</a> (<a class="el" href="classdScnName__c.html">dScnName_c</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_this</a>)</td></tr>
+<tr class="separator:a49513da6c3c8fcd27ac6d838e40c6539"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27c1ea3776d4e454890b7aef1e3957ad" id="r_a27c1ea3776d4e454890b7aef1e3957ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__s__name_8cpp.html#a27c1ea3776d4e454890b7aef1e3957ad">dScnName_Execute</a> (<a class="el" href="classdScnName__c.html">dScnName_c</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_this</a>)</td></tr>
+<tr class="separator:a27c1ea3776d4e454890b7aef1e3957ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb82b0fd9c6a9f46994d5b3f78f33d3b" id="r_afb82b0fd9c6a9f46994d5b3f78f33d3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__s__name_8cpp.html#afb82b0fd9c6a9f46994d5b3f78f33d3b">dScnName_IsDelete</a> (<a class="el" href="classdScnName__c.html">dScnName_c</a> *)</td></tr>
+<tr class="separator:afb82b0fd9c6a9f46994d5b3f78f33d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aade52f883bc3d8fdeb52de0b931ee517" id="r_aade52f883bc3d8fdeb52de0b931ee517"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__s__name_8cpp.html#aade52f883bc3d8fdeb52de0b931ee517">dScnName_Delete</a> (<a class="el" href="classdScnName__c.html">dScnName_c</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_this</a>)</td></tr>
+<tr class="separator:aade52f883bc3d8fdeb52de0b931ee517"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ae3379b06d1d25673240aff90964668" id="r_a3ae3379b06d1d25673240aff90964668"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__s__name_8cpp.html#a3ae3379b06d1d25673240aff90964668">dScnName_Create</a> (<a class="el" href="classscene__class.html">scene_class</a> *<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">i_this</a>)</td></tr>
+<tr class="separator:a3ae3379b06d1d25673240aff90964668"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a8bbd631403038c8296b0026564007681" id="r_a8bbd631403038c8296b0026564007681"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__s__name_8cpp.html#a8bbd631403038c8296b0026564007681">cNullVec__6Z2Calc</a> [12]</td></tr>
+<tr class="separator:a8bbd631403038c8296b0026564007681"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a570b2a64abf06b8c49616a9d391dd6c4" id="r_a570b2a64abf06b8c49616a9d391dd6c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="classdSn__HIO__c.html">dSn_HIO_c</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__s__name_8cpp.html#a570b2a64abf06b8c49616a9d391dd6c4">g_snHIO</a></td></tr>
+<tr class="separator:a570b2a64abf06b8c49616a9d391dd6c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac959b93ebe3140b564ddff0056626577" id="r_ac959b93ebe3140b564ddff0056626577"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="d__s__name_8cpp.html#a6cf98e4cfc4f98741d96c70ea8cc4b1b">mainProcFunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__s__name_8cpp.html#ac959b93ebe3140b564ddff0056626577">MainProc</a> [6]</td></tr>
+<tr class="separator:ac959b93ebe3140b564ddff0056626577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00dab11153ae8fcfc403538647259c4e" id="r_a00dab11153ae8fcfc403538647259c4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="structleafdraw__method__class.html">leafdraw_method_class</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__s__name_8cpp.html#a00dab11153ae8fcfc403538647259c4e">l_dScnName_Method</a></td></tr>
+<tr class="separator:a00dab11153ae8fcfc403538647259c4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adce796034221f94710caee7d77bbc6dd" id="r_adce796034221f94710caee7d77bbc6dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structscene__process__profile__definition.html">scene_process_profile_definition</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__s__name_8cpp.html#adce796034221f94710caee7d77bbc6dd">g_profile_NAME_SCENE</a></td></tr>
+<tr class="separator:adce796034221f94710caee7d77bbc6dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c44e5b33ecf6e29557df09b74fa3656" id="r_a2c44e5b33ecf6e29557df09b74fa3656"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structscene__process__profile__definition.html">scene_process_profile_definition</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__s__name_8cpp.html#a2c44e5b33ecf6e29557df09b74fa3656">g_profile_NAMEEX_SCENE</a></td></tr>
+<tr class="separator:a2c44e5b33ecf6e29557df09b74fa3656"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a6cf98e4cfc4f98741d96c70ea8cc4b1b" name="a6cf98e4cfc4f98741d96c70ea8cc4b1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cf98e4cfc4f98741d96c70ea8cc4b1b">&#9670;&#160;</a></span>mainProcFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">typedef</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>(dScnName_c::* mainProcFunc) (<a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a3ae3379b06d1d25673240aff90964668" name="a3ae3379b06d1d25673240aff90964668"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ae3379b06d1d25673240aff90964668">&#9670;&#160;</a></span>dScnName_Create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> dScnName_Create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classscene__class.html">scene_class</a> *&#160;</td>
+          <td class="paramname"><em>i_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aade52f883bc3d8fdeb52de0b931ee517" name="aade52f883bc3d8fdeb52de0b931ee517"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aade52f883bc3d8fdeb52de0b931ee517">&#9670;&#160;</a></span>dScnName_Delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> dScnName_Delete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdScnName__c.html">dScnName_c</a> *&#160;</td>
+          <td class="paramname"><em>i_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a49513da6c3c8fcd27ac6d838e40c6539" name="a49513da6c3c8fcd27ac6d838e40c6539"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49513da6c3c8fcd27ac6d838e40c6539">&#9670;&#160;</a></span>dScnName_Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> dScnName_Draw </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdScnName__c.html">dScnName_c</a> *&#160;</td>
+          <td class="paramname"><em>i_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a27c1ea3776d4e454890b7aef1e3957ad" name="a27c1ea3776d4e454890b7aef1e3957ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27c1ea3776d4e454890b7aef1e3957ad">&#9670;&#160;</a></span>dScnName_Execute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> dScnName_Execute </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdScnName__c.html">dScnName_c</a> *&#160;</td>
+          <td class="paramname"><em>i_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afb82b0fd9c6a9f46994d5b3f78f33d3b" name="afb82b0fd9c6a9f46994d5b3f78f33d3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb82b0fd9c6a9f46994d5b3f78f33d3b">&#9670;&#160;</a></span>dScnName_IsDelete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">int</a> dScnName_IsDelete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdScnName__c.html">dScnName_c</a> *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e4a0215859cc37392b6d3456c99e32e" name="a4e4a0215859cc37392b6d3456c99e32e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e4a0215859cc37392b6d3456c99e32e">&#9670;&#160;</a></span>phase_1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> phase_1 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *&#160;</td>
+          <td class="paramname"><em>resName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a910c16edb7acc4b4aa60f41a7c0a80f3" name="a910c16edb7acc4b4aa60f41a7c0a80f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a910c16edb7acc4b4aa60f41a7c0a80f3">&#9670;&#160;</a></span>phase_2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> phase_2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *&#160;</td>
+          <td class="paramname"><em>resName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad500ae607b33c2c631922fad38df18ab" name="ad500ae607b33c2c631922fad38df18ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad500ae607b33c2c631922fad38df18ab">&#9670;&#160;</a></span>resLoad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">static</a> <a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> resLoad </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structrequest__of__phase__process__class.html">request_of_phase_process_class</a> *&#160;</td>
+          <td class="paramname"><em>i_phase</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">char</a> *&#160;</td>
+          <td class="paramname"><em>i_resName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a8bbd631403038c8296b0026564007681" name="a8bbd631403038c8296b0026564007681"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bbd631403038c8296b0026564007681">&#9670;&#160;</a></span>cNullVec__6Z2Calc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> cNullVec__6Z2Calc[12]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment --><p><a class="el" href="d__s__name_8cpp.html">d_s_name.cpp</a> File Select Scene </p>
+
+</div>
+</div>
+<a id="adce796034221f94710caee7d77bbc6dd" name="adce796034221f94710caee7d77bbc6dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adce796034221f94710caee7d77bbc6dd">&#9670;&#160;</a></span>g_profile_NAME_SCENE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structscene__process__profile__definition.html">scene_process_profile_definition</a> g_profile_NAME_SCENE</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    <a class="code hl_enumvalue" href="f__pc__layer__tag_8h.html#a7859c0a3efa8b1c360f5c2376baf051eae676d15bc138965fdf0812d72885bd93">fpcLy_ROOT_e</a>,</div>
+<div class="line">    1,</div>
+<div class="line">    <a class="code hl_enumvalue" href="f__pc__priority_8h.html#abe974f22edeef8189603ba75fd90ff3caa92065ae8976f3ac73cde25f46737b63">fpcPi_CURRENT_e</a>,</div>
+<div class="line">    <a class="code hl_enumvalue" href="d__procname_8h.html#a0944a4353780132eeab7b06e3e42291da140eebf49928dd1cd46758b3ca1a8b32">PROC_NAME_SCENE</a>,</div>
+<div class="line">    &amp;<a class="code hl_variable" href="f__pc__node_8cpp.html#aaeb9e240dad1a9e1b466a1ad05b61dc9">g_fpcNd_Method</a>.<a class="code hl_variable" href="structnodedraw__method__class.html#afab7bfe9b4655fe55259039f3f8403f2">mBase</a>,</div>
+<div class="line">    <span class="keyword">sizeof</span>(<a class="code hl_class" href="classdScnName__c.html">dScnName_c</a>),</div>
+<div class="line">    0,</div>
+<div class="line">    0,</div>
+<div class="line">    &amp;<a class="code hl_variable" href="f__op__scene_8cpp.html#a927f43adfead795d0dc870f096b87f8d">g_fopScn_Method</a>.<a class="code hl_variable" href="structleafdraw__method__class.html#a50ac28a0dd5767027171962df81f25c2">mBase</a>,</div>
+<div class="line">    (<a class="code hl_struct" href="structprocess__method__class.html">process_method_class</a>*)&amp;<a class="code hl_variable" href="d__s__name_8cpp.html#a00dab11153ae8fcfc403538647259c4e">l_dScnName_Method</a>,</div>
+<div class="line">    <a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">NULL</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassdScnName__c_html"><div class="ttname"><a href="classdScnName__c.html">dScnName_c</a></div><div class="ttdef"><b>Definition</b> d_s_name.h:65</div></div>
+<div class="ttc" id="ad__procname_8h_html_a0944a4353780132eeab7b06e3e42291da140eebf49928dd1cd46758b3ca1a8b32"><div class="ttname"><a href="d__procname_8h.html#a0944a4353780132eeab7b06e3e42291da140eebf49928dd1cd46758b3ca1a8b32">PROC_NAME_SCENE</a></div><div class="ttdeci">@ PROC_NAME_SCENE</div><div class="ttdef"><b>Definition</b> d_procname.h:18</div></div>
+<div class="ttc" id="ad__s__name_8cpp_html_a00dab11153ae8fcfc403538647259c4e"><div class="ttname"><a href="d__s__name_8cpp.html#a00dab11153ae8fcfc403538647259c4e">l_dScnName_Method</a></div><div class="ttdeci">static leafdraw_method_class l_dScnName_Method</div><div class="ttdef"><b>Definition</b> d_s_name.cpp:311</div></div>
+<div class="ttc" id="af__op__scene_8cpp_html_a927f43adfead795d0dc870f096b87f8d"><div class="ttname"><a href="f__op__scene_8cpp.html#a927f43adfead795d0dc870f096b87f8d">g_fopScn_Method</a></div><div class="ttdeci">leafdraw_method_class g_fopScn_Method</div><div class="ttdef"><b>Definition</b> f_op_scene.cpp:55</div></div>
+<div class="ttc" id="af__pc__layer__tag_8h_html_a7859c0a3efa8b1c360f5c2376baf051eae676d15bc138965fdf0812d72885bd93"><div class="ttname"><a href="f__pc__layer__tag_8h.html#a7859c0a3efa8b1c360f5c2376baf051eae676d15bc138965fdf0812d72885bd93">fpcLy_ROOT_e</a></div><div class="ttdeci">@ fpcLy_ROOT_e</div><div class="ttdef"><b>Definition</b> f_pc_layer_tag.h:8</div></div>
+<div class="ttc" id="af__pc__node_8cpp_html_aaeb9e240dad1a9e1b466a1ad05b61dc9"><div class="ttname"><a href="f__pc__node_8cpp.html#aaeb9e240dad1a9e1b466a1ad05b61dc9">g_fpcNd_Method</a></div><div class="ttdeci">nodedraw_method_class g_fpcNd_Method</div><div class="ttdef"><b>Definition</b> f_pc_node.cpp:114</div></div>
+<div class="ttc" id="af__pc__priority_8h_html_abe974f22edeef8189603ba75fd90ff3caa92065ae8976f3ac73cde25f46737b63"><div class="ttname"><a href="f__pc__priority_8h.html#abe974f22edeef8189603ba75fd90ff3caa92065ae8976f3ac73cde25f46737b63">fpcPi_CURRENT_e</a></div><div class="ttdeci">@ fpcPi_CURRENT_e</div><div class="ttdef"><b>Definition</b> f_pc_priority.h:8</div></div>
+<div class="ttc" id="agroup__jsystem-jsupport_html_ga13fa7ef63a40072c7203b3da54a569a2"><div class="ttname"><a href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">JSUConvertOffsetToPtr</a></div><div class="ttdeci">T * JSUConvertOffsetToPtr(const void *, const void *)</div><div class="ttdef"><b>Definition</b> JSupport.h:22</div></div>
+<div class="ttc" id="astructleafdraw__method__class_html_a50ac28a0dd5767027171962df81f25c2"><div class="ttname"><a href="structleafdraw__method__class.html#a50ac28a0dd5767027171962df81f25c2">leafdraw_method_class::mBase</a></div><div class="ttdeci">process_method_class mBase</div><div class="ttdef"><b>Definition</b> f_pc_leaf.h:12</div></div>
+<div class="ttc" id="astructnodedraw__method__class_html_afab7bfe9b4655fe55259039f3f8403f2"><div class="ttname"><a href="structnodedraw__method__class.html#afab7bfe9b4655fe55259039f3f8403f2">nodedraw_method_class::mBase</a></div><div class="ttdeci">process_method_class mBase</div><div class="ttdef"><b>Definition</b> f_pc_node.h:11</div></div>
+<div class="ttc" id="astructprocess__method__class_html"><div class="ttname"><a href="structprocess__method__class.html">process_method_class</a></div><div class="ttdef"><b>Definition</b> f_pc_method.h:9</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2c44e5b33ecf6e29557df09b74fa3656" name="a2c44e5b33ecf6e29557df09b74fa3656"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c44e5b33ecf6e29557df09b74fa3656">&#9670;&#160;</a></span>g_profile_NAMEEX_SCENE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structscene__process__profile__definition.html">scene_process_profile_definition</a> g_profile_NAMEEX_SCENE</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    <a class="code hl_enumvalue" href="f__pc__layer__tag_8h.html#a7859c0a3efa8b1c360f5c2376baf051eae676d15bc138965fdf0812d72885bd93">fpcLy_ROOT_e</a>,</div>
+<div class="line">    1,</div>
+<div class="line">    <a class="code hl_enumvalue" href="f__pc__priority_8h.html#abe974f22edeef8189603ba75fd90ff3caa92065ae8976f3ac73cde25f46737b63">fpcPi_CURRENT_e</a>,</div>
+<div class="line">    <a class="code hl_enumvalue" href="d__procname_8h.html#a0944a4353780132eeab7b06e3e42291dae5df773061b71f625c8aa6c9e7466eb5">PROC_NAMEEX_SCENE</a>,</div>
+<div class="line">    &amp;<a class="code hl_variable" href="f__pc__node_8cpp.html#aaeb9e240dad1a9e1b466a1ad05b61dc9">g_fpcNd_Method</a>.<a class="code hl_variable" href="structnodedraw__method__class.html#afab7bfe9b4655fe55259039f3f8403f2">mBase</a>,</div>
+<div class="line">    <span class="keyword">sizeof</span>(<a class="code hl_class" href="classdScnName__c.html">dScnName_c</a>),</div>
+<div class="line">    0,</div>
+<div class="line">    0,</div>
+<div class="line">    &amp;<a class="code hl_variable" href="f__op__scene_8cpp.html#a927f43adfead795d0dc870f096b87f8d">g_fopScn_Method</a>.<a class="code hl_variable" href="structleafdraw__method__class.html#a50ac28a0dd5767027171962df81f25c2">mBase</a>,</div>
+<div class="line">    (<a class="code hl_struct" href="structprocess__method__class.html">process_method_class</a>*)&amp;<a class="code hl_variable" href="d__s__name_8cpp.html#a00dab11153ae8fcfc403538647259c4e">l_dScnName_Method</a>,</div>
+<div class="line">    <a class="code hl_function" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">NULL</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="ad__procname_8h_html_a0944a4353780132eeab7b06e3e42291dae5df773061b71f625c8aa6c9e7466eb5"><div class="ttname"><a href="d__procname_8h.html#a0944a4353780132eeab7b06e3e42291dae5df773061b71f625c8aa6c9e7466eb5">PROC_NAMEEX_SCENE</a></div><div class="ttdeci">@ PROC_NAMEEX_SCENE</div><div class="ttdef"><b>Definition</b> d_procname.h:19</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a570b2a64abf06b8c49616a9d391dd6c4" name="a570b2a64abf06b8c49616a9d391dd6c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a570b2a64abf06b8c49616a9d391dd6c4">&#9670;&#160;</a></span>g_snHIO</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdSn__HIO__c.html">dSn_HIO_c</a> g_snHIO</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a00dab11153ae8fcfc403538647259c4e" name="a00dab11153ae8fcfc403538647259c4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00dab11153ae8fcfc403538647259c4e">&#9670;&#160;</a></span>l_dScnName_Method</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structleafdraw__method__class.html">leafdraw_method_class</a> l_dScnName_Method</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    (<a class="code hl_typedef" href="f__pc__method_8h.html#a56bd92368b7dda361388b2d13df2e4ac">process_method_func</a>)<a class="code hl_function" href="d__s__name_8cpp.html#a3ae3379b06d1d25673240aff90964668">dScnName_Create</a>, (<a class="code hl_typedef" href="f__pc__method_8h.html#a56bd92368b7dda361388b2d13df2e4ac">process_method_func</a>)<a class="code hl_function" href="d__s__name_8cpp.html#aade52f883bc3d8fdeb52de0b931ee517">dScnName_Delete</a>,</div>
+<div class="line">    (<a class="code hl_typedef" href="f__pc__method_8h.html#a56bd92368b7dda361388b2d13df2e4ac">process_method_func</a>)<a class="code hl_function" href="d__s__name_8cpp.html#a27c1ea3776d4e454890b7aef1e3957ad">dScnName_Execute</a>, (<a class="code hl_typedef" href="f__pc__method_8h.html#a56bd92368b7dda361388b2d13df2e4ac">process_method_func</a>)<a class="code hl_function" href="d__s__name_8cpp.html#afb82b0fd9c6a9f46994d5b3f78f33d3b">dScnName_IsDelete</a>,</div>
+<div class="line">    (<a class="code hl_typedef" href="f__pc__method_8h.html#a56bd92368b7dda361388b2d13df2e4ac">process_method_func</a>)<a class="code hl_function" href="d__s__name_8cpp.html#a49513da6c3c8fcd27ac6d838e40c6539">dScnName_Draw</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="ad__s__name_8cpp_html_a27c1ea3776d4e454890b7aef1e3957ad"><div class="ttname"><a href="d__s__name_8cpp.html#a27c1ea3776d4e454890b7aef1e3957ad">dScnName_Execute</a></div><div class="ttdeci">static int dScnName_Execute(dScnName_c *i_this)</div><div class="ttdef"><b>Definition</b> d_s_name.cpp:287</div></div>
+<div class="ttc" id="ad__s__name_8cpp_html_a3ae3379b06d1d25673240aff90964668"><div class="ttname"><a href="d__s__name_8cpp.html#a3ae3379b06d1d25673240aff90964668">dScnName_Create</a></div><div class="ttdeci">static int dScnName_Create(scene_class *i_this)</div><div class="ttdef"><b>Definition</b> d_s_name.cpp:305</div></div>
+<div class="ttc" id="ad__s__name_8cpp_html_a49513da6c3c8fcd27ac6d838e40c6539"><div class="ttname"><a href="d__s__name_8cpp.html#a49513da6c3c8fcd27ac6d838e40c6539">dScnName_Draw</a></div><div class="ttdeci">static int dScnName_Draw(dScnName_c *i_this)</div><div class="ttdef"><b>Definition</b> d_s_name.cpp:282</div></div>
+<div class="ttc" id="ad__s__name_8cpp_html_aade52f883bc3d8fdeb52de0b931ee517"><div class="ttname"><a href="d__s__name_8cpp.html#aade52f883bc3d8fdeb52de0b931ee517">dScnName_Delete</a></div><div class="ttdeci">static int dScnName_Delete(dScnName_c *i_this)</div><div class="ttdef"><b>Definition</b> d_s_name.cpp:299</div></div>
+<div class="ttc" id="ad__s__name_8cpp_html_afb82b0fd9c6a9f46994d5b3f78f33d3b"><div class="ttname"><a href="d__s__name_8cpp.html#afb82b0fd9c6a9f46994d5b3f78f33d3b">dScnName_IsDelete</a></div><div class="ttdeci">static int dScnName_IsDelete(dScnName_c *)</div><div class="ttdef"><b>Definition</b> d_s_name.cpp:293</div></div>
+<div class="ttc" id="af__pc__method_8h_html_a56bd92368b7dda361388b2d13df2e4ac"><div class="ttname"><a href="f__pc__method_8h.html#a56bd92368b7dda361388b2d13df2e4ac">process_method_func</a></div><div class="ttdeci">int(* process_method_func)(void *)</div><div class="ttdef"><b>Definition</b> f_pc_method.h:7</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac959b93ebe3140b564ddff0056626577" name="ac959b93ebe3140b564ddff0056626577"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac959b93ebe3140b564ddff0056626577">&#9670;&#160;</a></span>MainProc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="d__s__name_8cpp.html#a6cf98e4cfc4f98741d96c70ea8cc4b1b">mainProcFunc</a> MainProc[6]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    &amp;<a class="code hl_function" href="classdScnName__c.html#a81fc1b66dfd07cd826c8fda5e9432ee2">dScnName_c::FileSelectOpen</a>,  &amp;<a class="code hl_function" href="classdScnName__c.html#a2ae8ecb3181408215aa79995bc96c118">dScnName_c::FileSelectMain</a>, &amp;<a class="code hl_function" href="classdScnName__c.html#a3188427e6cc6a9e672aaa7d8b89f32a9">dScnName_c::FileSelectClose</a>,</div>
+<div class="line">    &amp;<a class="code hl_function" href="classdScnName__c.html#a7e135e0c01a5fdabcfaeac0c42da0b0d">dScnName_c::brightCheckOpen</a>, &amp;<a class="code hl_function" href="classdScnName__c.html#a1ad718a23f0555284177110a120a7a9b">dScnName_c::brightCheck</a>,    &amp;<a class="code hl_function" href="classdScnName__c.html#ae4e5f902332323eeef9d8883662028ef">dScnName_c::changeGameScene</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassdScnName__c_html_a1ad718a23f0555284177110a120a7a9b"><div class="ttname"><a href="classdScnName__c.html#a1ad718a23f0555284177110a120a7a9b">dScnName_c::brightCheck</a></div><div class="ttdeci">void brightCheck()</div><div class="ttdef"><b>Definition</b> d_s_name.cpp:243</div></div>
+<div class="ttc" id="aclassdScnName__c_html_a2ae8ecb3181408215aa79995bc96c118"><div class="ttname"><a href="classdScnName__c.html#a2ae8ecb3181408215aa79995bc96c118">dScnName_c::FileSelectMain</a></div><div class="ttdeci">void FileSelectMain()</div><div class="ttdef"><b>Definition</b> d_s_name.cpp:197</div></div>
+<div class="ttc" id="aclassdScnName__c_html_a3188427e6cc6a9e672aaa7d8b89f32a9"><div class="ttname"><a href="classdScnName__c.html#a3188427e6cc6a9e672aaa7d8b89f32a9">dScnName_c::FileSelectClose</a></div><div class="ttdeci">void FileSelectClose()</div><div class="ttdef"><b>Definition</b> d_s_name.cpp:219</div></div>
+<div class="ttc" id="aclassdScnName__c_html_a7e135e0c01a5fdabcfaeac0c42da0b0d"><div class="ttname"><a href="classdScnName__c.html#a7e135e0c01a5fdabcfaeac0c42da0b0d">dScnName_c::brightCheckOpen</a></div><div class="ttdeci">void brightCheckOpen()</div><div class="ttdef"><b>Definition</b> d_s_name.cpp:233</div></div>
+<div class="ttc" id="aclassdScnName__c_html_a81fc1b66dfd07cd826c8fda5e9432ee2"><div class="ttname"><a href="classdScnName__c.html#a81fc1b66dfd07cd826c8fda5e9432ee2">dScnName_c::FileSelectOpen</a></div><div class="ttdeci">void FileSelectOpen()</div><div class="ttdef"><b>Definition</b> d_s_name.cpp:186</div></div>
+<div class="ttc" id="aclassdScnName__c_html_ae4e5f902332323eeef9d8883662028ef"><div class="ttname"><a href="classdScnName__c.html#ae4e5f902332323eeef9d8883662028ef">dScnName_c::changeGameScene</a></div><div class="ttdeci">void changeGameScene()</div><div class="ttdef"><b>Definition</b> d_s_name.cpp:265</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_a921e71f3ef0b46ce159b4549017b167.html">d</a></li><li class="navelem"><a class="el" href="dir_8c4f3f2735dba3c50038705665e75806.html">s</a></li><li class="navelem"><a class="el" href="d__s__name_8cpp.html">d_s_name.cpp</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

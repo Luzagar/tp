@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: Class Members</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('functions_q.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="contents">
+<div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
+
+<h3><a id="index_q" name="index_q"></a>- q -</h3><ul>
+<li>quatM()&#160;:&#160;<a class="el" href="classmDoMtx__stack__c.html#ae4c6d18946631cc67232f4e601beaec4">mDoMtx_stack_c</a></li>
+<li>query000()&#160;:&#160;<a class="el" href="structdaNpc__Sha__c.html#a1aa8d7b8b910fcd80d383c0b92e6883b">daNpc_Sha_c</a></li>
+<li>query001()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#ae1ba7ceb86cde413c778a3e95bdd5c59">dMsgFlow_c</a></li>
+<li>query002()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#ac19ffa0c23dd44b03fc633bf9e85dc7f">dMsgFlow_c</a></li>
+<li>query003()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#adcb1d3f7a0a0365e31b82dcba10ccb66">dMsgFlow_c</a></li>
+<li>query004()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#aac65fb021333c8e69888024b93a88390">dMsgFlow_c</a></li>
+<li>query005()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a8f34f9e0e530d544c2417bd752b081d2">dMsgFlow_c</a></li>
+<li>query006()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a2e37ba43963a9f4146f32826290b3135">dMsgFlow_c</a></li>
+<li>query007()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a94e58452661c86a8e8214aaaa2d27f47">dMsgFlow_c</a></li>
+<li>query008()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a8a4a25ebf3961f5600ad6e705e0949f7">dMsgFlow_c</a></li>
+<li>query009()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#abf2f8e66b7122628d386830f3c8acd5e">dMsgFlow_c</a></li>
+<li>query010()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#aa3fa09a8d4b3a29a938ea3a4552f41bd">dMsgFlow_c</a></li>
+<li>query011()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#aad64e849f5ea8720a0ca5f29b9d21bc1">dMsgFlow_c</a></li>
+<li>query012()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a42639aa160f59f53654cec7ded1fad95">dMsgFlow_c</a></li>
+<li>query013()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#aeaa7d59604988f92e4772b995b2fca96">dMsgFlow_c</a></li>
+<li>query014()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#ac68bac5988fedbbb847f354b0a3cb504">dMsgFlow_c</a></li>
+<li>query015()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a212497fb0f999e46554750e1eda0a682">dMsgFlow_c</a></li>
+<li>query016()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#ab473e840783ad342681ace5f1271d5bb">dMsgFlow_c</a></li>
+<li>query017()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a4639eb76168bc154827cd880481154f1">dMsgFlow_c</a></li>
+<li>query018()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#ad26ea6f68fa46182fb52fdcbecb27078">dMsgFlow_c</a></li>
+<li>query019()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a9d78efe37ce005cc542d0744868baa8c">dMsgFlow_c</a></li>
+<li>query020()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a7d24045c152ff2f31a85d3f77759625f">dMsgFlow_c</a></li>
+<li>query021()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#afa27acc81240017025c8e0553f18a2f8">dMsgFlow_c</a></li>
+<li>query022()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a876cb3d97231731e9350f819e2e5cc5f">dMsgFlow_c</a></li>
+<li>query023()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a1a7e0f5cac0a0a31e6587fe5390d2507">dMsgFlow_c</a></li>
+<li>query024()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a3d1316a1543382d5b0601c6b83db5208">dMsgFlow_c</a></li>
+<li>query025()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a1fdb5ac25fd0b73e7a2c7fd4ec1ef979">dMsgFlow_c</a></li>
+<li>query026()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a3a7bc2141b1dd0aa5455d9c9b2256708">dMsgFlow_c</a></li>
+<li>query027()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a1dc3cbb3bcd9941eb616a850e03a9db6">dMsgFlow_c</a></li>
+<li>query028()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a3005b1df971f79b83884996cf1251d2a">dMsgFlow_c</a></li>
+<li>query029()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#ad6e4d7858e9b83a5601b0b59ab4dd40d">dMsgFlow_c</a></li>
+<li>query030()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a52a2009c5becfb549ac19f057e11040d">dMsgFlow_c</a></li>
+<li>query031()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a6eb41b7c4eccd0a2b5be93486d68754d">dMsgFlow_c</a></li>
+<li>query032()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a626ce7c3f338188b6a29382c5300716b">dMsgFlow_c</a></li>
+<li>query033()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#afeb0e5b9369869f10444284d26e17343">dMsgFlow_c</a></li>
+<li>query034()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a428fd6d7e8e03fb1a6adf5b6783a2159">dMsgFlow_c</a></li>
+<li>query035()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#ada22d6cc02502cefd0b054f2805cc053">dMsgFlow_c</a></li>
+<li>query036()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#abe256ef3fcd874548f82732db63e8905">dMsgFlow_c</a></li>
+<li>query037()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a996bfa0b2a0d067a93110dddf15d0b53">dMsgFlow_c</a></li>
+<li>query038()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#ac090b32103efd696f2f47cc7474806d4">dMsgFlow_c</a></li>
+<li>query039()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a7f6e44201cec86f2989642e7215e05a7">dMsgFlow_c</a></li>
+<li>query040()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a9e9302e9f21572987d9eef12dff2e719">dMsgFlow_c</a></li>
+<li>query041()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a8cac5192a536754b5bf6836a6200d9a6">dMsgFlow_c</a></li>
+<li>query042()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a56383e6613f35dedd9c75d7d01a0866a">dMsgFlow_c</a></li>
+<li>query043()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#ac64b6488ea00a6a09ccbec9aaf2460aa">dMsgFlow_c</a></li>
+<li>query044()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a92bac58d8e4e171b64a7a4ac34f37673">dMsgFlow_c</a></li>
+<li>query045()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a5d6f61e874492ba61c05130b5d0e7f3f">dMsgFlow_c</a></li>
+<li>query046()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a4c33fe65d9ebf48c30a843a89c04a29e">dMsgFlow_c</a></li>
+<li>query047()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a9503d79c0bc56c4e0cb872fa0a1d7ef4">dMsgFlow_c</a></li>
+<li>query048()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#af21cd301f1dc398dfdf6d250b0d6e283">dMsgFlow_c</a></li>
+<li>query049()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a27e0fc5c871002d42aacc83160d81fbf">dMsgFlow_c</a></li>
+<li>query050()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a046d3a947c44d3f486542f1bff2dc50c">dMsgFlow_c</a></li>
+<li>query051()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a2bfd4ef226633ffda9000b40f119a5b2">dMsgFlow_c</a></li>
+<li>query052()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a352788cb784f3b7ea357aa25ac9a01c9">dMsgFlow_c</a></li>
+<li>query053()&#160;:&#160;<a class="el" href="classdMsgFlow__c.html#a95f2738b754eb4bfa12af0f5129e9b67">dMsgFlow_c</a></li>
+<li>query078()&#160;:&#160;<a class="el" href="structdaNpc__Sha__c.html#a462c14d9bce741f7b4dcbca9c58ef0d0">daNpc_Sha_c</a></li>
+<li>query264()&#160;:&#160;<a class="el" href="structdaNpc__Sha__c.html#ab06b17c49a735c68d1e892aa8b1897da">daNpc_Sha_c</a></li>
+<li>query265()&#160;:&#160;<a class="el" href="structdaNpc__Sha__c.html#a5d30ab38c04b2dc67dfd1cbc926760b5">daNpc_Sha_c</a></li>
+<li>query266()&#160;:&#160;<a class="el" href="structdaNpc__Sha__c.html#a15b1c7d576b26eb3590ab884887408d1">daNpc_Sha_c</a></li>
+<li>query267()&#160;:&#160;<a class="el" href="structdaNpc__Sha__c.html#a3cfd1f2972192defde2382c572d4de35">daNpc_Sha_c</a></li>
+<li>query268()&#160;:&#160;<a class="el" href="structdaNpc__Sha__c.html#a2036f3ef9cc8beb978909069b238ce27">daNpc_Sha_c</a></li>
+<li>query288()&#160;:&#160;<a class="el" href="structdaNpc__Sha__c.html#a931d59cc5891ed4ee35b2560ad205714">daNpc_Sha_c</a></li>
+<li>query461()&#160;:&#160;<a class="el" href="structdaNpc__Sha__c.html#a12411ce7bd7ff150fa7ed3496fdfdc71">daNpc_Sha_c</a></li>
+<li>query542()&#160;:&#160;<a class="el" href="structdaNpc__Sha__c.html#ab7a8ad64b048476c1c83fd3b8e1563a7">daNpc_Sha_c</a></li>
+<li>query999()&#160;:&#160;<a class="el" href="structdaNpc__Sha__c.html#a7162b4aec03c8ece710da098007ec401">daNpc_Sha_c</a></li>
+<li>queryMapAddress()&#160;:&#160;<a class="el" href="classJUTException.html#ac2fa3cd26fb516d971a240d6103c9e86">JUTException</a></li>
+<li>queryMapAddress_single()&#160;:&#160;<a class="el" href="classJUTException.html#aeb50fb73800ba5238413322e6ed3604c">JUTException</a></li>
+<li>queue&#160;:&#160;<a class="el" href="structEXIControl.html#a798b258df20865746c97977622643c6d">EXIControl</a>, <a class="el" href="structOSCond.html#a589f00ff1643277e5a9702ad9c1c1a03">OSCond</a>, <a class="el" href="structOSMutex.html#a94e38e16ab262180416736b11921867b">OSMutex</a>, <a class="el" href="structOSThread.html#ad4db9ecdbeb784a78a7d6abf52f1ff57">OSThread</a></li>
+<li>QuickStart()&#160;:&#160;<a class="el" href="classdCamera__c.html#a37ec7594e5517125c0766779b1370cb4">dCamera_c</a></li>
+<li>quitImmortalEmitter()&#160;:&#160;<a class="el" href="classJPABaseEmitter.html#a52875bae713308a57fddbb4f4d63844c">JPABaseEmitter</a></li>
+<li>quot&#160;:&#160;<a class="el" href="structdiv__t.html#a0b9dda2884048daa68ca4aaa12b17b9a">div_t</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

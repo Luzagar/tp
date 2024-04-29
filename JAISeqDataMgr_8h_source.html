@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: include/JSystem/JAudio2/JAISeqDataMgr.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('JAISeqDataMgr_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">JAISeqDataMgr.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="JAISeqDataMgr_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef JAISEQDATAMGR_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define JAISEQDATAMGR_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="JAISound_8h.html">JSystem/JAudio2/JAISound.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="structJAISeqData.html">   10</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structJAISeqData.html">JAISeqData</a> {</div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="}">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="structJAISeqData.html#adc1459b72fddfe195614b688387c60a8">   11</a></span>    <a class="code hl_function" href="structJAISeqData.html#adc1459b72fddfe195614b688387c60a8">JAISeqData</a>(<span class="keywordtype">void</span>* param_0, <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> param_1) {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <a class="code hl_variable" href="structJAISeqData.html#ac9f63d3ed0610e432a589e6e823a9578">field_0x0</a> = param_0;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <a class="code hl_variable" href="structJAISeqData.html#a6e873542aa114eb09973d50c6cb7cf9b">field_0x4</a> = param_1;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    }</div>
+</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structJAISeqData.html#a707a45b9c236db16b945624e4862d23c">   16</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="structJAISeqData.html#a707a45b9c236db16b945624e4862d23c">set</a>(<span class="keywordtype">void</span>* param_0, <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> param_1) {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <a class="code hl_variable" href="structJAISeqData.html#ac9f63d3ed0610e432a589e6e823a9578">field_0x0</a> = param_0;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <a class="code hl_variable" href="structJAISeqData.html#a6e873542aa114eb09973d50c6cb7cf9b">field_0x4</a> = param_1;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    }</div>
+</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structJAISeqData.html#ac9f63d3ed0610e432a589e6e823a9578">   21</a></span>    <span class="comment">/* 0x00 */</span> <span class="keywordtype">void</span>* <a class="code hl_variable" href="structJAISeqData.html#ac9f63d3ed0610e432a589e6e823a9578">field_0x0</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structJAISeqData.html#a6e873542aa114eb09973d50c6cb7cf9b">   22</a></span>    <span class="comment">/* 0x04 */</span> <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> <a class="code hl_variable" href="structJAISeqData.html#a6e873542aa114eb09973d50c6cb7cf9b">field_0x4</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>};</div>
+</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="};">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structJAISeqDataRegion.html">   29</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structJAISeqDataRegion.html">JAISeqDataRegion</a> {</div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="}">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structJAISeqDataRegion.html#a6bc0e5700c8b9c796efc57e216916af3">   30</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="structJAISeqDataRegion.html#a6bc0e5700c8b9c796efc57e216916af3">intersects</a>(<a class="code hl_struct" href="structJAISeqData.html">JAISeqData</a>&amp; seqData)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">if</span> ((<a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>)<a class="code hl_variable" href="structJAISeqDataRegion.html#abf36926b626df642dc0c51c1053646f1">addr</a> + <a class="code hl_variable" href="structJAISeqDataRegion.html#aa15383befd1ffc7bc437c8ed7b3e0db1">size</a> &lt; (<a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>)seqData.<a class="code hl_variable" href="structJAISeqData.html#ac9f63d3ed0610e432a589e6e823a9578">field_0x0</a>) {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordflow">if</span> ((<a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>)seqData.<a class="code hl_variable" href="structJAISeqData.html#ac9f63d3ed0610e432a589e6e823a9578">field_0x0</a> + seqData.<a class="code hl_variable" href="structJAISeqData.html#a6e873542aa114eb09973d50c6cb7cf9b">field_0x4</a> &lt; (<a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>)<a class="code hl_variable" href="structJAISeqDataRegion.html#abf36926b626df642dc0c51c1053646f1">addr</a>) {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    }</div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="structJAISeqDataRegion.html#abf36926b626df642dc0c51c1053646f1">   40</a></span>    <span class="comment">/* 0x00 */</span> <a class="code hl_typedef" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>* <a class="code hl_variable" href="structJAISeqDataRegion.html#abf36926b626df642dc0c51c1053646f1">addr</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structJAISeqDataRegion.html#aa15383befd1ffc7bc437c8ed7b3e0db1">   41</a></span>    <span class="comment">/* 0x04 */</span> <a class="code hl_typedef" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> <a class="code hl_variable" href="structJAISeqDataRegion.html#aa15383befd1ffc7bc437c8ed7b3e0db1">size</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>};</div>
+</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="};">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="structJAISeqDataUser.html">   48</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structJAISeqDataUser.html">JAISeqDataUser</a> {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">virtual</span> <a class="code hl_function" href="structJAISeqDataUser.html#af4a88c92bc015dc0468c1a70b0a994df">~JAISeqDataUser</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="structJAISeqDataUser.html#a3c9b95eb7837d005effe334e1d71a531">   50</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="structJAISeqDataUser.html#a3c9b95eb7837d005effe334e1d71a531">isUsingSeqData</a>(<a class="code hl_struct" href="structJAISeqDataRegion.html">JAISeqDataRegion</a> <span class="keyword">const</span>&amp;) = 0;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="structJAISeqDataUser.html#ab05e27e559b5f7cece2667797a5ce40c">   51</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="structJAISeqDataUser.html#ab05e27e559b5f7cece2667797a5ce40c">releaseSeqData</a>(<a class="code hl_struct" href="structJAISeqDataRegion.html">JAISeqDataRegion</a> <span class="keyword">const</span>&amp;) = 0;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>};</div>
+</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="};">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="structJAISeqDataMgr.html">   58</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structJAISeqDataMgr.html">JAISeqDataMgr</a> {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="structJAISeqDataMgr.html#a951e9f06392499980b1d36410c905d2b">   59</a></span>    <span class="keyword">enum</span> <a class="code hl_enumeration" href="structJAISeqDataMgr.html#a951e9f06392499980b1d36410c905d2b">SeqDataReturnValue</a>{ <a class="code hl_enumvalue" href="structJAISeqDataMgr.html#a951e9f06392499980b1d36410c905d2babee427613a64b1d09952c70598948a12">SeqDataReturnValue_0</a> = 0, <a class="code hl_enumvalue" href="structJAISeqDataMgr.html#a951e9f06392499980b1d36410c905d2ba8aeb0de1042a648da73593d154eebfa9">SeqDataReturnValue_1</a> = 1, <a class="code hl_enumvalue" href="structJAISeqDataMgr.html#a951e9f06392499980b1d36410c905d2baa7085f141a6fa2049e975627764e68c1">SeqDataReturnValue_2</a> = 2};</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">virtual</span> <a class="code hl_function" href="structJAISeqDataMgr.html#a0a9fb874fb017ebac4a61ca0593749fe">~JAISeqDataMgr</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="structJAISeqDataMgr.html#a38a4d1f08ec0b398ed686281ec10e4d9">   61</a></span>    <span class="keyword">virtual</span> <a class="code hl_enumeration" href="structJAISeqDataMgr.html#a951e9f06392499980b1d36410c905d2b">SeqDataReturnValue</a> <a class="code hl_function" href="structJAISeqDataMgr.html#a38a4d1f08ec0b398ed686281ec10e4d9">getSeqData</a>(<a class="code hl_struct" href="structJAISoundID.html">JAISoundID</a>, <a class="code hl_struct" href="structJAISeqData.html">JAISeqData</a>*) = 0;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="structJAISeqDataMgr.html#a1f86a3d2437d53927853114b84273f0c">   62</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="structJAISeqDataMgr.html#a1f86a3d2437d53927853114b84273f0c">releaseSeqData</a>() = 0;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="structJAISeqDataMgr.html#aca7c6b7b787f4cc3278b1410fc709a97">   63</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="structJAISeqDataMgr.html#aca7c6b7b787f4cc3278b1410fc709a97">setSeqDataUser</a>(<a class="code hl_struct" href="structJAISeqDataUser.html">JAISeqDataUser</a>*) = 0;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>};</div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#endif </span><span class="comment">/* JAISEQDATAMGR_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aJAISound_8h_html"><div class="ttname"><a href="JAISound_8h.html">JAISound.h</a></div></div>
+<div class="ttc" id="astructJAISeqDataMgr_html"><div class="ttname"><a href="structJAISeqDataMgr.html">JAISeqDataMgr</a></div><div class="ttdef"><b>Definition</b> JAISeqDataMgr.h:58</div></div>
+<div class="ttc" id="astructJAISeqDataMgr_html_a0a9fb874fb017ebac4a61ca0593749fe"><div class="ttname"><a href="structJAISeqDataMgr.html#a0a9fb874fb017ebac4a61ca0593749fe">JAISeqDataMgr::~JAISeqDataMgr</a></div><div class="ttdeci">virtual ~JAISeqDataMgr()</div><div class="ttdef"><b>Definition</b> JAISeqDataMgr.cpp:5</div></div>
+<div class="ttc" id="astructJAISeqDataMgr_html_a1f86a3d2437d53927853114b84273f0c"><div class="ttname"><a href="structJAISeqDataMgr.html#a1f86a3d2437d53927853114b84273f0c">JAISeqDataMgr::releaseSeqData</a></div><div class="ttdeci">virtual int releaseSeqData()=0</div></div>
+<div class="ttc" id="astructJAISeqDataMgr_html_a38a4d1f08ec0b398ed686281ec10e4d9"><div class="ttname"><a href="structJAISeqDataMgr.html#a38a4d1f08ec0b398ed686281ec10e4d9">JAISeqDataMgr::getSeqData</a></div><div class="ttdeci">virtual SeqDataReturnValue getSeqData(JAISoundID, JAISeqData *)=0</div></div>
+<div class="ttc" id="astructJAISeqDataMgr_html_a951e9f06392499980b1d36410c905d2b"><div class="ttname"><a href="structJAISeqDataMgr.html#a951e9f06392499980b1d36410c905d2b">JAISeqDataMgr::SeqDataReturnValue</a></div><div class="ttdeci">SeqDataReturnValue</div><div class="ttdef"><b>Definition</b> JAISeqDataMgr.h:59</div></div>
+<div class="ttc" id="astructJAISeqDataMgr_html_a951e9f06392499980b1d36410c905d2ba8aeb0de1042a648da73593d154eebfa9"><div class="ttname"><a href="structJAISeqDataMgr.html#a951e9f06392499980b1d36410c905d2ba8aeb0de1042a648da73593d154eebfa9">JAISeqDataMgr::SeqDataReturnValue_1</a></div><div class="ttdeci">@ SeqDataReturnValue_1</div><div class="ttdef"><b>Definition</b> JAISeqDataMgr.h:59</div></div>
+<div class="ttc" id="astructJAISeqDataMgr_html_a951e9f06392499980b1d36410c905d2baa7085f141a6fa2049e975627764e68c1"><div class="ttname"><a href="structJAISeqDataMgr.html#a951e9f06392499980b1d36410c905d2baa7085f141a6fa2049e975627764e68c1">JAISeqDataMgr::SeqDataReturnValue_2</a></div><div class="ttdeci">@ SeqDataReturnValue_2</div><div class="ttdef"><b>Definition</b> JAISeqDataMgr.h:59</div></div>
+<div class="ttc" id="astructJAISeqDataMgr_html_a951e9f06392499980b1d36410c905d2babee427613a64b1d09952c70598948a12"><div class="ttname"><a href="structJAISeqDataMgr.html#a951e9f06392499980b1d36410c905d2babee427613a64b1d09952c70598948a12">JAISeqDataMgr::SeqDataReturnValue_0</a></div><div class="ttdeci">@ SeqDataReturnValue_0</div><div class="ttdef"><b>Definition</b> JAISeqDataMgr.h:59</div></div>
+<div class="ttc" id="astructJAISeqDataMgr_html_aca7c6b7b787f4cc3278b1410fc709a97"><div class="ttname"><a href="structJAISeqDataMgr.html#aca7c6b7b787f4cc3278b1410fc709a97">JAISeqDataMgr::setSeqDataUser</a></div><div class="ttdeci">virtual bool setSeqDataUser(JAISeqDataUser *)=0</div></div>
+<div class="ttc" id="astructJAISeqDataRegion_html"><div class="ttname"><a href="structJAISeqDataRegion.html">JAISeqDataRegion</a></div><div class="ttdef"><b>Definition</b> JAISeqDataMgr.h:29</div></div>
+<div class="ttc" id="astructJAISeqDataRegion_html_a6bc0e5700c8b9c796efc57e216916af3"><div class="ttname"><a href="structJAISeqDataRegion.html#a6bc0e5700c8b9c796efc57e216916af3">JAISeqDataRegion::intersects</a></div><div class="ttdeci">bool intersects(JAISeqData &amp;seqData) const</div><div class="ttdef"><b>Definition</b> JAISeqDataMgr.h:30</div></div>
+<div class="ttc" id="astructJAISeqDataRegion_html_aa15383befd1ffc7bc437c8ed7b3e0db1"><div class="ttname"><a href="structJAISeqDataRegion.html#aa15383befd1ffc7bc437c8ed7b3e0db1">JAISeqDataRegion::size</a></div><div class="ttdeci">u32 size</div><div class="ttdef"><b>Definition</b> JAISeqDataMgr.h:41</div></div>
+<div class="ttc" id="astructJAISeqDataRegion_html_abf36926b626df642dc0c51c1053646f1"><div class="ttname"><a href="structJAISeqDataRegion.html#abf36926b626df642dc0c51c1053646f1">JAISeqDataRegion::addr</a></div><div class="ttdeci">u8 * addr</div><div class="ttdef"><b>Definition</b> JAISeqDataMgr.h:40</div></div>
+<div class="ttc" id="astructJAISeqDataUser_html"><div class="ttname"><a href="structJAISeqDataUser.html">JAISeqDataUser</a></div><div class="ttdef"><b>Definition</b> JAISeqDataMgr.h:48</div></div>
+<div class="ttc" id="astructJAISeqDataUser_html_a3c9b95eb7837d005effe334e1d71a531"><div class="ttname"><a href="structJAISeqDataUser.html#a3c9b95eb7837d005effe334e1d71a531">JAISeqDataUser::isUsingSeqData</a></div><div class="ttdeci">virtual bool isUsingSeqData(JAISeqDataRegion const &amp;)=0</div></div>
+<div class="ttc" id="astructJAISeqDataUser_html_ab05e27e559b5f7cece2667797a5ce40c"><div class="ttname"><a href="structJAISeqDataUser.html#ab05e27e559b5f7cece2667797a5ce40c">JAISeqDataUser::releaseSeqData</a></div><div class="ttdeci">virtual int releaseSeqData(JAISeqDataRegion const &amp;)=0</div></div>
+<div class="ttc" id="astructJAISeqDataUser_html_af4a88c92bc015dc0468c1a70b0a994df"><div class="ttname"><a href="structJAISeqDataUser.html#af4a88c92bc015dc0468c1a70b0a994df">JAISeqDataUser::~JAISeqDataUser</a></div><div class="ttdeci">virtual ~JAISeqDataUser()</div><div class="ttdef"><b>Definition</b> JAISeqDataMgr.cpp:3</div></div>
+<div class="ttc" id="astructJAISeqData_html"><div class="ttname"><a href="structJAISeqData.html">JAISeqData</a></div><div class="ttdef"><b>Definition</b> JAISeqDataMgr.h:10</div></div>
+<div class="ttc" id="astructJAISeqData_html_a6e873542aa114eb09973d50c6cb7cf9b"><div class="ttname"><a href="structJAISeqData.html#a6e873542aa114eb09973d50c6cb7cf9b">JAISeqData::field_0x4</a></div><div class="ttdeci">u32 field_0x4</div><div class="ttdef"><b>Definition</b> JAISeqDataMgr.h:22</div></div>
+<div class="ttc" id="astructJAISeqData_html_a707a45b9c236db16b945624e4862d23c"><div class="ttname"><a href="structJAISeqData.html#a707a45b9c236db16b945624e4862d23c">JAISeqData::set</a></div><div class="ttdeci">void set(void *param_0, u32 param_1)</div><div class="ttdef"><b>Definition</b> JAISeqDataMgr.h:16</div></div>
+<div class="ttc" id="astructJAISeqData_html_ac9f63d3ed0610e432a589e6e823a9578"><div class="ttname"><a href="structJAISeqData.html#ac9f63d3ed0610e432a589e6e823a9578">JAISeqData::field_0x0</a></div><div class="ttdeci">void * field_0x0</div><div class="ttdef"><b>Definition</b> JAISeqDataMgr.h:21</div></div>
+<div class="ttc" id="astructJAISeqData_html_adc1459b72fddfe195614b688387c60a8"><div class="ttname"><a href="structJAISeqData.html#adc1459b72fddfe195614b688387c60a8">JAISeqData::JAISeqData</a></div><div class="ttdeci">JAISeqData(void *param_0, u32 param_1)</div><div class="ttdef"><b>Definition</b> JAISeqDataMgr.h:11</div></div>
+<div class="ttc" id="astructJAISoundID_html"><div class="ttname"><a href="structJAISoundID.html">JAISoundID</a></div><div class="ttdef"><b>Definition</b> d_menu_fmap2D.cpp:198</div></div>
+<div class="ttc" id="atypes_8h_html_a2caf5cd7bcdbe1eefa727f44ffb10bac"><div class="ttname"><a href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a></div><div class="ttdeci">unsigned long u32</div><div class="ttdef"><b>Definition</b> types.h:10</div></div>
+<div class="ttc" id="atypes_8h_html_aed742c436da53c1080638ce6ef7d13de"><div class="ttname"><a href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a></div><div class="ttdeci">unsigned char u8</div><div class="ttdef"><b>Definition</b> types.h:8</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_4f0979a7f5e3194619cde56505e372d8.html">JSystem</a></li><li class="navelem"><a class="el" href="dir_939d1828e03278096bc671d6c97dec06.html">JAudio2</a></li><li class="navelem"><a class="el" href="JAISeqDataMgr_8h.html">JAISeqDataMgr.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+var classdaTagStatue__c =
+[
+    [ "Action_e", "classdaTagStatue__c.html#a347f80f4d307f401741941e78aff5e69", [
+      [ "ACTION_WAIT_e", "classdaTagStatue__c.html#a347f80f4d307f401741941e78aff5e69a9c3068409611f51ac644bc40200a0842", null ],
+      [ "ACTION_ORDER_EVENT_e", "classdaTagStatue__c.html#a347f80f4d307f401741941e78aff5e69a90594e0b1e4ff4b5b6690e492b14ccf5", null ],
+      [ "ACTION_EVENT_e", "classdaTagStatue__c.html#a347f80f4d307f401741941e78aff5e69adfa3573bdf62df9c0ec519ed7afb3bc5", null ],
+      [ "ACTION_DEAD_e", "classdaTagStatue__c.html#a347f80f4d307f401741941e78aff5e69a656f74f99563fbabcb121a7d7021532c", null ]
+    ] ],
+    [ "Demo_Action_e", "classdaTagStatue__c.html#a4b923be700e455bdfe12dd5c3cfb6a53", [
+      [ "DEMO_ACTION_WAIT", "classdaTagStatue__c.html#a4b923be700e455bdfe12dd5c3cfb6a53a03d31068a01b426ecda1a3a7ac60144a", null ],
+      [ "DEMO_ACTION_MOVE_OWL_STATUE", "classdaTagStatue__c.html#a4b923be700e455bdfe12dd5c3cfb6a53ac5d7518acdedef6a1130088e8fed934a", null ],
+      [ "DEMO_ACTION_AWARD_ITEM", "classdaTagStatue__c.html#a4b923be700e455bdfe12dd5c3cfb6a53a7ae0731afcc480b5632aa25bdd8f3c2d", null ]
+    ] ],
+    [ "Tag_Location_e", "classdaTagStatue__c.html#aed687b6cacd7295e2c9eb2d59f856d95", [
+      [ "TAG_LOCATION_FARON_WOODS", "classdaTagStatue__c.html#aed687b6cacd7295e2c9eb2d59f856d95aaeee35624b46b8abffb175c9fb073458", null ],
+      [ "TAG_LOCATION_GERUDO_DESERT", "classdaTagStatue__c.html#aed687b6cacd7295e2c9eb2d59f856d95ae976277749cce65be990ddcc8bfaf6f2", null ],
+      [ "TAG_LOCATION_KAKARIKO_GORGE", "classdaTagStatue__c.html#aed687b6cacd7295e2c9eb2d59f856d95acd72d089b52184889858dd3389c0528a", null ],
+      [ "TAG_LOCATION_GREAT_ELDIN_BRIDGE", "classdaTagStatue__c.html#aed687b6cacd7295e2c9eb2d59f856d95a206667b8b22950ff6732fa80aa39154f", null ],
+      [ "TAG_LOCATION_LAKE_HYLIA", "classdaTagStatue__c.html#aed687b6cacd7295e2c9eb2d59f856d95a66210f14389e35841ee6dd065e2945e5", null ],
+      [ "TAG_LOCATION_RUINED_THEATRE", "classdaTagStatue__c.html#aed687b6cacd7295e2c9eb2d59f856d95ad4001507ebdc9fdbdced6776a49635b4", null ]
+    ] ],
+    [ "_delete", "classdaTagStatue__c.html#afc5bacb5ca494c74a4348147885f180c", null ],
+    [ "actionDead", "classdaTagStatue__c.html#ac0064b641883fde5e543137f9dde0071", null ],
+    [ "actionEvent", "classdaTagStatue__c.html#ac605a4f4d6543540cef344b06edf9a38", null ],
+    [ "actionOrderEvent", "classdaTagStatue__c.html#ab0cb5520a6e47d5c5c7ef561e591096b", null ],
+    [ "actionWait", "classdaTagStatue__c.html#a28e63f87de89edcac9400bad72b9b8b7", null ],
+    [ "checkOnEffect", "classdaTagStatue__c.html#a0104110f02af1981789b7f8c582c33cc", null ],
+    [ "checkStartDemo", "classdaTagStatue__c.html#a44c4fe44ee739492d3dc28208e81df4e", null ],
+    [ "Create", "classdaTagStatue__c.html#a800cdc91722f8e6bfab459a54cb7b2a9", null ],
+    [ "create", "classdaTagStatue__c.html#aaffc2783d1d30f393ac7c2a8a400c5d4", null ],
+    [ "CreateHeap", "classdaTagStatue__c.html#a504eb8d9077da1f4c2619634293b66e3", null ],
+    [ "demoProc", "classdaTagStatue__c.html#a1c98d44d6bf3287922738a7aa7eb6831", null ],
+    [ "draw", "classdaTagStatue__c.html#a815251b66b10a13511fd8a4f99ba8646", null ],
+    [ "endParticle", "classdaTagStatue__c.html#ab6abbb6567400770f507b82034e7117b", null ],
+    [ "event_proc_call", "classdaTagStatue__c.html#a9d38f30f5d29d6c190372b2d79716c21", null ],
+    [ "execute", "classdaTagStatue__c.html#aa789da4ac521606835621e534cb92576", null ],
+    [ "getLetterCount", "classdaTagStatue__c.html#ab3aa02dab27c80e97630d0bc9638f656", null ],
+    [ "getSwbit", "classdaTagStatue__c.html#a18a98854e1c14214578ceab301d1006f", null ],
+    [ "getSwbit2", "classdaTagStatue__c.html#a9d8ee55eb1f0ca72c87234750f6ef6fd", null ],
+    [ "initBaseMtx", "classdaTagStatue__c.html#a20bd6c6348378563e2475f9b0ad51f43", null ],
+    [ "setAction", "classdaTagStatue__c.html#ae7aa4cf478806e458ed6839136ea9276", null ],
+    [ "setBaseMtx", "classdaTagStatue__c.html#afd04900f1b1a1e79073d818a225cf516", null ],
+    [ "setParticle", "classdaTagStatue__c.html#a351154207fe122508bcac632ad901b21", null ],
+    [ "mArcPhase", "classdaTagStatue__c.html#a44e4482bc254bf753230303eb3eb1b1d", null ],
+    [ "mCurrentAction", "classdaTagStatue__c.html#a6b5a7cc4b504dd77eed505bbda091c30", null ],
+    [ "mEvArcPhase", "classdaTagStatue__c.html#ac83792f21fc47c1d1b12cf5485d6c8bb", null ],
+    [ "mEventId", "classdaTagStatue__c.html#ace353478048f59a92f43c3bd4a8ade22", null ],
+    [ "mMapToolId", "classdaTagStatue__c.html#ae46a199549c1f4b746eb67c96de39e39", null ],
+    [ "mOwlStatueId", "classdaTagStatue__c.html#a741bf0dfeb7d43062f3d862b100c8a22", null ],
+    [ "mpGlowingSkyCharacterBrk", "classdaTagStatue__c.html#af6497557fbc8833980025bde6890ae13", null ],
+    [ "mpLightRingEmitters", "classdaTagStatue__c.html#abba1e0ce543b770203e5cc67b5074e53", null ],
+    [ "mpModel", "classdaTagStatue__c.html#a376127fce62f0321efaebb4c8f86cc7d", null ],
+    [ "mpPlatformCircleBtk", "classdaTagStatue__c.html#afac482a9029181c84021540dddb1192b", null ],
+    [ "mSkyCharacterEventBitIdIndex", "classdaTagStatue__c.html#ae9a6458849a2411ace6d5987358b3a2e", null ],
+    [ "mStaffId", "classdaTagStatue__c.html#af3b4ce96a694a49f610143c79aa1cf56", null ],
+    [ "mTimer", "classdaTagStatue__c.html#acf77978aad69e9d30851ff030b0e6029", null ],
+    [ "mTreasureDemoItemId", "classdaTagStatue__c.html#aa5ebc959ee5bcea5377632b314e8907d", null ]
+];
