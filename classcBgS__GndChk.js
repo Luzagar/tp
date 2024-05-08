@@ -307,7 +307,6 @@ var classcBgS__GndChk =
     [ "SetPos", "classcBgS__GndChk.html#a16c655f7663581cad45c961d1175715d", null ],
     [ "SetPos", "classcBgS__GndChk.html#a16c655f7663581cad45c961d1175715d", null ],
     [ "SetPos", "classcBgS__GndChk.html#a16c655f7663581cad45c961d1175715d", null ],
-    [ "SetPos", "classcBgS__GndChk.html#a16c655f7663581cad45c961d1175715d", null ],
     [ "SetPos", "classcBgS__GndChk.html#a740df3df9abd5ff88d6f3ddf140b44d3", null ],
     [ "SetPos", "classcBgS__GndChk.html#a740df3df9abd5ff88d6f3ddf140b44d3", null ],
     [ "SetPos", "classcBgS__GndChk.html#a740df3df9abd5ff88d6f3ddf140b44d3", null ],

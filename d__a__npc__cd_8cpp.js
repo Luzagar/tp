@@ -1,7 +1,5 @@
 var d__a__npc__cd_8cpp =
 [
-    [ "mDoHIO_entry_c", "structmDoHIO__entry__c.html", "structmDoHIO__entry__c" ],
-    [ "fOpAcm_HIO_entry_c", "structfOpAcm__HIO__entry__c.html", "structfOpAcm__HIO__entry__c" ],
     [ "daPy_py_c", "structdaPy__py__c.html", "structdaPy__py__c" ],
     [ "daNpcCd_HIO_c", "structdaNpcCd__HIO__c.html", "structdaNpcCd__HIO__c" ],
     [ "daNpcCd_HIO_Jnt_c", "structdaNpcCd__HIO__Jnt__c.html", "structdaNpcCd__HIO__Jnt__c" ],

@@ -1,7 +1,7 @@
 var d__a__obj__ktOnFire_8cpp =
 [
     [ "mDoMtx_stack_c", "classmDoMtx__stack__c.html", "classmDoMtx__stack__c" ],
-    [ "mDoHIO_entry_c", "structmDoHIO__entry__c.html", "structmDoHIO__entry__c" ],
+    [ "mDoHIO_entry_c", "classmDoHIO__entry__c.html", "classmDoHIO__entry__c" ],
     [ "fopAc_ac_c", "structfopAc__ac__c.html", "structfopAc__ac__c" ],
     [ "daKtOnFire_c", "structdaKtOnFire__c.html", "structdaKtOnFire__c" ],
     [ "daKtOnFire_HIO_c", "structdaKtOnFire__HIO__c.html", "structdaKtOnFire__HIO__c" ],

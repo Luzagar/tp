@@ -2,7 +2,7 @@ var d__a__e__sm2_8cpp =
 [
     [ "request_of_phase_process_class", "structrequest__of__phase__process__class.html", "structrequest__of__phase__process__class" ],
     [ "mDoMtx_stack_c", "classmDoMtx__stack__c.html", "classmDoMtx__stack__c" ],
-    [ "mDoHIO_entry_c", "structmDoHIO__entry__c.html", "structmDoHIO__entry__c" ],
+    [ "mDoHIO_entry_c", "classmDoHIO__entry__c.html", "classmDoHIO__entry__c" ],
     [ "mDoExt_invisibleModel", "classmDoExt__invisibleModel.html", "classmDoExt__invisibleModel" ],
     [ "mDoExt_btkAnm", "classmDoExt__btkAnm.html", "classmDoExt__btkAnm" ],
     [ "mDoExt_McaMorfCallBack2_c", "classmDoExt__McaMorfCallBack2__c.html", "classmDoExt__McaMorfCallBack2__c" ],

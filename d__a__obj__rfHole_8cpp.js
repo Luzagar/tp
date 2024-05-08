@@ -2,7 +2,7 @@ var d__a__obj__rfHole_8cpp =
 [
     [ "request_of_phase_process_class", "structrequest__of__phase__process__class.html", "structrequest__of__phase__process__class" ],
     [ "mDoMtx_stack_c", "classmDoMtx__stack__c.html", "classmDoMtx__stack__c" ],
-    [ "mDoHIO_entry_c", "structmDoHIO__entry__c.html", "structmDoHIO__entry__c" ],
+    [ "mDoHIO_entry_c", "classmDoHIO__entry__c.html", "classmDoHIO__entry__c" ],
     [ "fopAc_ac_c", "structfopAc__ac__c.html", "structfopAc__ac__c" ],
     [ "dBgW", "classdBgW.html", "classdBgW" ],
     [ "daRfHole_c", "structdaRfHole__c.html", "structdaRfHole__c" ],

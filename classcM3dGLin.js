@@ -5,7 +5,6 @@ var classcM3dGLin =
     [ "~cM3dGLin", "classcM3dGLin.html#a8edeba1ac05042874582ddc730b84e79", null ],
     [ "~cM3dGLin", "classcM3dGLin.html#a1105a77d5827d408fc0128a0236d6ca0", null ],
     [ "~cM3dGLin", "classcM3dGLin.html#a1105a77d5827d408fc0128a0236d6ca0", null ],
-    [ "~cM3dGLin", "classcM3dGLin.html#a1105a77d5827d408fc0128a0236d6ca0", null ],
     [ "CalcPos", "classcM3dGLin.html#aefa678feb370f794d61fe45742e5fa6a", null ],
     [ "CalcVec", "classcM3dGLin.html#a5dd33ea589d7f0d722ddbe6f2fe00aaa", null ],
     [ "GetEnd", "classcM3dGLin.html#a8c62869c4f4b709e0fad6463dcd2fd72", null ],
@@ -20,7 +19,6 @@ var classcM3dGLin =
     [ "SetStartEnd", "classcM3dGLin.html#a1565ab76a7a18663a62d7159ac738bee", null ],
     [ "SetStartEnd", "classcM3dGLin.html#a2945027583f49a46031ed06c99978438", null ],
     [ "SetStartEnd", "classcM3dGLin.html#a2945027583f49a46031ed06c99978438", null ],
-    [ "SetStartEnd", "classcM3dGLin.html#a7f0f57038092f1668fe2e932a9cb04a7", null ],
     [ "SetStartEnd", "classcM3dGLin.html#a7f0f57038092f1668fe2e932a9cb04a7", null ],
     [ "mEnd", "classcM3dGLin.html#ad2772a993fbaf8f62e93724479c88b01", null ],
     [ "mStart", "classcM3dGLin.html#a19a0ec073efdfc11a20b05735491d63f", null ]

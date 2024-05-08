@@ -47,7 +47,7 @@ var searchData=
   ['mdoext_5ftransanmbas_44',['mDoExt_transAnmBas',['../classmDoExt__transAnmBas.html',1,'']]],
   ['mdoext_5fzelanime_45',['mDoExt_zelAnime',['../classmDoExt__zelAnime.html',1,'']]],
   ['mdogph_5fginf_5fc_46',['mDoGph_gInf_c',['../structmDoGph__gInf__c.html',1,'']]],
-  ['mdohio_5fentry_5fc_47',['mDoHIO_entry_c',['../structmDoHIO__entry__c.html',1,'']]],
+  ['mdohio_5fentry_5fc_47',['mDoHIO_entry_c',['../classmDoHIO__entry__c.html',1,'']]],
   ['mdolib_5fclipper_48',['mDoLib_clipper',['../structmDoLib__clipper.html',1,'']]],
   ['mdomain_49',['mDoMain',['../structmDoMain.html',1,'']]],
   ['mdomch_5frender_5fc_50',['mDoMch_render_c',['../classmDoMch__render__c.html',1,'']]],

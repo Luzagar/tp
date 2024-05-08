@@ -4,6 +4,7 @@ var f__op__actor__mng_8h =
     [ "fopAcM_prm_class", "structfopAcM__prm__class.html", "structfopAcM__prm__class" ],
     [ "fopAcM_search4ev_prm", "structfopAcM__search4ev__prm.html", "structfopAcM__search4ev__prm" ],
     [ "fopAcM_search_prm", "structfopAcM__search__prm.html", "structfopAcM__search__prm" ],
+    [ "fOpAcm_HIO_entry_c", "structfOpAcm__HIO__entry__c.html", "structfOpAcm__HIO__entry__c" ],
     [ "l_HIO", "classl__HIO.html", "classl__HIO" ],
     [ "fopAcM_lc_c", "classfopAcM__lc__c.html", "classfopAcM__lc__c" ],
     [ "fopAcM_rc_c", "classfopAcM__rc__c.html", "classfopAcM__rc__c" ],

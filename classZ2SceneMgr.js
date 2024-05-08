@@ -28,7 +28,6 @@ var classZ2SceneMgr =
     [ "setInDarkness", "classZ2SceneMgr.html#a4aa7c0bbf37daa6c94dd1c510e7958f1", null ],
     [ "setInGame", "classZ2SceneMgr.html#aaa36eaf41d681e82da36f23a24ba6c41", null ],
     [ "setSceneExist", "classZ2SceneMgr.html#ad42ae8eb9c0353650b272d99258220ae", null ],
-    [ "setSceneExist", "classZ2SceneMgr.html#a5f2e714c07e07076b305ce4f3a0497c1", null ],
     [ "setSceneName", "classZ2SceneMgr.html#a9b380f688fcd51be861ef6e020c42ff4", null ],
     [ "BGM_ID", "classZ2SceneMgr.html#affdd3f7e7fd1c981926c8e00f768f305", null ],
     [ "BgmWave_1", "classZ2SceneMgr.html#a08b805da3e18fd28780a4371aac55774", null ],

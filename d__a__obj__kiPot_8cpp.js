@@ -1,7 +1,7 @@
 var d__a__obj__kiPot_8cpp =
 [
     [ "mDoMtx_stack_c", "classmDoMtx__stack__c.html", "classmDoMtx__stack__c" ],
-    [ "mDoHIO_entry_c", "structmDoHIO__entry__c.html", "structmDoHIO__entry__c" ],
+    [ "mDoHIO_entry_c", "classmDoHIO__entry__c.html", "classmDoHIO__entry__c" ],
     [ "fopAc_ac_c", "structfopAc__ac__c.html", "structfopAc__ac__c" ],
     [ "daKiPot_c", "structdaKiPot__c.html", "structdaKiPot__c" ],
     [ "daKiPot_HIO_c", "structdaKiPot__HIO__c.html", "structdaKiPot__HIO__c" ],

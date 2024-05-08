@@ -54,7 +54,6 @@ var structdSv__memBit__c =
     [ "isSwitch", "structdSv__memBit__c.html#a9ff4b192a7971ee26f274f62df62bfce", null ],
     [ "isSwitch", "structdSv__memBit__c.html#a9ff4b192a7971ee26f274f62df62bfce", null ],
     [ "isSwitch", "structdSv__memBit__c.html#a9ff4b192a7971ee26f274f62df62bfce", null ],
-    [ "isSwitch", "structdSv__memBit__c.html#a9ff4b192a7971ee26f274f62df62bfce", null ],
     [ "isTbox", "structdSv__memBit__c.html#aa2ca505601d7c0baf74054c1d4309221", null ],
     [ "isTbox", "structdSv__memBit__c.html#a6bcbe5b7f24934278766db6392af8e47", null ],
     [ "isTbox", "structdSv__memBit__c.html#a6bcbe5b7f24934278766db6392af8e47", null ],

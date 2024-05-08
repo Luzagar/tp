@@ -66,6 +66,7 @@ var classdaMidna__c =
     [ "execute", "classdaMidna__c.html#a72c780d217500df16f96bae5f368f012", null ],
     [ "getMtxHairTop", "classdaMidna__c.html#a49c9675a996e3eede35c38c8aa4d45b3", null ],
     [ "getNeckAimAngle", "classdaMidna__c.html#a97d88b032db8ba9ca324a895feaa5905", null ],
+    [ "i_checkMidnaRealBody", "classdaMidna__c.html#a55ebce32a8dd01aa3802fdf5929bdc41", null ],
     [ "i_checkMidnaTired", "classdaMidna__c.html#a558be1c835ce5e546ee88cc4a261c30c", null ],
     [ "initDemoModel", "classdaMidna__c.html#ab638e6f8c869c2037108231a298e7875", null ],
     [ "initHairAngle", "classdaMidna__c.html#a6aff3d1d43a082207b0507c1b61bda72", null ],

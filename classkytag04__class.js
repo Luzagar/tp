@@ -6,7 +6,7 @@ var classkytag04__class =
     [ "field_0x5b4", "classkytag04__class.html#a36e87ee34fe3e299c10393fe5cd18833", null ],
     [ "field_0x5b5", "classkytag04__class.html#a39e2a004d1c6adf29844befd21d0ae3b", null ],
     [ "field_0x5b6", "classkytag04__class.html#ae81bc99842f11dab8b1ab7eca9545fd4", null ],
-    [ "field_0x5b7", "classkytag04__class.html#af3640fd3cd5b4ac11a54437ed7f53f2c", null ],
+    [ "field_0x5b7", "classkytag04__class.html#a3350ebe949f94e41758cb9fe2ec23a52", null ],
     [ "field_0x5b8", "classkytag04__class.html#a789abd977262f62098652c5b6cd588db", null ],
     [ "field_0x5b9", "classkytag04__class.html#ab2151ed0cc1aa8bac0725bf2e6876847", null ],
     [ "field_0x5c0", "classkytag04__class.html#aac0f14185c6b3959d38148ce888dab16", null ],
@@ -20,7 +20,7 @@ var classkytag04__class =
     [ "mBtk", "classkytag04__class.html#a06d315a4233c6a4b6ea25a3a647e4d07", null ],
     [ "mExitID", "classkytag04__class.html#a299a09677ddecfec24f998502b5282da", null ],
     [ "mNeedDropNum", "classkytag04__class.html#a7d45227f8a966891a6ba7a9a566cde3d", null ],
-    [ "mPhaseReq", "classkytag04__class.html#a051efe3a23722401da63af0b34f79f89", null ],
+    [ "mPhase", "classkytag04__class.html#a927e11e639041580d5481d7b6f602ec8", null ],
     [ "mpModel", "classkytag04__class.html#aac5d478e954e32ec2c4456086e746564", null ],
     [ "mStageNo", "classkytag04__class.html#aabe5f24bd1eeff9e8413bbf7ffd52a01", null ]
 ];

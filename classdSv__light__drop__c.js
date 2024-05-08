@@ -2,7 +2,6 @@ var classdSv__light__drop__c =
 [
     [ "getLightDropNum", "classdSv__light__drop__c.html#a9d8bdb6fb45ed58f6d82e847409c2082", null ],
     [ "getLightDropNum", "classdSv__light__drop__c.html#a07283176018a3d56485f7f9545b29952", null ],
-    [ "getLightDropNum", "classdSv__light__drop__c.html#a07283176018a3d56485f7f9545b29952", null ],
     [ "init", "classdSv__light__drop__c.html#aba248b194cd707e8c11e489dc72f5265", null ],
     [ "isLightDropGetFlag", "classdSv__light__drop__c.html#a18e94864c8ece741ad1fd25dd24ac2bd", null ],
     [ "isLightDropGetFlag", "classdSv__light__drop__c.html#af280d2cbe29373876334d8bfa5f9de9f", null ],

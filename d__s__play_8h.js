@@ -2,7 +2,6 @@ var d__s__play_8h =
 [
     [ "dScnPly_reg_childHIO_c", "classdScnPly__reg__childHIO__c.html", "classdScnPly__reg__childHIO__c" ],
     [ "dScnPly_reg_HIO_c", "classdScnPly__reg__HIO__c.html", "classdScnPly__reg__HIO__c" ],
-    [ "mDoHIO_entry_c", "structmDoHIO__entry__c.html", "structmDoHIO__entry__c" ],
     [ "dScnPly_preLoad_HIO_c", "classdScnPly__preLoad__HIO__c.html", "classdScnPly__preLoad__HIO__c" ],
     [ "dScnPly_env_otherHIO_c", "classdScnPly__env__otherHIO__c.html", "classdScnPly__env__otherHIO__c" ],
     [ "dScnPly_env_debugHIO_c", "classdScnPly__env__debugHIO__c.html", "classdScnPly__env__debugHIO__c" ],

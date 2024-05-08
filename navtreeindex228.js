@@ -1,8 +1,5 @@
 var NAVTREEINDEX228 =
 {
-"classdaItemKantera__c.html#a0b01ab0792075cf184a7c2dacdeef0d5":[3,0,660,10],
-"classdaItemKantera__c.html#a0d251e528e41f387c37c3042fc0fb5cc":[3,0,660,11],
-"classdaItemKantera__c.html#a0e5c256e5cf9dd4169fed70fc0005219":[3,0,660,5],
 "classdaItemKantera__c.html#a25591a9391ce82db80c2b7a6e4840398":[3,0,660,28],
 "classdaItemKantera__c.html#a30da6c6913d85f671c04caa7fe714b98":[3,0,660,38],
 "classdaItemKantera__c.html#a3ffb8f7113cb764dc51b7d4192a30b2b":[3,0,660,18],
@@ -35,8 +32,8 @@ var NAVTREEINDEX228 =
 "classdaItemKantera__c.html#ae051ce97fb37767ead1148d2060ff7da":[3,0,660,24],
 "classdaItemKantera__c.html#ae15765fc00ac9cb3cfac81808d5be18c":[3,0,660,35],
 "classdaItemKantera__c.html#ae3c3a82a3fd4a692b460de188a50fb46":[3,0,660,2],
-"classdaItemKantera__c.html#ae7557bc1757ef2c07c0062ddab72f46c":[3,0,660,0],
 "classdaItemKantera__c.html#ae7557bc1757ef2c07c0062ddab72f46c":[3,0,660,1],
+"classdaItemKantera__c.html#ae7557bc1757ef2c07c0062ddab72f46c":[3,0,660,0],
 "classdaItemKantera__c.html#af0ff14affbc43803ee9b9437f6294d43":[3,0,660,6],
 "classdaItemKantera__c.html#af4f9d1dd8d4578ea148a8596f6c95ff6":[3,0,660,20],
 "classdaItemKantera__c.html#afda260a583a450eef5be8f22a216e32f":[3,0,660,36],
@@ -249,5 +246,8 @@ var NAVTREEINDEX228 =
 "classdaKago__c.html#a67f3be05325e54cdc641e38a72bab3c0":[3,0,663,76],
 "classdaKago__c.html#a69f9eae971577bcef4c489de47430b84":[3,0,663,12],
 "classdaKago__c.html#a6a8cb2c6c5e681359049957fa62f15c9":[3,0,663,130],
-"classdaKago__c.html#a6b7790547cb59a28c6c30057a1960bac":[3,0,663,14]
+"classdaKago__c.html#a6b7790547cb59a28c6c30057a1960bac":[3,0,663,14],
+"classdaKago__c.html#a6d954a65007172c0b7d4b69eb5dc54a9":[3,0,663,119],
+"classdaKago__c.html#a6ff837268de7e06b63e51b5d68bc4a33":[3,0,663,75],
+"classdaKago__c.html#a72a24b59ef13a0dc3e1610876ec712d5":[3,0,663,94]
 };

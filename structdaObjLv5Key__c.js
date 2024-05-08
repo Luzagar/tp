@@ -9,13 +9,19 @@ var structdaObjLv5Key__c =
     [ "Fall", "structdaObjLv5Key__c.html#a4c2ee7b7782e859516c1bbf0fbf770c2", null ],
     [ "Init", "structdaObjLv5Key__c.html#a7c24a950aa9c35fb9f6f2736d174928c", null ],
     [ "initCcSph", "structdaObjLv5Key__c.html#ad7901de7172d2769e163a044e0850414", null ],
+    [ "is_open", "structdaObjLv5Key__c.html#aaf2cab99243c18450bfb91b5f14cae1b", null ],
+    [ "keylock_open_start", "structdaObjLv5Key__c.html#ae0fba788cf982982f694327d92cf4e99", null ],
+    [ "keylock_shake_start", "structdaObjLv5Key__c.html#a542721f5826614b19069de5f4dab2c10", null ],
     [ "Land", "structdaObjLv5Key__c.html#a134e897666a3366a66b64dadf93014f1", null ],
     [ "Open", "structdaObjLv5Key__c.html#a4e9b17efe027c62d8de2099ebcf02658", null ],
     [ "setAction", "structdaObjLv5Key__c.html#af38c7f55d8bb878fbe53d1567dd4032a", null ],
     [ "setBaseMtx", "structdaObjLv5Key__c.html#a0b39418123283e54dcb514bb5732f65f", null ],
     [ "setBgc", "structdaObjLv5Key__c.html#a876b87c8d27f3eb488828324296592a6", null ],
     [ "setCcSph", "structdaObjLv5Key__c.html#ae0dd4cb7be0671b2dd5cef960c8a936d", null ],
+    [ "setStatus", "structdaObjLv5Key__c.html#af077086f5c3081a8e5385ff56ee771f5", null ],
     [ "Shake", "structdaObjLv5Key__c.html#a32da9fe7c27e33353d68f3b2357648ee", null ],
     [ "TranslateByNowDirect", "structdaObjLv5Key__c.html#a1f5b519fc95b8816e684bf3fed91f340", null ],
-    [ "Wait", "structdaObjLv5Key__c.html#a42dd01c4b799c1af785f8ebe8e310403", null ]
+    [ "Wait", "structdaObjLv5Key__c.html#a42dd01c4b799c1af785f8ebe8e310403", null ],
+    [ "field_0x568", "structdaObjLv5Key__c.html#a2fc54d61d5ef0fdd656986e95f879977", null ],
+    [ "mStatus", "structdaObjLv5Key__c.html#a3bef87e14b9af9a6f10fce0f05e0ce27", null ]
 ];

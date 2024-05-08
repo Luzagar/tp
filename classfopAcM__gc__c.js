@@ -56,7 +56,6 @@ var classfopAcM__gc__c =
     [ "gndCheck", "classfopAcM__gc__c.html#a3aa5963cc9be25562dc11e4dfb016d94", null ],
     [ "gndCheck", "classfopAcM__gc__c.html#a3aa5963cc9be25562dc11e4dfb016d94", null ],
     [ "gndCheck", "classfopAcM__gc__c.html#a3aa5963cc9be25562dc11e4dfb016d94", null ],
-    [ "gndCheck", "classfopAcM__gc__c.html#a3aa5963cc9be25562dc11e4dfb016d94", null ],
     [ "mGndCheck", "classfopAcM__gc__c.html#ab0cb6424a901301ae67000fbee23c317", null ],
     [ "mGndCheck", "classfopAcM__gc__c.html#a63b01df018c176387f340ec985887ada", null ],
     [ "mGroundY", "classfopAcM__gc__c.html#a4996b62af515031424f64b6ba2781252", null ]

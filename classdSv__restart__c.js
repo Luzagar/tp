@@ -11,7 +11,6 @@ var classdSv__restart__c =
     [ "setRoom", "classdSv__restart__c.html#a9cb6f7755ea17c95344bd1a255e61179", null ],
     [ "setRoom", "classdSv__restart__c.html#a9cb6f7755ea17c95344bd1a255e61179", null ],
     [ "setRoom", "classdSv__restart__c.html#a9cb6f7755ea17c95344bd1a255e61179", null ],
-    [ "setRoom", "classdSv__restart__c.html#a9cb6f7755ea17c95344bd1a255e61179", null ],
     [ "setRoomParam", "classdSv__restart__c.html#af67a33de41dd67976479ea4c854348cf", null ],
     [ "setStartPoint", "classdSv__restart__c.html#a3a4ad7cca6c51473e404e0025df90ce8", null ],
     [ "field_0x01", "classdSv__restart__c.html#a8ee8fb30979947fdf7374169eb2a3bfa", null ],

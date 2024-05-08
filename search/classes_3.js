@@ -1,7 +1,7 @@
 var searchData=
 [
   ['c3buttonreset_0',['C3ButtonReset',['../structJUTGamePad_1_1C3ButtonReset.html',1,'JUTGamePad']]],
-  ['c_5flist_1',['c_list',['../structdaBalloon2D__c_1_1c__list.html',1,'daBalloon2D_c::c_list'],['../structdaCoach2D__c_1_1c__list.html',1,'daCoach2D_c::c_list']]],
+  ['c_5flist_1',['c_list',['../classdaBalloon2D__c_1_1c__list.html',1,'daBalloon2D_c::c_list'],['../structdaCoach2D__c_1_1c__list.html',1,'daCoach2D_c::c_list']]],
   ['callbackargs_2',['CallbackArgs',['../structCallbackArgs.html',1,'']]],
   ['callbackobject_3',['CallbackObject',['../structCallbackObject.html',1,'']]],
   ['camera_5fclass_4',['camera_class',['../classcamera__class.html',1,'']]],
@@ -76,7 +76,7 @@ var searchData=
   ['chain_5fs_73',['chain_s',['../structdaObjCBlk__c_1_1chain__s.html',1,'daObjCBlk_c::chain_s'],['../structdaObjCwall__c_1_1chain__s.html',1,'daObjCwall_c::chain_s'],['../structdaObjSwChain__c_1_1chain__s.html',1,'daObjSwChain_c::chain_s'],['../structchain__s.html',1,'chain_s']]],
   ['chainpos_74',['chainpos',['../structdaObjKLift00__c_1_1ChainPos.html',1,'daObjKLift00_c::ChainPos'],['../structdaObjLv4Chan__c_1_1ChainPos.html',1,'daObjLv4Chan_c::ChainPos']]],
   ['charinfo_5fc_75',['CharInfo_c',['../structCharInfo__c.html',1,'']]],
-  ['cheadscore_76',['CHeadScore',['../structdaBalloon2D__c_1_1CHeadScore.html',1,'daBalloon2D_c']]],
+  ['cheadscore_76',['CHeadScore',['../classdaBalloon2D__c_1_1CHeadScore.html',1,'daBalloon2D_c']]],
   ['chkinfo_77',['ChkInfo',['../structdCamBGChk__c_1_1ChkInfo.html',1,'dCamBGChk_c']]],
   ['chrinfo_5fc_78',['ChrInfo_c',['../classChrInfo__c.html',1,'']]],
   ['circlebuffer_79',['CircleBuffer',['../structCircleBuffer.html',1,'']]],

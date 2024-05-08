@@ -67,7 +67,6 @@ var classdCamera__c =
     [ "Eye", "classdCamera__c.html#addf0b1314506fe7de14cfc45547bcdf9", null ],
     [ "Eye", "classdCamera__c.html#addf0b1314506fe7de14cfc45547bcdf9", null ],
     [ "Eye", "classdCamera__c.html#addf0b1314506fe7de14cfc45547bcdf9", null ],
-    [ "Eye", "classdCamera__c.html#addf0b1314506fe7de14cfc45547bcdf9", null ],
     [ "eyePos", "classdCamera__c.html#aafa0e1988f313c47ca7d3da0000cc8c0", null ],
     [ "fixedFrameCamera", "classdCamera__c.html#a14d4546c1220cf15326214154df681df", null ],
     [ "fixedFrameEvCamera", "classdCamera__c.html#a6db79e5e15b277ef731494a17bb9ae97", null ],

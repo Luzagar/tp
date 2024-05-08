@@ -3,7 +3,7 @@ var d__a__tbox_8cpp =
     [ "request_of_phase_process_class", "structrequest__of__phase__process__class.html", "structrequest__of__phase__process__class" ],
     [ "csXyz", "classcsXyz.html", "classcsXyz" ],
     [ "mDoMtx_stack_c", "classmDoMtx__stack__c.html", "classmDoMtx__stack__c" ],
-    [ "mDoHIO_entry_c", "structmDoHIO__entry__c.html", "structmDoHIO__entry__c" ],
+    [ "mDoHIO_entry_c", "classmDoHIO__entry__c.html", "classmDoHIO__entry__c" ],
     [ "mDoExt_brkAnm", "classmDoExt__brkAnm.html", "classmDoExt__brkAnm" ],
     [ "mDoExt_bckAnm", "classmDoExt__bckAnm.html", "classmDoExt__bckAnm" ],
     [ "mDoExt_baseAnm", "classmDoExt__baseAnm.html", "classmDoExt__baseAnm" ],

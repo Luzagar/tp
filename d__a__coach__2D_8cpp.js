@@ -1,7 +1,7 @@
 var d__a__coach__2D_8cpp =
 [
     [ "request_of_phase_process_class", "structrequest__of__phase__process__class.html", "structrequest__of__phase__process__class" ],
-    [ "mDoHIO_entry_c", "structmDoHIO__entry__c.html", "structmDoHIO__entry__c" ],
+    [ "mDoHIO_entry_c", "classmDoHIO__entry__c.html", "classmDoHIO__entry__c" ],
     [ "fopAc_ac_c", "structfopAc__ac__c.html", "structfopAc__ac__c" ],
     [ "daCoach2D_c", "structdaCoach2D__c.html", "structdaCoach2D__c" ],
     [ "daCoach2D_c::c_list", "structdaCoach2D__c_1_1c__list.html", "structdaCoach2D__c_1_1c__list" ],

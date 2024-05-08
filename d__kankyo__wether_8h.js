@@ -28,6 +28,8 @@ var d__kankyo__wether_8h =
     [ "dKyw_get_wind_pow", "d__kankyo__wether_8h.html#a8ade0472300e07dae6c87c9daa79e399", null ],
     [ "dKyw_get_wind_vec", "d__kankyo__wether_8h.html#a1218af3b785ed95dc648175f22b3abdd", null ],
     [ "dKyw_get_wind_vecpow", "d__kankyo__wether_8h.html#aec21e33f3a8b5390f7ec3d26cffcfdac", null ],
+    [ "dKyw_plight_collision_set", "d__kankyo__wether_8h.html#ae16fd933ab5c8c4e93127798e95bd9b6", null ],
+    [ "dKyw_pntlight_collision_get_info", "d__kankyo__wether_8h.html#a17d30742d88a3bc8caa9d9d8cb1072c0", null ],
     [ "dKyw_pntwind_cut", "d__kankyo__wether_8h.html#a016194eacac377b7836d56371a94f18c", null ],
     [ "dKyw_pntwind_get_vecpow", "d__kankyo__wether_8h.html#a62dae120d49ab06dddb0a5d2e861a88e", null ],
     [ "dKyw_pntwind_init", "d__kankyo__wether_8h.html#adbde0a2ee1a3437de994a9fc2df363f5", null ],
