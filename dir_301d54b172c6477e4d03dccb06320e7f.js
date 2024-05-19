@@ -9,6 +9,7 @@ var dir_301d54b172c6477e4d03dccb06320e7f =
     [ "char_io.h", "char__io_8h.html", "char__io_8h" ],
     [ "cmath.h", "cmath_8h.html", "cmath_8h" ],
     [ "critical_regions.h", "critical__regions_8h.html", "critical__regions_8h" ],
+    [ "cstring.h", "cstring_8h.html", "cstring_8h" ],
     [ "ctype.h", "ctype_8h.html", "ctype_8h" ],
     [ "direct_io.h", "direct__io_8h.html", "direct__io_8h" ],
     [ "extras.h", "extras_8h.html", "extras_8h" ],

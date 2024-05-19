@@ -11,7 +11,7 @@ var dir_d6b0d4f987b95c78b3cfcc31952546fc =
     [ "d_msg_scrn_explain.h", "d__msg__scrn__explain_8h.html", "d__msg__scrn__explain_8h" ],
     [ "d_msg_scrn_howl.h", "d__msg__scrn__howl_8h.html", "d__msg__scrn__howl_8h" ],
     [ "d_msg_scrn_item.h", "d__msg__scrn__item_8h.html", null ],
-    [ "d_msg_scrn_jimaku.h", "d__msg__scrn__jimaku_8h.html", null ],
+    [ "d_msg_scrn_jimaku.h", "d__msg__scrn__jimaku_8h.html", "d__msg__scrn__jimaku_8h" ],
     [ "d_msg_scrn_kanban.h", "d__msg__scrn__kanban_8h.html", "d__msg__scrn__kanban_8h" ],
     [ "d_msg_scrn_light.h", "d__msg__scrn__light_8h.html", "d__msg__scrn__light_8h" ],
     [ "d_msg_scrn_place.h", "d__msg__scrn__place_8h.html", "d__msg__scrn__place_8h" ],

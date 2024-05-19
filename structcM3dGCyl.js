@@ -145,7 +145,6 @@ var structcM3dGCyl =
     [ "~cM3dGCyl", "structcM3dGCyl.html#a57bb0d7782c4a20aa332848c1d7a9298", null ],
     [ "~cM3dGCyl", "structcM3dGCyl.html#a57bb0d7782c4a20aa332848c1d7a9298", null ],
     [ "~cM3dGCyl", "structcM3dGCyl.html#a57bb0d7782c4a20aa332848c1d7a9298", null ],
-    [ "~cM3dGCyl", "structcM3dGCyl.html#a57bb0d7782c4a20aa332848c1d7a9298", null ],
     [ "calcMinMax", "structcM3dGCyl.html#a489397f5263f5b4339c202217466be13", null ],
     [ "Cross", "structcM3dGCyl.html#a2dbd78c60c6d7c257f67c0b16d6f9785", null ],
     [ "cross", "structcM3dGCyl.html#a1d9bb4a4716bcee464c19b480ca25263", null ],

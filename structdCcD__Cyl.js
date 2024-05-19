@@ -174,7 +174,6 @@ var structdCcD__Cyl =
     [ "Set", "structdCcD__Cyl.html#a91722da9ba3e1cd6cde3ec580f62918e", null ],
     [ "Set", "structdCcD__Cyl.html#a91722da9ba3e1cd6cde3ec580f62918e", null ],
     [ "Set", "structdCcD__Cyl.html#a91722da9ba3e1cd6cde3ec580f62918e", null ],
-    [ "Set", "structdCcD__Cyl.html#a91722da9ba3e1cd6cde3ec580f62918e", null ],
     [ "StartCAt", "structdCcD__Cyl.html#a2745b061f69f66e2566f6891100be9aa", null ],
     [ "StartCAt", "structdCcD__Cyl.html#a2745b061f69f66e2566f6891100be9aa", null ]
 ];

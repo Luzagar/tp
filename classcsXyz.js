@@ -310,7 +310,6 @@ var classcsXyz =
     [ "~csXyz", "classcsXyz.html#a65ce710680ff32a506c46b1775fa1211", null ],
     [ "csXyz", "classcsXyz.html#ac21d17e55e42177c336bba7894c65d91", null ],
     [ "csXyz", "classcsXyz.html#a9a0b5223d2dbfe112c75b871fec06889", null ],
-    [ "csXyz", "classcsXyz.html#a9a0b5223d2dbfe112c75b871fec06889", null ],
     [ "GetX", "classcsXyz.html#a6a0a4334e89dc7a11a8bdaf140785380", null ],
     [ "GetY", "classcsXyz.html#a8914736e191aa6e6bc88e6ad96892fd0", null ],
     [ "GetZ", "classcsXyz.html#a621deaa80d5d561a5d060e97f962b8ba", null ],

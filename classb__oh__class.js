@@ -1,6 +1,9 @@
 var classb__oh__class =
 [
-    [ "field_0x1F58", "classb__oh__class.html#ac3f98e2630f3259666edaf9f6fdfe3c1", null ],
+    [ "field_0x1F58", "classb__oh__class.html#a42e9592c93201b02c8a879b5b24566bd", null ],
+    [ "field_0x1f68", "classb__oh__class.html#a2ead7a8e76bff450e79d2b3ef33c2684", null ],
+    [ "field_0x1f74", "classb__oh__class.html#a0d8f68eca95cf0ff41925062eb9250ef", null ],
+    [ "field_0x1f7c", "classb__oh__class.html#a8099b6716bcebfdea8b0a13568e6bc8a", null ],
     [ "field_0x1f80", "classb__oh__class.html#a949fc31c3d48d0a5a8d0c40f2bf5db11", null ],
     [ "field_0x1F84", "classb__oh__class.html#ac807b700ca7b93eeb6214855007e8b2a", null ],
     [ "field_0x1f86", "classb__oh__class.html#ae8dd8e15c0985c23ee49f6682139afe0", null ],

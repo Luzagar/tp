@@ -19,6 +19,5 @@ var structdaObjDrop__c =
     [ "modeParentWait", "structdaObjDrop__c.html#abca07e915fc1b66229b397acf25b223f", null ],
     [ "modeWait", "structdaObjDrop__c.html#a58f756d43b9b39f7c1b71254f11d4987", null ],
     [ "removeBodyEffect", "structdaObjDrop__c.html#a6f0686d8ba96ec804533365ce123943f", null ],
-    [ "removeLineEffect", "structdaObjDrop__c.html#ae116c84d81bb20d198549c89959c53ca", null ],
-    [ "setPos", "structdaObjDrop__c.html#aff988458e8c63d42b7c09184a3401488", null ]
+    [ "removeLineEffect", "structdaObjDrop__c.html#ae116c84d81bb20d198549c89959c53ca", null ]
 ];

@@ -1,6 +1,5 @@
 var structJ2DAnmColorKey =
 [
-    [ "~J2DAnmColorKey", "structJ2DAnmColorKey.html#a9ce8433f55c08a465d35e73dd643dc7b", null ],
     [ "J2DAnmColorKey", "structJ2DAnmColorKey.html#a1cf9fc5a2042e2d9201d7ec1e8422587", null ],
     [ "~J2DAnmColorKey", "structJ2DAnmColorKey.html#a9bc9fd7887ad50255c29d13e2285f2e5", null ],
     [ "getColor", "structJ2DAnmColorKey.html#a99c1a4579eb4967e310df63dd335902f", null ],

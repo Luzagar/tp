@@ -28,6 +28,17 @@ var f__op__actor_8h =
       [ "dEvtCnd_CANTALKITEM_e", "f__op__actor_8h.html#a6a25f0a5e67da59d420e1ffd85414c26a65b4eaa1f98e851e9de03513523feda5", null ],
       [ "dEvtCnd_DUMMY", "f__op__actor_8h.html#a6a25f0a5e67da59d420e1ffd85414c26acfc9ebc5a18f3de36d5d0e4f4fb43367", null ]
     ] ],
+    [ "fopAc_attention_type", "f__op__actor_8h.html#a508deab8aa28791ed8d34c2304095e0a", [
+      [ "fopAc_attn_LOCK_e", "f__op__actor_8h.html#a508deab8aa28791ed8d34c2304095e0aaedd6de4f62e81eeb70cdbdf6c47c331d", null ],
+      [ "fopAc_attn_TALK_e", "f__op__actor_8h.html#a508deab8aa28791ed8d34c2304095e0aaf3aa22c60ccd2395a345e88d36ade504", null ],
+      [ "fopAc_attn_BATTLE_e", "f__op__actor_8h.html#a508deab8aa28791ed8d34c2304095e0aadde61839e04400789362f4874bd40129", null ],
+      [ "fopAc_attn_SPEAK_e", "f__op__actor_8h.html#a508deab8aa28791ed8d34c2304095e0aa383902705908988a41dff95b0de819bd", null ],
+      [ "fopAc_attn_CARRY_e", "f__op__actor_8h.html#a508deab8aa28791ed8d34c2304095e0aaf22ca010a7dcb1d976b11b72231bc282", null ],
+      [ "fopAc_attn_DOOR_e", "f__op__actor_8h.html#a508deab8aa28791ed8d34c2304095e0aa1b2cf01ac824871b5d40eb74473394ca", null ],
+      [ "fopAc_attn_JUEL_e", "f__op__actor_8h.html#a508deab8aa28791ed8d34c2304095e0aaf517cebe6b97c3993bd14d15daf7b3ba", null ],
+      [ "fopAc_attn_ETC_e", "f__op__actor_8h.html#a508deab8aa28791ed8d34c2304095e0aa7bb572e01057907e734040cc7b734a21", null ],
+      [ "fopAc_attn_CHECK_e", "f__op__actor_8h.html#a508deab8aa28791ed8d34c2304095e0aad5c17d2a3edf2bb193dd82da86ed1628", null ]
+    ] ],
     [ "fopAc_Condition_e", "f__op__actor_8h.html#ab1287a1d957b35b3d72048712ba82c35", [
       [ "fopAcCnd_NOEXEC_e", "f__op__actor_8h.html#ab1287a1d957b35b3d72048712ba82c35a9aa3bb8e397455262c2ad75f7aaca652", null ],
       [ "fopAcCnd_NODRAW_e", "f__op__actor_8h.html#ab1287a1d957b35b3d72048712ba82c35ab4dc4cb96b3a19a029dd15537a66b1e2", null ],

@@ -116,7 +116,6 @@ var classdPa__control__c_1_1level__c =
     [ "getEmitter", "classdPa__control__c_1_1level__c.html#ab1b8edc81d7cef14b0d2cba6ee4b08df", null ],
     [ "getEmitter", "classdPa__control__c_1_1level__c.html#ab1b8edc81d7cef14b0d2cba6ee4b08df", null ],
     [ "getEmitter", "classdPa__control__c_1_1level__c.html#ab1b8edc81d7cef14b0d2cba6ee4b08df", null ],
-    [ "getEmitter", "classdPa__control__c_1_1level__c.html#ab1b8edc81d7cef14b0d2cba6ee4b08df", null ],
     [ "EMITTER_MAX", "classdPa__control__c_1_1level__c.html#a46059044cf1703d5d9e43bc807f8952f", null ],
     [ "field_0x0", "classdPa__control__c_1_1level__c.html#ae521d6fe9dc7077a4b20fad97ff0b5c6", null ],
     [ "field_0x5", "classdPa__control__c_1_1level__c.html#ae49d3f20870e8ba12440cad4920b6cf0", null ],

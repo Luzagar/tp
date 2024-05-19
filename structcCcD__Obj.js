@@ -30,7 +30,6 @@ var structcCcD__Obj =
     [ "GetAc", "structcCcD__Obj.html#a0f594e4e5327684cc90912cee36cb81d", null ],
     [ "GetAc", "structcCcD__Obj.html#a0f594e4e5327684cc90912cee36cb81d", null ],
     [ "GetAc", "structcCcD__Obj.html#a0f594e4e5327684cc90912cee36cb81d", null ],
-    [ "GetAc", "structcCcD__Obj.html#a0f594e4e5327684cc90912cee36cb81d", null ],
     [ "GetDivideInfo", "structcCcD__Obj.html#a5dcfc1fce5848754e4e3b5ebac0249c7", null ],
     [ "GetGObjInf", "structcCcD__Obj.html#ae912fee1415de3336d64e1799a0e9f67", null ],
     [ "GetGObjInf", "structcCcD__Obj.html#a9b8c80f234e8aa05a910722ff9ee17df", null ],

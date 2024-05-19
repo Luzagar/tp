@@ -11,6 +11,8 @@ var classcM3dGLin =
     [ "GetEnd", "classcM3dGLin.html#a48765e6e6789fade1a7fcd5feba409fa", null ],
     [ "GetEndP", "classcM3dGLin.html#ac947a9df5e5a57a13dba3d3105494187", null ],
     [ "GetEndP", "classcM3dGLin.html#a1f571063ca2ff0ce7efe36d810fc6628", null ],
+    [ "GetStart", "classcM3dGLin.html#ac7787d45895f980050631f82aa49a9c3", null ],
+    [ "GetStart", "classcM3dGLin.html#aae547f83a3e6c427c6d4cd0daca3cd06", null ],
     [ "GetStartP", "classcM3dGLin.html#a29581f2588fcdb2752b8808f67d2eb20", null ],
     [ "GetStartP", "classcM3dGLin.html#a172cf1e2ae6cba281c0eab888e6c7591", null ],
     [ "set", "classcM3dGLin.html#ae438330717a682c4ed6fe0956e0898a0", null ],

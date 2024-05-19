@@ -7,7 +7,7 @@ var d__a__obj__ita_8cpp =
     [ "fopAcM_wt_c", "classfopAcM__wt__c.html", "classfopAcM__wt__c" ],
     [ "daObj_ITA_HIO_c", "structdaObj__ITA__HIO__c.html", "structdaObj__ITA__HIO__c" ],
     [ "daObjIta_c", "structdaObjIta__c.html", "structdaObjIta__c" ],
-    [ "daE_YMB_c", "structdaE__YMB__c.html", "structdaE__YMB__c" ],
+    [ "daE_YMB_c", "classdaE__YMB__c.html", "classdaE__YMB__c" ],
     [ "dVibration_c", "classdVibration__c.html", "classdVibration__c" ],
     [ "dKy_tevstr_c", "classdKy__tevstr__c.html", "classdKy__tevstr__c" ],
     [ "dScnKy_env_light_c", "classdScnKy__env__light__c.html", "classdScnKy__env__light__c" ],

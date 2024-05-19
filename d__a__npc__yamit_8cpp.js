@@ -7,7 +7,7 @@ var d__a__npc__yamit_8cpp =
     [ "Z2Creature", "classZ2Creature.html", "classZ2Creature" ],
     [ "mDoExt_McaMorfSO", "classmDoExt__McaMorfSO.html", "classmDoExt__McaMorfSO" ],
     [ "fopAc_ac_c", "structfopAc__ac__c.html", "structfopAc__ac__c" ],
-    [ "daTagYami_c", "structdaTagYami__c.html", "structdaTagYami__c" ],
+    [ "daTagYami_c", "classdaTagYami__c.html", "classdaTagYami__c" ],
     [ "daNpcT_faceMotionAnmData_c", "structdaNpcT__faceMotionAnmData__c.html", "structdaNpcT__faceMotionAnmData__c" ],
     [ "daNpcT_MotionSeqMngr_c", "classdaNpcT__MotionSeqMngr__c.html", "classdaNpcT__MotionSeqMngr__c" ],
     [ "daNpcT_MotionSeqMngr_c::sequenceStepData_c", "classdaNpcT__MotionSeqMngr__c_1_1sequenceStepData__c.html", "classdaNpcT__MotionSeqMngr__c_1_1sequenceStepData__c" ],

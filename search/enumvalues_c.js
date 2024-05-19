@@ -12,7 +12,7 @@ var searchData=
   ['left_5fjustification_9',['left_justification',['../printf_8c.html#a5b6c94a6a58fd00dcaa3f31eeea518c1a55e20456582284c2febd2d572bac966d',1,'printf.c']]],
   ['letter_10',['LETTER',['../d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2ab562468170d8ddc207e5ee43d9ee0a2e',1,'d_save.h']]],
   ['letter_5fclose_11',['LETTER_CLOSE',['../classdMw__c.html#a9c12bf96930db318a3d8b6704985facea46f118be0cce929e0a1d8a398d7837b6',1,'dMw_c']]],
-  ['letter_5fframe_12',['LETTER_FRAME',['../classdMeter__drawLetterHIO__c.html#ad7fe0295772ffb9be69c7c88534bdf9ea8e2ca2ae9ca215cbfcaf3c435fec5507',1,'dMeter_drawLetterHIO_c']]],
+  ['letter_5fframe_12',['LETTER_FRAME',['../classdMeter__drawLetterHIO__c.html#a761a4b3d7968b755d273b2288a645772a8e2ca2ae9ca215cbfcaf3c435fec5507',1,'dMeter_drawLetterHIO_c']]],
   ['letter_5fmove_13',['LETTER_MOVE',['../classdMw__c.html#a9c12bf96930db318a3d8b6704985facea37aa6d875e67dd1c019a1a542bf05b66',1,'dMw_c']]],
   ['letter_5fopen_14',['LETTER_OPEN',['../classdMw__c.html#a9c12bf96930db318a3d8b6704985facea622a076fa6cb335d50ffa5745e14975d',1,'dMw_c']]],
   ['light_5farrow_15',['LIGHT_ARROW',['../d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2a78ce01d1b7c5edb6cf40d8b83021a43b',1,'d_save.h']]],
@@ -50,6 +50,9 @@ var searchData=
   ['lv2_5fboss_5fkey_47',['LV2_BOSS_KEY',['../d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2a4449e3ab87df1dcb3db9ee43bc2e739c',1,'d_save.h']]],
   ['lv2_5fsoup_48',['LV2_SOUP',['../d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2a625faf766e6baacd415d37dd28e84ba6',1,'d_save.h']]],
   ['lv3_5fsoup_49',['LV3_SOUP',['../d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2a03b740b7b7a56805aa4c152cb55f93ac',1,'d_save.h']]],
-  ['lv5_5fboss_5fkey_50',['LV5_BOSS_KEY',['../d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2a22d4f95a12b6f18fe05b6388e6d10d37',1,'d_save.h']]],
-  ['lv7_5fdungeon_5fexit_51',['LV7_DUNGEON_EXIT',['../d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2a67c91966c3e6b98af1cb4673287648df',1,'d_save.h']]]
+  ['lv3waterb_5fact_5fend_50',['LV3WATERB_ACT_END',['../d__a__obj__lv3WaterB_8h.html#a743a6b16a2885438e07dc473f6c5b3aaa2ae4e28f58bbada5fc31d896b0cc4f46',1,'d_a_obj_lv3WaterB.h']]],
+  ['lv3waterb_5fact_5fremove_51',['LV3WATERB_ACT_REMOVE',['../d__a__obj__lv3WaterB_8h.html#a743a6b16a2885438e07dc473f6c5b3aaada69c8c8b0803dd1a2cce91a72957050',1,'d_a_obj_lv3WaterB.h']]],
+  ['lv3waterb_5fact_5fwait_52',['LV3WATERB_ACT_WAIT',['../d__a__obj__lv3WaterB_8h.html#a743a6b16a2885438e07dc473f6c5b3aaac677af203d9cbd70d459a4ed7ac8e32f',1,'d_a_obj_lv3WaterB.h']]],
+  ['lv5_5fboss_5fkey_53',['LV5_BOSS_KEY',['../d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2a22d4f95a12b6f18fe05b6388e6d10d37',1,'d_save.h']]],
+  ['lv7_5fdungeon_5fexit_54',['LV7_DUNGEON_EXIT',['../d__save_8h.html#a0a48966e59817e2d4685d1f0b44b33f2a67c91966c3e6b98af1cb4673287648df',1,'d_save.h']]]
 ];

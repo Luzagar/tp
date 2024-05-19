@@ -1,8 +1,5 @@
 var NAVTREEINDEX89 =
 {
-"classJASSeqReader.html#afe17f383ddc13aac916f3843a723d391":[1,1,2,75,8],
-"classJASTaskThread.html":[1,1,2,77],
-"classJASTaskThread.html#a0617674129f2ab0e294e4eb60cfe667a":[1,1,2,77,9],
 "classJASTaskThread.html#a0d6b429b91fb4dababc035848d85bd14":[1,1,2,77,5],
 "classJASTaskThread.html#a1c79fd0e1c4b099447d57395f6e291a8":[1,1,2,77,8],
 "classJASTaskThread.html#a450e3ac562c4d79d90ebe328fd15f1ba":[1,1,2,77,11],
@@ -249,5 +246,8 @@ var NAVTREEINDEX89 =
 "classJAU__JAIInitializer.html#a5e660dfa5cb3d295b744f19ca2176d94":[1,1,2,94,4],
 "classJAU__JAIInitializer.html#ae7570d23d28d431bc11fadd6ab93f6b2":[1,1,2,94,5],
 "classJAU__JAIInitializer.html#ae9328abc907821c52fb14e0029c064f7":[1,1,2,94,2],
-"classJAU__JASInitializer.html":[1,1,2,93]
+"classJAU__JASInitializer.html":[1,1,2,93],
+"classJAU__JASInitializer.html#a0bf2b1576f3a61ab1607d85f803547e1":[1,1,2,93,14],
+"classJAU__JASInitializer.html#a1250a900e0d8cb7c6d716d6bc0be7328":[1,1,2,93,5],
+"classJAU__JASInitializer.html#a3121f3e79ca7df76af2db58878eee487":[1,1,2,93,1]
 };

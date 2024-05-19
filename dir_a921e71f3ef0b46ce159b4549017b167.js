@@ -31,7 +31,7 @@ var dir_a921e71f3ef0b46ce159b4549017b167 =
     [ "d_ev_camera.cpp", "d__ev__camera_8cpp.html", "d__ev__camera_8cpp" ],
     [ "d_eye_hl.cpp", "d__eye__hl_8cpp.html", "d__eye__hl_8cpp" ],
     [ "d_gameover.cpp", "d__gameover_8cpp.html", "d__gameover_8cpp" ],
-    [ "d_insect.cpp", "d__insect_8cpp.html", null ],
+    [ "d_insect.cpp", "d__insect_8cpp.html", "d__insect_8cpp" ],
     [ "d_item.cpp", "d__item_8cpp.html", "d__item_8cpp" ],
     [ "d_item_data.cpp", "d__item__data_8cpp.html", null ],
     [ "d_jnt_col.cpp", "d__jnt__col_8cpp.html", "d__jnt__col_8cpp" ],

@@ -1,8 +1,5 @@
 var NAVTREEINDEX88 =
 {
-"classJASAramStream.html#afac4b8dbb3af0891ec92a7af52714c81":[1,1,2,35,31],
-"classJASAramStream.html#afbb16726e6d7510c9be3db0052bb5e54":[1,1,2,35,49],
-"classJASBankList.html":[1,1,2,39],
 "classJASBankList.html#a2c503bed27d6ed90065d5c2fb30c1a2c":[1,1,2,39,0],
 "classJASBankTable.html":[1,1,2,40],
 "classJASBankTable.html#a7c9be66abd1c3d470bd870585ef3e078":[1,1,2,40,2],
@@ -249,5 +246,8 @@ var NAVTREEINDEX88 =
 "classJASSeqReader.html#acf55db0146e50ba2a7abcdd9db907210":[1,1,2,75,5],
 "classJASSeqReader.html#ad17e191da8f92e1047ac5dcdabc9cc6c":[1,1,2,75,12],
 "classJASSeqReader.html#ad2233671a54da6f747a3f343f8a228a5":[1,1,2,75,19],
-"classJASSeqReader.html#ad746d3cc11128d22114c2055924fe001":[1,1,2,75,7]
+"classJASSeqReader.html#ad746d3cc11128d22114c2055924fe001":[1,1,2,75,7],
+"classJASSeqReader.html#afe17f383ddc13aac916f3843a723d391":[1,1,2,75,8],
+"classJASTaskThread.html":[1,1,2,77],
+"classJASTaskThread.html#a0617674129f2ab0e294e4eb60cfe667a":[1,1,2,77,9]
 };

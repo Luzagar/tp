@@ -4,7 +4,6 @@ var structdMsgScrnLight__c =
     [ "dMsgScrnLight_c", "structdMsgScrnLight__c.html#ab64e6ec777ee6790322764a352ec162b", null ],
     [ "dMsgScrnLight_c", "structdMsgScrnLight__c.html#ab64e6ec777ee6790322764a352ec162b", null ],
     [ "dMsgScrnLight_c", "structdMsgScrnLight__c.html#ab64e6ec777ee6790322764a352ec162b", null ],
-    [ "dMsgScrnLight_c", "structdMsgScrnLight__c.html#ab64e6ec777ee6790322764a352ec162b", null ],
     [ "~dMsgScrnLight_c", "structdMsgScrnLight__c.html#a2c6881d11f2947b1589878cbef200fae", null ],
     [ "dMsgScrnLight_c", "structdMsgScrnLight__c.html#ab64e6ec777ee6790322764a352ec162b", null ],
     [ "draw", "structdMsgScrnLight__c.html#af3f472f2b6f8926c196e7578fe99af9a", null ],

@@ -102,7 +102,7 @@ var classdMsgObject__HIO__c =
     [ "mSaveSeqMsgDebug", "classdMsgObject__HIO__c.html#a0e5895de44c4f984448f1566d9d1c057", null ],
     [ "mSaveSeqMsgIndex", "classdMsgObject__HIO__c.html#aec73ee89d1a4d6b2e130e243fb4e3f6f", null ],
     [ "mSelMsgInactiveCol", "classdMsgObject__HIO__c.html#ab6f25c226c8ede15dde90cecb54e2a74", null ],
-    [ "mSelWeightFrame", "classdMsgObject__HIO__c.html#a9711117aa9284f4986915d67c08ef079", null ],
+    [ "mSelWaitFrame", "classdMsgObject__HIO__c.html#aeb356d504082d21b4a6ca861702c64f9", null ],
     [ "mStageTitleBaseAlpha", "classdMsgObject__HIO__c.html#a60eeb68755302652a437f7cdb4b9b500", null ],
     [ "mStageTitleBasePosX", "classdMsgObject__HIO__c.html#a0128efd7a087c9a5c7b55e4c3ecb8e35", null ],
     [ "mStageTitleBasePosY", "classdMsgObject__HIO__c.html#a60685ed53c3ee723d547563d4c07d8fb", null ],

@@ -34,6 +34,8 @@ var namespacestd =
     [ "lower_bound", "namespacestd.html#a41cc439c53681ab2c3c53497bb5ef97d", null ],
     [ "lower_bound", "namespacestd.html#a0a31ce05692935524531f2fede409746", null ],
     [ "sqrt", "namespacestd.html#a942e974bc18880905cbc6f16ee84fe25", null ],
+    [ "strcpy", "namespacestd.html#a14fde3fce17a68c5f2c2c9bb40fcd78a", null ],
+    [ "strlen", "namespacestd.html#a6097a85ba3ca98fa27144a87e0035486", null ],
     [ "uninitialized_copy", "namespacestd.html#ab8bbcf920087045c2ffed0fb8277646f", null ],
     [ "uninitialized_fill_n", "namespacestd.html#af995db2fcf846c60e15d87a920855e15", null ],
     [ "upper_bound", "namespacestd.html#af2c4c86486273d2ee66f42c9d67d0096", null ],

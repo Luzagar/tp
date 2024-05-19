@@ -14,7 +14,6 @@ var structZ2SoundObjMgr =
     [ "setBattleInit", "structZ2SoundObjMgr.html#a257a1583a3b0ef70932a83d33d2075f1", null ],
     [ "setForceBattleArea", "structZ2SoundObjMgr.html#aa383457320b0b14f0a934c95321f55e0", null ],
     [ "setForceBattleArea", "structZ2SoundObjMgr.html#aa383457320b0b14f0a934c95321f55e0", null ],
-    [ "setForceBattleArea", "structZ2SoundObjMgr.html#aa383457320b0b14f0a934c95321f55e0", null ],
     [ "setGhostEnemyState", "structZ2SoundObjMgr.html#a4c22b66970d19658191113b04c9441c8", null ],
     [ "setGhostEnemyState", "structZ2SoundObjMgr.html#a4c22b66970d19658191113b04c9441c8", null ],
     [ "field_0x14", "structZ2SoundObjMgr.html#a8a58f11ffe09f5d33cf44c4d212232c2", null ],

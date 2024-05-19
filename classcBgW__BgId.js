@@ -56,7 +56,6 @@ var classcBgW__BgId =
     [ "ChkUsed", "classcBgW__BgId.html#af853c933e4cf0c3958a07d1131c9f27c", null ],
     [ "ChkUsed", "classcBgW__BgId.html#af853c933e4cf0c3958a07d1131c9f27c", null ],
     [ "ChkUsed", "classcBgW__BgId.html#af853c933e4cf0c3958a07d1131c9f27c", null ],
-    [ "ChkUsed", "classcBgW__BgId.html#af853c933e4cf0c3958a07d1131c9f27c", null ],
     [ "Ct", "classcBgW__BgId.html#a23fb0e47c3d2f11fe4996a9a2f66b576", null ],
     [ "GetId", "classcBgW__BgId.html#abf4ccf1cc65d39878e1de99226b059e1", null ],
     [ "Regist", "classcBgW__BgId.html#a37889bddd3274225f16a440a57daf30c", null ],

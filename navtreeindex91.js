@@ -1,8 +1,5 @@
 var NAVTREEINDEX91 =
 {
-"classJKRAramStreamCommand.html#ad5408d93604622dc666bd63d54386557":[1,1,5,6,14],
-"classJKRAramStreamCommand.html#adc09b77f125bd4d8952d083eb8cd9723":[1,1,5,6,6],
-"classJKRAramStreamCommand.html#afda72af9bb2817e59153aa2ca76203aa":[1,1,5,6,1],
 "classJKRArcFinder.html":[1,1,5,26],
 "classJKRArcFinder.html#a10e6a7f9d41eb8b2ae88026002c65feb":[1,1,5,26,3],
 "classJKRArcFinder.html#a2bf08e3d5e5ca041369ef50e9ddb73ad":[1,1,5,26,0],
@@ -249,5 +246,8 @@ var NAVTREEINDEX91 =
 "classJKRFileFinder.html":[1,1,5,25],
 "classJKRFileFinder.html#a19ffbedb52db28ccb88413f29ba002b2":[1,1,5,25,8],
 "classJKRFileFinder.html#a27db37a4217cb593cb5afe96b0f03e08":[1,1,5,25,3],
-"classJKRFileFinder.html#a40929084f8aae5552cf749e954a4ef70":[1,1,5,25,0]
+"classJKRFileFinder.html#a40929084f8aae5552cf749e954a4ef70":[1,1,5,25,0],
+"classJKRFileFinder.html#a56349cc325b1a2e96bd1f95cb55f5e82":[1,1,5,25,1],
+"classJKRFileFinder.html#a9731fb1c5d3f32964f1f80cf477f70cd":[1,1,5,25,5],
+"classJKRFileFinder.html#a97f890a5f153b72824a97c225c519e6a":[1,1,5,25,10]
 };

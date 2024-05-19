@@ -12,7 +12,6 @@ var structJKRFileLoader =
     [ "getFirstFile", "structJKRFileLoader.html#abfbd476a302a51d802d96867447773f9", null ],
     [ "getGlbResource", "structJKRFileLoader.html#ada6ebc145f01ee5abf420054d21c41b7", null ],
     [ "getGlbResource", "structJKRFileLoader.html#a6f55ecbb2eb297347a63ba652e4724d9", null ],
-    [ "getGlbResource", "structJKRFileLoader.html#a6f55ecbb2eb297347a63ba652e4724d9", null ],
     [ "getGlbResource", "structJKRFileLoader.html#aeb2ee15d3595d22cf03ba9e2b01995fb", null ],
     [ "getGlbResource", "structJKRFileLoader.html#afb59f81cdc4e6c19f4f7b81573eaf6c9", null ],
     [ "getResource", "structJKRFileLoader.html#a70e74e6484b7b3375b8cdc88ce49b1dd", null ],

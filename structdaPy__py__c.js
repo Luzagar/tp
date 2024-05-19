@@ -416,7 +416,6 @@ var structdaPy__py__c =
     [ "checkNowWolfEyeUp", "structdaPy__py__c.html#ac41458f475a39865060075e4b046c85e", null ],
     [ "checkNowWolfEyeUp", "structdaPy__py__c.html#ac41458f475a39865060075e4b046c85e", null ],
     [ "checkNowWolfEyeUp", "structdaPy__py__c.html#ac41458f475a39865060075e4b046c85e", null ],
-    [ "checkNowWolfEyeUp", "structdaPy__py__c.html#ac41458f475a39865060075e4b046c85e", null ],
     [ "checkNowWolfEyeUp", "structdaPy__py__c.html#a071c65dcf75e640a1ba1d38780d96d4d", null ],
     [ "checkNowWolfPowerUp", "structdaPy__py__c.html#a4cd695d869d749afef2168dfddabd6c1", null ],
     [ "checkOctaIealHang", "structdaPy__py__c.html#a4d4b12fdd904469f201c22fc171c8be3", null ],
