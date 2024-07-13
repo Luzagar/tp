@@ -1,6 +1,5 @@
 var d__a__bg__obj_8cpp =
 [
-    [ "spec_dat", "structspec__dat.html", "structspec__dat" ],
     [ "__construct_array", "d__a__bg__obj_8cpp.html#a58dbf4d2335fdc0e2065200543f5e4ea", null ],
     [ "__ct__10dCcD_GSttsFv", "d__a__bg__obj_8cpp.html#ae4cd09eb67ed2fb9bc6e87d5cea71757", null ],
     [ "__ct__12dCcD_GObjInfFv", "d__a__bg__obj_8cpp.html#a82707767df95e61051b39c65057a3d59", null ],
@@ -15,7 +14,7 @@ var d__a__bg__obj_8cpp =
     [ "__dt__8cM3dGAabFv", "d__a__bg__obj_8cpp.html#a0377e6e071fd0bf35e1cd21d4a4cb3b4", null ],
     [ "__dt__8cM3dGCylFv", "d__a__bg__obj_8cpp.html#a9dda5d981dca736934f3b7694b4ca1cd", null ],
     [ "__dt__8cM3dGPlaFv", "d__a__bg__obj_8cpp.html#aa068ed4560555dea4fae6948e9f897e1", null ],
-    [ "__dt__8cM3dGTriFv", "d__a__bg__obj_8cpp.html#a864ab7a8208494e0abb33c0cc09664a7", null ],
+    [ "__dt__8cM3dGTriFv", "d__a__bg__obj_8cpp.html#a9cbb9cdf4d72625aeb85146e4c7b1cb6", null ],
     [ "__dt__8dCcD_TriFv", "d__a__bg__obj_8cpp.html#adf7c57d4e269768b523354fb08646765", null ],
     [ "__mi__4cXyzCFRC3Vec", "d__a__bg__obj_8cpp.html#a1d9bcd9cce50109358430d7b8395557d", null ],
     [ "__nw__FUl", "d__a__bg__obj_8cpp.html#a2b05986531107cde8783fde25a9a7413", null ],

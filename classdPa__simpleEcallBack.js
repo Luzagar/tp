@@ -3,7 +3,6 @@ var classdPa__simpleEcallBack =
     [ "dPa_simpleEcallBack", "classdPa__simpleEcallBack.html#a3958b1e517588196010fa58b99590166", null ],
     [ "~dPa_simpleEcallBack", "classdPa__simpleEcallBack.html#a8b88385f58b2606b7cc7771183d06bd7", null ],
     [ "create", "classdPa__simpleEcallBack.html#abcb6ae9c9200aa025f6951eb73e64f85", null ],
-    [ "create", "classdPa__simpleEcallBack.html#a468f5ef320e4d717507ed4143ecab2c1", null ],
     [ "createEmitter", "classdPa__simpleEcallBack.html#a61815b6526794be31bcd19251aaffac2", null ],
     [ "draw", "classdPa__simpleEcallBack.html#abd32eb7edaec79fe58f29026cde10f1b", null ],
     [ "executeAfter", "classdPa__simpleEcallBack.html#a273c6c73949537fb0fb083aa1c6d01f1", null ],

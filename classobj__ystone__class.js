@@ -2,11 +2,7 @@ var classobj__ystone__class =
 [
     [ "getMirrorMode", "classobj__ystone__class.html#a6ffa9bc856fe00cd64c0f5ec61d70a64", null ],
     [ "setBaseMtx", "classobj__ystone__class.html#a81ed372d96c1bf723883be2789878426", null ],
-    [ "setCurrentPos", "classobj__ystone__class.html#abeffdac27827f0a8dc1216cfb8f228e1", null ],
-    [ "setCurrentPos", "classobj__ystone__class.html#a2b7f0ebb49e7f784fa7f7cad414a5f25", null ],
-    [ "setCurrentPos", "classobj__ystone__class.html#a2b7f0ebb49e7f784fa7f7cad414a5f25", null ],
-    [ "setCurrentPos", "classobj__ystone__class.html#a2b7f0ebb49e7f784fa7f7cad414a5f25", null ],
-    [ "setCurrentPos", "classobj__ystone__class.html#a2b7f0ebb49e7f784fa7f7cad414a5f25", null ],
+    [ "setCurrentPos", "classobj__ystone__class.html#a7600c4abfdb3af374c5dec56fab1f6cd", null ],
     [ "setMirrorMode", "classobj__ystone__class.html#af7f16e07f9057a234105012352fbbd4d", null ],
     [ "field_0x584", "classobj__ystone__class.html#a7662ed6dd623eb3353a3cc48753f0637", null ],
     [ "field_0x588", "classobj__ystone__class.html#a2731a326c84b5b77e700e7479507920e", null ],

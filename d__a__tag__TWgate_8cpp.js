@@ -1,9 +1,6 @@
 var d__a__tag__TWgate_8cpp =
 [
-    [ "daTagTWGate_c", "classdaTagTWGate__c.html", "classdaTagTWGate__c" ],
-    [ "dMsgObject_c", "structdMsgObject__c.html", "structdMsgObject__c" ],
     [ "daTagTWGate_zevParam", "structdaTagTWGate__zevParam.html", "structdaTagTWGate__zevParam" ],
-    [ "actionFunc", "d__a__tag__TWgate_8cpp.html#a8a14454ec4a958d6fb584a25aa2783f6", null ],
     [ "__ct__10dMsgFlow_cFv", "d__a__tag__TWgate_8cpp.html#adf6efa29e1556e386b88dccee61eff3e", null ],
     [ "__ct__10fopAc_ac_cFv", "d__a__tag__TWgate_8cpp.html#a085f3a34ce186ab6e202a97581a1f68a", null ],
     [ "__ct__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl", "d__a__tag__TWgate_8cpp.html#a57db21880e20cce37d2cdbaf4263d187", null ],

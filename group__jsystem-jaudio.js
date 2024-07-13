@@ -214,23 +214,23 @@ var group__jsystem_jaudio =
       [ "mSeqList", "classJAISeqMgr.html#a36d2153d5e035f4b7cdfaaa873116509", null ],
       [ "seqDataMgr_", "classJAISeqMgr.html#af7dea84800c0276c817730983e53f991", null ]
     ] ],
-    [ "JAISoundID", "structJAISoundID.html", [
-      [ "JAISoundID", "structJAISoundID.html#a06ede88e95aa3baf66f20a125a9822ec", null ],
-      [ "JAISoundID", "structJAISoundID.html#aef396119cfc30c35bbf2c45e070f99f2", null ],
-      [ "JAISoundID", "structJAISoundID.html#a4c6f2ff71f78c0b918acff30857deb18", null ],
-      [ "isAnonymous", "structJAISoundID.html#a3820c31b37279274a56de5842b0fd14e", null ],
-      [ "operator u32", "structJAISoundID.html#a27c9ca4715cc3661a88f023e63354822", null ],
-      [ "setAnonymous", "structJAISoundID.html#ac43a7e2293b7b1722527ed18edfe5060", null ],
-      [ "b0", "structJAISoundID.html#aad0f60485a3075b00ee9d7f2b3c346c6", null ],
-      [ "b1", "structJAISoundID.html#ad8090b693242908359f1b987ada56a6f", null ],
-      [ "b2", "structJAISoundID.html#a2c1591401bada6e58f3a1bf6ae2d40c5", null ],
-      [ "b3", "structJAISoundID.html#a7e997d3f4235cd999696ff96df5cb8c3", null ],
-      [ "mAdvancedId", "structJAISoundID.html#a1c831ae6080d99a009af29ca1ac3e8b7", null ],
-      [ "mBytes", "structJAISoundID.html#ace0a715390d37d464e702be62555c405", null ],
-      [ "mFullId", "structJAISoundID.html#abfd52935157640224e4f7f00233a42b4", null ],
-      [ "mId", "structJAISoundID.html#a0db3b687d737ae8a213b6c9afd6b005a", null ],
-      [ "mShortId", "structJAISoundID.html#a75210bb9b79742da8e97a6f5a71474a5", null ],
-      [ "mSoundType", "structJAISoundID.html#a0bd7c9219e0de290673ba752582fa8e8", null ]
+    [ "JAISoundID", "classJAISoundID.html", [
+      [ "JAISoundID", "classJAISoundID.html#a06ede88e95aa3baf66f20a125a9822ec", null ],
+      [ "JAISoundID", "classJAISoundID.html#aef396119cfc30c35bbf2c45e070f99f2", null ],
+      [ "JAISoundID", "classJAISoundID.html#a4c6f2ff71f78c0b918acff30857deb18", null ],
+      [ "isAnonymous", "classJAISoundID.html#a3820c31b37279274a56de5842b0fd14e", null ],
+      [ "operator u32", "classJAISoundID.html#a27c9ca4715cc3661a88f023e63354822", null ],
+      [ "setAnonymous", "classJAISoundID.html#ac43a7e2293b7b1722527ed18edfe5060", null ],
+      [ "b0", "classJAISoundID.html#aad0f60485a3075b00ee9d7f2b3c346c6", null ],
+      [ "b1", "classJAISoundID.html#ad8090b693242908359f1b987ada56a6f", null ],
+      [ "b2", "classJAISoundID.html#a2c1591401bada6e58f3a1bf6ae2d40c5", null ],
+      [ "b3", "classJAISoundID.html#a7e997d3f4235cd999696ff96df5cb8c3", null ],
+      [ "mAdvancedId", "classJAISoundID.html#a1b613bc2e3744eee9ee3883b3392bb62", null ],
+      [ "mBytes", "classJAISoundID.html#aad340c484a0149293fa4f6a66c3d5910", null ],
+      [ "mFullId", "classJAISoundID.html#abfd52935157640224e4f7f00233a42b4", null ],
+      [ "mId", "classJAISoundID.html#a06cd3787fcf7ad8622bc8f2115a37d98", null ],
+      [ "mShortId", "classJAISoundID.html#a75210bb9b79742da8e97a6f5a71474a5", null ],
+      [ "mSoundType", "classJAISoundID.html#a0bd7c9219e0de290673ba752582fa8e8", null ]
     ] ],
     [ "JAISoundStatus_", "structJAISoundStatus__.html", [
       [ "init", "structJAISoundStatus__.html#a9cf4e819ba1bad0cae23bf194f717eb8", null ],
@@ -244,8 +244,8 @@ var group__jsystem_jaudio =
       [ "pauseWhenOut", "structJAISoundStatus__.html#ade3e2c257c557bad3363fafa9facf2d1", null ],
       [ "unlockIfLocked", "structJAISoundStatus__.html#a183b35be7d7529f64ed51d3747f258ec", null ],
       [ "animationState", "structJAISoundStatus__.html#aa86be6b0db8009f99bb1aedd116c1cc2", null ],
-      [ "field_0x0", "structJAISoundStatus__.html#aacdbcec62774355d126268d5d362856c", null ],
-      [ "field_0x1", "structJAISoundStatus__.html#a0544ca81b667f8ebdaac5a1d24cb7ddd", null ],
+      [ "field_0x0", "structJAISoundStatus__.html#a2460a5968e4c8d0cdabb5ad9c67db057", null ],
+      [ "field_0x1", "structJAISoundStatus__.html#a8062bdf87a58a28264872914a2998c03", null ],
       [ "flag1", "structJAISoundStatus__.html#a02b2ba3742445cad56928261e24a2001", null ],
       [ "flag2", "structJAISoundStatus__.html#a0d25f2d9da05974c5a9ac3d315daa4b0", null ],
       [ "flag3", "structJAISoundStatus__.html#a149c25bc2bf65d924e1f7fb281683b43", null ],
@@ -254,12 +254,12 @@ var group__jsystem_jaudio =
       [ "flag6", "structJAISoundStatus__.html#a2f786d913ac31344673432cacfc15569", null ],
       [ "flag7", "structJAISoundStatus__.html#ad549e7d262471bc5128c23e3b29278d4", null ],
       [ "flag8", "structJAISoundStatus__.html#a1fa7378fb0f50d9357dd9997a26ac115", null ],
-      [ "flags", "structJAISoundStatus__.html#a7ba040a7d5a956817d697e7b8f843a4d", null ],
-      [ "flags", "structJAISoundStatus__.html#aca11194d42d1e946fa7c17c7e54c34f5", null ],
-      [ "flags", "structJAISoundStatus__.html#a413b888e9231c85772cb37ceaf719bad", null ],
+      [ "flags", "structJAISoundStatus__.html#aabbe4acc1a9cbdb3118a319c942b2b4c", null ],
+      [ "flags", "structJAISoundStatus__.html#a8e4e905745ff5f9c52d52f144ee344c2", null ],
+      [ "flags", "structJAISoundStatus__.html#a8d6c7a4e31337fa6117b41e990a38499", null ],
       [ "mute", "structJAISoundStatus__.html#a9ad0cd88d9e91febf8e6f4cd1f6ed4e8", null ],
       [ "paused", "structJAISoundStatus__.html#a90b35cca6009dec13fc44c7bec123712", null ],
-      [ "state", "structJAISoundStatus__.html#add0fbd0061d8de7f5f3f335db194e0dc", null ],
+      [ "state", "structJAISoundStatus__.html#a58070ce2ae344801fd5739d2c6a83df9", null ],
       [ "unk", "structJAISoundStatus__.html#a16a729fd5fbed5a52f7bc4ae5ee6e172", null ],
       [ "user_data", "structJAISoundStatus__.html#a608a26b532017b7ac2eecc26fd15e765", null ],
       [ "value", "structJAISoundStatus__.html#a53072c96abfd3feecd04e7bd239fd4b8", null ]
@@ -288,7 +288,7 @@ var group__jsystem_jaudio =
     ] ],
     [ "JAISoundActivity", "classJAISoundActivity.html", [
       [ "init", "classJAISoundActivity.html#ad96772f5fbf4da4e5f1bdfbde4e0694f", null ],
-      [ "field_0x0", "classJAISoundActivity.html#af41a1eb4e451713c1b97682e940afe81", null ],
+      [ "field_0x0", "classJAISoundActivity.html#af31d01f8680fe2aab776ccb1835f8614", null ],
       [ "flag1", "classJAISoundActivity.html#a436eff0725577d09f3b0a5dc77d7c494", null ],
       [ "flag2", "classJAISoundActivity.html#a585228e10804bb95b4a303a620f48dfe", null ],
       [ "flag3", "classJAISoundActivity.html#a0128bd723c0e622948ffcf374bf0f004", null ],
@@ -297,7 +297,7 @@ var group__jsystem_jaudio =
       [ "flag6", "classJAISoundActivity.html#ac2fc8ca481d5d641028f2b871dde44aa", null ],
       [ "flag7", "classJAISoundActivity.html#aef243f5d2e1f21cf642f2ba3e2c8f28f", null ],
       [ "flag8", "classJAISoundActivity.html#a06481729bd199774e577552a9ff949cf", null ],
-      [ "flags", "classJAISoundActivity.html#a4bf8edbab100eb78e49b2735746876ba", null ],
+      [ "flags", "classJAISoundActivity.html#a45265211ece7ba44e89d2580e74d425a", null ],
       [ "value", "classJAISoundActivity.html#a33da048f651793aa08efad8631925bc5", null ]
     ] ],
     [ "JAITempoMgr", "classJAITempoMgr.html", [
@@ -526,7 +526,7 @@ var group__jsystem_jaudio =
         [ "field_0x0", "structJASAramStream_1_1BlockHeader.html#a11e00e44cd45a05294959457747f0a8d", null ],
         [ "field_0x2", "structJASAramStream_1_1BlockHeader.html#aa296359bc1f0d724c9ebc208e7cb66c0", null ],
         [ "field_0x4", "structJASAramStream_1_1BlockHeader.html#a54ab4a1ea521ed3494010df84c98bc54", null ],
-        [ "field_0x8", "structJASAramStream_1_1BlockHeader.html#a70d59a755cf001bc73f33320ffa03caf", null ],
+        [ "field_0x8", "structJASAramStream_1_1BlockHeader.html#a1254687d7e35c500d8ef07300f17244c", null ],
         [ "tag", "structJASAramStream_1_1BlockHeader.html#ab00f15d6208249277f1a14cfeedba1ed", null ]
       ] ],
       [ "Header", "structJASAramStream_1_1Header.html", [
@@ -831,7 +831,7 @@ var group__jsystem_jaudio =
       [ "MixConfig", "unionJASChannel_1_1MixConfig.html", [
         [ "lower0", "unionJASChannel_1_1MixConfig.html#a9dbdf57a39c0d8aadc468de0c107c90a", null ],
         [ "lower1", "unionJASChannel_1_1MixConfig.html#a4c7d06613fcc045ead31e6841c077a20", null ],
-        [ "parts", "unionJASChannel_1_1MixConfig.html#a1b9eae64d2cf5c1020cdfa746dc03782", null ],
+        [ "parts", "unionJASChannel_1_1MixConfig.html#aea649e8d66f91b576fa6afb005dad80a", null ],
         [ "upper", "unionJASChannel_1_1MixConfig.html#a8fc3572d6e3bc7841aca0053413de8e9", null ],
         [ "whole", "unionJASChannel_1_1MixConfig.html#ae1c4b63c178def73a2ba6b6036bf50cb", null ]
       ] ],
@@ -897,7 +897,7 @@ var group__jsystem_jaudio =
       [ "field_0x0", "structJASChannel.html#a10405140607d3ac6713e5bf66cbd7e65", null ],
       [ "field_0x104", "structJASChannel.html#ac237601cc1c0148a97e07161868cab7d", null ],
       [ "field_0x4", "structJASChannel.html#a47fb62565330bcc79b3f55a5349785e1", null ],
-      [ "field_0xdc", "structJASChannel.html#a98e5fe7e3fa544465198df215f91556f", null ],
+      [ "field_0xdc", "structJASChannel.html#a0091cee451657ff362a850f7322c69ef", null ],
       [ "filler", "structJASChannel.html#a04dbaf358ba0b021b8596e547a249ee7", null ],
       [ "mBankDisposeID", "structJASChannel.html#a54842bd7dee5d16eb0e0cc5e30983d39", null ],
       [ "mCallback", "structJASChannel.html#a1312999e9480d7f4433fc6817e87cec3", null ],
@@ -1431,7 +1431,7 @@ var group__jsystem_jaudio =
       [ "JASThreadCallStack", "structJASTaskThread_1_1JASThreadCallStack.html", [
         [ "buffer", "structJASTaskThread_1_1JASThreadCallStack.html#ae67852f4b5908c8786416a048ac6f805", null ],
         [ "field_0x4", "structJASTaskThread_1_1JASThreadCallStack.html#aace93efcfbc5cf37afb3b80e7feadc70", null ],
-        [ "field_0x8", "structJASTaskThread_1_1JASThreadCallStack.html#aac9f13901369e83b65a387997d4c051b", null ],
+        [ "field_0x8", "structJASTaskThread_1_1JASThreadCallStack.html#a348cd85ccdf67466c366ba21758b2b30", null ],
         [ "mRunFunc", "structJASTaskThread_1_1JASThreadCallStack.html#ac1688b8683be69c5e1145dd878d96586", null ],
         [ "pBuffer", "structJASTaskThread_1_1JASThreadCallStack.html#a6dd9d19887fd44c5b912ea6bc28144d2", null ]
       ] ],
@@ -1595,7 +1595,7 @@ var group__jsystem_jaudio =
       [ "mDirectRelease", "structJASTrack.html#ae9a57698366824757ee20883949e0270", null ],
       [ "mFilterMode", "structJASTrack.html#ad1d664c4dc68f95934f3fce1fd92196a", null ],
       [ "mFIR", "structJASTrack.html#a10f0f8d1be0ef6c0b1fa5064c02906aa", null ],
-      [ "mFlags", "structJASTrack.html#a509692600d49d7d2115a7462af307b33", null ],
+      [ "mFlags", "structJASTrack.html#a4735a5ead2ac7f325eafb93520e8fd74", null ],
       [ "mGateRate", "structJASTrack.html#a317b83f9a65bfa7a6dfa766354e3c7b8", null ],
       [ "mIIR", "structJASTrack.html#aa4aed9ccaf0c55908a9dd5f983d9ab34", null ],
       [ "mMixConfig", "structJASTrack.html#a37948e222ae80a2719d26333b5367488", null ],
@@ -1789,11 +1789,11 @@ var group__jsystem_jaudio =
       [ "b1_2_7", "structJAUAudibleParam.html#aa525d7eb9f0168c13d658816bf373745", null ],
       [ "b2", "structJAUAudibleParam.html#afab80fded1a560451175d37a735003dd", null ],
       [ "b3", "structJAUAudibleParam.html#a4d24f103d546dcc9ee3c0ea1b5f5aaa0", null ],
-      [ "bytes", "structJAUAudibleParam.html#afd4a7d2c2b9cee3da96e64263d9ecb40", null ],
+      [ "bytes", "structJAUAudibleParam.html#ac287dbdf53e82969576d5df9538dc2ed", null ],
       [ "f0", "structJAUAudibleParam.html#a02c74b42a568c265d12b4b619eb6288f", null ],
       [ "f1", "structJAUAudibleParam.html#a036182d2336051a8c15d0585db1c34dc", null ],
-      [ "field_0x0", "structJAUAudibleParam.html#a60783986f39db24c8c33c0ad116e922d", null ],
-      [ "half", "structJAUAudibleParam.html#a3ee0a89bc464b509ebcf92f7f57675b7", null ],
+      [ "field_0x0", "structJAUAudibleParam.html#afac42bdb02ee2a55c7db8e6f89d2f8a7", null ],
+      [ "half", "structJAUAudibleParam.html#af776f9fd57f8d60aa1ac505f62b180f8", null ],
       [ "raw", "structJAUAudibleParam.html#a27d9250572d599df237d0b2688e991d9", null ]
     ] ],
     [ "JAUAudioArcInterpreter", "classJAUAudioArcInterpreter.html", [

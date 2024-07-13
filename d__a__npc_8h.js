@@ -39,8 +39,10 @@ var d__a__npc_8h =
     [ "daNpcF_offTmpBit", "d__a__npc_8h.html#a875df2eec7b053233229243b7e9058eb", null ],
     [ "daNpcF_onEvtBit", "d__a__npc_8h.html#a4c28edfa5d41e9f6bd74947bc43293b5", null ],
     [ "daNpcF_pntVsLineSegmentLengthSquare2D", "d__a__npc_8h.html#a9e6d7c26a99dae6897860ebf68f56c1b", null ],
+    [ "daNpcT_chkDoBtnIsSpeak", "d__a__npc_8h.html#af9dc731de54c16504b9a242bc11ce811", null ],
     [ "daNpcT_chkEvtBit", "d__a__npc_8h.html#ab1fe4a6bb4c2a48d902cdcc36fd5e67d", null ],
     [ "daNpcT_chkPointInArea", "d__a__npc_8h.html#ae3529062f3d054a56722e32d770d9901", null ],
+    [ "daNpcT_getDistTableIdx", "d__a__npc_8h.html#a3ce949c9ec233983c9667ed6d102e1c3", null ],
     [ "STATIC_ASSERT", "d__a__npc_8h.html#ad43f4a969700cc3d55ff32c1df4dfd2f", null ],
     [ "STATIC_ASSERT", "d__a__npc_8h.html#ab5bd43b8419e4eea51b8e126a0d40a71", null ]
 ];

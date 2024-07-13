@@ -12,5 +12,6 @@ var classdaObjZraMark__c =
     [ "getType", "classdaObjZraMark__c.html#a8d7130b85fb50911366c50e07a85a8a5", null ],
     [ "informBlast", "classdaObjZraMark__c.html#acd87c33d24060ca2e798d38107a926c8", null ],
     [ "schHoz", "classdaObjZraMark__c.html#aa025eba4266ef521ac1304637effeccd", null ],
-    [ "setBaseMtx", "classdaObjZraMark__c.html#a11dbd82d98df091ee52e148291c9a2f5", null ]
+    [ "setBaseMtx", "classdaObjZraMark__c.html#a11dbd82d98df091ee52e148291c9a2f5", null ],
+    [ "field_0x568", "classdaObjZraMark__c.html#a581030565361cf93a9b426bea12d4379", null ]
 ];

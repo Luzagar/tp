@@ -1,7 +1,6 @@
 var structdaNpcAsh__Param__c_1_1param =
 [
-    [ "field_0x60", "structdaNpcAsh__Param__c_1_1param.html#a8d8b4c757cb669d95d3d6d06923bbf68", null ],
-    [ "field_0x62", "structdaNpcAsh__Param__c_1_1param.html#a3d955bed4d7e4c201d7de766d975e0d0", null ],
+    [ "field_0x60", "structdaNpcAsh__Param__c_1_1param.html#ac060ff7f1477d2785a334c822c2c342c", null ],
     [ "mAttnFovY", "structdaNpcAsh__Param__c_1_1param.html#a5a935e1dd5db0015ab5c32d36faf1cd0", null ],
     [ "mAttnLowerY", "structdaNpcAsh__Param__c_1_1param.html#acb1127986d7a39a3e1ff1cead514ebe9", null ],
     [ "mAttnOffsetY", "structdaNpcAsh__Param__c_1_1param.html#a7ae880c66e9dfafdf9877ec888eba63f", null ],
@@ -13,6 +12,7 @@ var structdaNpcAsh__Param__c_1_1param =
     [ "mBodyUpAngle", "structdaNpcAsh__Param__c_1_1param.html#a60d6386e75e5d12a65e369128cba8506", null ],
     [ "mCcWeight", "structdaNpcAsh__Param__c_1_1param.html#adc316a1766934e20c8e3fa68bf910bc2", null ],
     [ "mCylH", "structdaNpcAsh__Param__c_1_1param.html#a373ef98ec9ed3cbd52351b66ad03574b", null ],
+    [ "mDamageTimer", "structdaNpcAsh__Param__c_1_1param.html#a43c2844953037577490ad1cfb057adf7", null ],
     [ "mGravity", "structdaNpcAsh__Param__c_1_1param.html#ac7ed43898aa702d01883720f8ea85da7", null ],
     [ "mHeadDownAngle", "structdaNpcAsh__Param__c_1_1param.html#a42385ffb85283c63dd2294030bdd9c1f", null ],
     [ "mHeadLeftAngle", "structdaNpcAsh__Param__c_1_1param.html#a7e8c2a6a0bc809b2003cef12fc538591", null ],
@@ -27,9 +27,9 @@ var structdaNpcAsh__Param__c_1_1param =
     [ "mTalkAngleIdx", "structdaNpcAsh__Param__c_1_1param.html#a5fc373261943909d7ec550d1e74dd6ba", null ],
     [ "mTalkDistIdx", "structdaNpcAsh__Param__c_1_1param.html#a9ba61130ce5b121d9a1d0c62d7a5cce2", null ],
     [ "mTest", "structdaNpcAsh__Param__c_1_1param.html#acaf9121f61462835fdc17d1a4ed6d3d9", null ],
-    [ "mTestExpression", "structdaNpcAsh__Param__c_1_1param.html#a7b742bd7329a3792985b222d09a2213a", null ],
-    [ "mTestLookMode", "structdaNpcAsh__Param__c_1_1param.html#ab6ec193889feecd44a610090be3fcce2", null ],
-    [ "mTestMotion", "structdaNpcAsh__Param__c_1_1param.html#a9d08f99fa2e60d772ab721b9eebc479c", null ],
+    [ "mTestExpression", "structdaNpcAsh__Param__c_1_1param.html#a4ac820445d395997be2ddcb2f93378d5", null ],
+    [ "mTestLookMode", "structdaNpcAsh__Param__c_1_1param.html#adedce4491459925bbc995b13deae7513", null ],
+    [ "mTestMotion", "structdaNpcAsh__Param__c_1_1param.html#a49273e7180761b92f5e6a50b0f520d03", null ],
     [ "mWallH", "structdaNpcAsh__Param__c_1_1param.html#aca2c829a2f3e423f0cd03374b8dea221", null ],
     [ "mWallR", "structdaNpcAsh__Param__c_1_1param.html#a6d8861dd0ee9fd860bd1709815b8b957", null ]
 ];

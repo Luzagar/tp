@@ -1,7 +1,5 @@
 var d__a__e__ym_8cpp =
 [
-    [ "daTag_FWall_c", "classdaTag__FWall__c.html", "classdaTag__FWall__c" ],
-    [ "E_YM_n", "structE__YM__n.html", "structE__YM__n" ],
     [ "__construct_new_array", "d__a__e__ym_8cpp.html#a323591f74ddf6092f175dfa7e270e6fb", null ],
     [ "__ct__10dCcD_GSttsFv", "d__a__e__ym_8cpp.html#ae4cd09eb67ed2fb9bc6e87d5cea71757", null ],
     [ "__ct__10fopAc_ac_cFv", "d__a__e__ym_8cpp.html#a085f3a34ce186ab6e202a97581a1f68a", null ],
@@ -239,7 +237,7 @@ var d__a__e__ym_8cpp =
     [ "GetGroundCode__4dBgSFRC13cBgS_PolyInfo", "d__a__e__ym_8cpp.html#a3191024d46d73403993d03adca42ced1", null ],
     [ "getLayerNo__14dComIfG_play_cFi", "d__a__e__ym_8cpp.html#a70b516998b205fbb064ce0fb07895852", null ],
     [ "getLeftHandPos__9daPy_py_cCFv", "d__a__e__ym_8cpp.html#a5f2d8afacdc1491e9ae82c792e2b953d", null ],
-    [ "getPos__13daTag_FWall_cFUc", "d__a__e__ym_8cpp.html#a38ddf26c6ce69378a79351a3415f9fbb", null ],
+    [ "getPos__13daTag_FWall_cFUc", "d__a__e__ym_8cpp.html#ae3253d8d4008cd19b812f87f8ed3b1eb", null ],
     [ "getRes__14dRes_control_cFPCclP11dRes_info_ci", "d__a__e__ym_8cpp.html#a59a83dc2646cfbec35f3fb91b2158ad9", null ],
     [ "getSurpriseType__8daE_YM_cFv", "d__a__e__ym_8cpp.html#a926b5884c1fc66be4d9bb9c9a8b55d5c", null ],
     [ "GetTgHitObj__12dCcD_GObjInfFv", "d__a__e__ym_8cpp.html#af2b60ee8bb1360170ae1779c93985b78", null ],
@@ -337,9 +335,9 @@ var d__a__e__ym_8cpp =
     [ "e_env", "d__a__e__ym_8cpp.html#a20a34bc0d78ac3a8c275e9274c17d6e5", null ],
     [ "e_prim", "d__a__e__ym_8cpp.html#a293eb69911d982fc981730c1a34480ce", null ],
     [ "eff_id", "d__a__e__ym_8cpp.html#ad02ced687ea3c094cedde6948fc0ecca", null ],
-    [ "g_profile_E_YM", "d__a__e__ym_8cpp.html#a2092fd96b6731aba47e17da99b4f30c3", null ],
+    [ "g_profile_E_YM", "d__a__e__ym_8cpp.html#a632510a3a25fb60c1d9e3d4bcab5d8f7", null ],
     [ "JPTracePCB4", "d__a__e__ym_8cpp.html#a4d6ce28081c44daaeae79c025619eed2", null ],
-    [ "l_daE_YM_Method", "d__a__e__ym_8cpp.html#a0f0952c66827e8930acd3e2a5243281c", null ],
+    [ "l_daE_YM_Method", "d__a__e__ym_8cpp.html#ad4a6783283d7cc895d42cf2169646aba", null ],
     [ "l_HIO", "d__a__e__ym_8cpp.html#aad846339e46f741d6ab4e81303ad376f", null ],
     [ "lit_1787", "d__a__e__ym_8cpp.html#a5bb5d6a82c2f4d4bb43dbf4d11e60387", null ],
     [ "lit_3925", "d__a__e__ym_8cpp.html#aa8fd6fc1344bfbf6fdbe8187e7fbe4bf", null ],

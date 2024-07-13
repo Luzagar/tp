@@ -1,12 +1,15 @@
 var classdBgW__Base =
 [
-    [ "PushPullLabel", "structdBgW__Base_1_1PushPullLabel.html", null ],
-    [ "PushPull_CallBack", "classdBgW__Base.html#aca83c5cff1539885e6bf659513d0dfef", null ],
+    [ "PushPull_CallBack", "classdBgW__Base.html#a9331e39ef5ef4b8dc2a09610c350ce64", null ],
     [ "PRIORITY", "classdBgW__Base.html#acaa511193b1454aa4379cfefb712c733", [
       [ "PRIORITY_0", "classdBgW__Base.html#acaa511193b1454aa4379cfefb712c733af8a48f016ff589650f6926e70e884ad3", null ]
     ] ],
     [ "PushPullLabel", "classdBgW__Base.html#ac7576eb3c56d041a93b302116ab071dc", [
-      [ "PUSHPULL_LABEL1", "classdBgW__Base.html#ac7576eb3c56d041a93b302116ab071dca9d916006aacade7f19b5ab2dd8ea7228", null ]
+      [ "PPLABEL_NONE", "classdBgW__Base.html#ac7576eb3c56d041a93b302116ab071dca582c000c5f186ba3d31aa162784cd8b9", null ],
+      [ "PPLABEL_PUSH", "classdBgW__Base.html#ac7576eb3c56d041a93b302116ab071dca869091fe2538159c66c59bc1e4d1826b", null ],
+      [ "PPLABEL_PULL", "classdBgW__Base.html#ac7576eb3c56d041a93b302116ab071dca1fabdd6b185ed3923d6f52f1bf534745", null ],
+      [ "PPLABEL_4", "classdBgW__Base.html#ac7576eb3c56d041a93b302116ab071dca6ff42a8b2463e20ccb83b6328dd60b85", null ],
+      [ "PPLABEL_HEAVY", "classdBgW__Base.html#ac7576eb3c56d041a93b302116ab071dca961fb476e62a013dc6f1a8e1aea2f083", null ]
     ] ],
     [ "dBgW_Base", "classdBgW__Base.html#aa6375f13a2be5d1ece1d839a628adabd", null ],
     [ "~dBgW_Base", "classdBgW__Base.html#ada569a34743699f26e98bb8f57123a83", null ],
@@ -33,7 +36,7 @@ var classdBgW__Base =
     [ "GetGroundCode", "classdBgW__Base.html#a05b971bdafcc25b1ebad18bbcc4242c2", null ],
     [ "GetGrpInf", "classdBgW__Base.html#aacd5d5cc6ebf721c43d7f2fc6b79db5b", null ],
     [ "GetGrpRoomIndex", "classdBgW__Base.html#a0da06b743d8b67d14fdbe1f58a8d9de5", null ],
-    [ "GetGrpSoundId", "classdBgW__Base.html#ae69c34656c6d45803052a4e427d05e47", null ],
+    [ "GetGrpSoundId", "classdBgW__Base.html#a8c6d3a5a2d0b725b5139fddcb1b6ed10", null ],
     [ "GetHorseNoEntry", "classdBgW__Base.html#a4a04b576156b405c707e40aa6f66218b", null ],
     [ "GetIronBallThrough", "classdBgW__Base.html#a884fd77f3d5b5c69ce893977f8868244", null ],
     [ "GetLinkNo", "classdBgW__Base.html#a3fff7a2d7a8d6605c8e30fe3e36d8b3a", null ],
@@ -68,6 +71,8 @@ var classdBgW__Base =
     [ "LineCheck", "classdBgW__Base.html#a39d67a1ad93f13b055b1a364838083df", null ],
     [ "MatrixCrrPos", "classdBgW__Base.html#adf07757075e0c23b65148f63caeaaccb", null ],
     [ "OffMoveFlag", "classdBgW__Base.html#ac1afc81aa71f215d5a78305c05235d9a", null ],
+    [ "OffPushPullOk", "classdBgW__Base.html#af0ad7013c3ed9b68912056d58a6550ba", null ],
+    [ "OnPushPullOk", "classdBgW__Base.html#ae8d18d1235be0ba993541ea648db6295", null ],
     [ "onStickRoof", "classdBgW__Base.html#a5c395da20e42027783c916d58fea8d6b", null ],
     [ "onStickWall", "classdBgW__Base.html#a156d418bafffa046b6ca03a361a394d1", null ],
     [ "RoofChk", "classdBgW__Base.html#a529ea0b744d2d2fa6014a2bfbdc9af57", null ],
@@ -80,7 +85,7 @@ var classdBgW__Base =
     [ "SplGrpChk", "classdBgW__Base.html#a8e69a9eba4276e912886475d5c6b02cb", null ],
     [ "TransPos", "classdBgW__Base.html#afef09ba1069df16813384e806e94f6ec", null ],
     [ "WallCorrect", "classdBgW__Base.html#a5862cb561585cbfc7be30e19f4c9eac2", null ],
-    [ "WallCorrectSort", "classdBgW__Base.html#acb91c9571466e83c341bc7c38d760175", null ],
+    [ "WallCorrectSort", "classdBgW__Base.html#a5948d20e718ecdafb81c6db537eddc7f", null ],
     [ "field_0xa", "classdBgW__Base.html#a0166fee33daec9fb38cd502ad05cd78b", null ],
     [ "field_0xb", "classdBgW__Base.html#ac4c79c75d2b9ffd8cea2deba128d2737", null ],
     [ "m_diff_ShapeAngleY", "classdBgW__Base.html#a1dab90b5d4e274bf908cba7588e4e6d4", null ],

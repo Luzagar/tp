@@ -2,5 +2,7 @@ var structJ3DGXColor =
 [
     [ "J3DGXColor", "structJ3DGXColor.html#abe7ca9b46bbc3aae5400f7f69bd1eb54", null ],
     [ "J3DGXColor", "structJ3DGXColor.html#afafa82a515b5f5cbf45c669de100ba32", null ],
-    [ "J3DGXColor", "structJ3DGXColor.html#aedc49e3a7fd2355caee49cb8edcb5f9b", null ]
+    [ "J3DGXColor", "structJ3DGXColor.html#aedc49e3a7fd2355caee49cb8edcb5f9b", null ],
+    [ "operator=", "structJ3DGXColor.html#af609547832aede8025546c225a6fd353", null ],
+    [ "operator=", "structJ3DGXColor.html#a7723b426cf8204e797bbdf0cc4c43d49", null ]
 ];

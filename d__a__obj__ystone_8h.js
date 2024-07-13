@@ -1,4 +1,4 @@
 var d__a__obj__ystone_8h =
 [
-    [ "obj_ystone_class", "classobj__ystone__class.html", "classobj__ystone__class" ]
+    [ "STATIC_ASSERT", "d__a__obj__ystone_8h.html#aa5c71fbe36c75091b7addea82d22c266", null ]
 ];

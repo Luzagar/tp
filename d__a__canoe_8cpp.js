@@ -1,7 +1,5 @@
 var d__a__canoe_8cpp =
 [
-    [ "daTagWaterFall_c", "classdaTagWaterFall__c.html", "classdaTagWaterFall__c" ],
-    [ "daObjGOMIKABE_c", "structdaObjGOMIKABE__c.html", "structdaObjGOMIKABE__c" ],
     [ "__construct_array", "d__a__canoe_8cpp.html#a58dbf4d2335fdc0e2065200543f5e4ea", null ],
     [ "__ct__10dCcD_GSttsFv", "d__a__canoe_8cpp.html#ae4cd09eb67ed2fb9bc6e87d5cea71757", null ],
     [ "__ct__10fopAc_ac_cFv", "d__a__canoe_8cpp.html#a085f3a34ce186ab6e202a97581a1f68a", null ],
@@ -244,13 +242,13 @@ var d__a__canoe_8cpp =
     [ "data_804DD8D0", "d__a__canoe_8cpp.html#a7bfd76f2671067f01653d41f904bfc3b", null ],
     [ "data_804DD8D4", "d__a__canoe_8cpp.html#aa78b7fc0f34426f45bf01a61bde4dded", null ],
     [ "effName", "d__a__canoe_8cpp.html#af5b455741789e191c4a9d8cb7cbbdfef", null ],
-    [ "g_profile_CANOE", "d__a__canoe_8cpp.html#a4bb5c6874eb13c4b54cd39cdc2c7c7e2", null ],
+    [ "g_profile_CANOE", "d__a__canoe_8cpp.html#a97b3175d1123039e972306dab5eda9d3", null ],
     [ "l_arcName", "d__a__canoe_8cpp.html#ad689d803545b4826e445c65ca04bda25", null ],
     [ "l_arcName2", "d__a__canoe_8cpp.html#a95fc237ecb30a6bb018a9fc6a92de180", null ],
     [ "l_arcName3", "d__a__canoe_8cpp.html#ac2eee30d15e3edfc60905396c13baa68", null ],
     [ "l_cylOffsetZ", "d__a__canoe_8cpp.html#a585d02395c3bd5b191dd6ffa95e6d73b", null ],
     [ "l_cylSrc", "d__a__canoe_8cpp.html#a5d1d6c9777954cacd9d111ca4956020f", null ],
-    [ "l_daCanoe_Method", "d__a__canoe_8cpp.html#ad3e46eb8e8183fbcb540302c4700d177", null ],
+    [ "l_daCanoe_Method", "d__a__canoe_8cpp.html#a545278c0ca1561415f4b221e2af6d817", null ],
     [ "lit_1009", "d__a__canoe_8cpp.html#a578c502feab754ac442dd2f361d9572e", null ],
     [ "lit_1010", "d__a__canoe_8cpp.html#a1c26a8a91a5ea9b5f735db7083479bf7", null ],
     [ "lit_1012", "d__a__canoe_8cpp.html#a7a928818ef717848077f543287e7c70b", null ],

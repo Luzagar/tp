@@ -8,6 +8,7 @@ var classdaSwc00__c =
     [ "execute", "classdaSwc00__c.html#ae3b531fc21147bbe39741d982804f199", null ],
     [ "field_0x568", "classdaSwc00__c.html#a4ace72ae3580ebc46abc7b4bde79a67b", null ],
     [ "field_0x574", "classdaSwc00__c.html#a7f56f24e59470a5d26678d6055952b89", null ],
+    [ "field_0x584", "classdaSwc00__c.html#a66927cad0f134b71c7a79068c5f0a39c", null ],
     [ "mAction", "classdaSwc00__c.html#a9ea693b7da6dc782a45817ca2ba7b1c9", null ],
     [ "mEventID", "classdaSwc00__c.html#a84b76b94ac94536cf9da8f5a170803ca", null ]
 ];

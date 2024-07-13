@@ -6,11 +6,9 @@ var structdRenderingMap__c =
     [ "isDrawPath", "structdRenderingMap__c.html#a046d70b6780d94e05706f4a0c50f0dac", null ],
     [ "makeResTIMG", "structdRenderingMap__c.html#af639f88058276060f09b58f95f0254cc", null ],
     [ "makeResTIMG", "structdRenderingMap__c.html#af639f88058276060f09b58f95f0254cc", null ],
-    [ "makeResTIMG", "structdRenderingMap__c.html#af639f88058276060f09b58f95f0254cc", null ],
     [ "postDrawPath", "structdRenderingMap__c.html#a04017e6a5e089af72b8f678222608448", null ],
     [ "postRenderingMap", "structdRenderingMap__c.html#a8ef5433d26a1d083be6d3d28ad22c062", null ],
     [ "preDrawPath", "structdRenderingMap__c.html#a5dec2702f70728616c63d48b903edd27", null ],
     [ "preRenderingMap", "structdRenderingMap__c.html#aee9f2a4aef9e6dc3c91deb64cd08bd39", null ],
-    [ "renderingMap", "structdRenderingMap__c.html#acaadc39f4f3be8b00142a31c52cf3eed", null ],
     [ "renderingMap", "structdRenderingMap__c.html#acaadc39f4f3be8b00142a31c52cf3eed", null ]
 ];

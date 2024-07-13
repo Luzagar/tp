@@ -55,6 +55,7 @@ var structcCcD__ObjHitInf =
     [ "SetAtType", "structcCcD__ObjHitInf.html#a8f4d13910541750ed1e79d44a91c231d", null ],
     [ "SetCoHit", "structcCcD__ObjHitInf.html#a9fb2dcb125b9870114a34948033672b2", null ],
     [ "SetCoSPrm", "structcCcD__ObjHitInf.html#a32857f8ac6f396c7d2f23396cedbefdd", null ],
+    [ "SetCoVsGrp", "structcCcD__ObjHitInf.html#a310386d066500f98ff6c2a4b1a72739c", null ],
     [ "SetTgHit", "structcCcD__ObjHitInf.html#a9c02ce4e93e2063978953137252b4ef3", null ],
     [ "SetTgSPrm", "structcCcD__ObjHitInf.html#a3f585c39d5a2b0edaac8ceec1d4c4869", null ],
     [ "SetTgType", "structcCcD__ObjHitInf.html#a69d142f4f133377837db86fee5d4be32", null ],

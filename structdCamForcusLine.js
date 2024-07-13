@@ -17,5 +17,6 @@ var structdCamForcusLine =
     [ "field_0x60", "structdCamForcusLine.html#a40a2092fbc4b13fd59e3a67da98f7c57", null ],
     [ "field_0x64", "structdCamForcusLine.html#aa23f3b1b60ca34268a7f6795847a9818", null ],
     [ "field_0x68", "structdCamForcusLine.html#afcc786acef66466805b405406b41c07f", null ],
-    [ "field_0x6c", "structdCamForcusLine.html#a8227598850491a5c3ae8e5f46faeb581", null ]
+    [ "field_0x6c", "structdCamForcusLine.html#a8227598850491a5c3ae8e5f46faeb581", null ],
+    [ "mEffectLine", "structdCamForcusLine.html#a58a764a9bfe1cce1bbd2ec45bdcbf2f9", null ]
 ];

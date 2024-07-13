@@ -7,7 +7,7 @@ var JGeometry_8h =
     [ "JGeometry::TVec2< T >", "structJGeometry_1_1TVec2.html", "structJGeometry_1_1TVec2" ],
     [ "JGeometry::TBox< T >", "structJGeometry_1_1TBox.html", "structJGeometry_1_1TBox" ],
     [ "JGeometry::TBox< TVec2< f32 > >", "structJGeometry_1_1TBox_3_01TVec2_3_01f32_01_4_01_4.html", "structJGeometry_1_1TBox_3_01TVec2_3_01f32_01_4_01_4" ],
-    [ "JGeometry::TBox2< A1 >", "structJGeometry_1_1TBox2.html", "structJGeometry_1_1TBox2" ],
+    [ "JGeometry::TBox2< T >", "structJGeometry_1_1TBox2.html", "structJGeometry_1_1TBox2" ],
     [ "JGeometry::TUtil< T >", "structJGeometry_1_1TUtil.html", "structJGeometry_1_1TUtil" ],
     [ "JGeometry::TUtil< f32 >", "structJGeometry_1_1TUtil_3_01f32_01_4.html", "structJGeometry_1_1TUtil_3_01f32_01_4" ],
     [ "JGeometry::TUtil< double >", "structJGeometry_1_1TUtil_3_01double_01_4.html", "structJGeometry_1_1TUtil_3_01double_01_4" ],

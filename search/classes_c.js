@@ -1,7 +1,7 @@
 var searchData=
 [
   ['l_5fhio_0',['l_HIO',['../classl__HIO.html',1,'']]],
-  ['laundjoint_5fc_1',['LaundJoint_c',['../structLaundJoint__c.html',1,'']]],
+  ['laundjoint_5fc_1',['LaundJoint_c',['../classLaundJoint__c.html',1,'']]],
   ['layer_5fclass_2',['layer_class',['../structlayer__class.html',1,'']]],
   ['layer_5fiter_3',['layer_iter',['../structlayer__iter.html',1,'']]],
   ['layer_5fmanagement_5ftag_5fclass_4',['layer_management_tag_class',['../structlayer__management__tag__class.html',1,'']]],

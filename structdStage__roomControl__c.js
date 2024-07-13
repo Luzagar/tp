@@ -58,15 +58,13 @@ var structdStage__roomControl__c =
     [ "mArcBank", "structdStage__roomControl__c.html#a7f8f8d543c3ec2a096a4fccf08201045", null ],
     [ "mArcBankData", "structdStage__roomControl__c.html#a3bb5e8006a32c1a3f5f3c8557f432724", null ],
     [ "mArcBankName", "structdStage__roomControl__c.html#abff891fa9abcd3de60117702cefca5c6", null ],
-    [ "mDemoArcName", "structdStage__roomControl__c.html#aac3d4869fd8d9b26ddd34fffc664e795", null ],
     [ "mDemoArcName", "structdStage__roomControl__c.html#a6a6e26d271fb9bdb8b5731af79cdb2da", null ],
     [ "mMemoryBlock", "structdStage__roomControl__c.html#aebdc3889d82b0fe90c699e15087e58c4", null ],
     [ "mNextStayNo", "structdStage__roomControl__c.html#a7cd3be351f9cd8c95a4b43041f89957b", null ],
     [ "mNoChangeRoom", "structdStage__roomControl__c.html#ab3f24382b0ca983cd1e55288562d2342", null ],
     [ "mOldStayNo", "structdStage__roomControl__c.html#ac77ea1cb91a2436320d691216501efd7", null ],
     [ "mProcID", "structdStage__roomControl__c.html#a9e73871e89a55072aa02142d358e8c48", null ],
-    [ "mProcID", "structdStage__roomControl__c.html#a8ff7eb3dbfcba049f43dd131e77528db", null ],
     [ "mStatus", "structdStage__roomControl__c.html#aa954f6776b587bcd80b25bdc86261d18", null ],
-    [ "mStatus", "structdStage__roomControl__c.html#ac29e53e2e68a7ddf2ee03aeaa8215cfd", null ],
+    [ "mStatus", "structdStage__roomControl__c.html#a1c2394802ee285dfadb9510dea26dc8b", null ],
     [ "mStayNo", "structdStage__roomControl__c.html#a6874274729cd4b6607952fd43e701007", null ]
 ];

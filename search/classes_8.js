@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['hahen_5fc_0',['Hahen_c',['../structHahen__c.html',1,'']]],
+  ['hahen_5fc_0',['Hahen_c',['../classHahen__c.html',1,'']]],
   ['hakusha_5fdata_1',['hakusha_data',['../structdMeterHakusha__c_1_1hakusha__data.html',1,'dMeterHakusha_c']]],
   ['header_2',['Header',['../structJASAramStream_1_1Header.html',1,'JASAramStream']]],
   ['heap_5fheader_3',['heap_header',['../structheap__header.html',1,'']]],

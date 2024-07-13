@@ -1,6 +1,5 @@
 var d__a__obj__fallobj_8cpp =
 [
-    [ "daObjFallObj_c", "classdaObjFallObj__c.html", "classdaObjFallObj__c" ],
     [ "__ct__11dBgS_LinChkFv", "d__a__obj__fallobj_8cpp.html#a64bde57d9efa41e1aff856d109588fda", null ],
     [ "__ct__16dBgS_MoveBgActorFv", "d__a__obj__fallobj_8cpp.html#a34bbae7a63794cd9fb3767df18163b6d", null ],
     [ "__ct__16Z2SoundObjSimpleFv", "d__a__obj__fallobj_8cpp.html#aa9e33f8f2d565627116b6fb2aa947601", null ],
@@ -90,8 +89,8 @@ var d__a__obj__fallobj_8cpp =
     [ "ZXYrotM__14mDoMtx_stack_cFRC5csXyz", "d__a__obj__fallobj_8cpp.html#aa7e1d01e9e51b7d9c8c34c305981c617", null ],
     [ "__vt__14daObjFallObj_c", "d__a__obj__fallobj_8cpp.html#abf28240f1f959f83ccb58c1fed481811", null ],
     [ "d_a_obj_fallobj__stringBase0", "d__a__obj__fallobj_8cpp.html#a42a3ab901eabda4b62549f3c579281a4", null ],
-    [ "daObjFallObj_METHODS", "d__a__obj__fallobj_8cpp.html#a3367be99bea1c3179b55f26330dfe1a0", null ],
-    [ "g_profile_Obj_FallObj", "d__a__obj__fallobj_8cpp.html#a8d63d2891d6a0434a518a337f3a30b78", null ],
+    [ "daObjFallObj_METHODS", "d__a__obj__fallobj_8cpp.html#ad2503ba53a845971439f7cd150f3e282", null ],
+    [ "g_profile_Obj_FallObj", "d__a__obj__fallobj_8cpp.html#abeb98f0e172e9461817773abc503c680", null ],
     [ "l_arcName", "d__a__obj__fallobj_8cpp.html#ae4e1b0182baecc7a6ecb2cd4cdf2d8be", null ],
     [ "l_cull_box", "d__a__obj__fallobj_8cpp.html#aba726a152979d5fec884c37436313a0a", null ],
     [ "lit_3677", "d__a__obj__fallobj_8cpp.html#a8742ca3f919790e998d7b4b5e85ec5ea", null ],

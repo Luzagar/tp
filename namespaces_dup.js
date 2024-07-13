@@ -176,6 +176,7 @@ var namespaces_dup =
       [ "showAssert_f_va", "namespaceJUTAssertion.html#a2330c38cc09acf6517c2587dff30dc7c", null ]
     ] ],
     [ "JUtility", "namespaceJUtility.html", "namespaceJUtility" ],
+    [ "nObjMHasu", "namespacenObjMHasu.html", "namespacenObjMHasu" ],
     [ "std", "namespacestd.html", "namespacestd" ],
     [ "Z2Calc", "namespaceZ2Calc.html", "namespaceZ2Calc" ]
 ];

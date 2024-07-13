@@ -11,11 +11,9 @@ var classJUTVideo =
     [ "getBounds", "classJUTVideo.html#a95ddf573e2bfdf50fd45b9b4e9d3ef89", null ],
     [ "getEfbHeight", "classJUTVideo.html#a0d0c75bd8e3a6f9ff951c3fa9e075aa1", null ],
     [ "getFbWidth", "classJUTVideo.html#a42dcad387a930d2ae19cd6ce0b1c6821", null ],
-    [ "getManager", "classJUTVideo.html#af071273d4ee0cdb45095bc643f77d382", null ],
-    [ "getManager", "classJUTVideo.html#ab2c01216b6a4e26d5b472057c01089c2", null ],
+    [ "getManager", "classJUTVideo.html#a18846ba4404cedad2c1b0e790dcc7b58", null ],
     [ "getMessageQueue", "classJUTVideo.html#a4cfd6a682c05928d2d1035c1359911ee", null ],
-    [ "getRenderMode", "classJUTVideo.html#a0b88bd3888993456fe54ea353f1e9653", null ],
-    [ "getRenderMode", "classJUTVideo.html#a70cee437cccf27bd197fdd630a14e8e6", null ],
+    [ "getRenderMode", "classJUTVideo.html#afe0802eb32fbabaacf09524770766d7a", null ],
     [ "getSamplePattern", "classJUTVideo.html#ac930ca09259e8014cac09328a44d0ec9", null ],
     [ "getVFilter", "classJUTVideo.html#a4f6d21ca9b092a232977e0aa061359ec", null ],
     [ "getVideoInterval", "classJUTVideo.html#a3b4bb3b02f7226f5234c4f69da20b179", null ],
@@ -41,7 +39,6 @@ var classJUTVideo =
     [ "mSetBlack", "classJUTVideo.html#a2b519bfd36aed31748ff949376560042", null ],
     [ "mSetBlackFrameCount", "classJUTVideo.html#aec3b1701ffcf905f09cfa1b261eb9779", null ],
     [ "sManager", "classJUTVideo.html#a6ea6747845ea43d39a2d4f13a861a7aa", null ],
-    [ "sManager", "classJUTVideo.html#acb572bb422fbd04eb8b3748f2ba3bd15", null ],
     [ "sVideoInterval", "classJUTVideo.html#a666a7edf7b6223ee6e62057af02dae31", null ],
     [ "sVideoLastTick", "classJUTVideo.html#a0fd0733c99f7e4f38b1377e3e5ffe915", null ]
 ];

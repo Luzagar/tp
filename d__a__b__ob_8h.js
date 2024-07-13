@@ -2,6 +2,7 @@ var d__a__b__ob_8h =
 [
     [ "ob_part_s", "structob__part__s.html", "structob__part__s" ],
     [ "ob_ke_s", "structob__ke__s.html", "structob__ke__s" ],
+    [ "daB_OB_HIO_c", "classdaB__OB__HIO__c.html", "classdaB__OB__HIO__c" ],
     [ "b_ob_action", "d__a__b__ob_8h.html#aaec624a1526ddd48dffc68a4208cd179", [
       [ "OB_ACTION_CORE_START", "d__a__b__ob_8h.html#aaec624a1526ddd48dffc68a4208cd179ace99458d0d1d435f85e8d842082faab7", null ],
       [ "OB_ACTION_CORE_HAND_MOVE", "d__a__b__ob_8h.html#aaec624a1526ddd48dffc68a4208cd179a4a4bfc7a5ec7d8f80f3bdc6b2deac2b0", null ],
@@ -27,5 +28,6 @@ var d__a__b__ob_8h =
       [ "OB_ANM_TENTACLE_END", "d__a__b__ob_8h.html#a8f8884ae34d79a96ee3211d25ee4ee75a4e49835072cbdd3a62f672989f287291", null ],
       [ "OB_ANM_THROWUP", "d__a__b__ob_8h.html#a8f8884ae34d79a96ee3211d25ee4ee75a51e0a09aa6f3c73f6e993f01dc10d095", null ],
       [ "OB_ANM_WAIT", "d__a__b__ob_8h.html#a8f8884ae34d79a96ee3211d25ee4ee75a759122225c0b6a0b0c98fc453b02fb85", null ]
-    ] ]
+    ] ],
+    [ "STATIC_ASSERT", "d__a__b__ob_8h.html#a76a726a1d83ebaf8650828db0fb867da", null ]
 ];

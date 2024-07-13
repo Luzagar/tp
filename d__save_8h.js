@@ -4,7 +4,7 @@ var d__save_8h =
     [ "dSv_player_status_b_c", "classdSv__player__status__b__c.html", "classdSv__player__status__b__c" ],
     [ "dSv_horse_place_c", "classdSv__horse__place__c.html", "classdSv__horse__place__c" ],
     [ "dSv_player_return_place_c", "classdSv__player__return__place__c.html", "classdSv__player__return__place__c" ],
-    [ "dSv_player_field_last_stay_info_c", "structdSv__player__field__last__stay__info__c.html", "structdSv__player__field__last__stay__info__c" ],
+    [ "dSv_player_field_last_stay_info_c", "classdSv__player__field__last__stay__info__c.html", "classdSv__player__field__last__stay__info__c" ],
     [ "dSv_player_last_mark_info_c", "classdSv__player__last__mark__info__c.html", "classdSv__player__last__mark__info__c" ],
     [ "dSv_player_item_c", "classdSv__player__item__c.html", "classdSv__player__item__c" ],
     [ "dSv_player_get_item_c", "classdSv__player__get__item__c.html", "classdSv__player__get__item__c" ],

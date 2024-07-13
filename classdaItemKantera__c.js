@@ -31,6 +31,7 @@ var classdaItemKantera__c =
     [ "setBaseMtx", "classdaItemKantera__c.html#a25591a9391ce82db80c2b7a6e4840398", null ],
     [ "setBaseMtx", "classdaItemKantera__c.html#a5e59eef6015330c655f52764d8c191a2", null ],
     [ "setStatus", "classdaItemKantera__c.html#a4aaa1b2d56722ee88da398f3fe5d7e4d", null ],
+    [ "field_0x0", "classdaItemKantera__c.html#a816983b952fc0abc14bb688c6bce2ca5", null ],
     [ "field_0x92c", "classdaItemKantera__c.html#ab5a39bfc3a8ba0d8ce2a7802f1b7efcb", null ],
     [ "field_0x930", "classdaItemKantera__c.html#a6d11292e65bc14f7d7098fa8a567b697", null ],
     [ "field_0x935", "classdaItemKantera__c.html#a8d8df64bc3962043bd13cb2c75ca962a", null ],

@@ -1,4 +1,4 @@
 var d__a__obj__suisya_8h =
 [
-    [ "daObj_Suisya_c", "classdaObj__Suisya__c.html", "classdaObj__Suisya__c" ]
+    [ "STATIC_ASSERT", "d__a__obj__suisya_8h.html#aa6107fd228ea4aaf4e0a6ede551b8478", null ]
 ];

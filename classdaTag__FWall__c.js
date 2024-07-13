@@ -3,7 +3,6 @@ var classdaTag__FWall__c =
     [ "_delete", "classdaTag__FWall__c.html#a3aa8abc706f9d79f09c6a80e343c5896", null ],
     [ "create", "classdaTag__FWall__c.html#a60d40f56d908931d0e6080d91041bac4", null ],
     [ "execute", "classdaTag__FWall__c.html#ac45c8a25a8efce4545ec95f30b896ce7", null ],
-    [ "getPos", "classdaTag__FWall__c.html#acb8ec260f6819e5ac128ae05cbc2b23f", null ],
     [ "field_0x568", "classdaTag__FWall__c.html#a99ad0e8c779538e369098a5fb0e4c9cd", null ],
     [ "field_0x65c", "classdaTag__FWall__c.html#af8546feef69e03863554078434252344", null ],
     [ "field_0x760", "classdaTag__FWall__c.html#a1434681d311e3e69dbbfa79fee3a70a8", null ],

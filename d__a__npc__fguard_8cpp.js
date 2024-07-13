@@ -5,7 +5,6 @@ var d__a__npc__fguard_8cpp =
     [ "mDoExt_McaMorfSO", "classmDoExt__McaMorfSO.html", "classmDoExt__McaMorfSO" ],
     [ "fopAc_ac_c", "structfopAc__ac__c.html", "structfopAc__ac__c" ],
     [ "Vec", "structVec.html", "structVec" ],
-    [ "daNpcFgd_c", "structdaNpcFgd__c.html", "structdaNpcFgd__c" ],
     [ "daNpcCd2_c", "classdaNpcCd2__c.html", "classdaNpcCd2__c" ],
     [ "dNpcLib_lookat_c", "classdNpcLib__lookat__c.html", "classdNpcLib__lookat__c" ],
     [ "dCcD_Stts", "structdCcD__Stts.html", "structdCcD__Stts" ],

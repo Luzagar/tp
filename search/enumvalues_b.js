@@ -32,6 +32,12 @@ var searchData=
   ['kind_5fvtx_5fcolor_29',['KIND_VTX_COLOR',['../J2DAnimation_8h.html#a424f4c2c887eb519e2f0f02b37e42c48a00019934198aa81fe0516ee9ce3daf58',1,'J2DAnimation.h']]],
   ['kj3derror_5falloc_30',['kJ3DError_Alloc',['../J3DSys_8h.html#ac80cca76e4c0a8b5d26b0835bbda4125a42330217f356068a0d66dfc3bae798fa',1,'J3DSys.h']]],
   ['kj3derror_5fsuccess_31',['kJ3DError_Success',['../J3DSys_8h.html#ac80cca76e4c0a8b5d26b0835bbda4125a0a335659e4756d79211cfd67b9b7d2e6',1,'J3DSys.h']]],
-  ['kokiri_5fclothes_5fflag_32',['KOKIRI_CLOTHES_FLAG',['../d__save_8h.html#a754ce34cf5161a6dc781544dbecc6cd0aa8e82eaa10422a66792fb9c246061c4a',1,'d_save.h']]],
-  ['kvcdvatdlsize_33',['kvcdvatdlsize',['../classJ3DShape.html#a7dd586ce1230acb4f3258080155640c9a78df67ba3112e67a6e32f56478e5f788',1,'J3DShape::kVcdVatDLSize'],['../J3DShape_8cpp.html#a99fb83031ce9923c84392b4e92f956b5a1587d173f2bd09d94ac8cf4004fb6bc2',1,'kVcdVatDLSize:&#160;J3DShape.cpp']]]
+  ['kmsg_5ftype_5f0_32',['KMSG_TYPE_0',['../structdaTag__KMsg__c.html#ae0a590441339fafce2ea9046fa410aa4aba5533878ca8e151cc392dde6b862f02',1,'daTag_KMsg_c']]],
+  ['kmsg_5ftype_5f1_33',['KMSG_TYPE_1',['../structdaTag__KMsg__c.html#ae0a590441339fafce2ea9046fa410aa4a8975f9837697eaf1b36b2ee724f5c2a4',1,'daTag_KMsg_c']]],
+  ['kmsg_5ftype_5f2_34',['KMSG_TYPE_2',['../structdaTag__KMsg__c.html#ae0a590441339fafce2ea9046fa410aa4aa19e48bc41853d502f995fb377ada61a',1,'daTag_KMsg_c']]],
+  ['kmsg_5ftype_5f3_35',['KMSG_TYPE_3',['../structdaTag__KMsg__c.html#ae0a590441339fafce2ea9046fa410aa4ad5b3edf50d2f980527eb2f5e07196091',1,'daTag_KMsg_c']]],
+  ['kmsg_5ftype_5f4_36',['KMSG_TYPE_4',['../structdaTag__KMsg__c.html#ae0a590441339fafce2ea9046fa410aa4ad08d704c49af0e33adbb3192588445f1',1,'daTag_KMsg_c']]],
+  ['kmsg_5ftype_5f5_37',['KMSG_TYPE_5',['../structdaTag__KMsg__c.html#ae0a590441339fafce2ea9046fa410aa4aaf4eac08cb1249d743319a6db0a0a9ea',1,'daTag_KMsg_c']]],
+  ['kokiri_5fclothes_5fflag_38',['KOKIRI_CLOTHES_FLAG',['../d__save_8h.html#a754ce34cf5161a6dc781544dbecc6cd0aa8e82eaa10422a66792fb9c246061c4a',1,'d_save.h']]],
+  ['kvcdvatdlsize_39',['kvcdvatdlsize',['../classJ3DShape.html#acee9ca171e1ae9de2245d93b3aecf29ea78df67ba3112e67a6e32f56478e5f788',1,'J3DShape::kVcdVatDLSize'],['../J3DShape_8cpp.html#a99fb83031ce9923c84392b4e92f956b5a1587d173f2bd09d94ac8cf4004fb6bc2',1,'kVcdVatDLSize:&#160;J3DShape.cpp']]]
 ];

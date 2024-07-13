@@ -2,13 +2,11 @@ var structdMsgScrnExplain__c =
 [
     [ "ProcFunc", "structdMsgScrnExplain__c.html#af476316907e98b429eceefb8b480bc6a", null ],
     [ "dMsgScrnExplain_c", "structdMsgScrnExplain__c.html#a9252f497113bb0f3ab2d7d2d7e9bf4bb", null ],
-    [ "dMsgScrnExplain_c", "structdMsgScrnExplain__c.html#a9252f497113bb0f3ab2d7d2d7e9bf4bb", null ],
     [ "~dMsgScrnExplain_c", "structdMsgScrnExplain__c.html#ac6e57bc2de30c47df0c7eb11b05f374a", null ],
     [ "checkTriggerA", "structdMsgScrnExplain__c.html#aef2f965728df3df20ca47fbabd3d8b1a", null ],
     [ "checkTriggerB", "structdMsgScrnExplain__c.html#aba0bfe79ef5fd5886224a47e160c077a", null ],
     [ "close_init", "structdMsgScrnExplain__c.html#a85a29cfcc4920ab70ab25b70a9539620", null ],
     [ "close_proc", "structdMsgScrnExplain__c.html#a6a7c6c0a96510c5175b277e3d683f5b9", null ],
-    [ "draw", "structdMsgScrnExplain__c.html#acd57d44cb32d37bee26554f8088d5870", null ],
     [ "draw", "structdMsgScrnExplain__c.html#acd57d44cb32d37bee26554f8088d5870", null ],
     [ "getAlphaRatio", "structdMsgScrnExplain__c.html#ade38a80bd7f8693cc462ab23ded67e9d", null ],
     [ "getSelectCursor", "structdMsgScrnExplain__c.html#a38ee7aa9f3d6744432c7ef9af267f541", null ],

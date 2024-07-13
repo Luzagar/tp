@@ -4,8 +4,6 @@ var d__a__tag__allmato_8cpp =
     [ "daTag_AllMato_c", "structdaTag__AllMato__c.html", "structdaTag__AllMato__c" ],
     [ "Vec", "structVec.html", "structVec" ],
     [ "cXyz", "structcXyz.html", "structcXyz" ],
-    [ "daObj_ItaMato_c", "structdaObj__ItaMato__c.html", "structdaObj__ItaMato__c" ],
-    [ "daObj_BouMato_c", "structdaObj__BouMato__c.html", "structdaObj__BouMato__c" ],
     [ "daNpcT_ActorMngr_c", "classdaNpcT__ActorMngr__c.html", "classdaNpcT__ActorMngr__c" ],
     [ "daArrow_c", "classdaArrow__c.html", "classdaArrow__c" ],
     [ "dSv_info_c", "structdSv__info__c.html", "structdSv__info__c" ],

@@ -18,7 +18,6 @@ var classZ2WolfHowlMgr =
     [ "skipCorrectDemo", "classZ2WolfHowlMgr.html#afa52f61d5aaaa6b310948258fc35c81d", null ],
     [ "startGuideMelody", "classZ2WolfHowlMgr.html#a3524c9444a6a909a436e0a089fbb59d4", null ],
     [ "startWindStoneSound", "classZ2WolfHowlMgr.html#a46da80ace4e94b91c30db72939f0de5e", null ],
-    [ "startWindStoneSound", "classZ2WolfHowlMgr.html#a46da80ace4e94b91c30db72939f0de5e", null ],
     [ "startWolfHowlSound", "classZ2WolfHowlMgr.html#a11db375a0175c899d85e26640059b90c", null ],
     [ "field_0x00", "classZ2WolfHowlMgr.html#ad7648cf63ec0b51a50706369d78e03ed", null ],
     [ "field_0x04", "classZ2WolfHowlMgr.html#a0c461a93fb7435f73de5ec3442909388", null ],

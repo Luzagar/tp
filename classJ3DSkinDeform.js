@@ -2,7 +2,6 @@ var classJ3DSkinDeform =
 [
     [ "J3DSkinDeform", "classJ3DSkinDeform.html#a91e9ee1435d8d1785a08c24901536f90", null ],
     [ "~J3DSkinDeform", "classJ3DSkinDeform.html#add1394483a39e39ee43e1ad7e669d034", null ],
-    [ "J3DSkinDeform", "classJ3DSkinDeform.html#a91e9ee1435d8d1785a08c24901536f90", null ],
     [ "calcAnmInvJointMtx", "classJ3DSkinDeform.html#a0b3ea8f52432336cde9c33f9c0151ffe", null ],
     [ "calcNrmMtx", "classJ3DSkinDeform.html#ab34e36b92cf1c033cc760c393fedc12b", null ],
     [ "changeFastSkinDL", "classJ3DSkinDeform.html#a45d8381508ce2b6b67377181f95267c0", null ],

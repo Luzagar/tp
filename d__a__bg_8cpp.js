@@ -1,10 +1,5 @@
 var d__a__bg_8cpp =
 [
-    [ "daGrass_c", "classdaGrass__c.html", "classdaGrass__c" ],
-    [ "daBg_btkAnm_c", "classdaBg__btkAnm__c.html", "classdaBg__btkAnm__c" ],
-    [ "daBg_brkAnm_c", "classdaBg__brkAnm__c.html", "classdaBg__brkAnm__c" ],
-    [ "daBg_unkData", "structdaBg__unkData.html", "structdaBg__unkData" ],
-    [ "daBg_c", "classdaBg__c.html", "classdaBg__c" ],
     [ "__as__12J3DLightInfoFRC12J3DLightInfo", "d__a__bg_8cpp.html#a4578a9c6290baa472dabc41277b10c28", null ],
     [ "__construct_array", "d__a__bg_8cpp.html#a58dbf4d2335fdc0e2065200543f5e4ea", null ],
     [ "__ct__10fopAc_ac_cFv", "d__a__bg_8cpp.html#a085f3a34ce186ab6e202a97581a1f68a", null ],

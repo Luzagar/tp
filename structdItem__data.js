@@ -25,10 +25,9 @@ var structdItem__data =
     [ "getTevFrm", "structdItem__data.html#a4205f4591c13850a066d8fa9110ad3c6", null ],
     [ "getTexScale", "structdItem__data.html#a251a3cdf8f987666903852830ed97365", null ],
     [ "getTexture", "structdItem__data.html#a317a9839776ab3631249877f3a1e4757", null ],
-    [ "field_item_res", "structdItem__data.html#a5e8881c00c1fd8709f28a434d1cd99c5", null ],
-    [ "field_item_res", "structdItem__data.html#a1ff944a9604ded943f0b2c55a248f503", null ],
+    [ "field_item_res", "structdItem__data.html#aa4f2639d14269b6e402498f17b21b259", null ],
     [ "item_info", "structdItem__data.html#a4a83f7c2e311683e0551f3fe7d162c4e", null ],
-    [ "item_info", "structdItem__data.html#ae91f6678744eed2ca359cb6e3a7cf0ce", null ],
-    [ "item_resource", "structdItem__data.html#a756d88538fd1eed6e4fa25c5595a6033", null ],
+    [ "item_info", "structdItem__data.html#a168540220e24cfd737711a6bb180f0b5", null ],
+    [ "item_resource", "structdItem__data.html#a183ca7bf5836b884a11d76f4ac9450a4", null ],
     [ "item_resource", "structdItem__data.html#a40a412e663ea4bb29aa05eda39dae89c", null ]
 ];

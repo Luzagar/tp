@@ -2,6 +2,7 @@ var d__a__bg__obj_8h =
 [
     [ "daBgObj_c", "classdaBgObj__c.html", "classdaBgObj__c" ],
     [ "daBgObj_c::spec_data_c", "classdaBgObj__c_1_1spec__data__c.html", "classdaBgObj__c_1_1spec__data__c" ],
+    [ "spec_dat", "structspec__dat.html", "structspec__dat" ],
     [ "actionFunc", "d__a__bg__obj_8h.html#ae627c53e01d62029e56eef6fae14e53b", null ],
     [ "createHeapFunc", "d__a__bg__obj_8h.html#a225733a38384a9e4d0d3b60c9dd9c50e", null ],
     [ "createInitFunc", "d__a__bg__obj_8h.html#a529c2b366c98f203be41f1761b999b02", null ],

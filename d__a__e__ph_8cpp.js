@@ -1,6 +1,5 @@
 var d__a__e__ph_8cpp =
 [
-    [ "daE_PH_HIO_c", "classdaE__PH__HIO__c.html", "classdaE__PH__HIO__c" ],
     [ "daE_PH_Create", "d__a__e__ph_8cpp.html#a8e3c5dfa573dd4e9b65ed4138a185c97", null ],
     [ "daE_PH_Delete", "d__a__e__ph_8cpp.html#ab614338853b0caf5f3ba2d6ab13a319a", null ],
     [ "daE_PH_Draw", "d__a__e__ph_8cpp.html#ad0bbf7b8b8451d77886074f036d7b03c", null ],

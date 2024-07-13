@@ -1,6 +1,5 @@
 var d__a__npc__ne_8cpp =
 [
-    [ "home_path_pnt", "structhome__path__pnt.html", "structhome__path__pnt" ],
     [ "__construct_array", "d__a__npc__ne_8cpp.html#a58dbf4d2335fdc0e2065200543f5e4ea", null ],
     [ "__ct__10dCcD_GSttsFv", "d__a__npc__ne_8cpp.html#ae4cd09eb67ed2fb9bc6e87d5cea71757", null ],
     [ "__ct__10dMsgFlow_cFv", "d__a__npc__ne_8cpp.html#adf6efa29e1556e386b88dccee61eff3e", null ],

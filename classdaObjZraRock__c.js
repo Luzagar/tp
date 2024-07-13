@@ -11,6 +11,7 @@ var classdaObjZraRock__c =
     [ "setDemoStart", "classdaObjZraRock__c.html#ac518c87190401f560e57aa56b6779129", null ],
     [ "setEnvTevColor", "classdaObjZraRock__c.html#a2636bdabcf558218a5fa411c42275ea2", null ],
     [ "setRoomNo", "classdaObjZraRock__c.html#a30bb98de9867354ec61bb84cfa643725", null ],
+    [ "daNpc_zrZ_c", "classdaObjZraRock__c.html#ad5b7c77524e699800deabb79d326243c", null ],
     [ "mAcchCir", "classdaObjZraRock__c.html#a74214d84b7105af07e4cb01444ed8608", null ],
     [ "mBrkAnm", "classdaObjZraRock__c.html#a4065e9e242a309a42717a774b7f3c413", null ],
     [ "mDemoStart", "classdaObjZraRock__c.html#a1915fa4868d436fbd7a9749c13145c9b", null ],

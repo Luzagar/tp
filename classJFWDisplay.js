@@ -22,14 +22,12 @@ var classJFWDisplay =
     [ "exchangeXfb_double", "classJFWDisplay.html#ad8f1644e325a4c3f044459d92c6a20b8", null ],
     [ "exchangeXfb_triple", "classJFWDisplay.html#ad94e845b6a546b1bb13febd97a3d7232", null ],
     [ "getFader", "classJFWDisplay.html#a2908b9753e5c9b93f69dda231d578302", null ],
-    [ "getManager", "classJFWDisplay.html#a87f552197d1be6bc4e0ff3b33bc60641", null ],
-    [ "getManager", "classJFWDisplay.html#a9f9ee13ea768c270419f2017b51dcd7d", null ],
+    [ "getManager", "classJFWDisplay.html#ac441ee0d5e7e7f7c05ff0dcd32228674", null ],
     [ "preGX", "classJFWDisplay.html#a43532b0e39e8ae116f8f7827cb2a573d", null ],
     [ "prepareCopyDisp", "classJFWDisplay.html#a560eef6e2315925de0bb426f6f1804ed", null ],
     [ "setClearColor", "classJFWDisplay.html#a7f1dd0aaa1953fedb761d81109cc6d37", null ],
     [ "setDrawDoneMethod", "classJFWDisplay.html#ad8f51fd48e43e3b891b565856cd0b453", null ],
     [ "setFader", "classJFWDisplay.html#a45ec1355a85c35a8a9b2ace239df7ff9", null ],
-    [ "setFrameRate", "classJFWDisplay.html#a6f83d1adf537660e9e98e0406a24d2c8", null ],
     [ "setTickRate", "classJFWDisplay.html#aed7ea2dea99d80c5fb703ef2c36052f0", null ],
     [ "startFadeIn", "classJFWDisplay.html#a0980ebe996b520d22807422e7e7187d3", null ],
     [ "startFadeOut", "classJFWDisplay.html#aeb601a3fcf7d9f3fc45ee7649984458d", null ],
@@ -55,6 +53,5 @@ var classJFWDisplay =
     [ "mTickRate", "classJFWDisplay.html#ade3059fca4b43682bf733d1e840c42b4", null ],
     [ "mXfbManager", "classJFWDisplay.html#acd80f345414fbf85ee6a6d551a1ebf35", null ],
     [ "mZClear", "classJFWDisplay.html#a5d18258ae928ff54622a7e7b76280ef3", null ],
-    [ "sManager", "classJFWDisplay.html#aecb5159d17b01b81da3b22021e281aeb", null ],
-    [ "sManager", "classJFWDisplay.html#afa123b87d65cf5e0c4e9aaa8c702ecde", null ]
+    [ "sManager", "classJFWDisplay.html#aecb5159d17b01b81da3b22021e281aeb", null ]
 ];

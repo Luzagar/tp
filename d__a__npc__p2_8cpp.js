@@ -10,8 +10,6 @@ var d__a__npc__p2_8cpp =
     [ "daNpc_P2Execute__FPv", "d__a__npc__p2_8cpp.html#a33ddff068d91dce8c2e1daa1e8a39b77", null ],
     [ "daNpc_P2IsDelete", "d__a__npc__p2_8cpp.html#aee17f7c89adf9dc30be9af7a3fb77d74", null ],
     [ "daNpc_P2IsDelete__FPv", "d__a__npc__p2_8cpp.html#a3c226679378e1725d9d2912de78d490f", null ],
-    [ "daNpc_P2MethodTable", "d__a__npc__p2_8cpp.html#a6ab794dc0daf517ecbd4b8373aab7486", null ],
-    [ "g_fopAc_Method", "d__a__npc__p2_8cpp.html#a24ce032de2af10b7e92bf464450ddeb7", null ],
-    [ "g_fpcLf_Method", "d__a__npc__p2_8cpp.html#a3de3a374119e8432d211e29713bce0ae", null ],
-    [ "g_profile_NPC_P2", "d__a__npc__p2_8cpp.html#a37cae7e8f1d61612a2b69365b24f9300", null ]
+    [ "daNpc_P2MethodTable", "d__a__npc__p2_8cpp.html#a581f7fe825ab450b860c94d68b7b158f", null ],
+    [ "g_profile_NPC_P2", "d__a__npc__p2_8cpp.html#a819e4cd5a3f3a79bd6db9b9339342a62", null ]
 ];

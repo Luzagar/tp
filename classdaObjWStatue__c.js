@@ -1,0 +1,26 @@
+var classdaObjWStatue__c =
+[
+    [ "__CreateHeap", "classdaObjWStatue__c.html#a60223f161d3592d83f70117163bcbc48", null ],
+    [ "_delete", "classdaObjWStatue__c.html#a0683dfd9dbe032fe072b7cce127214ee", null ],
+    [ "actionBoomerangCarry", "classdaObjWStatue__c.html#ad4c75a69bc1c07b8a06728d0d427c9b2", null ],
+    [ "actionGetDemo", "classdaObjWStatue__c.html#a5e82d7d337d26caa1fbeaaf4cfbd049d", null ],
+    [ "actionInitBoomerangCarry", "classdaObjWStatue__c.html#a320b9de9b160092557639d3a4a774518", null ],
+    [ "actionInitSwOnWait", "classdaObjWStatue__c.html#a0378691462ccf4514991d5bf4b04a3aa", null ],
+    [ "actionOrderGetDemo", "classdaObjWStatue__c.html#a70923790927233be35aea96b1a885efd", null ],
+    [ "actionSwOnWait", "classdaObjWStatue__c.html#a124462877834f4765b2eb54a67dbf82b", null ],
+    [ "actionWait", "classdaObjWStatue__c.html#ad5ee10583f925e75ff3e3241c3a00a51", null ],
+    [ "actionWaitInit", "classdaObjWStatue__c.html#aa2b6e345f57c7a2d55d81219795ab504", null ],
+    [ "bg_check", "classdaObjWStatue__c.html#a5a0d174ecc96b4bb2a976b923fe818dc", null ],
+    [ "Create", "classdaObjWStatue__c.html#a2a991681e5259df19d095f6fe3a08c3d", null ],
+    [ "create", "classdaObjWStatue__c.html#a9e3be18bf43af5637da58bfae4e3a80d", null ],
+    [ "demoProc", "classdaObjWStatue__c.html#a237a71747a2eebc3c0890a0c5f4e7dd9", null ],
+    [ "draw", "classdaObjWStatue__c.html#aaa6f322a448fbb76faec424bb1f9022d", null ],
+    [ "effectSet", "classdaObjWStatue__c.html#a237a33285a136268ffefef739d935980", null ],
+    [ "effectStop", "classdaObjWStatue__c.html#a3c2532071bef94784531b03718dd1795", null ],
+    [ "execute", "classdaObjWStatue__c.html#a5dce348b4d84967e88df38e66f20e1aa", null ],
+    [ "initActionOrderGetDemo", "classdaObjWStatue__c.html#ab47b88b8a5a368b9acdceec7d3edbad2", null ],
+    [ "initBaseMtx", "classdaObjWStatue__c.html#a79df72c912390e2dfb52913c1f540c6a", null ],
+    [ "setBaseMtx", "classdaObjWStatue__c.html#afb8b9b4dac1ab86d094741aaadac19d3", null ],
+    [ "setListStart", "classdaObjWStatue__c.html#a594e5852c20647d29e6f4b88d1147f8a", null ],
+    [ "field_0x568", "classdaObjWStatue__c.html#a658050163cd337f237c163a84c03cbf4", null ]
+];

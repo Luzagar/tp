@@ -3,8 +3,6 @@ var classdaTagWaterFall__c =
     [ "daTagWaterFall_c", "classdaTagWaterFall__c.html#afcab95353f782deb5079871d639bd6c4", null ],
     [ "_delete", "classdaTagWaterFall__c.html#a3a2e082a9ab66a62d7abec64e476fe35", null ],
     [ "checkHitWaterFall", "classdaTagWaterFall__c.html#a0b4308f7ea53ed93d602be24fac1a4f8", null ],
-    [ "checkHitWaterFall", "classdaTagWaterFall__c.html#acb8dff5cf8ace1d8e153e7f6a83973d0", null ],
-    [ "checkHitWaterFall", "classdaTagWaterFall__c.html#acb8dff5cf8ace1d8e153e7f6a83973d0", null ],
     [ "checkHitWaterFallCamera", "classdaTagWaterFall__c.html#adff1ca6c9f6fcd6c73e1a6911bec8e5d", null ],
     [ "create", "classdaTagWaterFall__c.html#a89ee4312a9e113eb886284723c8c0fea", null ],
     [ "draw", "classdaTagWaterFall__c.html#a4bb3ee06a3d89c28f6d46cc26ef2051a", null ],

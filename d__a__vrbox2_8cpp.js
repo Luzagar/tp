@@ -1,6 +1,5 @@
 var d__a__vrbox2_8cpp =
 [
-    [ "vrbox2_class", "classvrbox2__class.html", "classvrbox2__class" ],
     [ "__ct__10fopAc_ac_cFv", "d__a__vrbox2_8cpp.html#a085f3a34ce186ab6e202a97581a1f68a", null ],
     [ "__dl__FPv", "d__a__vrbox2_8cpp.html#a498e6440d5c316e2672169ee4ed92309", null ],
     [ "__dt__12J3DFrameCtrlFv", "d__a__vrbox2_8cpp.html#a2f2eabe1ab9dc0035413fa0e356fa911", null ],

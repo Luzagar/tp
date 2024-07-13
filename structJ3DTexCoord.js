@@ -6,6 +6,7 @@ var structJ3DTexCoord =
     [ "getTexGenSrc", "structJ3DTexCoord.html#a597e29787a52b1e3ed940096485c3d13", null ],
     [ "getTexGenType", "structJ3DTexCoord.html#a16f8a58819f1ed19b418124dea69f35c", null ],
     [ "getTexMtxReg", "structJ3DTexCoord.html#adff0216ffac4429f26aaa1881da95903", null ],
+    [ "operator=", "structJ3DTexCoord.html#adf564db93bb3aec629694922ce14076a", null ],
     [ "resetTexMtxReg", "structJ3DTexCoord.html#a796fc8bce5cb2fe28aa338e8dbe93ef0", null ],
     [ "setTexCoordInfo", "structJ3DTexCoord.html#a8068dbe9765d0247a0a65787916a5c3f", null ],
     [ "setTexGenMtx", "structJ3DTexCoord.html#a589fe08f9d3bbcf0095c1c8e15d70abe", null ],

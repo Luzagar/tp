@@ -1,7 +1,6 @@
 var structdaNpcThe__Param__c_1_1param =
 [
     [ "field_0x60", "structdaNpcThe__Param__c_1_1param.html#a5a8ca72e24d64f536688eeec755b507e", null ],
-    [ "field_0x62", "structdaNpcThe__Param__c_1_1param.html#a0011f4dfc45b05f389a6ff18fa983731", null ],
     [ "mAttnFovY", "structdaNpcThe__Param__c_1_1param.html#a051d849e2ce35e1d4c1a92ff8761172d", null ],
     [ "mAttnLowerY", "structdaNpcThe__Param__c_1_1param.html#a2ddaec75364f9e6536bd5fec5d749d31", null ],
     [ "mAttnOffsetY", "structdaNpcThe__Param__c_1_1param.html#a6e08d1c08244224198bd9ebb4f188eaf", null ],
@@ -13,6 +12,7 @@ var structdaNpcThe__Param__c_1_1param =
     [ "mBodyUpAngle", "structdaNpcThe__Param__c_1_1param.html#adb7c7fb5bf6a8b7f5794369e2ba1cfa8", null ],
     [ "mCcWeight", "structdaNpcThe__Param__c_1_1param.html#a334728f0578e6788fa318f83bed061c5", null ],
     [ "mCylH", "structdaNpcThe__Param__c_1_1param.html#a21d3ee1fead2940484c6741eebbeda90", null ],
+    [ "mDamageTimer", "structdaNpcThe__Param__c_1_1param.html#aa50eacfea9185202f67447cd7cc09459", null ],
     [ "mGravity", "structdaNpcThe__Param__c_1_1param.html#abd903a04510ac29f283f2e3f5a9f9775", null ],
     [ "mHeadDownAngle", "structdaNpcThe__Param__c_1_1param.html#a09bc103549555e679eab161952c4f3e4", null ],
     [ "mHeadLeftAngle", "structdaNpcThe__Param__c_1_1param.html#a4888ee49cca1f2bcf80c0e22c18614c9", null ],

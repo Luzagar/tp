@@ -12,5 +12,15 @@ var f__op__camera__mng_8h =
     [ "fopCamM_GetFovy", "f__op__camera__mng_8h.html#a03f0ecc8adce941089a6f3a0aba862fd", null ],
     [ "fopCamM_GetParam", "f__op__camera__mng_8h.html#ade25b5f8ec54a4e11bbcdb5695a76301", null ],
     [ "fopCamM_Init", "f__op__camera__mng_8h.html#abd16391c9114485da566faa5a3e81e99", null ],
-    [ "fopCamM_Management", "f__op__camera__mng_8h.html#a3d80b8b2f53415d5482bbc22514c4ba7", null ]
+    [ "fopCamM_Management", "f__op__camera__mng_8h.html#a3d80b8b2f53415d5482bbc22514c4ba7", null ],
+    [ "fopCamM_SetAspect", "f__op__camera__mng_8h.html#a5e497ce99b3856c0d5541dd3fe6c2166", null ],
+    [ "fopCamM_SetBank", "f__op__camera__mng_8h.html#a4e78cfc63464b1d7746bc1bef6563c29", null ],
+    [ "fopCamM_SetCenter", "f__op__camera__mng_8h.html#af75debf034d1fec193fddd56ef7cc558", null ],
+    [ "fopCamM_SetEye", "f__op__camera__mng_8h.html#affd31ed0eef9adde17b473a22dc9196c", null ],
+    [ "fopCamM_SetFar", "f__op__camera__mng_8h.html#abb4f619b60f50ca96141c94108b3f400", null ],
+    [ "fopCamM_SetFovy", "f__op__camera__mng_8h.html#a9f7d255307380dda599dc7d29ad39c77", null ],
+    [ "fopCamM_SetNear", "f__op__camera__mng_8h.html#a744a09546384694c8f7635e3e60a5ec8", null ],
+    [ "fopCamM_SetPrm1", "f__op__camera__mng_8h.html#a7524f60dd0e472dad4f23f5febcef6b9", null ],
+    [ "fopCamM_SetPrm2", "f__op__camera__mng_8h.html#a1fc93274c92fc40e78d2c00982ee345a", null ],
+    [ "fopCamM_SetPrm3", "f__op__camera__mng_8h.html#a46ebab651b4eccf206f8d9e16c29c758", null ]
 ];

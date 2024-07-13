@@ -10,6 +10,7 @@ var structJMSMesgEntry__c =
     [ "field_0x0e", "structJMSMesgEntry__c.html#af3e6c3fee997dfdf497e0eb221554092", null ],
     [ "field_0x0f", "structJMSMesgEntry__c.html#a5593641ab2d1f331be815c7955459e6c", null ],
     [ "field_0x10", "structJMSMesgEntry__c.html#a7da403f9824ddfe0d4c8347462e82f7f", null ],
+    [ "field_0x5ac", "structJMSMesgEntry__c.html#a1a8e98539c3e2322535e63b51ed21137", null ],
     [ "mStringId", "structJMSMesgEntry__c.html#ad5c6c844a98a0e6aa2382f2569b8ed9a", null ],
     [ "mStringOffset", "structJMSMesgEntry__c.html#acc26727cc71b98b6456906b1ca1e8392", null ]
 ];

@@ -8,8 +8,6 @@ var classdCcMassS__Mng =
     [ "GetCamTopPos", "classdCcMassS__Mng.html#afd0a0567191ead3643c28c9f7e5f04bf", null ],
     [ "GetResultCam", "classdCcMassS__Mng.html#a9df80fde19b5629886a1eef5460d7330", null ],
     [ "Prepare", "classdCcMassS__Mng.html#a23e8b259382e0816a83ba97cb3d432ca", null ],
-    [ "Set", "classdCcMassS__Mng.html#afb0b8c128e72864a2ea2ec9607d8c445", null ],
-    [ "Set", "classdCcMassS__Mng.html#afb0b8c128e72864a2ea2ec9607d8c445", null ],
     [ "Set", "classdCcMassS__Mng.html#a32078538ff7ae528779cacaf2f387c97", null ],
     [ "SetAttr", "classdCcMassS__Mng.html#af846caf6fc26ad9dadfa6c8cce7b636a", null ],
     [ "SetCam", "classdCcMassS__Mng.html#af0e5fe3bfa31786cbfaea955066ba232", null ],

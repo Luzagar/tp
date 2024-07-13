@@ -79,7 +79,6 @@ var classdaMyna__c =
     [ "shopping_wait_init", "classdaMyna__c.html#ac7be67b818c49011839e85adb8d30896", null ],
     [ "shopping_wait_move", "classdaMyna__c.html#ab861b7fb3381c2983df5ec2ed2e79908", null ],
     [ "soldoutItem", "classdaMyna__c.html#a8073ab70e11f0764808c25f2a106c198", null ],
-    [ "soldoutItem", "classdaMyna__c.html#a8073ab70e11f0764808c25f2a106c198", null ],
     [ "talkAnime", "classdaMyna__c.html#a3523e33ea3d0635a83d89abcdf962956", null ],
     [ "thanks_talk_init", "classdaMyna__c.html#a910e6340d580190cbd21760b26b4c392", null ],
     [ "thanks_talk_move", "classdaMyna__c.html#a9f50d130e528a4d0a7d3980effb23c44", null ],

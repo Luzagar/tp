@@ -2,6 +2,12 @@ var classdDemo__camera__c =
 [
     [ "dDemo_camera_c", "classdDemo__camera__c.html#a7c85a09b4a07c386cff9c2db8ea6d801", null ],
     [ "~dDemo_camera_c", "classdDemo__camera__c.html#a2d6cf5f3e68f4f0c76ee2578f3eb59d7", null ],
+    [ "checkEnable", "classdDemo__camera__c.html#a9fcb849eadbc4f9b17ea8f5f6fc6213e", null ],
+    [ "getFovy", "classdDemo__camera__c.html#a76b34b0d42c702ea39f506ed32b40352", null ],
+    [ "getRoll", "classdDemo__camera__c.html#a204b3133970002285ccc95f29aecbe1b", null ],
+    [ "getTarget", "classdDemo__camera__c.html#a12af0918c68d3d29a2622f4996a123e8", null ],
+    [ "getTrans", "classdDemo__camera__c.html#ac5bf1e94b65922a901ee5704759ed7d8", null ],
+    [ "getUp", "classdDemo__camera__c.html#a1b4a12741359310ddc1503340c35b8b4", null ],
     [ "JSGGetProjectionAspect", "classdDemo__camera__c.html#a8c860746815086cada1c4aade6110c36", null ],
     [ "JSGGetProjectionFar", "classdDemo__camera__c.html#a6ffefe24a4fcb98c32eaf0ae4c031864", null ],
     [ "JSGGetProjectionFovy", "classdDemo__camera__c.html#ab03d8c0647dda69be489dad45ffa85d1", null ],

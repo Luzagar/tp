@@ -9,8 +9,6 @@ var structdaObj =
     [ "HitSeStart", "structdaObj.html#a855184ab3329f8e2caac084fb486fc88", null ],
     [ "make_eff_break_gm_kotubo", "structdaObj.html#a693be79264088ad5864762bfdf38e005", null ],
     [ "make_eff_break_gm_ootubo", "structdaObj.html#a4f8ba187ba6d141904f418847a4cdeff", null ],
-    [ "make_eff_break_kotubo", "structdaObj.html#ada5c32db6f682869283cde55b0bf80b4", null ],
-    [ "make_eff_break_kotubo2", "structdaObj.html#ab203f6fa7247e075bd7f47468e65792b", null ],
     [ "posMoveF_stream", "structdaObj.html#a14f3bb2aeb2afcfdde7d4cf49c52f72c", null ],
     [ "PrmAbstract", "structdaObj.html#a813737de96293518ae981dfceba1fd50", null ],
     [ "PrmAbstract", "structdaObj.html#a813737de96293518ae981dfceba1fd50", null ],

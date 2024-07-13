@@ -23,7 +23,6 @@ var classdaBalloon2D__c =
     [ "setComboNum", "classdaBalloon2D__c.html#add93e3315ca8a0f313544d437cfd9965", null ],
     [ "setHIO", "classdaBalloon2D__c.html#ae598cd1c17fc113c056e993074cadbe0", null ],
     [ "setScoreCount", "classdaBalloon2D__c.html#a7fe08875262b4a4246527b226e4d4adf", null ],
-    [ "setScoreCount", "classdaBalloon2D__c.html#a7fe08875262b4a4246527b226e4d4adf", null ],
     [ "setScoreNum", "classdaBalloon2D__c.html#a0d66043e1b923955168b4657099e8cfd", null ],
     [ "show", "classdaBalloon2D__c.html#a49531e63582cdb34d94a9eab4c658c86", null ],
     [ "update", "classdaBalloon2D__c.html#a78cd3fd0be9509b9532b030a5dabc9d6", null ],

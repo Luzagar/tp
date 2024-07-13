@@ -50,7 +50,7 @@ var d__a__tbox_8cpp =
     [ "cBgW", "classcBgW.html", "classcBgW" ],
     [ "cBgS_GndChk", "classcBgS__GndChk.html", "classcBgS__GndChk" ],
     [ "cBgS", "classcBgS.html", "classcBgS" ],
-    [ "Z2AudioMgr", "structZ2AudioMgr.html", "structZ2AudioMgr" ],
+    [ "Z2AudioMgr", "classZ2AudioMgr.html", "classZ2AudioMgr" ],
     [ "LIGHT_INFLUENCE", "structLIGHT__INFLUENCE.html", "structLIGHT__INFLUENCE" ],
     [ "JMath", "structJMath.html", "structJMath" ],
     [ "__ct__10dCcD_GSttsFv", "d__a__tbox_8cpp.html#ae4cd09eb67ed2fb9bc6e87d5cea71757", null ],

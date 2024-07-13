@@ -16,7 +16,7 @@ var J3DTevs_8cpp =
     [ "data_804563F8", "J3DTevs_8cpp.html#a50f35e8b8c7d0f46b3d1b1840c020067", null ],
     [ "j3dAlphaCmpTable", "J3DTevs_8cpp.html#ac5f656d0031ae910904a313629e12b8b", null ],
     [ "j3dDefaultAlphaCmpID", "J3DTevs_8cpp.html#aa9fcfd8cb9e86c255b99088156817427", null ],
-    [ "j3dDefaultAmbInfo", "J3DTevs_8cpp.html#a6b38a41cb01d0117e5e6e1b07d7b47ba", null ],
+    [ "j3dDefaultAmbInfo", "J3DTevs_8cpp.html#a0206c980db57a5cc83438b1301168c36", null ],
     [ "j3dDefaultBlendInfo", "J3DTevs_8cpp.html#a937aaf03c31858b351e8bfccadbe2f1b", null ],
     [ "j3dDefaultColInfo", "J3DTevs_8cpp.html#a1479b3cb520a6d178ce9675044de7af3", null ],
     [ "j3dDefaultColorChanInfo", "J3DTevs_8cpp.html#aa5802e0ffe6fcf9c5935b782fad74da8", null ],

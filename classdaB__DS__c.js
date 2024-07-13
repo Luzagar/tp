@@ -115,8 +115,6 @@ var classdaB__DS__c =
     [ "executeHandAttack", "classdaB__DS__c.html#a60149ec3911e66d8ca444213135a0c65", null ],
     [ "executeOpeningDemo", "classdaB__DS__c.html#ab36daaee19533386d69f448b963db195", null ],
     [ "executeWait", "classdaB__DS__c.html#afcb12268ed825d2783834c34dab649f1", null ],
-    [ "getHandPosL", "classdaB__DS__c.html#ad1b62a1f963e703b4a1635aec3528ec8", null ],
-    [ "getHandPosR", "classdaB__DS__c.html#a63d23cb39075b01cc749b67c3304df58", null ],
     [ "hand_smokeSet", "classdaB__DS__c.html#a4c07d359db20160406605f53205c7bf2", null ],
     [ "HandHitSoundSet", "classdaB__DS__c.html#a90a4bbf24627e1b2746a445bdd909999", null ],
     [ "handSPosSet", "classdaB__DS__c.html#a277778ebc67c6d86a36b8f92ac7d0984", null ],

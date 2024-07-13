@@ -16,7 +16,7 @@
 <meta name="twitter:title" content="Twilight Princess Decompilation" />
 <meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
 <!-- END twitter metadata -->
-<title>Twilight Princess: JKRHeap Struct Reference</title>
+<title>Twilight Princess: JKRHeap Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -147,7 +147,7 @@ $(document).ready(function(){initNavTree('structJKRHeap.html',''); initResizable
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="structJKRHeap-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">JKRHeap Struct Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__jsystem.html">JSystem</a> &raquo; <a class="el" href="group__jsystem-jkernel.html">JKernel</a></div></div></div>
+  <div class="headertitle"><div class="title">JKRHeap Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__jsystem.html">JSystem</a> &raquo; <a class="el" href="group__jsystem-jkernel.html">JKernel</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -302,10 +302,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6d3abaf89fd9617b992f9b4de1d43210"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94e05437bb453568de0163cac6450267" id="r_a94e05437bb453568de0163cac6450267"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRHeap.html#a94e05437bb453568de0163cac6450267">getHeapSize</a> ()</td></tr>
 <tr class="separator:a94e05437bb453568de0163cac6450267"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade26fc25230287ba548cbe10f60b05f5" id="r_ade26fc25230287ba548cbe10f60b05f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRHeap.html#ade26fc25230287ba548cbe10f60b05f5">becomeCurrentHeap</a> ()</td></tr>
-<tr class="separator:ade26fc25230287ba548cbe10f60b05f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1dcf395ee3b0599ffdbc8c54f65136e0" id="r_a1dcf395ee3b0599ffdbc8c54f65136e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRHeap.html#a1dcf395ee3b0599ffdbc8c54f65136e0">destroy</a> ()</td></tr>
-<tr class="separator:a1dcf395ee3b0599ffdbc8c54f65136e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classJKRDisposer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classJKRDisposer')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classJKRDisposer.html">JKRDisposer</a></td></tr>
 <tr class="memitem:ac5a1bf5e5a976af8c8f0114452590c22 inherit pub_methods_classJKRDisposer" id="r_ac5a1bf5e5a976af8c8f0114452590c22"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJKRDisposer.html#ac5a1bf5e5a976af8c8f0114452590c22">JKRDisposer</a> ()</td></tr>
 <tr class="separator:ac5a1bf5e5a976af8c8f0114452590c22 inherit pub_methods_classJKRDisposer"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -649,30 +645,13 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a46b94ec1827a48ee4d3fc79ce954ae99" name="a46b94ec1827a48ee4d3fc79ce954ae99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46b94ec1827a48ee4d3fc79ce954ae99">&#9670;&#160;</a></span>becomeCurrentHeap() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a46b94ec1827a48ee4d3fc79ce954ae99">&#9670;&#160;</a></span>becomeCurrentHeap()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="structJKRHeap.html">JKRHeap</a> * JKRHeap::becomeCurrentHeap </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ade26fc25230287ba548cbe10f60b05f5" name="ade26fc25230287ba548cbe10f60b05f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade26fc25230287ba548cbe10f60b05f5">&#9670;&#160;</a></span>becomeCurrentHeap() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JKRHeap::becomeCurrentHeap </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -896,24 +875,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a1dcf395ee3b0599ffdbc8c54f65136e0" name="a1dcf395ee3b0599ffdbc8c54f65136e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1dcf395ee3b0599ffdbc8c54f65136e0">&#9670;&#160;</a></span>destroy() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__jsystem-jsupport.html#ga13fa7ef63a40072c7203b3da54a569a2">void</a> JKRHeap::destroy </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1dcf395ee3b0599ffdbc8c54f65136e0" name="a1dcf395ee3b0599ffdbc8c54f65136e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1dcf395ee3b0599ffdbc8c54f65136e0">&#9670;&#160;</a></span>destroy() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dcf395ee3b0599ffdbc8c54f65136e0">&#9670;&#160;</a></span>destroy()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3411,13 +3373,11 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following files:<ul>
-<li>src/d/menu/<a class="el" href="d__menu__fmap2D_8cpp.html">d_menu_fmap2D.cpp</a></li>
-<li>include/JSystem/JKernel/<a class="el" href="JKRHeap_8h_source.html">JKRHeap.h</a></li>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/d/msg/<a class="el" href="d__msg__scrn__item_8cpp.html">d_msg_scrn_item.cpp</a></li>
+<li>include/JSystem/JKernel/<a class="el" href="JKRHeap_8h_source.html">JKRHeap.h</a></li>
 <li>src/d/msg/<a class="el" href="d__msg__scrn__talk_8cpp.html">d_msg_scrn_talk.cpp</a></li>
 <li>libs/JSystem/JAudio2/<a class="el" href="JASBNKParser_8cpp.html">JASBNKParser.cpp</a></li>
-<li>rel/d/a/d_a_title/<a class="el" href="d__a__title_8cpp.html">d_a_title.cpp</a></li>
 <li>src/m_Do/<a class="el" href="m__Do__main_8cpp.html">m_Do_main.cpp</a></li>
 <li>libs/JSystem/JKernel/<a class="el" href="JKRHeap_8cpp.html">JKRHeap.cpp</a></li>
 </ul>

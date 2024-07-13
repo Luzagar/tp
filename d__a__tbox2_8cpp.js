@@ -1,6 +1,5 @@
 var d__a__tbox2_8cpp =
 [
-    [ "res_info", "structres__info.html", "structres__info" ],
     [ "daTbox2_create1st", "d__a__tbox2_8cpp.html#a19337694412fbb86c04371dd93840833", null ],
     [ "daTbox2_MoveBGDelete", "d__a__tbox2_8cpp.html#a060d4878044e78fc2cafb98595d9c825", null ],
     [ "daTbox2_MoveBGDraw", "d__a__tbox2_8cpp.html#af60a49a342ce412cf1250adebc000fd9", null ],

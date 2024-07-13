@@ -24,6 +24,5 @@ var classmDoRst =
     [ "setProgSeqFlag", "classmDoRst.html#a80c0b83a27f075e058d0e6df62b5a774", null ],
     [ "setResetData", "classmDoRst.html#afad1a1063c38a094f1daf82494a2dca2", null ],
     [ "setWarningDispFlag", "classmDoRst.html#aecade69ac9700cb35dc2f40a556c1188", null ],
-    [ "mResetData", "classmDoRst.html#a0dc097fcfcd1e8810da495926725fe34", null ],
-    [ "mResetData", "classmDoRst.html#a465ca33db075f42498f7c7a32767d7a5", null ]
+    [ "mResetData", "classmDoRst.html#a0dc097fcfcd1e8810da495926725fe34", null ]
 ];

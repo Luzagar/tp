@@ -1,10 +1,5 @@
 var d__a__swLBall_8cpp =
 [
-    [ "fopAc_ac_c", "structfopAc__ac__c.html", "structfopAc__ac__c" ],
-    [ "daSwLBall_c", "structdaSwLBall__c.html", "structdaSwLBall__c" ],
-    [ "dSv_info_c", "structdSv__info__c.html", "structdSv__info__c" ],
-    [ "cXyz", "structcXyz.html", "structcXyz" ],
-    [ "Vec", "structVec.html", "structVec" ],
     [ "__ct__10fopAc_ac_cFv", "d__a__swLBall_8cpp.html#a085f3a34ce186ab6e202a97581a1f68a", null ],
     [ "__ptmf_scall", "d__a__swLBall_8cpp.html#abcc1145fa03be95d1df70e96494331d7", null ],
     [ "_delete__11daSwLBall_cFv", "d__a__swLBall_8cpp.html#aeed5905d0153107008f67630f9d288cb", null ],
@@ -50,10 +45,8 @@ var d__a__swLBall_8cpp =
     [ "cNullVec__6Z2Calc", "d__a__swLBall_8cpp.html#af1d641d5006e9852701e43891c9ccc5c", null ],
     [ "data_80D4F5AC", "d__a__swLBall_8cpp.html#a1eb59bed11070a6c7d901f51a8ebc4a0", null ],
     [ "g_dComIfG_gameInfo", "d__a__swLBall_8cpp.html#a50ad47c26bcc2867f2c14d349753f58e", null ],
-    [ "g_fopAc_Method", "d__a__swLBall_8cpp.html#a24ce032de2af10b7e92bf464450ddeb7", null ],
-    [ "g_fpcLf_Method", "d__a__swLBall_8cpp.html#a3de3a374119e8432d211e29713bce0ae", null ],
-    [ "g_profile_SwLBall", "d__a__swLBall_8cpp.html#afdcd596e741957b61a71c51edce68451", null ],
-    [ "l_daSwLBall_Method", "d__a__swLBall_8cpp.html#a5855d8eeba8c0d2a75cccd7c51af5200", null ],
+    [ "g_profile_SwLBall", "d__a__swLBall_8cpp.html#a1d5399ce3d49c0aff9bc7b739b35fa9d", null ],
+    [ "l_daSwLBall_Method", "d__a__swLBall_8cpp.html#ac67f9779ae84f901c2c7ab59c2b87f8e", null ],
     [ "l_func", "d__a__swLBall_8cpp.html#a00055339acbe5ba3440f5ac6f200428b", null ],
     [ "l_target_info", "d__a__swLBall_8cpp.html#a9c7efc3d9c3492784c2eb17453afee0f", null ],
     [ "l_target_info_count", "d__a__swLBall_8cpp.html#afe03dd34611ad4b0cce124eb25f2f38a", null ],

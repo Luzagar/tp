@@ -1,7 +1,6 @@
 var structdaNpc__zrA__Param__c_1_1param =
 [
     [ "field_0x60", "structdaNpc__zrA__Param__c_1_1param.html#af562618c6a5b4f809455091a45836643", null ],
-    [ "field_0x62", "structdaNpc__zrA__Param__c_1_1param.html#a2eec6a59edd31e50203dbaa8d5c6aa69", null ],
     [ "field_0x7c", "structdaNpc__zrA__Param__c_1_1param.html#a38b29ea685a3b6d8bd8b7a5df3b5888d", null ],
     [ "field_0x80", "structdaNpc__zrA__Param__c_1_1param.html#a4f1ec432ec3db459efd5bf702677ed43", null ],
     [ "field_0x8c", "structdaNpc__zrA__Param__c_1_1param.html#a91c7ed42d670d753e419e5d857b46222", null ],
@@ -21,6 +20,7 @@ var structdaNpc__zrA__Param__c_1_1param =
     [ "mBodyUpAngle", "structdaNpc__zrA__Param__c_1_1param.html#a392b2c580ef10c04d2638fbc8d7a6f18", null ],
     [ "mCcWeight", "structdaNpc__zrA__Param__c_1_1param.html#ad50ecebb344e527e2740fb0baf3041a4", null ],
     [ "mCylH", "structdaNpc__zrA__Param__c_1_1param.html#aeb0b518acfd088d4c000b74cea8d9189", null ],
+    [ "mDamageTimer", "structdaNpc__zrA__Param__c_1_1param.html#a520f63d4d33aa2bb678ffc3bb11300a1", null ],
     [ "mGravity", "structdaNpc__zrA__Param__c_1_1param.html#ad06e35b41a6ce04a0f33d7b632c59071", null ],
     [ "mHeadDownAngle", "structdaNpc__zrA__Param__c_1_1param.html#a256bd91aec13cc013604e91cedfaacb4", null ],
     [ "mHeadLeftAngle", "structdaNpc__zrA__Param__c_1_1param.html#a274d2f351805055f4511b811ce735594", null ],

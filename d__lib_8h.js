@@ -1,6 +1,6 @@
 var d__lib_8h =
 [
-    [ "STControl", "structSTControl.html", "structSTControl" ],
+    [ "STControl", "classSTControl.html", "classSTControl" ],
     [ "CSTControl", "structCSTControl.html", "structCSTControl" ],
     [ "dLib_time_c", "structdLib__time__c.html", "structdLib__time__c" ],
     [ "dLib_checkActorInRectangle", "d__lib_8h.html#a4a58d414ecbc4e73e32bfa0f9c57e35a", null ],

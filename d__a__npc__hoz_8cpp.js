@@ -1,7 +1,5 @@
 var d__a__npc__hoz_8cpp =
 [
-    [ "daStartAndGoal_c", "classdaStartAndGoal__c.html", "classdaStartAndGoal__c" ],
-    [ "dMeter2Info_c", "structdMeter2Info__c.html", "structdMeter2Info__c" ],
     [ "__construct_array", "d__a__npc__hoz_8cpp.html#a58dbf4d2335fdc0e2065200543f5e4ea", null ],
     [ "__ct__10dCcD_GSttsFv", "d__a__npc__hoz_8cpp.html#ae4cd09eb67ed2fb9bc6e87d5cea71757", null ],
     [ "__ct__10dMsgFlow_cFv", "d__a__npc__hoz_8cpp.html#adf6efa29e1556e386b88dccee61eff3e", null ],
@@ -298,9 +296,9 @@ var d__a__npc__hoz_8cpp =
     [ "__vt__9dCcD_Stts", "d__a__npc__hoz_8cpp.html#adbdcde8cf6eef5e613be83e9d996c458", null ],
     [ "cNullVec__6Z2Calc", "d__a__npc__hoz_8cpp.html#af1d641d5006e9852701e43891c9ccc5c", null ],
     [ "d_a_npc_hoz__stringBase0", "d__a__npc__hoz_8cpp.html#aa80eb6fc507c4e5878ed2e0def5629cb", null ],
-    [ "daNpc_Hoz_MethodTable", "d__a__npc__hoz_8cpp.html#ae37c3f01aeec606131590c1232df27dd", null ],
+    [ "daNpc_Hoz_MethodTable", "d__a__npc__hoz_8cpp.html#ae9965bcffa4bbc778ff95035f2fa7b87", null ],
     [ "g_meter2_info", "d__a__npc__hoz_8cpp.html#a2fcce57da0213dbb9db2badf854fade0", null ],
-    [ "g_profile_NPC_HOZ", "d__a__npc__hoz_8cpp.html#a47b2f3c752e428f1fac16a2d507c6d6a", null ],
+    [ "g_profile_NPC_HOZ", "d__a__npc__hoz_8cpp.html#a547ec2c3f30b721ea0ff2038c878e464", null ],
     [ "heapSize", "d__a__npc__hoz_8cpp.html#a7f4273f330e134acd11bf2e376ab1725", null ],
     [ "l_bmdData", "d__a__npc__hoz_8cpp.html#aeda43a67976f7e4c534f1989290cc2ac", null ],
     [ "l_evtList", "d__a__npc__hoz_8cpp.html#a78bb18b66ee0ee39d0b9030e2f47066c", null ],

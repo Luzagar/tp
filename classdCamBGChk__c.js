@@ -2,6 +2,7 @@ var classdCamBGChk__c =
 [
     [ "ChkInfo", "structdCamBGChk__c_1_1ChkInfo.html", "structdCamBGChk__c_1_1ChkInfo" ],
     [ "dCamBGChk_c", "classdCamBGChk__c.html#a104665cebd797e85925cbf355d3704b5", null ],
+    [ "WallUpDistance", "classdCamBGChk__c.html#a9575542b1d0caf4e0d7fb31d0d340d9c", null ],
     [ "field_0x2c", "classdCamBGChk__c.html#a173692d8626d2a25f78402ae7f3b31e7", null ],
     [ "mChkInfo", "classdCamBGChk__c.html#a38f38fb43f0b22f81c2accb50c9094e3", null ],
     [ "mCornerAngleMax", "classdCamBGChk__c.html#a6338ebaca75d7b5e8423da7a81cf32b4", null ],

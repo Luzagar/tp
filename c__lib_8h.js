@@ -16,7 +16,7 @@ var c__lib_8h =
     [ "cLib_chasePosXZ", "c__lib_8h.html#a1be24088ebe1199423ad7c1b1a98fd9d", null ],
     [ "cLib_chaseS", "c__lib_8h.html#a4f9d7149fe84852ffa7c1e1bd69b8a89", null ],
     [ "cLib_chaseUC", "c__lib_8h.html#a4eac3ae042a35ad016b7574418546af8", null ],
-    [ "cLib_checkBit", "c__lib_8h.html#a753655dc128330453eb408213f8d2b11", null ],
+    [ "cLib_checkBit", "c__lib_8h.html#a3cc99767e6d04f2d9b52aa4f2194625f", null ],
     [ "cLib_distanceAngleS", "c__lib_8h.html#a2fb5a2c6388dde76caafb47b0d19b578", null ],
     [ "cLib_getRndValue", "c__lib_8h.html#ad5a69bc942766cf6832cbf0f24a24102", null ],
     [ "cLib_IsZero", "c__lib_8h.html#ac597d209fd361386e04b63389dfc9df4", null ],

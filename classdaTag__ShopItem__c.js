@@ -8,7 +8,6 @@ var classdaTag__ShopItem__c =
     [ "getGroupID", "classdaTag__ShopItem__c.html#aec0d633139f5f130eb54390a62247e5b", null ],
     [ "getProcessID", "classdaTag__ShopItem__c.html#a321447b089f7ca117aba6bd6f14e142a", null ],
     [ "getSwitchBit1", "classdaTag__ShopItem__c.html#a821165716ced2c883890f94b226d6329", null ],
-    [ "getSwitchBit1", "classdaTag__ShopItem__c.html#a36b250c4dc8e25632dc8edfefc23a000", null ],
     [ "getSwitchBit2", "classdaTag__ShopItem__c.html#a9ebc177199e5ee8c7f197b4d71ce4713", null ],
     [ "getType", "classdaTag__ShopItem__c.html#a6e6df1ffc3e716b489f0dba2303cca73", null ],
     [ "initialize", "classdaTag__ShopItem__c.html#a7eb4dc03cb475fe0a1eadd07a87e7b05", null ],

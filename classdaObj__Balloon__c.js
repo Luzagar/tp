@@ -9,7 +9,6 @@ var classdaObj__Balloon__c =
     [ "execute", "classdaObj__Balloon__c.html#af5635faaa02264ec1ce85b1fe4e3009e", null ],
     [ "mtx_set", "classdaObj__Balloon__c.html#a76a6381fe36dc202437bdb3eb84caf02", null ],
     [ "saveBestScore", "classdaObj__Balloon__c.html#a7df28a31fd4e51b2cf5090afe04d6250", null ],
-    [ "saveBestScore", "classdaObj__Balloon__c.html#a7df28a31fd4e51b2cf5090afe04d6250", null ],
     [ "field_0x574", "classdaObj__Balloon__c.html#a2ad49cbe2d2e50e01fe4cedb58505fd6", null ],
     [ "field_0x578", "classdaObj__Balloon__c.html#af7d17ea6688f6419dfb85afbfc7f7131", null ],
     [ "field_0x579", "classdaObj__Balloon__c.html#aabbcaf87eb9ddbf02d7bd46ad3c416df", null ],

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['mant_5fclass_0',['mant_class',['../structmant__class.html',1,'']]],
+  ['mant_5fclass_0',['mant_class',['../classmant__class.html',1,'']]],
   ['mant_5fj_5fs_1',['mant_j_s',['../structmant__j__s.html',1,'']]],
   ['map1_2',['MAP1',['../structResFONT_1_1MAP1.html',1,'ResFONT']]],
   ['map_5ficon_5fsize_5ft_3',['map_icon_size_t',['../structmap__icon__size__t.html',1,'']]],

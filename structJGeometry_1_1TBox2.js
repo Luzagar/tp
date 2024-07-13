@@ -1,10 +1,10 @@
 var structJGeometry_1_1TBox2 =
 [
-    [ "TBox2", "structJGeometry_1_1TBox2.html#a2513b1bd5f0831843297a3d40cc613cc", null ],
-    [ "TBox2", "structJGeometry_1_1TBox2.html#aa9cdd9ea33443aa45771da40602d0d86", null ],
-    [ "TBox2", "structJGeometry_1_1TBox2.html#aea5f922984283a317af96a1df1723074", null ],
-    [ "absolute", "structJGeometry_1_1TBox2.html#ad0f81a65fbe41db964428991b1b838d3", null ],
-    [ "set", "structJGeometry_1_1TBox2.html#a33e18e8dec5d11a816efdfa21c26810b", null ],
-    [ "set", "structJGeometry_1_1TBox2.html#ab1ad22187fc7465d105cb1a20f068947", null ],
-    [ "set", "structJGeometry_1_1TBox2.html#a42afea22aa310487d8564be2d5eabbf7", null ]
+    [ "TBox2", "structJGeometry_1_1TBox2.html#a5d779f544bd0028e92be037d81babdb9", null ],
+    [ "TBox2", "structJGeometry_1_1TBox2.html#ab1fe4de20889c7145f4c83a828fae6b5", null ],
+    [ "TBox2", "structJGeometry_1_1TBox2.html#a4b40a7d3b4aae57bf0d2683c8a1f3cb7", null ],
+    [ "absolute", "structJGeometry_1_1TBox2.html#ad16db300b7af66d2be76e3f503389242", null ],
+    [ "set", "structJGeometry_1_1TBox2.html#abe31f87e3df72291715ce16e6cf9e0af", null ],
+    [ "set", "structJGeometry_1_1TBox2.html#a15620eba92c65076aea4ca16fff3570d", null ],
+    [ "set", "structJGeometry_1_1TBox2.html#a4cc407dc15b8e0ed84628fb2ee3246ce", null ]
 ];

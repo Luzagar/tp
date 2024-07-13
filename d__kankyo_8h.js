@@ -35,7 +35,9 @@ var d__kankyo_8h =
       [ "DICE_STATE_EXEC_e", "d__kankyo_8h.html#a16b4edc3b34b2b61f211ca4825eb2e96ae5a89dfebd76ac4a6ff9c5baebe86b05", null ],
       [ "DICE_STATE_NEXT_e", "d__kankyo_8h.html#a16b4edc3b34b2b61f211ca4825eb2e96ad447d43cbbe4c5db323a13d89d143d3c", null ]
     ] ],
+    [ "dKy_actor_addcol_amb_set", "d__kankyo_8h.html#acf67c4e3c73e7ed76980175912d759df", null ],
     [ "dKy_actor_addcol_set", "d__kankyo_8h.html#a12e673602b7964d853fedb2aefd1836a", null ],
+    [ "dKy_bg_addcol_amb_set", "d__kankyo_8h.html#aa6bd0eb30727376310e4d1df9fc2b3a7", null ],
     [ "dKy_bg_MAxx_proc", "d__kankyo_8h.html#a09a699b1c36c4891259edd260ec6e178", null ],
     [ "dKy_BossLight_set", "d__kankyo_8h.html#ace22161f6c9527ffe4c04bf4dbe8d62e", null ],
     [ "dKy_BossSpotLight_set", "d__kankyo_8h.html#ae13830435a48dd9a589a6fbf3a6c11cb", null ],

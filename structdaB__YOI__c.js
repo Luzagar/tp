@@ -28,5 +28,6 @@ var structdaB__YOI__c =
     [ "setOperate", "structdaB__YOI__c.html#ae4b70113fcb59aa62e7a4ead82e65a20", null ],
     [ "setOperate", "structdaB__YOI__c.html#afd766fe0802557acd54d7d8d71c2f77a", null ],
     [ "setWallBreakIceEffect", "structdaB__YOI__c.html#a1e994424e976efe3f0068d8accc9b1e9", null ],
-    [ "setWeight", "structdaB__YOI__c.html#ad238582696112cae3b480663c3ed87dc", null ]
+    [ "setWeight", "structdaB__YOI__c.html#ad238582696112cae3b480663c3ed87dc", null ],
+    [ "field_0x5ac", "structdaB__YOI__c.html#a387c5cd46fb00cbe80647973dde53a08", null ]
 ];

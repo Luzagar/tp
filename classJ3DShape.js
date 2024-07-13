@@ -25,7 +25,6 @@ var classJ3DShape =
     [ "initialize", "classJ3DShape.html#add157328e90f2a8a38cf3645a1663d6c", null ],
     [ "isSameVcdVatCmd", "classJ3DShape.html#abb35f4fb095d243f47141b1e110d158a", null ],
     [ "loadPreDrawSetting", "classJ3DShape.html#af0da091ff0b097fdecc33b3c803296a3", null ],
-    [ "loadPreDrawSetting", "classJ3DShape.html#af0da091ff0b097fdecc33b3c803296a3", null ],
     [ "loadVtxArray", "classJ3DShape.html#ad5a6c67245c962316c0bdd11c32a3499", null ],
     [ "makeVcdVatCmd", "classJ3DShape.html#a18816dd12707a5101eb7fcbf1f31af00", null ],
     [ "makeVtxArrayCmd", "classJ3DShape.html#a4aa2eed8a00d15103fd18162d9dd8712", null ],
@@ -68,6 +67,5 @@ var classJ3DShape =
     [ "mVcdVatCmd", "classJ3DShape.html#a2fb97ce7d60b996d445bedf25362e675", null ],
     [ "mVertexData", "classJ3DShape.html#affee2d5e60b9b2ea0c32af2ea4c1d8a5", null ],
     [ "mVtxDesc", "classJ3DShape.html#ad9eec3cd6463e57c8231ba10c254977a", null ],
-    [ "sOldVcdVatCmd", "classJ3DShape.html#ad397562668c935ed41dbfcbc7bf41623", null ],
-    [ "sOldVcdVatCmd", "classJ3DShape.html#a1a770b771c368c4ddfb722a02fa278e0", null ]
+    [ "sOldVcdVatCmd", "classJ3DShape.html#a81cd2736accc46d0ff034f050f50301e", null ]
 ];

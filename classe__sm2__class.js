@@ -60,6 +60,7 @@ var classe__sm2__class =
     [ "field_0xfd4", "classe__sm2__class.html#adb46fab3584ac61e6efcfd561a04fef8", null ],
     [ "field_0xFD5", "classe__sm2__class.html#a6d5588615de98c6243858098fe8ed2db", null ],
     [ "field_0xfd8", "classe__sm2__class.html#aa94af419b7da6566a43406ec5e5eaafc", null ],
+    [ "field_0xfdc", "classe__sm2__class.html#a4de37e5e2b2807b750e3282902182fb8", null ],
     [ "mAcch", "classe__sm2__class.html#a6fe913c4703817b295492df3046bc0ff", null ],
     [ "mAcchCir", "classe__sm2__class.html#a600797df150ba2e73898b8f655dee47d", null ],
     [ "mAction", "classe__sm2__class.html#acd5227284c7ab653f72b26a05d595173", null ],

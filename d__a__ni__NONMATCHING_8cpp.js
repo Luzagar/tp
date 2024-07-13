@@ -1,8 +1,7 @@
 var d__a__ni__NONMATCHING_8cpp =
 [
-    [ "ni_class", "structni__class.html", "structni__class" ],
-    [ "daNi_HIO_c", "structdaNi__HIO__c.html", "structdaNi__HIO__c" ],
-    [ "daNpcMoiR_c", "classdaNpcMoiR__c.html", "classdaNpcMoiR__c" ],
+    [ "ni_class", "classni__class.html", "classni__class" ],
+    [ "daNi_HIO_c", "classdaNi__HIO__c.html", "classdaNi__HIO__c" ],
     [ "daNi_action", "d__a__ni__NONMATCHING_8cpp.html#aacfaf7180bc8023d5760edf0496cc109", [
       [ "ACTION_NORMAL_e", "d__a__ni__NONMATCHING_8cpp.html#aacfaf7180bc8023d5760edf0496cc109a804713e16572105f44e1b482e4c3dc17", null ],
       [ "ACTION_AWAY_e", "d__a__ni__NONMATCHING_8cpp.html#aacfaf7180bc8023d5760edf0496cc109a27aa582499cf17f7d5c858b57311b953", null ],

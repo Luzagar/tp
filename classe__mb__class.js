@@ -1,5 +1,6 @@
 var classe__mb__class =
 [
+    [ "field_0x5ac", "classe__mb__class.html#a8dfcbf01e5f3428eaa11721527a7b2b4", null ],
     [ "field_0x5b6", "classe__mb__class.html#ae7d84fb0a8348cab2e9c6e95f2364a14", null ],
     [ "field_0x5b8", "classe__mb__class.html#a9bf612a54b050eb30fb7e86e1adf7433", null ],
     [ "field_0x5C4", "classe__mb__class.html#a3d663448c733f2556f3d23bce6ed8b76", null ],

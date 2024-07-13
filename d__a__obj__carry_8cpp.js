@@ -1,6 +1,5 @@
 var d__a__obj__carry_8cpp =
 [
-    [ "dTres_c", "structdTres__c.html", "structdTres__c" ],
     [ "__ct__10dCcD_GSttsFv", "d__a__obj__carry_8cpp.html#ae4cd09eb67ed2fb9bc6e87d5cea71757", null ],
     [ "__ct__10fopAc_ac_cFv", "d__a__obj__carry_8cpp.html#a085f3a34ce186ab6e202a97581a1f68a", null ],
     [ "__ct__12daObjCarry_cFv", "d__a__obj__carry_8cpp.html#adb5e2c4b3ff6d933a7de7d5ae49f4ea3", null ],

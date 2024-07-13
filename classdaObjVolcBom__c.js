@@ -42,7 +42,8 @@ var classdaObjVolcBom__c =
     [ "setSrcEffect", "classdaObjVolcBom__c.html#a951270ebfdff12ba84c99bee39e0db07", null ],
     [ "startFall", "classdaObjVolcBom__c.html#a17a0681a8ddb30224cb088088f0e4f6f", null ],
     [ "startSearch", "classdaObjVolcBom__c.html#accf11d9aecb298ac96704a838f18e3a9", null ],
+    [ "field_0x568", "classdaObjVolcBom__c.html#a0d9c308a455749b9a2aec635b2437f4f", null ],
     [ "field_0x95f", "classdaObjVolcBom__c.html#a09c70710114f09b588d18e973b96dd64", null ],
     [ "field_0x960", "classdaObjVolcBom__c.html#a48c933dbecffdae0731a50e1ffba515a", null ],
-    [ "temp", "classdaObjVolcBom__c.html#a727eb906101a09abe7bd78d4051aaf42", null ]
+    [ "field_0x961", "classdaObjVolcBom__c.html#a4eec3402c3cdf8804cb866b037bbe5ab", null ]
 ];

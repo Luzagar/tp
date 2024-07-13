@@ -1,9 +1,5 @@
 var d__a__obj__lv4CandleDemoTag_8cpp =
 [
-    [ "daLv4EdShutter_c", "classdaLv4EdShutter__c.html", "classdaLv4EdShutter__c" ],
-    [ "temp", "structtemp.html", "structtemp" ],
-    [ "dalv4CandleDemoTag_c", "classdalv4CandleDemoTag__c.html", "classdalv4CandleDemoTag__c" ],
-    [ "dalv4CandleDemoTag_HIO_c", "classdalv4CandleDemoTag__HIO__c.html", "classdalv4CandleDemoTag__HIO__c" ],
     [ "__ct__10fopAc_ac_cFv", "d__a__obj__lv4CandleDemoTag_8cpp.html#a085f3a34ce186ab6e202a97581a1f68a", null ],
     [ "__ct__24dalv4CandleDemoTag_HIO_cFv", "d__a__obj__lv4CandleDemoTag_8cpp.html#aa61946096ef0c197ef8d81f4c413467b", null ],
     [ "__dl__FPv", "d__a__obj__lv4CandleDemoTag_8cpp.html#a498e6440d5c316e2672169ee4ed92309", null ],
@@ -61,8 +57,8 @@ var d__a__obj__lv4CandleDemoTag_8cpp =
     [ "__vt__20dalv4CandleDemoTag_c", "d__a__obj__lv4CandleDemoTag_8cpp.html#a2e6da3eef748156ab2ec2c41aa426663", null ],
     [ "cNullVec__6Z2Calc", "d__a__obj__lv4CandleDemoTag_8cpp.html#af1d641d5006e9852701e43891c9ccc5c", null ],
     [ "data_80C5D35C", "d__a__obj__lv4CandleDemoTag_8cpp.html#a501c00c24db654aec10e3dc35cfaa4cc", null ],
-    [ "g_profile_Tag_Lv4CandleDm", "d__a__obj__lv4CandleDemoTag_8cpp.html#af2173b064c4ee8aabf47f4e226aa18b1", null ],
-    [ "l_dalv4CandleDemoTag_Method", "d__a__obj__lv4CandleDemoTag_8cpp.html#a66c6ee81b5aea4a84a0296f862266165", null ],
+    [ "g_profile_Tag_Lv4CandleDm", "d__a__obj__lv4CandleDemoTag_8cpp.html#aa4fb534042d2ab7f611fc9b3ae04a247", null ],
+    [ "l_dalv4CandleDemoTag_Method", "d__a__obj__lv4CandleDemoTag_8cpp.html#a653d84224e5f6136aea4201b08655e63", null ],
     [ "l_HIO", "d__a__obj__lv4CandleDemoTag_8cpp.html#aa2a72fb6bdb3dfa1211e97e2f12d584a", null ],
     [ "lit_1787", "d__a__obj__lv4CandleDemoTag_8cpp.html#a5bb5d6a82c2f4d4bb43dbf4d11e60387", null ],
     [ "lit_3632", "d__a__obj__lv4CandleDemoTag_8cpp.html#aa0edc7314b5afe4846ab0f0153d5d192", null ],

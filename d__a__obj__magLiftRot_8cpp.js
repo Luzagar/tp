@@ -1,7 +1,5 @@
 var d__a__obj__magLiftRot_8cpp =
 [
-    [ "daMagLiftRot_c", "classdaMagLiftRot__c.html", "classdaMagLiftRot__c" ],
-    [ "daMagLiftRot_HIO_c", "classdaMagLiftRot__HIO__c.html", "classdaMagLiftRot__HIO__c" ],
     [ "__ct__16dBgS_MoveBgActorFv", "d__a__obj__magLiftRot_8cpp.html#a34bbae7a63794cd9fb3767df18163b6d", null ],
     [ "__ct__18daMagLiftRot_HIO_cFv", "d__a__obj__magLiftRot_8cpp.html#afdec868c0bd2e2c111c866ec2a9eb3ee", null ],
     [ "__dl__FPv", "d__a__obj__magLiftRot_8cpp.html#a498e6440d5c316e2672169ee4ed92309", null ],
@@ -98,12 +96,12 @@ var d__a__obj__magLiftRot_8cpp =
     [ "cNullVec__6Z2Calc", "d__a__obj__magLiftRot_8cpp.html#af1d641d5006e9852701e43891c9ccc5c", null ],
     [ "d_a_obj_magLiftRot__stringBase0", "d__a__obj__magLiftRot_8cpp.html#a77dea182bdac06dcce6d320ddf45b248", null ],
     [ "data_80C8FD0C", "d__a__obj__magLiftRot_8cpp.html#a43740978b4e64d7c79817dbd5faefca4", null ],
-    [ "g_profile_Obj_MagLiftRot", "d__a__obj__magLiftRot_8cpp.html#a0e41dec29de1278f2a88286e7610a7ec", null ],
+    [ "g_profile_Obj_MagLiftRot", "d__a__obj__magLiftRot_8cpp.html#af769e9fe01794685f1d9f548cd9fa56f", null ],
     [ "l_arcName", "d__a__obj__magLiftRot_8cpp.html#a4aafe126b05d8b0ad118bc4156fcf40e", null ],
     [ "l_bmdIdx", "d__a__obj__magLiftRot_8cpp.html#ad136e1b4a793e91038eaf0dd5b82fa64", null ],
     [ "l_brkIdx", "d__a__obj__magLiftRot_8cpp.html#a9ee4eeaad85f6066f6c3a1a34a07ab80", null ],
     [ "l_btkIdx", "d__a__obj__magLiftRot_8cpp.html#aa59e97c315068ee256f7ccabe00e73d9", null ],
-    [ "l_daMagLiftRot_Method", "d__a__obj__magLiftRot_8cpp.html#a3efbd2bca1a5bf11201cc81cee7e7443", null ],
+    [ "l_daMagLiftRot_Method", "d__a__obj__magLiftRot_8cpp.html#a6d47f8d05418351dd0255d29f48705ba", null ],
     [ "l_dzbIdx", "d__a__obj__magLiftRot_8cpp.html#aa99372dfabec8c41ed177fa311c50588", null ],
     [ "l_HIO", "d__a__obj__magLiftRot_8cpp.html#a23b246ded6e8ecee02be1843455eff7c", null ],
     [ "lit_1787", "d__a__obj__magLiftRot_8cpp.html#a5bb5d6a82c2f4d4bb43dbf4d11e60387", null ],

@@ -2,6 +2,7 @@ var structJGeometry_1_1TVec3_3_01f32_01_4 =
 [
     [ "TVec3", "structJGeometry_1_1TVec3_3_01f32_01_4.html#a6712c85257d9df50f2ea3a07b6ff36f9", null ],
     [ "TVec3", "structJGeometry_1_1TVec3_3_01f32_01_4.html#a333800cf87e080e3436d5d8496480836", null ],
+    [ "TVec3", "structJGeometry_1_1TVec3_3_01f32_01_4.html#abfc81312e223e5056872bf43f6bf9c2f", null ],
     [ "TVec3", "structJGeometry_1_1TVec3_3_01f32_01_4.html#a3ed4d206717f3622f0414fd97d0c957f", null ],
     [ "add", "structJGeometry_1_1TVec3_3_01f32_01_4.html#af90927af3c6b6efb7d953422a85bb4d0", null ],
     [ "cross", "structJGeometry_1_1TVec3_3_01f32_01_4.html#a21c87b830b3676e96ee364c0952ddc8d", null ],

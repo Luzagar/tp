@@ -1,6 +1,5 @@
 var d__a__npc__fish_8cpp =
 [
-    [ "fish_pos", "structfish__pos.html", "structfish__pos" ],
     [ "daNpc_Fish_Create", "d__a__npc__fish_8cpp.html#abe5d6d8284f56a48075b25046e67533e", null ],
     [ "daNpc_Fish_Delete", "d__a__npc__fish_8cpp.html#a669668a44f538329d721789037cb9360", null ],
     [ "daNpc_Fish_Draw", "d__a__npc__fish_8cpp.html#a9f55f74c5f8550c0d7ecf858e0b619c6", null ],

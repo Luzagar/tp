@@ -3,7 +3,6 @@ var structmDoDvdThd__mountArchive__c =
     [ "~mDoDvdThd_mountArchive_c", "structmDoDvdThd__mountArchive__c.html#a4d1b63524e6309bf798e7b9747616cdd", null ],
     [ "mDoDvdThd_mountArchive_c", "structmDoDvdThd__mountArchive__c.html#ae13dc47853b0e27b0d070be3c5fc9d10", null ],
     [ "create", "structmDoDvdThd__mountArchive__c.html#a156c5dbec64bb42d2652bb6573d5d4a0", null ],
-    [ "create", "structmDoDvdThd__mountArchive__c.html#af176198f2ab653f15564e46dfedd97c2", null ],
     [ "create", "structmDoDvdThd__mountArchive__c.html#ad354a17a0fbceead44a505c4dbef0d6e", null ],
     [ "execute", "structmDoDvdThd__mountArchive__c.html#adee2054119410cbfa2a87deccde45daf", null ],
     [ "getArchive", "structmDoDvdThd__mountArchive__c.html#a62ea09179e229cdc62880bd8209e56f1", null ],

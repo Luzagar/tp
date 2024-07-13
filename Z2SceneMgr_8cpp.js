@@ -29,7 +29,7 @@ var Z2SceneMgr_8cpp =
     [ "checkFirstWaves__10Z2SceneMgrFv", "Z2SceneMgr_8cpp.html#adf27483e2b9d1ca33e5fc6bd6f96fc25", null ],
     [ "dComIfGs_getStartPoint", "Z2SceneMgr_8cpp.html#a18e2ec3a8bb0071fe8170ded3edc3989", null ],
     [ "dComIfGs_getStartPoint__Fv", "Z2SceneMgr_8cpp.html#a4b1376be7525dd741b9dffb779eec6ba", null ],
-    [ "dComIfGs_isEventBit__FUs", "Z2SceneMgr_8cpp.html#af31673486fc9f9125a2b1ad20d95363d", null ],
+    [ "dComIfGs_isEventBit__FUs", "Z2SceneMgr_8cpp.html#a08715d50d0717e64aea3116a9a11999b", null ],
     [ "dComIfGs_isSaveSwitch", "Z2SceneMgr_8cpp.html#aa8a070d248a5d5ddca80737c6e8d7fdc", null ],
     [ "dComIfGs_isSaveSwitch__Fi", "Z2SceneMgr_8cpp.html#a53b903782be3343e674cc1b916ef0f3d", null ],
     [ "dComIfGs_isStageSwitch__Fii", "Z2SceneMgr_8cpp.html#a9c5bc291ea601df5dcc62e57be188176", null ],

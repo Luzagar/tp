@@ -7,8 +7,8 @@ var classJ3DTexGenBlockBasic =
     [ "getType", "classJ3DTexGenBlockBasic.html#a44420c962026d663beb33c6bbd60f3d5", null ],
     [ "initialize", "classJ3DTexGenBlockBasic.html#aa63b33c592da8343b9f3cf76d39b0bdd", null ],
     [ "load", "classJ3DTexGenBlockBasic.html#a815c526d28094c75c27fdf8ff547dbba", null ],
-    [ "patch", "classJ3DTexGenBlockBasic.html#adeead3d551672ca2d31bc219fa1811a7", null ],
-    [ "reset", "classJ3DTexGenBlockBasic.html#a680dd968e86b8bb7b787f8904ae5bc5e", null ],
+    [ "patch", "classJ3DTexGenBlockBasic.html#ae8ce152d5321ab734d556358f492131f", null ],
+    [ "reset", "classJ3DTexGenBlockBasic.html#ae01dbb18512ef3fb50c8a9358af08ccc", null ],
     [ "setNBTScale", "classJ3DTexGenBlockBasic.html#af06e851fc71fcacb0c9003146445d511", null ],
     [ "setNBTScale", "classJ3DTexGenBlockBasic.html#a837650bc2922873f27fc659618b5baa0", null ],
     [ "mNBTScale", "classJ3DTexGenBlockBasic.html#aea7df21d72688e968b05bd90eedc5f96", null ]

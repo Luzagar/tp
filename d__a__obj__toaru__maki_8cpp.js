@@ -1,6 +1,5 @@
 var d__a__obj__toaru__maki_8cpp =
 [
-    [ "daObjToaruMaki_c", "classdaObjToaruMaki__c.html", "classdaObjToaruMaki__c" ],
     [ "__ct__10fopAc_ac_cFv", "d__a__obj__toaru__maki_8cpp.html#a085f3a34ce186ab6e202a97581a1f68a", null ],
     [ "__ct__16daObjToaruMaki_cFv", "d__a__obj__toaru__maki_8cpp.html#ae406275685727bb7e9ae7fff259bd0e9", null ],
     [ "__ct__4dBgWFv", "d__a__obj__toaru__maki_8cpp.html#a5e9d372a111159bea33bf705f2634206", null ],
@@ -44,8 +43,8 @@ var d__a__obj__toaru__maki_8cpp =
     [ "settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c", "d__a__obj__toaru__maki_8cpp.html#aa38b8bdba9a933dc787740fdc1fd9330", null ],
     [ "__vt__16daObjToaruMaki_c", "d__a__obj__toaru__maki_8cpp.html#a18c1b00f2fc887c6ce6c59f8b480154f", null ],
     [ "d_a_obj_toaru_maki__stringBase0", "d__a__obj__toaru__maki_8cpp.html#ad34661a5bad9425e3c279ba536b637ad", null ],
-    [ "daObjToaruMaki_METHODS", "d__a__obj__toaru__maki_8cpp.html#a1d1c38bc6596c11bf985178f1a757350", null ],
-    [ "g_profile_Obj_ToaruMaki", "d__a__obj__toaru__maki_8cpp.html#ac3921a9d0ad190ea504485ecc3c38ecd", null ],
+    [ "daObjToaruMaki_METHODS", "d__a__obj__toaru__maki_8cpp.html#ac7b50b5d45953c15e2572e5cb2ae1c98", null ],
+    [ "g_profile_Obj_ToaruMaki", "d__a__obj__toaru__maki_8cpp.html#ae176d5e6500c37478063bc4b586df47d", null ],
     [ "l_arcName", "d__a__obj__toaru__maki_8cpp.html#aee9098b229b5f252e28f7e58d90c8f86", null ],
     [ "l_bmdIdx", "d__a__obj__toaru__maki_8cpp.html#aad5b3a1ee6e13c432a1409aa13d16682", null ],
     [ "l_heapSize", "d__a__obj__toaru__maki_8cpp.html#a76288360bf0af92effd37bcaf2404fc8", null ],

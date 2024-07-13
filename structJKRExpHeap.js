@@ -13,7 +13,6 @@ var structJKRExpHeap =
     [ "appendUsedList", "structJKRExpHeap.html#a1ce9b2099ebecadf42f3fbe29f03118a", null ],
     [ "check", "structJKRExpHeap.html#a59b89cbe0c7f6a656dc783967b3d5fff", null ],
     [ "create", "structJKRExpHeap.html#abecce947ba0fa9effdf042144b37909e", null ],
-    [ "create", "structJKRExpHeap.html#a07407c306523aca0abc67fa4f2f10ccc", null ],
     [ "create", "structJKRExpHeap.html#a3558ed8304d2411e08b6bcab41bf813d", null ],
     [ "createRoot", "structJKRExpHeap.html#a1a0ed4218a5b16432e1cdca609e3e2de", null ],
     [ "do_alloc", "structJKRExpHeap.html#aa5656170134d1d9c89b0d21389af3934", null ],

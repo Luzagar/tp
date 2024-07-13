@@ -1,9 +1,5 @@
 var d__a__obj__volcball_8cpp =
 [
-    [ "daObjVolcBall_c", "classdaObjVolcBall__c.html", "classdaObjVolcBall__c" ],
-    [ "daObjVolcBall_c::vball_s", "structdaObjVolcBall__c_1_1vball__s.html", "structdaObjVolcBall__c_1_1vball__s" ],
-    [ "daObjVolcBall_c::volc_param_c", "classdaObjVolcBall__c_1_1volc__param__c.html", "classdaObjVolcBall__c_1_1volc__param__c" ],
-    [ "daObjVolcBom_c", "classdaObjVolcBom__c.html", "classdaObjVolcBom__c" ],
     [ "actionFunc", "d__a__obj__volcball_8cpp.html#a595e9a2e2c28611d985e4e65ae1fc3f3", null ],
     [ "__construct_array", "d__a__obj__volcball_8cpp.html#a58dbf4d2335fdc0e2065200543f5e4ea", null ],
     [ "__ct__10dCcD_GSttsFv", "d__a__obj__volcball_8cpp.html#ae4cd09eb67ed2fb9bc6e87d5cea71757", null ],
@@ -179,9 +175,9 @@ var d__a__obj__volcball_8cpp =
     [ "cNullVec__6Z2Calc", "d__a__obj__volcball_8cpp.html#af1d641d5006e9852701e43891c9ccc5c", null ],
     [ "d_a_obj_volcball__stringBase0", "d__a__obj__volcball_8cpp.html#a4377ed911087dcb836253440267943e9", null ],
     [ "data_80D24100", "d__a__obj__volcball_8cpp.html#a40a215cb511fd19dc0d56c6c45a63e13", null ],
-    [ "g_profile_Obj_VolcanicBall", "d__a__obj__volcball_8cpp.html#a010f8315289ac1ca1830f8d269d22260", null ],
+    [ "g_profile_Obj_VolcanicBall", "d__a__obj__volcball_8cpp.html#a147665feb8856206116475392c25694f", null ],
     [ "l_arcName", "d__a__obj__volcball_8cpp.html#a6d0bc0cdc600129eeec97a114bc0969b", null ],
-    [ "l_daObjVolcBall_Method", "d__a__obj__volcball_8cpp.html#a7dd52a5cac54732bf479b14caea9a211", null ],
+    [ "l_daObjVolcBall_Method", "d__a__obj__volcball_8cpp.html#a2a0aa208ce887b6999efd3381a0161c2", null ],
     [ "l_param", "d__a__obj__volcball_8cpp.html#a099d4b8cc880cbbd6c3d134504489f61", null ],
     [ "l_sph_src", "d__a__obj__volcball_8cpp.html#a7f4c30e172a9412a6a4d4b4c2d2c5e77", null ],
     [ "lit_1787", "d__a__obj__volcball_8cpp.html#a5bb5d6a82c2f4d4bb43dbf4d11e60387", null ],

@@ -1,6 +1,5 @@
 var d__a__obj__bosswarp_8cpp =
 [
-    [ "daObjLife_c", "structdaObjLife__c.html", "structdaObjLife__c" ],
     [ "__ct__10dMsgFlow_cFv", "d__a__obj__bosswarp_8cpp.html#adf6efa29e1556e386b88dccee61eff3e", null ],
     [ "__ct__10fopAc_ac_cFv", "d__a__obj__bosswarp_8cpp.html#a085f3a34ce186ab6e202a97581a1f68a", null ],
     [ "__dl__FPv", "d__a__obj__bosswarp_8cpp.html#a498e6440d5c316e2672169ee4ed92309", null ],
@@ -119,7 +118,7 @@ var d__a__obj__bosswarp_8cpp =
     [ "setGoal__15daObjBossWarp_cFv", "d__a__obj__bosswarp_8cpp.html#aeb37beb318f420ae32a45918f327bcef", null ],
     [ "setGoal__16dEvent_manager_cFP4cXyz", "d__a__obj__bosswarp_8cpp.html#a7d3762ec358f5fc443a7bd8f20480d33", null ],
     [ "setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c", "d__a__obj__bosswarp_8cpp.html#a163749e04bb8e727db62fca94d8e8f6e", null ],
-    [ "setPos__11daObjLife_cF4cXyz", "d__a__obj__bosswarp_8cpp.html#ab9851b82b6bad5d1dd34109dc8cf1acf", null ],
+    [ "setPos__11daObjLife_cF4cXyz", "d__a__obj__bosswarp_8cpp.html#a4bb9fb929997eb980125b801179e959c", null ],
     [ "setPtT__14dEvt_control_cFPv", "d__a__obj__bosswarp_8cpp.html#a9ad76c3d57cfa9cebfe35e958e22f24d", null ],
     [ "settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c", "d__a__obj__bosswarp_8cpp.html#aa38b8bdba9a933dc787740fdc1fd9330", null ],
     [ "transM__14mDoMtx_stack_cFRC4cXyz", "d__a__obj__bosswarp_8cpp.html#aea79459ea0e33c021713fa7c53afb44d", null ],

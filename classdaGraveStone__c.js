@@ -12,6 +12,7 @@ var classdaGraveStone__c =
     [ "setEnvTevColor", "classdaGraveStone__c.html#aae50a9173c90de7b41ddd9b8bc6209e8", null ],
     [ "setPrtcl", "classdaGraveStone__c.html#a97a6b9f86f4e07cd0262665c2a531e63", null ],
     [ "setRoomNo", "classdaGraveStone__c.html#a40b6c4dad6f14dee9fe42a97d29aaea6", null ],
+    [ "daNpc_zrZ_c", "classdaGraveStone__c.html#ad5b7c77524e699800deabb79d326243c", null ],
     [ "mAcch", "classdaGraveStone__c.html#ad3984f8b19013bc81e8a631575a874f2", null ],
     [ "mAcchCir", "classdaGraveStone__c.html#ac0cd12364401dadf98aed2d69682e92b", null ],
     [ "mCcDCyl", "classdaGraveStone__c.html#a6c31baf58688446a025746a1ddf720dd", null ],

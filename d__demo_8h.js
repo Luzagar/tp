@@ -1,6 +1,6 @@
 var d__demo_8h =
 [
-    [ "dDemo_object_c", "structdDemo__object__c.html", "structdDemo__object__c" ],
+    [ "dDemo_object_c", "classdDemo__object__c.html", "classdDemo__object__c" ],
     [ "dDemo_prm_c", "classdDemo__prm__c.html", "classdDemo__prm__c" ],
     [ "dDemo_actor_c", "classdDemo__actor__c.html", "classdDemo__actor__c" ],
     [ "dDemo_system_c", "classdDemo__system__c.html", "classdDemo__system__c" ],

@@ -1,6 +1,6 @@
 var structrenderingFmap__c =
 [
-    [ "palette_e", "structrenderingFmap__c_1_1palette__e.html", null ],
+    [ "palette_e", "structrenderingFmap__c.html#a7f1df273a0c9790c49452c79cf45082f", null ],
     [ "~renderingFmap_c", "structrenderingFmap__c.html#a982d90d09d3ac2730f87e444bc44ff53", null ],
     [ "afterDrawPath", "structrenderingFmap__c.html#af1a05565c0e9d7ccf25ab94ceeb9994b", null ],
     [ "beforeDrawPath", "structrenderingFmap__c.html#adad06b04cf26193c66e0ec893f279f54", null ],
@@ -13,9 +13,8 @@ var structrenderingFmap__c =
     [ "getNextRoom", "structrenderingFmap__c.html#a0db5da8da4b50d9ccf832c454e704dcb", null ],
     [ "getNextRoomPointer", "structrenderingFmap__c.html#adf6eb1139d8578456bd5907ac1850733", null ],
     [ "getNextStage", "structrenderingFmap__c.html#a5a541154e7bc045d0ff61ba610103426", null ],
+    [ "getPointStagePathInnerNo", "structrenderingFmap__c.html#a15b442ac57a94b094335880d1dac2ac8", null ],
     [ "getPointStagePathInnerNo", "structrenderingFmap__c.html#a65fa20cbd96ab9ab69cad4154b9f1f3e", null ],
-    [ "getPointStagePathInnerNo", "structrenderingFmap__c.html#a15b442ac57a94b094335880d1dac2ac8", null ],
-    [ "getPointStagePathInnerNo", "structrenderingFmap__c.html#a15b442ac57a94b094335880d1dac2ac8", null ],
     [ "init", "structrenderingFmap__c.html#a8fdb79f8a88c2490c3c80c587b757dcf", null ],
     [ "isDrawPath", "structrenderingFmap__c.html#a04169f6f6b292505015d8007616b0950", null ],
     [ "isDrawRoom", "structrenderingFmap__c.html#ab0b6cdaedb3579d1bfb411778329a048", null ],

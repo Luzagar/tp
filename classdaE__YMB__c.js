@@ -55,7 +55,6 @@ var classdaE__YMB__c =
     [ "setFlyBlurEffect", "classdaE__YMB__c.html#ae751d074db7446513762ad9170e35a45", null ],
     [ "setFlyWaitVoice", "classdaE__YMB__c.html#a7bef642aadce90d7fd3bb60775f535b6", null ],
     [ "setHitBoardSe", "classdaE__YMB__c.html#a21e299dc74ecf74fad36a88b5ca032be", null ],
-    [ "setHitBoardSe", "classdaE__YMB__c.html#a7fc19e08da09350be1e4cd79e7674d22", null ],
     [ "setInclination", "classdaE__YMB__c.html#a887704bf1c314e92252e40018af8b4a3", null ],
     [ "setLastDamage", "classdaE__YMB__c.html#abbfb729a34832c07f7a7e93e2a6646c2", null ],
     [ "setMidnaBindInit", "classdaE__YMB__c.html#a51ce7a16bbda40ccc5dfbfd179839631", null ],
@@ -63,5 +62,6 @@ var classdaE__YMB__c =
     [ "setRockDamageEffect", "classdaE__YMB__c.html#ab39fc641cd26200f91749d42b823f325", null ],
     [ "setWaterEffect1", "classdaE__YMB__c.html#ab461c624eb00db552c5d880d9eb79b5e", null ],
     [ "setWaterEffect2", "classdaE__YMB__c.html#af6f7bdd35dec2b8c44592dd24903eb3e", null ],
-    [ "setWolfLockEffect", "classdaE__YMB__c.html#a5e527f79530ca0c56b953fa5a90b655a", null ]
+    [ "setWolfLockEffect", "classdaE__YMB__c.html#a5e527f79530ca0c56b953fa5a90b655a", null ],
+    [ "field_0x5ac", "classdaE__YMB__c.html#ab2c4ac311cd587030dbf7746362c3e8f", null ]
 ];

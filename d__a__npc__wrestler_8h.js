@@ -1,4 +1,4 @@
 var d__a__npc__wrestler_8h =
 [
-    [ "daNpcWrestler_c", "classdaNpcWrestler__c.html", "classdaNpcWrestler__c" ]
+    [ "daNpcWrestler_Param_c", "classdaNpcWrestler__Param__c.html", "classdaNpcWrestler__Param__c" ]
 ];

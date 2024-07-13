@@ -1,6 +1,6 @@
 var structwcs__data =
 [
     [ "field_0x0", "structwcs__data.html#ae20e85dc177759df96ccbbc007831265", null ],
-    [ "field_0x4", "structwcs__data.html#ab5d0725f93ec28abe8ed4f658d4a9a35", null ],
-    [ "field_0x8", "structwcs__data.html#a6e9abb4476c2af2a885297ebd0ac8360", null ]
+    [ "next", "structwcs__data.html#a6c5a58b6b8410c400d178fbf823a2aee", null ],
+    [ "poly_idx", "structwcs__data.html#a3a98c97f912a48b6ba05d056607e83c5", null ]
 ];

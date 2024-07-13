@@ -11,5 +11,6 @@ var J3DMatBlock_8h =
     [ "j3dDefaultIndTexMtxInfo", "J3DMatBlock_8h.html#a28ead3336b88b005a5a470be7b073f1d", null ],
     [ "j3dDefaultIndTexOrderNull", "J3DMatBlock_8h.html#a39b88c8b3885133e87795c7766493adb", null ],
     [ "j3dDefaultNBTScaleInfo", "J3DMatBlock_8h.html#a4b744ec1591536648458cb9c87e5028e", null ],
-    [ "j3dDefaultZModeID", "J3DMatBlock_8h.html#accf8c47837efa316f59bca6ab9619048", null ]
+    [ "j3dDefaultZModeID", "J3DMatBlock_8h.html#accf8c47837efa316f59bca6ab9619048", null ],
+    [ "j3dZModeTable", "J3DMatBlock_8h.html#a3e04db0947b1ec8954d0993d0f4b67ca", null ]
 ];

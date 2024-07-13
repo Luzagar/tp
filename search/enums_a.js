@@ -13,12 +13,13 @@ var searchData=
   ['j3dshpflag_10',['J3DShpFlag',['../J3DShape_8h.html#ad9cff334cc916c839a76377035ca005f',1,'J3DShape.h']]],
   ['j3dsysdrawbuffer_11',['J3DSysDrawBuffer',['../J3DSys_8h.html#a86b42b9786c8ef48baa9e9d1455d1392',1,'J3DSys.h']]],
   ['j3dsysflag_12',['J3DSysFlag',['../J3DSys_8h.html#a26200bc06a3935eb5d34b04a21d37c8b',1,'J3DSys.h']]],
-  ['jasaudiomessage_13',['JASAudioMessage',['../JASAudioThread_8h.html#ac11d3651aef0eb9a6920dc7bac750bd8',1,'JASAudioThread.h']]],
-  ['jasmixmode_14',['JASMixMode',['../JASAiCtrl_8h.html#a0afb4e822ef485ad7cc403ceea779b63',1,'JASAiCtrl.h']]],
-  ['jasoutputrate_15',['JASOutputRate',['../JASAiCtrl_8h.html#a17798305b6b8f32e641d4de5c1382286',1,'JASAiCtrl.h']]],
-  ['jkrexpandswitch_16',['JKRExpandSwitch',['../JKRDvdRipper_8h.html#a3a81ab253efe80892d32be96b8a9dec2',1,'JKRDvdRipper.h']]],
-  ['jkrmembreakflag_17',['JKRMemBreakFlag',['../JKRMemArchive_8h.html#a2a0bd9c14b0a5e25b0a8d59556ac8dd2',1,'JKRMemArchive.h']]],
-  ['jsustreamseekfrom_18',['JSUStreamSeekFrom',['../JSUInputStream_8h.html#a858865037a136681f994fcd5565c1404',1,'JSUInputStream.h']]],
-  ['justification_5foptions_19',['justification_options',['../printf_8c.html#a5b6c94a6a58fd00dcaa3f31eeea518c1',1,'printf.c']]],
-  ['juttransparency_20',['JUTTransparency',['../JUTPalette_8h.html#a491b4d113f1985ddc5da78693ee35d61',1,'JUTPalette.h']]]
+  ['j3dtexmtxmode_13',['J3DTexMtxMode',['../J3DStruct_8h.html#aaf20c751d2af1bfe1a5b9e44515cbd0e',1,'J3DStruct.h']]],
+  ['jasaudiomessage_14',['JASAudioMessage',['../JASAudioThread_8h.html#ac11d3651aef0eb9a6920dc7bac750bd8',1,'JASAudioThread.h']]],
+  ['jasmixmode_15',['JASMixMode',['../JASAiCtrl_8h.html#a0afb4e822ef485ad7cc403ceea779b63',1,'JASAiCtrl.h']]],
+  ['jasoutputrate_16',['JASOutputRate',['../JASAiCtrl_8h.html#a17798305b6b8f32e641d4de5c1382286',1,'JASAiCtrl.h']]],
+  ['jkrexpandswitch_17',['JKRExpandSwitch',['../JKRDvdRipper_8h.html#a3a81ab253efe80892d32be96b8a9dec2',1,'JKRDvdRipper.h']]],
+  ['jkrmembreakflag_18',['JKRMemBreakFlag',['../JKRMemArchive_8h.html#a2a0bd9c14b0a5e25b0a8d59556ac8dd2',1,'JKRMemArchive.h']]],
+  ['jsustreamseekfrom_19',['JSUStreamSeekFrom',['../JSUInputStream_8h.html#a858865037a136681f994fcd5565c1404',1,'JSUInputStream.h']]],
+  ['justification_5foptions_20',['justification_options',['../printf_8c.html#a5b6c94a6a58fd00dcaa3f31eeea518c1',1,'printf.c']]],
+  ['juttransparency_21',['JUTTransparency',['../JUTPalette_8h.html#a491b4d113f1985ddc5da78693ee35d61',1,'JUTPalette.h']]]
 ];

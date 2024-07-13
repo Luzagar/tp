@@ -1,6 +1,6 @@
 var structbase__process__class =
 [
-    [ "mBsPcId", "structbase__process__class.html#ab5a8d10de8211f7f9e8f7183ac73e59f", null ],
+    [ "mBsPcId", "structbase__process__class.html#a72644e0f279d81d34d86f2f3a142ac7c", null ],
     [ "mBsType", "structbase__process__class.html#a96bc936495d11dc98f57385c8c93af7c", null ],
     [ "mBsTypeId", "structbase__process__class.html#aeb9ab8a7b23398351d5fea83f83add2d", null ],
     [ "mDtTg", "structbase__process__class.html#a818de7e9ee69c8e2962fb7d2bedafb4e", null ],

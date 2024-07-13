@@ -2,6 +2,7 @@ var structJ3DIndTevStage =
 [
     [ "J3DIndTevStage", "structJ3DIndTevStage.html#ae2a1b3192e008939407983b7d18f5a4a", null ],
     [ "J3DIndTevStage", "structJ3DIndTevStage.html#a4849ffb976c8fb58a829231e1aa4df0e", null ],
+    [ "load", "structJ3DIndTevStage.html#aa663af291439580afdb570de6687a54c", null ],
     [ "setAlphaSel", "structJ3DIndTevStage.html#ac4eba30921ebbc8c033afbf8c0b5852e", null ],
     [ "setBiasSel", "structJ3DIndTevStage.html#a0fe79d4c947227a8a3b228c5d5937610", null ],
     [ "setIndFormat", "structJ3DIndTevStage.html#a7a59f603cb566ebdbe653ec5687ca19a", null ],

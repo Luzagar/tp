@@ -1,7 +1,5 @@
 var d__a__b__gos_8cpp =
 [
-    [ "daB_GOS_HIO_c", "classdaB__GOS__HIO__c.html", "classdaB__GOS__HIO__c" ],
-    [ "b_gos_j_info", "structb__gos__j__info.html", "structb__gos__j__info" ],
     [ "action", "d__a__b__gos_8cpp.html#aa3476fbdad7d7367ce59bc1f41d14839", null ],
     [ "anm_init", "d__a__b__gos_8cpp.html#ac1c2c14a184c1823c8c7a6221495cd9d", null ],
     [ "ball", "d__a__b__gos_8cpp.html#aa29437a056292943c0e4b3b16cf742b3", null ],

@@ -36,5 +36,5 @@ var classdMenu__Collect3D__c =
     [ "mpSolidHeap", "classdMenu__Collect3D__c.html#a881ad0f0f395ecc73c59ae529aa56fce", null ],
     [ "mpStick", "classdMenu__Collect3D__c.html#ae37b6cb98dadb66468a4a464a94d2266", null ],
     [ "mTevStr", "classdMenu__Collect3D__c.html#a0a244c60dc17634f4cc792eb0e8d75dc", null ],
-    [ "mViewOffsetY", "classdMenu__Collect3D__c.html#ab450a5c1143879357085947e5e48575b", null ]
+    [ "mViewOffsetY", "classdMenu__Collect3D__c.html#ad84364270775d809340bc475921b05a0", null ]
 ];

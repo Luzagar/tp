@@ -38,6 +38,7 @@ var classdaNpcMoiR__c =
     [ "wait_type0", "classdaNpcMoiR__c.html#afdba9a1ad010cda7d58933251f2e1c10", null ],
     [ "wait_type1", "classdaNpcMoiR__c.html#aaac5403ed489be748c0f94956de65014", null ],
     [ "wait_type2", "classdaNpcMoiR__c.html#a650a8d5313b365a0f0739e6a9e8df963", null ],
+    [ "field_0x568", "classdaNpcMoiR__c.html#afbc8e5613f12dfb689cb982a4b6a0e97", null ],
     [ "mEvtSeqList", "classdaNpcMoiR__c.html#a9d68699dd6bd87ad8cbd29987b8540ee", null ],
     [ "mpMorf", "classdaNpcMoiR__c.html#a370ae198d48d4da291e2231f6788d77d", null ]
 ];

@@ -1,6 +1,5 @@
 var d__a__npc__zra_8h =
 [
-    [ "daNpc_zrA_Path_c", "classdaNpc__zrA__Path__c.html", "classdaNpc__zrA__Path__c" ],
     [ "daNpc_zrA_c", "classdaNpc__zrA__c.html", "classdaNpc__zrA__c" ],
     [ "daNpc_zrA_Param_c", "classdaNpc__zrA__Param__c.html", "classdaNpc__zrA__Param__c" ],
     [ "daNpc_zrA_Param_c::param", "structdaNpc__zrA__Param__c_1_1param.html", "structdaNpc__zrA__Param__c_1_1param" ],

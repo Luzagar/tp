@@ -1,12 +1,6 @@
 var structJ3DTexMtxInfo =
 [
     [ "operator=", "structJ3DTexMtxInfo.html#ae7a75c4c3b55500ba1fce998c1efd69f", null ],
-    [ "setEffectMtx", "structJ3DTexMtxInfo.html#abc0cf01f75e23c47a1730bcfd9856e83", null ],
-    [ "setEffectMtx", "structJ3DTexMtxInfo.html#abc0cf01f75e23c47a1730bcfd9856e83", null ],
-    [ "setEffectMtx", "structJ3DTexMtxInfo.html#abc0cf01f75e23c47a1730bcfd9856e83", null ],
-    [ "setEffectMtx", "structJ3DTexMtxInfo.html#abc0cf01f75e23c47a1730bcfd9856e83", null ],
-    [ "setEffectMtx", "structJ3DTexMtxInfo.html#abc0cf01f75e23c47a1730bcfd9856e83", null ],
-    [ "setEffectMtx", "structJ3DTexMtxInfo.html#abc0cf01f75e23c47a1730bcfd9856e83", null ],
     [ "setEffectMtx", "structJ3DTexMtxInfo.html#a53e389386f9d3a7758b6a3eacdc45aca", null ],
     [ "field_0x2", "structJ3DTexMtxInfo.html#afdb5b8ba0e7d878edbfe0c43647c35fc", null ],
     [ "field_0x3", "structJ3DTexMtxInfo.html#a7ce155693f54c68ee55a9e9f51fe273f", null ],

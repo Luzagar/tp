@@ -1,5 +1,6 @@
 var classobj__fw__class =
 [
+    [ "field_0x568", "classobj__fw__class.html#a4b3d7b34dd717b5cc4abea4fd59db68a", null ],
     [ "field_0x570", "classobj__fw__class.html#aca5c29d7d81bf6eef8c57e5a65749db6", null ],
     [ "field_0x578", "classobj__fw__class.html#a200b5471a04cd2f43219619e717423c3", null ],
     [ "field_0x57C", "classobj__fw__class.html#aca89bb674fd4973503c866cf41d4352f", null ],

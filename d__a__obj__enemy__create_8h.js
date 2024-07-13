@@ -1,6 +1,5 @@
 var d__a__obj__enemy__create_8h =
 [
-    [ "daObjE_CREATE_c", "classdaObjE__CREATE__c.html", "classdaObjE__CREATE__c" ],
     [ "daObjE_Action", "d__a__obj__enemy__create_8h.html#a8f6ff418d925dd2d7355efed71570a34", [
       [ "ACT_NORMAL", "d__a__obj__enemy__create_8h.html#a8f6ff418d925dd2d7355efed71570a34aa10403811c3cd95385d651ac5b545daf", null ],
       [ "ACT_SEARCH", "d__a__obj__enemy__create_8h.html#a8f6ff418d925dd2d7355efed71570a34a88f6527348ee99d3be5abedbcdf8b6af", null ],
@@ -27,5 +26,6 @@ var d__a__obj__enemy__create_8h =
       [ "MODE_WAIT", "d__a__obj__enemy__create_8h.html#aefed0fc3557558fd5c9f3ff8d15b91d3a4a68575804f886dbb380e07be2fb2024", null ],
       [ "MODE_KILL_CHECK", "d__a__obj__enemy__create_8h.html#aefed0fc3557558fd5c9f3ff8d15b91d3ae0d97323dd0170db2929d7fc26e86a04", null ],
       [ "MODE_END", "d__a__obj__enemy__create_8h.html#aefed0fc3557558fd5c9f3ff8d15b91d3a406ca8d89d280d3561c76fead32d5aa5", null ]
-    ] ]
+    ] ],
+    [ "STATIC_ASSERT", "d__a__obj__enemy__create_8h.html#ad1010a411617a1495f8a1c10504a37cf", null ]
 ];

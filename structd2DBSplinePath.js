@@ -1,13 +1,14 @@
 var structd2DBSplinePath =
 [
+    [ "d2DBSplinePath", "structd2DBSplinePath.html#ada013998fc36cd9004c3c90edef8d04d", null ],
     [ "~d2DBSplinePath", "structd2DBSplinePath.html#aa3fe4088c71b3590ec2be8d8c50a18e3", null ],
-    [ "Calc", "structd2DBSplinePath.html#a40024bccc8dabcbb643fedaed7748768", null ],
+    [ "Calc", "structd2DBSplinePath.html#abb2009f2353b3e637ba564b868c653b5", null ],
     [ "Calc", "structd2DBSplinePath.html#a1aa6e53380712ef45014cf90c4a8fd90", null ],
-    [ "Init", "structd2DBSplinePath.html#ae13bbf933cbdce503dc128a085b0fda6", null ],
     [ "Init", "structd2DBSplinePath.html#a33a17ad8f7082671a0649b808d5582cf", null ],
-    [ "Spot", "structd2DBSplinePath.html#a237c597548a70a8ea2d103bc5fee6219", null ],
-    [ "Spot", "structd2DBSplinePath.html#a643bcfae89c87d11bbd06f48bf3d9c80", null ],
-    [ "Step", "structd2DBSplinePath.html#af0ac365d1679509e12ebabe758e8e6ba", null ],
+    [ "Init", "structd2DBSplinePath.html#a33a17ad8f7082671a0649b808d5582cf", null ],
+    [ "Spot", "structd2DBSplinePath.html#a92522279c27d0f01ad3080b150dfca75", null ],
+    [ "Spot", "structd2DBSplinePath.html#a92522279c27d0f01ad3080b150dfca75", null ],
+    [ "Step", "structd2DBSplinePath.html#a75f848e55dabd25793f685a4b866f9cb", null ],
     [ "field_0x0", "structd2DBSplinePath.html#aaf3395f820d130f1f1b26ce695048652", null ],
     [ "field_0x00", "structd2DBSplinePath.html#ac7ad9962ea392b0101af4f0d1514ebfc", null ],
     [ "field_0x04", "structd2DBSplinePath.html#a99c824bf691b54627cb51796da9a61ce", null ],
@@ -19,13 +20,13 @@ var structd2DBSplinePath =
     [ "field_0x1c", "structd2DBSplinePath.html#aca686232a4b68a58647178cb51b9ed20", null ],
     [ "field_0x20", "structd2DBSplinePath.html#ac68768cead679e2c958adc2f8d701346", null ],
     [ "field_0x24", "structd2DBSplinePath.html#ac4ad8842910c2659f362b5e378ff60b0", null ],
-    [ "field_0x24", "structd2DBSplinePath.html#a149dc448cf5e99c69e8a22e1721d1121", null ],
     [ "field_0x28", "structd2DBSplinePath.html#afa62cc0e386a4ab0665e5ef3367f4f9a", null ],
-    [ "field_0x28", "structd2DBSplinePath.html#a29a797397617854c023998eeec1dc824", null ],
     [ "field_0x2c", "structd2DBSplinePath.html#a560f9638d78794950a8af93671ab5799", null ],
     [ "field_0x2c", "structd2DBSplinePath.html#a64c4accaead0ef5cf06b83e1747b602b", null ],
     [ "field_0x30", "structd2DBSplinePath.html#aed5160bde4189360b3a3629400519008", null ],
     [ "field_0x4", "structd2DBSplinePath.html#af747e861dc6a1fc84b3930c5a13ff372", null ],
     [ "field_0x8", "structd2DBSplinePath.html#add6d5dd976368c21ac76765f9202ae57", null ],
-    [ "field_0xc", "structd2DBSplinePath.html#ae7902966df7e60fa364c077e79e726ab", null ]
+    [ "field_0xc", "structd2DBSplinePath.html#ae7902966df7e60fa364c077e79e726ab", null ],
+    [ "mCurveKey", "structd2DBSplinePath.html#a2badbc480256ace65547c0fb1f7dd6e7", null ],
+    [ "mCurveWeight", "structd2DBSplinePath.html#a0311338cf3c80891a22f51b3f9022603", null ]
 ];

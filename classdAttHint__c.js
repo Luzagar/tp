@@ -6,10 +6,6 @@ var classdAttHint__c =
     [ "init", "classdAttHint__c.html#a00fc39343689b4a0f61471ec37e77727", null ],
     [ "proc", "classdAttHint__c.html#a74b108364a5e8ce6bb64914d16b84266", null ],
     [ "request", "classdAttHint__c.html#a59623df7425dc02b1583d11664c8017d", null ],
-    [ "request", "classdAttHint__c.html#a200359adaf4a1783eba9d5e0cee69371", null ],
-    [ "request", "classdAttHint__c.html#a200359adaf4a1783eba9d5e0cee69371", null ],
-    [ "request", "classdAttHint__c.html#a200359adaf4a1783eba9d5e0cee69371", null ],
-    [ "request", "classdAttHint__c.html#a200359adaf4a1783eba9d5e0cee69371", null ],
     [ "field_0x8", "classdAttHint__c.html#a7c3306226ebe57275eeb2620176bca46", null ],
     [ "mHintActorID", "classdAttHint__c.html#a954ec13f6c7486b468d9f0031e446506", null ],
     [ "mPriority", "classdAttHint__c.html#a526c751fc00ad4b783f4d1ffbb157947", null ]

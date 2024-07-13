@@ -119,7 +119,6 @@ var classdaObjCarry__c =
     [ "mode_init_carry", "classdaObjCarry__c.html#a05ece740f45429ae82a6c928ed8a25a8", null ],
     [ "mode_init_dbDrop", "classdaObjCarry__c.html#a5ad4ba99fda3eae7407e73d62a7a7fb0", null ],
     [ "mode_init_drop", "classdaObjCarry__c.html#afa2865d8b8a5fc4ee806fd2fc87b226b", null ],
-    [ "mode_init_drop", "classdaObjCarry__c.html#a9ee88b976ad9e8f2d6ac2dd169e8498d", null ],
     [ "mode_init_fit", "classdaObjCarry__c.html#ac54368ae80570b2281ca220e2e3c8d1b", null ],
     [ "mode_init_float", "classdaObjCarry__c.html#a5c3fb49f0fa52d1973a181e71516468a", null ],
     [ "mode_init_growth", "classdaObjCarry__c.html#ac37cae676f8dd4d7d90a1b491051364f", null ],

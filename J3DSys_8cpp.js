@@ -11,8 +11,6 @@ var J3DSys_8cpp =
     [ "data_804563C8", "J3DSys_8cpp.html#ac10731340d199753875d14382492c2b0", null ],
     [ "IndMtx", "J3DSys_8cpp.html#a0d76a20d00454e879942ef9c3d937c6d", null ],
     [ "j3dDefaultColInfo", "J3DSys_8cpp.html#a1479b3cb520a6d178ce9675044de7af3", null ],
-    [ "j3dDefaultTevColor", "J3DSys_8cpp.html#ac52d44787630f5cbca3db3db2c0f6058", null ],
-    [ "j3dDefaultTevKColor", "J3DSys_8cpp.html#af3cb14219fce73f08cc3d7f1ec9da833", null ],
     [ "j3dDefaultViewNo", "J3DSys_8cpp.html#aa9d892cc11c68bc48b059af635dc28aa", null ],
     [ "j3dIdentityMtx", "J3DSys_8cpp.html#a8d58cd72c5bc127e9bffc22028998667", null ],
     [ "j3dSys", "J3DSys_8cpp.html#afe0887d3a0f9e2ff9c2d5f6ccfbf8e76", null ],

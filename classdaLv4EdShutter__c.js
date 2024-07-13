@@ -19,5 +19,6 @@ var classdaLv4EdShutter__c =
     [ "move", "classdaLv4EdShutter__c.html#a2d26504bae36f305d3b9db30b124c094", null ],
     [ "setBaseMtx", "classdaLv4EdShutter__c.html#a00ee1486ab065777524861de9df8975a", null ],
     [ "field_0x568", "classdaLv4EdShutter__c.html#ad3deea2fd268fc554143c3045d534c39", null ],
+    [ "field_0x56B", "classdaLv4EdShutter__c.html#ace2c3e40980d1007bef6c6cbdeda473c", null ],
     [ "mStatus", "classdaLv4EdShutter__c.html#a93024eb1ffd44765f7f6c8487b5d35cc", null ]
 ];

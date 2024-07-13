@@ -18,7 +18,7 @@ var classdBgWKCol =
     [ "GetGroundCode", "classdBgWKCol.html#acc1d85a2b62af2f868d57145aaf835f3", null ],
     [ "GetGrpInf", "classdBgWKCol.html#ad2358a96da232eb7ce659cc89af159ec", null ],
     [ "GetGrpRoomIndex", "classdBgWKCol.html#a85dfb6b17a765c75d4be62479aa6ccc7", null ],
-    [ "GetGrpSoundId", "classdBgWKCol.html#ae5e2f1e0a8132a7054e229641bbc9310", null ],
+    [ "GetGrpSoundId", "classdBgWKCol.html#a8d08e7d4b53f7ff3f53b7141e1e20f40", null ],
     [ "GetHorseNoEntry", "classdBgWKCol.html#aa4e13a8544f91b152b941f0713a74e75", null ],
     [ "GetIronBallThrough", "classdBgWKCol.html#a0cd310520f335992cb059a335dcde3e4", null ],
     [ "GetLinkNo", "classdBgWKCol.html#a70697d2380ba6524ac67a218987fb030", null ],
@@ -65,7 +65,7 @@ var classdBgWKCol =
     [ "SplGrpChk", "classdBgWKCol.html#a5cbb973dac3cc3acf270993d74a5581b", null ],
     [ "TransPos", "classdBgWKCol.html#a19a7889fee65605bec83c2c60636b533", null ],
     [ "WallCorrect", "classdBgWKCol.html#a8a1b46f76ca37b4558229eb9d13f6569", null ],
-    [ "WallCorrectSort", "classdBgWKCol.html#a4b036068786e33640c8ce5170022a551", null ],
+    [ "WallCorrectSort", "classdBgWKCol.html#ab0599f964df65e5ccacfcdfb8359d0bc", null ],
     [ "m_bnd", "classdBgWKCol.html#ad0aa36b5a62b4d8353c445da7fea51c1", null ],
     [ "m_code", "classdBgWKCol.html#ae4e5aff039d33bbf8413f5cfd178b384", null ],
     [ "m_pkc_head", "classdBgWKCol.html#a5ec913ecda81702718102136156e250f", null ]

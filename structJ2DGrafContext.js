@@ -14,7 +14,6 @@ var structJ2DGrafContext =
     [ "place", "structJ2DGrafContext.html#aafe68ba56dee082564b406df28bf4625", null ],
     [ "place", "structJ2DGrafContext.html#af844d40871a60d6047a6c97fd666a561", null ],
     [ "scissor", "structJ2DGrafContext.html#a12633407f033910e61b08c0aa2c64453", null ],
-    [ "scissor", "structJ2DGrafContext.html#aa796c2819a60719a9037f4b3c07db978", null ],
     [ "scissor", "structJ2DGrafContext.html#a1a9bc7cb4be84929451e0666cf1f54a6", null ],
     [ "setColor", "structJ2DGrafContext.html#ae51a762807f67588c95a49270dbf8772", null ],
     [ "setColor", "structJ2DGrafContext.html#ab685166edf01861828733c2a3a6a1e12", null ],

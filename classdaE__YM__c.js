@@ -83,7 +83,6 @@ var classdaE__YM__c =
     [ "setHideType", "classdaE__YM__c.html#a7894cc6a6df071ad54a66d86fd8c153a", null ],
     [ "setInclination", "classdaE__YM__c.html#a4811970286261aaec119fa344d613d55", null ],
     [ "setLockByCargo", "classdaE__YM__c.html#a7724f0bafa021b1e48ac15c720795d9d", null ],
-    [ "setLockByCargo", "classdaE__YM__c.html#a7724f0bafa021b1e48ac15c720795d9d", null ],
     [ "setMoveSound", "classdaE__YM__c.html#ad2889569025e79cf08a05d9ea92f7182", null ],
     [ "setNextPathPoint", "classdaE__YM__c.html#ad7809c058837331cd6ac14fc51300798", null ],
     [ "setNormalCc", "classdaE__YM__c.html#ad4789bbacf36226edb92d5ce4c268316", null ],
