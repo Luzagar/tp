@@ -248,7 +248,7 @@ var group__jsystem_jparticle =
       [ "mYBBCamMtx", "structJPAEmitterWorkData.html#ac457d42eb60596e08208c9c26efbf211", null ]
     ] ],
     [ "JPAEmitterCallBack", "classJPAEmitterCallBack.html", [
-      [ "~JPAEmitterCallBack", "classJPAEmitterCallBack.html#a21f22c0350b59e9bc29c62b9d7cb584e", null ],
+      [ "~JPAEmitterCallBack", "classJPAEmitterCallBack.html#ad12a23f298af9e3233667167882d55c3", null ],
       [ "draw", "classJPAEmitterCallBack.html#af2a9c2fc64e1945882018dc536d084eb", null ],
       [ "drawAfter", "classJPAEmitterCallBack.html#aad736cbd18e2cc756bb56242e9d9a674", null ],
       [ "execute", "classJPAEmitterCallBack.html#a707d01ebefc0e7c8318375f4f2459f62", null ],
@@ -509,6 +509,7 @@ var group__jsystem_jparticle =
       [ "canCreateChild", "structJPABaseParticle.html#a0f1f2830fd049f106bbcb9b6ca193642", null ],
       [ "checkStatus", "structJPABaseParticle.html#a7b017fb8933d41544e189dc03ea54f41", null ],
       [ "getAge", "structJPABaseParticle.html#a89d371a460cb4ad62822811007b1f5f2", null ],
+      [ "getBaseAxis", "structJPABaseParticle.html#a64fcd53d784059d45486a11bbf7904d7", null ],
       [ "getGlobalPosition", "structJPABaseParticle.html#a47aa21957177e63f472f574624e7cf2a", null ],
       [ "getHeight", "structJPABaseParticle.html#a7231a429f3eacbd6ec1ac47fc3441b47", null ],
       [ "getLocalPosition", "structJPABaseParticle.html#a0a135aaa34be21f30525a9353a428ccc", null ],

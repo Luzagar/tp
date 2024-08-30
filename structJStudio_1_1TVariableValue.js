@@ -7,6 +7,7 @@ var structJStudio_1_1TVariableValue =
     [ "getValue", "structJStudio_1_1TVariableValue.html#a744bb3bd960eb3519ffee502804bb81e", null ],
     [ "getValue_clamp", "structJStudio_1_1TVariableValue.html#ae208d37e01c7e806e57986318db5bd24", null ],
     [ "getValue_uint8", "structJStudio_1_1TVariableValue.html#a390e223051a50278e15f62a36a6d4f00", null ],
+    [ "setOutput", "structJStudio_1_1TVariableValue.html#a31f3e1de9da2bd188242568da7facb70", null ],
     [ "setValue_functionValue", "structJStudio_1_1TVariableValue.html#acec72ebde9a50d124331e8a3af70e0e1", null ],
     [ "setValue_immediate", "structJStudio_1_1TVariableValue.html#a71b35749b4e89d3d447a4016e8744589", null ],
     [ "setValue_none", "structJStudio_1_1TVariableValue.html#a6e033474686ab04c9d23c07cf7a6aab1", null ],
