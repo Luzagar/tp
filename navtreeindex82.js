@@ -1,5 +1,6 @@
 var NAVTREEINDEX82 =
 {
+"classJ3DTevColorAnm.html#a6c61f62d988c020953d4e7e0c9d8cedf":[1,1,1,65,7],
 "classJ3DTevColorAnm.html#a7404b29f32b35ba5ce72a5de59aadea3":[1,1,1,65,10],
 "classJ3DTevColorAnm.html#aaaac13d9b43b1447ce4133a320732adf":[1,1,1,65,1],
 "classJ3DTevColorAnm.html#abacb5f09c59a945b032b005d45f35fe2":[1,1,1,65,3],
@@ -164,8 +165,8 @@ var NAVTREEINDEX82 =
 "classJ3DTexture.html#afd1734ad8e022120cf21736a9fecaa20":[1,1,1,159,3],
 "classJ3DUClipper.html":[1,1,1,201],
 "classJ3DUClipper.html#a17e2899bf0ec63714541b1472ddf314b":[1,1,1,201,11],
-"classJ3DUClipper.html#a27a2eb032b61d9a3c3bb589fcea0da91":[1,1,1,201,3],
 "classJ3DUClipper.html#a27a2eb032b61d9a3c3bb589fcea0da91":[1,1,1,201,2],
+"classJ3DUClipper.html#a27a2eb032b61d9a3c3bb589fcea0da91":[1,1,1,201,3],
 "classJ3DUClipper.html#a374da449a25a5729180efa3780238b7a":[1,1,1,201,7],
 "classJ3DUClipper.html#a4b40309e207f95b72c09eb3d76bf83a7":[1,1,1,201,4],
 "classJ3DUClipper.html#a4cf89a8044613f7ac3721d45c8720890":[1,1,1,201,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX82 =
 "classJ3DVertexData.html#ad5d77ed3c17c6e5201ce82db62d40e52":[1,1,1,165,3],
 "classJ3DVertexData.html#ae25ee1a92275797417b6c42b43310104":[1,1,1,165,15],
 "classJ3DVertexData.html#aeb5b668fc29ab8dc682487e042e47e9d":[1,1,1,165,16],
-"classJ3DVertexData.html#aef38b26d82924a502b62a7513234eb4a":[1,1,1,165,7],
-"classJ3DVertexData.html#af707a609a6cd3851838e547067cfd2fa":[1,1,1,165,31]
+"classJ3DVertexData.html#aef38b26d82924a502b62a7513234eb4a":[1,1,1,165,7]
 };

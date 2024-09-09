@@ -1,5 +1,6 @@
 var NAVTREEINDEX99 =
 {
+"classZ2WolfHowlMgr.html#ab3a34060f02c8ab1b428ec0db223aa0c":[3,0,3089,29],
 "classZ2WolfHowlMgr.html#ab5d000318309e97dee644abe43aefbff":[3,0,3089,24],
 "classZ2WolfHowlMgr.html#ac9ccfea47b879c7dfe52209981179712":[3,0,3089,31],
 "classZ2WolfHowlMgr.html#ad0e6d8293b44d2685a2acd58b22e42af":[3,0,3089,45],
@@ -248,6 +249,5 @@ var NAVTREEINDEX99 =
 "classb__gnd__class.html#a0a68bf00e46c881ae50309868d4b824f":[1,0,1,7,35],
 "classb__gnd__class.html#a0a783698c283c798d2569dce046f80d0":[1,0,1,7,54],
 "classb__gnd__class.html#a0a84a03d526fa13bb36da5ffdaccb833":[1,0,1,7,152],
-"classb__gnd__class.html#a0bf22fc403de3befc4afefdaaa4d1d68":[1,0,1,7,157],
-"classb__gnd__class.html#a0dc83ce99e928bebbb6063fe994db055":[1,0,1,7,133]
+"classb__gnd__class.html#a0bf22fc403de3befc4afefdaaa4d1d68":[1,0,1,7,157]
 };
