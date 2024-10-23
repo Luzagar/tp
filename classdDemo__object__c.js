@@ -9,7 +9,6 @@ var classdDemo__object__c =
     [ "createFog", "classdDemo__object__c.html#a0cdc5a4cd4947db371aa926a4e3624ba", null ],
     [ "getActiveCamera", "classdDemo__object__c.html#a1bf344c0d7fc59bc7c0e8ba441df8fe8", null ],
     [ "getActor", "classdDemo__object__c.html#a377ec090d88182be9bb64899375cddb2", null ],
-    [ "getActor", "classdDemo__object__c.html#a04f734a9959a2564cdf88e7fdb83663a", null ],
     [ "remove", "classdDemo__object__c.html#ad26e2502dbeb3681db793ccd961cfbe6", null ],
     [ "mActorNum", "classdDemo__object__c.html#a85b8da118c0a671804374e3e33047b79", null ],
     [ "mLightNum", "classdDemo__object__c.html#a70847789e7c24801abd603ecec58e7ac", null ],

@@ -2,6 +2,7 @@ var structdDrawPath__c =
 [
     [ "floor_class", "structdDrawPath__c_1_1floor__class.html", "structdDrawPath__c_1_1floor__class" ],
     [ "group_class", "structdDrawPath__c_1_1group__class.html", "structdDrawPath__c_1_1group__class" ],
+    [ "layer_data", "structdDrawPath__c_1_1layer__data.html", "structdDrawPath__c_1_1layer__data" ],
     [ "line_class", "structdDrawPath__c_1_1line__class.html", "structdDrawPath__c_1_1line__class" ],
     [ "poly_class", "structdDrawPath__c_1_1poly__class.html", "structdDrawPath__c_1_1poly__class" ],
     [ "room_class", "structdDrawPath__c_1_1room__class.html", "structdDrawPath__c_1_1room__class" ],
@@ -10,7 +11,7 @@ var structdDrawPath__c =
     [ "drawPath", "structdDrawPath__c.html#ada4ded467adbd9a72da77561c612367d", null ],
     [ "getColor", "structdDrawPath__c.html#aa3f2b3b8e69f25c2033978d7d6f73765", null ],
     [ "getFirstRoomPointer", "structdDrawPath__c.html#a71e3260d6e4e821d0d063c889cb01b66", null ],
-    [ "getLineColor", "structdDrawPath__c.html#a8e81d0fb8a56e2812828b98b4a63efff", null ],
+    [ "getLineColor", "structdDrawPath__c.html#ae1fde185c9101d121ad8d833ea11c406", null ],
     [ "getLineColor", "structdDrawPath__c.html#a2569924bd918971fbab42bb926001c7f", null ],
     [ "getLineWidth", "structdDrawPath__c.html#a96e9075f5b757c0bfa9f51a1a2dd3eb5", null ],
     [ "getNextRoomPointer", "structdDrawPath__c.html#a2379f7c2d6541cf07803a7d63ef493fe", null ],

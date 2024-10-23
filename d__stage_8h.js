@@ -1,6 +1,6 @@
 var d__stage_8h =
 [
-    [ "stage_vrboxcol_info_class", "structstage__vrboxcol__info__class.html", null ],
+    [ "stage_vrboxcol_info_class", "structstage__vrboxcol__info__class.html", "structstage__vrboxcol__info__class" ],
     [ "stage_vrbox_info_class", "structstage__vrbox__info__class.html", "structstage__vrbox__info__class" ],
     [ "stage_tresure_class", "classstage__tresure__class.html", "classstage__tresure__class" ],
     [ "stage_stag_info_class", "structstage__stag__info__class.html", "structstage__stag__info__class" ],
@@ -42,7 +42,7 @@ var d__stage_8h =
     [ "dStage_DMap_c", "structdStage__DMap__c.html", null ],
     [ "dStage_MapEvent_dt_c", "structdStage__MapEvent__dt__c.html", "structdStage__MapEvent__dt__c" ],
     [ "dStage_MapEventInfo_c", "structdStage__MapEventInfo__c.html", "structdStage__MapEventInfo__c" ],
-    [ "dStage_dt_c", "structdStage__dt__c.html", "structdStage__dt__c" ],
+    [ "dStage_dt_c", "classdStage__dt__c.html", "classdStage__dt__c" ],
     [ "dStage_stageDt_c", "classdStage__stageDt__c.html", "classdStage__stageDt__c" ],
     [ "dStage_roomDt_c", "classdStage__roomDt__c.html", "classdStage__roomDt__c" ],
     [ "dStage_roomStatus_c", "classdStage__roomStatus__c.html", "classdStage__roomStatus__c" ],
@@ -78,6 +78,7 @@ var d__stage_8h =
     [ "dStage_Create", "d__stage_8h.html#a29782668b94beb96fe440458580bb1ab", null ],
     [ "dStage_Delete", "d__stage_8h.html#a37179dafd46b71b6d2033570f0741d59", null ],
     [ "dStage_dmapInfoInit", "d__stage_8h.html#aaf94e8c74a82f855aef964a2c1adb7b7", null ],
+    [ "dStage_dt_c_fieldMapLoader", "d__stage_8h.html#a2e1d07d3f2ddd9d443c0b86d617e4f60", null ],
     [ "dStage_dt_c_roomLoader", "d__stage_8h.html#a9c102b1579409fb374a624eae1b5961a", null ],
     [ "dStage_dt_c_roomReLoader", "d__stage_8h.html#ab2c0ca0955a8069ddc13b487fc67a3e2", null ],
     [ "dStage_elstInfoInit", "d__stage_8h.html#a1b8af2f60fbbfea50933d6668f83b727", null ],

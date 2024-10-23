@@ -1,7 +1,7 @@
 var classdDemo__c =
 [
     [ "branch", "classdDemo__c.html#a96ab36fb2b860795c01d216683d29407", null ],
-    [ "create", "classdDemo__c.html#a16d8c091cb0c1d7538d17cf4e0158d76", null ],
+    [ "create", "classdDemo__c.html#a545a2abeeb0a26c601a338ec6d3b7c54", null ],
     [ "end", "classdDemo__c.html#ac1ede8360bb04f52f5f2157bb2df6589", null ],
     [ "getActor", "classdDemo__c.html#a0eb4bd5a463aad4f4ef96ec654413cea", null ],
     [ "getBranchId", "classdDemo__c.html#ac21434d8b94ed14d047ad37b7b5df5f7", null ],
@@ -14,7 +14,7 @@ var classdDemo__c =
     [ "isStatus", "classdDemo__c.html#ab7836b5d6bcbd73fa880c86e0245c19f", null ],
     [ "offStatus", "classdDemo__c.html#a7659ace53649680ddd80718ad3b05d83", null ],
     [ "onStatus", "classdDemo__c.html#ab97421940b8284e8cce281ee02858672", null ],
-    [ "remove", "classdDemo__c.html#a26dbab7f55643233d8ec44cc7b6c128d", null ],
+    [ "remove", "classdDemo__c.html#a902df362547469b8215c1e7bc63c4578", null ],
     [ "reset", "classdDemo__c.html#abdbbf8a8f754dde3293b34a475672e96", null ],
     [ "setBranchData", "classdDemo__c.html#aa32f862b883fd6de612d417b0cd26b69", null ],
     [ "setBranchId", "classdDemo__c.html#a58724b39d73675dac94049dcfefac194", null ],
@@ -34,7 +34,6 @@ var classdDemo__c =
     [ "m_message", "classdDemo__c.html#a68a11b58e89bfd832f936495980d111a", null ],
     [ "m_mode", "classdDemo__c.html#af58aabbfd8b094ede47c842b146d2808", null ],
     [ "m_object", "classdDemo__c.html#a3cfbde58ac096498753714764f364198", null ],
-    [ "m_object", "classdDemo__c.html#aa44ce346b98f534f5fa6ec6983839418", null ],
     [ "m_particle", "classdDemo__c.html#a1dabb86bb3e16ec25952d83237ad6d29", null ],
     [ "m_rotationY", "classdDemo__c.html#a40ddb9e00f4f40880e435ddcea0af75b", null ],
     [ "m_stage", "classdDemo__c.html#a0134e8573129b53ff78eceda98934ccf", null ],
