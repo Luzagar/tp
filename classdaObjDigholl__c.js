@@ -4,6 +4,8 @@ var classdaObjDigholl__c =
     [ "create", "classdaObjDigholl__c.html#a9dc77daf6b85ddce11d52bf1dd869b8a", null ],
     [ "draw", "classdaObjDigholl__c.html#acb79c137491ba94c8f5b042c27d2f16a", null ],
     [ "execute", "classdaObjDigholl__c.html#af7f38be0c945fa8d3b15e9874ef710f4", null ],
+    [ "getSceneNum", "classdaObjDigholl__c.html#abc493a23865ecf3c627da1766f3c7fb2", null ],
+    [ "onDigStart", "classdaObjDigholl__c.html#a5695010de25c9a7bce45e0a542b6a211", null ],
     [ "field_0x568", "classdaObjDigholl__c.html#ab380b77d22dd3062a7d11673a9849c14", null ],
     [ "field_0x569", "classdaObjDigholl__c.html#a75a3f8c1c97ef6713b08690eb605bbb8", null ],
     [ "field_0x56a", "classdaObjDigholl__c.html#ad8be0da8836622422b349fb8e90a8219", null ],

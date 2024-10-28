@@ -1,0 +1,969 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Twilight Princess Decompilation" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Documentation for the Twilight Princess codebase" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Twilight Princess Decompilation" />
+<meta name="twitter:description" content="Documentation for the Twilight Princess codebase" />
+<!-- END twitter metadata -->
+<title>Twilight Princess: daNpc_Hanjo_Param_c::Data Struct Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="overrides.css" rel="stylesheet" type="text/css"/>
+<!-- ... other metadata & script includes ... -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="midna.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Twilight Princess
+   </div>
+   <div id="projectbrief">Decompilation of The Legend of Zelda: Twilight Princess</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('structdaNpc__Hanjo__Param__c_1_1Data.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="structdaNpc__Hanjo__Param__c_1_1Data-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">daNpc_Hanjo_Param_c::Data Struct Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="d__a__npc__hanjo_8h_source.html">d_a_npc_hanjo.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a7dab8645f8498486d2c16c5341ac99a9" id="r_a7dab8645f8498486d2c16c5341ac99a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a7dab8645f8498486d2c16c5341ac99a9">field_0x00</a></td></tr>
+<tr class="separator:a7dab8645f8498486d2c16c5341ac99a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a742d4e5bdf3d08c23bd2b5c58215b141" id="r_a742d4e5bdf3d08c23bd2b5c58215b141"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a742d4e5bdf3d08c23bd2b5c58215b141">field_0x04</a></td></tr>
+<tr class="separator:a742d4e5bdf3d08c23bd2b5c58215b141"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66e40c507d78a4c383d294dbf891cd07" id="r_a66e40c507d78a4c383d294dbf891cd07"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a66e40c507d78a4c383d294dbf891cd07">field_0x08</a></td></tr>
+<tr class="separator:a66e40c507d78a4c383d294dbf891cd07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35736b46c010499211183aa07580b234" id="r_a35736b46c010499211183aa07580b234"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a35736b46c010499211183aa07580b234">field_0x0c</a></td></tr>
+<tr class="separator:a35736b46c010499211183aa07580b234"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31917e7eeaf294df1438c0da7c6e2aa4" id="r_a31917e7eeaf294df1438c0da7c6e2aa4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a31917e7eeaf294df1438c0da7c6e2aa4">field_0x10</a></td></tr>
+<tr class="separator:a31917e7eeaf294df1438c0da7c6e2aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0e58ba0d6ed4678abfe185d59761920" id="r_ac0e58ba0d6ed4678abfe185d59761920"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#ac0e58ba0d6ed4678abfe185d59761920">field_0x14</a></td></tr>
+<tr class="separator:ac0e58ba0d6ed4678abfe185d59761920"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ed00f7798db2f607a8f687428780d3d" id="r_a7ed00f7798db2f607a8f687428780d3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a7ed00f7798db2f607a8f687428780d3d">field_0x18</a></td></tr>
+<tr class="separator:a7ed00f7798db2f607a8f687428780d3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb2294b187599bf48a981af7679aa12f" id="r_adb2294b187599bf48a981af7679aa12f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#adb2294b187599bf48a981af7679aa12f">field_0x1c</a></td></tr>
+<tr class="separator:adb2294b187599bf48a981af7679aa12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a682a48619725a655bfe865e767f0da9e" id="r_a682a48619725a655bfe865e767f0da9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a682a48619725a655bfe865e767f0da9e">field_0x20</a></td></tr>
+<tr class="separator:a682a48619725a655bfe865e767f0da9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad58c8986e8afdcefceae32d785ed1b37" id="r_ad58c8986e8afdcefceae32d785ed1b37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#ad58c8986e8afdcefceae32d785ed1b37">field_0x24</a></td></tr>
+<tr class="separator:ad58c8986e8afdcefceae32d785ed1b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45ce4b9be08d383cf3f99c6c0c37c6b7" id="r_a45ce4b9be08d383cf3f99c6c0c37c6b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a45ce4b9be08d383cf3f99c6c0c37c6b7">field_0x28</a></td></tr>
+<tr class="separator:a45ce4b9be08d383cf3f99c6c0c37c6b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacfc403f351981d93dae80894135f51c" id="r_aacfc403f351981d93dae80894135f51c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#aacfc403f351981d93dae80894135f51c">field_0x2c</a></td></tr>
+<tr class="separator:aacfc403f351981d93dae80894135f51c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61f910d14ca393da071a2fbf5ccea448" id="r_a61f910d14ca393da071a2fbf5ccea448"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a61f910d14ca393da071a2fbf5ccea448">field_0x30</a></td></tr>
+<tr class="separator:a61f910d14ca393da071a2fbf5ccea448"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affc123206277d23b743322c585df7997" id="r_affc123206277d23b743322c585df7997"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#affc123206277d23b743322c585df7997">field_0x34</a></td></tr>
+<tr class="separator:affc123206277d23b743322c585df7997"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a775437f5188ec3cf18f9c7ddda6f5566" id="r_a775437f5188ec3cf18f9c7ddda6f5566"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a775437f5188ec3cf18f9c7ddda6f5566">field_0x38</a></td></tr>
+<tr class="separator:a775437f5188ec3cf18f9c7ddda6f5566"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb797a3c3e61830687175e89901dd38b" id="r_adb797a3c3e61830687175e89901dd38b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#adb797a3c3e61830687175e89901dd38b">field_0x3c</a></td></tr>
+<tr class="separator:adb797a3c3e61830687175e89901dd38b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3faed7fa87c55d807ea784712507c5db" id="r_a3faed7fa87c55d807ea784712507c5db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a3faed7fa87c55d807ea784712507c5db">field_0x40</a></td></tr>
+<tr class="separator:a3faed7fa87c55d807ea784712507c5db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a163dcf7dd82c000ffc322f1595af872a" id="r_a163dcf7dd82c000ffc322f1595af872a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a163dcf7dd82c000ffc322f1595af872a">field_0x44</a></td></tr>
+<tr class="separator:a163dcf7dd82c000ffc322f1595af872a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6a666fab0edb37edffd7cc5c27e6fa2" id="r_aa6a666fab0edb37edffd7cc5c27e6fa2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#aa6a666fab0edb37edffd7cc5c27e6fa2">field_0x48</a></td></tr>
+<tr class="separator:aa6a666fab0edb37edffd7cc5c27e6fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b2ba98ae70eaa99324f1fa83284f846" id="r_a6b2ba98ae70eaa99324f1fa83284f846"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a6b2ba98ae70eaa99324f1fa83284f846">field_0x4a</a></td></tr>
+<tr class="separator:a6b2ba98ae70eaa99324f1fa83284f846"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abac2674ee2baa76da732f9376cf24d4a" id="r_abac2674ee2baa76da732f9376cf24d4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#abac2674ee2baa76da732f9376cf24d4a">field_0x4c</a></td></tr>
+<tr class="separator:abac2674ee2baa76da732f9376cf24d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60293d9c3c3d3ef36a9aeb8ab42d16eb" id="r_a60293d9c3c3d3ef36a9aeb8ab42d16eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a60293d9c3c3d3ef36a9aeb8ab42d16eb">field_0x4e</a></td></tr>
+<tr class="separator:a60293d9c3c3d3ef36a9aeb8ab42d16eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a821567eeb9f03536e187ddacf2a2bcf9" id="r_a821567eeb9f03536e187ddacf2a2bcf9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a821567eeb9f03536e187ddacf2a2bcf9">field_0x50</a></td></tr>
+<tr class="separator:a821567eeb9f03536e187ddacf2a2bcf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af79a7952b5fa02e2ba7a8b458e3c1af9" id="r_af79a7952b5fa02e2ba7a8b458e3c1af9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#af79a7952b5fa02e2ba7a8b458e3c1af9">field_0x54</a></td></tr>
+<tr class="separator:af79a7952b5fa02e2ba7a8b458e3c1af9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe6fd74ece662e7bb0704db9fbbb1772" id="r_abe6fd74ece662e7bb0704db9fbbb1772"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#abe6fd74ece662e7bb0704db9fbbb1772">field_0x58</a></td></tr>
+<tr class="separator:abe6fd74ece662e7bb0704db9fbbb1772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a776338b602ef4ed1cf1129af939c4f25" id="r_a776338b602ef4ed1cf1129af939c4f25"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a776338b602ef4ed1cf1129af939c4f25">field_0x5c</a></td></tr>
+<tr class="separator:a776338b602ef4ed1cf1129af939c4f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a478ab1a81f6bf036147298e4a04e54cf" id="r_a478ab1a81f6bf036147298e4a04e54cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a478ab1a81f6bf036147298e4a04e54cf">field_0x60</a></td></tr>
+<tr class="separator:a478ab1a81f6bf036147298e4a04e54cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae134ec6091613d91c4ac7e4c6c3df9fc" id="r_ae134ec6091613d91c4ac7e4c6c3df9fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#ae134ec6091613d91c4ac7e4c6c3df9fc">field_0x62</a></td></tr>
+<tr class="separator:ae134ec6091613d91c4ac7e4c6c3df9fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac37f39e3feb7e3b2c06eb2758343f130" id="r_ac37f39e3feb7e3b2c06eb2758343f130"><td class="memItemLeft" align="right" valign="top"><a class="el" href="c__lib_8h.html#a78569d8e1e6f0b9b721c63e167ad2735">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#ac37f39e3feb7e3b2c06eb2758343f130">field_0x64</a></td></tr>
+<tr class="separator:ac37f39e3feb7e3b2c06eb2758343f130"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69b4d10214df0136daf1a1abaabf60f9" id="r_a69b4d10214df0136daf1a1abaabf60f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="c__lib_8h.html#a78569d8e1e6f0b9b721c63e167ad2735">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a69b4d10214df0136daf1a1abaabf60f9">field_0x68</a></td></tr>
+<tr class="separator:a69b4d10214df0136daf1a1abaabf60f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2715895d69d8a57592a06078f7b5157e" id="r_a2715895d69d8a57592a06078f7b5157e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a2715895d69d8a57592a06078f7b5157e">field_0x6c</a></td></tr>
+<tr class="separator:a2715895d69d8a57592a06078f7b5157e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cfd2c9c36a3fdfe79934e3aba644450" id="r_a4cfd2c9c36a3fdfe79934e3aba644450"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a4cfd2c9c36a3fdfe79934e3aba644450">field_0x70</a></td></tr>
+<tr class="separator:a4cfd2c9c36a3fdfe79934e3aba644450"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14d9cd8a6e01bfad4cd0ad05809e839b" id="r_a14d9cd8a6e01bfad4cd0ad05809e839b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a14d9cd8a6e01bfad4cd0ad05809e839b">field_0x74</a></td></tr>
+<tr class="separator:a14d9cd8a6e01bfad4cd0ad05809e839b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af439a2101d9415f6f1d66b78fdec1173" id="r_af439a2101d9415f6f1d66b78fdec1173"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#af439a2101d9415f6f1d66b78fdec1173">field_0x78</a></td></tr>
+<tr class="separator:af439a2101d9415f6f1d66b78fdec1173"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a579697ec63eb68e53e72a6bdfab916d2" id="r_a579697ec63eb68e53e72a6bdfab916d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a579697ec63eb68e53e72a6bdfab916d2">field_0x7c</a></td></tr>
+<tr class="separator:a579697ec63eb68e53e72a6bdfab916d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad741950c8c7227c43d69031513f2379c" id="r_ad741950c8c7227c43d69031513f2379c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#ad741950c8c7227c43d69031513f2379c">field_0x80</a></td></tr>
+<tr class="separator:ad741950c8c7227c43d69031513f2379c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8270fa546a779a7811dbb53037763e5c" id="r_a8270fa546a779a7811dbb53037763e5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a8270fa546a779a7811dbb53037763e5c">field_0x84</a></td></tr>
+<tr class="separator:a8270fa546a779a7811dbb53037763e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66bc9f8242aae2db266e26beb7fd83df" id="r_a66bc9f8242aae2db266e26beb7fd83df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a66bc9f8242aae2db266e26beb7fd83df">field_0x88</a></td></tr>
+<tr class="separator:a66bc9f8242aae2db266e26beb7fd83df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74b922072148454bf541951854d7b14f" id="r_a74b922072148454bf541951854d7b14f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a74b922072148454bf541951854d7b14f">field_0x8c</a></td></tr>
+<tr class="separator:a74b922072148454bf541951854d7b14f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f8e34b92c26809a67e76bbf2963f0ed" id="r_a8f8e34b92c26809a67e76bbf2963f0ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a8f8e34b92c26809a67e76bbf2963f0ed">field_0x90</a></td></tr>
+<tr class="separator:a8f8e34b92c26809a67e76bbf2963f0ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9a0d8b6bfc66b7c32a9b776184a3dc0" id="r_aa9a0d8b6bfc66b7c32a9b776184a3dc0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#aa9a0d8b6bfc66b7c32a9b776184a3dc0">field_0x94</a></td></tr>
+<tr class="separator:aa9a0d8b6bfc66b7c32a9b776184a3dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50beafa960c04ba3b8b5f4d1f5a5859d" id="r_a50beafa960c04ba3b8b5f4d1f5a5859d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a50beafa960c04ba3b8b5f4d1f5a5859d">field_0x98</a></td></tr>
+<tr class="separator:a50beafa960c04ba3b8b5f4d1f5a5859d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ccedd8cf0a2fbafeb718b0c13c3fb7e" id="r_a3ccedd8cf0a2fbafeb718b0c13c3fb7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a3ccedd8cf0a2fbafeb718b0c13c3fb7e">field_0x9c</a></td></tr>
+<tr class="separator:a3ccedd8cf0a2fbafeb718b0c13c3fb7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72e758117fe17590e0a18a6b82c59efa" id="r_a72e758117fe17590e0a18a6b82c59efa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a72e758117fe17590e0a18a6b82c59efa">field_0xa0</a></td></tr>
+<tr class="separator:a72e758117fe17590e0a18a6b82c59efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff0ea8077f1210ceb644d049044c109e" id="r_aff0ea8077f1210ceb644d049044c109e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#aff0ea8077f1210ceb644d049044c109e">field_0xa4</a></td></tr>
+<tr class="separator:aff0ea8077f1210ceb644d049044c109e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04050387c554d5a8c582560febb0a14c" id="r_a04050387c554d5a8c582560febb0a14c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a04050387c554d5a8c582560febb0a14c">field_0xa8</a></td></tr>
+<tr class="separator:a04050387c554d5a8c582560febb0a14c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94de1dbfd4c81c05c11256df832a6dc3" id="r_a94de1dbfd4c81c05c11256df832a6dc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a94de1dbfd4c81c05c11256df832a6dc3">field_0xac</a></td></tr>
+<tr class="separator:a94de1dbfd4c81c05c11256df832a6dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6330663136c1524f7e8b9e78a0352d25" id="r_a6330663136c1524f7e8b9e78a0352d25"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a6330663136c1524f7e8b9e78a0352d25">field_0xae</a></td></tr>
+<tr class="separator:a6330663136c1524f7e8b9e78a0352d25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c834d1dbedd8b8fc795d4662b682472" id="r_a1c834d1dbedd8b8fc795d4662b682472"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#a1c834d1dbedd8b8fc795d4662b682472">field_0xb0</a></td></tr>
+<tr class="separator:a1c834d1dbedd8b8fc795d4662b682472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7e42426d2b2e10a6d7b16f7ba5c8b17" id="r_aa7e42426d2b2e10a6d7b16f7ba5c8b17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html#aa7e42426d2b2e10a6d7b16f7ba5c8b17">field_0xb2</a></td></tr>
+<tr class="separator:aa7e42426d2b2e10a6d7b16f7ba5c8b17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a7dab8645f8498486d2c16c5341ac99a9" name="a7dab8645f8498486d2c16c5341ac99a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dab8645f8498486d2c16c5341ac99a9">&#9670;&#160;</a></span>field_0x00</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a742d4e5bdf3d08c23bd2b5c58215b141" name="a742d4e5bdf3d08c23bd2b5c58215b141"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a742d4e5bdf3d08c23bd2b5c58215b141">&#9670;&#160;</a></span>field_0x04</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x04</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66e40c507d78a4c383d294dbf891cd07" name="a66e40c507d78a4c383d294dbf891cd07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66e40c507d78a4c383d294dbf891cd07">&#9670;&#160;</a></span>field_0x08</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x08</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35736b46c010499211183aa07580b234" name="a35736b46c010499211183aa07580b234"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35736b46c010499211183aa07580b234">&#9670;&#160;</a></span>field_0x0c</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x0c</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a31917e7eeaf294df1438c0da7c6e2aa4" name="a31917e7eeaf294df1438c0da7c6e2aa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31917e7eeaf294df1438c0da7c6e2aa4">&#9670;&#160;</a></span>field_0x10</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0e58ba0d6ed4678abfe185d59761920" name="ac0e58ba0d6ed4678abfe185d59761920"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0e58ba0d6ed4678abfe185d59761920">&#9670;&#160;</a></span>field_0x14</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x14</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ed00f7798db2f607a8f687428780d3d" name="a7ed00f7798db2f607a8f687428780d3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ed00f7798db2f607a8f687428780d3d">&#9670;&#160;</a></span>field_0x18</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x18</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb2294b187599bf48a981af7679aa12f" name="adb2294b187599bf48a981af7679aa12f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb2294b187599bf48a981af7679aa12f">&#9670;&#160;</a></span>field_0x1c</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x1c</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a682a48619725a655bfe865e767f0da9e" name="a682a48619725a655bfe865e767f0da9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a682a48619725a655bfe865e767f0da9e">&#9670;&#160;</a></span>field_0x20</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad58c8986e8afdcefceae32d785ed1b37" name="ad58c8986e8afdcefceae32d785ed1b37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad58c8986e8afdcefceae32d785ed1b37">&#9670;&#160;</a></span>field_0x24</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x24</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a45ce4b9be08d383cf3f99c6c0c37c6b7" name="a45ce4b9be08d383cf3f99c6c0c37c6b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45ce4b9be08d383cf3f99c6c0c37c6b7">&#9670;&#160;</a></span>field_0x28</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x28</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aacfc403f351981d93dae80894135f51c" name="aacfc403f351981d93dae80894135f51c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacfc403f351981d93dae80894135f51c">&#9670;&#160;</a></span>field_0x2c</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x2c</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a61f910d14ca393da071a2fbf5ccea448" name="a61f910d14ca393da071a2fbf5ccea448"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61f910d14ca393da071a2fbf5ccea448">&#9670;&#160;</a></span>field_0x30</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x30</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="affc123206277d23b743322c585df7997" name="affc123206277d23b743322c585df7997"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affc123206277d23b743322c585df7997">&#9670;&#160;</a></span>field_0x34</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x34</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a775437f5188ec3cf18f9c7ddda6f5566" name="a775437f5188ec3cf18f9c7ddda6f5566"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a775437f5188ec3cf18f9c7ddda6f5566">&#9670;&#160;</a></span>field_0x38</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x38</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb797a3c3e61830687175e89901dd38b" name="adb797a3c3e61830687175e89901dd38b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb797a3c3e61830687175e89901dd38b">&#9670;&#160;</a></span>field_0x3c</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x3c</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3faed7fa87c55d807ea784712507c5db" name="a3faed7fa87c55d807ea784712507c5db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3faed7fa87c55d807ea784712507c5db">&#9670;&#160;</a></span>field_0x40</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x40</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a163dcf7dd82c000ffc322f1595af872a" name="a163dcf7dd82c000ffc322f1595af872a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a163dcf7dd82c000ffc322f1595af872a">&#9670;&#160;</a></span>field_0x44</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x44</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa6a666fab0edb37edffd7cc5c27e6fa2" name="aa6a666fab0edb37edffd7cc5c27e6fa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6a666fab0edb37edffd7cc5c27e6fa2">&#9670;&#160;</a></span>field_0x48</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> daNpc_Hanjo_Param_c::Data::field_0x48</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6b2ba98ae70eaa99324f1fa83284f846" name="a6b2ba98ae70eaa99324f1fa83284f846"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b2ba98ae70eaa99324f1fa83284f846">&#9670;&#160;</a></span>field_0x4a</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> daNpc_Hanjo_Param_c::Data::field_0x4a</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abac2674ee2baa76da732f9376cf24d4a" name="abac2674ee2baa76da732f9376cf24d4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abac2674ee2baa76da732f9376cf24d4a">&#9670;&#160;</a></span>field_0x4c</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> daNpc_Hanjo_Param_c::Data::field_0x4c</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60293d9c3c3d3ef36a9aeb8ab42d16eb" name="a60293d9c3c3d3ef36a9aeb8ab42d16eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60293d9c3c3d3ef36a9aeb8ab42d16eb">&#9670;&#160;</a></span>field_0x4e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> daNpc_Hanjo_Param_c::Data::field_0x4e</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a821567eeb9f03536e187ddacf2a2bcf9" name="a821567eeb9f03536e187ddacf2a2bcf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a821567eeb9f03536e187ddacf2a2bcf9">&#9670;&#160;</a></span>field_0x50</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x50</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af79a7952b5fa02e2ba7a8b458e3c1af9" name="af79a7952b5fa02e2ba7a8b458e3c1af9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af79a7952b5fa02e2ba7a8b458e3c1af9">&#9670;&#160;</a></span>field_0x54</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x54</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe6fd74ece662e7bb0704db9fbbb1772" name="abe6fd74ece662e7bb0704db9fbbb1772"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe6fd74ece662e7bb0704db9fbbb1772">&#9670;&#160;</a></span>field_0x58</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x58</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a776338b602ef4ed1cf1129af939c4f25" name="a776338b602ef4ed1cf1129af939c4f25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a776338b602ef4ed1cf1129af939c4f25">&#9670;&#160;</a></span>field_0x5c</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x5c</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a478ab1a81f6bf036147298e4a04e54cf" name="a478ab1a81f6bf036147298e4a04e54cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a478ab1a81f6bf036147298e4a04e54cf">&#9670;&#160;</a></span>field_0x60</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> daNpc_Hanjo_Param_c::Data::field_0x60</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae134ec6091613d91c4ac7e4c6c3df9fc" name="ae134ec6091613d91c4ac7e4c6c3df9fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae134ec6091613d91c4ac7e4c6c3df9fc">&#9670;&#160;</a></span>field_0x62</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> daNpc_Hanjo_Param_c::Data::field_0x62</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac37f39e3feb7e3b2c06eb2758343f130" name="ac37f39e3feb7e3b2c06eb2758343f130"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac37f39e3feb7e3b2c06eb2758343f130">&#9670;&#160;</a></span>field_0x64</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="c__lib_8h.html#a78569d8e1e6f0b9b721c63e167ad2735">int</a> daNpc_Hanjo_Param_c::Data::field_0x64</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a69b4d10214df0136daf1a1abaabf60f9" name="a69b4d10214df0136daf1a1abaabf60f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69b4d10214df0136daf1a1abaabf60f9">&#9670;&#160;</a></span>field_0x68</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="c__lib_8h.html#a78569d8e1e6f0b9b721c63e167ad2735">int</a> daNpc_Hanjo_Param_c::Data::field_0x68</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2715895d69d8a57592a06078f7b5157e" name="a2715895d69d8a57592a06078f7b5157e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2715895d69d8a57592a06078f7b5157e">&#9670;&#160;</a></span>field_0x6c</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x6c</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4cfd2c9c36a3fdfe79934e3aba644450" name="a4cfd2c9c36a3fdfe79934e3aba644450"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cfd2c9c36a3fdfe79934e3aba644450">&#9670;&#160;</a></span>field_0x70</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x70</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a14d9cd8a6e01bfad4cd0ad05809e839b" name="a14d9cd8a6e01bfad4cd0ad05809e839b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14d9cd8a6e01bfad4cd0ad05809e839b">&#9670;&#160;</a></span>field_0x74</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x74</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af439a2101d9415f6f1d66b78fdec1173" name="af439a2101d9415f6f1d66b78fdec1173"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af439a2101d9415f6f1d66b78fdec1173">&#9670;&#160;</a></span>field_0x78</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x78</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a579697ec63eb68e53e72a6bdfab916d2" name="a579697ec63eb68e53e72a6bdfab916d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a579697ec63eb68e53e72a6bdfab916d2">&#9670;&#160;</a></span>field_0x7c</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x7c</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad741950c8c7227c43d69031513f2379c" name="ad741950c8c7227c43d69031513f2379c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad741950c8c7227c43d69031513f2379c">&#9670;&#160;</a></span>field_0x80</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x80</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8270fa546a779a7811dbb53037763e5c" name="a8270fa546a779a7811dbb53037763e5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8270fa546a779a7811dbb53037763e5c">&#9670;&#160;</a></span>field_0x84</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x84</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66bc9f8242aae2db266e26beb7fd83df" name="a66bc9f8242aae2db266e26beb7fd83df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66bc9f8242aae2db266e26beb7fd83df">&#9670;&#160;</a></span>field_0x88</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x88</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a74b922072148454bf541951854d7b14f" name="a74b922072148454bf541951854d7b14f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74b922072148454bf541951854d7b14f">&#9670;&#160;</a></span>field_0x8c</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x8c</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f8e34b92c26809a67e76bbf2963f0ed" name="a8f8e34b92c26809a67e76bbf2963f0ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f8e34b92c26809a67e76bbf2963f0ed">&#9670;&#160;</a></span>field_0x90</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x90</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa9a0d8b6bfc66b7c32a9b776184a3dc0" name="aa9a0d8b6bfc66b7c32a9b776184a3dc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9a0d8b6bfc66b7c32a9b776184a3dc0">&#9670;&#160;</a></span>field_0x94</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x94</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a50beafa960c04ba3b8b5f4d1f5a5859d" name="a50beafa960c04ba3b8b5f4d1f5a5859d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50beafa960c04ba3b8b5f4d1f5a5859d">&#9670;&#160;</a></span>field_0x98</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x98</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3ccedd8cf0a2fbafeb718b0c13c3fb7e" name="a3ccedd8cf0a2fbafeb718b0c13c3fb7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ccedd8cf0a2fbafeb718b0c13c3fb7e">&#9670;&#160;</a></span>field_0x9c</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0x9c</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a72e758117fe17590e0a18a6b82c59efa" name="a72e758117fe17590e0a18a6b82c59efa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72e758117fe17590e0a18a6b82c59efa">&#9670;&#160;</a></span>field_0xa0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0xa0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff0ea8077f1210ceb644d049044c109e" name="aff0ea8077f1210ceb644d049044c109e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff0ea8077f1210ceb644d049044c109e">&#9670;&#160;</a></span>field_0xa4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0xa4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a04050387c554d5a8c582560febb0a14c" name="a04050387c554d5a8c582560febb0a14c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04050387c554d5a8c582560febb0a14c">&#9670;&#160;</a></span>field_0xa8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> daNpc_Hanjo_Param_c::Data::field_0xa8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a94de1dbfd4c81c05c11256df832a6dc3" name="a94de1dbfd4c81c05c11256df832a6dc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94de1dbfd4c81c05c11256df832a6dc3">&#9670;&#160;</a></span>field_0xac</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> daNpc_Hanjo_Param_c::Data::field_0xac</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6330663136c1524f7e8b9e78a0352d25" name="a6330663136c1524f7e8b9e78a0352d25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6330663136c1524f7e8b9e78a0352d25">&#9670;&#160;</a></span>field_0xae</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> daNpc_Hanjo_Param_c::Data::field_0xae</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c834d1dbedd8b8fc795d4662b682472" name="a1c834d1dbedd8b8fc795d4662b682472"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c834d1dbedd8b8fc795d4662b682472">&#9670;&#160;</a></span>field_0xb0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> daNpc_Hanjo_Param_c::Data::field_0xb0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa7e42426d2b2e10a6d7b16f7ba5c8b17" name="aa7e42426d2b2e10a6d7b16f7ba5c8b17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7e42426d2b2e10a6d7b16f7ba5c8b17">&#9670;&#160;</a></span>field_0xb2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> daNpc_Hanjo_Param_c::Data::field_0xb2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>include/d/actor/<a class="el" href="d__a__npc__hanjo_8h_source.html">d_a_npc_hanjo.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classdaNpc__Hanjo__Param__c.html">daNpc_Hanjo_Param_c</a></li><li class="navelem"><a class="el" href="structdaNpc__Hanjo__Param__c_1_1Data.html">Data</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -29,7 +29,7 @@ var classdaNpc__myna2__c =
     [ "setExpressionBtp", "classdaNpc__myna2__c.html#ad6ecf1022a01486252d1bbd59757f396", null ],
     [ "setLookMode", "classdaNpc__myna2__c.html#a1dae7677c1f8b5fcb80a5091337d59a3", null ],
     [ "setMotion", "classdaNpc__myna2__c.html#a4ce74cc8f257304ee37233c7a6d70094", null ],
-    [ "setMotionAnm", "classdaNpc__myna2__c.html#a9f686fa01472ed22fc2bc4c1f1421ac7", null ],
+    [ "setMotionAnm", "classdaNpc__myna2__c.html#a6867d56a4b21e6a401b5b5dfda42ba1f", null ],
     [ "setParam", "classdaNpc__myna2__c.html#a5c76d179093d1bd122ffb14f77103c3f", null ],
     [ "talk", "classdaNpc__myna2__c.html#ad0af0e9806bae17b5f4f79f59274dd45", null ],
     [ "test", "classdaNpc__myna2__c.html#a442c0370f212f0527406248a95b3fa0f", null ],

@@ -9,6 +9,7 @@ var structmDoExt__morf__c =
     [ "getEndFrame", "structmDoExt__morf__c.html#adf0d76287dde967ab2a1c94e6c28b3d7", null ],
     [ "getFrame", "structmDoExt__morf__c.html#a2295a0cd3fd69e7e42533f85b98d8bf6", null ],
     [ "getLoopFrame", "structmDoExt__morf__c.html#a53a24d18d85ceea370d85a35f19b27f4", null ],
+    [ "getMorfRatio", "structmDoExt__morf__c.html#a9307d4a34b717c358389d83a3c8204db", null ],
     [ "getPlayMode", "structmDoExt__morf__c.html#ab04a011733b77692452b9636d6b63ca5", null ],
     [ "getPlaySpeed", "structmDoExt__morf__c.html#a15bc450996b56845bee380a111f361f3", null ],
     [ "getStartFrame", "structmDoExt__morf__c.html#aa915905d9cf42628f3539878e059829b", null ],

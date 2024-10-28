@@ -1,6 +1,8 @@
 var structdaNpcT__Path__c =
 [
     [ "~daNpcT_Path_c", "structdaNpcT__Path__c.html#a05c4d075886fc5a2c55490198c169ea1", null ],
+    [ "daNpcT_Path_c", "structdaNpcT__Path__c.html#ad615d22c506ff79c448c69257af7289c", null ],
+    [ "~daNpcT_Path_c", "structdaNpcT__Path__c.html#a5c1f8eb89f1fab5eb3ed8634da518f87", null ],
     [ "chkClose", "structdaNpcT__Path__c.html#a26c5c8d3c381178f4598481e23b3c5c3", null ],
     [ "chkPassed1", "structdaNpcT__Path__c.html#adbf71b04ea0f104538f33328cb780bb6", null ],
     [ "chkPassed2", "structdaNpcT__Path__c.html#a595dfe30d25a4fdabe924cf9fd9532a4", null ],

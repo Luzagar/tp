@@ -1,6 +1,6 @@
 var structdCamera__c_1_1dCamera__pad__info_1_1__stick =
 [
-    [ "field_0x18", "structdCamera__c_1_1dCamera__pad__info_1_1__stick.html#a529a46776185142af55fed06ff3414be", null ],
+    [ "mAngle", "structdCamera__c_1_1dCamera__pad__info_1_1__stick.html#a937aa1273cee13adb9518a6fe2dfeea2", null ],
     [ "mLastPosX", "structdCamera__c_1_1dCamera__pad__info_1_1__stick.html#ac8d2b54aecc70e886469dc0c3ba75eae", null ],
     [ "mLastPosY", "structdCamera__c_1_1dCamera__pad__info_1_1__stick.html#a7edb3342de4f24d4b1b78a0beab6bfcf", null ],
     [ "mLastValue", "structdCamera__c_1_1dCamera__pad__info_1_1__stick.html#a512c6e4bdd3bcd22aa657e84a3693e4b", null ],

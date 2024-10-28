@@ -1,11 +1,18 @@
 var structcBgS__LinChk =
 [
+    [ "Status", "structcBgS__LinChk.html#af32db97216257514c93e95e3e4adba00", [
+      [ "STTS_HIT", "structcBgS__LinChk.html#af32db97216257514c93e95e3e4adba00adb5220ab0feda179416bccfdd85a3a31", null ],
+      [ "STTS_ROOF_OFF", "structcBgS__LinChk.html#af32db97216257514c93e95e3e4adba00a4252c01733c11b1cce660465886c5d04", null ],
+      [ "STTS_WALL_OFF", "structcBgS__LinChk.html#af32db97216257514c93e95e3e4adba00a24a0db372e90d43ffb240e118f4d5e7d", null ],
+      [ "STTS_GROUND_OFF", "structcBgS__LinChk.html#af32db97216257514c93e95e3e4adba00ae7bb891baa57b6897ee56fb2cbf44c26", null ]
+    ] ],
     [ "cBgS_LinChk", "structcBgS__LinChk.html#a1ef82ba8441f036d1a90cbe7932fb2a1", null ],
     [ "~cBgS_LinChk", "structcBgS__LinChk.html#a6a6122697f23707fdf7776814298bf13", null ],
     [ "ChkBackFlag", "structcBgS__LinChk.html#a2cb3cf7e62e14bc701ae1e76ae46775f", null ],
     [ "ChkFrontFlag", "structcBgS__LinChk.html#aeb682eccca3e0ca4b30bc956af047827", null ],
     [ "ChkHit", "structcBgS__LinChk.html#a9941e0f4bc4740924c60e8c600f3c4cc", null ],
     [ "ClrHit", "structcBgS__LinChk.html#a18fcc32e26916102e697c1c1c0d69422", null ],
+    [ "ClrSttsGroundOff", "structcBgS__LinChk.html#aae49e5dc2ce4c7d80f156130e923fc38", null ],
     [ "ClrSttsRoofOff", "structcBgS__LinChk.html#a8d9b21c049867673ea8072f513370a12", null ],
     [ "ClrSttsWallOff", "structcBgS__LinChk.html#ad5858ccdd012863199e5c3c300d739a9", null ],
     [ "ct", "structcBgS__LinChk.html#a52c42b7e51bd38fd449834d8688fdcf3", null ],
@@ -23,12 +30,15 @@ var structcBgS__LinChk =
     [ "Set2", "structcBgS__LinChk.html#af329675707780d0d2415e8ee6fdd3ca7", null ],
     [ "SetCross", "structcBgS__LinChk.html#ad33f6cb3c13cfba9ee13c212f65aa8a5", null ],
     [ "SetHit", "structcBgS__LinChk.html#a025a8e0919701f0c13f392ab8dcf1991", null ],
+    [ "SetSttsGroundOff", "structcBgS__LinChk.html#a5c3365b60c990fe5725bec05cfc1cb80", null ],
+    [ "SetSttsRoofOff", "structcBgS__LinChk.html#a2ded96687a1763a9245864801d81a25e", null ],
+    [ "SetSttsWallOff", "structcBgS__LinChk.html#a150d996331cef8b25b6daf35a8330e29", null ],
     [ "field_0x40", "structcBgS__LinChk.html#a2e8d58dba39ba427e9f34d36ea9e1f0b", null ],
-    [ "field_0x4c", "structcBgS__LinChk.html#a9c3ce317abbcc2129c4394fbf1dc3de9", null ],
     [ "mBackFlag", "structcBgS__LinChk.html#ac1f52637e3c540c6076093057d26fa35", null ],
     [ "mFrontFlag", "structcBgS__LinChk.html#a9a23d964510fe73530b1c02398b60430", null ],
     [ "mLin", "structcBgS__LinChk.html#a17bf45857d79b23b310f799b37bddf0e", null ],
     [ "mPreGroundChk", "structcBgS__LinChk.html#a72622eedfa6cf7cedff5ad8a4847995d", null ],
     [ "mPreRoofChk", "structcBgS__LinChk.html#a4a0a1bddd3308624117f48de8999ce98", null ],
-    [ "mPreWallChk", "structcBgS__LinChk.html#a8507271d95bdcad24180e50bf7c2fece", null ]
+    [ "mPreWallChk", "structcBgS__LinChk.html#a8507271d95bdcad24180e50bf7c2fece", null ],
+    [ "mStts", "structcBgS__LinChk.html#abb79d1f683ae8dfbbedf8996ee935fd6", null ]
 ];

@@ -1,5 +1,6 @@
 var structdaNpcT__MatAnm__c =
 [
+    [ "daNpcT_MatAnm_c", "structdaNpcT__MatAnm__c.html#a4d09a0d0493359a46d82d5327ef97040", null ],
     [ "~daNpcT_MatAnm_c", "structdaNpcT__MatAnm__c.html#ae3a7cd44f817cc4783946717a2e10038", null ],
     [ "calc", "structdaNpcT__MatAnm__c.html#a64dd9f644567c015de1ba6a1a9923f24", null ],
     [ "initialize", "structdaNpcT__MatAnm__c.html#a1c58dbc730ebb952784b80afe7d568de", null ],

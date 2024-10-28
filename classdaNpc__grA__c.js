@@ -57,7 +57,7 @@ var classdaNpc__grA__c =
     [ "setHomeJump", "classdaNpc__grA__c.html#ac0d78f08f332b7b030a18c0a2e374560", null ],
     [ "setLookMode", "classdaNpc__grA__c.html#a570cbc818e46d81a53f5cb55a8f1c68e", null ],
     [ "setMotion", "classdaNpc__grA__c.html#a715af3262ed99b66350118b557f44a45", null ],
-    [ "setMotionAnm", "classdaNpc__grA__c.html#a4752582331e521c3436dc00c7e3b9981", null ],
+    [ "setMotionAnm", "classdaNpc__grA__c.html#a1297319e5a4903929db4e6f4ef061480", null ],
     [ "setOtherObjMtx", "classdaNpc__grA__c.html#a0cce0842f0b110575b7e6acdd961fd88", null ],
     [ "setParam", "classdaNpc__grA__c.html#a96374a2e91c1f1ad822778f716aff222", null ],
     [ "setPrtcl", "classdaNpc__grA__c.html#a4f96d47b0f66e61f219e64284f18f5bb", null ],

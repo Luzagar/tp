@@ -31,7 +31,7 @@ var classdaNpcMoiR__c =
     [ "setExpressionAnm", "classdaNpcMoiR__c.html#ab27214b796e2c162f1da68156aeb15ca", null ],
     [ "setExpressionBtp", "classdaNpcMoiR__c.html#a32699edd8221f88ee3a2e9a88da2f933", null ],
     [ "setMotion", "classdaNpcMoiR__c.html#a91446ee3987f4ecfaf30ed1ea0949caa", null ],
-    [ "setMotionAnm", "classdaNpcMoiR__c.html#ad6ab70afbe6a10998acf5e6721856dfb", null ],
+    [ "setMotionAnm", "classdaNpcMoiR__c.html#a62ef18b8de1f232fbf13329307950782", null ],
     [ "setParam", "classdaNpcMoiR__c.html#a0b5cfd06aab8d89207391a7abde49cbb", null ],
     [ "setWaitAction", "classdaNpcMoiR__c.html#afb6df4ca2fdcb595b9ca2019923ed095", null ],
     [ "talk", "classdaNpcMoiR__c.html#aee7f4263267733fe486c8a871b3164be", null ],

@@ -73,6 +73,7 @@ var hierarchy =
     [ "CallbackArgs", "structCallbackArgs.html", null ],
     [ "CallbackObject", "structCallbackObject.html", null ],
     [ "camera_process_profile_definition", "structcamera__process__profile__definition.html", null ],
+    [ "camSphChkdata", "structcamSphChkdata.html", null ],
     [ "cAngle", "structcAngle.html", null ],
     [ "cAPI_Interface", "structcAPI__Interface.html", null ],
     [ "CARDControl", "structCARDControl.html", null ],
@@ -134,7 +135,9 @@ var hierarchy =
         [ "dBgS_LinkRoofChk", "classdBgS__LinkRoofChk.html", null ],
         [ "dBgS_ObjRoofChk", "classdBgS__ObjRoofChk.html", null ]
       ] ],
-      [ "dBgS_SphChk", "classdBgS__SphChk.html", null ],
+      [ "dBgS_SphChk", "classdBgS__SphChk.html", [
+        [ "dBgS_CamSphChk", "classdBgS__CamSphChk.html", null ]
+      ] ],
       [ "dBgS_SplGrpChk", "classdBgS__SplGrpChk.html", [
         [ "dBgS_WtrChk", "classdBgS__WtrChk.html", null ]
       ] ]
@@ -294,6 +297,7 @@ var hierarchy =
     [ "daAlink_AnmData", "structdaAlink__AnmData.html", null ],
     [ "daAlink_BckData", "structdaAlink__BckData.html", null ],
     [ "daAlink_c::firePointEff_c", "classdaAlink__c_1_1firePointEff__c.html", null ],
+    [ "daAlink_cutHorseParamTbl", "structdaAlink__cutHorseParamTbl.html", null ],
     [ "daAlink_cutParamTbl", "structdaAlink__cutParamTbl.html", null ],
     [ "daAlink_FaceTexData", "structdaAlink__FaceTexData.html", null ],
     [ "daAlink_footData_c", "classdaAlink__footData__c.html", null ],
@@ -701,6 +705,7 @@ var hierarchy =
     [ "daNpc_Grz_Param_c", "classdaNpc__Grz__Param__c.html", null ],
     [ "daNpc_GWolf_Param_c", "classdaNpc__GWolf__Param__c.html", null ],
     [ "daNpc_Hanjo_Param_c", "classdaNpc__Hanjo__Param__c.html", null ],
+    [ "daNpc_Hanjo_Param_c::Data", "structdaNpc__Hanjo__Param__c_1_1Data.html", null ],
     [ "daNpc_HanjoStone_c", "classdaNpc__HanjoStone__c.html", null ],
     [ "daNpc_Henna_HIO_c", "classdaNpc__Henna__HIO__c.html", null ],
     [ "daNpc_Hoz_Param_c", "structdaNpc__Hoz__Param__c.html", null ],
@@ -970,7 +975,6 @@ var hierarchy =
     [ "DBCommTable", "structDBCommTable.html", null ],
     [ "dBgPc", "classdBgPc.html", null ],
     [ "dBgPlc", "classdBgPlc.html", null ],
-    [ "dBgS_CamSphChk", "structdBgS__CamSphChk.html", null ],
     [ "dBgS_HorseAcch", "classdBgS__HorseAcch.html", null ],
     [ "DBInterface", "structDBInterface.html", null ],
     [ "dBrightCheck_c", "classdBrightCheck__c.html", null ],
@@ -1378,8 +1382,8 @@ var hierarchy =
       [ "dStage_nextStage_c", "classdStage__nextStage__c.html", null ]
     ] ],
     [ "dSv_danBit_c", "classdSv__danBit__c.html", null ],
-    [ "dSv_event_c", "structdSv__event__c.html", null ],
-    [ "dSv_event_flag_c", "structdSv__event__flag__c.html", null ],
+    [ "dSv_event_c", "classdSv__event__c.html", null ],
+    [ "dSv_event_flag_c", "classdSv__event__flag__c.html", null ],
     [ "dSv_event_tmp_flag_c", "classdSv__event__tmp__flag__c.html", null ],
     [ "dSv_fishing_info_c", "classdSv__fishing__info__c.html", null ],
     [ "dSv_horse_place_c", "classdSv__horse__place__c.html", null ],
@@ -1938,6 +1942,7 @@ var hierarchy =
     [ "JAISeq::TInner", "classJAISeq_1_1TInner.html", null ],
     [ "JAISeqData", "structJAISeqData.html", null ],
     [ "JAISeqDataMgr", "structJAISeqDataMgr.html", [
+      [ "JAUSectionHeap", "classJAUSectionHeap.html", null ],
       [ "JAUSeqDataMgr_SeqCollection", "classJAUSeqDataMgr__SeqCollection.html", null ]
     ] ],
     [ "JAISeqDataRegion", "structJAISeqDataRegion.html", null ],
@@ -1954,7 +1959,6 @@ var hierarchy =
     [ "JAISoundActivity", "classJAISoundActivity.html", [
       [ "JAISeMgr", "classJAISeMgr.html", null ]
     ] ],
-    [ "JAISoundChild", "structJAISoundChild.html", null ],
     [ "JAISoundFader", "structJAISoundFader.html", null ],
     [ "JAISoundHandle", "classJAISoundHandle.html", [
       [ "Z2SoundHandlePool", "classZ2SoundHandlePool.html", null ]
@@ -1995,22 +1999,32 @@ var hierarchy =
     [ "JASAramStream::Header", "structJASAramStream_1_1Header.html", null ],
     [ "JASAramStream::TaskData", "structJASAramStream_1_1TaskData.html", null ],
     [ "JASAudioReseter", "structJASAudioReseter.html", null ],
-    [ "JASBank", "structJASBank.html", [
+    [ "JASBank", "classJASBank.html", [
+      [ "JASBasicBank", "classJASBasicBank.html", null ],
       [ "JASVoiceBank", "classJASVoiceBank.html", null ]
     ] ],
     [ "JASBankList", "classJASBankList.html", [
       [ "JASBankTable< 256 >", "classJASBankTable.html", [
         [ "JASDefaultBankTable", "classJASDefaultBankTable.html", null ]
       ] ],
-      [ "JASBankTable< N >", "classJASBankTable.html", null ]
+      [ "JASBankTable< N >", "classJASBankTable.html", null ],
+      [ "JAUBankTable", "classJAUBankTable.html", [
+        [ "JAUBankTableLink", "classJAUBankTableLink.html", null ]
+      ] ]
     ] ],
     [ "JASBankTable__template0", "structJASBankTable____template0.html", null ],
-    [ "JASBasicBank", "structJASBasicBank.html", null ],
     [ "JASBasicInst::TKeymap", "structJASBasicInst_1_1TKeymap.html", null ],
     [ "JASBasicWaveBank::TGroupWaveInfo", "structJASBasicWaveBank_1_1TGroupWaveInfo.html", null ],
-    [ "JASBasicWaveBank::TWaveGroup", "structJASBasicWaveBank_1_1TWaveGroup.html", null ],
+    [ "JASBNKParser::TFileHeader", "structJASBNKParser_1_1TFileHeader.html", null ],
     [ "JASBNKParser::Ver0::THeader", "structJASBNKParser_1_1Ver0_1_1THeader.html", null ],
     [ "JASBNKParser::Ver0::TOsc", "structJASBNKParser_1_1Ver0_1_1TOsc.html", null ],
+    [ "JASBNKParser::Ver1::TChunk", "structJASBNKParser_1_1Ver1_1_1TChunk.html", [
+      [ "JASBNKParser::Ver1::TEnvtChunk", "structJASBNKParser_1_1Ver1_1_1TEnvtChunk.html", null ],
+      [ "JASBNKParser::Ver1::TListChunk", "structJASBNKParser_1_1Ver1_1_1TListChunk.html", null ],
+      [ "JASBNKParser::Ver1::TOscChunk", "structJASBNKParser_1_1Ver1_1_1TOscChunk.html", null ]
+    ] ],
+    [ "JASBNKParser::Ver1::TOsc", "structJASBNKParser_1_1Ver1_1_1TOsc.html", null ],
+    [ "JASBNKParser::Ver1::TPercData", "structJASBNKParser_1_1Ver1_1_1TPercData.html", null ],
     [ "JASCalc", "structJASCalc.html", null ],
     [ "JASCallbackMgr", "structJASCallbackMgr.html", null ],
     [ "JASCallbackMgr::TCallback", "structJASCallbackMgr_1_1TCallback.html", null ],
@@ -2019,10 +2033,12 @@ var hierarchy =
     [ "JASChannelParams", "classJASChannelParams.html", null ],
     [ "JASCriticalSection", "classJASCriticalSection.html", null ],
     [ "JASDisposer", "structJASDisposer.html", [
-      [ "JASWaveArc", "structJASWaveArc.html", null ]
+      [ "JASWaveArc", "structJASWaveArc.html", [
+        [ "JASBasicWaveBank::TWaveGroup", "structJASBasicWaveBank_1_1TWaveGroup.html", null ],
+        [ "JASSimpleWaveBank", "structJASSimpleWaveBank.html", null ]
+      ] ]
     ] ],
     [ "JASDrumSet::TPerc", "structJASDrumSet_1_1TPerc.html", null ],
-    [ "JASDsp", "structJASDsp.html", null ],
     [ "JASDsp::FxBuf", "structJASDsp_1_1FxBuf.html", null ],
     [ "JASDsp::FxlineConfig_", "structJASDsp_1_1FxlineConfig__.html", null ],
     [ "JASDsp::TChannel", "structJASDsp_1_1TChannel.html", null ],
@@ -2030,7 +2046,7 @@ var hierarchy =
     [ "JASDvd", "classJASDvd.html", null ],
     [ "JASGenericMemPool", "structJASGenericMemPool.html", [
       [ "JASMemPool< T >", "classJASMemPool.html", null ],
-      [ "JASMemPool_MultiThreaded< A0 >", "structJASMemPool__MultiThreaded.html", null ]
+      [ "JASMemPool_MultiThreaded< T >", "classJASMemPool__MultiThreaded.html", null ]
     ] ],
     [ "JASGlobalInstance< T >", "classJASGlobalInstance.html", null ],
     [ "JASGlobalInstance< JAISeMgr >", "classJASGlobalInstance.html", [
@@ -2065,6 +2081,9 @@ var hierarchy =
     ] ],
     [ "JASGlobalInstance< JASDefaultBankTable >", "classJASGlobalInstance.html", [
       [ "JASDefaultBankTable", "classJASDefaultBankTable.html", null ]
+    ] ],
+    [ "JASGlobalInstance< JAUSectionHeap >", "classJASGlobalInstance.html", [
+      [ "JAUSectionHeap", "classJAUSectionHeap.html", null ]
     ] ],
     [ "JASGlobalInstance< JAUSoundInfo >", "classJASGlobalInstance.html", [
       [ "JAUSoundInfo", "classJAUSoundInfo.html", [
@@ -2113,7 +2132,7 @@ var hierarchy =
       [ "Z2SoundMgr", "classZ2SoundMgr.html", null ]
     ] ],
     [ "JASGlobalInstance< Z2SoundObjMgr >", "classJASGlobalInstance.html", [
-      [ "Z2SoundObjMgr", "structZ2SoundObjMgr.html", [
+      [ "Z2SoundObjMgr", "classZ2SoundObjMgr.html", [
         [ "Z2AudioMgr", "structZ2AudioMgr.html", null ]
       ] ]
     ] ],
@@ -2144,7 +2163,6 @@ var hierarchy =
     [ "JASMemChunkPool< ChunkSize, T >::MemoryChunk", "structJASMemChunkPool_1_1MemoryChunk.html", null ],
     [ "JASMemPool_MultiThreaded__template0", "structJASMemPool__MultiThreaded____template0.html", null ],
     [ "JASMemPool_MultiThreaded__template1", "structJASMemPool__MultiThreaded____template1.html", null ],
-    [ "JASMemPool_MultiThreaded__template2", "structJASMemPool__MultiThreaded____template2.html", null ],
     [ "JASMutexLock", "structJASMutexLock.html", null ],
     [ "JASNonCopyable", "structJASNonCopyable.html", null ],
     [ "JASOscillator", "structJASOscillator.html", null ],
@@ -2152,8 +2170,14 @@ var hierarchy =
     [ "JASOscillator::EffectParams", "structJASOscillator_1_1EffectParams.html", null ],
     [ "JASOscillator::Point", "structJASOscillator_1_1Point.html", null ],
     [ "JASPoolAllocObject< T >", "classJASPoolAllocObject.html", null ],
+    [ "JASPoolAllocObject< JAISe >", "classJASPoolAllocObject.html", [
+      [ "JAISe", "classJAISe.html", null ]
+    ] ],
     [ "JASPoolAllocObject< JAISeq >", "classJASPoolAllocObject.html", [
       [ "JAISeq", "classJAISeq.html", null ]
+    ] ],
+    [ "JASPoolAllocObject< JAISoundChild >", "classJASPoolAllocObject.html", [
+      [ "JAISoundChild", "structJAISoundChild.html", null ]
     ] ],
     [ "JASPoolAllocObject< JAIStream >", "classJASPoolAllocObject.html", [
       [ "JAIStream", "classJAIStream.html", null ]
@@ -2163,7 +2187,7 @@ var hierarchy =
     ] ],
     [ "JASPoolAllocObject_MultiThreaded< T >", "classJASPoolAllocObject__MultiThreaded.html", null ],
     [ "JASPoolAllocObject_MultiThreaded< JASChannel >", "classJASPoolAllocObject__MultiThreaded.html", [
-      [ "JASChannel", "structJASChannel.html", null ]
+      [ "JASChannel", "classJASChannel.html", null ]
     ] ],
     [ "JASPoolAllocObject_MultiThreaded< JASTrack >", "classJASPoolAllocObject__MultiThreaded.html", [
       [ "JASTrack", "structJASTrack.html", null ]
@@ -2187,8 +2211,6 @@ var hierarchy =
     [ "JASSeqParser", "classJASSeqParser.html", null ],
     [ "JASSeqParser::CmdInfo", "structJASSeqParser_1_1CmdInfo.html", null ],
     [ "JASSeqReader", "classJASSeqReader.html", null ],
-    [ "JASSimpleWaveBank", "structJASSimpleWaveBank.html", null ],
-    [ "JASSimpleWaveBank::TWaveHandle", "structJASSimpleWaveBank_1_1TWaveHandle.html", null ],
     [ "JASSoundParams", "structJASSoundParams.html", [
       [ "JASInstParam", "structJASInstParam.html", null ]
     ] ],
@@ -2202,13 +2224,15 @@ var hierarchy =
     [ "JASWaveArc::loadToAramCallbackParams", "structJASWaveArc_1_1loadToAramCallbackParams.html", null ],
     [ "JASWaveArcLoader", "structJASWaveArcLoader.html", null ],
     [ "JASWaveBank", "classJASWaveBank.html", [
-      [ "JASBasicWaveBank", "structJASBasicWaveBank.html", null ]
+      [ "JASBasicWaveBank", "structJASBasicWaveBank.html", null ],
+      [ "JASSimpleWaveBank", "structJASSimpleWaveBank.html", null ]
     ] ],
     [ "JASWaveHandle", "classJASWaveHandle.html", [
-      [ "JASBasicWaveBank::TWaveHandle", "structJASBasicWaveBank_1_1TWaveHandle.html", null ]
+      [ "JASBasicWaveBank::TWaveHandle", "structJASBasicWaveBank_1_1TWaveHandle.html", null ],
+      [ "JASSimpleWaveBank::TWaveHandle", "structJASSimpleWaveBank_1_1TWaveHandle.html", null ]
     ] ],
     [ "JASWaveInfo", "structJASWaveInfo.html", null ],
-    [ "JASWSParser", "structJASWSParser.html", null ],
+    [ "JASWSParser", "classJASWSParser.html", null ],
     [ "JASWSParser::TCtrl", "structJASWSParser_1_1TCtrl.html", null ],
     [ "JASWSParser::TCtrlGroup", "structJASWSParser_1_1TCtrlGroup.html", null ],
     [ "JASWSParser::TCtrlScene", "structJASWSParser_1_1TCtrlScene.html", null ],
@@ -2226,13 +2250,8 @@ var hierarchy =
         [ "Z2AudioArcLoader", "classZ2AudioArcLoader.html", null ]
       ] ]
     ] ],
-    [ "JAUBankTable", "classJAUBankTable.html", [
-      [ "JAUBankTableLink", "classJAUBankTableLink.html", null ]
-    ] ],
     [ "JAUDynamicSeqDataBlocks", "classJAUDynamicSeqDataBlocks.html", null ],
-    [ "JAUSection", "classJAUSection.html", null ],
     [ "JAUSection::TSectionData", "structJAUSection_1_1TSectionData.html", null ],
-    [ "JAUSectionHeap", "classJAUSectionHeap.html", null ],
     [ "JAUSectionHeap::TSectionHeapData", "structJAUSectionHeap_1_1TSectionHeapData.html", null ],
     [ "JAUSeqCollection", "classJAUSeqCollection.html", [
       [ "JAUSeqDataMgr_SeqCollection", "classJAUSeqDataMgr__SeqCollection.html", null ]
@@ -2355,6 +2374,9 @@ var hierarchy =
     [ "JKRArchive::SDirEntry", "structJKRArchive_1_1SDirEntry.html", null ],
     [ "JKRDecompCommand", "classJKRDecompCommand.html", null ],
     [ "JKRDisposer", "classJKRDisposer.html", [
+      [ "JAUSection", "classJAUSection.html", [
+        [ "JAUSectionHeap", "classJAUSectionHeap.html", null ]
+      ] ],
       [ "JKRAramHeap", "classJKRAramHeap.html", null ],
       [ "JKRFile", "classJKRFile.html", [
         [ "JKRDvdFile", "classJKRDvdFile.html", null ]
@@ -2660,10 +2682,10 @@ var hierarchy =
       [ "JStudio_JStage::TAdaptor_light", "structJStudio__JStage_1_1TAdaptor__light.html", null ]
     ] ],
     [ "JSUIosBase", "classJSUIosBase.html", [
-      [ "JSUInputStream", "structJSUInputStream.html", [
+      [ "JSUInputStream", "classJSUInputStream.html", [
         [ "JSURandomInputStream", "classJSURandomInputStream.html", [
           [ "JSUFileInputStream", "classJSUFileInputStream.html", null ],
-          [ "JSUMemoryInputStream", "structJSUMemoryInputStream.html", null ]
+          [ "JSUMemoryInputStream", "classJSUMemoryInputStream.html", null ]
         ] ]
       ] ]
     ] ],
@@ -2684,6 +2706,9 @@ var hierarchy =
       [ "JSULink< JAUBankTable >", "classJSULink.html", [
         [ "JAUBankTableLink", "classJAUBankTableLink.html", null ]
       ] ],
+      [ "JSULink< JAUSection >", "classJSULink.html", [
+        [ "JAUSection", "classJAUSection.html", null ]
+      ] ],
       [ "JSULink< Z2CreatureCitizen >", "classJSULink.html", [
         [ "Z2CreatureCitizen", "structZ2CreatureCitizen.html", null ]
       ] ],
@@ -2698,7 +2723,6 @@ var hierarchy =
       ] ],
       [ "JSULink< J2DPane >", "classJSULink.html", null ],
       [ "JSULink< JASHeap >", "classJSULink.html", null ],
-      [ "JSULink< JAUSection >", "classJSULink.html", null ],
       [ "JSULink< JAUSeqDataBlock >", "classJSULink.html", null ],
       [ "JSULink< JFWAlarm >", "classJSULink.html", null ],
       [ "JSULink< JKRADCommand >", "classJSULink.html", null ],
@@ -2745,7 +2769,7 @@ var hierarchy =
         ] ]
       ] ],
       [ "JSUList< Z2CreatureEnemy >", "classJSUList.html", [
-        [ "Z2SoundObjMgr", "structZ2SoundObjMgr.html", null ]
+        [ "Z2SoundObjMgr", "classZ2SoundObjMgr.html", null ]
       ] ],
       [ "JSUList< J2DPane >", "classJSUList.html", null ],
       [ "JSUList< JAISe >", "classJSUList.html", null ],
@@ -2874,6 +2898,7 @@ var hierarchy =
           [ "daObjKGate_c", "classdaObjKGate__c.html", null ],
           [ "daObjKJgjs_c", "classdaObjKJgjs__c.html", null ],
           [ "daObjKKanban_c", "classdaObjKKanban__c.html", null ],
+          [ "daObjL4DigSand_c", "classdaObjL4DigSand__c.html", null ],
           [ "daObjLadder::Act_c", "classdaObjLadder_1_1Act__c.html", null ],
           [ "daObjLv3saka_c", "classdaObjLv3saka__c.html", null ],
           [ "daObjLv4Floor_c", "classdaObjLv4Floor__c.html", null ],
@@ -3038,6 +3063,7 @@ var hierarchy =
         [ "daNpcShoe_c", "classdaNpcShoe__c.html", null ],
         [ "daNpcT_c", "structdaNpcT__c.html", [
           [ "dShopSystem_c", "classdShopSystem__c.html", null ],
+          [ "daNpc_Hanjo_c", "classdaNpc__Hanjo__c.html", null ],
           [ "daNpc_Hoz_c", "classdaNpc__Hoz__c.html", null ],
           [ "daObj_Sekizoa_c", "structdaObj__Sekizoa__c.html", null ]
         ] ],
@@ -3057,7 +3083,6 @@ var hierarchy =
         [ "daNpc_Gnd_c", "classdaNpc__Gnd__c.html", null ],
         [ "daNpc_Grd_c", "classdaNpc__Grd__c.html", null ],
         [ "daNpc_Grz_c", "classdaNpc__Grz__c.html", null ],
-        [ "daNpc_Hanjo_c", "classdaNpc__Hanjo__c.html", null ],
         [ "daNpc_Jagar_c", "classdaNpc__Jagar__c.html", null ],
         [ "daNpc_Kakashi_c", "classdaNpc__Kakashi__c.html", null ],
         [ "daNpc_Kkri_c", "classdaNpc__Kkri__c.html", null ],
@@ -3172,7 +3197,6 @@ var hierarchy =
         [ "daObjKnBullet_c", "classdaObjKnBullet__c.html", null ],
         [ "daObjKshtr_c", "classdaObjKshtr__c.html", null ],
         [ "daObjKznkarm_c", "classdaObjKznkarm__c.html", null ],
-        [ "daObjL4DigSand_c", "classdaObjL4DigSand__c.html", null ],
         [ "daObjL6Bm_c", "classdaObjL6Bm__c.html", null ],
         [ "daObjLdy_c", "classdaObjLdy__c.html", null ],
         [ "daObjLife_c", "classdaObjLife__c.html", null ],
@@ -3923,6 +3947,7 @@ var hierarchy =
       [ "CSTControl", "structCSTControl.html", null ]
     ] ],
     [ "std::__bitset_base< N >", "classstd_1_1____bitset__base.html", null ],
+    [ "std::__bitset_base< 1 >", "classstd_1_1____bitset__base_3_011_01_4.html", null ],
     [ "std::less< A1 >", "structstd_1_1less.html", null ],
     [ "std::less__template0", "structstd_1_1less____template0.html", null ],
     [ "std::numeric_limits< T >", "classstd_1_1numeric__limits.html", null ],
@@ -3977,6 +4002,13 @@ var hierarchy =
     [ "THPAudioInfo", "structTHPAudioInfo.html", null ],
     [ "THPVideoInfo", "structTHPVideoInfo.html", null ],
     [ "timer_info", "structtimer__info.html", null ],
+    [ "JASWSParser::TOffset< JASWSParser::TCtrl >", "classJASWSParser_1_1TOffset.html", null ],
+    [ "JASWSParser::TOffset< JASWSParser::TCtrlGroup >", "classJASWSParser_1_1TOffset.html", null ],
+    [ "JASWSParser::TOffset< JASWSParser::TCtrlScene >", "classJASWSParser_1_1TOffset.html", null ],
+    [ "JASWSParser::TOffset< JASWSParser::TCtrlWave >", "classJASWSParser_1_1TOffset.html", null ],
+    [ "JASWSParser::TOffset< JASWSParser::TWave >", "classJASWSParser_1_1TOffset.html", null ],
+    [ "JASWSParser::TOffset< JASWSParser::TWaveArchive >", "classJASWSParser_1_1TOffset.html", null ],
+    [ "JASWSParser::TOffset< JASWSParser::TWaveArchiveBank >", "classJASWSParser_1_1TOffset.html", null ],
     [ "TParse_header_block", null, [
       [ "JStudio::fvb::TParse", "classJStudio_1_1fvb_1_1TParse.html", null ],
       [ "JStudio::stb::TParse", "classJStudio_1_1stb_1_1TParse.html", [

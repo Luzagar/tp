@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['u_0',['u',['../structJStudio_1_1TAdaptor.html#aedb18683fd1bcd604beff8e14ce36bc8',1,'JStudio::TAdaptor::u'],['../e__pow_8c.html#a6277e2a7446059985dc9bcf0a4ac1a8f',1,'u:&#160;e_pow.c'],['../unionFpscrUnion.html#ac3b558aacba4875622a56d0aba6e3911',1,'FpscrUnion::u']]],
+  ['u_0',['u',['../structJStudio_1_1TAdaptor.html#aedb18683fd1bcd604beff8e14ce36bc8',1,'JStudio::TAdaptor::u'],['../e__pow_8c.html#a6277e2a7446059985dc9bcf0a4ac1a8f',1,'u:&#160;e_pow.c'],['../unionFpscrUnion.html#a2492d0608f78b987852f17d1206f08f3',1,'FpscrUnion::u']]],
   ['u16_1',['u16',['../unionPPCWGPipe.html#a54691399b526673acdb012dd9db1b3d1',1,'PPCWGPipe']]],
   ['u32_2',['u32',['../unionPPCWGPipe.html#a36f6c6095ee0cd5b7e1ad444ecd818af',1,'PPCWGPipe']]],
   ['u32data_3',['u32data',['../structJStudio_1_1TFunctionValue__composite_1_1TData.html#a54fd6928f7f1b307d6056a6b7b6471c2',1,'JStudio::TFunctionValue_composite::TData']]],
@@ -123,16 +123,17 @@ var searchData=
   ['urest_120',['uRest',['../structJMessage_1_1TProcessor_1_1TProcess__.html#aff6c60dd1669f76d855649974d22f9f2',1,'JMessage::TProcessor::TProcess_']]],
   ['usda_121',['USDA',['../structExtended1__PPC__6xx__7xx.html#a75a453fc01fda3aa70d6b64f6bf3a711',1,'Extended1_PPC_6xx_7xx']]],
   ['usedlist_122',['usedList',['../structOSHeapDescriptor.html#a7b24dc58a7946c7d93144e9612b6fbad',1,'OSHeapDescriptor']]],
-  ['usedsize_123',['usedSize',['../structOSHeapCell.html#aa8aaedb2d6c31a5ed3e0b83f288b3006',1,'OSHeapCell']]],
-  ['user_5f_124',['user_',['../classJAUSeqDataMgr__SeqCollection.html#a4350f771c8a012fea2f2849aafab61ae',1,'JAUSeqDataMgr_SeqCollection']]],
-  ['user_5fdata_125',['user_data',['../structJAISoundStatus__.html#a608a26b532017b7ac2eecc26fd15e765',1,'JAISoundStatus_::user_data'],['../struct__GXTexObj.html#a73f1852c7523e78e413cdece7ef0d20a',1,'_GXTexObj::user_data'],['../structDVDCommandBlock.html#a04046c325b4c6865863d55613d005c3c',1,'DVDCommandBlock::user_data']]],
-  ['userdata_126',['userData',['../structmem__pool__obj.html#adc8a170a6c7e0ea5c1567f37cef04415',1,'mem_pool_obj']]],
-  ['userlength_127',['userLength',['../structDVDBB2.html#af2a55313cba3da5c2ae8ad562ad54d89',1,'DVDBB2']]],
-  ['userposition_128',['userPosition',['../structDVDBB2.html#afb7c96a513b70f289aefa9aee6c399cf',1,'DVDBB2']]],
-  ['useserialio_129',['useSerialIO',['../target__options_8c.html#a149f67d06ca012e29423c4bec9b17e61',1,'target_options.c']]],
-  ['usia_130',['USIA',['../structExtended1__PPC__6xx__7xx.html#a415d58320986de0fce7407c73eb57944',1,'Extended1_PPC_6xx_7xx']]],
-  ['usize_5f_131',['uSize_',['../classJStudio_1_1TFunctionValue__hermite.html#a667b0db0d6f23a2a369ee1c867c43930',1,'JStudio::TFunctionValue_hermite']]],
-  ['utarget_132',['uTarget',['../structJMessage_1_1TSequenceProcessor_1_1TProcess__.html#a8fa1dcda2e35dc10c76de85c8f78cb99',1,'JMessage::TSequenceProcessor::TProcess_']]],
-  ['uttae01_133',['uttae01',['../d__a__npc__pouya_8cpp.html#a19cdfbcbb69df7b33c97f947846e68e1',1,'d_a_npc_pouya.cpp']]],
-  ['uttae02_134',['uttae02',['../d__a__npc__pouya_8cpp.html#a9601d2966d12cb8410c3e42d4945e54b',1,'d_a_npc_pouya.cpp']]]
+  ['usedmemcount_123',['usedMemCount',['../structJASGenericMemPool.html#a15906f41e3253ea20d8d4dde812c74ff',1,'JASGenericMemPool']]],
+  ['usedsize_124',['usedSize',['../structOSHeapCell.html#aa8aaedb2d6c31a5ed3e0b83f288b3006',1,'OSHeapCell']]],
+  ['user_5f_125',['user_',['../classJAUSeqDataMgr__SeqCollection.html#a4350f771c8a012fea2f2849aafab61ae',1,'JAUSeqDataMgr_SeqCollection']]],
+  ['user_5fdata_126',['user_data',['../struct__GXTexObj.html#a73f1852c7523e78e413cdece7ef0d20a',1,'_GXTexObj::user_data'],['../structJAISoundStatus__.html#a608a26b532017b7ac2eecc26fd15e765',1,'JAISoundStatus_::user_data'],['../structDVDCommandBlock.html#a04046c325b4c6865863d55613d005c3c',1,'DVDCommandBlock::user_data']]],
+  ['userdata_127',['userData',['../structmem__pool__obj.html#adc8a170a6c7e0ea5c1567f37cef04415',1,'mem_pool_obj']]],
+  ['userlength_128',['userLength',['../structDVDBB2.html#af2a55313cba3da5c2ae8ad562ad54d89',1,'DVDBB2']]],
+  ['userposition_129',['userPosition',['../structDVDBB2.html#afb7c96a513b70f289aefa9aee6c399cf',1,'DVDBB2']]],
+  ['useserialio_130',['useSerialIO',['../target__options_8c.html#a149f67d06ca012e29423c4bec9b17e61',1,'target_options.c']]],
+  ['usia_131',['USIA',['../structExtended1__PPC__6xx__7xx.html#a415d58320986de0fce7407c73eb57944',1,'Extended1_PPC_6xx_7xx']]],
+  ['usize_5f_132',['uSize_',['../classJStudio_1_1TFunctionValue__hermite.html#a667b0db0d6f23a2a369ee1c867c43930',1,'JStudio::TFunctionValue_hermite']]],
+  ['utarget_133',['uTarget',['../structJMessage_1_1TSequenceProcessor_1_1TProcess__.html#a8fa1dcda2e35dc10c76de85c8f78cb99',1,'JMessage::TSequenceProcessor::TProcess_']]],
+  ['uttae01_134',['uttae01',['../d__a__npc__pouya_8cpp.html#a19cdfbcbb69df7b33c97f947846e68e1',1,'d_a_npc_pouya.cpp']]],
+  ['uttae02_135',['uttae02',['../d__a__npc__pouya_8cpp.html#a9601d2966d12cb8410c3e42d4945e54b',1,'d_a_npc_pouya.cpp']]]
 ];

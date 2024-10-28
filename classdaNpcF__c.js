@@ -88,7 +88,7 @@ var classdaNpcF__c =
     [ "setLookatMtx", "classdaNpcF__c.html#ae11d2727b88208b3a8477e13db90330a", null ],
     [ "setMcaMorfAnm", "classdaNpcF__c.html#af17a65af71f4fdb829a96c943a97e7cd", null ],
     [ "setMotion", "classdaNpcF__c.html#a3681a845ec093eb4ca45db998989a9df", null ],
-    [ "setMotionAnm", "classdaNpcF__c.html#a14585981d082c2c85336dc2f17d2adec", null ],
+    [ "setMotionAnm", "classdaNpcF__c.html#a939e6843541d916e361df5cb8f95ae8f", null ],
     [ "setMtx", "classdaNpcF__c.html#ad1b7e07ebd217559f372f4e9a062e223", null ],
     [ "setMtx2", "classdaNpcF__c.html#acf8d13e18bf4308f178459b0cd1389e8", null ],
     [ "setParam", "classdaNpcF__c.html#a8e50df6068e6796ad66e2eac88798eba", null ],

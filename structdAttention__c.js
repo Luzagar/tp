@@ -47,6 +47,8 @@ var structdAttention__c =
     [ "LockonTruth", "structdAttention__c.html#a0765896bc1c1b79fef2a011e6434f773", null ],
     [ "LockonTruth", "structdAttention__c.html#a0765896bc1c1b79fef2a011e6434f773", null ],
     [ "LockonTruth", "structdAttention__c.html#a4b3e99186b8e14b6fb6fd4ea5bc37209", null ],
+    [ "LockSoundOff", "structdAttention__c.html#a579abc27e8b9c28d1a24a0318697e148", null ],
+    [ "LockSoundOn", "structdAttention__c.html#adf33b45f877cddc7c5639a048b13fd3c", null ],
     [ "lockSoundStart", "structdAttention__c.html#aae6906f8819f9a62adc4ed46377c4b17", null ],
     [ "LookRequest", "structdAttention__c.html#af5734f563b348acf21395b5e6efcaba8", null ],
     [ "lostCheck", "structdAttention__c.html#a28d41d88e8189d01ce5fa2845c072187", null ],

@@ -29,7 +29,7 @@ var classdaNpc__SoldierA__c =
     [ "setAttnPos", "classdaNpc__SoldierA__c.html#a9588f9fd6c611b281ead813b3fd85aa1", null ],
     [ "setLookMode", "classdaNpc__SoldierA__c.html#a4bcff29f41c240940922281a075df084", null ],
     [ "setMotion", "classdaNpc__SoldierA__c.html#a511a9816527ba8efb57a43b5234154ba", null ],
-    [ "setMotionAnm", "classdaNpc__SoldierA__c.html#a2b0888b38a9939ae31e4b212125c27c9", null ],
+    [ "setMotionAnm", "classdaNpc__SoldierA__c.html#aeece1bef9372329a2bcf4425903d22ab", null ],
     [ "setParam", "classdaNpc__SoldierA__c.html#a90d298f6c47fbbde910062921e6c223a", null ],
     [ "talk", "classdaNpc__SoldierA__c.html#afe5d07414025cfbb68e46ef955251fcf", null ],
     [ "test", "classdaNpc__SoldierA__c.html#a9043a4f6f33ba5db034cf9510b0defb4", null ],

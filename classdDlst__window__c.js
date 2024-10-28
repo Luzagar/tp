@@ -3,6 +3,7 @@ var classdDlst__window__c =
     [ "dDlst_window_c", "classdDlst__window__c.html#a8be729c3e68e95b17f3061c8926a57d9", null ],
     [ "~dDlst_window_c", "classdDlst__window__c.html#a3ea17074adf93638e284bab296cd0a85", null ],
     [ "getCameraID", "classdDlst__window__c.html#a90a77d2d5c26c7aef3b166b846b8432e", null ],
+    [ "getScissor", "classdDlst__window__c.html#a40fafda7d9d0598b6145bf7ad3d680d6", null ],
     [ "getViewPort", "classdDlst__window__c.html#a455cbc05bfe0c064d07072d52b0b9ca6", null ],
     [ "setCameraID", "classdDlst__window__c.html#a25413a1aa341dc04b096fb0b49eab60c", null ],
     [ "setMode", "classdDlst__window__c.html#a6a6618e2198acf20be877660f07572d6", null ],

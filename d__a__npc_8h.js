@@ -9,7 +9,7 @@ var d__a__npc_8h =
     [ "daNpcT_MotionSeqMngr_c::sequenceStepData_c", "structdaNpcT__MotionSeqMngr__c_1_1sequenceStepData__c.html", "structdaNpcT__MotionSeqMngr__c_1_1sequenceStepData__c" ],
     [ "daNpcT_JntAnm_c", "structdaNpcT__JntAnm__c.html", "structdaNpcT__JntAnm__c" ],
     [ "daNpcT_DmgStagger_c", "structdaNpcT__DmgStagger__c.html", "structdaNpcT__DmgStagger__c" ],
-    [ "daNpcT_evtData_c", "structdaNpcT__evtData__c.html", null ],
+    [ "daNpcT_evtData_c", "structdaNpcT__evtData__c.html", "structdaNpcT__evtData__c" ],
     [ "daNpcT_faceMotionAnmData_c", "structdaNpcT__faceMotionAnmData__c.html", "structdaNpcT__faceMotionAnmData__c" ],
     [ "daNpcT_pntData_c", "structdaNpcT__pntData__c.html", null ],
     [ "daNpcT_motionAnmData_c", "structdaNpcT__motionAnmData__c.html", "structdaNpcT__motionAnmData__c" ],
@@ -43,6 +43,9 @@ var d__a__npc_8h =
     [ "daNpcT_chkEvtBit", "d__a__npc_8h.html#ab1fe4a6bb4c2a48d902cdcc36fd5e67d", null ],
     [ "daNpcT_chkPointInArea", "d__a__npc_8h.html#ae3529062f3d054a56722e32d770d9901", null ],
     [ "daNpcT_getDistTableIdx", "d__a__npc_8h.html#a3ce949c9ec233983c9667ed6d102e1c3", null ],
+    [ "daNpcT_offTmpBit", "d__a__npc_8h.html#a309682a7b205e27cf318139530d098bc", null ],
+    [ "daNpcT_onEvtBit", "d__a__npc_8h.html#ab56aa9bb2d4c073be0bdd0d0b1e71cfe", null ],
+    [ "daNpcT_onTmpBit", "d__a__npc_8h.html#a7c9495ac16ada0a3f6862d3a7b15e174", null ],
     [ "STATIC_ASSERT", "d__a__npc_8h.html#ad43f4a969700cc3d55ff32c1df4dfd2f", null ],
     [ "STATIC_ASSERT", "d__a__npc_8h.html#ab5bd43b8419e4eea51b8e126a0d40a71", null ]
 ];

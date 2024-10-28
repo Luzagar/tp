@@ -97,7 +97,7 @@ var classdaNpcThe__c =
     [ "setExpressionTalkAfter", "classdaNpcThe__c.html#ae8d95712d79f7c0b5d1dda7eeefe2b73", null ],
     [ "setLookMode", "classdaNpcThe__c.html#afdca130151f8121cc6cd67d1999f4232", null ],
     [ "setMotion", "classdaNpcThe__c.html#afd73e05dea237cf96e4829e66eb8a70d", null ],
-    [ "setMotionAnm", "classdaNpcThe__c.html#a4426ddc1a5d04701ff857f927afcfa63", null ],
+    [ "setMotionAnm", "classdaNpcThe__c.html#a31eeb9a62a358ac7731d10e6fe3fab69", null ],
     [ "setParam", "classdaNpcThe__c.html#a8c4fe1b3eb7f338811d080d1c8ec79c4", null ],
     [ "talk", "classdaNpcThe__c.html#a75627fb6df1cd9d8de54b6b867252b09", null ],
     [ "test", "classdaNpcThe__c.html#a21e4224a6cc852fb085136f151c235d5", null ],

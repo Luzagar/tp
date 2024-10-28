@@ -5,6 +5,7 @@ var classdJntCol__c =
     [ "checkShieldType", "classdJntCol__c.html#a6d6030654ad75548db7bfb304be09353", null ],
     [ "getArrowOffsetPosAndAngle", "classdJntCol__c.html#a4f6ca8007e9c416ae6d1da8af75fb8c7", null ],
     [ "getHitmarkPosAndAngle", "classdJntCol__c.html#a6e2ec7bf0fe9eb6e013899d328cabed6", null ],
+    [ "getJntNum", "classdJntCol__c.html#a34fda58276edb6ce1ff1ccecb50d5519", null ],
     [ "getType", "classdJntCol__c.html#aa7bf850884929dc167a42d2e3748a5d9", null ],
     [ "init", "classdJntCol__c.html#ace98acb65010fa052bdc854c4fa08050", null ],
     [ "offPassNum", "classdJntCol__c.html#a4bf874dad2acc535732aae6a96136d67", null ],

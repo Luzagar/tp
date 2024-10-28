@@ -20,7 +20,7 @@ var classdaNpcShoe__c =
     [ "setAction", "classdaNpcShoe__c.html#a603117a250b9d04b93c725c4fb349b9c", null ],
     [ "setAttnPos", "classdaNpcShoe__c.html#aeca62fbda0a7b66ccd3839c9c57077ea", null ],
     [ "setMotion", "classdaNpcShoe__c.html#a0a4a843013a8c820c527ac25c9957526", null ],
-    [ "setMotionAnm", "classdaNpcShoe__c.html#ab55129a6284eb9a556a320450d8e78e1", null ],
+    [ "setMotionAnm", "classdaNpcShoe__c.html#a6a78073d09b06b66e1377f93f416776e", null ],
     [ "setParam", "classdaNpcShoe__c.html#a8366bdc6a837a2bcc8094d810a618408", null ],
     [ "talk", "classdaNpcShoe__c.html#abeb669cf21f5a3a621381cd7433c6aa9", null ],
     [ "wait", "classdaNpcShoe__c.html#aefe6da4c7e0d2a35e1c4e76df88b0d83", null ],

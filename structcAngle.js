@@ -1,6 +1,7 @@
 var structcAngle =
 [
     [ "Adjust", "structcAngle.html#aa33b54b655ea555abb72aaa4122775ff", null ],
+    [ "d2r", "structcAngle.html#aa1d64625d1a589480813c631e61e76e9", null ],
     [ "d2s", "structcAngle.html#accf227f732fdfc678710ec4ffe268394", null ],
     [ "Degree_to_Radian", "structcAngle.html#ae800ab1dfb79ac41bb6ad765247423a0", null ],
     [ "Degree_to_SAngle", "structcAngle.html#a41a8e0e7d295a474e22df4b46f491f7c", null ],

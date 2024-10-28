@@ -23,11 +23,14 @@ var classdaObjTks__c =
     [ "setExpressionAnm", "classdaObjTks__c.html#a9afdede44ffef7d8867b0daae53c85e2", null ],
     [ "setExpressionBtp", "classdaObjTks__c.html#a6eb2cadccb8884894343c42553f04185", null ],
     [ "setMotion", "classdaObjTks__c.html#a805dbda26b37f7abc6504536203d772e", null ],
-    [ "setMotionAnm", "classdaObjTks__c.html#a84634d380a1c5c5a6b6a283b7b12f2a9", null ],
+    [ "setMotionAnm", "classdaObjTks__c.html#a3f42fa1215c00eb08e4a3522a3c5354a", null ],
     [ "setMtx", "classdaObjTks__c.html#a48c44bf6584ba4bcb8b2e7f849f7ce16", null ],
     [ "setParam", "classdaObjTks__c.html#ad27d0d45f2e92c8cb43438ae4e743a17", null ],
+    [ "setStart", "classdaObjTks__c.html#a193adbc1b28e30650838023ffa23ed6c", null ],
     [ "talk", "classdaObjTks__c.html#a4f7555d297a2a229f4a1b99fdde990a9", null ],
     [ "wait", "classdaObjTks__c.html#a181b92d0ec54cd40ab8889bfe967cd59", null ],
     [ "warp", "classdaObjTks__c.html#a132addd1d8566c52a4db9d06d5f945b3", null ],
-    [ "field_0x568", "classdaObjTks__c.html#a5dca10e2b899b2547992a0a94c6663f2", null ]
+    [ "field_0x568", "classdaObjTks__c.html#a02a61233896605baa459664bd6669cbb", null ],
+    [ "field_0xde0", "classdaObjTks__c.html#a751ed280d5178967641f0b6a44aa97ee", null ],
+    [ "field_0xde1", "classdaObjTks__c.html#a9e7ab17a6e2ea035c83384613250f5c5", null ]
 ];

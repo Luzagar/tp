@@ -5,6 +5,8 @@ var classdaObjDigpl__c =
     [ "execute", "classdaObjDigpl__c.html#a454320f826644eed973e762296ae6cc6", null ],
     [ "getItemNum", "classdaObjDigpl__c.html#ae627bdf24fc130003f0c01a6b35c9054", null ],
     [ "getSceneNum", "classdaObjDigpl__c.html#a9df33597b9b2b486231d74b9488997ef", null ],
+    [ "getType", "classdaObjDigpl__c.html#a0c58b8a9c0de950052308625ee62d6e3", null ],
+    [ "onDigFlg", "classdaObjDigpl__c.html#a9e48124ae5ef43a691ca9b426dea8fa0", null ],
     [ "field_0x56b", "classdaObjDigpl__c.html#a4120c5227a7063be33792e76137c789f", null ],
     [ "field_0x570", "classdaObjDigpl__c.html#aa6bb7c51c341862ebce5e606bee332bf", null ],
     [ "mCurrentDigPoint", "classdaObjDigpl__c.html#ad462c3e76d70dadc4801b02e0ec6dec1", null ],

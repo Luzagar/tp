@@ -46,6 +46,8 @@ var classdStage__stageDt__c =
     [ "getVrboxcolNumInfo", "classdStage__stageDt__c.html#a9dc32653df271028313cbb147e9e2278", null ],
     [ "getVrboxInfo", "classdStage__stageDt__c.html#adfffa7100d76260fe102cdb5a5ccc800", null ],
     [ "getVrboxNumInfo", "classdStage__stageDt__c.html#a24652e9db65308523cf25e7898f443e4", null ],
+    [ "getWorldRollAngleX", "classdStage__stageDt__c.html#a25cd31eb833c529f17600eeba9eae22e", null ],
+    [ "getWorldRollDirAngleY", "classdStage__stageDt__c.html#a37baf1a9e0c0d6e064c4685c1639bf17", null ],
     [ "init", "classdStage__stageDt__c.html#acb4495dee94739ddbc979e85e455b4e7", null ],
     [ "resetOldMulti", "classdStage__stageDt__c.html#a4dc1fea91d9df8e10d0164d351aae5bf", null ],
     [ "setArrow", "classdStage__stageDt__c.html#aff43136ec51b685445ac6de7ff689b94", null ],
@@ -93,8 +95,6 @@ var classdStage__stageDt__c =
     [ "setVrboxcolNumInfo", "classdStage__stageDt__c.html#ab0f6526de98219a7c8233bc4c15bd3f5", null ],
     [ "setVrboxInfo", "classdStage__stageDt__c.html#a141ad702f262dff3e3904237a7c04a33", null ],
     [ "setVrboxNumInfo", "classdStage__stageDt__c.html#ae0cfe8cc12f3a8a8b1c53bb0ea523f33", null ],
-    [ "field_0x56", "classdStage__stageDt__c.html#a7797d20fe3c84c6b7b4e5aa0787311d4", null ],
-    [ "field_0x58", "classdStage__stageDt__c.html#a82c174cba921ce41c7ad73793d737757", null ],
     [ "field_0x5a", "classdStage__stageDt__c.html#a333c0afbe59808ca3cdb918220c12fee", null ],
     [ "mArrow", "classdStage__stageDt__c.html#a973f34e977daec60ed035257aaf3ab3f", null ],
     [ "mCamera", "classdStage__stageDt__c.html#a66fe3e09aaba464595b9b0f2ebc0aba9", null ],
@@ -133,5 +133,7 @@ var classdStage__stageDt__c =
     [ "mVrboxcolInfo", "classdStage__stageDt__c.html#a52797108cd15f25cf0a71e3522ad10cd", null ],
     [ "mVrboxcolNumInfo", "classdStage__stageDt__c.html#a3af7d0fbecc8ffad566b7f7f4e27893a", null ],
     [ "mVrboxInfo", "classdStage__stageDt__c.html#a47a0fbc0fe9eb59ccf2bf8ef396a5aa7", null ],
-    [ "mVrboxNumInfo", "classdStage__stageDt__c.html#ae0ff84acb9490abab6b0178c940932fa", null ]
+    [ "mVrboxNumInfo", "classdStage__stageDt__c.html#ae0ff84acb9490abab6b0178c940932fa", null ],
+    [ "mWorldRollAngleX", "classdStage__stageDt__c.html#a928cf5742daff942e59f0eb41ac3671b", null ],
+    [ "mWorldRollDirAngleY", "classdStage__stageDt__c.html#ac8e801b796aa238e7c32b5f367d48185", null ]
 ];

@@ -35,7 +35,7 @@ var classdaNpc__zrC__c =
     [ "setExpressionTalkAfter", "classdaNpc__zrC__c.html#a1841b50876f245b4278470fb3232f37c", null ],
     [ "setLookMode", "classdaNpc__zrC__c.html#adc200102789ee74c9884a6671af68513", null ],
     [ "setMotion", "classdaNpc__zrC__c.html#afd36fc532cc92f630b310bb7784bab63", null ],
-    [ "setMotionAnm", "classdaNpc__zrC__c.html#ae172a8e9eb391a8f60f642b3c8668500", null ],
+    [ "setMotionAnm", "classdaNpc__zrC__c.html#ad93f90150f3a627e2e1e05a9f3d44171", null ],
     [ "setParam", "classdaNpc__zrC__c.html#a0872e98ba7cbb59ad4199a45bf201047", null ],
     [ "talk", "classdaNpc__zrC__c.html#aacd788edd5d5d08ab91eaac5f16474e8", null ],
     [ "test", "classdaNpc__zrC__c.html#a8ea6f6584554a849fe9d45f079e4f323", null ],

@@ -39,7 +39,7 @@ var classdaNpcKasiMich__c =
     [ "setAttnPos", "classdaNpcKasiMich__c.html#a70804ad2519497ad8075b7e0d529f756", null ],
     [ "setLookMode", "classdaNpcKasiMich__c.html#aaeb9a7383bda45ab3c1f9ba63650fac0", null ],
     [ "setMotion", "classdaNpcKasiMich__c.html#a286bf42c60a93ac8144276075f6a441a", null ],
-    [ "setMotionAnm", "classdaNpcKasiMich__c.html#ad1fe2cce96f30d3bc26b4bb2e0662505", null ],
+    [ "setMotionAnm", "classdaNpcKasiMich__c.html#af1cb44a3036666fcab267743b7ce616c", null ],
     [ "setParam", "classdaNpcKasiMich__c.html#a1a6673170110f17eae79a829dbb47155", null ],
     [ "srchWolfTag", "classdaNpcKasiMich__c.html#ace377749e480151ad874a8da7fcc231c", null ],
     [ "step", "classdaNpcKasiMich__c.html#a18458fe86dfb72ce9221f5266203ebbf", null ],

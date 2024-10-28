@@ -108,6 +108,13 @@ var structdaObj__Sekizoa__c =
     [ "talk", "structdaObj__Sekizoa__c.html#ac338ff1fc3e40e6616159a22c09a056a", null ],
     [ "wait", "structdaObj__Sekizoa__c.html#af183cf441c88ccac08ea3d01851dd89f", null ],
     [ "wait", "structdaObj__Sekizoa__c.html#af183cf441c88ccac08ea3d01851dd89f", null ],
+    [ "field_0x10c8", "structdaObj__Sekizoa__c.html#a43ec5855d44584456938da1ed6c12ee2", null ],
+    [ "field_0x10c9", "structdaObj__Sekizoa__c.html#af01282187c048aee90d889d919b8ca03", null ],
+    [ "field_0x10e4", "structdaObj__Sekizoa__c.html#a1a053aedec779c70e2d5151e2e249863", null ],
+    [ "field_0x10ec", "structdaObj__Sekizoa__c.html#a3177e2a289c966f52c15dce60a30ede2", null ],
+    [ "field_0x1173", "structdaObj__Sekizoa__c.html#a8868d975dfa7325180f70b1d4004fa6c", null ],
+    [ "field_0x1174", "structdaObj__Sekizoa__c.html#a1a505c759e6a1db564884c6a84aaabaf", null ],
+    [ "field_0xe40", "structdaObj__Sekizoa__c.html#aa934088b220b182c7ca9b72198f1ed12", null ],
     [ "mCutList", "structdaObj__Sekizoa__c.html#a3655e5c4ee0844e1e4ea783c5fe21b0a", null ],
     [ "mCutNameList", "structdaObj__Sekizoa__c.html#a8f5da5b01fd92b1f93ec2b2e2b456851", null ]
 ];

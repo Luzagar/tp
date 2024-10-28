@@ -2,6 +2,12 @@ var classdCamBGChk__c =
 [
     [ "ChkInfo", "structdCamBGChk__c_1_1ChkInfo.html", "structdCamBGChk__c_1_1ChkInfo" ],
     [ "dCamBGChk_c", "classdCamBGChk__c.html#a104665cebd797e85925cbf355d3704b5", null ],
+    [ "FwdBackMargin", "classdCamBGChk__c.html#aa2fc60fb9a1f719077db504b167bc12b", null ],
+    [ "FwdChkAngle", "classdCamBGChk__c.html#a24aed6595681694644cdc346f30bf3b0", null ],
+    [ "FwdCushion", "classdCamBGChk__c.html#a96bf523b539117c67c29f2974ec75065", null ],
+    [ "FwdDistance", "classdCamBGChk__c.html#a94a952c853fc5cc8178de6bc653e6e3b", null ],
+    [ "FwdWeightH", "classdCamBGChk__c.html#aced82581d0fabfdb40813b7f04830c51", null ],
+    [ "FwdWeightL", "classdCamBGChk__c.html#ac9882af0456bb1779ea4af044851bfa0", null ],
     [ "WallUpDistance", "classdCamBGChk__c.html#a9575542b1d0caf4e0d7fb31d0d340d9c", null ],
     [ "field_0x2c", "classdCamBGChk__c.html#a173692d8626d2a25f78402ae7f3b31e7", null ],
     [ "mChkInfo", "classdCamBGChk__c.html#a38f38fb43f0b22f81c2accb50c9094e3", null ],

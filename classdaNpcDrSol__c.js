@@ -17,7 +17,7 @@ var classdaNpcDrSol__c =
     [ "setAction", "classdaNpcDrSol__c.html#a63a547d10276f342d0821a56323f31ca", null ],
     [ "setAttnPos", "classdaNpcDrSol__c.html#a038101e76e019466a666a35dd1b974f0", null ],
     [ "setMotion", "classdaNpcDrSol__c.html#afd2f9adb00695e5d752d7e293f060720", null ],
-    [ "setMotionAnm", "classdaNpcDrSol__c.html#a7f8931c71078a3f75d919718de92bbbb", null ],
+    [ "setMotionAnm", "classdaNpcDrSol__c.html#a565dd47825f0cb380b727439f4a6aade", null ],
     [ "setParam", "classdaNpcDrSol__c.html#ab73d12111c30f2eb4c44a7cc17d8f376", null ],
     [ "talk", "classdaNpcDrSol__c.html#a35579d57a0de8ae2bfb1f017f50bc53a", null ],
     [ "wait", "classdaNpcDrSol__c.html#a56abf5fce526f3ee0e575cb1fd66d455", null ],

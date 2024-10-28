@@ -29,7 +29,7 @@ var classdaNpcRafrel__c =
     [ "setExpressionAnm", "classdaNpcRafrel__c.html#a460f9809c154dfae3a9b7908e3d16443", null ],
     [ "setExpressionBtp", "classdaNpcRafrel__c.html#abc4fc315bf2f59a76b20d1bef11d5983", null ],
     [ "setMotion", "classdaNpcRafrel__c.html#a374fcbd90ab250cd31a62baa11f8c759", null ],
-    [ "setMotionAnm", "classdaNpcRafrel__c.html#a1f387937b513b993fbf3888efdd184a5", null ],
+    [ "setMotionAnm", "classdaNpcRafrel__c.html#a53d45d1798038235f482f311fc12cce5", null ],
     [ "setParam", "classdaNpcRafrel__c.html#af255c7123d26354a0ee35185376c4c5c", null ],
     [ "setWaitAction", "classdaNpcRafrel__c.html#a7100119aea2c6dc1aab4ef3f926a896d", null ],
     [ "talk", "classdaNpcRafrel__c.html#a37d77c8145707eb350736992238007c1", null ],

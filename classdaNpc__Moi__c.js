@@ -18,6 +18,7 @@ var classdaNpc__Moi__c =
     [ "chkPlayerGetWoodShield", "classdaNpc__Moi__c.html#a5f588e51e188c6b7d2846d4a5d0ea2ec", null ],
     [ "chkPullOutSw", "classdaNpc__Moi__c.html#afac7054bddefad630c9f39632b73092d", null ],
     [ "chkSetInSw", "classdaNpc__Moi__c.html#a912d0cca548de100da89d763e6a1a5b1", null ],
+    [ "chkSFight", "classdaNpc__Moi__c.html#ac55979e4c04b3db3923b5b23b50865b4", null ],
     [ "create", "classdaNpc__Moi__c.html#a7e79692ea3d6b1b4e481f5c77564d0b0", null ],
     [ "CreateHeap", "classdaNpc__Moi__c.html#a0c0dd5cd6688909dbe6b8d7404a4c8dc", null ],
     [ "createHeapCallBack", "classdaNpc__Moi__c.html#ad2cdcfed3e64ab4255803c4c211a16d0", null ],
@@ -63,7 +64,9 @@ var classdaNpc__Moi__c =
     [ "wait", "classdaNpc__Moi__c.html#ab3bb5a3dbc0a6147db8eedbd74b6b8e9", null ],
     [ "walk", "classdaNpc__Moi__c.html#aeef99c742ad3426c7062771ec7a9bdda", null ],
     [ "walkOnEggshell", "classdaNpc__Moi__c.html#a01a3e0dcb61f68b9ed6292b702d5cc38", null ],
-    [ "field_0x568", "classdaNpc__Moi__c.html#a95c97d98e11a8d82db28b338003a09bb", null ],
+    [ "field_0x166b", "classdaNpc__Moi__c.html#a03e9d57caebbeb101990db658bc0ee00", null ],
+    [ "field_0x166c", "classdaNpc__Moi__c.html#a1363c1d34aa8630ec6a7c2197a31a320", null ],
+    [ "field_0x568", "classdaNpc__Moi__c.html#a38d805f502446a9f9b7786bcf53f78e3", null ],
     [ "mCutList", "classdaNpc__Moi__c.html#a5ae68878679ed4ed879657415dd5a2ff", null ],
     [ "mCutNameList", "classdaNpc__Moi__c.html#aa4470a0e6e15aa02aeda2a84f97fa9ef", null ]
 ];

@@ -16,6 +16,7 @@ var classdCcS =
     [ "Draw", "classdCcS.html#a3f3101694e6188e7ef881f50ce7dd4ec", null ],
     [ "DrawAfter", "classdCcS.html#aefd336dfc600e80ab5da32156cdb2cd4", null ],
     [ "Dt", "classdCcS.html#afb2ea7b9253849c60c8a56ea3c0406f2", null ],
+    [ "GetMassResultCam", "classdCcS.html#af7c4dd0938d4ce50fb29cce1a689c68d", null ],
     [ "GetRank", "classdCcS.html#ab81d462696bbbf223d950f2f5a284341", null ],
     [ "MassClear", "classdCcS.html#a4ea8af36bbb9b32704ec47adcc0c522a", null ],
     [ "Move", "classdCcS.html#a03f5f790487d91348c51bb447f820e77", null ],
@@ -25,6 +26,7 @@ var classdCcS =
     [ "SetAtTgGObjInf", "classdCcS.html#a1f8ffb236eb61239d9b50f1f92430a6a", null ],
     [ "SetCoGObjInf", "classdCcS.html#a7e182bd3a1d8df56012ec37f5ff72628", null ],
     [ "SetMass", "classdCcS.html#a502498098f89533096de4f7000936991", null ],
+    [ "SetMassCam", "classdCcS.html#a4567ff19c964f0968268f7a6a4e1ef46", null ],
     [ "SetPosCorrect", "classdCcS.html#a1dad7eb2a724a2f5c74ada0acac9026e", null ],
     [ "m_mtrl_hit_tbl", "classdCcS.html#a3a8805c3d6713d7f380ed66b178a7cf2", null ],
     [ "mMass_Mng", "classdCcS.html#a45ba5a57f6720004602d8517a6b84957", null ]

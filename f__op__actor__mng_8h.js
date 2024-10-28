@@ -86,7 +86,7 @@ var f__op__actor__mng_8h =
     [ "fopAcM_createChild", "f__op__actor__mng_8h.html#ab14b3d1a24b710e8acc79780bd54ccc8", null ],
     [ "fopAcM_createChildFromOffset", "f__op__actor__mng_8h.html#a49f832c79e5ed55799686bdc06874e61", null ],
     [ "fopAcM_createDemoItem", "f__op__actor__mng_8h.html#af9e7557d84f88fe3d29ee983e98d2028", null ],
-    [ "fopAcM_createDisappear", "f__op__actor__mng_8h.html#a2d948ce6539e7b94676b7d62f53154c6", null ],
+    [ "fopAcM_createDisappear", "f__op__actor__mng_8h.html#a47cb773db50ea63ce5e0f28ba2a63bfa", null ],
     [ "fopAcM_createItem", "f__op__actor__mng_8h.html#abde8be7f916353ab688f4bfabea004cc", null ],
     [ "fopAcM_createItemForBoss", "f__op__actor__mng_8h.html#a0bb61f0fd7302b4b608155c907020c09", null ],
     [ "fopAcM_createItemForDirectGet", "f__op__actor__mng_8h.html#a0ad33f4927f4e1b26408f9ad8e88096f", null ],

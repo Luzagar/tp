@@ -40,7 +40,7 @@ var classdaNpcChat__c =
     [ "setAttnPos", "classdaNpcChat__c.html#a5c766d824150b59a921f64256b87682b", null ],
     [ "setExpressionBtp", "classdaNpcChat__c.html#a5baeae8bcca5b222a86c5b576dd0c1af", null ],
     [ "setMotion", "classdaNpcChat__c.html#a78e17462ffc975a5b9f27251bde0a4ef", null ],
-    [ "setMotionAnm", "classdaNpcChat__c.html#a2a3ef17516094da746b262e7203e0f8a", null ],
+    [ "setMotionAnm", "classdaNpcChat__c.html#aadf3024dcb8dabfbdecd1a402bbbac61", null ],
     [ "setParam", "classdaNpcChat__c.html#a4e0fcf53c34fb25ba4fd1fcf2b1dadba", null ],
     [ "setTalkMember", "classdaNpcChat__c.html#a17d3bd3a8603d2a40386a7f788c51404", null ],
     [ "step", "classdaNpcChat__c.html#a98212e33bb9dd484d1999e162123876a", null ],

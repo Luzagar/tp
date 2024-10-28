@@ -28,7 +28,7 @@ var classdaNpcIns__c =
     [ "setExpressionAnm", "classdaNpcIns__c.html#ada3fc933297ed1ec5bd82cd94140b538", null ],
     [ "setExpressionBtp", "classdaNpcIns__c.html#aa87cdd0d8d6e7599236ed3d3a9acbaa3", null ],
     [ "setMotion", "classdaNpcIns__c.html#af32f083665840d92e5c8bd90cd7669dc", null ],
-    [ "setMotionAnm", "classdaNpcIns__c.html#a71bdb04af8ec0e85551b35280b910a74", null ],
+    [ "setMotionAnm", "classdaNpcIns__c.html#ac6a3a99806baaf2b3135cf9fd166817c", null ],
     [ "setMtx", "classdaNpcIns__c.html#ab798f7866b9a906cd04199a2095cce57", null ],
     [ "setNextPoint", "classdaNpcIns__c.html#abf250c4c7f3672a5293006f044257ec1", null ],
     [ "setParam", "classdaNpcIns__c.html#a3074903e0638988f0c4de6c3b58ce996", null ],

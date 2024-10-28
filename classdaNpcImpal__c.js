@@ -25,7 +25,7 @@ var classdaNpcImpal__c =
     [ "setExpressionAnm", "classdaNpcImpal__c.html#a5b928db76a360e86136298481a34dbbc", null ],
     [ "setExpressionBtp", "classdaNpcImpal__c.html#a78a8521ea176ea72fe6728870289d40c", null ],
     [ "setMotion", "classdaNpcImpal__c.html#a5d97ad7c1d32dad99224df8e8e8a5d36", null ],
-    [ "setMotionAnm", "classdaNpcImpal__c.html#a7c44e1190e751f28d7cfb92808ea7247", null ],
+    [ "setMotionAnm", "classdaNpcImpal__c.html#a39f179da12ac9453a8d4eed832e96460", null ],
     [ "setParam", "classdaNpcImpal__c.html#aacbc80f85ee104d701213bc9e866efd3", null ],
     [ "talk", "classdaNpcImpal__c.html#aacd68a4cfc11eff59c254fbd1d64bd1c", null ],
     [ "wait", "classdaNpcImpal__c.html#adbf00e55a039c6e6663e53d4cbc46980", null ],

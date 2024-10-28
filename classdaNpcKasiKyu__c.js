@@ -39,7 +39,7 @@ var classdaNpcKasiKyu__c =
     [ "setAttnPos", "classdaNpcKasiKyu__c.html#a6e8307f3b671d37dcc91957f0e5fe819", null ],
     [ "setLookMode", "classdaNpcKasiKyu__c.html#a6b3e63f699ae7f6ec387a0e80c1d889d", null ],
     [ "setMotion", "classdaNpcKasiKyu__c.html#afaa376c903b1b0c0eda507c436b880bc", null ],
-    [ "setMotionAnm", "classdaNpcKasiKyu__c.html#a3a9e52e98c33b2cb75083f22e02b3c29", null ],
+    [ "setMotionAnm", "classdaNpcKasiKyu__c.html#a5ed16cf0a1e87658972449362862dfc0", null ],
     [ "setParam", "classdaNpcKasiKyu__c.html#a27edea55a172a2ab354d05b4f723a242", null ],
     [ "srchWolfTag", "classdaNpcKasiKyu__c.html#a6d27c1cca5e1f62089c497e8e6e726b8", null ],
     [ "step", "classdaNpcKasiKyu__c.html#a1c652fcfcd255a86671d701c33d5a60c", null ],

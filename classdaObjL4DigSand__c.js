@@ -1,12 +1,14 @@
 var classdaObjL4DigSand__c =
 [
     [ "action", "classdaObjL4DigSand__c.html#aa1d00a807c76f313413798c5091d8838", null ],
-    [ "Create", "classdaObjL4DigSand__c.html#a517db74619362b096165259efe838104", null ],
-    [ "create1st", "classdaObjL4DigSand__c.html#acc20e8db212d55d5023a4e87fbca523b", null ],
-    [ "CreateHeap", "classdaObjL4DigSand__c.html#a2a7ff1c0c5bf9f9a823ab0943d026765", null ],
-    [ "Delete", "classdaObjL4DigSand__c.html#a2af882bfceceeb2b024a03fe5929bcb5", null ],
-    [ "Draw", "classdaObjL4DigSand__c.html#aae031055fb26bdd4605589191df977d9", null ],
-    [ "Execute", "classdaObjL4DigSand__c.html#a475867e1df340297a720d9b0abd3bede", null ],
+    [ "Create", "classdaObjL4DigSand__c.html#af1a4ff853e3fad655b9dcb96af420be0", null ],
+    [ "create1st", "classdaObjL4DigSand__c.html#a4aa159b53b821cdd08fd916b00bb7a93", null ],
+    [ "CreateHeap", "classdaObjL4DigSand__c.html#ad5cb787e42f3d15b84dfee478d205e37", null ],
+    [ "Delete", "classdaObjL4DigSand__c.html#a28c67d560ab9bd8b0d8a311b2474018f", null ],
+    [ "Draw", "classdaObjL4DigSand__c.html#a63e8cc5ac31a8b2d7f6badecc0759272", null ],
+    [ "endDig", "classdaObjL4DigSand__c.html#a98fc57abee361d45a7fcaaef821534ea", null ],
+    [ "Execute", "classdaObjL4DigSand__c.html#acfe061c3a98e579f5a6389c562f272fa", null ],
+    [ "getSwNo", "classdaObjL4DigSand__c.html#aca3a8882a3f86568fc70d9600ecec0a4", null ],
     [ "initBaseMtx", "classdaObjL4DigSand__c.html#a1b041838a906860c550d5ad454411dee", null ],
     [ "mode_dig", "classdaObjL4DigSand__c.html#a72af0af4f402288249219a59fca9a8e3", null ],
     [ "mode_end", "classdaObjL4DigSand__c.html#ac86ce3eead8883df1087785c5a6e3776", null ],
@@ -15,5 +17,15 @@ var classdaObjL4DigSand__c =
     [ "mode_init_wait", "classdaObjL4DigSand__c.html#a99acdc9d5773e6eb5fa4d5567648090d", null ],
     [ "mode_wait", "classdaObjL4DigSand__c.html#aaa8d17013cd60d924bcc6820d90468d6", null ],
     [ "setBaseMtx", "classdaObjL4DigSand__c.html#abbb769c6c8941fe59b86aec68aa3e2c4", null ],
-    [ "field_0x568", "classdaObjL4DigSand__c.html#af191f7a00f85364686d84b59b99630df", null ]
+    [ "startDig", "classdaObjL4DigSand__c.html#aed746d6733e149cf26f72b737959daa0", null ],
+    [ "field_0x941", "classdaObjL4DigSand__c.html#ab71d673ea8414eed65d85886011edbd4", null ],
+    [ "mAcch", "classdaObjL4DigSand__c.html#abd820282acf7efd3e986a1df9f1bf5e2", null ],
+    [ "mAcchCir", "classdaObjL4DigSand__c.html#a16ea4e5e92bfb673c1bc61f81789f869", null ],
+    [ "mCcCyl", "classdaObjL4DigSand__c.html#a552671776abae191b93e3189c2641010", null ],
+    [ "mCcStts", "classdaObjL4DigSand__c.html#a57fbf1c11c05e77c80b8db41a4933572", null ],
+    [ "mGroundY", "classdaObjL4DigSand__c.html#a09afeefc55b06e99f906a8bf24b569d9", null ],
+    [ "mMode", "classdaObjL4DigSand__c.html#ac6df66f31161edd1fd2287f3badf78ef", null ],
+    [ "mPhase", "classdaObjL4DigSand__c.html#ad1f07c9879ad6f954203b72d9d06db0b", null ],
+    [ "mpModel", "classdaObjL4DigSand__c.html#a32168a3a28f93daca0ccd9eb68b1f73d", null ],
+    [ "mTimer", "classdaObjL4DigSand__c.html#a9da2816790858d2d887e8a015768cac9", null ]
 ];

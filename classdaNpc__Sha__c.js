@@ -21,7 +21,7 @@ var classdaNpc__Sha__c =
     [ "evtTalk", "classdaNpc__Sha__c.html#aa6e4e366c677f9215c7b2ff58efecb1a", null ],
     [ "Execute", "classdaNpc__Sha__c.html#ac0a5ecbc772c5fe944b674e481800a3f", null ],
     [ "getBackboneJointNo", "classdaNpc__Sha__c.html#a699a2d2d46c41310ad3dfa0842fc5da8", null ],
-    [ "getEyeballMaterialNo", "classdaNpc__Sha__c.html#a204e5ae7bc51a15bc1b860a053062d59", null ],
+    [ "getEyeballMaterialNo", "classdaNpc__Sha__c.html#a12ed1eb7dc9959fd2d92aa58beac01fa", null ],
     [ "getHeadJointNo", "classdaNpc__Sha__c.html#a839761e9b7195f62e0615a7eeec8eb52", null ],
     [ "getNeckJointNo", "classdaNpc__Sha__c.html#a913f22e326a8f2e1dda0763411f916e0", null ],
     [ "getSceneChangeNoTableIx", "classdaNpc__Sha__c.html#a3dcd044a6b00277d8b10c277faa530b1", null ],

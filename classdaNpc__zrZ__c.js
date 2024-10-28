@@ -84,7 +84,7 @@ var classdaNpc__zrZ__c =
     [ "setLightPos", "classdaNpc__zrZ__c.html#ae68c9a94f4bf96442617d2373d964995", null ],
     [ "setLookMode", "classdaNpc__zrZ__c.html#ae59c1b20edcfa102dbba72dc517c7856", null ],
     [ "setMotion", "classdaNpc__zrZ__c.html#abb1e329625fe425ca278f4382a8472bc", null ],
-    [ "setMotionAnm", "classdaNpc__zrZ__c.html#a429d33fa99a2a2c666848a0df9386f0b", null ],
+    [ "setMotionAnm", "classdaNpc__zrZ__c.html#a31440c4a1d0462a37b1a3f5c20b40639", null ],
     [ "setMtx", "classdaNpc__zrZ__c.html#a0d87f90d97ab0e1c2e01e16ca1b65712", null ],
     [ "setParam", "classdaNpc__zrZ__c.html#a652bde4174228c80b1aad4746ae7830f", null ],
     [ "setSkipZev", "classdaNpc__zrZ__c.html#acbd7016ad5dcf3a398d63180104d5762", null ],

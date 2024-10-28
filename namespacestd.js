@@ -1,6 +1,7 @@
 var namespacestd =
 [
     [ "__bitset_base", "classstd_1_1____bitset__base.html", "classstd_1_1____bitset__base" ],
+    [ "__bitset_base< 1 >", "classstd_1_1____bitset__base_3_011_01_4.html", "classstd_1_1____bitset__base_3_011_01_4" ],
     [ "bitset", "classstd_1_1bitset.html", "classstd_1_1bitset" ],
     [ "less", "structstd_1_1less.html", null ],
     [ "less__template0", "structstd_1_1less____template0.html", null ],
@@ -20,6 +21,7 @@ var namespacestd =
     [ "advance_pointer", "namespacestd.html#afda64b5b39740e2895f196c18d8c253e", null ],
     [ "copy", "namespacestd.html#a38eee0a33c6ef400fd55de76501a38a2", null ],
     [ "copy_backward", "namespacestd.html#aca79d7fe3ae5d474756f1723db29ca0a", null ],
+    [ "fabs", "namespacestd.html#a129e9720fb2c7ff9a834742e998e655f", null ],
     [ "fabsf", "namespacestd.html#ad597fff9551b0e00a747bdb1ea300c24", null ],
     [ "fill", "namespacestd.html#ad843aca2b74c16de90356cb8e6b08117", null ],
     [ "find_if", "namespacestd.html#a964f8b7917a5e7dbc4110fd12f0c95f8", null ],

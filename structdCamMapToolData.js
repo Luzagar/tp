@@ -2,6 +2,7 @@ var structdCamMapToolData =
 [
     [ "dCamMapToolData", "structdCamMapToolData.html#af83b77d4195f4557321a078fc02a30e2", null ],
     [ "Clr", "structdCamMapToolData.html#a30c1a512c424ca487429213a1a86865e", null ],
+    [ "operator=", "structdCamMapToolData.html#ab1d84746b960508e63b0fdf9e6f0f6c6", null ],
     [ "Set", "structdCamMapToolData.html#a58590e7ea4d10ea2c023f4b3669d232a", null ],
     [ "field_0x0", "structdCamMapToolData.html#a102ee58e53eb8710811abcc7e2e0a066", null ],
     [ "field_0x18", "structdCamMapToolData.html#ac3f7ed8f54dfdb3db96e256866eb9a35", null ],

@@ -26,7 +26,7 @@ var classdaNpc__Yelia__c =
     [ "evtTalk", "classdaNpc__Yelia__c.html#ac83fee5c8db2353eb938a7cd465b590a", null ],
     [ "Execute", "classdaNpc__Yelia__c.html#af2450f9a136974ae461de2325e251e24", null ],
     [ "getBackboneJointNo", "classdaNpc__Yelia__c.html#aadd1b51a470b10c842285a3229005286", null ],
-    [ "getEyeballMaterialNo", "classdaNpc__Yelia__c.html#ae713c2a348ae49515f2696f18e4ad19d", null ],
+    [ "getEyeballMaterialNo", "classdaNpc__Yelia__c.html#a52e536ec30d40545f2591c639bcb4bf0", null ],
     [ "getHeadJointNo", "classdaNpc__Yelia__c.html#afb9f20765e2959b84f6463c253d5902b", null ],
     [ "getNeckJointNo", "classdaNpc__Yelia__c.html#a650d26fc51b8ce4604157bf7ce0bbd06", null ],
     [ "getType", "classdaNpc__Yelia__c.html#a416f2c81dae2ba28a10d3bafe0e47235", null ],

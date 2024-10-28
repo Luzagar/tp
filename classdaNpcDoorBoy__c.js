@@ -21,7 +21,7 @@ var classdaNpcDoorBoy__c =
     [ "setAction", "classdaNpcDoorBoy__c.html#afc50ff346002e94c88d16e0ad5183523", null ],
     [ "setAttnPos", "classdaNpcDoorBoy__c.html#ada4a6f7e2850ce2007fddc9a1be0d4d6", null ],
     [ "setMotion", "classdaNpcDoorBoy__c.html#a7abb319755ac2f4aeeabe7ad4d71aff1", null ],
-    [ "setMotionAnm", "classdaNpcDoorBoy__c.html#a75b618b75eae759a04682b00c17d0032", null ],
+    [ "setMotionAnm", "classdaNpcDoorBoy__c.html#aed282a7567c15ebef949bbb1a4cdf466", null ],
     [ "setParam", "classdaNpcDoorBoy__c.html#a3fd90bfac0c1c3ef9e437bb6c9ecdbfb", null ],
     [ "talk", "classdaNpcDoorBoy__c.html#aeaba2116fa6c1e1d418fb48f84f41eb0", null ],
     [ "wait", "classdaNpcDoorBoy__c.html#a58ad70a00741a50897d85906058af7e2", null ],

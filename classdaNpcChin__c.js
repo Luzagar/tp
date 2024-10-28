@@ -53,7 +53,7 @@ var classdaNpcChin__c =
     [ "setExpressionTalkAfter", "classdaNpcChin__c.html#ad3e3525985be0caa3af6890254663fbb", null ],
     [ "setLookMode", "classdaNpcChin__c.html#ac456b65d4e0e8f93b7f6afe95ef15f20", null ],
     [ "setMotion", "classdaNpcChin__c.html#a7b465b70a728861e63c30206961dd65b", null ],
-    [ "setMotionAnm", "classdaNpcChin__c.html#ae880bbff3b5cb6bf4f85fbe9159af653", null ],
+    [ "setMotionAnm", "classdaNpcChin__c.html#a1d10daf7e5d2c3c21539f6557a17d5c2", null ],
     [ "setMtx", "classdaNpcChin__c.html#a971cecadaf9d6ea5f97b34460b728997", null ],
     [ "setParam", "classdaNpcChin__c.html#aa16a907c2be217479319d8e5d2d8bc01", null ],
     [ "SphereReset", "classdaNpcChin__c.html#a3bcb91015700406f18b11c3827531977", null ],

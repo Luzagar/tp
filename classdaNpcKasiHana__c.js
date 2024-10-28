@@ -50,7 +50,7 @@ var classdaNpcKasiHana__c =
     [ "setAttnPos", "classdaNpcKasiHana__c.html#a41fe556750560f5c3a3352e6e0b5ad0d", null ],
     [ "setLookMode", "classdaNpcKasiHana__c.html#a1b3b1492b4ae3d020ac93f4885e063f4", null ],
     [ "setMotion", "classdaNpcKasiHana__c.html#a9f55f4dfbb711cc72a76f1ab1bc73cf2", null ],
-    [ "setMotionAnm", "classdaNpcKasiHana__c.html#abbecb3b73a18e8baf5cc6f066f442751", null ],
+    [ "setMotionAnm", "classdaNpcKasiHana__c.html#a057958b836b10af676b3bd1de6551363", null ],
     [ "setParam", "classdaNpcKasiHana__c.html#ab6f74b4701ffbf6a7dad42d8d0bc80c6", null ],
     [ "srchWolfTag", "classdaNpcKasiHana__c.html#a0749fd8fe20c50558c3791637cb1d683", null ],
     [ "step", "classdaNpcKasiHana__c.html#acea02dfc80d4f76c52766d45560ff1ed", null ],

@@ -8,6 +8,7 @@ var d__camera_8h =
     [ "dCamera_event_param", "structdCamera__event__param.html", "structdCamera__event__param" ],
     [ "dCamera_event_data", "structdCamera__event__data.html", "structdCamera__event__data" ],
     [ "dCamera_type_data", "structdCamera__type__data.html", "structdCamera__type__data" ],
+    [ "camSphChkdata", "structcamSphChkdata.html", "structcamSphChkdata" ],
     [ "dCamera_c", "structdCamera__c.html", "structdCamera__c" ],
     [ "dCamera_c::dCamInfo_c", "classdCamera__c_1_1dCamInfo__c.html", "classdCamera__c_1_1dCamInfo__c" ],
     [ "dCamera_c::dCamera_pad_info", "structdCamera__c_1_1dCamera__pad__info.html", "structdCamera__c_1_1dCamera__pad__info" ],
@@ -17,5 +18,6 @@ var d__camera_8h =
     [ "engine_fn", "d__camera_8h.html#a17b00a7de6781cd19e6d0129199ff065", null ],
     [ "dCam_getBody", "d__camera_8h.html#a6c2469a75faa34cfe403dcbb6bb76e54", null ],
     [ "dCam_getCamera", "d__camera_8h.html#a2dc3bbed7e373067aa9e688af510fbdf", null ],
-    [ "dCam_getControledAngleY", "d__camera_8h.html#adc14139782dda2ad4822e354339f17b5", null ]
+    [ "dCam_getControledAngleY", "d__camera_8h.html#adc14139782dda2ad4822e354339f17b5", null ],
+    [ "dComIfGp_getAttention", "d__camera_8h.html#a197a88fcad3d5cdb924fc66af2b0826e", null ]
 ];

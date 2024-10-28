@@ -6,6 +6,7 @@ var classdBgS__GrpPassChk =
     [ "MaskWaterGrp", "classdBgS__GrpPassChk.html#a6e6d8402b88b32c0aab819fd343353c8", null ],
     [ "OffFullGrp", "classdBgS__GrpPassChk.html#adbe363484293dd95ef763134d230ec7c", null ],
     [ "OffNormalGrp", "classdBgS__GrpPassChk.html#aaec123e22b86f4437625bf1299e780bc", null ],
+    [ "OffWaterGrp", "classdBgS__GrpPassChk.html#ab0bf3b3e6e884f4e3d47c50f7f2bd24e", null ],
     [ "OnAll", "classdBgS__GrpPassChk.html#ada839334abb1788484b11029d7b47768", null ],
     [ "OnNormalGrp", "classdBgS__GrpPassChk.html#ad22bebf5099e935adbceef5ced0686e5", null ],
     [ "OnSpl", "classdBgS__GrpPassChk.html#a478733d049d648d89dd3d4766faa483e", null ],

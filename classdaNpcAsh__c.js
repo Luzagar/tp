@@ -84,7 +84,7 @@ var classdaNpcAsh__c =
     [ "setExpressionTalkAfter", "classdaNpcAsh__c.html#aeccea20688d383e6a30b89afd265f184", null ],
     [ "setLookMode", "classdaNpcAsh__c.html#adcdc2daedc4d2662da4e63e036407455", null ],
     [ "setMotion", "classdaNpcAsh__c.html#ae06c847109f82acd645aa22a6a3d1717", null ],
-    [ "setMotionAnm", "classdaNpcAsh__c.html#af9ba1616f23c7287b18be4233201655c", null ],
+    [ "setMotionAnm", "classdaNpcAsh__c.html#a5f2ba42bbb8350a94a611e789ec46f79", null ],
     [ "setParam", "classdaNpcAsh__c.html#a6269f5c0ae40d97cbec14ed0ced6f4d3", null ],
     [ "step", "classdaNpcAsh__c.html#a32f916090d24e234cb5967d46d3bed2d", null ],
     [ "talk", "classdaNpcAsh__c.html#a7b8dd376b3aea8c9b160cea9ada41165", null ],

@@ -33,7 +33,7 @@ var classdaNpc__grR__c =
     [ "setExpressionTalkAfter", "classdaNpc__grR__c.html#a634d1c37b5fea5efc83ba1689c7e4dd7", null ],
     [ "setLookMode", "classdaNpc__grR__c.html#add426b02d7367bc42aada88ed59002bb", null ],
     [ "setMotion", "classdaNpc__grR__c.html#a292fc045528cd9ecc65258d0466e4158", null ],
-    [ "setMotionAnm", "classdaNpc__grR__c.html#a3b84748e2714eca65082e21842acf09b", null ],
+    [ "setMotionAnm", "classdaNpc__grR__c.html#a4f8837417cc4e6ef7c5f58c1412054b5", null ],
     [ "setParam", "classdaNpc__grR__c.html#aa5ddd13bc33d9a492884bc688c4bc5b2", null ],
     [ "talk", "classdaNpc__grR__c.html#a0e0a879d2fb15e3e2761c28049548f7b", null ],
     [ "test", "classdaNpc__grR__c.html#a60b535901ffa6e53b415ec9ad678ed41", null ],

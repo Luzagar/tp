@@ -7,5 +7,5 @@ var structstage__scls__info__class =
     [ "mRoom", "structstage__scls__info__class.html#a926f8462fc2cfb21d49e0b4dfc13dd4f", null ],
     [ "mStage", "structstage__scls__info__class.html#a293353055ea4d39788f16889e4faba06", null ],
     [ "mStart", "structstage__scls__info__class.html#a01f48b80bf3e72204a74eeb358466a7f", null ],
-    [ "mWipe", "structstage__scls__info__class.html#a0b6571c08d276d66d7307ad751216f92", null ]
+    [ "mWipe", "structstage__scls__info__class.html#aa32716ea656a6f0bee6246e5d22b6461", null ]
 ];

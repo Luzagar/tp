@@ -46,6 +46,7 @@ var classcCcD__ObjHitInf =
     [ "OnAtSetBit", "classcCcD__ObjHitInf.html#a042ed94991bcbea76306b73bf5227364", null ],
     [ "OnAtSPrmBit", "classcCcD__ObjHitInf.html#a2617cc1feeb15b321459f4ba327a90ed", null ],
     [ "OnAtVsPlayerBit", "classcCcD__ObjHitInf.html#a1f37967b202af0fc389ebb8ec5313b0b", null ],
+    [ "OnCoNoCrrBit", "classcCcD__ObjHitInf.html#ae6519752224e84fb177db90ab445aac5", null ],
     [ "OnCoSetBit", "classcCcD__ObjHitInf.html#ad9fc48ed889322fec4e3f93d5dd0a5d6", null ],
     [ "OnCoSPrmBit", "classcCcD__ObjHitInf.html#a6b0fb2f2ddddc617af6d4b29ec8c38b8", null ],
     [ "OnTgSetBit", "classcCcD__ObjHitInf.html#a460bdd8e4d5ac0606497fc730c3d3040", null ],

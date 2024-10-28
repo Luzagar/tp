@@ -31,7 +31,7 @@ var classdaNpcBouS__c =
     [ "setExpressionAnm", "classdaNpcBouS__c.html#a9b5e0dfc8ce94f2c71be2616579c5673", null ],
     [ "setExpressionBtp", "classdaNpcBouS__c.html#afc13f7c66ef133d80071a95e9d298ca1", null ],
     [ "setMotion", "classdaNpcBouS__c.html#a90be0110271f3fd24e3a2303dbc738d2", null ],
-    [ "setMotionAnm", "classdaNpcBouS__c.html#a4e415cd894ebb846d41423ed400c148d", null ],
+    [ "setMotionAnm", "classdaNpcBouS__c.html#a25a36f9ee78f4160be30c388fd9394aa", null ],
     [ "setParam", "classdaNpcBouS__c.html#aa079031e996cb52f27ff26c8f3be06cf", null ],
     [ "talk", "classdaNpcBouS__c.html#a9cfdc3cdff62d9ad1376946250824330", null ],
     [ "wait", "classdaNpcBouS__c.html#a769c1c5c38a43663f05ea4da262d8892", null ],

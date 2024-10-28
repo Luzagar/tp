@@ -40,7 +40,7 @@ var classdaNpc__GWolf__c =
     [ "setHowlingFlag", "classdaNpc__GWolf__c.html#aa74783ddb4c05c82d8421693d8d6ecf0", null ],
     [ "setLookMode", "classdaNpc__GWolf__c.html#a839a96cd67634113a4dfe5725beadb3e", null ],
     [ "setMotion", "classdaNpc__GWolf__c.html#aafeea23c3c7cb9112ade75ed2865d4a6", null ],
-    [ "setMotionAnm", "classdaNpc__GWolf__c.html#a1f211149e61610162e898c02951a3a24", null ],
+    [ "setMotionAnm", "classdaNpc__GWolf__c.html#a410cb3567c217b07aba1c30b3d05fdd1", null ],
     [ "setParam", "classdaNpc__GWolf__c.html#a7ab9be78e670f750d8e0211c2f0a6b11", null ],
     [ "talk", "classdaNpc__GWolf__c.html#a76583fd61b44ea74062d6289a8504e8a", null ],
     [ "test", "classdaNpc__GWolf__c.html#abf0c897c5210a64cb69738e5a2178376", null ],

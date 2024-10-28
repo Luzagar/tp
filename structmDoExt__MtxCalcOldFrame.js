@@ -4,6 +4,7 @@ var structmDoExt__MtxCalcOldFrame =
     [ "decOldFrameMorfCounter", "structmDoExt__MtxCalcOldFrame.html#aadcff3adc2bee27a99034bf256dbb868", null ],
     [ "getOldFrameEndJoint", "structmDoExt__MtxCalcOldFrame.html#acdf7618264f0d32c4ac5339d46e6a1c0", null ],
     [ "getOldFrameFlg", "structmDoExt__MtxCalcOldFrame.html#a82371ea85787ef5df0da1111b07319d7", null ],
+    [ "getOldFrameMorfCounter", "structmDoExt__MtxCalcOldFrame.html#a2b13d68ddd42d0e35c908c5582d8f111", null ],
     [ "getOldFrameQuaternion", "structmDoExt__MtxCalcOldFrame.html#a429f8730b83440f495ade342ec4be36b", null ],
     [ "getOldFrameRate", "structmDoExt__MtxCalcOldFrame.html#a271b48bfcd5dcbe9df4c6da20dd9a958", null ],
     [ "getOldFrameStartJoint", "structmDoExt__MtxCalcOldFrame.html#abdbef24a543f5c269d9f9de62dfa3f05", null ],

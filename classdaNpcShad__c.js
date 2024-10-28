@@ -38,7 +38,7 @@ var classdaNpcShad__c =
     [ "setExpressionAnm", "classdaNpcShad__c.html#aad0b27bbfc15d8e9f083f5d223f6c4ae", null ],
     [ "setExpressionBtp", "classdaNpcShad__c.html#ad0841b9c544077ac7a6591561bcf5913", null ],
     [ "setMotion", "classdaNpcShad__c.html#a895fbb4b08e2e971b36839a74357da99", null ],
-    [ "setMotionAnm", "classdaNpcShad__c.html#a3cc54af2adb133a04cfd0bdd2cd86974", null ],
+    [ "setMotionAnm", "classdaNpcShad__c.html#a4dc4a3aafec322a17821b3fdc66ba592", null ],
     [ "setParam", "classdaNpcShad__c.html#afc38e3d32147f9c5612aed88f2f3d80f", null ],
     [ "setWaitAction", "classdaNpcShad__c.html#a67a61fce6b2e8741f88ac5f9a97ad722", null ],
     [ "talk", "classdaNpcShad__c.html#a833285fda58778434cee16f6fb378878", null ],

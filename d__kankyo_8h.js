@@ -43,6 +43,7 @@ var d__kankyo_8h =
     [ "dKy_BossSpotLight_set", "d__kankyo_8h.html#ae13830435a48dd9a589a6fbf3a6c11cb", null ],
     [ "dKy_calc_color_set", "d__kankyo_8h.html#ab4a7f36df6c0b57c26c483575e59578b", null ],
     [ "dKy_camera_water_in_status_check", "d__kankyo_8h.html#a0419e62f4dbce1d3e7b859a638185f41", null ],
+    [ "dKy_camera_water_in_status_set", "d__kankyo_8h.html#a55375fc910f71c32339a0d1ee67bb0c3", null ],
     [ "dKy_change_colpat", "d__kankyo_8h.html#af610b200181ac6b832f5eeb01af897b3", null ],
     [ "dKy_clear_game_init", "d__kankyo_8h.html#ab23db60cf2078015176af7c5783c087d", null ],
     [ "dKy_custom_colset", "d__kankyo_8h.html#a3d8a80819ec202c93f2165d42a2ac046", null ],

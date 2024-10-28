@@ -27,7 +27,7 @@ var classdaNpcPray__c =
     [ "setAttnPos", "classdaNpcPray__c.html#a52cd0487aa1c517636e5b224b7ea2155", null ],
     [ "setLookMode", "classdaNpcPray__c.html#ad94bda6554fa5240523eda46f4f4240a", null ],
     [ "setMotion", "classdaNpcPray__c.html#ad9cce5d84c0d28021109aa3be7c3dd96", null ],
-    [ "setMotionAnm", "classdaNpcPray__c.html#a5b5ae30ae717fe00c430dc1f06c9e077", null ],
+    [ "setMotionAnm", "classdaNpcPray__c.html#a6a1773ee39f495a1082d4ee3172f002c", null ],
     [ "setParam", "classdaNpcPray__c.html#a9cb283ed2ec8ac586e4e97a22e340f24", null ],
     [ "step", "classdaNpcPray__c.html#ae728cb9c4794cd6b9ef6c93ba86270f2", null ],
     [ "talk", "classdaNpcPray__c.html#af69c661d32c6298b2cdc1ed43c36d171", null ],

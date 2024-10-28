@@ -45,6 +45,7 @@ var structdPa__control__c =
     [ "getRM_ID", "structdPa__control__c.html#ad7cb1f36ee598e943464be0a17b437dd", null ],
     [ "getSimple", "structdPa__control__c.html#a095389ccf59205c85b064499e3d7de7c", null ],
     [ "getTsuboSelectTexEcallBack", "structdPa__control__c.html#a795c39668667807939366d32b219a6ac", null ],
+    [ "getWaterBubblePcallBack", "structdPa__control__c.html#a690700c0c98a0f77699b908db7f168a8", null ],
     [ "isStatus", "structdPa__control__c.html#a84e0e1556690079961b6f4079c09ee6a", null ],
     [ "levelAllForceOnEventMove", "structdPa__control__c.html#a7e5267b2e143d68dec219f497aa18471", null ],
     [ "newSimple", "structdPa__control__c.html#ad293a70b16da4d8b49d84980c1ce13fd", null ],
@@ -92,6 +93,6 @@ var structdPa__control__c =
     [ "mSceneResMng", "structdPa__control__c.html#aff09cad104c222d0792396a21fe977ec", null ],
     [ "mStatus", "structdPa__control__c.html#a06aba0c81dd86ce7f96f45f0eb8d317f", null ],
     [ "mTsubo", "structdPa__control__c.html#a993678162f6e4018d1dc6aed9312dcfe", null ],
-    [ "mWaterBubblePcallBack", "structdPa__control__c.html#a8916d21d1993df2effd6dc1d90cf0df9", null ],
+    [ "mWaterBubblePcallBack", "structdPa__control__c.html#a0964d2a59e3ef1947de83b1bd6b7f369", null ],
     [ "mWindViewMatrix", "structdPa__control__c.html#a4cf0e2dbd977bd391d05c52065bc2624", null ]
 ];

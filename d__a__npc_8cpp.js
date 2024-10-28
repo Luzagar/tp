@@ -607,8 +607,6 @@ var d__a__npc_8cpp =
     [ "lit_5241", "d__a__npc_8cpp.html#a6f0f9791d23cbb9fb050e9480af6649d", null ],
     [ "lit_5258", "d__a__npc_8cpp.html#ac958c3df0e6f38c6ffee57486b1fbbed", null ],
     [ "lit_5410", "d__a__npc_8cpp.html#a67b365edae296c0478336298248c3616", null ],
-    [ "lit_5422", "d__a__npc_8cpp.html#a8e08bc592269505040e6a7f09a6a3614", null ],
-    [ "lit_5423", "d__a__npc_8cpp.html#a2ab263f19083c7389511775edc325956", null ],
     [ "lit_5459", "d__a__npc_8cpp.html#a5e4397e9c0b32b77b599a6fbe49198fa", null ],
     [ "lit_5460", "d__a__npc_8cpp.html#af4bb938ee83619d4a8f57f993151e510", null ],
     [ "lit_5667", "d__a__npc_8cpp.html#a09df7b87a7ea27a9be6640ccce5c66e4", null ],

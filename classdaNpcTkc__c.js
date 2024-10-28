@@ -31,11 +31,14 @@ var classdaNpcTkc__c =
     [ "setExpressionAnm", "classdaNpcTkc__c.html#a614fe57c659d667ab7f40964502f401d", null ],
     [ "setExpressionBtp", "classdaNpcTkc__c.html#adc662f167ffecda60ed6349e7bee4e08", null ],
     [ "setMotion", "classdaNpcTkc__c.html#ab320a315276d3fd3164cdb4baabf7dd1", null ],
-    [ "setMotionAnm", "classdaNpcTkc__c.html#aa7a63cb01869bca5907b9b393f37cbc5", null ],
+    [ "setMotionAnm", "classdaNpcTkc__c.html#af3fd8644662da33d5ea2258677df4eca", null ],
     [ "setMtx", "classdaNpcTkc__c.html#a00b1a6dc1ca699ec20f98a9dc0fc676a", null ],
     [ "setParam", "classdaNpcTkc__c.html#a82f3128efd6542ba4ea4ef393608db37", null ],
+    [ "setStart", "classdaNpcTkc__c.html#afd42c89c5b1e35b6fd57a9aee7134914", null ],
     [ "wait", "classdaNpcTkc__c.html#a144e9b7fb339090e85f413dd117792e1", null ],
     [ "warpTalk", "classdaNpcTkc__c.html#a68f038aa33ba5ac427545c9e89331846", null ],
-    [ "field_0x568", "classdaNpcTkc__c.html#a56c5a0a976cbc596611c3063054146a7", null ],
+    [ "field_0x568", "classdaNpcTkc__c.html#a06a26dd250eb900aa44483ef1c78ac05", null ],
+    [ "field_0xd7a", "classdaNpcTkc__c.html#a70f0cd86ce0a5435f8b45c5d784b51c6", null ],
+    [ "field_0xd7b", "classdaNpcTkc__c.html#acf05e97fd76810c6c90ab2e49ab260a7", null ],
     [ "mEvtSeqList", "classdaNpcTkc__c.html#a52f4a207cdc108169a035ce3afba4b33", null ]
 ];

@@ -48,7 +48,7 @@ var classdaNpcWrestler__c =
     [ "setExpressionAnm", "classdaNpcWrestler__c.html#aea69a0e2113e0e2f723da6b513dfadc7", null ],
     [ "setExpressionBtp", "classdaNpcWrestler__c.html#aed82e957e1b6e8c255f1daf708798ba7", null ],
     [ "setMotion", "classdaNpcWrestler__c.html#a84cda92dcd7262f951fc4e88f8d3135f", null ],
-    [ "setMotionAnm", "classdaNpcWrestler__c.html#a7c82ba53441f72df7bc42087a955cd26", null ],
+    [ "setMotionAnm", "classdaNpcWrestler__c.html#a83749634e0d1c6f2633532aa34851abd", null ],
     [ "setNextAction", "classdaNpcWrestler__c.html#aebffed42d46d002728ce0eb1b4b09674", null ],
     [ "setOnToArena", "classdaNpcWrestler__c.html#afca3557a604648c4158e9c03fc3acadc", null ],
     [ "setParam", "classdaNpcWrestler__c.html#a0fe01e4f14c4994a338fbcf770277929", null ],

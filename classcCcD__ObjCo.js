@@ -10,6 +10,7 @@ var classcCcD__ObjCo =
     [ "GetGrp", "classcCcD__ObjCo.html#a066f974d8415fd97ed72c9378ba27a2d", null ],
     [ "GetIGrp", "classcCcD__ObjCo.html#a85fcc614375a8552aa54d04b83f95b9a", null ],
     [ "GetVsGrp", "classcCcD__ObjCo.html#abad53e4310506fb2e41039264f38bc9a", null ],
+    [ "OnNoCrrBit", "classcCcD__ObjCo.html#aa350b385f633cfdbaa84bb59c79eed20", null ],
     [ "Set", "classcCcD__ObjCo.html#a34f5d50a891700136f2463d4d238b262", null ],
     [ "SetHit", "classcCcD__ObjCo.html#acb9e74810187aa48cef3548b6c82337a", null ],
     [ "SetIGrp", "classcCcD__ObjCo.html#ae9d8e7ca86a7b85e20c681e8d20fc1dc", null ],

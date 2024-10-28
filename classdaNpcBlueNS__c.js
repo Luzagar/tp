@@ -48,7 +48,7 @@ var classdaNpcBlueNS__c =
     [ "setAttnPos", "classdaNpcBlueNS__c.html#aa8e9e884e207c5f53a43e499d5051abf", null ],
     [ "setLookMode", "classdaNpcBlueNS__c.html#a4254742db9d29aaa0d4479c898ef3232", null ],
     [ "setMotion", "classdaNpcBlueNS__c.html#a7e32a4106b0c8244d111d9797f2ff779", null ],
-    [ "setMotionAnm", "classdaNpcBlueNS__c.html#af9128033135880c2edcb832fdf8c24f1", null ],
+    [ "setMotionAnm", "classdaNpcBlueNS__c.html#ab7631edf37380fa15b81f27da9874bc3", null ],
     [ "setParam", "classdaNpcBlueNS__c.html#a9f730557b13fa995cc09a1cbd3a8db75", null ],
     [ "srchActor", "classdaNpcBlueNS__c.html#a56b43d17df12aa5548cdd501d43a555f", null ],
     [ "srchHollyBall", "classdaNpcBlueNS__c.html#a1bad31fca0e7b7cb2b58a550a3bac280", null ],
