@@ -416,7 +416,7 @@ public:
 
 class daAlinkHIO_frontRoll_c0 {
 public:
-    static daAlinkHIO_frontRoll_c1 const m;
+    static daAlinkHIO_frontRoll_c1 m;
 };
 
 class daAlinkHIO_frontRoll_c : public daAlinkHIO_data_c {
@@ -2198,7 +2198,7 @@ public:
 
 class daAlinkHIO_hookshot_c0 {
 public:
-    static daAlinkHIO_hookshot_c1 const m;
+    static daAlinkHIO_hookshot_c1 m;
 };
 
 class daAlinkHIO_hookshot_c : public daAlinkHIO_data_c {
@@ -2690,7 +2690,7 @@ public:
 
 class daAlinkHIO_swim_c0 {
 public:
-    static daAlinkHIO_swim_c1 const m;
+    static daAlinkHIO_swim_c1 m;
 };
 
 class daAlinkHIO_swim_c : public daAlinkHIO_data_c {
@@ -2766,7 +2766,7 @@ public:
 
 class daAlinkHIO_wlMove_c0 {
 public:
-    static daAlinkHIO_wlMove_c1 const m;
+    static daAlinkHIO_wlMove_c1 m;
 };
 
 class daAlinkHIO_wlMove_c : public daAlinkHIO_data_c {
@@ -8422,5 +8422,7 @@ static fopAc_ac_c* daAlink_searchLightBall(fopAc_ac_c* i_actor, void* i_data);
 inline daAlink_c* daAlink_getAlinkActorClass() {
     return (daAlink_c*)dComIfGp_getLinkPlayer();
 }
+
+extern BOOL l_debugMode;
 
 #endif /* D_A_D_A_ALINK_H */

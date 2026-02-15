@@ -21,6 +21,8 @@
 #include "f_pc/f_pc_priority.h"
 #include "m_Do/m_Do_controller_pad.h"
 
+#include "gz/gz.h"
+
 void fpcM_Draw(void* i_proc) {
     fpcDw_Execute((base_process_class*)i_proc);
 }
@@ -78,12 +80,30 @@ void fpcM_Management(fpcM_ManagementFunc i_preExecuteFn, fpcM_ManagementFunc i_p
                 i_preExecuteFn();
             }
 
-            if (!fapGm_HIO_c::isCaptureScreen()) {
+            g_gzInfo.execute();
+
+            // Handle menu pauses game setting
+            static bool l_menuPaused = false;
+            bool shouldPause = g_gzInfo.isDisplay() && gzInfo_isMenuPausesGame();
+
+            if (shouldPause && !l_menuPaused) {
+                dLib_time_c::stopTime();
+                Z2GetSoundMgr()->pauseAllGameSound(true);
+                l_menuPaused = true;
+            } else if (!shouldPause && l_menuPaused) {
+                dLib_time_c::startTime();
+                Z2GetSoundMgr()->pauseAllGameSound(false);
+                l_menuPaused = false;
+            }
+
+            if (!fapGm_HIO_c::isCaptureScreen() && !shouldPause) {
                 fpcEx_Handler((fpcLnIt_QueueFunc)fpcM_Execute);
             }
             if (!fapGm_HIO_c::isCaptureScreen() || fapGm_HIO_c::getCaptureScreenDivH() != 1) {
                 fpcDw_Handler((fpcDw_HandlerFuncFunc)fpcM_DrawIterater, (fpcDw_HandlerFunc)fpcM_Draw);
             }
+
+            g_gzInfo.draw();
 
             if (i_postExecuteFn != NULL) {
                 i_postExecuteFn();

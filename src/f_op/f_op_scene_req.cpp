@@ -10,6 +10,8 @@
 #include "f_pc/f_pc_executor.h"
 #include "f_pc/f_pc_manager.h"
 
+#include "gz/gz.h"
+
 static cPhs_Step fopScnRq_phase_ClearOverlap(scene_request_class* i_sceneReq) {
     return fopOvlpM_ClearOfReq() == 1 ? cPhs_NEXT_e : cPhs_INIT_e;
     UNUSED(i_sceneReq);
@@ -38,6 +40,9 @@ static cPhs_Step fopScnRq_phase_Done(scene_request_class* i_sceneReq) {
         (void)scene;
         fopScnPause_Disable(scene);
     }
+
+    // run callbacks after scene is entirely finished loading
+    g_gzInfo.mSaveLoaderMng.doSceneReadyCallbacks();
 
     l_fopScnRq_IsUsingOfOverlap = FALSE;
     return cPhs_NEXT_e;

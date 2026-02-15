@@ -34,6 +34,7 @@
 #include "m_Do/m_Do_ext2.h"
 #include "SSystem/SComponent/c_counter.h"
 #include <string>
+#include "gz/gz.h"
 
 #if PLATFORM_WII || PLATFORM_SHIELD
 #include <revolution/sc.h>
@@ -170,7 +171,7 @@ void HeapCheck::heapDisplay() const {
 int mDoMain::argument = -1;
 #endif
 
-s8 mDoMain::developmentMode = -1;
+s8 mDoMain::developmentMode = 1;
 
 #if DEBUG
 u32 mDoMain::gameHeapSize = 0xFFFFFFFF;

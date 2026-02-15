@@ -1,6 +1,6 @@
 #include <dolphin/card.h>
 
-#include "__card.h"
+#include <revolution/card/__card.h>
 
 static void EraseCallback(s32 chan, s32 result) {
     CARDControl* card;

@@ -265,6 +265,9 @@ public:
     void offFieldDataExistFlag() { mFieldDataExistFlag = false; }
     void onFieldDataExistFlag() { mFieldDataExistFlag = true; }
 
+    // gz
+    u8 getRegion() { return mRegion; }
+    void setRegion(u8 i_region) { mRegion = i_region; }
 
 private:
     /* 0x00 */ cXyz mPos;
@@ -403,6 +406,9 @@ public:
         }
     };
 
+    // gz
+    void setPohNum(u8 num) { mPohNum = num; }
+
 private:
     /* 0x0 */ u8 mItem[8];
     /* 0x8 */ u8 unk8;
@@ -441,6 +447,7 @@ class dSv_letter_info_c {
 public:
     void init();
     void onLetterGetFlag(int i_no);
+    void offLetterGetFlag(int i_no);
     BOOL isLetterGetFlag(int i_no) const;
     void onLetterReadFlag(int i_no);
     int isLetterReadFlag(int i_no) const;
@@ -457,6 +464,7 @@ class dSv_fishing_info_c {
 public:
     void init();
     void addFishCount(u8 i_fishIndex);
+    void setFishCount(u8 i_fishIndex, u16 i_count) { mFishCount[i_fishIndex] = i_count; }
     u16 getFishCount(u8 i_fishIndex) const { return mFishCount[i_fishIndex]; }
     u8 getMaxSize(int i_sizeIndex) const { return mMaxSize[i_sizeIndex]; }
     void setMaxSize(int i_sizeIndex, u8 i_size) { mMaxSize[i_sizeIndex] = i_size; }
@@ -706,6 +714,32 @@ public:
     dSv_memBit_c& getBit() { return mBit; }
     const dSv_memBit_c& getBit() const { return mBit; }
 
+    enum {
+    /* 0x00 */ ORDON,
+    /* 0x01 */ SEWERS,
+    /* 0x02 */ FARON,
+    /* 0x03 */ ELDIN,
+    /* 0x04 */ LANAYRU,
+    /* 0x06 */ FIELD = 6,
+    /* 0x07 */ GROVE,
+    /* 0x08 */ SNOWPEAK,
+    /* 0x09 */ TOWN,
+    /* 0x0A */ DESERT,
+    /* 0x0B */ POND,
+    /* 0x10 */ FOREST_TEMPLE = 16,
+    /* 0x11 */ GORON_MINES,
+    /* 0x12 */ LAKEBED,
+    /* 0x13 */ ARBITERS,
+    /* 0x14 */ SNOWPEAK_RUINS,
+    /* 0x15 */ TEMPLE_OF_TIME,
+    /* 0x16 */ CITY,
+    /* 0x17 */ PALACE,
+    /* 0x18 */ HYRULE_CASTLE,
+    /* 0x19 */ CAVE_1,
+    /* 0x1A */ CAVE_2,
+    /* 0x1B */ GROTTO
+    };
+
 private:
     /* 0x0 */ dSv_memBit_c mBit;
 };  // Size: 0x20
@@ -739,7 +773,6 @@ public:
 
     void reset() { mStageNo = -1; }
 
-private:
     /* 0x00 */ s8 mStageNo;
     /* 0x01 */ u8 unk1;
     /* 0x04 */ u32 mSwitch[2];
@@ -829,7 +862,8 @@ public:
         mLastAngleY = angle;
     }
 
-private:
+    void setLastMode(u32 mode) { mLastMode = mode; }
+
     /* 0x00 */ s8 mRoomNo;
     /* 0x01 */ u8 field_0x01[3];
     /* 0x04 */ s16 mStartPoint;

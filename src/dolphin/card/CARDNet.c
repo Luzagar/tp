@@ -1,7 +1,7 @@
 #include <dolphin/card.h>
 
 #include "os/__os.h"
-#include "__card.h"
+#include <dolphin/card/__card.h>
 
 u16 __CARDVendorID = 0xFFFF;
 u8 __CARDPermMask = 0x1C;

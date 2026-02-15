@@ -1,6 +1,6 @@
 #include <dolphin/card.h>
 
-#include "__card.h"
+#include <revolution/card/__card.h>
 
 #define TRUNC(n, a) (((u32)(n)) & ~((a)-1))
 

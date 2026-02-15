@@ -21,7 +21,11 @@
 
 #include <cstdlib>
  
-#if DEBUG
+#ifndef DEBUG
+extern "C" int atoi(const char* str) {
+    return strtol(str, NULL, 10);
+}
+
 void dScnMenu_setItem(int i_slotNo, u8 i_itemNo);
 void dScnMenu_setPlayerDebugMode();
 void dScnMenu_setPlayerItemReset();
@@ -510,13 +514,14 @@ u8 dSm_read_stageset(u8* i_data) {
 
 // DEBUG NONMATCHING - regalloc / stack
 int dScnMenu_Draw(dScnMenu_c* i_this) {
-    static dDlst_2DQuad_c effectQuad;
+    // something about the quads are causing crashes, so investigate later
+    /* static dDlst_2DQuad_c effectQuad;
     static dDlst_2DQuad_c effectQuad2[40];
-    static dDlst_2DQuad_c effectQuad3;
+    static dDlst_2DQuad_c effectQuad3; */
 
-    GXColor category_color = {0xFF, 0x00, 0x00, 0x3C};
+    /* GXColor category_color = {0xFF, 0x00, 0x00, 0x3C};
     effectQuad3.init(50, 55, 280, 38, category_color);
-    dComIfGd_set2DOpa(&effectQuad3);
+    dComIfGd_set2DOpa(&effectQuad3); */
 
     if (i_this->current_category != 0) {
         JUTReport(50, 55, "[%s]", i_this->category_info->data[i_this->current_category - 1].name);
@@ -591,12 +596,12 @@ int dScnMenu_Draw(dScnMenu_c* i_this) {
             memset(sub_room_desc, 32, 64);
             memcpy(sub_room_desc, &menu_info->stage_data[line_no].data[l_groupPoint[line_no]], 60);
 
-            if (i_this->current_category == menu_info->stage_data[line_no].field_0x43) {
+            /* if (i_this->current_category == menu_info->stage_data[line_no].field_0x43) {
                 GXColor sp2C = {0x00, 0x00, 0xFF, 0x37};
                 effectQuad2[effectQuad2_cnt].init(30, line_y_pos - 16, 540, line_y_pos, sp2C);
                 dComIfGd_set2DOpa(&effectQuad2[effectQuad2_cnt]);
                 effectQuad2_cnt++;
-            }
+            } */
 
             if (l_cursolID == line_no) {
                 if (fabsf(mDoCPd_c::getStickX(PAD_1)) < 0.5f) {
@@ -607,9 +612,9 @@ int dScnMenu_Draw(dScnMenu_c* i_this) {
                     JUTReport(20, line_y_pos, " %2d:%s", l_groupPoint[line_no], sub_room_desc);
                 }
 
-                GXColor sp28 = {0x00, 0x00, 0x78, 0xFF};
+                /* GXColor sp28 = {0x00, 0x00, 0x78, 0xFF};
                 effectQuad.init(30, line_y_pos - 18, 540, line_y_pos - 2, sp28);
-                dComIfGd_set2DOpa(&effectQuad);
+                dComIfGd_set2DOpa(&effectQuad); */
             } else {
                 if (fabsf(mDoCPd_c::getStickX(PAD_1)) < 0.5f) {
                     JUTReport(20, line_y_pos, "%c %2d %s", l_cursolID == line_no ? 'O' : ' ',
@@ -623,13 +628,13 @@ int dScnMenu_Draw(dScnMenu_c* i_this) {
             if (menu_info->stage_data[line_no].field_0x42 != 0xFF) {
                 JUTReport(540, line_y_pos, "+%02d", menu_info->stage_data[line_no].field_0x42);
                 if (menu_info->stage_data[line_no].field_0x42 <= 5) {
-                    u8 alpha = (menu_info->stage_data[line_no].field_0x42 / 5.0f) * 80.0f;
+                    /* u8 alpha = (menu_info->stage_data[line_no].field_0x42 / 5.0f) * 80.0f;
                     GXColor sp24 = {0x14, 0x78, 0x14, 0xDC - alpha};
 
                     effectQuad2[effectQuad2_cnt].init(540, line_y_pos - 17, 578, line_y_pos - 2,
                                                     sp24);
                     dComIfGd_set2DOpa(&effectQuad2[effectQuad2_cnt]);
-                    effectQuad2_cnt++;
+                    effectQuad2_cnt++; */
                 }
             } else {
                 JUTReport(540, line_y_pos, "***");
@@ -740,10 +745,10 @@ int dScnMenu_Draw(dScnMenu_c* i_this) {
 
     JUTReport(header_x, header_y, "_DEBUG %s %s", mDoMain::COPYDATE_STRING, "Authorized User");
 
-    if (g_presetHIO.mPresetData[0] != 0) {
+    /* if (g_presetHIO.mPresetData[0] != 0) {
         // "Preset File  In Use"
         JUTReport(450, 380, "状況ファイル　使用中");
-    }
+    } */
 
     return 1;
 }
@@ -1313,7 +1318,7 @@ block_24:
         }
     }
 
-    if (mDoCPd_c::getTrigStart(PAD_1) || g_presetHIO.field_0x2717 == 2) {
+    if (mDoCPd_c::getTrigStart(PAD_1)/*  || g_presetHIO.field_0x2717 == 2 */) {
         menu_data_class* data = &menu_info->stage_data[l_cursolID].data[l_groupPoint[l_cursolID]];
         dComIfGp_offEnableNextStage();
 
@@ -1327,11 +1332,11 @@ block_24:
         dComIfGp_setNextStage(data->stage_name, point, data->room_no, data->layer);
         setEnvData(data);
 
-        if (g_presetHIO.field_0x2717 == 2) {
+        /* if (g_presetHIO.field_0x2717 == 2) {
             g_presetHIO.field_0x2717 = 0;
             dSm_read_stageset(g_presetHIO.mPresetData);
             fopScnM_ChangeReq(i_this, PROC_MENU_SCENE, 0, 5);
-        } else {
+        } else */ {
             dScnMenu_c::cursolStageName[0] = 0;
             toGameScene(i_this);
         }
@@ -1455,7 +1460,7 @@ block_24:
     }
 
     if (S_antei_cnt > 30) {
-        g_presetHIO.exePreset();
+        //g_presetHIO.exePreset();
     } else {
         S_antei_cnt++;
     }
@@ -1478,12 +1483,12 @@ int dScnMenu_Delete(dScnMenu_c* i_this) {
     JKRFree(i_this->fontRes);
     fapGmHIO_offMenu();
 
-    if (g_presetHIO.mPresetData[0] != 0) {
+    /* if (g_presetHIO.mPresetData[0] != 0) {
         g_presetHIO.field_0x2716 = dSm_read_presettxt(g_presetHIO.mPresetData);
         if (g_presetHIO.field_0x2716 != 0) {
             dComIfG_playerStatusD();
         }
-    } else {
+    } else */ {
         dComIfGp_itemDataInit();
     }
 
@@ -1501,10 +1506,10 @@ int phase_1(dScnMenu_c* i_this) {
     "dScnMenu_Create(): TotalFreeSize=%d\n";
     OS_REPORT("Menu Create !!\n");
 
-    i_this->command = mDoDvdThd_toMainRam_c::create("/res/Menu/Menu1.dat", 0, NULL);
+    i_this->command = mDoDvdThd_toMainRam_c::create("/gz/Menu1.dat", 0, NULL);
     JUT_ASSERT(3083, i_this->command != NULL);
 
-    i_this->fontCommand = mDoDvdThd_toMainRam_c::create("/res/Menu/kanfont_fix16.bfn", 0, NULL);
+    i_this->fontCommand = mDoDvdThd_toMainRam_c::create("/gz/kanfont_fix16.bfn", 0, NULL);
     JUT_ASSERT(3086, i_this->fontCommand != NULL);
 
     dComIfG_playerStatusD();
@@ -1585,9 +1590,9 @@ int phase_2(dScnMenu_c* i_this) {
         l_groupPoint = new s8[menu_info->num];
         JUT_ASSERT(3252, l_groupPoint != NULL);
 
-        if (mDoExt_getSafeZeldaHeapSize() >= 0) {
+        /* if (mDoExt_getSafeZeldaHeapSize() >= 0) {
             mDoExt_addSafeZeldaHeapSize(-(mDoExt_getZeldaHeap()->getSize(l_groupPoint) + 0x10));
-        }
+        } */
 
         for (int i = 0; i < menu_info->num; i++) {
             l_groupPoint[i] = 0;

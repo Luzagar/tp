@@ -8,6 +8,7 @@
 #include "d/actor/d_a_e_zs.h"
 #include "f_op/f_op_actor_enemy.h"
 #include "d/actor/d_a_b_ds.h"
+#include "gz/gz.h"
 
 class daE_ZS_HIO_c {
 public:
@@ -370,7 +371,8 @@ void daE_ZS_c::executeDrive() {
 }
 
 void daE_ZS_c::action() {
-    damage_check();
+    if (!gzInfo_isCheat_InvincibleEnemies()) damage_check();
+    
     switch (mAction) {
         case ACT_APPEAR:
             executeAppear();
@@ -379,7 +381,12 @@ void daE_ZS_c::action() {
             executeWait();
             break;
         case ACT_DAMAGE:
-            executeDamage();
+            if (!gzInfo_isCheat_InvincibleEnemies()) {
+                executeDamage();
+            } else {
+                mAction = ACT_WAIT;
+                mMode = 0;
+            }
             break;
         case ACT_DRIVE:
             executeDrive();

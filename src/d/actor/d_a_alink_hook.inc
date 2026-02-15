@@ -8,6 +8,7 @@
 #include "d/actor/d_a_obj_swhang.h"
 #include "d/actor/d_a_obj_chandelier.h"
 #include "JSystem/J3DGraphBase/J3DMaterial.h"
+#include "gz/gz.h"
 
 enum {
     HS_MODE_NONE_e,
@@ -278,6 +279,8 @@ bool daAlink_c::checkLv7BossRoom() {
 }
 
 BOOL daAlink_c::checkHookshotStickBG(cBgS_PolyInfo& i_polyinfo) {
+    if (gzInfo_isCheat_SuperClawshot()) return true;
+
     #if DEBUG
     if (mpHIO->mItem.mHookshot.m.mForceStick) {
         return TRUE;

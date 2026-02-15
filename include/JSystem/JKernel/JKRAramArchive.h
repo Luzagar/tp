@@ -6,6 +6,22 @@
 class JKRAramBlock;
 class JKRFile;
 
+// Global override for resource decompression heap (NULL = use archive's mHeap)
+extern JKRHeap* g_JKRResourceHeapOverride;
+
+// RAII class to temporarily override the heap used for resource decompression
+class JKRHeapOverrideScope {
+public:
+    JKRHeapOverrideScope(JKRHeap* heap) : mPreviousHeap(g_JKRResourceHeapOverride) {
+        g_JKRResourceHeapOverride = heap;
+    }
+    ~JKRHeapOverrideScope() {
+        g_JKRResourceHeapOverride = mPreviousHeap;
+    }
+private:
+    JKRHeap* mPreviousHeap;
+};
+
 /**
  * @ingroup jsystem-jkernel
  * 

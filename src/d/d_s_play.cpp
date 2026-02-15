@@ -27,6 +27,7 @@
 #include "d/actor/d_a_suspend.h"
 #include "d/actor/d_a_ykgr.h"
 
+#include "gz/gz.h"
 #if PLATFORM_WII
 #include "d/d_cursor_mng.h"
 #endif
@@ -371,6 +372,11 @@ static int phase_0(dScnPly_c* i_this) {
 static int phase_1(dScnPly_c* i_this) {
     u32 id = fopScnM_GetID(i_this);
     dStage_roomControl_c::setProcID(id);
+
+    if (g_gzInfo.mSaveLoaderMng.isSaveInject()) {
+        g_gzInfo.mSaveLoaderMng.doSaveInject();  // important that this is injected immediately
+        g_gzInfo.mSaveLoaderMng.onStageInit();
+    }
 
     dComIfGp_setStartStage(dComIfGp_getNextStartStage());
 

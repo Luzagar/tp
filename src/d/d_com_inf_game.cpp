@@ -2277,7 +2277,7 @@ void dComIfGs_gameStart() {
     );
 }
 
-#if DEBUG
+#ifndef DEBUG
 void dComIfG_playerStatusD() {
     dComIfGs_setDataNum(0);
     dComIfGs_setMaxLife(50);
@@ -2369,7 +2369,7 @@ void dComIfG_playerStatusD() {
     dComIfGs_onEventBit(0x5c01);
     dComIfGs_onEventBit(0x5d80);
 
-    if (!mDoCPd_c::isConnect(PAD_3)) {
+    /* if (!mDoCPd_c::isConnect(PAD_3)) {
         g_fmapHIO.mAllRegionsUnlocked = 0;
     } else {
         g_fmapHIO.mAllRegionsUnlocked = 1;
@@ -2382,7 +2382,7 @@ void dComIfG_playerStatusD() {
     g_mwHIO.setPachinkoFlag(1);
     g_mwHIO.setBombFlag(1);
     g_mwHIO.update();
-    g_mwHIO.setBombFlag(1);
+    g_mwHIO.setBombFlag(1); */
 }
 
 void dComIfG_playerStatusD_pre_clear() {

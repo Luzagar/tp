@@ -513,8 +513,9 @@ void myExceptionCallback(u16, OSContext*, u32, u32) {
     mDoMain::sHungUpTime = OSGetTime();
     OSReportEnable();
     cAPICPad_recalibrate();
-    // "Vibration stopping & resetting to default\n"
-    OSReport("振動停止＆原点復帰\n");
+    OSReport("-------------\n");
+    OSReport("tpgz crashed!\n");
+    OSReport("Vibration stopping & resetting to default\n");
 
     JUTException* manager = JUTException::getManager();
 

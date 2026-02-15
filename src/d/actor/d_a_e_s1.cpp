@@ -14,6 +14,7 @@
 #include "d/d_s_play.h"
 #include "f_op/f_op_actor_enemy.h"
 #include "f_op/f_op_camera_mng.h"
+#include "gz/gz.h"
 
 class daE_S1_HIO_c {
 public:
@@ -1401,7 +1402,11 @@ static void action(e_s1_class* i_this) {
         e_s1_bibiri(i_this);
         break;
     case ACT_DAMAGE:
-        e_s1_damage(i_this);
+        if (!gzInfo_isCheat_InvincibleEnemies()) {
+            e_s1_damage(i_this);
+        } else {
+            i_this->mAction = ACT_WAIT;
+        }
         break;
     case ACT_PATH:
         e_s1_path(i_this);
@@ -1410,13 +1415,21 @@ static void action(e_s1_class* i_this) {
         e_s1_wolfbite(i_this);
         break;
     case ACT_FAIL_WAIT:
-        e_s1_failwait(i_this);
+        if (!gzInfo_isCheat_InvincibleEnemies()) {
+            e_s1_failwait(i_this);
+        } else {
+            i_this->mAction = ACT_WAIT;
+        }
         on_attention = false;
         can_shout = false;
         fail_pos_correct = true;
         break;
     case ACT_SHOUT:
-        e_s1_shout(i_this);
+        if (!gzInfo_isCheat_InvincibleEnemies()) {
+            e_s1_shout(i_this);
+        } else {
+            i_this->mAction = ACT_WAIT;
+        }
         can_shout = false;
         on_attention = false;
         on_search_sound = true;

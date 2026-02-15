@@ -1,6 +1,8 @@
 #ifndef J3DANIMATION_H
 #define J3DANIMATION_H
 
+#include "JSystem/J3DGraphAnimator/J3DJoint.h"
+#include "JSystem/J3DGraphAnimator/J3DModelData.h"
 #include "JSystem/J3DAssert.h"
 #include "JSystem/JUtility/JUTNameTab.h"
 #include <dolphin/mtx.h>

@@ -1257,6 +1257,8 @@ public:
     void setLayer(s8 layer) { mLayer = layer; }
     s8 getDarkArea() const { return mDarkArea; }
     void setDarkArea(s8 darkArea) { mDarkArea = darkArea; }
+    void setPoint(s16 i_point) { mPoint = i_point; }
+    void setRoomNo(s8 i_roomNo) { mRoomNo = i_roomNo; }
 
 private:
     /* 0x0 */ char mName[8];

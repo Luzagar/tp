@@ -112,7 +112,10 @@ public:
         mSerialNo = serial_no;
     }
 
-    /* 0x0000 */ u8 mData[SAVEFILE_SIZE];
+    // GZ NOTE: turned sTmpBuf into a class member so we can reuse it for other memcard purposes.
+    static u8 sTmpBuf[SECTOR_SIZE * 2];
+
+    /* 0x0000 */ u8 mData[SAVEDATA_SIZE * 3];
     /* 0x1FBC */ u8 mChannel;
     /* 0x1FBD */ u8 mCopyToPos;
     /* 0x1FBE */ u8 mProbeStat;

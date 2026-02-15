@@ -10,6 +10,9 @@
 #include <cmath>
 #include <string>
 
+// Global override for resource decompression heap (NULL = use archive's mHeap)
+JKRHeap* g_JKRResourceHeapOverride = NULL;
+
 JKRAramArchive::JKRAramArchive() {}
 
 JKRAramArchive::JKRAramArchive(s32 entryNumber, JKRArchive::EMountDirection mountDirection)
@@ -200,8 +203,9 @@ void* JKRAramArchive::fetchResource(SDIFileEntry* pEntry, u32* pOutSize) {
 
     JKRCompression compression = JKRConvertAttrToCompressionType(u8(pEntry->type_flags_and_name_offset >> 24));
     if (pEntry->data == NULL) {
+        JKRHeap* heap = g_JKRResourceHeapOverride ? g_JKRResourceHeapOverride : mHeap;
         u32 size = JKRAramArchive::fetchResource_subroutine(
-            pEntry->data_offset + mBlock->getAddress(), pEntry->data_size, mHeap, compression,
+            pEntry->data_offset + mBlock->getAddress(), pEntry->data_size, heap, compression,
             &outBuf);
 
         *pOutSize = size;

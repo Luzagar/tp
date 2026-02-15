@@ -82,7 +82,7 @@ u32 JUTGamePad::sRumbleSupported;
 u32 JUTGamePad::read() {
     sRumbleSupported = PADRead(mPadStatus);
 
-    switch (sClampMode) {
+    switch (getClampMode()) {
     case EClampStick:
         PADClamp(mPadStatus);
         break;

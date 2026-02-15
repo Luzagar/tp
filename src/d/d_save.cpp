@@ -929,6 +929,11 @@ void dSv_letter_info_c::onLetterGetFlag(int i_no) {
     mLetterGetFlags[i_no >> 5] |= 1 << (i_no & 0x1F);
 }
 
+void dSv_letter_info_c::offLetterGetFlag(int i_no) {
+    JUT_ASSERT(2281, (i_no >= 0) && (i_no < LETTER_INFO_BIT));
+    mLetterGetFlags[i_no >> 5] &= ~(1 << (i_no & 0x1F));
+}
+
 BOOL dSv_letter_info_c::isLetterGetFlag(int i_no) const {
     JUT_ASSERT(2311, (i_no >= 0) && (i_no < LETTER_INFO_BIT));
     return mLetterGetFlags[i_no >> 5] & (1 << (i_no & 0x1F)) ? TRUE : FALSE;

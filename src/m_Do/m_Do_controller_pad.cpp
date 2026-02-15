@@ -11,10 +11,13 @@
 #include "m_Do/m_Do_Reset.h"
 #include "m_Do/m_Do_main.h"
 
+#include "gz/gz.h"
+
 JUTGamePad* mDoCPd_c::m_gamePad[4];
 
 interface_of_controller_pad mDoCPd_c::m_cpadInfo[4];
 interface_of_controller_pad mDoCPd_c::m_debugCpadInfo[4];
+interface_of_controller_pad mDoCPd_c::m_gzPadInfo;
 
 void mDoCPd_c::create() {
     #if PLATFORM_GCN || PLATFORM_SHIELD
@@ -64,6 +67,9 @@ void mDoCPd_c::read() {
         }
     }
 
+    // map port 1 inputs to gz controller info
+    convert(&m_gzPadInfo, *m_gamePad);
+    LRlockCheck(&m_gzPadInfo);
 #if DEBUG
     if (m_gamePad[3]) {
         JAWExtSystem::padProc(*m_gamePad[3]);
@@ -96,6 +102,28 @@ void mDoCPd_c::read() {
 #if DEBUG
         interface2++;
 #endif
+    }
+
+    // if gz menu is up, zero out button inputs (always block buttons to prevent accidental actions)
+    if (g_gzInfo.isDisplay()) {
+        m_cpadInfo[PAD_1].mPressedButtonFlags = 0;
+        m_cpadInfo[PAD_1].mButtonFlags = 0;
+
+        // Only zero analog values if menu pauses game is enabled
+        if (gzInfo_isMenuPausesGame()) {
+            m_cpadInfo[PAD_1].mMainStickPosX = 0.0f;
+            m_cpadInfo[PAD_1].mMainStickPosY = 0.0f;
+            m_cpadInfo[PAD_1].mMainStickValue = 0.0f;
+            m_cpadInfo[PAD_1].mMainStickAngle = 0;
+            m_cpadInfo[PAD_1].mCStickPosX = 0.0f;
+            m_cpadInfo[PAD_1].mCStickPosY = 0.0f;
+            m_cpadInfo[PAD_1].mCStickValue = 0.0f;
+            m_cpadInfo[PAD_1].mCStickAngle = 0;
+            m_cpadInfo[PAD_1].mAnalogA = 0.0f;
+            m_cpadInfo[PAD_1].mAnalogB = 0.0f;
+            m_cpadInfo[PAD_1].mTriggerLeft = 0.0f;
+            m_cpadInfo[PAD_1].mTriggerRight = 0.0f;
+        }
     }
 }
 

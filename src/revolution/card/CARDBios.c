@@ -1,6 +1,6 @@
 #include <revolution/card.h>
 
-#include "__card.h"
+#include <revolution/card/__card.h>
 
 const char* __CARDVersion = "<< RVL_SDK - CARD \trelease build: Sep  7 2006 18:26:19 (0x4200_60422) >>";
 

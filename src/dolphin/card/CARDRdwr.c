@@ -1,6 +1,6 @@
 #include <dolphin/card.h>
 
-#include "__card.h"
+#include <dolphin/card/__card.h>
 
 // prototypes
 static void BlockReadCallback(s32 chan, s32 result);

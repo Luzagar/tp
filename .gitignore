@@ -39,3 +39,23 @@ compile_commands.json
 
 # ISOs
 *.iso
+
+# proprietary mod assets
+mod_assets/gz/kanfont_fix16.bfn
+mod_assets/gz/Menu1.dat
+
+# intermediary images
+*.png
+*.jpg
+!source_assets/**/*.png
+
+# LLM Agent folders
+.grok/
+.cursor/
+.aider/
+.windsurf/
+.copilot/
+CLAUDE.md
+
+# Local test scripts
+test*.py

@@ -1,7 +1,7 @@
 #include <dolphin/card.h>
 
 #include "os/__os.h"
-#include "__card.h"
+#include <revolution/card/__card.h>
 
 // prototypes
 static s32 VerifyID(CARDControl* card);

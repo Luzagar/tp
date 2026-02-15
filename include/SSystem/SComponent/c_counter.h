@@ -13,6 +13,10 @@ extern counter_class g_Counter;
 
 void cCt_Counter(int resetCounter1);
 
+inline u32 cCt_getFrameCount() {
+    return g_Counter.mCounter0;
+}
+
 inline void cCt_execCounter() {
     g_Counter.mTimer++;
 }

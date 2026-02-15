@@ -21,6 +21,8 @@
 #include "m_Do/m_Do_Reset.h"
 #include <cstdio>
 
+#include "gz/gz.h"
+
 void dStage_nextStage_c::set(const char* i_stage, s8 i_roomId, s16 i_point, s8 i_layer, s8 i_wipe,
                              u8 i_speed) {
     if (!enabled) {
@@ -2728,7 +2730,11 @@ void dStage_Delete() {
         dComIfG_deleteObjectResMain(demoArcName);
     }
 
-    dComIfGs_putSave(dStage_stagInfo_GetSaveTbl(dComIfGp_getStageStagInfo()));
+    // don't save temp flags if doing a save inject so that it doesn't overwrite incoming flags
+    if (!g_gzInfo.mSaveLoaderMng.isSaveInject()) {
+        dComIfGs_putSave(dStage_stagInfo_GetSaveTbl(dComIfGp_getStageStagInfo()));
+    }
+
     dStage_roomControl_c::removeRoomDzs();
 
     if (mDoRst::isReset() || !dComIfGp_isEnableNextStage() ||
