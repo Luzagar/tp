@@ -19,11 +19,11 @@ class dScnPly_reg_HIO_c : public JORReflexible {
 public:
     virtual ~dScnPly_reg_HIO_c() {}
 
-#if ENABLE_REGHIO
+#ifndef ENABLE_REGHIO
     void genMessage(JORMContext*);
 
     /* 0x4 */ s8 id;
-    /* 0x8 */ dScnPly_reg_childHIO_c mChildReg[26];
+    /* 0x8 */ dScnPly_reg_childHIO_c mChildReg[27];
 #else
     /* 0x4 */ u8 field_0x4[0x8 - 0x4];
 #endif
@@ -99,7 +99,7 @@ extern dScnPly_preset_HIO_c g_presetHIO;
  * Float Reg(25-29) ... -1.0 - +1.0
  */
 
-#if ENABLE_REGHIO
+#ifndef  ENABLE_REGHIO
 // Morita
 #define TREG_F(i) g_regHIO.mChildReg[0].mFloatReg[i]
 #define TREG_S(i) g_regHIO.mChildReg[0].mShortReg[i]
@@ -203,6 +203,10 @@ extern dScnPly_preset_HIO_c g_presetHIO;
 // Takahashi
 #define tREG_F(i) g_regHIO.mChildReg[25].mFloatReg[i]
 #define tREG_S(i) g_regHIO.mChildReg[25].mShortReg[i]
+
+// Tpgz
+#define GZREG_S(i) g_regHIO.mChildReg[26].mShortReg[i]
+#define GZREG_F(i) g_regHIO.mChildReg[26].mFloatReg[i]
 #else
 // Morita
 #define TREG_F(i) (0.0f)
