@@ -387,6 +387,10 @@ void gzInventoryMenu_c::executeHeartPieceEditMode() {
     if (gzPad::getTrigRight()) {
         if (maxLife < 100) {
             dComIfGs_setMaxLife(maxLife + 1);
+            u16 maxHealth = (dComIfGs_getMaxLife() / 5) * 4;
+            if (dComIfGs_getLife() > maxHealth) {
+                dComIfGs_setLife(maxHealth);
+            }
             gzInfo_seStart(Z2SE_SY_TALK_CURSOR);
         }
     }
@@ -394,6 +398,10 @@ void gzInventoryMenu_c::executeHeartPieceEditMode() {
     if (gzPad::getTrigLeft()) {
         if (maxLife > 5) {
             dComIfGs_setMaxLife(maxLife - 1);
+            u16 maxHealth = (dComIfGs_getMaxLife() / 5) * 4;
+            if (dComIfGs_getLife() > maxHealth) {
+                dComIfGs_setLife(maxHealth);
+            }
             gzInfo_seStart(Z2SE_SY_TALK_CURSOR);
         }
     }
@@ -404,6 +412,33 @@ void gzInventoryMenu_c::executeHeartPieceEditMode() {
         return;
     }
     gzInfo_getMenuDescription()->setString("Heart Pieces");
+}
+
+void gzInventoryMenu_c::executeCurrentLifeEditMode() {
+    u16 maxLife = dComIfGs_getMaxLife();
+    u16 maxHealth = (maxLife / 5) * 4;
+    u16 life = dComIfGs_getLife();
+
+    if (gzPad::getTrigRight()) {
+        if (life < maxHealth) {
+            dComIfGs_setLife(life + 1);
+            gzInfo_seStart(Z2SE_SY_TALK_CURSOR);
+        }
+    }
+
+    if (gzPad::getTrigLeft()) {
+        if (life > 0) {
+            dComIfGs_setLife(life - 1);
+            gzInfo_seStart(Z2SE_SY_TALK_CURSOR);
+        }
+    }
+
+    if (gzPad::getTrigA()) {
+        gzInfo_offMenuOption();
+        gzInfo_seStart(Z2SE_SY_CURSOR_CANCEL);
+        return;
+    }
+    gzInfo_getMenuDescription()->setString("Current Life");
 }
 
 void gzInventoryMenu_c::drawSkillSubMenu() {

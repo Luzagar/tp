@@ -39,18 +39,23 @@ struct FreeCamState {
 };
 
 struct CoroTDState {
+    static const u8 GOAL_FRAME = 10;
+    static const u8 WINDOW_FRAMES = 20;
     bool timerStarted;
     bool goalHit;
     u8 frameCount;
 };
 
 struct EBMBState {
+    static const s32 PERFECT_FRAME = 4;
+    static const s32 LATE_LIMIT = 10;
     u16 prevAction;
     s32 frameDelta;
     bool ibOnLastFrame;
 };
 
 struct RollCheckerState {
+    static const u8 RESULT_DISPLAY_FRAMES = 60;
     u16 prevAction;
     u8 frameDelta;
     u8 endFrame;
@@ -63,11 +68,40 @@ struct RollCheckerState {
     gzTextBox* pText;
 };
 
+struct GorgeVoidState {
+    static const s32 WARP_CS_FRAMES = 160;
+    bool comboHeld;
+    bool timerStarted;
+    bool gotIt;
+    s32 previousFrame;
+    s32 counterDifference;
+    s32 afterCsVal;
+};
+
 struct ElevatorEscapeState {
+    static const u8 METAMORPHOSE_ANM_LENGTH = 56;
     u16 prevAction;
     s32 metamorphoseStartFrame;
     s32 lateRollFrame;
     s32 targetFrame;
+};
+
+class J2DPicture;
+struct gzInputViewer_s {
+    void drawButton(J2DPicture* pic, u32 button, u32 color, f32 x, f32 y, f32 sx, f32 sy);
+
+    bool isInitialized;
+    J2DPicture* pAbtn;
+    J2DPicture* pBbtn;
+    J2DPicture* pXbtn;
+    J2DPicture* pYbtn;
+    J2DPicture* pZbtn;
+    J2DPicture* pSbtn;
+    J2DPicture* pStick;
+    J2DPicture* pSubstick;
+    J2DPicture* pDPad[4];
+    J2DPicture* pTrigL;
+    J2DPicture* pTrigR;
 };
 
 class gzToolsMng_c {
@@ -76,6 +110,7 @@ public:
     void draw();
     void executeElevatorEscape();
     void executeFreeCam();
+    void executeGorgeVoid();
     void executeMoveLink();
     void executeCoroTD();
     void executeEBMB();
@@ -84,17 +119,20 @@ public:
 
     void drawRollChecker();
     void drawLinkInfo();
+    void drawInputViewer();
 
     bool isMoveLinkActive() const { return mMoveLink.active; }
 
 private:
     ElevatorEscapeState mElevatorEscape;
+    GorgeVoidState mGorgeVoid;
     TeleportState mTeleport;
     MoveLinkState mMoveLink;
     FreeCamState mFreeCam;
     CoroTDState mCoroTD;
     EBMBState mEBMB;
     RollCheckerState mRollChecker;
+    gzInputViewer_s mInputViewer;
 };
 
 #endif // GZ_MANAGER_TOOLS_H

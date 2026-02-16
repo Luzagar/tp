@@ -87,6 +87,10 @@ gzInventoryMenu_c::gzInventoryMenu_c() {
         mpHudHeartPanes[i] = NULL;
         mpHudHeartBufs[i] = NULL;
     }
+    for (int i = 0; i < QUARTER_HEART_COUNT; i++) {
+        mpQuarterHeartPanes[i] = NULL;
+        mpQuarterHeartBufs[i] = NULL;
+    }
     mSkillSubMenuActive = false;
     mSkillSubMenuIndex = 0;
     mBugSubMenuActive = false;
@@ -318,7 +322,7 @@ void gzInventoryMenu_c::execute() {
         mPauseMenuInitialized = false;
     }
 
-    if ((lrTrig & PAD_TRIGGER_L) && mCurrentTab == TAB_PAUSE_MENU && !inPoeEditMode() && !inHeartPieceEditMode() && !inRupeeEditMode() && !inSkillSubMenu() && !inBugSubMenu() && !inLetterSubMenu() && !inFishSubMenu()) {
+    if ((lrTrig & PAD_TRIGGER_L) && mCurrentTab == TAB_PAUSE_MENU && !inPoeEditMode() && !inHeartPieceEditMode() && !inCurrentLifeEditMode() && !inRupeeEditMode() && !inSkillSubMenu() && !inBugSubMenu() && !inLetterSubMenu() && !inFishSubMenu()) {
         mCurrentTab = TAB_RING_MENU;
         l_cursor->y = 0;
         mCurrentSlot = 0;
@@ -363,13 +367,16 @@ gzButtonHints_s gzInventoryMenu_c::getButtonHints() {
     hints.count = 0;
 
     if (mCurrentTab == TAB_PAUSE_MENU) {
+        bool isHudHearts = isHudHeartsSelected();
         bool isPoeSlot = isPoeSlotSelected();
         bool isHeartSlot = isHeartPieceSlotSelected();
         bool isWallet = isWalletSlotSelected();
-        bool hasItem = mPauseSlotState[mPauseCursorRow][mPauseCursorCol] > 0;
-        bool alreadyEquipped = isSlotEquipped(mPauseCursorRow, mPauseCursorCol);
+        bool hasItem = mPauseCursorRow >= 0 &&
+                       mPauseSlotState[mPauseCursorRow][mPauseCursorCol] > 0;
+        bool alreadyEquipped = mPauseCursorRow >= 0 &&
+                               isSlotEquipped(mPauseCursorRow, mPauseCursorCol);
 
-        if (isPoeSlot || isHeartSlot || isWallet) {
+        if (isHudHearts || isPoeSlot || isHeartSlot || isWallet) {
             hints.hints[hints.count].button = GZ_BTN_A;
             hints.hints[hints.count].text = gzInfo_isMenuOption() ? "Done" : "Edit";
             hints.count++;
@@ -381,7 +388,7 @@ gzButtonHints_s gzInventoryMenu_c::getButtonHints() {
             }
         }
 
-        if (!isPoeSlot && !isHeartSlot) {
+        if (!isHudHearts && !isPoeSlot && !isHeartSlot) {
             hints.hints[hints.count].button = GZ_BTN_Z;
             hints.hints[hints.count].text = "Cycle";
             hints.count++;
@@ -400,7 +407,7 @@ gzButtonHints_s gzInventoryMenu_c::getButtonHints() {
         hints.hints[hints.count].text = "Back";
         hints.count++;
 
-        if (!inPoeEditMode() && !inHeartPieceEditMode() && !inRupeeEditMode()) {
+        if (!inPoeEditMode() && !inHeartPieceEditMode() && !inCurrentLifeEditMode() && !inRupeeEditMode()) {
             hints.hints[hints.count].button = GZ_BTN_L;
             hints.hints[hints.count].text = "Ring";
             hints.count++;

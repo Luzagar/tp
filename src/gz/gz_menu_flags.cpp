@@ -687,7 +687,8 @@ void gzFlagsMenu_c::draw() {
         bool isSelected = (l_cursor->y == i && gzInfo_isSubMenuVisible());
         bool isBool = isBoolFlagLine(i);
         bool isOn = isBool && getBoolFlagState(i);
-        u32 color = isSelected ? cursorColor : (isBool && !isOn ? COLOR_DIM : COLOR_WHITE);
+        bool classicHL = isSelected && gzInfo_isCursorTypeClassic();
+        u32 color = classicHL ? cursorColor : (isBool && !isOn ? COLOR_DIM : COLOR_WHITE);
 
         line->mText->draw(lineX, lineY, color);
 

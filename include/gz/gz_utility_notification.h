@@ -18,7 +18,7 @@ public:
     void send(const char* message);
     void send(const char* message, NotificationType notification);
     void draw();
-    static const int NOTIFICATION_MAX = 3;
+    static const int NOTIFICATION_MAX = 5;
 
 private:
     gzTextBox* mpNotifications[NOTIFICATION_MAX];

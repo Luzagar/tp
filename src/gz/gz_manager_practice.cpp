@@ -39,6 +39,7 @@ static const char* getCategoryMetadataPath(gzSaveLoaderMng_c::SaveCategory_e i_c
 }
 
 void gzSaveLoaderMng_c::doSaveInject() {
+    dComIfGp_offPauseFlag();
     memcpy(&g_dComIfG_gameInfo.info.mSavedata, mDoMemCd_Ctrl_c::sTmpBuf, sizeof(dSv_save_c));
     dComIfGs_getSave(dComIfGs_getSaveInfo()->getDan().mStageNo);
 
@@ -126,6 +127,11 @@ void gzSaveLoaderMng_c::loadSave(SaveCategory_e i_category, int i_entryNo, const
     if (mSaveCallbacks.stageInitCb != NULL) {
         mSaveCallbacks.stageInitCb();
     }
+
+    // helps prevent bugs that happen when a save 
+    // is loaded right around the time a void happens
+    // we need a better solution here probably
+    dComIfGp_onPauseFlag();
 
     Z2GetSeqMgr()->bgmStop(0, 0);
     Z2GetSeqMgr()->subBgmStop();

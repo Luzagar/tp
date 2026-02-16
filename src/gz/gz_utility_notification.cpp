@@ -108,11 +108,11 @@ void gzNotification_c::draw() {
             y_offset = J2DHermiteInterpolation(current_time, &time0, &value0, &tan_out0, &time1, &value1, &tan_in1);
         }
 
-        f32 y_pos = y_alignment + ((mNumNotifications - 1 - i) * 22.0f) + y_offset;
+        f32 y_pos = y_alignment + ((mNumNotifications - 1 - i) * 18.0f) + y_offset;
 
         if (g_gzInfo.isDisplay()) {
             f32 bgW = 300.0f;
-            f32 bgH = 22.0f;
+            f32 bgH = 18.0f;
             f32 bgX = (608.0f - bgW) / 2.0f;
             f32 bgY = y_pos - 17.0f;
             u8 bgR = 0, bgG = 0, bgB = 0;

@@ -2,6 +2,7 @@
 
 #include "gz/gz.h"
 #include "gz/gz_menu_main.h"
+#include "gz/gz_setup_wizard.h"
 #include "gz/gz_utility_draw.h"
 #include "SSystem/SComponent/c_counter.h"
 #include "gz/gz_utility_notification.h"
@@ -12,6 +13,7 @@
 #include "m_Do/m_Do_graphic.h"
 #include "JSystem/J2DGraph/J2DOrthoGraph.h"
 #include "JSystem/JKernel/JKRArchive.h"
+#include "JSystem/JKernel/JKRAram.h"
 #include "JSystem/JKernel/JKRAramArchive.h"
 #include "JSystem/JKernel/JKRExpHeap.h"
 #include "JSystem/JUtility/JUTDbPrint.h"
@@ -190,6 +192,7 @@ void gzInfo_c::pollIconPreload() {
 
 void gzInfo_c::loadDefaultSettings() {
     mSettings.mTextColor = COLOR_GOLD_DROP;
+    mSettings.mCommandCombos.mGorgeVoid = (PAD_TRIGGER_L | PAD_TRIGGER_Z);
     mSettings.mCommandCombos.mMoveLink = (PAD_TRIGGER_L | PAD_TRIGGER_R | PAD_BUTTON_Y);
     mSettings.mCommandCombos.mMoonJump = (PAD_TRIGGER_R | PAD_BUTTON_A);
     mSettings.mCommandCombos.mTeleportSave = (PAD_TRIGGER_R | PAD_BUTTON_UP);
@@ -406,6 +409,9 @@ void gzInfo_c::loadMenuResourcesBatch() {
 int gzInfo_c::_delete() {
     OSReport("deleting gzInfo_c\n");
 
+    delete mpSetupWizard;
+    mpSetupWizard = NULL;
+
     for (int i = 0; i < PRELOAD_COUNT; i++) {
         if (mPreloadAsyncPending[i]) {
             DVDCancel(&mPreloadFileInfos[i].cb);
@@ -590,13 +596,18 @@ int gzInfo_c::execute() {
             mpMenuDescription = NULL;
             mpButtonHintText = NULL;
             mpCurrentMenu = NULL;
+            mpSetupWizard = NULL;
 
             mMenuResourcesLoaded = false;
             mMenuLoadStep = 0;
 
             OSReport("tpgz auto: 0x%08X\n", (u32)&g_gzAutoState);
 
-            loadSettingsMemcard();
+#ifndef __REVOLUTION_SDK__
+            mIsNintendont = detectNintendont();
+            OSReport("tpgz: nintendont detected = %d\n", mIsNintendont);
+#endif
+            int settingsResult = loadSettings();
 
             dComIfGp_setOxygen(OXYGEN_MAX);
             dComIfGp_setNowOxygen(OXYGEN_MAX);
@@ -605,7 +616,10 @@ int gzInfo_c::execute() {
             mGZInitialized = true;
             mInitPhase = INIT_PHASE_DONE;
 
-            if (mSettings.mBootToMenu) {
+            if (settingsResult != 0) {
+                mpSetupWizard = new (gzHeap(GZ_GROUP_UI), 4) gzSetupWizard_c();
+                dComIfGp_onPauseFlag();
+            } else if (mSettings.mBootToMenu) {
                 loadMenuResources();
                 mDisplay = true;
             }
@@ -616,6 +630,22 @@ int gzInfo_c::execute() {
     }
 
     pollIconPreload();
+
+    if (mpSetupWizard != NULL) {
+        updateStickTriggers();
+        mpSetupWizard->execute();
+        if (mpSetupWizard->isComplete()) {
+            bool bootToMenu = mpSetupWizard->mBootToMenu;
+            delete mpSetupWizard;
+            mpSetupWizard = NULL;
+            dComIfGp_offPauseFlag();
+            if (bootToMenu) {
+                loadMenuResources();
+                mDisplay = true;
+            }
+        }
+        return 1;
+    }
 
     bool wasDisplayed = mDisplay;
 
@@ -715,6 +745,12 @@ int gzInfo_c::draw() {
             loadingText.draw(0.0f, 210.0f, 608.0f, HBIND_CENTER);
         }
         return 0;
+    }
+
+    if (mpSetupWizard != NULL) {
+        gzSetup2DContext();
+        mpSetupWizard->draw();
+        return 1;
     }
 
     // Draw capture directly (dims the background game)
@@ -1044,7 +1080,7 @@ int gzInfo_c::storeSettingsMemcard() {
             ret = CARDWrite(&file, mDoMemCd_Ctrl_c::sTmpBuf, SECTOR_SIZE, 0);
             if (ret == CARD_RESULT_READY) {
                 OSReport("stored tpgz settings to memcard!\n");
-                gzInfo_sendNotification("settings saved!");
+                gzInfo_sendNotification("settings saved to memcard!");
             }
 
             CARDClose(&file);
@@ -1068,7 +1104,7 @@ int gzInfo_c::loadSettingsMemcard() {
         ret = CARDRead(&file, mDoMemCd_Ctrl_c::sTmpBuf, SECTOR_SIZE, 0);
         if (ret == CARD_RESULT_READY) {
             OSReport("loaded tpgz settings from memcard!\n");
-            gzInfo_sendNotification("settings loaded!");
+            gzInfo_sendNotification("settings loaded from memcard!");
 
             gzConfigHeader_s cfg;
             memcpy(&cfg, mDoMemCd_Ctrl_c::sTmpBuf, sizeof(gzConfigHeader_s));
@@ -1083,7 +1119,7 @@ int gzInfo_c::loadSettingsMemcard() {
 
         CARDClose(&file);
     } else {
-        gzInfo_sendNotification("no stored settings found!");
+        gzInfo_sendNotification("no memcard settings found!");
     }
 
     return ret;
@@ -1101,7 +1137,7 @@ int gzInfo_c::deleteSettingsMemcard() {
     ret = CARDDelete(0, "tpgzcfg");
     if (ret == CARD_RESULT_READY) {
         OSReport("deleted tpgz settings from memcard!\n");
-        gzInfo_sendNotification("settings deleted!");
+        gzInfo_sendNotification("memcard settings deleted!");
     } else {
         OSReport_Error("failed to delete tpgz settings from memcard!\n");
     }
@@ -1118,13 +1154,15 @@ void gzInfo_c::sendNotification(const char* msg, int i_notificationType) {
 }
 
 static JKRExpHeap* s_gzHeap = NULL;
-static const u32 GZ_HEAP_SIZE = 0xC0000;  // 768KB
+static const u32 GZ_HEAP_SIZE = 0x100000;  // 1MB
 
 void gzCreateHeap() {
     if (s_gzHeap != NULL) return;
 
     JKRExpHeap* archiveHeap = (JKRExpHeap*)mDoExt_getArchiveHeap();
     s_gzHeap = JKRExpHeap::create(GZ_HEAP_SIZE, archiveHeap, true);
+
+    JKRAllocFromAram(0xC0000, JKRAramHeap::HEAD);  // 768KB test fill
 }
 
 void gzSetGzHeap(JKRHeap* heap) {

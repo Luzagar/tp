@@ -86,7 +86,9 @@ private:
     const char* getItemName(u8 itemId);
     inline bool isPoeSlotSelected() { return (mPauseCursorRow == 4 && mPauseCursorCol == 1); }
     inline bool inPoeEditMode() { return isPoeSlotSelected() && gzInfo_isMenuOption(); }
-    inline bool isHeartPieceSlotSelected() { return (mPauseCursorCol == 2 && mPauseCursorRow <= 1); }
+    inline bool isHudHeartsSelected() { return mPauseCursorRow == -1; }
+    inline bool inCurrentLifeEditMode() { return isHudHeartsSelected() && gzInfo_isMenuOption(); }
+    inline bool isHeartPieceSlotSelected() { return (mPauseCursorCol == 2 && mPauseCursorRow >= 0 && mPauseCursorRow <= 1); }
     inline bool inHeartPieceEditMode() { return isHeartPieceSlotSelected() && gzInfo_isMenuOption(); }
     inline bool isWalletSlotSelected() { return (mPauseCursorRow == 3 && mPauseCursorCol == 0); }
     inline bool inRupeeEditMode() { return isWalletSlotSelected() && gzInfo_isMenuOption(); }
@@ -114,6 +116,7 @@ private:
     void executeFishSubMenu();
     void executePoeEditMode();
     void executeHeartPieceEditMode();
+    void executeCurrentLifeEditMode();
     void executeRupeeEditMode();
     void drawSkillSubMenu();
     void drawBugSubMenu();
@@ -190,6 +193,10 @@ private:
     static const int HUD_HEART_TEX_COUNT = 2;
     J2DPicture* mpHudHeartPanes[HUD_HEART_TEX_COUNT];
     ResTIMG* mpHudHeartBufs[HUD_HEART_TEX_COUNT];
+
+    static const int QUARTER_HEART_COUNT = 3;
+    J2DPicture* mpQuarterHeartPanes[QUARTER_HEART_COUNT];
+    ResTIMG* mpQuarterHeartBufs[QUARTER_HEART_COUNT];
 
     bool mSkillSubMenuActive;
     int mSkillSubMenuIndex;

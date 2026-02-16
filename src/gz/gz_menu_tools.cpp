@@ -219,7 +219,8 @@ void gzToolsMenu_c::draw() {
         f32 lineY = lineY_start + (screenIdx * gzMenuLayout::LINE_SPACING);
         bool isSelected = (l_cursor->y == i && gzInfo_isSubMenuVisible());
         bool isOn = flags[i].is();
-        u32 color = isSelected ? cursorColor : (isOn ? COLOR_WHITE : COLOR_DIM);
+        bool classicHL = isSelected && gzInfo_isCursorTypeClassic();
+        u32 color = classicHL ? cursorColor : (isOn ? COLOR_WHITE : COLOR_DIM);
 
         line->mText->draw(lineX, lineY, color);
 

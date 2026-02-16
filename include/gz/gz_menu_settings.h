@@ -20,9 +20,10 @@ public:
         // Actions
         SETTING_COMMAND_COMBOS,
         SETTING_MENU_POSITIONS,
-        SETTING_SAVE_CARD,
-        SETTING_LOAD_CARD,
-        SETTING_DELETE_CARD,
+        SETTING_SAVE,
+        SETTING_LOAD,
+        SETTING_DELETE,
+        SETTING_RETURN_TO_LOADER,
 
         SETTING_MAX
     };
@@ -48,38 +49,7 @@ public:
         }
     }
 
-    char* getThemeText() {
-        switch (gzInfo_getTextColor()) {
-        case COLOR_AMETHYST: return "amethyst";
-        case COLOR_AQUAMARINE: return "aquamarine";
-        case COLOR_BANANA_MANIA: return "banana mania";
-        case COLOR_BOLD_CRIMSON: return "bold crimson";
-        case COLOR_BUBBLEGUM_PINK: return "bubblegum pink";
-        case COLOR_CERULEAN: return "cerulean";
-        case COLOR_COSMIC_COBALT: return "cosmic cobalt";
-        case COLOR_ELECTRIC_BLUE: return "electric blue";
-        case COLOR_FIERY_ORANGE: return "fiery orange";
-        case COLOR_FLAMINGO_FEATHER: return "flamingo feather";
-        case COLOR_GOLD_DROP: return "gold drop";
-        case COLOR_LEMON_YELLOW: return "lemon yellow";
-        case COLOR_LIME_GREEN: return "lime green";
-        case COLOR_MAGENTA_MAGIC: return "magenta magic";
-        case COLOR_MIDNIGHT_BLUE: return "midnight blue";
-        case COLOR_MYSTICAL_PURPLE: return "mystical purple";
-        case COLOR_NEON_CARROT: return "neon carrot";
-        case COLOR_PERIWINKLE: return "periwinkle";
-        case COLOR_SAPPHIRE_SPARKLE: return "sapphire sparkle";
-        case COLOR_SHAMROCK_GREEN: return "shamrock green";
-        case COLOR_SUNNY_YELLOW: return "sunny yellow";
-        case COLOR_TANGERINE_TWIST: return "tangerine twist";
-        case COLOR_TROPICAL_TURQUOISE: return "tropical turquoise";
-        case COLOR_VIVID_VIOLET: return "vivid violet";
-        case COLOR_WHITE: return "white";
-        case COLOR_WILD_STRAWBERRY: return "wild strawberry";
-        case COLOR_ZESTY_CHARTREUSE: return "zesty chartreuse";
-        default: return "unknown";
-        }
-    }
+    const char* getThemeText() { return gzGetThemeColorName(gzInfo_getTextColor()); }
 
     const char* getReloadTypeText() { return gzInfo_getReloadType() ? "load area" : "load file"; }
     const char* getDropShadowsText() { return gzInfo_isDropShadows() ? "enabled" : "disabled"; }
@@ -93,8 +63,10 @@ public:
 
     u8 getHaihaiFlags(int i);
 
-    static int deleteCardConfirmCb(gzConfirm_c* i_confirm, void* i_data);
-    static int deleteCardReturnCb(gzConfirm_c* i_confirm, void* i_data);
+    static int deleteConfirmCb(gzConfirm_c* i_confirm, void* i_data);
+    static int deleteReturnCb(gzConfirm_c* i_confirm, void* i_data);
+    static int returnToLoaderConfirmCb(gzConfirm_c* i_confirm, void* i_data);
+    static int returnToLoaderReturnCb(gzConfirm_c* i_confirm, void* i_data);
 
     gzConfirm_c* mpConfirm;
 
@@ -112,9 +84,11 @@ private:
     // Actions
     gzLine* mpCommandCombos;
     gzLine* mpMenuPositions;
-    gzLine* mpSaveCard;
-    gzLine* mpLoadCard;
-    gzLine* mpDeleteCard;
+    gzLine* mpSave;
+    gzLine* mpLoad;
+    gzLine* mpDelete;
+    gzLine* mpReturnToLoader;
+    int mLineCount;
     gzLine* mpLines[LINE_NUM];
 };
 

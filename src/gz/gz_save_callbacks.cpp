@@ -224,12 +224,33 @@ static void SaveCb_CaveOfOrdeals() {
     dComIfGs_resetDan();
 }
 
+static void SaveCb_GorgeVoidInit() {
+    g_dComIfG_gameInfo.info.getMemory().getBit().onSwitch(0);
+    dComIfGs_putSave(g_dComIfG_gameInfo.info.getDan().mStageNo);
+    dComIfGs_setTransformStatus(TF_STATUS_WOLF);
+
+    g_dComIfG_gameInfo.play.setNextStage("F_SP121", 3, 2, 0xE, 13, 0);
+    g_dComIfG_gameInfo.info.getRestart().setLastSceneInfo(0.0f, 0x28000000, 0);
+    g_dComIfG_gameInfo.info.getRestart().setStartPoint(2);
+
+    cXyz pos(-11856.857f, -5700.0f, 56661.5f);
+    g_dComIfG_gameInfo.info.getRestart().setRoom(pos, 24169, 3);
+
+    dComIfGs_setLife(12);
+
+    cDmr_SkipInfo = 1;
+}
+
+static void SaveCb_GorgeVoid() {
+    dComIfGs_onSwitch(21, 3); // shadow beasts dead
+}
+
 const gzSaveLoaderMng_c::saveCallbacks_s gzPracticeMenu_c::mAnypSaveCallbacks[] = {
     {0, NULL, SaveCb_OrdonGateClip},
     {4, NULL, SaveCb_SetupHugo},
     {7, NULL, SaveCb_ForestBiT},
     {8, SaveCb_SetEarlyBossFlag, NULL},
-    {9, SaveCb_SetEarlyBossFlag, NULL},
+    {9, SaveCb_GorgeVoidInit, SaveCb_GorgeVoid},
     {10, SaveCb_SetEarlyBossFlag, NULL},
     {11, SaveCb_SetEarlyBossFlag, NULL},
     {13, SaveCb_KargorokOoB, NULL},

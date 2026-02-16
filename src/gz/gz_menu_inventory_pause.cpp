@@ -156,6 +156,15 @@ void gzInventoryMenu_c::freePauseTextures(bool freeArchiveCache) {
         }
     }
 
+    for (int i = 0; i < QUARTER_HEART_COUNT; i++) {
+        delete mpQuarterHeartPanes[i];
+        mpQuarterHeartPanes[i] = NULL;
+        if (mpQuarterHeartBufs[i] != NULL) {
+            heap->free(mpQuarterHeartBufs[i]);
+            mpQuarterHeartBufs[i] = NULL;
+        }
+    }
+
     freeBugIcons();
 
     delete mpLetterIconPane;
@@ -509,6 +518,18 @@ void gzInventoryMenu_c::initPauseMenu() {
         }
     }
 
+    if (main2DArc != NULL && mpQuarterHeartPanes[0] == NULL) {
+        static const char* quarterHeartTexNames[QUARTER_HEART_COUNT] = {
+            "tt_heart_01.bti",
+            "tt_heart_02.bti",
+            "tt_heart_03.bti",
+        };
+        for (int i = 0; i < QUARTER_HEART_COUNT; i++) {
+            loadArchiveTexture(main2DArc, quarterHeartTexNames[i],
+                               &mpQuarterHeartPanes[i], &mpQuarterHeartBufs[i], heap, false);
+        }
+    }
+
     loadBugIcons();
 
     if (mpLetterIconPane == NULL) {
@@ -713,53 +734,68 @@ void gzInventoryMenu_c::executePauseMenu() {
     if (inFishEditMode()) { executeFishEditMode(); return; }
     if (inFishSubMenu()) { executeFishSubMenu(); return; }
     if (inPoeEditMode()) { executePoeEditMode(); return; }
+    if (inCurrentLifeEditMode()) { executeCurrentLifeEditMode(); return; }
     if (inHeartPieceEditMode()) { executeHeartPieceEditMode(); return; }
     if (inRupeeEditMode()) { executeRupeeEditMode(); return; }
 
-    int maxCols = getMaxColsForRow(mPauseCursorRow);
-
     if (gzPad::getTrigDown()) {
-        if (isHeartPieceSlotSelected()) {
+        if (mPauseCursorRow == -1) {
+            mPauseCursorRow = 0;
+        } else if (isHeartPieceSlotSelected()) {
             mPauseCursorRow = 2;
         } else {
             mPauseCursorRow = (mPauseCursorRow + 1) % PAUSE_MAX_ROWS;
         }
-        int newMaxCols = getMaxColsForRow(mPauseCursorRow);
-        if (mPauseCursorCol >= newMaxCols) {
-            mPauseCursorCol = newMaxCols - 1;
+        if (mPauseCursorRow >= 0) {
+            int newMaxCols = getMaxColsForRow(mPauseCursorRow);
+            if (mPauseCursorCol >= newMaxCols) {
+                mPauseCursorCol = newMaxCols - 1;
+            }
         }
         gzInfo_seStart(Z2SE_SY_NAME_CURSOR);
     }
     if (gzPad::getTrigUp()) {
-        if (isHeartPieceSlotSelected()) {
+        if (mPauseCursorRow == -1) {
             mPauseCursorRow = PAUSE_MAX_ROWS - 1;
+        } else if (mPauseCursorRow == 0 || isHeartPieceSlotSelected()) {
+            mPauseCursorRow = -1;
         } else {
-            mPauseCursorRow = (mPauseCursorRow - 1 + PAUSE_MAX_ROWS) % PAUSE_MAX_ROWS;
+            mPauseCursorRow--;
         }
-        int newMaxCols = getMaxColsForRow(mPauseCursorRow);
-        if (mPauseCursorCol >= newMaxCols) {
-            mPauseCursorCol = newMaxCols - 1;
+        if (mPauseCursorRow >= 0) {
+            int newMaxCols = getMaxColsForRow(mPauseCursorRow);
+            if (mPauseCursorCol >= newMaxCols) {
+                mPauseCursorCol = newMaxCols - 1;
+            }
         }
-        gzInfo_seStart(Z2SE_SY_NAME_CURSOR);
-    }
-    if (gzPad::getTrigRight()) {
-        mPauseCursorCol = (mPauseCursorCol + 1) % maxCols;
-        gzInfo_seStart(Z2SE_SY_NAME_CURSOR);
-    }
-    if (gzPad::getTrigLeft()) {
-        mPauseCursorCol = (mPauseCursorCol - 1 + maxCols) % maxCols;
         gzInfo_seStart(Z2SE_SY_NAME_CURSOR);
     }
 
-    if (gzPad::getTrigZ() && !isPoeSlotSelected() && !isHeartPieceSlotSelected() &&
-        !isSkillSlotSelected() && !isBugSlotSelected() && !isLetterSlotSelected() &&
+    if (mPauseCursorRow >= 0) {
+        int maxCols = getMaxColsForRow(mPauseCursorRow);
+        if (gzPad::getTrigRight()) {
+            mPauseCursorCol = (mPauseCursorCol + 1) % maxCols;
+            gzInfo_seStart(Z2SE_SY_NAME_CURSOR);
+        }
+        if (gzPad::getTrigLeft()) {
+            mPauseCursorCol = (mPauseCursorCol - 1 + maxCols) % maxCols;
+            gzInfo_seStart(Z2SE_SY_NAME_CURSOR);
+        }
+    }
+
+    if (gzPad::getTrigZ() && mPauseCursorRow >= 0 && !isPoeSlotSelected() &&
+        !isHeartPieceSlotSelected() && !isSkillSlotSelected() &&
+        !isBugSlotSelected() && !isLetterSlotSelected() &&
         !isFishSlotSelected()) {
         cyclePauseSlot(mPauseCursorRow, mPauseCursorCol);
         gzInfo_seStart(Z2SE_SY_TALK_CURSOR);
     }
 
     if (gzPad::getTrigA()) {
-        if (isBugSlotSelected() && !inBugSubMenu()) {
+        if (isHudHeartsSelected()) {
+            gzInfo_onMenuOption();
+            gzInfo_seStart(Z2SE_SY_TALK_CURSOR_OK);
+        } else if (isBugSlotSelected() && !inBugSubMenu()) {
             mBugSubMenuActive = true;
             mBugSubMenuRow = 0;
             mBugSubMenuCol = 0;
@@ -796,22 +832,27 @@ void gzInventoryMenu_c::executePauseMenu() {
         }
     }
 
-    u8 currentItem = getDisplayItemForSlot(mPauseCursorRow, mPauseCursorCol);
-    const char* itemName = getItemName(currentItem);
-    if (mPauseCursorCol == 2 && mPauseCursorRow <= 1) {
-        itemName = "Heart Pieces";
-    } else if (mPauseCursorRow == 3 && mPauseCursorCol == 0) {
-        itemName = "Wallet";
-    } else if (mPauseCursorRow == 3 && mPauseCursorCol == 2) {
-        itemName = "Golden Bugs";
-    } else if (mPauseCursorRow == 3 && mPauseCursorCol == 3) {
-        itemName = "Hidden Skills";
-    } else if (mPauseCursorRow == 4 && mPauseCursorCol == 1) {
-        itemName = "Poe Souls";
-    } else if (mPauseCursorRow == 4 && mPauseCursorCol == 2) {
-        itemName = "Fish Journal";
-    } else if (mPauseCursorRow == 4 && mPauseCursorCol == 3) {
-        itemName = "Letters";
+    const char* itemName;
+    if (mPauseCursorRow == -1) {
+        itemName = "Current Life";
+    } else {
+        u8 currentItem = getDisplayItemForSlot(mPauseCursorRow, mPauseCursorCol);
+        itemName = getItemName(currentItem);
+        if (mPauseCursorCol == 2 && mPauseCursorRow <= 1) {
+            itemName = "Heart Pieces";
+        } else if (mPauseCursorRow == 3 && mPauseCursorCol == 0) {
+            itemName = "Wallet";
+        } else if (mPauseCursorRow == 3 && mPauseCursorCol == 2) {
+            itemName = "Golden Bugs";
+        } else if (mPauseCursorRow == 3 && mPauseCursorCol == 3) {
+            itemName = "Hidden Skills";
+        } else if (mPauseCursorRow == 4 && mPauseCursorCol == 1) {
+            itemName = "Poe Souls";
+        } else if (mPauseCursorRow == 4 && mPauseCursorCol == 2) {
+            itemName = "Fish Journal";
+        } else if (mPauseCursorRow == 4 && mPauseCursorCol == 3) {
+            itemName = "Letters";
+        }
     }
     gzInfo_getMenuDescription()->setString(itemName);
 }
@@ -846,9 +887,19 @@ void gzInventoryMenu_c::drawPauseMenuContent() {
             JUtility::TColor(231, 25, 0, 0), JUtility::TColor(255, 255, 255, 255));
         mpHudHeartPanes[1]->setBlackWhite(
             JUtility::TColor(0, 0, 0, 0), JUtility::TColor(255, 242, 170, 140));
+        for (int q = 0; q < QUARTER_HEART_COUNT; q++) {
+            if (mpQuarterHeartPanes[q] != NULL) {
+                mpQuarterHeartPanes[q]->setBlackWhite(
+                    JUtility::TColor(231, 25, 0, 0),
+                    JUtility::TColor(255, 255, 255, 255));
+            }
+        }
 
         u16 maxLife = dComIfGs_getMaxLife();
-        int numFull = maxLife / 5;
+        u16 life = dComIfGs_getLife();
+        int numContainers = maxLife / 5;
+        int fullCurrent = life / 4;
+        int quarters = life % 4;
         static const f32 HH_W = 20.0f;
         static const f32 HH_H = 18.0f;
         static const f32 HH_GAP = 1.0f;
@@ -856,19 +907,94 @@ void gzInventoryMenu_c::drawPauseMenuContent() {
         f32 heartsX = baseX + 24.0f;
         f32 heartsY = g_gzInfo.mBackgroundYPos + 48.0f;
 
-        for (int i = 0; i < numFull; i++) {
+        bool editing = inCurrentLifeEditMode();
+        bool selected = isHudHeartsSelected() && mIsEntered;
+        int activeIdx = 0;
+        if (quarters > 0) {
+            activeIdx = fullCurrent;
+        } else if (fullCurrent > 0) {
+            activeIdx = fullCurrent - 1;
+        }
+
+        f32 activeHX = heartsX;
+        f32 activeHY = heartsY;
+
+        for (int i = 0; i < numContainers; i++) {
             int hRow = i / HH_PER_ROW;
             int hCol = i % HH_PER_ROW;
             f32 hx = heartsX + hCol * (HH_W + HH_GAP);
             f32 hy = heartsY + hRow * (HH_H + HH_GAP);
 
-            gzSetup2DContext();
-            mpHudHeartPanes[1]->setAlpha(255);
-            mpHudHeartPanes[1]->draw(hx, hy, HH_W, HH_H, true, true, false);
+            f32 scale = 1.0f;
+            if (editing && i == activeIdx) {
+                scale = 1.4f;
+            } else if (selected && !editing) {
+                scale = 1.1f;
+            }
+            f32 dw = HH_W * scale;
+            f32 dh = HH_H * scale;
+            f32 dx = hx - (dw - HH_W) / 2.0f;
+            f32 dy = hy - (dh - HH_H) / 2.0f;
 
-            gzSetup2DContext();
-            mpHudHeartPanes[0]->setAlpha(255);
-            mpHudHeartPanes[0]->draw(hx, hy, HH_W, HH_H, false, false, false);
+            if (i < fullCurrent) {
+                gzSetup2DContext();
+                mpHudHeartPanes[1]->setAlpha(255);
+                mpHudHeartPanes[1]->draw(dx, dy, dw, dh, true, true, false);
+
+                gzSetup2DContext();
+                mpHudHeartPanes[0]->setAlpha(255);
+                mpHudHeartPanes[0]->draw(dx, dy, dw, dh, false, false, false);
+            } else if (i == fullCurrent && quarters > 0) {
+                J2DPicture* qPane = mpQuarterHeartPanes[quarters - 1];
+                if (qPane != NULL) {
+                    gzSetup2DContext();
+                    qPane->setAlpha(255);
+                    qPane->draw(dx, dy, dw, dh, false, false, false);
+                }
+            } else {
+                gzSetup2DContext();
+                mpHudHeartPanes[0]->setAlpha(50);
+                mpHudHeartPanes[0]->draw(dx, dy, dw, dh, false, false, false);
+            }
+
+            if (i == activeIdx) {
+                activeHX = hx;
+                activeHY = hy;
+            }
+        }
+
+        if (selected && gzInfo_isCursorTypeTP() && gzInfo_getTPCursor() != NULL) {
+            if (editing) {
+                gzInfo_getTPCursor()->setPos(
+                    activeHX + HH_W / 2.0f, activeHY + HH_H / 2.0f);
+                gzInfo_getTPCursor()->setParam(0.7f, 0.6f, 0.03f, 0.6f, 0.5f);
+            } else {
+                int topCols = numContainers > HH_PER_ROW ? HH_PER_ROW : numContainers;
+                int numRows = (numContainers + HH_PER_ROW - 1) / HH_PER_ROW;
+                f32 totalW = topCols * (HH_W + HH_GAP);
+                f32 totalH = numRows * (HH_H + HH_GAP);
+                f32 cx = heartsX + totalW / 2.0f;
+                f32 cy = heartsY + totalH / 2.0f - HH_GAP / 2.0f;
+                gzInfo_getTPCursor()->setPos(cx, cy);
+                f32 xScale = topCols * 0.5f;
+                if (xScale < 1.0f) xScale = 1.0f;
+                f32 yScale = numRows * 0.5f;
+                if (yScale < 0.5f) yScale = 0.5f;
+                gzInfo_getTPCursor()->setParam(xScale, yScale, 0.03f, 0.6f, 0.5f);
+            }
+            gzInfo_getTPCursor()->draw();
+        }
+
+        if (editing && mpHaihai != NULL) {
+            mpHaihai->_execute(0);
+            mpHaihai->setScale(0.5f);
+            u16 maxHealth = (maxLife / 5) * 4;
+            u8 arrowFlags = ARROW_LEFT | ARROW_RIGHT;
+            if (life == 0) arrowFlags &= ~ARROW_LEFT;
+            if (life >= maxHealth) arrowFlags &= ~ARROW_RIGHT;
+            f32 haihaiX = activeHX + HH_W / 2.0f;
+            f32 haihaiY = activeHY + HH_H / 2.0f;
+            mpHaihai->drawHaihai(arrowFlags, haihaiX, haihaiY, 30.0f, 0.0f);
         }
     }
 
@@ -914,6 +1040,17 @@ void gzInventoryMenu_c::drawPauseMenuContent() {
                             mpHeartPiecePanes[p]->draw(heartX, heartY, heartW, heartH,
                                                        false, false, false);
                         }
+                    }
+
+                    if (inHeartPieceEditMode() && mpHaihai != NULL) {
+                        mpHaihai->_execute(0);
+                        mpHaihai->setScale(0.5f);
+                        u8 arrowFlags = ARROW_LEFT | ARROW_RIGHT;
+                        if (maxLife <= 5) arrowFlags &= ~ARROW_LEFT;
+                        if (maxLife >= 100) arrowFlags &= ~ARROW_RIGHT;
+                        mpHaihai->drawHaihai(arrowFlags,
+                                             cellX + 48.0f, cellY + 48.0f,
+                                             heartW + 10.0f, 0.0f);
                     }
                 }
 
