@@ -99,7 +99,7 @@ extern dScnPly_preset_HIO_c g_presetHIO;
  * Float Reg(25-29) ... -1.0 - +1.0
  */
 
-#if  ENABLE_REGHIO
+#if ENABLE_REGHIO
 // Morita
 #define TREG_F(i) g_regHIO.mChildReg[0].mFloatReg[i]
 #define TREG_S(i) g_regHIO.mChildReg[0].mShortReg[i]
