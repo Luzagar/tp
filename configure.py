@@ -402,8 +402,8 @@ if config.version == "ShieldD":
 elif config.version in WII_VERSIONS or config.version in SHIELD_VERSIONS:
     cflags_framework.extend(["-ipa file", "-RTTI on", "-DWIDESCREEN_SUPPORT=1"])
 
-if config.version in ["RZDE01_00", "ShieldD"] or args.debug or args.reghio:
-    cflags_framework.extend(["-DENABLE_REGHIO=1"])
+# Always enable regHIO support
+cflags_framework.extend(["-DENABLE_REGHIO=1"])
 
 if config.version != "ShieldD":
     if config.version in WII_VERSIONS:
