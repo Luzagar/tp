@@ -15,6 +15,7 @@ public:
         SETTING_MENU_PAUSES_GAME,
         SETTING_MENU_SFX,
         SETTING_RELOAD_TYPE,
+        SETTING_STATE_STREAMING,
         SETTING_SWAP_EQUIPS,
         SETTING_THEME,
         // Actions
@@ -53,6 +54,7 @@ public:
 
     const char* getReloadTypeText() { return gzInfo_getReloadType() ? "load area" : "load file"; }
     const char* getDropShadowsText() { return gzInfo_isDropShadows() ? "enabled" : "disabled"; }
+    const char* getStateStreamingText() { return gzInfo_isOnline_StateStreaming() ? "enabled" : "disabled"; }
     const char* getSwapEquipsText() { return gzInfo_isSwapEquips() ? "yes" : "no"; }
     const char* getDisplayModeText() { return gzInfo_getDisplayMode() ? "progressive" : "interlaced"; }
     const char* getMenuPausesGameText() { return gzInfo_isMenuPausesGame() ? "yes" : "no"; }
@@ -79,6 +81,7 @@ private:
     gzBoolOptionLine* mpMenuPausesGame;
     gzBoolOptionLine* mpMenuSfx;
     gzBoolOptionLine* mpReloadType;
+    gzBoolOptionLine* mpStateStreaming;
     gzBoolOptionLine* mpSwapEquips;
     gzListOptionLine* mpTheme;
     // Actions

@@ -28,6 +28,9 @@ u8 gzSettingsMenu_c::getHaihaiFlags(int i) {
     case gzSettingsMenu_c::SETTING_RELOAD_TYPE:
         !gzInfo_getReloadType() ? haihai_flags &= ~gzMenu_c::ARROW_LEFT : haihai_flags &= ~gzMenu_c::ARROW_RIGHT;
         break;
+    case gzSettingsMenu_c::SETTING_STATE_STREAMING:
+        !gzInfo_isOnline_StateStreaming() ? haihai_flags &= ~gzMenu_c::ARROW_LEFT : haihai_flags &= ~gzMenu_c::ARROW_RIGHT;
+        break;
     case gzSettingsMenu_c::SETTING_SWAP_EQUIPS:
         !gzInfo_isSwapEquips() ? haihai_flags &= ~gzMenu_c::ARROW_LEFT : haihai_flags &= ~gzMenu_c::ARROW_RIGHT;
         break;
@@ -58,6 +61,7 @@ void gzSettingsMenu_c::updateDynamicLines() {
     mpMenuPausesGame->getOptionBox()->setStringf("%s", getMenuPausesGameText());
     mpMenuSfx->getOptionBox()->setStringf("%s", getMenuSfxText());
     mpReloadType->getOptionBox()->setStringf("%s", getReloadTypeText());
+    mpStateStreaming->getOptionBox()->setStringf("%s", getStateStreamingText());
     mpSwapEquips->getOptionBox()->setStringf("%s", getSwapEquipsText());
     mpTheme->getOptionBox()->setStringf("%s", getThemeText());
     updateLineBounds(mpLines, mLineCount);
@@ -95,6 +99,7 @@ gzSettingsMenu_c::gzSettingsMenu_c() {
     mpMenuPausesGame = new (gzHeap(GZ_GROUP_MENU), 4) gzBoolOptionLine("menu pauses game", "opening gz menu pauses game", gzInfo_isMenuPausesGame, gzInfo_onMenuPausesGame, gzInfo_offMenuPausesGame);
     mpMenuSfx = new (gzHeap(GZ_GROUP_MENU), 4) gzBoolOptionLine("menu sfx", "turn on/off gz menu sound effects", gzInfo_isMenuSfx, gzInfo_onMenuSfx, gzInfo_offMenuSfx);
     mpReloadType = new (gzHeap(GZ_GROUP_MENU), 4) gzBoolOptionLine("reload type", "changes reload type to last file or last area", gzInfo_isReloadArea, gzInfo_setReloadArea, gzInfo_setReloadFile);
+    mpStateStreaming = new (gzHeap(GZ_GROUP_MENU), 4) gzBoolOptionLine("state streaming", "stream link state over network", gzInfo_isOnline_StateStreaming, gzInfo_onOnline_StateStreaming, gzInfo_offOnline_StateStreaming);
     mpSwapEquips = new (gzHeap(GZ_GROUP_MENU), 4) gzBoolOptionLine("swap equips", "", gzInfo_isSwapEquips, gzInfo_onSwapEquips, gzInfo_offSwapEquips);
     mpTheme = new (gzHeap(GZ_GROUP_MENU), 4) gzListOptionLine("theme", "changes tpgz menu color theme", gzInfo_nextTextColor, gzInfo_prevTextColor);
     // Actions
@@ -112,6 +117,7 @@ gzSettingsMenu_c::gzSettingsMenu_c() {
     mpLines[SETTING_MENU_PAUSES_GAME] = mpMenuPausesGame;
     mpLines[SETTING_MENU_SFX] = mpMenuSfx;
     mpLines[SETTING_RELOAD_TYPE] = mpReloadType;
+    mpLines[SETTING_STATE_STREAMING] = mpStateStreaming;
     mpLines[SETTING_SWAP_EQUIPS] = mpSwapEquips;
     mpLines[SETTING_THEME] = mpTheme;
     mpLines[SETTING_COMMAND_COMBOS] = mpCommandCombos;
@@ -120,7 +126,7 @@ gzSettingsMenu_c::gzSettingsMenu_c() {
     mpLines[SETTING_LOAD] = mpLoad;
     mpLines[SETTING_DELETE] = mpDelete;
 
-    if (g_gzInfo.mIsNintendont) {
+    if (umbraIsNintendont()) {
         mpReturnToLoader = new (gzHeap(GZ_GROUP_MENU), 4) gzLine("return to loader", "exit game and return to homebrew channel");
         mpLines[SETTING_RETURN_TO_LOADER] = mpReturnToLoader;
         mLineCount = LINE_NUM;
@@ -157,6 +163,9 @@ void gzSettingsMenu_c::_delete() {
 
     delete mpReloadType;
     mpReloadType = NULL;
+
+    delete mpStateStreaming;
+    mpStateStreaming = NULL;
 
     delete mpSwapEquips;
     mpSwapEquips = NULL;
@@ -211,6 +220,7 @@ void gzSettingsMenu_c::execute() {
         case SETTING_CURSOR_TYPE:
         case SETTING_DISPLAY_MODE:
         case SETTING_DROP_SHADOW:
+        case SETTING_STATE_STREAMING:
         case SETTING_SWAP_EQUIPS:
         case SETTING_MENU_PAUSES_GAME:
         case SETTING_BOOT_TO_MENU:
@@ -281,6 +291,12 @@ void gzSettingsMenu_c::execute() {
                     gzInfo_seStart(Z2SE_SY_TALK_CURSOR);
                 }
                 break;
+            case SETTING_STATE_STREAMING:
+                if (!gzInfo_isOnline_StateStreaming()) {
+                    gzInfo_onOnline_StateStreaming();
+                    gzInfo_seStart(Z2SE_SY_TALK_CURSOR);
+                }
+                break;
             case SETTING_SWAP_EQUIPS:
                 if (!gzInfo_isSwapEquips()) {
                     gzInfo_onSwapEquips();
@@ -335,6 +351,12 @@ void gzSettingsMenu_c::execute() {
             case SETTING_MENU_SFX:
                 if (gzInfo_isMenuSfx()) {
                     gzInfo_offMenuSfx();
+                    gzInfo_seStart(Z2SE_SY_TALK_CURSOR);
+                }
+                break;
+            case SETTING_STATE_STREAMING:
+                if (gzInfo_isOnline_StateStreaming()) {
+                    gzInfo_offOnline_StateStreaming();
                     gzInfo_seStart(Z2SE_SY_TALK_CURSOR);
                 }
                 break;

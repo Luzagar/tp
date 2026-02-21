@@ -1,3 +1,5 @@
+#include "d/dolzel.h" // IWYU pragma: keep
+
 #include "gz/gz.h"
 #include "d/actor/d_a_alink.h"
 

@@ -4,7 +4,6 @@
 #include "gz/gz_menu.h"
 #include "gz/gz_textbox.h"
 #include "gz/gz_utility_draw.h"
-#include "d/d_select_cursor.h"
 
 gzSetupWizard_c::gzSetupWizard_c() {
     mStep = STEP_WELCOME;
@@ -13,7 +12,6 @@ gzSetupWizard_c::gzSetupWizard_c() {
     mMenuPauses = true;
     mDisplayMode = false;
     mMenuSfx = true;
-    mCursorType = gzInfo_c::CURSOR_CLASSIC;
     mThemeIndex = 10;
 
     mpTitle = gzTextBox_allocate();
@@ -22,10 +20,6 @@ gzSetupWizard_c::gzSetupWizard_c() {
     mpOption1 = gzTextBox_allocate();
     mpOption2 = gzTextBox_allocate();
     mpHint = gzTextBox_allocate();
-
-    mpTPCursor = new (gzHeap(GZ_GROUP_GRAPHICS), 4) dSelect_cursor_c(2, 1.0f, NULL);
-    mpTPCursor->setParam(0.96f, 0.84f, 0.03f, 0.5f, 0.5f);
-    mpTPCursor->setAlphaRate(1.0f);
 }
 
 gzSetupWizard_c::~gzSetupWizard_c() {
@@ -42,9 +36,6 @@ gzSetupWizard_c::~gzSetupWizard_c() {
     gzTextBox_free(mpOption1);
     gzTextBox_free(mpOption2);
     gzTextBox_free(mpHint);
-
-    delete mpTPCursor;
-    mpTPCursor = NULL;
 }
 
 void gzSetupWizard_c::applySettings() {
@@ -52,14 +43,15 @@ void gzSetupWizard_c::applySettings() {
     g_gzInfo.setMenuPausesGame(mMenuPauses);
     g_gzInfo.setDisplayMode(mDisplayMode);
     g_gzInfo.setMenuSfx(mMenuSfx);
-    g_gzInfo.setCursorType(mCursorType);
     g_gzInfo.setTextColor(GZ_TEXT_COLORS[mThemeIndex]);
+
     if (mDisplayMode) {
         gzInfo_setDisplayModeProgressive();
     } else {
         gzInfo_setDisplayModeInterlaced();
     }
-    g_gzInfo.storeSettings();
+
+    gzInfo_storeSettings();
 }
 
 void gzSetupWizard_c::execute() {
@@ -75,10 +67,6 @@ void gzSetupWizard_c::execute() {
         case STEP_MENU_SFX:
             mSelection ^= 1;
             break;
-        case STEP_CURSOR_TYPE:
-            mSelection = isLeft ? (mSelection == 0 ? 2 : mSelection - 1)
-                                : (mSelection == 2 ? 0 : mSelection + 1);
-            break;
         case STEP_THEME:
             mThemeIndex = isLeft ? (mThemeIndex - 1 + GZ_NUM_TEXT_COLORS) % GZ_NUM_TEXT_COLORS
                                  : (mThemeIndex + 1) % GZ_NUM_TEXT_COLORS;
@@ -93,13 +81,9 @@ void gzSetupWizard_c::execute() {
 
     if (gzPad::getTrigB() && mStep != STEP_WELCOME && mStep != STEP_COMPLETE) {
         switch (mStep) {
-        case STEP_CURSOR_TYPE:
+        case STEP_THEME:
             mStep = STEP_WELCOME;
             mSelection = 1;
-            break;
-        case STEP_THEME:
-            mStep = STEP_CURSOR_TYPE;
-            mSelection = mCursorType - 1;
             break;
         case STEP_BOOT_TARGET:
             mStep = STEP_THEME;
@@ -131,14 +115,9 @@ void gzSetupWizard_c::execute() {
                 applySettings();
                 mStep = STEP_DONE;
             } else {
-                mStep = STEP_CURSOR_TYPE;
+                mStep = STEP_THEME;
                 mSelection = 0;
             }
-            break;
-        case STEP_CURSOR_TYPE:
-            mCursorType = (u8)(mSelection + 1);
-            mStep = STEP_THEME;
-            mSelection = 0;
             break;
         case STEP_THEME:
             mStep = STEP_BOOT_TARGET;
@@ -176,9 +155,6 @@ void gzSetupWizard_c::execute() {
         }
     }
 
-    if (mStep == STEP_CURSOR_TYPE) {
-        g_gzInfo.setCursorType((u8)(mSelection + 1));
-    }
     if (mStep == STEP_DISPLAY_MODE) {
         if (mSelection == 1) {
             gzInfo_setDisplayModeProgressive();
@@ -196,7 +172,6 @@ void gzSetupWizard_c::draw() {
 
     u32 theme = g_gzInfo.getTextColor();
     u32 cursorColor = gzInfo_getCursorColor();
-    bool showTP = gzInfo_isCursorTypeTP();
 
     static const f32 BOX_W = 380.0f;
     static const f32 BOX_H = 180.0f;
@@ -230,7 +205,6 @@ void gzSetupWizard_c::draw() {
     case STEP_WELCOME: question = "run first time setup?"; break;
     case STEP_BOOT_TARGET: question = "when tpgz boots, what should load?"; break;
     case STEP_MENU_PAUSES: question = "should the menu pause the game?"; break;
-    case STEP_CURSOR_TYPE: question = "select your cursor type"; break;
     case STEP_THEME: question = "select your theme"; break;
     case STEP_DISPLAY_MODE: question = "select display mode"; break;
     case STEP_MENU_SFX: question = "enable menu sound effects?"; break;
@@ -245,69 +219,36 @@ void gzSetupWizard_c::draw() {
     }
 
     f32 optionY = BOX_Y + 110.0f;
-    gzTextBox* tpCursorTarget = NULL;
-    f32 tpCursorX = 0.0f;
 
     switch (mStep) {
     case STEP_WELCOME:
-        drawBinaryOptions("no", "yes", 40.0f, optionY, cursorColor, showTP,
-                          tpCursorTarget, tpCursorX);
+        drawBinaryOptions("no", "yes", 40.0f, optionY, cursorColor);
         break;
     case STEP_BOOT_TARGET:
-        drawBinaryOptions("title screen", "tpgz menu", 60.0f, optionY, cursorColor, showTP,
-                          tpCursorTarget, tpCursorX);
+        drawBinaryOptions("title screen", "tpgz menu", 60.0f, optionY, cursorColor);
         break;
     case STEP_MENU_PAUSES:
-        drawBinaryOptions("yes", "no", 40.0f, optionY, cursorColor, showTP,
-                          tpCursorTarget, tpCursorX);
+        drawBinaryOptions("yes", "no", 40.0f, optionY, cursorColor);
         break;
-    case STEP_CURSOR_TYPE: {
-        static const f32 optXs[] = {-80.0f, 0.0f, 80.0f};
-        static const char* const optLabels[] = {"classic", "tp", "both"};
-        gzTextBox* opts[] = {mpOption0, mpOption1, mpOption2};
-        for (int i = 0; i < 3; i++) {
-            if (opts[i] != NULL) {
-                opts[i]->setFontSize(18.0f, 18.0f);
-                opts[i]->setString(optLabels[i]);
-                opts[i]->draw(optXs[i], optionY,
-                              (mSelection == i) ? cursorColor : COLOR_WHITE, HBIND_CENTER);
-            }
-        }
-        if (showTP && mpTPCursor != NULL) {
-            tpCursorTarget = opts[mSelection];
-            tpCursorX = optXs[mSelection];
-        }
-        break;
-    }
     case STEP_THEME: {
         if (mpOption0 != NULL) {
             mpOption0->setFontSize(18.0f, 18.0f);
             mpOption0->setStringf("< %s >", gzGetThemeColorName(GZ_TEXT_COLORS[mThemeIndex]));
             mpOption0->draw(0.0f, optionY, cursorColor, HBIND_CENTER);
         }
-        if (showTP && mpTPCursor != NULL) {
-            tpCursorTarget = mpOption0;
-            tpCursorX = 0.0f;
-        }
         break;
     }
     case STEP_DISPLAY_MODE:
-        drawBinaryOptions("interlaced", "progressive", 60.0f, optionY, cursorColor, showTP,
-                          tpCursorTarget, tpCursorX);
+        drawBinaryOptions("interlaced", "progressive", 60.0f, optionY, cursorColor);
         break;
     case STEP_MENU_SFX:
-        drawBinaryOptions("yes", "no", 40.0f, optionY, cursorColor, showTP,
-                          tpCursorTarget, tpCursorX);
+        drawBinaryOptions("yes", "no", 40.0f, optionY, cursorColor);
         break;
     case STEP_COMPLETE: {
         if (mpOption0 != NULL) {
             mpOption0->setFontSize(18.0f, 18.0f);
             mpOption0->setString("ok");
             mpOption0->draw(0.0f, optionY, cursorColor, HBIND_CENTER);
-        }
-        if (showTP && mpTPCursor != NULL) {
-            tpCursorTarget = mpOption0;
-            tpCursorX = 0.0f;
         }
         break;
     }
@@ -326,20 +267,10 @@ void gzSetupWizard_c::draw() {
         mpHint->setString(hint);
         mpHint->draw(0.0f, BOX_Y + BOX_H - 22.0f, COLOR_GRAY, HBIND_CENTER);
     }
-
-    if (tpCursorTarget != NULL) {
-        tpCursorTarget->updateBounds();
-        f32 cursorX = tpCursorX + 304.0f + gzMenuLayout::TP_CURSOR_X_OFFSET + 3.0f;
-        f32 cursorY = optionY + (tpCursorTarget->getHeight() / 2.0f) +
-                      gzMenuLayout::TP_CURSOR_Y_OFFSET;
-        mpTPCursor->setPos(cursorX, cursorY, (J2DPane*)tpCursorTarget, false);
-        mpTPCursor->draw();
-    }
 }
 
 void gzSetupWizard_c::drawBinaryOptions(const char* text0, const char* text1, f32 spread,
-                                         f32 y, u32 selColor, bool showTP,
-                                         gzTextBox*& outTarget, f32& outX) {
+                                         f32 y, u32 selColor) {
     u32 col0 = (mSelection == 0) ? selColor : COLOR_WHITE;
     u32 col1 = (mSelection == 1) ? selColor : COLOR_WHITE;
     if (mpOption0 != NULL) {
@@ -351,9 +282,5 @@ void gzSetupWizard_c::drawBinaryOptions(const char* text0, const char* text1, f3
         mpOption1->setFontSize(18.0f, 18.0f);
         mpOption1->setString(text1);
         mpOption1->draw(spread, y, col1, HBIND_CENTER);
-    }
-    if (showTP && mpTPCursor != NULL) {
-        outTarget = (mSelection == 0) ? mpOption0 : mpOption1;
-        outX = (mSelection == 0) ? -spread : spread;
     }
 }

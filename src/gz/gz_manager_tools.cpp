@@ -1,19 +1,19 @@
+#include "d/dolzel.h" // IWYU pragma: keep
+
+#include "gz/gz.h"
 #include "d/actor/d_a_alink.h"
 #include "d/d_camera.h"
 #include "d/d_com_inf_game.h"
 #include "d/d_event.h"
 #include "d/d_event_manager.h"
+#include "gz/gz_menu_practice.h"
+#include "gz/gz_textbox.h"
+#include "gz/gz_utility_draw.h"
+#include "gz/gz_utility_notification.h"
+#include "gz/gz_utility_world_text.h"
 #include "m_Do/m_Do_controller_pad.h"
 #include "SSystem/SComponent/c_counter.h"
 #include "JSystem/JKernel/JKRAramArchive.h"
-
-#include "gz/gz.h"
-#include "gz/gz_menu_practice.h"
-#include "gz/gz_textbox.h"
-#include "gz/gz_utility_notification.h"
-#include "gz/gz_utility_world_text.h"
-#include "gz/gz_utility_draw.h"
-
 #include <cmath>
 #include <cstdio>
 
@@ -493,24 +493,129 @@ void gzToolsMng_c::drawRollChecker() {
                     mRollChecker.resultText, mRollChecker.resultColor, 1.5f, -0.5f);
 }
 
+void gzToolLinkDebugInfo_s::create() {
+    const f32 FONT_SIZE = 15.0f;
+
+    pTimeTbox = gzTextBox_allocate();
+    if (pTimeTbox == NULL) return;
+    pTimeTbox->setFontSize(FONT_SIZE, FONT_SIZE);
+
+    pActionTbox = gzTextBox_allocate();
+    if (pActionTbox == NULL) return;
+    pActionTbox->setFontSize(FONT_SIZE, FONT_SIZE);
+
+    for (int i = 0; i < 3; i++) {
+        pPosText[i] = gzTextBox_allocate();
+        if (pPosText[i] == NULL) return;
+        pPosText[i]->setFontSize(FONT_SIZE, FONT_SIZE);
+    }
+
+    for (int i = 0; i < 2; i++) {
+        pAngleText[i] = gzTextBox_allocate();
+        if (pAngleText[i] == NULL) return;
+        pAngleText[i]->setFontSize(FONT_SIZE, FONT_SIZE);
+    }
+
+    pSpeedText = gzTextBox_allocate();
+    if (pSpeedText == NULL) return;
+    pSpeedText->setFontSize(FONT_SIZE, FONT_SIZE);
+
+    isInitialized = true;
+}
+
+void gzToolLinkDebugInfo_s::delete_() {
+    if (isInitialized) {
+        delete pTimeTbox;
+        pTimeTbox = NULL;
+
+        delete pActionTbox;
+        pActionTbox = NULL;
+
+        for (int i = 0; i < 3; i++) {
+            delete pPosText[i];
+            pPosText[i] = NULL;
+        }
+
+        for (int i = 0; i < 2; i++) {
+            delete pAngleText[i];
+            pAngleText[i] = NULL;
+        }
+
+        delete pSpeedText;
+        pSpeedText = NULL;
+
+        isInitialized = false;
+    }
+}
+
 void gzToolsMng_c::drawLinkInfo() {
     daAlink_c* player = daAlink_getAlinkActorClass();
     if (player == NULL)
         return;
 
-    const int BASE_X = 400;
+    if (!mLinkInfo.isInitialized) {
+        mLinkInfo.create();
+    }
+
+    const int BASE_X = 450;
     const int BASE_Y = 200;
     const int LINE_HEIGHT = 20;
 
-    // TODO: do we like prints or textboxes here more?
-    gzPrint(BASE_X, BASE_Y + (LINE_HEIGHT * 0), COLOR_WHITE, "time: %02d:%02d", dKy_getdaytime_hour(), dKy_getdaytime_minute());
-    gzPrint(BASE_X, BASE_Y + (LINE_HEIGHT * 1), COLOR_WHITE, "action: %d", player->mProcID);
-    gzPrint(BASE_X, BASE_Y + (LINE_HEIGHT * 2), COLOR_WHITE, "pos x: %.4f", player->current.pos.x);
-    gzPrint(BASE_X, BASE_Y + (LINE_HEIGHT * 3), COLOR_WHITE, "pos y: %.4f", player->current.pos.y);
-    gzPrint(BASE_X, BASE_Y + (LINE_HEIGHT * 4), COLOR_WHITE, "pos z: %.4f", player->current.pos.z);
-    gzPrint(BASE_X, BASE_Y + (LINE_HEIGHT * 5), COLOR_WHITE, "angle: %d", (u16)player->shape_angle.y);
-    gzPrint(BASE_X, BASE_Y + (LINE_HEIGHT * 6), COLOR_WHITE, "v-angle: %d", player->mBodyAngle.x);
-    gzPrint(BASE_X, BASE_Y + (LINE_HEIGHT * 7), COLOR_WHITE, "speed: %.4f", player->speedF);
+    mLinkInfo.pTimeTbox->setStringf("time: %02d:%02d", dKy_getdaytime_hour(), dKy_getdaytime_minute());
+    mLinkInfo.pTimeTbox->draw(BASE_X, BASE_Y + (LINE_HEIGHT * 0), COLOR_WHITE);
+
+    mLinkInfo.pActionTbox->setStringf("action: %d", player->mProcID);
+    mLinkInfo.pActionTbox->draw(BASE_X, BASE_Y + (LINE_HEIGHT * 1), COLOR_WHITE);
+
+    mLinkInfo.pPosText[0]->setStringf("pos x: %.4f", player->current.pos.x);
+    mLinkInfo.pPosText[0]->draw(BASE_X, BASE_Y + (LINE_HEIGHT * 2), COLOR_WHITE);
+
+    mLinkInfo.pPosText[1]->setStringf("pos y: %.4f", player->current.pos.y);
+    mLinkInfo.pPosText[1]->draw(BASE_X, BASE_Y + (LINE_HEIGHT * 3), COLOR_WHITE);
+
+    mLinkInfo.pPosText[2]->setStringf("pos z: %.4f", player->current.pos.z);
+    mLinkInfo.pPosText[2]->draw(BASE_X, BASE_Y + (LINE_HEIGHT * 4), COLOR_WHITE);
+
+    mLinkInfo.pAngleText[0]->setStringf("angle: %d", (u16)player->shape_angle.y);
+    mLinkInfo.pAngleText[0]->draw(BASE_X, BASE_Y + (LINE_HEIGHT * 5), COLOR_WHITE);
+
+    mLinkInfo.pAngleText[1]->setStringf("v-angle: %d", player->mBodyAngle.x);
+    mLinkInfo.pAngleText[1]->draw(BASE_X, BASE_Y + (LINE_HEIGHT * 6), COLOR_WHITE);
+
+    mLinkInfo.pSpeedText->setStringf("speed: %.4f", player->speedF);
+    mLinkInfo.pSpeedText->draw(BASE_X, BASE_Y + (LINE_HEIGHT * 7), COLOR_WHITE);
+}
+
+void gzInputViewer_s::cleanup() {
+    if (!isInitialized) return;
+
+    JKRHeap* gfxHeap = gzHeap(GZ_GROUP_GRAPHICS);
+    delete pAbtn;
+    delete pBbtn;
+    delete pXbtn;
+    delete pYbtn;
+    delete pZbtn;
+    delete pSbtn;
+    delete pStick;
+    delete pSubstick;
+    for (int i = 0; i < 4; i++) {
+        delete pDPad[i];
+        pDPad[i] = NULL;
+    }
+    delete pTrigL;
+    delete pTrigR;
+    pAbtn = pBbtn = pXbtn = pYbtn = pZbtn = pSbtn = NULL;
+    pStick = pSubstick = pTrigL = pTrigR = NULL;
+
+    if (pStickBuf != NULL) { gfxHeap->free(pStickBuf); pStickBuf = NULL; }
+    if (pDPadBuf != NULL) { gfxHeap->free(pDPadBuf); pDPadBuf = NULL; }
+    if (pTrigBuf != NULL) { gfxHeap->free(pTrigBuf); pTrigBuf = NULL; }
+
+    gzTextBox_free(pStickValueText);
+    gzTextBox_free(pSubstickValueText);
+    pStickValueText = pSubstickValueText = NULL;
+
+    isInitialized = false;
 }
 
 void gzInputViewer_s::drawButton(J2DPicture* pic, u32 button, u32 color, f32 x, f32 y, f32 sx, f32 sy) {
@@ -561,40 +666,41 @@ void gzToolsMng_c::drawInputViewer() {
             }
 
             DVDFileInfo file;
-            void* buffer = gfxHeap->alloc(0x1560, 32);
+            mInputViewer.pStickBuf = gfxHeap->alloc(0x1560, 32);
             if (DVDOpen("/gz/buttons/stick-outline-64.bti", &file)) {
-                
-                DVDReadPrio(&file, buffer, 0x1560, 0, 2);
+                DVDReadPrio(&file, mInputViewer.pStickBuf, 0x1560, 0, 2);
 
-                mInputViewer.pStick = new (gfxHeap, 4) J2DPicture((ResTIMG*)buffer);
-                mInputViewer.pSubstick = new (gfxHeap, 4) J2DPicture((ResTIMG*)buffer);
+                mInputViewer.pStick = new (gfxHeap, 4) J2DPicture((ResTIMG*)mInputViewer.pStickBuf);
+                mInputViewer.pSubstick = new (gfxHeap, 4) J2DPicture((ResTIMG*)mInputViewer.pStickBuf);
 
                 DVDClose(&file);
             }
 
             if (DVDOpen("/gz/buttons/dpad-key.bti", &file)) {
-                buffer = gfxHeap->alloc(0x900, 32);
-                DVDReadPrio(&file, buffer, 0x900, 0, 2);
+                mInputViewer.pDPadBuf = gfxHeap->alloc(0x900, 32);
+                DVDReadPrio(&file, mInputViewer.pDPadBuf, 0x900, 0, 2);
 
                 for (int i = 0; i < 4; i++) {
-                    mInputViewer.pDPad[i] = new (gfxHeap, 4) J2DPicture((ResTIMG*)buffer);
+                    mInputViewer.pDPad[i] = new (gfxHeap, 4) J2DPicture((ResTIMG*)mInputViewer.pDPadBuf);
                 }
 
                 DVDClose(&file);
             }
 
             if (DVDOpen("/gz/buttons/lr_outline.bti", &file)) {
-                buffer = gfxHeap->alloc(0xB80, 32);
-                DVDReadPrio(&file, buffer, 0xB80, 0, 2);
+                mInputViewer.pTrigBuf = gfxHeap->alloc(0xB80, 32);
+                DVDReadPrio(&file, mInputViewer.pTrigBuf, 0xB80, 0, 2);
 
-                mInputViewer.pTrigL = new (gfxHeap, 4) J2DPicture((ResTIMG*)buffer);
-                mInputViewer.pTrigR = new (gfxHeap, 4) J2DPicture((ResTIMG*)buffer);
+                mInputViewer.pTrigL = new (gfxHeap, 4) J2DPicture((ResTIMG*)mInputViewer.pTrigBuf);
+                mInputViewer.pTrigR = new (gfxHeap, 4) J2DPicture((ResTIMG*)mInputViewer.pTrigBuf);
 
                 DVDClose(&file);
             }
 
-            gfxHeap->free(buffer);
         }
+
+        mInputViewer.pStickValueText = gzTextBox_allocate();
+        mInputViewer.pSubstickValueText = gzTextBox_allocate();
 
         mInputViewer.isInitialized = true;
     }
@@ -646,6 +752,12 @@ void gzToolsMng_c::drawInputViewer() {
                        -(mDoCPd_c::getStickY(PAD_1) * 10) + (BASE_Y + 8.0f),
                        15.0f, stick_color, stick_color, 2.0f);
 
+    if (mInputViewer.pStickValueText != NULL) {
+        mInputViewer.pStickValueText->setStringf("%d  %d", mDoCPd_c::getGamePad(PAD_1)->mMainStick.mRawX, mDoCPd_c::getGamePad(PAD_1)->mMainStick.mRawY);
+        mInputViewer.pStickValueText->setFontSize(12.0f, 12.0f);
+        mInputViewer.pStickValueText->draw(BASE_X - 115.0f, BASE_Y + 50.0f, 0xFFFFFFFF);
+    }
+
     mInputViewer.pSubstick->setBlackWhite(0, 0xFFDB6DFF);
     mInputViewer.pSubstick->scale(0.7f, 0.7f);
     mInputViewer.pSubstick->draw(BASE_X - 55.0f, BASE_Y - 10.0f, false, false, false);
@@ -653,6 +765,12 @@ void gzToolsMng_c::drawInputViewer() {
     gzDrawFilledCircle((mDoCPd_c::getSubStickX(PAD_1) * 10) + (BASE_X - 32.0f),
                        -(mDoCPd_c::getSubStickY(PAD_1) * 10) + (BASE_Y + 13.0f),
                        10.0f, substick_color, substick_color, 2.0f);
+
+    if (mInputViewer.pSubstickValueText != NULL) {
+        mInputViewer.pSubstickValueText->setStringf("%d  %d", mDoCPd_c::getGamePad(PAD_1)->mSubStick.mRawX, mDoCPd_c::getGamePad(PAD_1)->mSubStick.mRawY);
+        mInputViewer.pSubstickValueText->setFontSize(12.0f, 12.0f);
+        mInputViewer.pSubstickValueText->draw(BASE_X - 55.0f, BASE_Y + 50.0f, 0xFFDB6DFF);
+    }
 }
 
 void gzToolsMng_c::draw() {
@@ -660,9 +778,13 @@ void gzToolsMng_c::draw() {
 
     if (gzInfo_isTool_LinkDebugInfo()) {
         drawLinkInfo();
+    } else {
+        mLinkInfo.delete_();
     }
 
     if (gzInfo_isTool_InputViewer()) {
         drawInputViewer();
+    } else {
+        mInputViewer.cleanup();
     }
 }

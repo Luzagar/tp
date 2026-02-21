@@ -3,7 +3,7 @@
 """
 Patches the DOL ldscript.lcf FORCEACTIVE section with all defined symbols
 from custom object files. This ensures REL modules can resolve references
-to functions/data defined in custom DOL code (e.g. rando.cpp).
+to functions/data defined in custom DOL code.
 
 Usage: python3 tools/patch_forceactive.py <ldscript.lcf> <nm_binary> <obj_file> [<obj_file> ...]
 """

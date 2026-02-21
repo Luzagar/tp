@@ -3,7 +3,7 @@
 
 #include "SSystem/SComponent/c_angle.h"
 #include "SSystem/SComponent/c_xyz.h"
-#include "SSystem/Scomponent/c_sxyz.h"
+#include "SSystem/SComponent/c_sxyz.h"
 
 class gzTextBox;
 
@@ -89,6 +89,7 @@ struct ElevatorEscapeState {
 class J2DPicture;
 struct gzInputViewer_s {
     void drawButton(J2DPicture* pic, u32 button, u32 color, f32 x, f32 y, f32 sx, f32 sy);
+    void cleanup();
 
     bool isInitialized;
     J2DPicture* pAbtn;
@@ -102,6 +103,23 @@ struct gzInputViewer_s {
     J2DPicture* pDPad[4];
     J2DPicture* pTrigL;
     J2DPicture* pTrigR;
+    gzTextBox* pStickValueText;
+    gzTextBox* pSubstickValueText;
+    void* pStickBuf;
+    void* pDPadBuf;
+    void* pTrigBuf;
+};
+
+struct gzToolLinkDebugInfo_s {
+    void create();
+    void delete_();
+
+    bool isInitialized;
+    gzTextBox* pTimeTbox;
+    gzTextBox* pActionTbox;
+    gzTextBox* pPosText[3];
+    gzTextBox* pAngleText[2];
+    gzTextBox* pSpeedText;
 };
 
 class gzToolsMng_c {
@@ -133,6 +151,7 @@ private:
     EBMBState mEBMB;
     RollCheckerState mRollChecker;
     gzInputViewer_s mInputViewer;
+    gzToolLinkDebugInfo_s mLinkInfo;
 };
 
 #endif // GZ_MANAGER_TOOLS_H

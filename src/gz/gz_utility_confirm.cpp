@@ -2,6 +2,7 @@
 
 #include "gz/gz_utility_confirm.h"
 #include "gz/gz_menu.h"
+#include "gz/gz_utility_draw.h"
 #include "gz/gz_textbox.h"
 #include "d/d_select_cursor.h"
 

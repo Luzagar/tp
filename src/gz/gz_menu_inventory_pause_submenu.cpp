@@ -1,4 +1,4 @@
-#include "d/dolzel.h"  // IWYU pragma: keep
+#include "d/dolzel.h" // IWYU pragma: keep
 
 #include "gz/gz_menu_inventory.h"
 #include "gz/gz_utility_draw.h"

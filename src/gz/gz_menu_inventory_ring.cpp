@@ -1,6 +1,7 @@
 #include "d/dolzel.h"  // IWYU pragma: keep
 
 #include "gz/gz_menu_inventory.h"
+#include "gz/gz_utility_draw.h"
 #include "d/d_com_inf_game.h"
 #include "d/d_item_data.h"
 #include "d/d_meter2_info.h"

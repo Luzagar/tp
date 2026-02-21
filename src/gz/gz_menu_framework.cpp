@@ -2,6 +2,7 @@
 
 #include "gz/gz_menu_framework.h"
 #include "gz/gz_menu_main.h"
+#include "gz/gz_utility_draw.h"
 #include "d/d_select_cursor.h"
 #include "f_pc/f_pc_leaf.h"
 #include "f_pc/f_pc_node.h"

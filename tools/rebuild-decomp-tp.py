@@ -124,16 +124,16 @@ if __name__ == "__main__":
             rel_dir = decomp_build_path / rel_name
             if rel_dir.is_file():
                 continue
-            
+
             rel_file = rel_dir / f"{rel_name}.rel"
             if not rel_file.is_file():
                 continue
-            
+
             decomp_rel_path = rel_file
             with open(decomp_rel_path, "rb") as f:
                 decomp_rel_data = BytesIO(f.read())
                 rel_file_entry = rels_arc.get_file_entry(rel_name.lower() + ".rel")
-                
+
                 if rel_file_entry:
                     # Compress and update the REL in the archive
                     rel_file_entry.data = Yaz0.compress(decomp_rel_data)
@@ -153,7 +153,7 @@ if __name__ == "__main__":
         # Update the main DOL and map files
         with open(decomp_build_path / "framework.dol", "rb") as f:
             gcm.changed_files[MAIN_DOL_PATH] = BytesIO(f.read())
-            
+
         with open(decomp_build_path / "framework.elf.MAP", "rb") as f:
             gcm.changed_files[FRAMEWORK_MAP_PATH] = BytesIO(f.read())
 

@@ -1,5 +1,6 @@
 #include "gz/gz_utility_notification.h"
 #include "gz/gz.h"
+#include "gz/gz_textbox.h"
 #include "gz/gz_utility_draw.h"
 #include "SSystem/SComponent/c_counter.h"
 

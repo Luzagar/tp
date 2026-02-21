@@ -193,8 +193,6 @@ void gzWarpMenu_c::executeWarp() {
     g_dComIfG_gameInfo.info.getRestart().setLastSceneInfo(0.0f, 0, 0);
     g_gzInfo.mDisplay = false;
 
-    // Signal to automation scripts that warp was executed
-    g_gzAutoState.warpExecuted = true;
 }
 
 void gzWarpMenu_c::updateLineText() {
@@ -333,12 +331,6 @@ void gzWarpMenu_c::draw() {
     }
 
     if (!mpTypeData) return;
-
-    // Update automation state for Python scripts
-    g_gzAutoState.warpTypeIdx = mTypeIdx;
-    g_gzAutoState.warpStageIdx = mStageIdx;
-    g_gzAutoState.warpRoomIdx = mRoomIdx;
-    g_gzAutoState.warpSpawnIdx = mSpawnIdx;
 
     updateLineText();
     updateLineBounds((gzLine**)mpLines, LINE_NUM);

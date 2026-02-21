@@ -1,6 +1,7 @@
 #include "d/dolzel.h" // IWYU pragma: keep
 
 #include "gz/gz_menu_credits.h"
+#include "gz/gz_utility_draw.h"
 
 gzCreditsMenu_c::gzCreditsMenu_c() {
     OSReport("creating gzCreditsMenu_c\n");

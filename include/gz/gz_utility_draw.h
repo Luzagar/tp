@@ -18,5 +18,6 @@ GXColor gzGetThemedSeparatorColor(u32 theme, u8 alpha);
 void gzDrawAtlasIcon(ResTIMG* atlas, int iconIndex, int iconSize, int iconCount,
                      f32 x, f32 y, f32 w, f32 h, GXColor color);
 int gzPrint(int x, int y, u32 color, char const* string, ...);
+void gzSetup2DContext();
 
 #endif // GZ_UTILITY_DRAW_H

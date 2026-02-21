@@ -2,7 +2,14 @@
 
 #include "gz/gz_menu.h"
 #include "gz/gz_menu_main.h"
+#include "gz/gz_utility_draw.h"
 #include "d/d_select_cursor.h"
+
+// Wrap cursor movement so fast scrolling stays within [0, maxLines]
+static int wrapMenuCursorY(int value, int maxLines) {
+    value %= maxLines;
+    return (value < 0) ? value + maxLines : value;
+}
 
 void gzMenu_c::execute() {
     gzCursor* l_cursor = gzInfo_getCursor();
@@ -355,19 +362,30 @@ bool gzMenu_c::handleBackButton(int mainMenuIndex) {
 }
 
 void gzMenu_c::handleNavigation(int maxLines) {
-    if (gzInfo_isMenuOption()) {
+    if (gzInfo_isMenuOption() || maxLines <= 0) {
         return;
     }
 
     gzCursor* l_cursor = gzInfo_getCursor();
 
+
+    if (gzPad::getTrigRight()) {
+        l_cursor->y = wrapMenuCursorY(l_cursor->y + 5, maxLines);
+        gzInfo_seStart(Z2SE_SY_NAME_CURSOR);
+    }
+
     if (gzPad::getTrigDown()) {
-        l_cursor->y = (l_cursor->y + 1) % maxLines;
+        l_cursor->y = wrapMenuCursorY(l_cursor->y + 1, maxLines);
+        gzInfo_seStart(Z2SE_SY_NAME_CURSOR);
+    }
+
+    if (gzPad::getTrigLeft()) {
+        l_cursor->y = wrapMenuCursorY(l_cursor->y - 5, maxLines);
         gzInfo_seStart(Z2SE_SY_NAME_CURSOR);
     }
 
     if (gzPad::getTrigUp()) {
-        l_cursor->y = (l_cursor->y == 0) ? maxLines - 1 : l_cursor->y - 1;
+        l_cursor->y = wrapMenuCursorY(l_cursor->y - 1, maxLines);
         gzInfo_seStart(Z2SE_SY_NAME_CURSOR);
     }
 }

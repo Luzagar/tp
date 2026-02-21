@@ -1,6 +1,8 @@
+#include "d/dolzel.h" // IWYU pragma: keep
+
 #include "gz/gz.h"
-#include "m_Do/m_Do_audio.h"
 #include "d/d_stage.h"
+#include "m_Do/m_Do_audio.h"
 
 void gzSceneMng_c::execute() {
     if (gzInfo_isScene_FreezeTime()) {

@@ -1,7 +1,9 @@
 #ifndef GZ_UTILITY_NOTIFICATION_H
 #define GZ_UTILITY_NOTIFICATION_H
 
-#include "gz/gz_textbox.h"
+#include "dolphin/types.h"
+
+class gzTextBox;
 
 class gzNotification_c {
 public:

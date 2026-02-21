@@ -4,10 +4,17 @@
 #include "c/c_damagereaction.h"
 #include "d/d_com_inf_game.h"
 #include "d/d_item.h"
+#include "gz/gz_capture.h"
+#include "gz/gz_utility_misc.h"
 #include "gz/gz_manager_cheats.h"
 #include "gz/gz_manager_practice.h"
-#include "gz/gz_manager_tools.h"
 #include "gz/gz_manager_scene.h"
+#include "gz/gz_manager_tools.h"
+#include "umbra/umbra_nintendont.h"
+#include "umbra/umbra_platform.h"
+#include "umbra/umbra_storage.h"
+#include "umbra/umbra_net.h"
+#include "gz/gz_utility_notification.h"
 #include "JSystem/J2DGraph/J2DPicture.h"
 #include "JSystem/J2DGraph/J2DTextBox.h"
 #include "m_Do/m_Do_controller_pad.h"
@@ -15,16 +22,14 @@
 #include "SSystem/SComponent/c_API_controller_pad.h"
 #include "dolphin/dvd.h"
 
-class gzMenu_c;
-class gzTextBox;
-class gzMainMenu_c;
-class gzNotification_c;
-class gzToolsMng_c;
-class dSelect_cursor_c;
-class gzCapture_c;
-class gzSetupWizard_c;
 class JKRArchive;
 class JKRHeap;
+class dSelect_cursor_c;
+class gzMainMenu_c;
+class gzMenu_c;
+class gzSetupWizard_c;
+class gzTextBox;
+class gzToolsMng_c;
 
 #define COLOR_WHITE 0xFFFFFFFFu
 #define COLOR_RED 0xFF0000FFu
@@ -35,19 +40,6 @@ class JKRHeap;
 #define COLOR_MAGENTA 0xFF00FFFFu
 #define COLOR_ORANGE 0xFFA500FFu
 #define COLOR_GRAY 0x808080FFu
-
-enum gzGroupId_e {
-    GZ_GROUP_MIN      = 0x60,
-
-    GZ_GROUP_TEXTBOX  = 0x60,
-    GZ_GROUP_MENU     = 0x61,
-    GZ_GROUP_UI       = 0x62,
-    GZ_GROUP_GRAPHICS = 0x63,
-    GZ_GROUP_TRACKER  = 0x64,
-    GZ_GROUP_OTHER    = 0x65,
-
-    GZ_GROUP_MAX      = 0x66,
-};
 
 #define COLOR_AMETHYST 0x9966FFFF
 #define COLOR_AQUAMARINE 0x71D9E2FF
@@ -129,25 +121,6 @@ struct gzCommandCombos_s {
     u32 mFreeCamToggle;
 };
 
-// Automation state for Python scripts to read via memory
-// Address dumped via OSReport on boot: "tpgz auto: 0x%08X"
-struct gzAutoState_s {
-    u32 magic;           // 0x475A4155 = "GZAU" to verify struct found
-    bool menuVisible;    // g_gzInfo.mDisplay
-    bool optionMode;     // g_gzInfo.mMenuOption
-    s32 cursorX;         // g_gzInfo.mCursor.x
-    s32 cursorY;         // g_gzInfo.mCursor.y
-    s32 warpTypeIdx;     // Current warp menu type selection
-    s32 warpStageIdx;    // Current warp menu stage selection
-    s32 warpRoomIdx;     // Current warp menu room selection
-    s32 warpSpawnIdx;    // Current warp menu spawn selection
-    bool warpExecuted;   // Set true when executeWarp() called, script clears it
-    char currentStage[8]; // Current stage ID after warp
-    s32 faderStatus;     // 0 = no fade, 1 = fading in progress
-};
-
-extern gzAutoState_s g_gzAutoState;
-
 struct gzToolsSettings_s {
     bool mMoveLink;
     bool mCoroTD;
@@ -197,6 +170,12 @@ struct gzSceneSettings_s {
     bool mMuteSFX;
 };
 
+struct gzOnlineSettings_s {
+    bool mStateStreaming;
+    u32 mServerIP;      // big-endian IP (use umbraNet::makeIP)
+    u16 mServerPort;    // default 52224 (0x00CC00)
+};
+
 struct gzSettings_s {
     u32 mTextColor;  // todo: just make this an index?
     bool mDropShadows;
@@ -207,11 +186,12 @@ struct gzSettings_s {
     bool mMenuPausesGame;
     bool mBootToMenu;
     bool mMenuSfx;
-    
+
     gzCheatsSettings_s mCheats;
     gzToolsSettings_s mTools;
     gzSceneSettings_s mScene;
     gzCommandCombos_s mCommandCombos;
+    gzOnlineSettings_s mOnline;
 };
 
 // tpgz config file header
@@ -231,9 +211,9 @@ class gzInfo_c {
 public:
     static const int GZ_SAVE_VERSION = 1;
 
-    gzInfo_c() {
+    gzInfo_c() : mMemCard("tpgzcfg") {
         mGZInitialized = false;
-        mIsNintendont = false;
+        mIsPlayInfoInit = false;
         mInitPhase = INIT_PHASE_IDLE;
         mMenuResourcesLoaded = false;
         mMenuLoadStep = 0;
@@ -260,6 +240,9 @@ public:
     void loadMenuResourcesBatch();
     void loadMenuResources();
 
+    void drawMenuFrame(u8 baseAlpha, u32 theme);
+    void drawButtonHints();
+
     void startIconPreload();
     void pollIconPreload();
     J2DPicture* getCheckIcon() { return mpCheckIcon; }
@@ -267,22 +250,10 @@ public:
     ResTIMG* getIconAtlas() { return mPreloadsComplete ? (ResTIMG*)mpPreloadBufs[3] : NULL; }
 
     void loadDefaultSettings();
-    int storeSettingsMemcard();
-    int loadSettingsMemcard();
-    int deleteSettingsMemcard();
-#ifndef __REVOLUTION_SDK__
-    bool detectNintendont();
-    int storeSettingsSD();
-    int loadSettingsSD();
-    int deleteSettingsSD();
-    void returnToLoader();
-#endif
     int storeSettings();
     int loadSettings();
     int deleteSettings();
     void showHeapUsage();
-    void sendNotification(const char* msg);
-    void sendNotification(const char* msg, int i_notificationType);
     void setButtonFlags();
     void executeTools();
     void executeMoveLink();
@@ -306,6 +277,9 @@ public:
 
     JUTFont* getFont() { return mpFont; }
     void setFont(JUTFont* i_font) { mpFont = i_font; }
+
+    void sendNotification(const char* msg) { if (mpNotification != NULL) mpNotification->send(msg); }
+    void sendNotification(const char* msg, int i_notificationType) { if (mpNotification != NULL) mpNotification->send(msg, (gzNotification_c::NotificationType)i_notificationType); }
 
     // General Settings
     bool isCursorTypeClassic() { return getCursorType() & CURSOR_CLASSIC; }
@@ -441,6 +415,15 @@ public:
     void setTool_FreeCam(bool i_opt) { mSettings.mTools.mFreeCam = i_opt; }
     void setTool_UniversalMapDelay(bool i_opt) { mSettings.mTools.mUniversalMapDelay = i_opt; }    
 
+    // Online
+    bool isOnline_StateStreaming() { return mSettings.mOnline.mStateStreaming; }
+    u32 getOnline_ServerIP() { return mSettings.mOnline.mServerIP; }
+    u16 getOnline_ServerPort() { return mSettings.mOnline.mServerPort; }
+
+    void setOnline_StateStreaming(bool i_opt) { mSettings.mOnline.mStateStreaming = i_opt; }
+    void setOnline_ServerIP(u32 i_ip) { mSettings.mOnline.mServerIP = i_ip; }
+    void setOnline_ServerPort(u16 i_port) { mSettings.mOnline.mServerPort = i_port; }
+
     // Scene
     bool isScene_FreezeTime() { return mSettings.mScene.mFreezeTime; }
     bool isScene_FreezeActors() { return mSettings.mScene.mFreezeActors; }
@@ -541,7 +524,7 @@ public:
     s16 mInputWaitTimer;
     bool mDisplay;
     bool mGZInitialized;
-    bool mIsNintendont;
+    bool mIsPlayInfoInit;
     int mInitPhase;
     bool mMenuResourcesLoaded;
     int mMenuLoadStep;
@@ -560,6 +543,9 @@ public:
     gzCheatsMng_c mCheatsMng;
     gzToolsMng_c mToolsMng;
     gzSceneMng_c mSceneMng;
+    umbraStorageNintendont mSD;
+    umbraNet mNet;
+    umbraStorageMemcard mMemCard;
 
     f32 mIconXPos;
     f32 mIconYPos;
@@ -616,13 +602,9 @@ inline bool gzInfo_getDisplayMode() { return g_gzInfo.getDisplayMode(); }
 inline bool gzInfo_getReloadType() { return g_gzInfo.getReloadType(); }
 inline u8 gzInfo_getBossFlag() { return g_gzInfo.getBossFlag(); }
 
-inline int gzInfo_deleteSettingsMemcard() { return g_gzInfo.deleteSettingsMemcard(); }
-inline int gzInfo_loadSettingsMemcard() { return g_gzInfo.loadSettingsMemcard(); }
-inline int gzInfo_storeSettingsMemcard() { return g_gzInfo.storeSettingsMemcard(); }
 inline int gzInfo_storeSettings() { return g_gzInfo.storeSettings(); }
 inline int gzInfo_loadSettings() { return g_gzInfo.loadSettings(); }
 inline int gzInfo_deleteSettings() { return g_gzInfo.deleteSettings(); }
-inline void gzInfo_returnToLoader() { g_gzInfo.returnToLoader(); }
 inline u32 gzInfo_nextCursorType() { return g_gzInfo.nextCursorType(); }
 inline u32 gzInfo_prevCursorType() { return g_gzInfo.prevCursorType(); }
 inline u32 gzInfo_nextTextColor() { return g_gzInfo.nextTextColor(); }
@@ -631,6 +613,14 @@ inline u32 gzInfo_prevTextColor() { return g_gzInfo.prevTextColor(); }
 inline void gzInfo_seStart(u32 i_sfxID) { g_gzInfo.seStart(i_sfxID); }
 inline void gzInfo_sendNotification(const char* msg) { g_gzInfo.sendNotification(msg); }
 inline void gzInfo_sendNotification(const char* msg, int i_notificationType) { g_gzInfo.sendNotification(msg, i_notificationType); }
+
+inline void gzInfo_returnToLoader() {
+    if (umbraDetectPlatform() != PLATFORM_NINTENDONT_UMBRA) {
+        gzInfo_sendNotification("exit requires umbra nintendont");
+        return;
+    }
+    ninReturnToLoader();
+}
 
 inline bool gzInfo_isInDungeon(int i_stageNo) {
     // Check if we're in the dungeon, and return true
@@ -899,6 +889,17 @@ inline void gzInfo_onScene_MuteSFX() { g_gzInfo.setScene_MuteSFX(true); }
 inline void gzInfo_offScene_MuteSFX() { g_gzInfo.setScene_MuteSFX(false); }
 
 
+// Online
+inline bool gzInfo_isOnline_StateStreaming() { return g_gzInfo.isOnline_StateStreaming(); }
+inline void gzInfo_onOnline_StateStreaming() {
+    if (umbraDetectPlatform() != PLATFORM_NINTENDONT_UMBRA) {
+        gzInfo_sendNotification("net requires umbra nintendont");
+        return;
+    }
+    g_gzInfo.setOnline_StateStreaming(true);
+}
+inline void gzInfo_offOnline_StateStreaming() { g_gzInfo.setOnline_StateStreaming(false); }
+
 inline bool gzInfo_isMainMenuVisible() { return g_gzInfo.mCursor.x == 0;}
 inline bool gzInfo_isMenuPausesGame() { return g_gzInfo.isMenuPausesGame(); }
 inline bool gzInfo_isBootToMenu() { return g_gzInfo.isBootToMenu(); }
@@ -1044,8 +1045,6 @@ namespace gzPad {
     inline f32 getAnalogL() { return mDoCPd_c::m_gzPadInfo.mTriggerLeft; }
 };
 
-void gzDVDLoadFile(const char* filePath, void* buffer, int length, int offset);
-
 inline bool gzCheckComboToggle(u32 combo, bool& wasHeld) {
     u32 rawHold = mDoCPd_c::getHold(0);
     bool comboHeld = combo && (rawHold & combo) == combo;
@@ -1053,20 +1052,6 @@ inline bool gzCheckComboToggle(u32 combo, bool& wasHeld) {
     wasHeld = comboHeld;
     return shouldToggle;
 }
-
-// Check if a group ID belongs to gz
-inline bool gzIsGzGroupId(u8 groupId) {
-    return groupId >= GZ_GROUP_MIN && groupId < GZ_GROUP_MAX;
-}
-
-void gzCreateHeap();
-void gzSetGzHeap(JKRHeap* heap);
-JKRHeap* gzGetGzHeap();
-JKRHeap* gzHeap(gzGroupId_e groupId);
-
-// Sets up 2D orthographic context for GZ overlay drawing.
-// Call this before drawing J2DScreen-based elements (like haihai arrows).
-void gzSetup2DContext();
 
 // Clears all controller input (buttons, sticks, triggers)
 inline void gzClearControllerInput() {

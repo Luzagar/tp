@@ -1,4 +1,7 @@
 #include "gz/gz_utility_draw.h"
+#include "gz/gz.h"
+#include "d/d_com_inf_game.h"
+#include "JSystem/J2DGraph/J2DOrthoGraph.h"
 #include "JSystem/JUtility/JUTTexture.h"
 #include "JSystem/JUtility/JUTDbPrint.h"
 #include "JSystem/JUtility/JUTReport.h"
@@ -326,6 +329,22 @@ GXColor gzGetThemedSeparatorColor(u32 theme, u8 alpha) {
     c.b = (u8)(b * 0.85f);
     c.a = alpha;
     return c;
+}
+
+static const u32 SCISSOR_PADDING = 8;
+
+void gzSetup2DContext() {
+    static J2DOrthoGraph sGzOrtho(0.0f, 0.0f, 608.0f, 448.0f, -1.0f, 1.0f);
+    sGzOrtho.setPort();
+    dComIfGp_setCurrentGrafPort(&sGzOrtho);
+
+    if (g_gzInfo.mDisplay) {
+        u32 left = (u32)g_gzInfo.mBackgroundXPos + SCISSOR_PADDING;
+        u32 top = (u32)g_gzInfo.mBackgroundYPos + SCISSOR_PADDING;
+        u32 width = (u32)g_gzInfo.mBackgroundWidth - (SCISSOR_PADDING * 2);
+        u32 height = (u32)g_gzInfo.mBackgroundHeight - (SCISSOR_PADDING * 2);
+        GXSetScissor(left, top, width, height);
+    }
 }
 
 int gzPrint(int x, int y, u32 color, char const* string, ...) {

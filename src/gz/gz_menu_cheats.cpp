@@ -2,6 +2,7 @@
 
 #include "gz/gz_menu_cheats.h"
 #include "gz/gz_menu_main.h"
+#include "gz/gz_utility_draw.h"
 #include "d/d_select_cursor.h"
 #include "JSystem/J2DGraph/J2DPicture.h"
 

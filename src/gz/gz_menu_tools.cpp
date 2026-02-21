@@ -2,6 +2,7 @@
 
 #include "gz/gz_menu_tools.h"
 #include "gz/gz_menu_main.h"
+#include "gz/gz_utility_draw.h"
 #include "d/d_select_cursor.h"
 #include "JSystem/J2DGraph/J2DPicture.h"
 
@@ -136,13 +137,13 @@ void gzToolsMenu_c::execute() {
         break;
     }
 
-    if (gzPad::getTrigRight() && !gzInfo_isMenuOption()) {
+    if (gzPad::getTrigR() && !gzInfo_isMenuOption()) {
         mCurrentTab = (mCurrentTab + 1) % TAB_MAX_e;
         l_cursor->y = 0;
         gzInfo_resetTopLine();
         gzInfo_seStart(Z2SE_SY_TALK_CURSOR);
     }
-    if (gzPad::getTrigLeft() && !gzInfo_isMenuOption()) {
+    if (gzPad::getTrigL() && !gzInfo_isMenuOption()) {
         mCurrentTab = (mCurrentTab - 1 + TAB_MAX_e) % TAB_MAX_e;
         l_cursor->y = 0;
         gzInfo_resetTopLine();

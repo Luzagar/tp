@@ -1,4 +1,4 @@
-#include "d/dolzel.h"  // IWYU pragma: keep
+#include "d/dolzel.h" // IWYU pragma: keep
 
 #include "gz/gz_menu_flags.h"
 #include "gz/gz_menu_main.h"
@@ -439,20 +439,20 @@ void gzFlagsMenu_c::execute() {
     int maxLines = getCurrentLineNum();
 
     if (!gzInfo_isMenuOption()) {
-        if (gzPad::getTrigRight()) {
+        if (gzPad::getTrigR()) {
             mCurrentTab = (mCurrentTab + 1) % TAB_MAX_e;
             l_cursor->y = 0;
             gzInfo_resetTopLine();
             gzInfo_seStart(Z2SE_SY_TALK_CURSOR);
         }
-        if (gzPad::getTrigLeft()) {
+        if (gzPad::getTrigL()) {
             mCurrentTab = (mCurrentTab - 1 + TAB_MAX_e) % TAB_MAX_e;
             l_cursor->y = 0;
             gzInfo_resetTopLine();
             gzInfo_seStart(Z2SE_SY_TALK_CURSOR);
         }
     } else {
-        if (gzPad::getTrigRight()) {
+        if (gzPad::getTrigR()) {
             switch (mCurrentTab) {
             case TAB_GENERAL:
                 if (l_cursor->y < G_FLAG_MAX && !generalFlags[l_cursor->y].is()) {
@@ -522,7 +522,7 @@ void gzFlagsMenu_c::execute() {
                 break;
             }
         }
-        if (gzPad::getTrigLeft()) {
+        if (gzPad::getTrigL()) {
             switch (mCurrentTab) {
             case TAB_GENERAL:
                 if (l_cursor->y < G_FLAG_MAX && generalFlags[l_cursor->y].is()) {

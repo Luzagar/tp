@@ -22,6 +22,8 @@
 #include "m_Do/m_Do_controller_pad.h"
 #include "m_Do/m_Do_graphic.h"
 
+#include "gz/gz.h"
+
 static s32 SelStartFrameTbl[3] = {
     59,
     99,
@@ -256,6 +258,7 @@ void dFile_select_c::_create() {
     dComIfGs_init();
     dComIfGp_itemDataInit();
     dComIfGs_setNewFile(0);
+    g_gzInfo.mIsPlayInfoInit = true;
 
     mHasDrawn = false;
 

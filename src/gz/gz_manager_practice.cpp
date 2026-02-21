@@ -40,8 +40,20 @@ static const char* getCategoryMetadataPath(gzSaveLoaderMng_c::SaveCategory_e i_c
 
 void gzSaveLoaderMng_c::doSaveInject() {
     dComIfGp_offPauseFlag();
+
+    // certain game info initialization only first occurs when you go to the title screen,
+    // so if loading a save before going to the title screen, run these initializations once
+    // to make sure everything is safely initialized
+    if (!g_gzInfo.mIsPlayInfoInit) {
+        dComIfGp_itemDataInit();
+        dComIfGs_setNewFile(0);
+        g_gzInfo.mIsPlayInfoInit = true;
+    }
+
     memcpy(&g_dComIfG_gameInfo.info.mSavedata, mDoMemCd_Ctrl_c::sTmpBuf, sizeof(dSv_save_c));
     dComIfGs_getSave(dComIfGs_getSaveInfo()->getDan().mStageNo);
+
+    dKy_set_nexttime(dComIfGs_getTime());
 
     if (mSaveCallbacks.stageInitCb != NULL) {
         OSReport("running stageInit callback\n");
