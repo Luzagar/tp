@@ -137,7 +137,7 @@ int gzInfo_c::storeSettings() {
 
     umbraStorage* storage;
 #ifndef __REVOLUTION_SDK__
-    if (umbraDetectPlatform() == PLATFORM_NINTENDONT_UMBRA) {
+    if (umbraHasUmbraSupport()) {
         storage = &mSD;
     } else
 #endif
@@ -162,7 +162,7 @@ int gzInfo_c::loadSettings() {
 
     umbraStorage* storage;
 #ifndef __REVOLUTION_SDK__
-    if (umbraDetectPlatform() == PLATFORM_NINTENDONT_UMBRA) {
+    if (umbraHasUmbraSupport()) {
         storage = &mSD;
     } else
 #endif
@@ -198,7 +198,7 @@ int gzInfo_c::loadSettings() {
 int gzInfo_c::deleteSettings() {
     umbraStorage* storage;
 #ifndef __REVOLUTION_SDK__
-    if (umbraDetectPlatform() == PLATFORM_NINTENDONT_UMBRA) {
+    if (umbraHasUmbraSupport()) {
         storage = &mSD;
     } else
 #endif

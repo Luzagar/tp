@@ -8,7 +8,7 @@
 #include <dolphin/os.h>
 
 int umbraNet::sendUDP(u32 ip, u16 port, const void* data, u32 len) {
-    if (!umbraIsNintendont()) {
+    if (!umbraHasUmbraSupport()) {
         return -1;
     }
 
@@ -34,8 +34,8 @@ int umbraNet::sendUDP(u32 ip, u16 port, const void* data, u32 len) {
     u8 statusBuf[32] ATTRIBUTE_ALIGN(32);
     memset(statusBuf, 0, sizeof(statusBuf));
 
-    if (!ninMailboxTransfer(buf, totalSize, 1) ||
-        !ninMailboxTransfer(statusBuf, sizeof(statusBuf), 0)) {
+    if (!umbraTransfer(buf, totalSize, 1) ||
+        !umbraTransfer(statusBuf, sizeof(statusBuf), 0)) {
         return -1;
     }
 
@@ -48,7 +48,7 @@ int umbraNet::sendUDP(u32 ip, u16 port, const void* data, u32 len) {
 }
 
 int umbraNet::connect(u32 ip, u16 port) {
-    if (!umbraIsNintendont()) {
+    if (!umbraHasUmbraSupport()) {
         return -1;
     }
 
@@ -66,8 +66,8 @@ int umbraNet::connect(u32 ip, u16 port) {
     u8 statusBuf[32] ATTRIBUTE_ALIGN(32);
     memset(statusBuf, 0, sizeof(statusBuf));
 
-    if (!ninMailboxTransfer(buf, sizeof(buf), 1) ||
-        !ninMailboxTransfer(statusBuf, sizeof(statusBuf), 0)) {
+    if (!umbraTransfer(buf, sizeof(buf), 1) ||
+        !umbraTransfer(statusBuf, sizeof(statusBuf), 0)) {
         return -1;
     }
 
@@ -76,7 +76,7 @@ int umbraNet::connect(u32 ip, u16 port) {
 }
 
 int umbraNet::disconnect() {
-    if (!umbraIsNintendont()) {
+    if (!umbraHasUmbraSupport()) {
         return -1;
     }
 
@@ -87,8 +87,8 @@ int umbraNet::disconnect() {
     u8 statusBuf[32] ATTRIBUTE_ALIGN(32);
     memset(statusBuf, 0, sizeof(statusBuf));
 
-    if (!ninMailboxTransfer(buf, sizeof(buf), 1) ||
-        !ninMailboxTransfer(statusBuf, sizeof(statusBuf), 0)) {
+    if (!umbraTransfer(buf, sizeof(buf), 1) ||
+        !umbraTransfer(statusBuf, sizeof(statusBuf), 0)) {
         return -1;
     }
 
@@ -97,7 +97,7 @@ int umbraNet::disconnect() {
 }
 
 int umbraNet::stateWrite(const void* data, u32 len) {
-    if (!umbraIsNintendont()) {
+    if (!umbraHasUmbraSupport()) {
         return -1;
     }
 
@@ -115,8 +115,8 @@ int umbraNet::stateWrite(const void* data, u32 len) {
     u8 statusBuf[32] ATTRIBUTE_ALIGN(32);
     memset(statusBuf, 0, sizeof(statusBuf));
 
-    if (!ninMailboxTransfer(buf, totalSize, 1) ||
-        !ninMailboxTransfer(statusBuf, sizeof(statusBuf), 0)) {
+    if (!umbraTransfer(buf, totalSize, 1) ||
+        !umbraTransfer(statusBuf, sizeof(statusBuf), 0)) {
         return -1;
     }
 
@@ -125,7 +125,7 @@ int umbraNet::stateWrite(const void* data, u32 len) {
 }
 
 int umbraNet::stateRead(void* buf, u32 maxLen) {
-    if (!umbraIsNintendont()) {
+    if (!umbraHasUmbraSupport()) {
         return -1;
     }
 
@@ -137,8 +137,8 @@ int umbraNet::stateRead(void* buf, u32 maxLen) {
     u8 readBuf[DMA_ALIGN(8 + 1400)] ATTRIBUTE_ALIGN(32);
     memset(readBuf, 0, readSize);
 
-    if (!ninMailboxTransfer(cmdBuf, sizeof(cmdBuf), 1) ||
-        !ninMailboxTransfer(readBuf, readSize, 0)) {
+    if (!umbraTransfer(cmdBuf, sizeof(cmdBuf), 1) ||
+        !umbraTransfer(readBuf, readSize, 0)) {
         return -1;
     }
 
@@ -160,7 +160,7 @@ int umbraNet::stateRead(void* buf, u32 maxLen) {
 }
 
 int umbraNet::recvUDP(void* buf, u32 maxLen) {
-    if (!umbraIsNintendont()) {
+    if (!umbraHasUmbraSupport()) {
         return -1;
     }
 
@@ -172,8 +172,8 @@ int umbraNet::recvUDP(void* buf, u32 maxLen) {
     u8 readBuf[DMA_ALIGN(8 + 1400)] ATTRIBUTE_ALIGN(32);
     memset(readBuf, 0, readSize);
 
-    if (!ninMailboxTransfer(cmdBuf, sizeof(cmdBuf), 1) ||
-        !ninMailboxTransfer(readBuf, readSize, 0)) {
+    if (!umbraTransfer(cmdBuf, sizeof(cmdBuf), 1) ||
+        !umbraTransfer(readBuf, readSize, 0)) {
         return -1;
     }
 

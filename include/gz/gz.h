@@ -892,8 +892,8 @@ inline void gzInfo_offScene_MuteSFX() { g_gzInfo.setScene_MuteSFX(false); }
 // Online
 inline bool gzInfo_isOnline_StateStreaming() { return g_gzInfo.isOnline_StateStreaming(); }
 inline void gzInfo_onOnline_StateStreaming() {
-    if (umbraDetectPlatform() != PLATFORM_NINTENDONT_UMBRA) {
-        gzInfo_sendNotification("net requires umbra nintendont");
+    if (!umbraHasUmbraSupport()) {
+        gzInfo_sendNotification("umbra support required");
         return;
     }
     g_gzInfo.setOnline_StateStreaming(true);

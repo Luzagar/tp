@@ -12,5 +12,6 @@ enum UmbraPlatform {
 
 UmbraPlatform umbraDetectPlatform();
 bool umbraIsNintendont();
+bool umbraHasUmbraSupport();
 
 #endif // UMBRA_PLATFORM_H

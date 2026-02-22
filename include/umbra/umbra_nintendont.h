@@ -24,7 +24,13 @@
 
 #define UMBRA_CARD_CHAN 0
 
+#define UMBRA_EXI_CHAN 1
+#define UMBRA_EXI_DEV 0
+
 bool ninMailboxTransfer(void* buf, u32 len, u32 mode);
 void ninReturnToLoader();
+bool exiUmbraTransfer(void* buf, u32 len, u32 mode);
+bool umbraTransfer(void* buf, u32 len, u32 mode);
+bool umbraProbeEXI();
 
 #endif // UMBRA_NINTENDONT_H

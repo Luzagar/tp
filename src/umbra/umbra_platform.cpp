@@ -23,7 +23,12 @@ UmbraPlatform umbraDetectPlatform() {
 
     // Dolphin always sets devkit console type (LatestDevkit = 0x10000006).
     if (consoleType & 0x10000000) {
-        s_platform = PLATFORM_DOLPHIN;
+        // Probe Slot B for the Umbra EXI device.
+        if (umbraProbeEXI()) {
+            s_platform = PLATFORM_DOLPHIN_UMBRA;
+        } else {
+            s_platform = PLATFORM_DOLPHIN;
+        }
         return s_platform;
     }
 
@@ -56,6 +61,11 @@ UmbraPlatform umbraDetectPlatform() {
 bool umbraIsNintendont() {
     UmbraPlatform p = umbraDetectPlatform();
     return p == PLATFORM_NINTENDONT || p == PLATFORM_NINTENDONT_UMBRA;
+}
+
+bool umbraHasUmbraSupport() {
+    UmbraPlatform p = umbraDetectPlatform();
+    return p == PLATFORM_NINTENDONT_UMBRA || p == PLATFORM_DOLPHIN_UMBRA;
 }
 
 #endif // !__REVOLUTION_SDK__

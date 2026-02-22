@@ -23,13 +23,13 @@ int umbraStorageNintendont::write(const void* data, u32 size) {
     *(u32*)buf = UMBRA_CMD_WORD(UMBRA_CMD_WRITE);
     memcpy(buf + CMD_SIZE, data, size);
 
-    if (!ninMailboxTransfer(buf, bufSize, 1)) {
+    if (!umbraTransfer(buf, bufSize, 1)) {
         return -1;
     }
 
     u8 statusBuf[32] ATTRIBUTE_ALIGN(32);
     memset(statusBuf, 0, sizeof(statusBuf));
-    ninMailboxTransfer(statusBuf, sizeof(statusBuf), 0);
+    umbraTransfer(statusBuf, sizeof(statusBuf), 0);
     u32 status = *(u32*)statusBuf;
     return (status == 0) ? 0 : -1;
 }
@@ -38,7 +38,7 @@ int umbraStorageNintendont::read(void* data, u32 size) {
     u8 cmdBuf[32] ATTRIBUTE_ALIGN(32);
     memset(cmdBuf, 0, sizeof(cmdBuf));
     *(u32*)cmdBuf = UMBRA_CMD_WORD(UMBRA_CMD_READ);
-    if (!ninMailboxTransfer(cmdBuf, sizeof(cmdBuf), 1)) {
+    if (!umbraTransfer(cmdBuf, sizeof(cmdBuf), 1)) {
         return -1;
     }
 
@@ -49,7 +49,7 @@ int umbraStorageNintendont::read(void* data, u32 size) {
     }
 
     memset(buf, 0, bufSize);
-    if (!ninMailboxTransfer(buf, bufSize, 0)) {
+    if (!umbraTransfer(buf, bufSize, 0)) {
         return -1;
     }
 
@@ -61,13 +61,13 @@ int umbraStorageNintendont::remove() {
     u8 cmdBuf[32] ATTRIBUTE_ALIGN(32);
     memset(cmdBuf, 0, sizeof(cmdBuf));
     *(u32*)cmdBuf = UMBRA_CMD_WORD(UMBRA_CMD_DELETE);
-    if (!ninMailboxTransfer(cmdBuf, sizeof(cmdBuf), 1)) {
+    if (!umbraTransfer(cmdBuf, sizeof(cmdBuf), 1)) {
         return -1;
     }
 
     u8 statusBuf[32] ATTRIBUTE_ALIGN(32);
     memset(statusBuf, 0, sizeof(statusBuf));
-    ninMailboxTransfer(statusBuf, sizeof(statusBuf), 0);
+    umbraTransfer(statusBuf, sizeof(statusBuf), 0);
     u32 status = *(u32*)statusBuf;
     return (status == 0) ? 0 : -1;
 }
