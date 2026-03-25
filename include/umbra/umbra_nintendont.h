@@ -17,6 +17,7 @@
 #define UMBRA_CMD_NET_STATE_WRITE 0x07
 #define UMBRA_CMD_NET_STATE_READ 0x08
 #define UMBRA_CMD_NET_DISCONNECT 0x09
+#define UMBRA_CMD_GDB_START 0x0A
 
 #define UMBRA_CMD_WORD(cmd) (((u32)UMBRA_MAGIC << 16) | ((u32)(cmd) << 8))
 

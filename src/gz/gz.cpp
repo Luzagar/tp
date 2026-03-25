@@ -17,6 +17,8 @@
 #include "dolphin/gx/GXGet.h"
 #include <cmath>
 
+#include "umbra/umbra_gdb.h"
+
 gzInfo_c g_gzInfo;
 
 void gzInfo_c::startIconPreload() {
@@ -539,6 +541,7 @@ int gzInfo_c::execute() {
         return 0;
     }
 
+    umbra_gdb_poll();
     pollIconPreload();
 
     if (mpSetupWizard != NULL) {

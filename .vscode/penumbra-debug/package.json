@@ -1,0 +1,78 @@
+{
+  "name": "penumbra-debug",
+  "displayName": "Penumbra Debug Adapter",
+  "description": "Debug adapter for PowerPC targets via GDB Remote Serial Protocol",
+  "version": "0.0.2",
+  "publisher": "pheenoh",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Debuggers"
+  ],
+  "activationEvents": [
+    "onDebugResolve:penumbra"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "debuggers": [
+      {
+        "type": "penumbra",
+        "label": "Penumbra",
+        "configurationAttributes": {
+          "attach": {
+            "required": [
+              "program",
+              "target"
+            ],
+            "properties": {
+              "program": {
+                "type": "string",
+                "description": "Path to the ELF executable (e.g. build/GZ2E01/framework.elf)"
+              },
+              "debugInfo": {
+                "type": "string",
+                "description": "Path to the DWARF debug info object (e.g. build/GZ2E01/debug_info.o)"
+              },
+              "target": {
+                "type": "string",
+                "description": "RSP target as ip:port (e.g. 192.168.1.100:2159)"
+              },
+              "verbose": {
+                "type": "boolean",
+                "description": "Enable verbose diagnostic output in the debug console",
+                "default": false
+              }
+            }
+          }
+        },
+        "configurationSnippets": [
+          {
+            "label": "Penumbra: Attach to Nintendont",
+            "description": "Attach to a Wii running Nintendont with GDB stub",
+            "body": {
+              "type": "penumbra",
+              "request": "attach",
+              "name": "Attach to Nintendont",
+              "program": "^\"\\${workspaceFolder}/build/\\${input:gameId}/framework.elf\"",
+              "debugInfo": "^\"\\${workspaceFolder}/build/\\${input:gameId}/debug_info.o\"",
+              "target": "^\"\\${input:wiiAddress}:\\${input:gdbPort}\""
+            }
+          },
+          {
+            "label": "Penumbra: Attach to Dolphin",
+            "description": "Attach to Dolphin emulator with GDB stub",
+            "body": {
+              "type": "penumbra",
+              "request": "attach",
+              "name": "Attach to Dolphin",
+              "program": "^\"\\${workspaceFolder}/build/\\${input:gameId}/framework.elf\"",
+              "debugInfo": "^\"\\${workspaceFolder}/build/\\${input:gameId}/debug_info.o\"",
+              "target": "^\"\\${input:dolphinAddress}:\\${input:gdbPort}\""
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

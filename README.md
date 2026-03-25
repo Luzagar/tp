@@ -97,6 +97,36 @@ To add new features to the practice ROM:
 - Look at existing custom files in `src/gz/` for examples of how to structure and integrate new code
 - Re-run `python configure.py -v VERSION` and `ninja` to include your changes
 
+## GDB Remote Debugging
+
+Umbra includes a GDB remote stub for source-level debugging of game code. It supports both real hardware via [umbra-nintendont](https://github.com/zsrtp/umbra-nintendont) and emulation via [umbra-dolphin](https://github.com/zsrtp/umbra-dolphin).
+
+### Setup
+
+To include debug info (DWARF 2 conversion + REL symbol loader) as part of the default build, configure with `--penumbra`:
+
+```sh
+python configure.py --penumbra
+ninja
+```
+
+This converts MetroWerks DWARF 1 debug info to DWARF 2 and generates the GDB symbol loader script during the normal build. Debug info is regenerated automatically when source files change.
+
+### Connecting
+
+Install the bundled debug adapter extension (one-time setup):
+
+```sh
+code --install-extension .vscode/penumbra-debug.vsix
+```
+
+Then use the launch configurations in `.vscode/launch.json`:
+
+- **Penumbra: Attach to Nintendont** -- connect to a Wii running the GDB stub
+- **Penumbra: Attach to Dolphin** -- connect to Dolphin's GDB stub
+
+Symbols and debug info are loaded automatically on connect.
+
 ## Adding Custom Assets
 
 - Place your custom asset into the `mod_assets` directory. The directory structure will be copied 1:1 to the final disc image.

@@ -221,7 +221,7 @@ private:
     /* 0x14 */ J3DAnmCluster* mpAnm;
 };
 
-class J3DTransformInfo;
+struct J3DTransformInfo;
 
 class mDoExt_AnmRatioPack {
 public:
@@ -774,6 +774,12 @@ void mDoExt_restoreCurrentHeap();
 JKRExpHeap* mDoExt_getGameHeap();
 void mDoExt_setSafeGameHeapSize();
 size_t mDoExt_getSafeGameHeapSize();
+intptr_t mDoExt_getSafeArchiveHeapSize();
+intptr_t mDoExt_getSafeJ2dHeapSize();
+intptr_t mDoExt_getSafeCommandHeapSize();
+void mDoExt_setSafeCommandHeapSize();
+void mDoExt_setSafeArchiveHeapSize();
+void mDoExt_setSafeJ2dHeapSize();
 void mDoExt_destroySolidHeap(JKRSolidHeap* i_heap);
 JKRHeap* mDoExt_setCurrentHeap(JKRHeap* i_heap);
 JKRExpHeap* mDoExt_getArchiveHeap();
@@ -832,7 +838,7 @@ intptr_t mDoExt_getSafeZeldaHeapSize();
 JKRHeap* mDoExt_createHostIOHeap(u32, JKRHeap*);
 #endif
 
-struct JUTFont;
+class JUTFont;
 JUTFont* mDoExt_getMesgFont();
 JUTFont* mDoExt_getSubFont();
 JUTFont* mDoExt_getRubyFont();

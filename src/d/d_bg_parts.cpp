@@ -6,6 +6,7 @@
 #include "f_op/f_op_camera_mng.h"
 #include "JSystem/JKernel/JKRExpHeap.h"
 #include "JSystem/JKernel/JKRSolidHeap.h"
+#include <cstring>
 
 void dBgp_c::material_c::draw() {
     material_c* material = this;
@@ -659,7 +660,7 @@ int dBgp_c::execute(bool param_0) {
                     angle.x = (unitData->field_0x14 << 8) | unitData->field_0x5;
                     angle.z = (unitData->field_0x4 << 8) | unitData->field_0x3;
 
-                    fopAcM_create(PROC_SET_BG_OBJ, parameters, &pos, mPacket.getRoomNo(), &angle, &size, -1);
+                    fopAcM_create(fpcNm_SET_BG_OBJ_e, parameters, &pos, mPacket.getRoomNo(), &angle, &size, -1);
                 }
                 unitData++;
             }
@@ -677,7 +678,7 @@ void dBgp_c::draw(fopAc_ac_c* i_actor) {
     mPacket.reset();
     mDoLib_clipper::changeFar(100000.0f);
 
-    camera_class* sp30 = dComIfGp_getCamera(0);
+    camera_process_class* sp30 = dComIfGp_getCamera(0);
     dCamera_c* camera = &sp30->mCamera;
     JUT_ASSERT(1287, camera != NULL)
 

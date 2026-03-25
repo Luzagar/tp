@@ -13,6 +13,8 @@ public:
     int stateWrite(const void* data, u32 len);
     int stateRead(void* buf, u32 maxLen);
 
+    int gdbStart(u16 port);
+
     static u32 makeIP(u8 a, u8 b, u8 c, u8 d) {
         return ((u32)a << 24) | ((u32)b << 16) | ((u32)c << 8) | (u32)d;
     }

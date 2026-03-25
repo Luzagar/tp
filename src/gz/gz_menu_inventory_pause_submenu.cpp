@@ -9,13 +9,13 @@
 #include <cstdio>
 
 static const u8 sBugItemIds[gzInventoryMenu_c::BUG_COUNT] = {
-    fpcNm_ITEM_M_ANT, fpcNm_ITEM_F_ANT, fpcNm_ITEM_M_MAYFLY, fpcNm_ITEM_F_MAYFLY,
-    fpcNm_ITEM_M_BEETLE, fpcNm_ITEM_F_BEETLE, fpcNm_ITEM_M_MANTIS, fpcNm_ITEM_F_MANTIS,
-    fpcNm_ITEM_M_STAG_BEETLE, fpcNm_ITEM_F_STAG_BEETLE, fpcNm_ITEM_M_DANGOMUSHI,
-    fpcNm_ITEM_F_DANGOMUSHI, fpcNm_ITEM_M_BUTTERFLY, fpcNm_ITEM_F_BUTTERFLY,
-    fpcNm_ITEM_M_LADYBUG, fpcNm_ITEM_F_LADYBUG, fpcNm_ITEM_M_SNAIL, fpcNm_ITEM_F_SNAIL,
-    fpcNm_ITEM_M_NANAFUSHI, fpcNm_ITEM_F_NANAFUSHI, fpcNm_ITEM_M_GRASSHOPPER,
-    fpcNm_ITEM_F_GRASSHOPPER, fpcNm_ITEM_M_DRAGONFLY, fpcNm_ITEM_F_DRAGONFLY,
+    dItemNo_M_ANT_e, dItemNo_F_ANT_e, dItemNo_M_MAYFLY_e, dItemNo_F_MAYFLY_e,
+    dItemNo_M_BEETLE_e, dItemNo_F_BEETLE_e, dItemNo_M_MANTIS_e, dItemNo_F_MANTIS_e,
+    dItemNo_M_STAG_BEETLE_e, dItemNo_F_STAG_BEETLE_e, dItemNo_M_DANGOMUSHI_e,
+    dItemNo_F_DANGOMUSHI_e, dItemNo_M_BUTTERFLY_e, dItemNo_F_BUTTERFLY_e,
+    dItemNo_M_LADYBUG_e, dItemNo_F_LADYBUG_e, dItemNo_M_SNAIL_e, dItemNo_F_SNAIL_e,
+    dItemNo_M_NANAFUSHI_e, dItemNo_F_NANAFUSHI_e, dItemNo_M_GRASSHOPPER_e,
+    dItemNo_F_GRASSHOPPER_e, dItemNo_M_DRAGONFLY_e, dItemNo_F_DRAGONFLY_e,
 };
 
 static const u16 sSkillFlags[] = {

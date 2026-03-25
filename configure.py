@@ -13,8 +13,9 @@
 ###
 
 import argparse
-import importlib
+import importlib.util
 import json
+import os
 import sys
 from pathlib import Path
 from typing import Any, Dict, List
@@ -188,6 +189,12 @@ parser.add_argument(
     action="store_false",
     help="disable progress calculation",
 )
+parser.add_argument(
+    "--penumbra",
+    dest="penumbra",
+    action="store_true",
+    help="include debug info generation in the default build",
+)
 args = parser.parse_args()
 
 config = ProjectConfig()
@@ -218,12 +225,13 @@ if not config.non_matching:
     config.asm_dir = None
 
 # Tool versions
-config.binutils_tag = "2.42-1"
+config.binutils_tag = "2.42-2"
 config.compilers_tag = "20251118"
 config.dtk_tag = "v1.8.0"
 config.objdiff_tag = "v3.6.1"
 config.sjiswrap_tag = "v1.2.2"
-config.wibo_tag = "1.0.0"
+config.wibo_tag = "1.0.3"
+config.penumbra_tag = "v0.1.0"
 
 # Project
 config.config_path = Path("config") / config.version / "config.yml"
@@ -239,12 +247,9 @@ config.asflags = [
 config.ldflags = [
     "-fp hardware",
     "-nodefaults",
+    "-mapunused",
 ]
-if args.debug:
-    config.ldflags.append("-g")  # Or -gdwarf-2 for Wii linkers
-if args.map:
-    config.ldflags.append("-mapunused")
-    # config.ldflags.append("-listclosure") # For Wii linkers
+# config.ldflags.append("-listclosure") # For Wii linkers
 
 # Use for any additional files that should cause a re-configure when modified
 config.reconfig_deps = []
@@ -283,21 +288,29 @@ cflags_base = [
     f"-i build/{config.version}/include",
     f"-i assets/{config.version}",
     "-i src",
-    "-i src/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Include",
-    "-i src/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common_Embedded/Math/Include",
-    "-i src/PowerPC_EABI_Support/MSL/MSL_C/PPC_EABI/Include",
-    "-i src/PowerPC_EABI_Support/MSL/MSL_C++/MSL_Common/Include",
-    "-i src/PowerPC_EABI_Support/Runtime/Inc",
-    "-i src/PowerPC_EABI_Support/MetroTRK",
-    "-i include/dolphin",
+    "-i libs/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Include",
+    "-i libs/PowerPC_EABI_Support/MSL/MSL_C/MSL_Common_Embedded/Math/Include",
+    "-i libs/PowerPC_EABI_Support/MSL/MSL_C/PPC_EABI/Include",
+    "-i libs/PowerPC_EABI_Support/MSL/MSL_C++/MSL_Common/Include",
+    "-i libs/PowerPC_EABI_Support/Runtime/Inc",
+    "-i libs/PowerPC_EABI_Support/MetroTRK",
+    "-i libs/JSystem/include",
     f"-DVERSION={version_num}",
     "-D__GEKKO__",
 ]
 
 if config.version in WII_VERSIONS or config.version in SHIELD_VERSIONS:
-    cflags_base.extend(["-enc SJIS"])
+    cflags_base.extend([
+        "-i libs/revolution/include",
+        "-i libs/revolution/include/revolution",  # for types.h includes
+        "-enc SJIS",
+    ])
 else:
-    cflags_base.extend(["-multibyte"])
+    cflags_base.extend([
+        "-i libs/dolphin/include",
+        "-i libs/dolphin/include/dolphin",  # for types.h includes
+        "-multibyte",
+    ])
 
 USE_REVOLUTION_SDK_VERSIONS = [
     "RZDE01_00", # Wii USA Rev 0
@@ -317,7 +330,7 @@ if config.version in USE_REVOLUTION_SDK_VERSIONS:
 
 # Debug flags
 if args.debug:
-    # Or -sym dwarf-2 for Wii compilers
+    # Or -sym on for Wii compilers
     cflags_base.extend(["-sym on", "-DDEBUG=1"])
 elif config.version == "ShieldD":
     cflags_base.extend(["-DDEBUG=1"])
@@ -362,7 +375,7 @@ cflags_trk = [
 # Dolphin library flags
 cflags_dolphin = [
     *cflags_base,
-    "-ir src/dolphin",
+    "-ir libs/dolphin/src",
     "-fp_contract off",
     "-char unsigned",
     "-sym on",
@@ -372,12 +385,11 @@ cflags_dolphin = [
 # Revolution library flags
 cflags_revolution_base = [
     *cflags_base,
-    "-ir src/revolution",
+    "-ir libs/revolution/src",
     "-fp_contract off",
     "-sym on",
     "-inline auto",
     "-ipa file",
-    "-i include/revolution",
     "-D__REVOLUTION_SDK__",
 ]
 
@@ -477,6 +489,8 @@ else:
 def DolphinLib(lib_name: str, objects: List[Object]) -> Dict[str, Any]:
     return {
         "lib": lib_name,
+        "src_dir": "libs/dolphin/src",
+        "strip_prefix": "dolphin/",
         "mw_version": "GC/1.2.5n",
         "cflags": cflags_dolphin,
         "progress_category": "sdk",
@@ -487,6 +501,8 @@ def RevolutionLib(lib_name: str, objects: List[Object], extra_cflags=[]) -> Dict
     if config.version == "ShieldD":
         return {
             "lib": lib_name,
+            "src_dir": "libs/revolution/src",
+            "strip_prefix": "revolution/",
             "mw_version": "Wii/1.0",
             "cflags": [*cflags_revolution_debug, "-DSDK_AUG2010", *extra_cflags],
             "progress_category": "sdk",
@@ -495,6 +511,8 @@ def RevolutionLib(lib_name: str, objects: List[Object], extra_cflags=[]) -> Dict
     elif config.version == "Shield":
         return {
             "lib": lib_name,
+            "src_dir": "libs/revolution/src",
+            "strip_prefix": "revolution/",
             "mw_version": "Wii/1.0",
             "cflags": [*cflags_revolution_retail, "-DSDK_AUG2010", *extra_cflags],
             "progress_category": "sdk",
@@ -503,6 +521,8 @@ def RevolutionLib(lib_name: str, objects: List[Object], extra_cflags=[]) -> Dict
     elif config.version == "RZDE01_00":
         return {
             "lib": lib_name,
+            "src_dir": "libs/revolution/src",
+            "strip_prefix": "revolution/",
             "mw_version": "GC/3.0a3",
             "cflags": [*cflags_revolution_retail, "-DSDK_SEP2006", "-DNW4HBM_DEBUG", *extra_cflags],
             "progress_category": "sdk",
@@ -511,6 +531,8 @@ def RevolutionLib(lib_name: str, objects: List[Object], extra_cflags=[]) -> Dict
     else:
         return {
             "lib": lib_name,
+            "src_dir": "libs/revolution/src",
+            "strip_prefix": "revolution/",
             "mw_version": "GC/3.0a3",
             "cflags": [*cflags_revolution_retail, "-DSDK_SEP2006", *extra_cflags],
             "progress_category": "sdk",
@@ -518,24 +540,39 @@ def RevolutionLib(lib_name: str, objects: List[Object], extra_cflags=[]) -> Dict
         }
 
 # Helper function for REL script objects
-def Rel(lib_name: str, objects: List[Object]) -> Dict[str, Any]:
-    return {
-        "lib": lib_name,
-        "mw_version": MWVersion(config.version),
-        "cflags": [*cflags_rel],
-        "progress_category": "game",
-        "objects": objects,
-    }
+def Rel(lib_name: str, objects: List[Object], isInDol=False) -> Dict[str, Any]:
+    if (config.version == "ShieldD") and isInDol:
+        # For Shield Debug version, some RELs were moved into the DOL
+        return {
+            "lib": lib_name,
+            "mw_version": MWVersion(config.version),
+            "cflags": [*cflags_framework, "-D__FORCE_REL_IN_DOL__=1"],
+            "progress_category": "game",
+            "objects": objects,
+        }
+    else:
+        return {
+            "lib": lib_name,
+            "mw_version": MWVersion(config.version),
+            "cflags": [*cflags_rel],
+            "progress_category": "game",
+            "objects": objects,
+        }
 
 # Helper function for actor RELs
-def ActorRel(status: bool, rel_name: str, extra_cflags: List[str]=[]) -> Dict[str, Any]:
-    return Rel(rel_name, [Object(status, f"d/actor/{rel_name}.cpp", extra_cflags=extra_cflags, scratch_preset_id=70)])
+def ActorRel(status: bool, rel_name: str, extra_cflags: List[str]=[], isInDol=False) -> Dict[str, Any]:
+    if isInDol:
+        return Rel(rel_name, [Object(status, f"d/actor/{rel_name}.cpp", extra_cflags=extra_cflags, scratch_preset_id=70)], True)
+    else:
+        return Rel(rel_name, [Object(status, f"d/actor/{rel_name}.cpp", extra_cflags=extra_cflags, scratch_preset_id=70)])
 
 
 # Helper function for JSystem libraries
 def JSystemLib(lib_name: str, objects: List[Object], progress_category: str="third_party") -> Dict[str, Any]:
     return {
         "lib": lib_name,
+        "src_dir": "libs/JSystem/src",
+        "strip_prefix": "JSystem/",
         "mw_version": MWVersion(config.version),
         "cflags": [*cflags_jsystem],
         "progress_category": progress_category,
@@ -572,17 +609,20 @@ config.warn_missing_config = True
 config.warn_missing_source = False
 config.precompiled_headers = [
     {
-        "source": "d/dolzel.pch",
+        "source": "include/d/dolzel.pch",
+        "output": "d/dolzel.mch",
         "mw_version": MWVersion(config.version),
         "cflags": ["-lang=c++", *cflags_dolzel_framework],
     },
     {
-        "source": "d/dolzel_rel.pch",
+        "source": "include/d/dolzel_rel.pch",
+        "output": "d/dolzel_rel.mch",
         "mw_version": MWVersion(config.version),
         "cflags": ["-lang=c++", *cflags_dolzel_rel],
     },
     {
-        "source": "JSystem/JSystem.pch",
+        "source": "libs/JSystem/include/JSystem/JSystem.pch",
+        "output": "JSystem/JSystem.mch",
         "mw_version": MWVersion(config.version),
         "cflags": ["-lang=c++", *cflags_framework],
     },
@@ -593,7 +633,6 @@ config.libs = [
         "mw_version": MWVersion(config.version),
         "cflags": cflags_framework,
         "progress_category": "core",
-        "host": True,
         "objects": [
             Object(MatchingFor(ALL_GCN), "m_Do/m_Do_main.cpp"),
             Object(MatchingFor(ALL_GCN), "m_Do/m_Do_printf.cpp"),
@@ -620,7 +659,6 @@ config.libs = [
         "mw_version": MWVersion(config.version),
         "cflags": cflags_framework,
         "progress_category": "game",
-        "host": True,
         "objects": [
             Object(MatchingFor(ALL_GCN), "c/c_damagereaction.cpp"),
             Object(MatchingFor(ALL_GCN), "c/c_dylink.cpp"),
@@ -631,7 +669,6 @@ config.libs = [
         "mw_version": MWVersion(config.version),
         "cflags": cflags_framework,
         "progress_category": "core",
-        "host": True,
         "objects": [
             # f_ap
             Object(MatchingFor(ALL_GCN), "f_ap/f_ap_game.cpp"),
@@ -700,7 +737,6 @@ config.libs = [
         "mw_version": MWVersion(config.version),
         "cflags": cflags_framework,
         "progress_category": "game",
-        "host": True,
         "objects": [
             Object(NonMatching, "d/d_home_button.cpp"),
             Object(NonMatching, "d/d_cursor_mng.cpp"),
@@ -888,7 +924,6 @@ config.libs = [
         "mw_version": MWVersion(config.version),
         "cflags": cflags_framework,
         "progress_category": "core",
-        "host": True,
         "objects": [
             Object(MatchingFor(ALL_GCN), "DynamicLink.cpp"),
         ],
@@ -898,7 +933,6 @@ config.libs = [
         "mw_version": MWVersion(config.version),
         "cflags": cflags_framework,
         "progress_category": "core",
-        "host": True,
         "objects": [
             Object(NonMatching, "CaptureScreen.cpp"),
         ],
@@ -908,7 +942,6 @@ config.libs = [
         "mw_version": MWVersion(config.version),
         "cflags": cflags_framework,
         "progress_category": "third_party",
-        "host": True,
         "objects": [
             Object(MatchingFor(ALL_GCN, ALL_SHIELD), "SSystem/SComponent/c_malloc.cpp"),
             Object(MatchingFor(ALL_GCN, ALL_SHIELD), "SSystem/SComponent/c_API.cpp"),
@@ -1233,7 +1266,6 @@ config.libs = [
         "mw_version": MWVersion(config.version),
         "cflags": cflags_framework,
         "progress_category": "core",
-        "host": True,
         "objects": [
             Object(MatchingFor(ALL_GCN), "Z2AudioLib/Z2Calc.cpp"),
             Object(MatchingFor(ALL_GCN), "Z2AudioLib/Z2AudioArcLoader.cpp"),
@@ -1269,7 +1301,6 @@ config.libs = [
         "mw_version": MWVersion(config.version),
         "cflags": cflags_framework,
         "progress_category": "core",
-        "host": True,
         "objects": [
             Object(Matching, "Z2AudioCS/SpkSpeakerCtrl.cpp"),
             Object(Equivalent, "Z2AudioCS/SpkSystem.cpp"),
@@ -1283,6 +1314,8 @@ config.libs = [
     },
     {
         "lib": "gf",
+        "src_dir": "libs/dolphin/src",
+        "strip_prefix": "dolphin/",
         "mw_version": MWVersion(config.version),
         "cflags": [*cflags_noopt, "-O3"],
         "progress_category": "sdk",
@@ -1515,8 +1548,10 @@ config.libs = [
     ),
     {
         "lib": "exi",
+        "src_dir": "libs/dolphin/src",
+        "strip_prefix": "dolphin/",
         "mw_version": "GC/1.2.5n",
-        "cflags": [*cflags_noopt, "-ir src/dolphin"],
+        "cflags": [*cflags_noopt, "-ir libs/dolphin/src"],
         "progress_category": "sdk",
         "objects": [
             Object(Matching, "dolphin/exi/EXIBios.c", extra_cflags=["-O3,p"]),
@@ -1989,10 +2024,10 @@ config.libs = [
     ),
     {
         "lib": "Runtime.PPCEABI.H",
+        "src_dir": "libs",
         "mw_version": MWVersion(config.version),
         "cflags": cflags_runtime,
         "progress_category": "sdk",
-        "host": False,
         "objects": [
             Object(MatchingFor(ALL_GCN), "PowerPC_EABI_Support/Runtime/Src/__mem.c"),
             Object(MatchingFor(ALL_GCN, "Shield"), "PowerPC_EABI_Support/Runtime/Src/__va_arg.c"),
@@ -2008,10 +2043,10 @@ config.libs = [
     },
     {
         "lib": "MSL_C",
+        "src_dir": "libs",
         "mw_version": MWVersion(config.version),
         "cflags": cflags_runtime,
         "progress_category": "sdk",
-        "host": False,
         "objects": [
             Object(MatchingFor(ALL_GCN), "PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/abort_exit.c"),
             Object(MatchingFor(ALL_GCN), "PowerPC_EABI_Support/MSL/MSL_C/MSL_Common/Src/alloc.c"),
@@ -2089,10 +2124,10 @@ config.libs = [
     },
     {
         "lib": "TRK_MINNOW_DOLPHIN",
+        "src_dir": "libs",
         "mw_version": MWVersion(config.version),
         "cflags": cflags_trk,
         "progress_category": "sdk",
-        "host": False,
         "objects": [
             # debugger
             Object(MatchingFor(ALL_GCN), "TRK_MINNOW_DOLPHIN/debugger/embedded/MetroTRK/Portable/mainloop.c"),
@@ -2136,7 +2171,6 @@ config.libs = [
         "mw_version": MWVersion(config.version),
         "cflags": cflags_dolphin,
         "progress_category": "sdk",
-        "host": False,
         "objects": [
             Object(MatchingFor(ALL_GCN), "amcstubs/AmcExi2Stubs.c"),
         ],
@@ -2146,7 +2180,6 @@ config.libs = [
         "mw_version": "GC/1.2.5n",
         "cflags": cflags_runtime,
         "progress_category": "sdk",
-        "host": False,
         "objects": [
             Object(MatchingFor(ALL_GCN), "odemuexi2/DebuggerDriver.c"),
         ],
@@ -2156,7 +2189,6 @@ config.libs = [
         "mw_version": MWVersion(config.version),
         "cflags": cflags_dolphin,
         "progress_category": "sdk",
-        "host": False,
         "objects": [
             Object(MatchingFor(ALL_GCN), "odenotstub/odenotstub.c"),
         ],
@@ -2167,7 +2199,6 @@ config.libs = [
         "mw_version": MWVersion(config.version),
         "cflags": cflags_framework,
         "progress_category": "sdk",
-        "host": False,
         "objects": [
             Object(NonMatching, "NdevExi2A/DebuggerDriver.c"),
             Object(NonMatching, "NdevExi2A/exi2.c"),
@@ -2178,7 +2209,6 @@ config.libs = [
         "mw_version": MWVersion(config.version),
         "cflags": cflags_framework,
         "progress_category": "third_party",
-        "host": False,
         "objects": [
             Object(MatchingFor("Shield"), "lingcod/LingcodPatch.c"),
         ],
@@ -2190,13 +2220,13 @@ config.libs = [
         "mw_version": MWVersion(config.version),
         "cflags": cflags_rel,
         "progress_category": "sdk",
-        "host": False,
         "objects": [
             Object(MatchingFor(ALL_GCN), "REL/executor.c"),
             Object(
                 MatchingFor(ALL_GCN),
                 "REL/global_destructor_chain.c",
-                source="PowerPC_EABI_Support/Runtime/Src/global_destructor_chain.c",
+                src_dir="libs/PowerPC_EABI_Support/Runtime/Src",
+                source="global_destructor_chain.c",
             ),
         ],
     },
@@ -2229,7 +2259,7 @@ config.libs = [
     ActorRel(MatchingFor(ALL_GCN), "d_a_tag_allmato"),
     ActorRel(MatchingFor(ALL_GCN), "d_a_tag_camera"), # debug extra weak fns
     ActorRel(MatchingFor(ALL_GCN), "d_a_tag_chkpoint"), # debug weak func order
-    ActorRel(MatchingFor(ALL_GCN), "d_a_tag_event"), # TODO: this is part of Rframework in ShieldD
+    ActorRel(MatchingFor(ALL_GCN), "d_a_tag_event", [], True), # TODO: this is part of Rframework in ShieldD
     ActorRel(MatchingFor(ALL_GCN), "d_a_tag_evt"), # debug extra weak fns
     ActorRel(MatchingFor(ALL_GCN), "d_a_tag_evtarea"), # debug weak func order
     ActorRel(MatchingFor(ALL_GCN), "d_a_tag_evtmsg"), # debug weak func order
@@ -2237,7 +2267,7 @@ config.libs = [
     ActorRel(MatchingFor(ALL_GCN), "d_a_tag_kmsg"),
     ActorRel(MatchingFor(ALL_GCN), "d_a_tag_lantern"), # debug weak func order
     ActorRel(MatchingFor(ALL_GCN), "d_a_tag_mist"), # debug weak func order
-    ActorRel(MatchingFor(ALL_GCN), "d_a_tag_msg"), # TODO: this is part of Rframework in ShieldD
+    ActorRel(MatchingFor(ALL_GCN), "d_a_tag_msg", [], True), # TODO: this is part of Rframework in ShieldD
     ActorRel(MatchingFor(ALL_GCN), "d_a_tag_push"), # debug weak func order
     ActorRel(MatchingFor(ALL_GCN, "Shield"), "d_a_tag_telop"), # debug weak func order
     ActorRel(MatchingFor(ALL_GCN), "d_a_tbox"),
@@ -2258,7 +2288,7 @@ config.libs = [
     ActorRel(MatchingFor(ALL_GCN), "d_a_suspend"),
     ActorRel(MatchingFor(ALL_GCN), "d_a_tag_attention"),
     ActorRel(MatchingFor(ALL_GCN), "d_a_alldie"),
-    ActorRel(MatchingFor(ALL_GCN), "d_a_andsw2"),
+    ActorRel(MatchingFor(ALL_GCN), "d_a_andsw2", [], True),
     ActorRel(MatchingFor(ALL_GCN), "d_a_bd"),
     ActorRel(MatchingFor(ALL_GCN), "d_a_canoe"),
     ActorRel(MatchingFor(ALL_GCN), "d_a_cstaF"),
@@ -2272,7 +2302,7 @@ config.libs = [
     ActorRel(MatchingFor(ALL_GCN), "d_a_e_rd"),
     ActorRel(MatchingFor(ALL_GCN), "d_a_econt"),
     ActorRel(MatchingFor(ALL_GCN), "d_a_fr"),
-    ActorRel(MatchingFor(ALL_GCN), "d_a_grass"),
+    ActorRel(MatchingFor(ALL_GCN), "d_a_grass", [], True),
     ActorRel(MatchingFor(ALL_GCN, "Shield"), "d_a_kytag05"),
     ActorRel(MatchingFor(ALL_GCN), "d_a_kytag10"),
     ActorRel(MatchingFor(ALL_GCN), "d_a_kytag11"),
@@ -2317,9 +2347,9 @@ config.libs = [
     ActorRel(MatchingFor(ALL_GCN), "d_a_obj_swpush5"),
     ActorRel(MatchingFor(ALL_GCN), "d_a_obj_yobikusa"),
     ActorRel(MatchingFor(ALL_GCN), "d_a_scene_exit2"),
-    ActorRel(MatchingFor(ALL_GCN), "d_a_shop_item"),
+    ActorRel(MatchingFor(ALL_GCN), "d_a_shop_item", [], True),
     ActorRel(MatchingFor(ALL_GCN), "d_a_sq"),
-    ActorRel(MatchingFor(ALL_GCN), "d_a_swc00"),
+    ActorRel(MatchingFor(ALL_GCN), "d_a_swc00", [], True),
     ActorRel(MatchingFor(ALL_GCN), "d_a_tag_CstaSw"), # debug weak func order
     ActorRel(MatchingFor(ALL_GCN), "d_a_tag_ajnot"), # debug weak func order
     ActorRel(MatchingFor(ALL_GCN), "d_a_tag_attack_item"), # debug weak func order
@@ -2465,7 +2495,7 @@ config.libs = [
     ActorRel(Equivalent, "d_a_hozelda"), # weak func order (J3DMtxCalcNoAnm)
     ActorRel(MatchingFor(ALL_GCN), "d_a_izumi_gate"),
     ActorRel(MatchingFor(ALL_GCN), "d_a_kago"),
-    ActorRel(MatchingFor(ALL_GCN), "d_a_kytag01"),
+    ActorRel(MatchingFor(ALL_GCN), "d_a_kytag01", [], True),
     ActorRel(MatchingFor(ALL_GCN), "d_a_kytag02"),
     ActorRel(MatchingFor(ALL_GCN), "d_a_kytag03"),
     ActorRel(MatchingFor(ALL_GCN), "d_a_kytag06"),
@@ -2535,7 +2565,7 @@ config.libs = [
     ActorRel(MatchingFor(ALL_GCN), "d_a_npc_lf"),
     ActorRel(MatchingFor(ALL_GCN), "d_a_npc_lud"),
     ActorRel(MatchingFor(ALL_GCN), "d_a_npc_midp"),
-    ActorRel(MatchingFor(ALL_GCN, ALL_SHIELD), "d_a_npc_mk"),
+    ActorRel(MatchingFor(ALL_GCN, ALL_SHIELD), "d_a_npc_mk", [], True),
     ActorRel(MatchingFor(ALL_GCN), "d_a_npc_moi"),
     ActorRel(MatchingFor(ALL_GCN), "d_a_npc_moir"),
     ActorRel(MatchingFor(ALL_GCN), "d_a_npc_myna2"),
@@ -2683,7 +2713,7 @@ config.libs = [
     ActorRel(MatchingFor(ALL_GCN), "d_a_obj_iceblock"),
     ActorRel(MatchingFor(ALL_GCN), "d_a_obj_iceleaf"),
     ActorRel(MatchingFor(ALL_GCN), "d_a_obj_ihasi"),
-    ActorRel(MatchingFor(ALL_GCN), "d_a_obj_ikada"),
+    ActorRel(MatchingFor(ALL_GCN), "d_a_obj_ikada", [], True),
     ActorRel(MatchingFor(ALL_GCN), "d_a_obj_inobone"),
     ActorRel(MatchingFor(ALL_GCN), "d_a_obj_ita"),
     ActorRel(MatchingFor(ALL_GCN), "d_a_obj_itamato"),
@@ -2955,9 +2985,26 @@ config.libs = [
     ActorRel(MatchingFor(ALL_GCN), "d_a_tag_yami"), # debug weak func order
     ActorRel(MatchingFor(ALL_GCN), "d_a_talk"),
     ActorRel(MatchingFor(ALL_GCN, "Shield"), "d_a_tboxSw"),
-    ActorRel(MatchingFor(ALL_GCN), "d_a_title"),
+    ActorRel(MatchingFor(ALL_GCN), "d_a_title", [], True),
     ActorRel(MatchingFor(ALL_GCN), "d_a_warp_bug"),
 
+    # Extra dolphin SDK objects needed by the mod (not in the vanilla DOL).
+    *(
+        [
+            {
+                "lib": "mod_dolphin",
+                "src_dir": "libs/dolphin/src",
+                "strip_prefix": "dolphin/",
+                "mw_version": "GC/1.2.5n",
+                "cflags": cflags_dolphin,
+                "objects": [Object(Custom, obj) for obj in
+                    getattr(mod_config, "extra_objects", [])
+                ],
+            },
+        ]
+        if mod_config is not None and getattr(mod_config, "extra_objects", [])
+        else []
+    ),
     # mod objects (read from mod_config.py, generated by setup_mod.py)
     *(
         [
@@ -2966,8 +3013,7 @@ config.libs = [
                 "mw_version": MWVersion(config.version),
                 "cflags": cflags_framework,
                 "objects": [Object(Custom, obj) for obj in (
-                    getattr(mod_config, "extra_objects", [])
-                    + getattr(mod_config, "umbra_objects", [])
+                    getattr(mod_config, "umbra_objects", [])
                     + getattr(mod_config, "mod_objects", [])
                 )],
             },
@@ -3074,6 +3120,42 @@ if config.non_matching and custom_dol_objects:
         "implicit": [ldscript_path, "build/binutils", "tools/patch_forceactive.py"],
     })
 
+# Generate DWARF 2 debug info from DWARF 1 .o files after link
+debug_info_out = f"build/{version}/debug_info.o"
+as_exe = ".exe" if is_windows() else ""
+config.custom_build_rules.append({
+    "name": "gen_dwarf2_debug",
+    "command": f"$python tools/gen_dwarf2_debug.py build/{version}"
+               f" --as build/binutils/powerpc-eabi-as{as_exe}",
+    "description": "DWARF2 DEBUG $out",
+    "pool": "console",
+})
+
+# Generate GDB REL symbol loader script after debug info is ready
+gdb_loader_out = f"build/{version}/load_rel_symbols.py"
+config.custom_build_rules.append({
+    "name": "gen_gdb_rel_loader",
+    "command": f"$python tools/gen_gdb_rel_loader.py build/{version}",
+    "description": "GDB REL LOADER $out",
+})
+
+if args.penumbra:
+    config.custom_build_steps.setdefault("post-link", []).append({
+        "outputs": debug_info_out,
+        "rule": "gen_dwarf2_debug",
+        "inputs": [f"build/{version}/framework.elf.MAP"],
+        "implicit": [
+            f"build/{version}/framework.elf",
+            "tools/gen_dwarf2_debug.py",
+        ],
+    })
+    config.custom_build_steps.setdefault("post-link", []).append({
+        "outputs": gdb_loader_out,
+        "rule": "gen_gdb_rel_loader",
+        "inputs": [f"build/{version}/config.json"],
+        "implicit": ["tools/gen_gdb_rel_loader.py", debug_info_out],
+    })
+
 # Optional extra categories for progress tracking
 config.progress_categories = [
     ProgressCategory("game", "TP Game Code"),
@@ -3090,6 +3172,15 @@ config.progress_report_args = [
 ]
 
 if args.mode == "configure":
+    # Save existing build.ninja to detect no-op regenerations
+    try:
+        old_ninja_stat = os.stat("build.ninja")
+        with open("build.ninja", "r") as f:
+            old_ninja_content = f.read()
+    except FileNotFoundError:
+        old_ninja_stat = None
+        old_ninja_content = None
+
     # Write build.ninja and objdiff.json
     generate_build(config)
 
@@ -3125,15 +3216,12 @@ rule rebuild_iso
 
         # Add the build step before the default rule
         iso_build = f"""# mod_assets checksum
-build {assets_stamp}: mod_assets_checksum | always
+build {assets_stamp}: mod_assets_checksum | tools/check_mod_assets.py always
 
 # Rebuild ISO
 build {output_iso}: rebuild_iso | {dol_output} {rel_output} tools/rebuild-decomp-tp.py {assets_stamp}
 
 """
-        # Add phony always target if not already present
-        if "build always: phony" not in content:
-            iso_build = "build always: phony\n\n" + iso_build
         content = content.replace(
             "# Default rule\n",
             iso_build + "# Default rule\n"
@@ -3147,6 +3235,14 @@ build {output_iso}: rebuild_iso | {dol_output} {rel_output} tools/rebuild-decomp
 
         with open("build.ninja", "w") as f:
             f.write(content)
+
+    # If build.ninja content is unchanged, restore the original mtime so ninja
+    # doesn't re-evaluate the entire build graph on the next invocation.
+    if old_ninja_content is not None:
+        with open("build.ninja", "r") as f:
+            new_ninja_content = f.read()
+        if new_ninja_content == old_ninja_content:
+            os.utime("build.ninja", (old_ninja_stat.st_atime, old_ninja_stat.st_mtime))
 elif args.mode == "progress":
     # Print progress information
     calculate_progress(config)

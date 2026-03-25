@@ -85,8 +85,8 @@ void daL7ODR_c::wait() {
     if (field_0x888 == 0) {
         field_0x888++;
     } else if (field_0x888 != -1) {
-        camera_class* camera = dComIfGp_getCamera(dComIfGp_getPlayerCameraID(0));
-        camera_class* camera0 = dComIfGp_getCamera(0);
+        camera_process_class* camera = dComIfGp_getCamera(dComIfGp_getPlayerCameraID(0));
+        camera_process_class* camera0 = dComIfGp_getCamera(0);
 
         if (eventInfo.checkCommandDemoAccrpt()) {
             dComIfGs_onZoneSwitch(Z2SE_DPD_SCREEN_OUT, fopAcM_GetRoomNo(this));
@@ -99,15 +99,15 @@ void daL7ODR_c::wait() {
         if (check_start()) {
             fopAcM_orderPotentialEvent(this, 2, 0xFFFF, 0);
             eventInfo.onCondition(2);
-            mDemoCamEye = camera0->lookat.eye;
-            mDemoCamCenter = camera0->lookat.center;
+            mDemoCamEye = camera0->view.lookat.eye;
+            mDemoCamCenter = camera0->view.lookat.center;
         }
     }
 }
 
 void daL7ODR_c::pl_walk() {
-    camera_class* camera = dComIfGp_getCamera(dComIfGp_getPlayerCameraID(0));
-    camera_class* camera0 = dComIfGp_getCamera(0);
+    camera_process_class* camera = dComIfGp_getCamera(dComIfGp_getPlayerCameraID(0));
+    camera_process_class* camera0 = dComIfGp_getCamera(0);
     daPy_py_c* player = daPy_getPlayerActorClass();
 
     if (field_0x888 == 0) {
@@ -264,8 +264,8 @@ void daL7ODR_c::dr_wait() {
 }
 
 void daL7ODR_c::dr_fly() {
-    camera_class* camera = dComIfGp_getCamera(dComIfGp_getPlayerCameraID(0));
-    camera_class* camera0 = dComIfGp_getCamera(0);
+    camera_process_class* camera = dComIfGp_getCamera(dComIfGp_getPlayerCameraID(0));
+    camera_process_class* camera0 = dComIfGp_getCamera(0);
     daPy_py_c* player = daPy_getPlayerActorClass();
     cXyz sp264(0.0f, 0.0f, 0.0f);
 
@@ -840,18 +840,18 @@ static actor_method_class l_daL7ODR_Method = {
 };
 
 actor_process_profile_definition g_profile_L7ODR = {
-  fpcLy_CURRENT_e,        // mLayerID
-  7,                      // mListID
-  fpcPi_CURRENT_e,        // mListPrio
-  PROC_L7ODR,             // mProcName
-  &g_fpcLf_Method.base,  // sub_method
-  sizeof(daL7ODR_c),      // mSize
-  0,                      // mSizeOther
-  0,                      // mParameters
-  &g_fopAc_Method.base,   // sub_method
-  222,                    // mPriority
-  &l_daL7ODR_Method,      // sub_method
-  0x00040100,             // mStatus
-  fopAc_ENEMY_e,          // mActorType
-  fopAc_CULLBOX_CUSTOM_e, // cullType
+    /* Layer ID     */ fpcLy_CURRENT_e,
+    /* List ID      */ 7,
+    /* List Prio    */ fpcPi_CURRENT_e,
+    /* Proc Name    */ fpcNm_L7ODR_e,
+    /* Proc SubMtd  */ &g_fpcLf_Method.base,
+    /* Size         */ sizeof(daL7ODR_c),
+    /* Size Other   */ 0,
+    /* Parameters   */ 0,
+    /* Leaf SubMtd  */ &g_fopAc_Method.base,
+    /* Draw Prio    */ fpcDwPi_L7ODR_e,
+    /* Actor SubMtd */ &l_daL7ODR_Method,
+    /* Status       */ fopAcStts_UNK_0x40000_e | fopAcStts_CULL_e,
+    /* Group        */ fopAc_ENEMY_e,
+    /* Cull Type    */ fopAc_CULLBOX_CUSTOM_e,
 };

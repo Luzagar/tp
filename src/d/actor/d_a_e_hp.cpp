@@ -9,6 +9,7 @@
 #include "d/actor/d_a_alink.h"
 #include "d/d_debug_viewer.h"
 #include "f_op/f_op_actor_enemy.h"
+#include <cstring>
 
 class daE_HP_HIO_c : public JORReflexible {
 public:
@@ -30,7 +31,7 @@ public:
 namespace {
 static dCcD_SrcCyl cc_hp_src = {
     {
-        {0, {{0x0, 0x0, 0x0}, {(s32)0xd8000000, 0x3}, 0x0}},
+        {0, {{0x0, 0x0, 0x0}, {0xd8000000, 0x3}, 0x0}},
         {dCcD_SE_13, 0, 0, 0, {0}},
         {dCcD_SE_NONE, 0, 0, 0, {6}},
         {0},
@@ -46,7 +47,7 @@ static dCcD_SrcCyl cc_hp_src = {
 
 static dCcD_SrcSph cc_lamp_src = {
     {
-        {0x0, {{0x0, 0x0, 0x0}, {(s32)0xD8FBFDFF, 0x43}, 0x75}},  // mObj
+        {0x0, {{0x0, 0x0, 0x0}, {0xD8FBFDFF, 0x43}, 0x75}},  // mObj
         {dCcD_SE_13, 0x0, 0x0, 0x0, 0x0},                         // mGObjAt
         {dCcD_SE_NONE, 0x0, 0x0, 0x0, 0x6},                       // mGObjTg
         {0x0},                                                    // mGObjCo
@@ -118,7 +119,7 @@ int daE_HP_c::ctrlJoint(J3DJoint* i_joint, J3DModel* i_model) {
 }
 
 int daE_HP_c::JointCallBack(J3DJoint* i_joint, int param_1) {
-    if (param_1 == NULL) {
+    if (param_1 == 0) {
         J3DModel* model = j3dSys.getModel();
         daE_HP_c* poe = (daE_HP_c*)model->getUserArea();
         if (poe != NULL) {
@@ -154,7 +155,7 @@ int daE_HP_c::LampCtrlJoint(J3DJoint* i_joint, J3DModel* i_model) {
 }
 
 int daE_HP_c::LampJointCallBack(J3DJoint* i_joint, int param_1) {
-    if (param_1 == NULL) {
+    if (param_1 == 0) {
         J3DModel* model = j3dSys.getModel();
         daE_HP_c* poe = (daE_HP_c*)model->getUserArea();
         if (poe != NULL) {
@@ -229,7 +230,7 @@ int daE_HP_c::draw() {
     mDoMtx_stack_c::multVec(&unkXyz1, &field_0x75c);
     mDoMtx_stack_c::transS(field_0x75c);
 
-    unkXyz1 = dComIfGp_getCamera(0)->lookat.eye - field_0x75c;
+    unkXyz1 = dComIfGp_getCamera(0)->view.lookat.eye - field_0x75c;
     mDoMtx_stack_c::YrotM(unkXyz1.atan2sX_Z());
     mDoMtx_stack_c::XrotM((s16)unkXyz1.atan2sY_XZ());
     mDoMtx_stack_c::scaleM(l_HIO.modelSize, l_HIO.modelSize, l_HIO.modelSize);
@@ -755,7 +756,7 @@ void daE_HP_c::executeDead() {
             fopAcM_delete(this);
         } else {
             if (field_0x784 == -1) {
-                field_0x784 = fopAcM_createItemForPresentDemo(&current.pos, fpcNm_ITEM_POU_SPIRIT, 0, -1,
+                field_0x784 = fopAcM_createItemForPresentDemo(&current.pos, dItemNo_POU_SPIRIT_e, 0, -1,
                                                               -1, 0, 0);
             }
 
@@ -1317,18 +1318,18 @@ static actor_method_class l_daE_HP_Method = {
 };
 
 actor_process_profile_definition g_profile_E_HP = {
-    fpcLy_CURRENT_e,         // mLayerID
-    7,                       // mListID
-    fpcPi_CURRENT_e,         // mListPrio
-    PROC_E_HP,               // mProcName
-    &g_fpcLf_Method.base,    // sub_method
-    sizeof(daE_HP_c),        // mSize
-    0,                       // mSizeOther
-    0,                       // mParameters
-    &g_fopAc_Method.base,    // sub_method
-    172,                     // mPriority
-    &l_daE_HP_Method,        // sub_method
-    0x00040100,              // mStatus
-    fopAc_ENEMY_e,           // mActorType
-    fopAc_CULLBOX_CUSTOM_e,  // cullType
+    /* Layer ID     */ fpcLy_CURRENT_e,
+    /* List ID      */ 7,
+    /* List Prio    */ fpcPi_CURRENT_e,
+    /* Proc Name    */ fpcNm_E_HP_e,
+    /* Proc SubMtd  */ &g_fpcLf_Method.base,
+    /* Size         */ sizeof(daE_HP_c),
+    /* Size Other   */ 0,
+    /* Parameters   */ 0,
+    /* Leaf SubMtd  */ &g_fopAc_Method.base,
+    /* Draw Prio    */ fpcDwPi_E_HP_e,
+    /* Actor SubMtd */ &l_daE_HP_Method,
+    /* Status       */ fopAcStts_UNK_0x40000_e | fopAcStts_CULL_e,
+    /* Group        */ fopAc_ENEMY_e,
+    /* Cull Type    */ fopAc_CULLBOX_CUSTOM_e,
 };

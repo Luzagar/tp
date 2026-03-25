@@ -13,13 +13,13 @@
 
 static bool isAmmoItem(u8 item) {
     switch (item) {
-    case fpcNm_ITEM_BOW:
-    case fpcNm_ITEM_LIGHT_ARROW:
-    case fpcNm_ITEM_BOMB_ARROW:
-    case fpcNm_ITEM_HAWK_ARROW:
-    case fpcNm_ITEM_NORMAL_BOMB:
-    case fpcNm_ITEM_WATER_BOMB:
-    case fpcNm_ITEM_POKE_BOMB:
+    case dItemNo_BOW_e:
+    case dItemNo_LIGHT_ARROW_e:
+    case dItemNo_BOMB_ARROW_e:
+    case dItemNo_HAWK_ARROW_e:
+    case dItemNo_NORMAL_BOMB_e:
+    case dItemNo_WATER_BOMB_e:
+    case dItemNo_POKE_BOMB_e:
         return true;
     default:
         return false;
@@ -35,7 +35,7 @@ gzInventoryMenu_c::gzInventoryMenu_c() {
 
     mRingRadiusH = 150.0f;
     mRingRadiusV = 140.0f;
-    mOriginalItem = fpcNm_ITEM_NONE;
+    mOriginalItem = dItemNo_NONE_e;
 
     for (int i = 0; i < gzInventoryMenu_c::RING_MAX_SLOTS; i++) {
         mItemSlots[i] = 0;
@@ -51,7 +51,7 @@ gzInventoryMenu_c::gzInventoryMenu_c() {
     }
 
     for (int i = 0; i < 3; i++) {
-        mPickerItems[i] = fpcNm_ITEM_NONE;
+        mPickerItems[i] = dItemNo_NONE_e;
         for (int j = 0; j < 3; j++) {
             mpPickerTex[i][j] = NULL;
             mpPickerBuf[i][j] = NULL;
@@ -460,81 +460,81 @@ gzButtonHints_s gzInventoryMenu_c::getButtonHints() {
 
 const char* gzInventoryMenu_c::getItemName(u8 itemId) {
     switch (itemId) {
-    case fpcNm_ITEM_NOENTRY_19: return "Black Rupee";
-    case fpcNm_ITEM_BOOMERANG: return "Gale Boomerang";
-    case fpcNm_ITEM_KANTERA: return "Lantern";
-    case fpcNm_ITEM_PACHINKO: return "Slingshot";
-    case fpcNm_ITEM_FISHING_ROD_1: return "Fishing Rod";
-    case fpcNm_ITEM_LURE_ROD: return "Fishing Rod (Lure)";
-    case fpcNm_ITEM_BEE_ROD: return "Fishing Rod (Bee)";
-    case fpcNm_ITEM_WORM_ROD: return "Fishing Rod (Worm)";
-    case fpcNm_ITEM_JEWEL_ROD: return "Fishing Rod (Coral)";
-    case fpcNm_ITEM_JEWEL_BEE_ROD: return "Fishing Rod (Coral+Bee)";
-    case fpcNm_ITEM_JEWEL_WORM_ROD: return "Fishing Rod (Coral+Worm)";
-    case fpcNm_ITEM_HVY_BOOTS: return "Iron Boots";
-    case fpcNm_ITEM_HOOKSHOT: return "Clawshot";
-    case fpcNm_ITEM_W_HOOKSHOT: return "Double Clawshots";
-    case fpcNm_ITEM_BOW: return "Hero's Bow";
-    case fpcNm_ITEM_LIGHT_ARROW: return "Bow (Light Arrows)";
-    case fpcNm_ITEM_BOMB_ARROW: return "Bow (Bomb Arrows)";
-    case fpcNm_ITEM_HAWK_ARROW: return "Bow (Hawkeye)";
-    case fpcNm_ITEM_HAWK_EYE: return "Hawkeye";
-    case fpcNm_ITEM_NORMAL_BOMB: return "Bomb";
-    case fpcNm_ITEM_WATER_BOMB: return "Water Bomb";
-    case fpcNm_ITEM_POKE_BOMB: return "Bomblings";
-    case fpcNm_ITEM_SPINNER: return "Spinner";
-    case fpcNm_ITEM_IRONBALL: return "Ball and Chain";
-    case fpcNm_ITEM_COPY_ROD: return "Dominion Rod";
-    case fpcNm_ITEM_COPY_ROD_2: return "Dominion Rod (Powered)";
-    case fpcNm_ITEM_HORSE_FLUTE: return "Horse Call";
-    case fpcNm_ITEM_WOOD_STICK: return "Wooden Sword";
-    case fpcNm_ITEM_EMPTY_BOTTLE: return "Empty Bottle";
-    case fpcNm_ITEM_RED_BOTTLE: return "Red Potion";
-    case fpcNm_ITEM_GREEN_BOTTLE: return "Green Potion";
-    case fpcNm_ITEM_BLUE_BOTTLE: return "Blue Potion";
-    case fpcNm_ITEM_MILK_BOTTLE: return "Milk";
-    case fpcNm_ITEM_HALF_MILK_BOTTLE: return "Half Milk";
-    case fpcNm_ITEM_WATER_BOTTLE: return "Water";
-    case fpcNm_ITEM_HOT_SPRING: return "Hot Spring Water";
-    case fpcNm_ITEM_OIL_BOTTLE: return "Lantern Oil";
-    case fpcNm_ITEM_UGLY_SOUP: return "Nasty Soup";
-    case fpcNm_ITEM_LV1_SOUP: return "Simple Soup";
-    case fpcNm_ITEM_LV2_SOUP: return "Good Soup";
-    case fpcNm_ITEM_LV3_SOUP: return "Superb Soup";
-    case fpcNm_ITEM_CHUCHU_RARE: return "Rare Chu Jelly";
-    case fpcNm_ITEM_CHUCHU_RED: return "Red Chu Jelly";
-    case fpcNm_ITEM_CHUCHU_BLUE: return "Blue Chu Jelly";
-    case fpcNm_ITEM_CHUCHU_GREEN: return "Green Chu Jelly";
-    case fpcNm_ITEM_CHUCHU_YELLOW: return "Yellow Chu Jelly";
-    case fpcNm_ITEM_CHUCHU_PURPLE: return "Purple Chu Jelly";
-    case fpcNm_ITEM_BEE_CHILD: return "Bee Larva";
-    case fpcNm_ITEM_FAIRY: return "Fairy";
-    case fpcNm_ITEM_FAIRY_DROP: return "Fairy's Tears";
-    case fpcNm_ITEM_WORM: return "Worm";
-    case fpcNm_ITEM_ZORAS_JEWEL: return "Reekfish Scent";
-    case fpcNm_ITEM_LETTER: return "Letter";
-    case fpcNm_ITEM_BILL: return "Invoice";
-    case fpcNm_ITEM_SWORD: return "Ordon Sword";
-    case fpcNm_ITEM_MASTER_SWORD: return "Master Sword";
-    case fpcNm_ITEM_LIGHT_SWORD: return "Master Sword (Light)";
-    case fpcNm_ITEM_WOOD_SHIELD: return "Ordon Shield";
-    case fpcNm_ITEM_SHIELD: return "Wooden Shield";
-    case fpcNm_ITEM_HYLIA_SHIELD: return "Hylian Shield";
-    case fpcNm_ITEM_WEAR_KOKIRI: return "Hero's Clothes";
-    case fpcNm_ITEM_WEAR_ZORA: return "Zora Armor";
-    case fpcNm_ITEM_ARMOR: return "Magic Armor";
-    case fpcNm_ITEM_WALLET_LV1: return "Wallet (300)";
-    case fpcNm_ITEM_WALLET_LV2: return "Wallet (600)";
-    case fpcNm_ITEM_WALLET_LV3: return "Wallet (1000)";
-    case fpcNm_ITEM_ARROW_LV1: return "Quiver (30)";
-    case fpcNm_ITEM_ARROW_LV2: return "Quiver (60)";
-    case fpcNm_ITEM_ARROW_LV3: return "Quiver (100)";
-    case fpcNm_ITEM_SMELL_CHILDREN: return "Youth's Scent";
-    case fpcNm_ITEM_SMELL_YELIA_POUCH: return "Scent of Ilia";
-    case fpcNm_ITEM_SMELL_FISH: return "Reekfish Scent";
-    case fpcNm_ITEM_SMELL_MEDICINE: return "Medicine Scent";
-    case fpcNm_ITEM_SMELL_POH: return "Poe Scent";
-    case fpcNm_ITEM_NONE: return "";
+    case dItemNo_NOENTRY_19_e: return "Black Rupee";
+    case dItemNo_BOOMERANG_e: return "Gale Boomerang";
+    case dItemNo_KANTERA_e: return "Lantern";
+    case dItemNo_PACHINKO_e: return "Slingshot";
+    case dItemNo_FISHING_ROD_1_e: return "Fishing Rod";
+    case dItemNo_LURE_ROD_e: return "Fishing Rod (Lure)";
+    case dItemNo_BEE_ROD_e: return "Fishing Rod (Bee)";
+    case dItemNo_WORM_ROD_e: return "Fishing Rod (Worm)";
+    case dItemNo_JEWEL_ROD_e: return "Fishing Rod (Coral)";
+    case dItemNo_JEWEL_BEE_ROD_e: return "Fishing Rod (Coral+Bee)";
+    case dItemNo_JEWEL_WORM_ROD_e: return "Fishing Rod (Coral+Worm)";
+    case dItemNo_HVY_BOOTS_e: return "Iron Boots";
+    case dItemNo_HOOKSHOT_e: return "Clawshot";
+    case dItemNo_W_HOOKSHOT_e: return "Double Clawshots";
+    case dItemNo_BOW_e: return "Hero's Bow";
+    case dItemNo_LIGHT_ARROW_e: return "Bow (Light Arrows)";
+    case dItemNo_BOMB_ARROW_e: return "Bow (Bomb Arrows)";
+    case dItemNo_HAWK_ARROW_e: return "Bow (Hawkeye)";
+    case dItemNo_HAWK_EYE_e: return "Hawkeye";
+    case dItemNo_NORMAL_BOMB_e: return "Bomb";
+    case dItemNo_WATER_BOMB_e: return "Water Bomb";
+    case dItemNo_POKE_BOMB_e: return "Bomblings";
+    case dItemNo_SPINNER_e: return "Spinner";
+    case dItemNo_IRONBALL_e: return "Ball and Chain";
+    case dItemNo_COPY_ROD_e: return "Dominion Rod";
+    case dItemNo_COPY_ROD_2_e: return "Dominion Rod (Powered)";
+    case dItemNo_HORSE_FLUTE_e: return "Horse Call";
+    case dItemNo_WOOD_STICK_e: return "Wooden Sword";
+    case dItemNo_EMPTY_BOTTLE_e: return "Empty Bottle";
+    case dItemNo_RED_BOTTLE_e: return "Red Potion";
+    case dItemNo_GREEN_BOTTLE_e: return "Green Potion";
+    case dItemNo_BLUE_BOTTLE_e: return "Blue Potion";
+    case dItemNo_MILK_BOTTLE_e: return "Milk";
+    case dItemNo_HALF_MILK_BOTTLE_e: return "Half Milk";
+    case dItemNo_WATER_BOTTLE_e: return "Water";
+    case dItemNo_HOT_SPRING_e: return "Hot Spring Water";
+    case dItemNo_OIL_BOTTLE_e: return "Lantern Oil";
+    case dItemNo_UGLY_SOUP_e: return "Nasty Soup";
+    case dItemNo_LV1_SOUP_e: return "Simple Soup";
+    case dItemNo_LV2_SOUP_e: return "Good Soup";
+    case dItemNo_LV3_SOUP_e: return "Superb Soup";
+    case dItemNo_CHUCHU_RARE_e: return "Rare Chu Jelly";
+    case dItemNo_CHUCHU_RED_e: return "Red Chu Jelly";
+    case dItemNo_CHUCHU_BLUE_e: return "Blue Chu Jelly";
+    case dItemNo_CHUCHU_GREEN_e: return "Green Chu Jelly";
+    case dItemNo_CHUCHU_YELLOW_e: return "Yellow Chu Jelly";
+    case dItemNo_CHUCHU_PURPLE_e: return "Purple Chu Jelly";
+    case dItemNo_BEE_CHILD_e: return "Bee Larva";
+    case dItemNo_FAIRY_e: return "Fairy";
+    case dItemNo_FAIRY_DROP_e: return "Fairy's Tears";
+    case dItemNo_WORM_e: return "Worm";
+    case dItemNo_ZORAS_JEWEL_e: return "Reekfish Scent";
+    case dItemNo_LETTER_e: return "Letter";
+    case dItemNo_BILL_e: return "Invoice";
+    case dItemNo_SWORD_e: return "Ordon Sword";
+    case dItemNo_MASTER_SWORD_e: return "Master Sword";
+    case dItemNo_LIGHT_SWORD_e: return "Master Sword (Light)";
+    case dItemNo_WOOD_SHIELD_e: return "Ordon Shield";
+    case dItemNo_SHIELD_e: return "Wooden Shield";
+    case dItemNo_HYLIA_SHIELD_e: return "Hylian Shield";
+    case dItemNo_WEAR_KOKIRI_e: return "Hero's Clothes";
+    case dItemNo_WEAR_ZORA_e: return "Zora Armor";
+    case dItemNo_ARMOR_e: return "Magic Armor";
+    case dItemNo_WALLET_LV1_e: return "Wallet (300)";
+    case dItemNo_WALLET_LV2_e: return "Wallet (600)";
+    case dItemNo_WALLET_LV3_e: return "Wallet (1000)";
+    case dItemNo_ARROW_LV1_e: return "Quiver (30)";
+    case dItemNo_ARROW_LV2_e: return "Quiver (60)";
+    case dItemNo_ARROW_LV3_e: return "Quiver (100)";
+    case dItemNo_SMELL_CHILDREN_e: return "Youth's Scent";
+    case dItemNo_SMELL_YELIA_POUCH_e: return "Scent of Ilia";
+    case dItemNo_SMELL_FISH_e: return "Reekfish Scent";
+    case dItemNo_SMELL_MEDICINE_e: return "Medicine Scent";
+    case dItemNo_SMELL_POH_e: return "Poe Scent";
+    case dItemNo_NONE_e: return "";
     default: return "Unknown";
     }
 }

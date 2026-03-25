@@ -212,18 +212,18 @@ inline bool isFundraising2() { return dComIfGs_isEventBit(0x0f10); }
 inline void onFundraising2() {  dComIfGs_onEventBit(0x0f10); }
 inline void offFundraising2() { dComIfGs_offEventBit(0x0f10); }
 inline bool isRupeeCS() { 
-    for (int itemNo = fpcNm_ITEM_BLUE_RUPEE; itemNo <= fpcNm_ITEM_SILVER_RUPEE; itemNo++) {
+    for (int itemNo = dItemNo_BLUE_RUPEE_e; itemNo <= dItemNo_SILVER_RUPEE_e; itemNo++) {
         if (dComIfGs_isItemFirstBit(itemNo)) return false;
     }
     return true;
 }
 inline void onRupeeCS() { 
-    for (int itemNo = fpcNm_ITEM_BLUE_RUPEE; itemNo <= fpcNm_ITEM_SILVER_RUPEE; itemNo++) {
+    for (int itemNo = dItemNo_BLUE_RUPEE_e; itemNo <= dItemNo_SILVER_RUPEE_e; itemNo++) {
         dComIfGs_offItemFirstBit(itemNo);
     }
 }
 inline void offRupeeCS() { 
-    for (int itemNo = fpcNm_ITEM_BLUE_RUPEE; itemNo <= fpcNm_ITEM_SILVER_RUPEE; itemNo++) {
+    for (int itemNo = dItemNo_BLUE_RUPEE_e; itemNo <= dItemNo_SILVER_RUPEE_e; itemNo++) {
         dComIfGs_onItemFirstBit(itemNo);
     }
 }

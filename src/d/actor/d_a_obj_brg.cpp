@@ -14,6 +14,7 @@
 #include "d/d_path.h"
 #include "Z2AudioLib/Z2Instances.h"
 #include "f_op/f_op_camera_mng.h"
+#include <cstring>
 
 static void ride_call_back(dBgW* i_bgw, fopAc_ac_c* i_bgActor, fopAc_ac_c* i_rideActor) {
     obj_brg_class* a_this = (obj_brg_class*)i_bgActor;
@@ -52,11 +53,11 @@ static void ride_call_back(dBgW* i_bgw, fopAc_ac_c* i_bgActor, fopAc_ac_c* i_rid
     i_rideActor->speed.y = -5.0f;
 
     f32 var_f29;
-    if (fopAcM_GetName(i_rideActor) == PROC_ALINK) {
+    if (fopAcM_GetName(i_rideActor) == fpcNm_ALINK_e) {
         var_f29 = 100.0f;
         br_p->field_0x0e4 = -31.0f;
         a_this->field_0xb1ef = 5;
-    } else if (fopAcM_GetName(i_rideActor) == PROC_NPC_KS) {
+    } else if (fopAcM_GetName(i_rideActor) == fpcNm_NPC_KS_e) {
         var_f29 = 70.0f;
         br_p->field_0x0e4 = -20.0f;
         i_rideActor->speed.y = -20.0f;
@@ -920,7 +921,7 @@ static int daObj_Brg_Execute(obj_brg_class* i_this) {
     cXyz spE8;
 
     camera_class* camera = (camera_class*) dComIfGp_getCamera(0);
-    spC4 = a_this->current.pos - camera->lookat.eye;
+    spC4 = a_this->current.pos - camera->view.lookat.eye;
 
     if (i_this->field_0xb1ef != 0) {
         i_this->field_0xb1ef--;
@@ -936,7 +937,7 @@ static int daObj_Brg_Execute(obj_brg_class* i_this) {
     }
 
     if (spC4.abs() > sp1BC) {
-        spD0 = camera->lookat.center - camera->lookat.eye;
+        spD0 = camera->view.lookat.center - camera->view.lookat.eye;
 
         s16 atan_res = cM_atan2s(spD0.x, spD0.z);
         cMtx_YrotS(*calc_mtx, -atan_res);
@@ -1830,18 +1831,18 @@ static actor_method_class l_daObj_Brg_Method = {
 };
 
 actor_process_profile_definition g_profile_OBJ_BRG = {
-  fpcLy_CURRENT_e,        // mLayerID
-  3,                      // mListID
-  fpcPi_CURRENT_e,        // mListPrio
-  PROC_OBJ_BRG,           // mProcName
-  &g_fpcLf_Method.base,  // sub_method
-  sizeof(obj_brg_class),  // mSize
-  0,                      // mSizeOther
-  0,                      // mParameters
-  &g_fopAc_Method.base,   // sub_method
-  54,                     // mPriority
-  &l_daObj_Brg_Method,    // sub_method
-  0x00044000,             // mStatus
-  fopAc_ACTOR_e,          // mActorType
-  fopAc_CULLBOX_CUSTOM_e, // cullType
+    /* Layer ID     */ fpcLy_CURRENT_e,
+    /* List ID      */ 3,
+    /* List Prio    */ fpcPi_CURRENT_e,
+    /* Proc Name    */ fpcNm_OBJ_BRG_e,
+    /* Proc SubMtd  */ &g_fpcLf_Method.base,
+    /* Size         */ sizeof(obj_brg_class),
+    /* Size Other   */ 0,
+    /* Parameters   */ 0,
+    /* Leaf SubMtd  */ &g_fopAc_Method.base,
+    /* Draw Prio    */ fpcDwPi_OBJ_BRG_e,
+    /* Actor SubMtd */ &l_daObj_Brg_Method,
+    /* Status       */ fopAcStts_UNK_0x40000_e | fopAcStts_UNK_0x4000_e,
+    /* Group        */ fopAc_ACTOR_e,
+    /* Cull Type    */ fopAc_CULLBOX_CUSTOM_e,
 };

@@ -105,6 +105,7 @@ gzSettingsMenu_c::gzSettingsMenu_c() {
     // Actions
     mpCommandCombos = new (gzHeap(GZ_GROUP_MENU), 4) gzLine("command combos", "change default command combos");
     mpMenuPositions = new (gzHeap(GZ_GROUP_MENU), 4) gzLine("menu positions", "set positions of overlay menus");
+    mpGdbServer = new (gzHeap(GZ_GROUP_MENU), 4) gzLine("start gdb server", "start listening for gdb on port 2159");
     mpSave = new (gzHeap(GZ_GROUP_MENU), 4) gzLine("save settings", "saves tpgz settings");
     mpLoad = new (gzHeap(GZ_GROUP_MENU), 4) gzLine("load settings", "loads tpgz settings");
     mpDelete = new (gzHeap(GZ_GROUP_MENU), 4) gzLine("delete settings", "deletes tpgz settings");
@@ -122,6 +123,7 @@ gzSettingsMenu_c::gzSettingsMenu_c() {
     mpLines[SETTING_THEME] = mpTheme;
     mpLines[SETTING_COMMAND_COMBOS] = mpCommandCombos;
     mpLines[SETTING_MENU_POSITIONS] = mpMenuPositions;
+    mpLines[SETTING_GDB_SERVER] = mpGdbServer;
     mpLines[SETTING_SAVE] = mpSave;
     mpLines[SETTING_LOAD] = mpLoad;
     mpLines[SETTING_DELETE] = mpDelete;
@@ -179,6 +181,9 @@ void gzSettingsMenu_c::_delete() {
 
     delete mpMenuPositions;
     mpMenuPositions = NULL;
+
+    delete mpGdbServer;
+    mpGdbServer = NULL;
 
     delete mpSave;
     mpSave = NULL;
@@ -245,6 +250,14 @@ void gzSettingsMenu_c::execute() {
             gzInfo_sendNotification("test!", 1);
             gzInfo_sendNotification("test!", 2);
             gzInfo_sendNotification("test2!");
+            break;
+        case SETTING_GDB_SERVER:
+            if (g_gzInfo.mNet.gdbStart(2159) == 0) {
+                gzInfo_sendNotification("gdb server started on port 2159");
+            } else {
+                gzInfo_sendNotification("failed to start gdb server");
+            }
+            gzInfo_seStart(Z2SE_SY_CURSOR_OK);
             break;
         case SETTING_RETURN_TO_LOADER:
             mpConfirm = new (gzHeap(GZ_GROUP_UI), 4) gzConfirm_c(returnToLoaderConfirmCb, returnToLoaderReturnCb, this, "return to loader?");

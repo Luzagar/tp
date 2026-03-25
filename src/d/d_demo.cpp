@@ -9,6 +9,7 @@
 #include "d/actor/d_a_movie_player.h"
 #include "JSystem/JGadget/pointer.h"
 #include "JSystem/JGadget/define.h"
+#include <cstring>
 
 s16 dDemo_c::m_branchId = -1;
 
@@ -447,7 +448,7 @@ static view_class* getView() {
 
     dDlst_window_c* window = dComIfGp_getWindow(0);
     int camID = window->getCameraID();
-    return dComIfGp_getCamera(camID);
+    return &dComIfGp_getCamera(camID)->view;
 }
 
 f32 dDemo_camera_c::JSGGetProjectionNear() const {

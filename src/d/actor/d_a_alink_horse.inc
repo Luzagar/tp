@@ -13,7 +13,7 @@
 static void* daAlink_searchBoar(fopAc_ac_c* i_actor, void* i_data) {
     UNUSED(i_data);
 
-    if (fopAcM_GetName(i_actor) == PROC_E_WB) {
+    if (fopAcM_GetName(i_actor) == fpcNm_E_WB_e) {
         if (((e_wb_class*)i_actor)->getModel() != NULL) {
             return i_actor;
         }
@@ -25,7 +25,7 @@ static void* daAlink_searchBoar(fopAc_ac_c* i_actor, void* i_data) {
 static fopAc_ac_c* daAlink_searchCoach(fopAc_ac_c* i_actor, void* i_data) {
     UNUSED(i_data);
 
-    if (fopAcM_GetName(i_actor) == PROC_NPC_COACH) {
+    if (fopAcM_GetName(i_actor) == fpcNm_NPC_COACH_e) {
         return i_actor;
     }
 
@@ -64,7 +64,7 @@ BOOL daAlink_c::checkCowGame() {
 int daAlink_c::getReinRideDirection() {
     s16 angle = fopAcM_searchActorAngleY(field_0x27f4, this) - field_0x27f4->shape_angle.y;
 
-    if (fopAcM_GetName(field_0x27f4) == PROC_HORSE && abs(angle) > 0x6800) {
+    if (fopAcM_GetName(field_0x27f4) == fpcNm_HORSE_e && abs(angle) > 0x6800) {
         return DIR_BACKWARD;
     } else if (angle > 0) {
         return DIR_LEFT;
@@ -99,7 +99,7 @@ int daAlink_c::checkReinRideBgCheck() {
     int direction = getReinRideDirection();
 
     const Vec* offset_p;
-    if (fopAcM_GetName(field_0x27f4) == PROC_HORSE) {
+    if (fopAcM_GetName(field_0x27f4) == fpcNm_HORSE_e) {
         if (direction == DIR_BACKWARD) {
             offset_p = &horseLocalBack;
         } else if (direction == DIR_LEFT) {
@@ -206,7 +206,7 @@ void daAlink_c::rideGetOff() {
         seStartOnlyReverb(Z2SE_AL_SPINNER_END);
     } else if (checkCanoeRide()) {
         if (mEquipItem == 0x10B) {
-            mEquipItem = fpcNm_ITEM_NONE;
+            mEquipItem = dItemNo_NONE_e;
         }
     } else if (checkBoardRide()) {
         static_cast<daObjIceLeaf_c*>(mRideAcKeep.getActor())->offRide();
@@ -281,9 +281,14 @@ void daAlink_c::setHorseSwordUpAnime() {
 
 void daAlink_c::setHorseTurnUpperAnime(BOOL i_isTurnL) {
     if (checkHorseNoUpperAnime() || (!i_isTurnL && checkHorseTurnRAnime()) ||
-        (i_isTurnL == TRUE && checkHorseTurnLAnime()))
-    {
-        setUpperAnimeBaseMorf(!i_isTurnL ? (u16)dRes_ID_ALANM_BCK_TURNLS_e : (u16)dRes_ID_ALANM_BCK_TURNRS_e, 4.0f);
+        (i_isTurnL == TRUE && checkHorseTurnLAnime())) {
+        u16 anmResIdx;
+        if (i_isTurnL == FALSE) {
+            anmResIdx = (u16)dRes_ID_ALANM_BCK_TURNLS_e;
+        } else {
+            anmResIdx = (u16)dRes_ID_ALANM_BCK_TURNRS_e;
+        }
+        setUpperAnimeBaseMorf(anmResIdx, 4.0f);
     }
 }
 
@@ -334,7 +339,7 @@ void daAlink_c::setHorseStirrup() {
     if (field_0x2fab & 1) {
         mDoMtx_stack_c::copy(mpLinkModel->getAnmMtx(field_0x30bc));
         mDoMtx_stack_c::transM(-2.0f, -11.0f, 1.5f);       
-        mDoMtx_stack_c::ZXYrotM(NULL, -0x8000, 0x4000);
+        mDoMtx_stack_c::ZXYrotM(0, -0x8000, 0x4000);
         mDoMtx_copy(mDoMtx_stack_c::get(), horse->getLeftStirrupMtx());
     }
 
@@ -1095,7 +1100,11 @@ int daAlink_c::checkHorseGetOffDirection() {
     lin_end_pos.set(ride_actor_p->current.pos.x + cM_ssin(var_r28) * 125.0f, lin_start_pos.y,
                     ride_actor_p->current.pos.z + cM_scos(var_r28) * 125.0f);
 
+#if PLATFORM_SHIELD
+    f32 check_y[3];
+#else
     f32 check_y[3] = {0.0f, 0.0f, 0.0f};
+#endif
     check_y[0] = current.pos.y;
     check_y[1] = ride_actor_p->current.pos.y + (current.pos.y - ride_actor_p->current.pos.y) * 0.5f;
 
@@ -1103,8 +1112,7 @@ int daAlink_c::checkHorseGetOffDirection() {
     check_y[2] = var_f31;
 
     int check_no;
-    int i;
-    for (i = 0; i < 2; i++) {
+    for (int i = 0; i < 2; i++) {
         for (check_no = 0; check_no < 3; check_no++) {
             lin_start_pos.y = check_y[check_no];
             lin_end_pos.y = lin_start_pos.y;
@@ -1123,7 +1131,7 @@ int daAlink_c::checkHorseGetOffDirection() {
 
         lin_end_pos.x = lin_start_pos.x * 2.0f - lin_end_pos.x;
         lin_end_pos.z = lin_start_pos.z * 2.0f - lin_end_pos.z;
-        var_r28 += 0x8000;
+        ANGLE_ADD_2(var_r28, 0x8000);
     }
 
     return 2;
@@ -1212,7 +1220,7 @@ int daAlink_c::checkHorseGetOffAndSetDoStatus() {
                 setDoStatus(BUTTON_STATUS_UNK_140);
             }
         } else if ((checkHorseNoUpperAnime() || checkEquipAnime()) && mMidnaTalkDelayTimer == 0 && !checkInputOnR() && isGetOff) {
-            if (mEquipItem == fpcNm_ITEM_NONE) {
+            if (mEquipItem == dItemNo_NONE_e) {
                 off_direction = checkHorseGetOffDirection();
                 if ((off_direction != DIR_LEFT || (checkHorseRide() && horse->checkEnemySearch())) && field_0x2fb4 == 0) {
                     if (!checkSpecialHorseRide()) {
@@ -1251,7 +1259,7 @@ int daAlink_c::setHorseGetOff(int param_0) {
 int daAlink_c::procHorseRideInit() {
     BOOL var_r25 = FALSE;
 
-    if (mEquipItem != fpcNm_ITEM_NONE) {
+    if (mEquipItem != dItemNo_NONE_e) {
         if (mEquipItem == 0x103) {
             var_r25 = 1;
         }
@@ -1264,7 +1272,7 @@ int daAlink_c::procHorseRideInit() {
     MtxP rideMtx;
     Vec* localRidePos_p;
     u32 mode;
-    if (fopAcM_GetName(field_0x27f4) == PROC_HORSE) {
+    if (fopAcM_GetName(field_0x27f4) == fpcNm_HORSE_e) {
         daHorse_c* horse = (daHorse_c*)field_0x27f4;
         horse->onRideStartFlg();
         rideMtx = horse->getRootMtx();
@@ -1319,7 +1327,7 @@ int daAlink_c::procHorseRideInit() {
             }
             field_0x2fc0 = 1;
         }
-    
+
         if (mDemo.getDemoMode() != daPy_demo_c::DEMO_UNK_7_e) {
             setOldRootQuaternion(0, (s16)(shape_angle.y - field_0x27f4->shape_angle.y), 0);
         }
@@ -1511,7 +1519,7 @@ int daAlink_c::procHorseGetOffInit(int param_0) {
     commonProcInit(PROC_HORSE_GETOFF);
     resetUnderAnime(UNDER_2, -1.0f);
 
-    if (mEquipItem != fpcNm_ITEM_NONE) {
+    if (mEquipItem != dItemNo_NONE_e) {
         allUnequip(0);
     }
 
@@ -1670,7 +1678,8 @@ int daAlink_c::procHorseWaitInit() {
     initServiceWaitTime();
     checkHorseGetOffAndSetDoStatus();
 
-    setSyncRide((!checkHorseNoUpperAnime() && !checkEquipAnime()) || checkInputOnR() || !checkHorseGetOff() || checkHorseGetOffDirection() == 2);
+    setSyncRide(!((checkHorseNoUpperAnime() || checkEquipAnime()) && !checkInputOnR() &&
+                        checkHorseGetOff() && checkHorseGetOffDirection() != 2));
     field_0x33f0 = 0.0f;
     return 1;
 }

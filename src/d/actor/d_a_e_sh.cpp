@@ -1003,7 +1003,7 @@ static int daE_SH_Execute(e_sh_class* i_this) {
 
     MTXCopy(model->getAnmMtx(13), *calc_mtx);
 
-    camera_class* camera = dComIfGp_getCamera(0);
+    camera_process_class* camera = dComIfGp_getCamera(0);
 
     s16 rotX;
     s16 rotY;
@@ -1014,7 +1014,7 @@ static int daE_SH_Execute(e_sh_class* i_this) {
         if (i == 0) {
             unkXyz1.set(15.0f + TREG_F(0), 3.5f + TREG_F(1), TREG_F(2));
             MtxPosition(&unkXyz1, &unkXyz2);
-            unkXyz1 = camera->lookat.eye - unkXyz2;
+            unkXyz1 = camera->view.lookat.eye - unkXyz2;
             rotY = cM_atan2s(unkXyz1.x, unkXyz1.z);
             rotX = -cM_atan2s(unkXyz1.y, JMAFastSqrt(unkXyz1.x * unkXyz1.x + unkXyz1.z * unkXyz1.z));
 
@@ -1160,7 +1160,7 @@ static int useHeapInit(fopAc_ac_c* i_this) {
 static int daE_SH_Create(fopAc_ac_c* i_this) {
     static dCcD_SrcSph cc_sph_src = {
         {
-            {0x0, {{0x0, 0x0, 0x0}, {(s32)0xd8fbfdff, 0x3}, 0x75}}, // mObj
+            {0x0, {{0x0, 0x0, 0x0}, {0xd8fbfdff, 0x3}, 0x75}}, // mObj
             {dCcD_SE_NONE, 0x0, 0x0, 0x0, 0x0}, // mGObjAt
             {dCcD_SE_NONE, 0x0, 0x0, 0x0, 0x2}, // mGObjTg
             {0x0}, // mGObjCo
@@ -1263,18 +1263,18 @@ static actor_method_class l_daE_SH_Method = {
 };
 
 actor_process_profile_definition g_profile_E_SH = {
-    fpcLy_CURRENT_e,        // mLayerID
-    7,                      // mListID
-    fpcPi_CURRENT_e,        // mListPrio
-    PROC_E_SH,              // mProcName
-    &g_fpcLf_Method.base,  // sub_method
-    sizeof(e_sh_class),     // mSize
-    0,                      // mSizeOther
-    0,                      // mParameters
-    &g_fopAc_Method.base,   // sub_method
-    126,                    // mPriority
-    &l_daE_SH_Method,       // sub_method
-    0x00040100,             // mStatus
-    fopAc_ENEMY_e,          // mActorType
-    fopAc_CULLBOX_CUSTOM_e, // cullType
+    /* Layer ID     */ fpcLy_CURRENT_e,
+    /* List ID      */ 7,
+    /* List Prio    */ fpcPi_CURRENT_e,
+    /* Proc Name    */ fpcNm_E_SH_e,
+    /* Proc SubMtd  */ &g_fpcLf_Method.base,
+    /* Size         */ sizeof(e_sh_class),
+    /* Size Other   */ 0,
+    /* Parameters   */ 0,
+    /* Leaf SubMtd  */ &g_fopAc_Method.base,
+    /* Draw Prio    */ fpcDwPi_E_SH_e,
+    /* Actor SubMtd */ &l_daE_SH_Method,
+    /* Status       */ fopAcStts_UNK_0x40000_e | fopAcStts_CULL_e,
+    /* Group        */ fopAc_ENEMY_e,
+    /* Cull Type    */ fopAc_CULLBOX_CUSTOM_e,
 };

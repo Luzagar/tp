@@ -59,15 +59,15 @@ static bool loadArchiveTexture(JKRArchive* arc, const char* name,
 
 static const char* getScentTextureName(u8 itemId) {
     switch (itemId) {
-    case fpcNm_ITEM_SMELL_CHILDREN:
+    case dItemNo_SMELL_CHILDREN_e:
         return "ni_nioi_child.bti";
-    case fpcNm_ITEM_SMELL_YELIA_POUCH:
+    case dItemNo_SMELL_YELIA_POUCH_e:
         return "ni_nioi_iria.bti";
-    case fpcNm_ITEM_SMELL_FISH:
+    case dItemNo_SMELL_FISH_e:
         return "ni_nioi_fish.bti";
-    case fpcNm_ITEM_SMELL_MEDICINE:
+    case dItemNo_SMELL_MEDICINE_e:
         return "ni_nioi_medicin.bti";
-    case fpcNm_ITEM_SMELL_POH:
+    case dItemNo_SMELL_POH_e:
         return "ni_nioi_pou.bti";
     default:
         return NULL;
@@ -203,55 +203,55 @@ int gzInventoryMenu_c::getMaxColsForRow(int row) {
 }
 
 void gzInventoryMenu_c::readPauseSlotStates() {
-    if (dComIfGs_isItemFirstBit(fpcNm_ITEM_SWORD)) {
+    if (dComIfGs_isItemFirstBit(dItemNo_SWORD_e)) {
         mPauseSlotState[0][0] = 2;
-    } else if (dComIfGs_isItemFirstBit(fpcNm_ITEM_WOOD_STICK)) {
+    } else if (dComIfGs_isItemFirstBit(dItemNo_WOOD_STICK_e)) {
         mPauseSlotState[0][0] = 1;
     } else {
         mPauseSlotState[0][0] = 0;
     }
 
-    if (dComIfGs_isItemFirstBit(fpcNm_ITEM_LIGHT_SWORD)) {
+    if (dComIfGs_isItemFirstBit(dItemNo_LIGHT_SWORD_e)) {
         mPauseSlotState[0][1] = 2;
-    } else if (dComIfGs_isItemFirstBit(fpcNm_ITEM_MASTER_SWORD)) {
+    } else if (dComIfGs_isItemFirstBit(dItemNo_MASTER_SWORD_e)) {
         mPauseSlotState[0][1] = 1;
     } else {
         mPauseSlotState[0][1] = 0;
     }
 
-    if (dComIfGs_isItemFirstBit(fpcNm_ITEM_SHIELD)) {
+    if (dComIfGs_isItemFirstBit(dItemNo_SHIELD_e)) {
         mPauseSlotState[1][0] = 2;
-    } else if (dComIfGs_isItemFirstBit(fpcNm_ITEM_WOOD_SHIELD)) {
+    } else if (dComIfGs_isItemFirstBit(dItemNo_WOOD_SHIELD_e)) {
         mPauseSlotState[1][0] = 1;
     } else {
         mPauseSlotState[1][0] = 0;
     }
 
-    mPauseSlotState[1][1] = dComIfGs_isItemFirstBit(fpcNm_ITEM_HYLIA_SHIELD) ? 1 : 0;
+    mPauseSlotState[1][1] = dComIfGs_isItemFirstBit(dItemNo_HYLIA_SHIELD_e) ? 1 : 0;
 
-    mPauseSlotState[2][0] = dComIfGs_isItemFirstBit(fpcNm_ITEM_WEAR_KOKIRI) ? 1 : 0;
-    mPauseSlotState[2][1] = dComIfGs_isItemFirstBit(fpcNm_ITEM_WEAR_ZORA) ? 1 : 0;
-    mPauseSlotState[2][2] = dComIfGs_isItemFirstBit(fpcNm_ITEM_ARMOR) ? 1 : 0;
+    mPauseSlotState[2][0] = dComIfGs_isItemFirstBit(dItemNo_WEAR_KOKIRI_e) ? 1 : 0;
+    mPauseSlotState[2][1] = dComIfGs_isItemFirstBit(dItemNo_WEAR_ZORA_e) ? 1 : 0;
+    mPauseSlotState[2][2] = dComIfGs_isItemFirstBit(dItemNo_ARMOR_e) ? 1 : 0;
 
     mPauseSlotState[3][0] = dComIfGs_getWalletSize();
-    if (dComIfGs_isItemFirstBit(fpcNm_ITEM_ARROW_LV3)) {
+    if (dComIfGs_isItemFirstBit(dItemNo_ARROW_LV3_e)) {
         mPauseSlotState[3][1] = 3;
-    } else if (dComIfGs_isItemFirstBit(fpcNm_ITEM_ARROW_LV2)) {
+    } else if (dComIfGs_isItemFirstBit(dItemNo_ARROW_LV2_e)) {
         mPauseSlotState[3][1] = 2;
-    } else if (dComIfGs_isItemFirstBit(fpcNm_ITEM_ARROW_LV1)) {
+    } else if (dComIfGs_isItemFirstBit(dItemNo_ARROW_LV1_e)) {
         mPauseSlotState[3][1] = 1;
     } else {
         mPauseSlotState[3][1] = 0;
     }
     {
         static const u8 sBugItems[] = {
-            fpcNm_ITEM_M_ANT, fpcNm_ITEM_F_ANT, fpcNm_ITEM_M_MAYFLY, fpcNm_ITEM_F_MAYFLY,
-            fpcNm_ITEM_M_BEETLE, fpcNm_ITEM_F_BEETLE, fpcNm_ITEM_M_MANTIS, fpcNm_ITEM_F_MANTIS,
-            fpcNm_ITEM_M_STAG_BEETLE, fpcNm_ITEM_F_STAG_BEETLE, fpcNm_ITEM_M_DANGOMUSHI,
-            fpcNm_ITEM_F_DANGOMUSHI, fpcNm_ITEM_M_BUTTERFLY, fpcNm_ITEM_F_BUTTERFLY,
-            fpcNm_ITEM_M_LADYBUG, fpcNm_ITEM_F_LADYBUG, fpcNm_ITEM_M_SNAIL, fpcNm_ITEM_F_SNAIL,
-            fpcNm_ITEM_M_NANAFUSHI, fpcNm_ITEM_F_NANAFUSHI, fpcNm_ITEM_M_GRASSHOPPER,
-            fpcNm_ITEM_F_GRASSHOPPER, fpcNm_ITEM_M_DRAGONFLY, fpcNm_ITEM_F_DRAGONFLY,
+            dItemNo_M_ANT_e, dItemNo_F_ANT_e, dItemNo_M_MAYFLY_e, dItemNo_F_MAYFLY_e,
+            dItemNo_M_BEETLE_e, dItemNo_F_BEETLE_e, dItemNo_M_MANTIS_e, dItemNo_F_MANTIS_e,
+            dItemNo_M_STAG_BEETLE_e, dItemNo_F_STAG_BEETLE_e, dItemNo_M_DANGOMUSHI_e,
+            dItemNo_F_DANGOMUSHI_e, dItemNo_M_BUTTERFLY_e, dItemNo_F_BUTTERFLY_e,
+            dItemNo_M_LADYBUG_e, dItemNo_F_LADYBUG_e, dItemNo_M_SNAIL_e, dItemNo_F_SNAIL_e,
+            dItemNo_M_NANAFUSHI_e, dItemNo_F_NANAFUSHI_e, dItemNo_M_GRASSHOPPER_e,
+            dItemNo_F_GRASSHOPPER_e, dItemNo_M_DRAGONFLY_e, dItemNo_F_DRAGONFLY_e,
         };
         bool hasBug = false;
         for (int i = 0; i < (int)(sizeof(sBugItems) / sizeof(sBugItems[0])); i++) {
@@ -264,15 +264,15 @@ void gzInventoryMenu_c::readPauseSlotStates() {
     }
     mPauseSlotState[3][3] = dComIfGs_getEventReg(0x30ff) & 0x7;
 
-    if (dComIfGs_isItemFirstBit(fpcNm_ITEM_SMELL_POH)) {
+    if (dComIfGs_isItemFirstBit(dItemNo_SMELL_POH_e)) {
         mPauseSlotState[4][0] = 5;
-    } else if (dComIfGs_isItemFirstBit(fpcNm_ITEM_SMELL_MEDICINE)) {
+    } else if (dComIfGs_isItemFirstBit(dItemNo_SMELL_MEDICINE_e)) {
         mPauseSlotState[4][0] = 4;
-    } else if (dComIfGs_isItemFirstBit(fpcNm_ITEM_SMELL_FISH)) {
+    } else if (dComIfGs_isItemFirstBit(dItemNo_SMELL_FISH_e)) {
         mPauseSlotState[4][0] = 3;
-    } else if (dComIfGs_isItemFirstBit(fpcNm_ITEM_SMELL_YELIA_POUCH)) {
+    } else if (dComIfGs_isItemFirstBit(dItemNo_SMELL_YELIA_POUCH_e)) {
         mPauseSlotState[4][0] = 2;
-    } else if (dComIfGs_isItemFirstBit(fpcNm_ITEM_SMELL_CHILDREN)) {
+    } else if (dComIfGs_isItemFirstBit(dItemNo_SMELL_CHILDREN_e)) {
         mPauseSlotState[4][0] = 1;
     } else {
         mPauseSlotState[4][0] = 0;
@@ -287,82 +287,82 @@ u8 gzInventoryMenu_c::getItemForSlot(int row, int col) {
     switch (row) {
     case 0:
         if (col == 0) {
-            if (state == 2) return fpcNm_ITEM_SWORD;
-            if (state == 1) return fpcNm_ITEM_WOOD_STICK;
-            return fpcNm_ITEM_NONE;
+            if (state == 2) return dItemNo_SWORD_e;
+            if (state == 1) return dItemNo_WOOD_STICK_e;
+            return dItemNo_NONE_e;
         } else {
-            if (state == 2) return fpcNm_ITEM_LIGHT_SWORD;
-            if (state == 1) return fpcNm_ITEM_MASTER_SWORD;
-            return fpcNm_ITEM_NONE;
+            if (state == 2) return dItemNo_LIGHT_SWORD_e;
+            if (state == 1) return dItemNo_MASTER_SWORD_e;
+            return dItemNo_NONE_e;
         }
     case 1:
         if (col == 0) {
-            if (state == 2) return fpcNm_ITEM_SHIELD;
-            if (state == 1) return fpcNm_ITEM_WOOD_SHIELD;
-            return fpcNm_ITEM_NONE;
+            if (state == 2) return dItemNo_SHIELD_e;
+            if (state == 1) return dItemNo_WOOD_SHIELD_e;
+            return dItemNo_NONE_e;
         } else {
-            return state ? fpcNm_ITEM_HYLIA_SHIELD : fpcNm_ITEM_NONE;
+            return state ? dItemNo_HYLIA_SHIELD_e : dItemNo_NONE_e;
         }
     case 2:
-        if (col == 0) return state ? fpcNm_ITEM_WEAR_KOKIRI : fpcNm_ITEM_NONE;
-        if (col == 1) return state ? fpcNm_ITEM_WEAR_ZORA : fpcNm_ITEM_NONE;
-        if (col == 2) return state ? fpcNm_ITEM_ARMOR : fpcNm_ITEM_NONE;
+        if (col == 0) return state ? dItemNo_WEAR_KOKIRI_e : dItemNo_NONE_e;
+        if (col == 1) return state ? dItemNo_WEAR_ZORA_e : dItemNo_NONE_e;
+        if (col == 2) return state ? dItemNo_ARMOR_e : dItemNo_NONE_e;
         break;
     case 3:
         if (col == 0) {
-            if (state >= 2) return fpcNm_ITEM_WALLET_LV3;
-            if (state == 1) return fpcNm_ITEM_WALLET_LV2;
-            return fpcNm_ITEM_WALLET_LV1;
+            if (state >= 2) return dItemNo_WALLET_LV3_e;
+            if (state == 1) return dItemNo_WALLET_LV2_e;
+            return dItemNo_WALLET_LV1_e;
         }
         if (col == 1) {
-            if (state >= 3) return fpcNm_ITEM_ARROW_LV3;
-            if (state == 2) return fpcNm_ITEM_ARROW_LV2;
-            if (state == 1) return fpcNm_ITEM_ARROW_LV1;
-            return fpcNm_ITEM_NONE;
+            if (state >= 3) return dItemNo_ARROW_LV3_e;
+            if (state == 2) return dItemNo_ARROW_LV2_e;
+            if (state == 1) return dItemNo_ARROW_LV1_e;
+            return dItemNo_NONE_e;
         }
-        if (col == 2) return fpcNm_ITEM_NONE;
-        if (col == 3) return fpcNm_ITEM_NONE;
+        if (col == 2) return dItemNo_NONE_e;
+        if (col == 3) return dItemNo_NONE_e;
         break;
     case 4:
         if (col == 0) {
-            if (state == 5) return fpcNm_ITEM_SMELL_POH;
-            if (state == 4) return fpcNm_ITEM_SMELL_MEDICINE;
-            if (state == 3) return fpcNm_ITEM_SMELL_FISH;
-            if (state == 2) return fpcNm_ITEM_SMELL_YELIA_POUCH;
-            if (state == 1) return fpcNm_ITEM_SMELL_CHILDREN;
-            return fpcNm_ITEM_NONE;
+            if (state == 5) return dItemNo_SMELL_POH_e;
+            if (state == 4) return dItemNo_SMELL_MEDICINE_e;
+            if (state == 3) return dItemNo_SMELL_FISH_e;
+            if (state == 2) return dItemNo_SMELL_YELIA_POUCH_e;
+            if (state == 1) return dItemNo_SMELL_CHILDREN_e;
+            return dItemNo_NONE_e;
         }
-        if (col == 1) return fpcNm_ITEM_NONE;
-        if (col == 2) return fpcNm_ITEM_NONE;
-        if (col == 3) return fpcNm_ITEM_NONE;
+        if (col == 1) return dItemNo_NONE_e;
+        if (col == 2) return dItemNo_NONE_e;
+        if (col == 3) return dItemNo_NONE_e;
         break;
     }
-    return fpcNm_ITEM_NONE;
+    return dItemNo_NONE_e;
 }
 
 u8 gzInventoryMenu_c::getDisplayItemForSlot(int row, int col) {
     u8 item = getItemForSlot(row, col);
-    if (item != fpcNm_ITEM_NONE) return item;
+    if (item != dItemNo_NONE_e) return item;
 
     switch (row) {
     case 0:
-        return (col == 0) ? fpcNm_ITEM_WOOD_STICK : fpcNm_ITEM_MASTER_SWORD;
+        return (col == 0) ? dItemNo_WOOD_STICK_e : dItemNo_MASTER_SWORD_e;
     case 1:
-        return (col == 0) ? fpcNm_ITEM_WOOD_SHIELD : fpcNm_ITEM_HYLIA_SHIELD;
+        return (col == 0) ? dItemNo_WOOD_SHIELD_e : dItemNo_HYLIA_SHIELD_e;
     case 2:
-        if (col == 0) return fpcNm_ITEM_WEAR_KOKIRI;
-        if (col == 1) return fpcNm_ITEM_WEAR_ZORA;
-        if (col == 2) return fpcNm_ITEM_ARMOR;
+        if (col == 0) return dItemNo_WEAR_KOKIRI_e;
+        if (col == 1) return dItemNo_WEAR_ZORA_e;
+        if (col == 2) return dItemNo_ARMOR_e;
         break;
     case 3:
-        if (col == 0) return fpcNm_ITEM_WALLET_LV1;
-        if (col == 1) return fpcNm_ITEM_ARROW_LV1;
+        if (col == 0) return dItemNo_WALLET_LV1_e;
+        if (col == 1) return dItemNo_ARROW_LV1_e;
         break;
     case 4:
-        if (col == 0) return fpcNm_ITEM_SMELL_CHILDREN;
+        if (col == 0) return dItemNo_SMELL_CHILDREN_e;
         break;
     }
-    return fpcNm_ITEM_NONE;
+    return dItemNo_NONE_e;
 }
 
 void gzInventoryMenu_c::loadPauseItemTexture(int row, int col, u8 itemId) {
@@ -371,7 +371,7 @@ void gzInventoryMenu_c::loadPauseItemTexture(int row, int col, u8 itemId) {
         mpPauseItemTex[row][col][k] = NULL;
     }
 
-    if (itemId == fpcNm_ITEM_NONE) {
+    if (itemId == dItemNo_NONE_e) {
         return;
     }
 
@@ -417,13 +417,13 @@ void gzInventoryMenu_c::loadPauseItemTexture(int row, int col, u8 itemId) {
 
 void gzInventoryMenu_c::loadBugIcons() {
     static const u8 sBugItemIds[BUG_COUNT] = {
-        fpcNm_ITEM_M_ANT, fpcNm_ITEM_F_ANT, fpcNm_ITEM_M_MAYFLY, fpcNm_ITEM_F_MAYFLY,
-        fpcNm_ITEM_M_BEETLE, fpcNm_ITEM_F_BEETLE, fpcNm_ITEM_M_MANTIS, fpcNm_ITEM_F_MANTIS,
-        fpcNm_ITEM_M_STAG_BEETLE, fpcNm_ITEM_F_STAG_BEETLE, fpcNm_ITEM_M_DANGOMUSHI,
-        fpcNm_ITEM_F_DANGOMUSHI, fpcNm_ITEM_M_BUTTERFLY, fpcNm_ITEM_F_BUTTERFLY,
-        fpcNm_ITEM_M_LADYBUG, fpcNm_ITEM_F_LADYBUG, fpcNm_ITEM_M_SNAIL, fpcNm_ITEM_F_SNAIL,
-        fpcNm_ITEM_M_NANAFUSHI, fpcNm_ITEM_F_NANAFUSHI, fpcNm_ITEM_M_GRASSHOPPER,
-        fpcNm_ITEM_F_GRASSHOPPER, fpcNm_ITEM_M_DRAGONFLY, fpcNm_ITEM_F_DRAGONFLY,
+        dItemNo_M_ANT_e, dItemNo_F_ANT_e, dItemNo_M_MAYFLY_e, dItemNo_F_MAYFLY_e,
+        dItemNo_M_BEETLE_e, dItemNo_F_BEETLE_e, dItemNo_M_MANTIS_e, dItemNo_F_MANTIS_e,
+        dItemNo_M_STAG_BEETLE_e, dItemNo_F_STAG_BEETLE_e, dItemNo_M_DANGOMUSHI_e,
+        dItemNo_F_DANGOMUSHI_e, dItemNo_M_BUTTERFLY_e, dItemNo_F_BUTTERFLY_e,
+        dItemNo_M_LADYBUG_e, dItemNo_F_LADYBUG_e, dItemNo_M_SNAIL_e, dItemNo_F_SNAIL_e,
+        dItemNo_M_NANAFUSHI_e, dItemNo_F_NANAFUSHI_e, dItemNo_M_GRASSHOPPER_e,
+        dItemNo_F_GRASSHOPPER_e, dItemNo_M_DRAGONFLY_e, dItemNo_F_DRAGONFLY_e,
     };
     JKRHeap* heap = gzHeap(GZ_GROUP_MENU);
     JKRHeap* oldHeap = heap->becomeCurrentHeap();
@@ -540,7 +540,7 @@ void gzInventoryMenu_c::initPauseMenu() {
         if (mpLetterIconBuf != NULL) {
             JKRHeap* oldHeap = heap->becomeCurrentHeap();
             int texNum = dMeter2Info_readItemTexture(
-                fpcNm_ITEM_LETTER, mpLetterIconBuf, NULL, NULL, NULL,
+                dItemNo_LETTER_e, mpLetterIconBuf, NULL, NULL, NULL,
                 NULL, NULL, NULL, NULL, -1);
             if (texNum > 0) {
                 mpLetterIconPane = new (heap, 4) J2DPicture(mpLetterIconBuf);
@@ -582,48 +582,48 @@ void gzInventoryMenu_c::cyclePauseSlot(int row, int col) {
     case 0:
         if (col == 0) {
             state = (state + 1) % 3;
-            dComIfGs_offItemFirstBit(fpcNm_ITEM_WOOD_STICK);
-            dComIfGs_offItemFirstBit(fpcNm_ITEM_SWORD);
-            if (state == 1) dComIfGs_onItemFirstBit(fpcNm_ITEM_WOOD_STICK);
-            if (state == 2) dComIfGs_onItemFirstBit(fpcNm_ITEM_SWORD);
+            dComIfGs_offItemFirstBit(dItemNo_WOOD_STICK_e);
+            dComIfGs_offItemFirstBit(dItemNo_SWORD_e);
+            if (state == 1) dComIfGs_onItemFirstBit(dItemNo_WOOD_STICK_e);
+            if (state == 2) dComIfGs_onItemFirstBit(dItemNo_SWORD_e);
         } else {
             state = (state + 1) % 3;
-            dComIfGs_offItemFirstBit(fpcNm_ITEM_MASTER_SWORD);
-            dComIfGs_offItemFirstBit(fpcNm_ITEM_LIGHT_SWORD);
-            if (state == 1) dComIfGs_onItemFirstBit(fpcNm_ITEM_MASTER_SWORD);
+            dComIfGs_offItemFirstBit(dItemNo_MASTER_SWORD_e);
+            dComIfGs_offItemFirstBit(dItemNo_LIGHT_SWORD_e);
+            if (state == 1) dComIfGs_onItemFirstBit(dItemNo_MASTER_SWORD_e);
             if (state == 2) {
-                dComIfGs_onItemFirstBit(fpcNm_ITEM_MASTER_SWORD);
-                dComIfGs_onItemFirstBit(fpcNm_ITEM_LIGHT_SWORD);
+                dComIfGs_onItemFirstBit(dItemNo_MASTER_SWORD_e);
+                dComIfGs_onItemFirstBit(dItemNo_LIGHT_SWORD_e);
             }
         }
         break;
     case 1:
         if (col == 0) {
             state = (state + 1) % 3;
-            dComIfGs_offItemFirstBit(fpcNm_ITEM_WOOD_SHIELD);
-            dComIfGs_offItemFirstBit(fpcNm_ITEM_SHIELD);
-            if (state == 1) dComIfGs_onItemFirstBit(fpcNm_ITEM_WOOD_SHIELD);
-            if (state == 2) dComIfGs_onItemFirstBit(fpcNm_ITEM_SHIELD);
+            dComIfGs_offItemFirstBit(dItemNo_WOOD_SHIELD_e);
+            dComIfGs_offItemFirstBit(dItemNo_SHIELD_e);
+            if (state == 1) dComIfGs_onItemFirstBit(dItemNo_WOOD_SHIELD_e);
+            if (state == 2) dComIfGs_onItemFirstBit(dItemNo_SHIELD_e);
         } else {
             state = state ? 0 : 1;
             if (state) {
-                dComIfGs_onItemFirstBit(fpcNm_ITEM_HYLIA_SHIELD);
+                dComIfGs_onItemFirstBit(dItemNo_HYLIA_SHIELD_e);
             } else {
-                dComIfGs_offItemFirstBit(fpcNm_ITEM_HYLIA_SHIELD);
+                dComIfGs_offItemFirstBit(dItemNo_HYLIA_SHIELD_e);
             }
         }
         break;
     case 2:
         state = state ? 0 : 1;
         if (col == 0) {
-            if (state) dComIfGs_onItemFirstBit(fpcNm_ITEM_WEAR_KOKIRI);
-            else dComIfGs_offItemFirstBit(fpcNm_ITEM_WEAR_KOKIRI);
+            if (state) dComIfGs_onItemFirstBit(dItemNo_WEAR_KOKIRI_e);
+            else dComIfGs_offItemFirstBit(dItemNo_WEAR_KOKIRI_e);
         } else if (col == 1) {
-            if (state) dComIfGs_onItemFirstBit(fpcNm_ITEM_WEAR_ZORA);
-            else dComIfGs_offItemFirstBit(fpcNm_ITEM_WEAR_ZORA);
+            if (state) dComIfGs_onItemFirstBit(dItemNo_WEAR_ZORA_e);
+            else dComIfGs_offItemFirstBit(dItemNo_WEAR_ZORA_e);
         } else if (col == 2) {
-            if (state) dComIfGs_onItemFirstBit(fpcNm_ITEM_ARMOR);
-            else dComIfGs_offItemFirstBit(fpcNm_ITEM_ARMOR);
+            if (state) dComIfGs_onItemFirstBit(dItemNo_ARMOR_e);
+            else dComIfGs_offItemFirstBit(dItemNo_ARMOR_e);
         }
         break;
     case 3:
@@ -632,12 +632,12 @@ void gzInventoryMenu_c::cyclePauseSlot(int row, int col) {
             dComIfGs_setWalletSize(state);
         } else if (col == 1) {
             state = (state + 1) % 4;
-            dComIfGs_offItemFirstBit(fpcNm_ITEM_ARROW_LV1);
-            dComIfGs_offItemFirstBit(fpcNm_ITEM_ARROW_LV2);
-            dComIfGs_offItemFirstBit(fpcNm_ITEM_ARROW_LV3);
-            if (state >= 1) dComIfGs_onItemFirstBit(fpcNm_ITEM_ARROW_LV1);
-            if (state >= 2) dComIfGs_onItemFirstBit(fpcNm_ITEM_ARROW_LV2);
-            if (state >= 3) dComIfGs_onItemFirstBit(fpcNm_ITEM_ARROW_LV3);
+            dComIfGs_offItemFirstBit(dItemNo_ARROW_LV1_e);
+            dComIfGs_offItemFirstBit(dItemNo_ARROW_LV2_e);
+            dComIfGs_offItemFirstBit(dItemNo_ARROW_LV3_e);
+            if (state >= 1) dComIfGs_onItemFirstBit(dItemNo_ARROW_LV1_e);
+            if (state >= 2) dComIfGs_onItemFirstBit(dItemNo_ARROW_LV2_e);
+            if (state >= 3) dComIfGs_onItemFirstBit(dItemNo_ARROW_LV3_e);
             static const u8 sArrowMax[] = { 0, 30, 60, 100 };
             dComIfGs_setArrowMax(sArrowMax[state]);
             dComIfGs_setArrowNum(sArrowMax[state]);
@@ -651,28 +651,28 @@ void gzInventoryMenu_c::cyclePauseSlot(int row, int col) {
     case 4:
         if (col == 0) {
             state = (state + 1) % 6;
-            dComIfGs_offItemFirstBit(fpcNm_ITEM_SMELL_CHILDREN);
-            dComIfGs_offItemFirstBit(fpcNm_ITEM_SMELL_YELIA_POUCH);
-            dComIfGs_offItemFirstBit(fpcNm_ITEM_SMELL_FISH);
-            dComIfGs_offItemFirstBit(fpcNm_ITEM_SMELL_MEDICINE);
-            dComIfGs_offItemFirstBit(fpcNm_ITEM_SMELL_POH);
+            dComIfGs_offItemFirstBit(dItemNo_SMELL_CHILDREN_e);
+            dComIfGs_offItemFirstBit(dItemNo_SMELL_YELIA_POUCH_e);
+            dComIfGs_offItemFirstBit(dItemNo_SMELL_FISH_e);
+            dComIfGs_offItemFirstBit(dItemNo_SMELL_MEDICINE_e);
+            dComIfGs_offItemFirstBit(dItemNo_SMELL_POH_e);
             if (state == 1) {
-                dComIfGs_onItemFirstBit(fpcNm_ITEM_SMELL_CHILDREN);
-                dComIfGs_setCollectSmell(fpcNm_ITEM_SMELL_CHILDREN);
+                dComIfGs_onItemFirstBit(dItemNo_SMELL_CHILDREN_e);
+                dComIfGs_setCollectSmell(dItemNo_SMELL_CHILDREN_e);
             } else if (state == 2) {
-                dComIfGs_onItemFirstBit(fpcNm_ITEM_SMELL_YELIA_POUCH);
-                dComIfGs_setCollectSmell(fpcNm_ITEM_SMELL_YELIA_POUCH);
+                dComIfGs_onItemFirstBit(dItemNo_SMELL_YELIA_POUCH_e);
+                dComIfGs_setCollectSmell(dItemNo_SMELL_YELIA_POUCH_e);
             } else if (state == 3) {
-                dComIfGs_onItemFirstBit(fpcNm_ITEM_SMELL_FISH);
-                dComIfGs_setCollectSmell(fpcNm_ITEM_SMELL_FISH);
+                dComIfGs_onItemFirstBit(dItemNo_SMELL_FISH_e);
+                dComIfGs_setCollectSmell(dItemNo_SMELL_FISH_e);
             } else if (state == 4) {
-                dComIfGs_onItemFirstBit(fpcNm_ITEM_SMELL_MEDICINE);
-                dComIfGs_setCollectSmell(fpcNm_ITEM_SMELL_MEDICINE);
+                dComIfGs_onItemFirstBit(dItemNo_SMELL_MEDICINE_e);
+                dComIfGs_setCollectSmell(dItemNo_SMELL_MEDICINE_e);
             } else if (state == 5) {
-                dComIfGs_onItemFirstBit(fpcNm_ITEM_SMELL_POH);
-                dComIfGs_setCollectSmell(fpcNm_ITEM_SMELL_POH);
+                dComIfGs_onItemFirstBit(dItemNo_SMELL_POH_e);
+                dComIfGs_setCollectSmell(dItemNo_SMELL_POH_e);
             } else {
-                dComIfGs_setCollectSmell(fpcNm_ITEM_NONE);
+                dComIfGs_setCollectSmell(dItemNo_NONE_e);
             }
         } else if (col == 1) {
         } else if (col == 2) {
@@ -687,7 +687,7 @@ void gzInventoryMenu_c::cyclePauseSlot(int row, int col) {
     mPauseSlotState[row][col] = state;
     u8 item = getDisplayItemForSlot(row, col);
     loadPauseItemTexture(row, col, item);
-    if (wasEquipped && getItemForSlot(row, col) != fpcNm_ITEM_NONE) {
+    if (wasEquipped && getItemForSlot(row, col) != dItemNo_NONE_e) {
         equipPauseSlot(row, col);
     }
 }
@@ -699,7 +699,7 @@ void gzInventoryMenu_c::equipPauseSlot(int row, int col) {
     if (state == 0) return;
 
     u8 item = getItemForSlot(row, col);
-    if (item == fpcNm_ITEM_NONE) return;
+    if (item == dItemNo_NONE_e) return;
 
     switch (row) {
     case 0:
@@ -860,7 +860,7 @@ void gzInventoryMenu_c::executePauseMenu() {
 
 bool gzInventoryMenu_c::isSlotEquipped(int row, int col) {
     u8 item = getItemForSlot(row, col);
-    if (item == fpcNm_ITEM_NONE) return false;
+    if (item == dItemNo_NONE_e) return false;
 
     switch (row) {
     case 0:

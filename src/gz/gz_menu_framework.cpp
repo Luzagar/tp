@@ -20,17 +20,17 @@ static const char* getProcessTypeName(base_process_class* process) {
 
 char* gzFrameworkMenu_c::getProcessName(base_process_class* process) {
     switch (process->name) {
-    case PROC_OPENING_SCENE:
+    case fpcNm_OPENING_SCENE_e:
         return "opening scene";
-    case PROC_PLAY_SCENE:
+    case fpcNm_PLAY_SCENE_e:
         return "play scene";
-    case PROC_ROOM_SCENE:
+    case fpcNm_ROOM_SCENE_e:
         return "room scene";
-    case PROC_NAME_SCENE:
+    case fpcNm_NAME_SCENE_e:
         return "name scene";
-    case PROC_LOGO_SCENE:
+    case fpcNm_LOGO_SCENE_e:
         return "logo scene";
-    case PROC_MENU_SCENE:
+    case fpcNm_MENU_SCENE_e:
         return "menu scene";
     default:
         return "unk";

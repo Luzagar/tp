@@ -21,6 +21,7 @@ public:
         // Actions
         SETTING_COMMAND_COMBOS,
         SETTING_MENU_POSITIONS,
+        SETTING_GDB_SERVER,
         SETTING_SAVE,
         SETTING_LOAD,
         SETTING_DELETE,
@@ -87,6 +88,7 @@ private:
     // Actions
     gzLine* mpCommandCombos;
     gzLine* mpMenuPositions;
+    gzLine* mpGdbServer;
     gzLine* mpSave;
     gzLine* mpLoad;
     gzLine* mpDelete;

@@ -68,6 +68,7 @@ class Object:
             "shift_jis": None,
             "source": name,
             "src_dir": None,
+            "strip_prefix": None,
         }
         self.options.update(options)
 
@@ -115,10 +116,13 @@ class Object:
 
         # Resolve paths
         build_dir = config.out_path()
-        obj.src_path = Path(obj.options["src_dir"]) / obj.options["source"]
+        source = obj.options["source"]
+        if obj.options["strip_prefix"]:
+            source = source.removeprefix(obj.options["strip_prefix"])
+        obj.src_path = Path(obj.options["src_dir"]) / source
         if obj.options["asm_dir"] is not None:
             obj.asm_path = (
-                Path(obj.options["asm_dir"]) / obj.options["source"]
+                Path(obj.options["asm_dir"]) / source
             ).with_suffix(".s")
         base_name = Path(self.name).with_suffix("")
         obj.src_obj_path = build_dir / "src" / f"{base_name}.o"
@@ -157,6 +161,8 @@ class ProjectConfig:
         self.ninja_path: Optional[Path] = None  # If None, use system PATH
         self.objdiff_tag: Optional[str] = None  # Git tag
         self.objdiff_path: Optional[Path] = None  # If None, download
+        self.penumbra_tag: Optional[str] = None  # Git tag
+        self.penumbra_path: Optional[Path] = None  # If None, download
 
         # Project config
         self.non_matching: bool = False
@@ -188,7 +194,7 @@ class ProjectConfig:
             None  # Custom ninja build rules
         )
         self.custom_build_steps: Optional[Dict[str, List[Dict[str, Any]]]] = (
-            None  # Custom build steps, types are ["pre-compile", "post-compile", "post-link", "post-build"]
+            None  # Custom build steps, types are ["pre-compile", "post-compile", "post-link"]
         )
         self.generate_compile_commands: bool = (
             True  # Generate compile_commands.json for clangd
@@ -356,14 +362,13 @@ def make_flags_str(flags: Optional[List[str]]) -> str:
     return " ".join(flags)
 
 
-def get_pch_out_name(config: ProjectConfig, pch: PrecompiledHeader) -> str:
-    pch_rel_path = Path(pch["source"])
-    pch_out_name = pch_rel_path.with_suffix(".mch")
+def get_pch_out_path(config: ProjectConfig, pch: PrecompiledHeader) -> str:
+    pch_rel_path = Path(pch["output"])
     # Use absolute path as a workaround to allow this target to be matched with absolute paths in depfiles.
     #
     # Without this any object which includes the PCH would depend on the .mch filesystem entry but not the
     # corresponding Ninja task, so the MCH would not be implicitly rebuilt when the PCH is modified.
-    return os.path.abspath(config.out_path() / "include" / pch_out_name)
+    return os.path.abspath(config.out_path() / "include" / pch_rel_path)
 
 
 # Unit configuration
@@ -646,6 +651,24 @@ def generate_build_ninja(
     else:
         sys.exit("ProjectConfig.binutils_tag missing")
 
+    penumbra_implicit = None
+    if config.penumbra_path:
+        penumbra = config.penumbra_path
+    elif config.penumbra_tag:
+        penumbra = config.build_dir / "binutils" / "penumbra"
+        penumbra_implicit = penumbra
+        n.build(
+            outputs=penumbra,
+            rule="download_tool",
+            implicit=download_tool,
+            variables={
+                "tool": "penumbra",
+                "tag": config.penumbra_tag,
+            },
+        )
+    else:
+        penumbra = None
+
     n.newline()
 
     ###
@@ -655,7 +678,7 @@ def generate_build_ninja(
     n.build(
         outputs="tools",
         rule="phony",
-        inputs=[dtk, sjiswrap, wrapper, compilers, binutils, objdiff],
+        inputs=[dtk, sjiswrap, wrapper, compilers, binutils, objdiff, penumbra],
     )
     n.newline()
 
@@ -863,7 +886,7 @@ def generate_build_ninja(
 
     # Add all build steps needed before we compile (e.g. processing assets)
     pch_out_names = [
-        get_pch_out_name(config, pch) for pch in config.precompiled_headers or []
+        get_pch_out_path(config, pch) for pch in config.precompiled_headers or []
     ]
     write_custom_step("pre-compile", extra_inputs=pch_out_names)
 
@@ -967,14 +990,12 @@ def generate_build_ninja(
 
         if config.precompiled_headers:
             for pch in config.precompiled_headers:
-                src_path_rel_str = Path(pch["source"])
-                src_path_rel = Path(src_path_rel_str)
-                pch_out_name = src_path_rel.with_suffix(".mch")
-                pch_out_abs_path = Path(get_pch_out_name(config, pch))
+                src_path = Path(pch["source"])
+                pch_out_abs_path = Path(get_pch_out_path(config, pch))
                 # Add appropriate language flag if it doesn't exist already
                 cflags = pch["cflags"]
                 if not any(flag.startswith("-lang") for flag in cflags):
-                    if file_is_cpp(src_path_rel):
+                    if file_is_cpp(src_path):
                         cflags.insert(0, "-lang=c++")
                     else:
                         cflags.insert(0, "-lang=c")
@@ -982,11 +1003,11 @@ def generate_build_ninja(
                 cflags_str = make_flags_str(cflags)
                 shift_jis = pch.get("shift_jis", config.shift_jis)
 
-                n.comment(f"Precompiled header {pch_out_name}")
+                n.comment(f"Precompiled header {pch['output']}")
                 n.build(
                     outputs=pch_out_abs_path,
                     rule="mwcc_pch_sjis" if shift_jis else "mwcc_pch",
-                    inputs=f"include/{src_path_rel_str}",
+                    inputs=src_path,
                     variables={
                         "mw_version": Path(pch["mw_version"]),
                         "cflags": cflags_str,
@@ -1295,9 +1316,6 @@ def generate_build_ninja(
             )
             n.newline()
 
-        # Add all build steps needed post-build (re-building archives and such)
-        write_custom_step("post-build", "post-link")
-
         ###
         # Helper rule for building all source files
         ###
@@ -1325,7 +1343,7 @@ def generate_build_ninja(
             rule="check",
             inputs=config.check_sha_path,
             implicit=[dtk, *link_outputs],
-            order_only="post-build",
+            order_only="post-link",
         )
         n.newline()
 
@@ -1347,7 +1365,7 @@ def generate_build_ninja(
                 python_lib,
                 report_path,
             ],
-            order_only="post-build",
+            order_only="post-link",
         )
 
         ###
@@ -1363,7 +1381,7 @@ def generate_build_ninja(
             outputs=report_path,
             rule="report",
             implicit=[objdiff, "objdiff.json", "all_source"],
-            order_only="post-build",
+            order_only="post-link",
         )
 
         n.comment("Phony edge that will always be considered dirty by ninja.")
@@ -1390,7 +1408,7 @@ def generate_build_ninja(
             outputs=report_baseline_path,
             rule="report",
             implicit=[objdiff, "all_source", "always"],
-            order_only="post-build",
+            order_only="post-link",
         )
         n.build(
             outputs="baseline",

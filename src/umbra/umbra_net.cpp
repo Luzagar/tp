@@ -159,6 +159,25 @@ int umbraNet::stateRead(void* buf, u32 maxLen) {
     return (int)dataLen;
 }
 
+int umbraNet::gdbStart(u16 port) {
+    if (!umbraHasUmbraSupport()) {
+        return -1;
+    }
+    u8 buf[32] ATTRIBUTE_ALIGN(32);
+    memset(buf, 0, sizeof(buf));
+    *(u32*)(buf + 0) = UMBRA_CMD_WORD(UMBRA_CMD_GDB_START);
+    buf[4] = (port >> 8) & 0xFF;
+    buf[5] = port & 0xFF;
+    u8 statusBuf[32] ATTRIBUTE_ALIGN(32);
+    memset(statusBuf, 0, sizeof(statusBuf));
+    if (!umbraTransfer(buf, sizeof(buf), 1) ||
+        !umbraTransfer(statusBuf, sizeof(statusBuf), 0)) {
+        return -1;
+    }
+    u32 status = *(u32*)(statusBuf + 0);
+    return (status == 0) ? 0 : -1;
+}
+
 int umbraNet::recvUDP(void* buf, u32 maxLen) {
     if (!umbraHasUmbraSupport()) {
         return -1;

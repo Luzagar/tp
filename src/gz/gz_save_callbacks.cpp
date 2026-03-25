@@ -30,7 +30,7 @@ static void SaveCb_OrdonGateClip() {
 }
 
 static void SaveCb_SetupHugo() {
-    fopAc_ac_c* hugo = fopAcM_SearchByName(PROC_E_RD);
+    fopAc_ac_c* hugo = fopAcM_SearchByName(fpcNm_E_RD_e);
     if (hugo != NULL) {
         hugo->current.pos = cXyz(-289.9785, 401.5400, -18533.078);
         hugo->shape_angle.y = 0x16F8;
@@ -68,13 +68,13 @@ static void SaveCb_EmptyLakeHylia() {
 static void SaveCb_Morpheel() {
     daAlink_c* player = daAlink_getAlinkActorClass();
     if (player != NULL) {
-        player->mEquipItem = fpcNm_ITEM_HOOKSHOT;
+        player->mEquipItem = dItemNo_HOOKSHOT_e;
         player->onNoResetFlg0(daPy_py_c::FLG0_EQUIP_HVY_BOOTS);
     }
 }
 
 static void SaveCb_StallordInit() {
-    fopAc_ac_c* stallord = fopAcM_SearchByName(PROC_B_DS);
+    fopAc_ac_c* stallord = fopAcM_SearchByName(fpcNm_B_DS_e);
     if (stallord != NULL) {
         dComIfGs_onZoneSwitch(5, fopAcM_GetRoomNo(stallord)); // intro cs off
     }
@@ -83,7 +83,7 @@ static void SaveCb_StallordInit() {
 }
 
 static void* sub_findJosephActor(void* i_actor, void*) {
-    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == PROC_E_ZS) {
+    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == fpcNm_E_ZS_e) {
         return i_actor;
     }
 
@@ -99,7 +99,7 @@ static void SaveCb_StallordSkipCAD() {
         joseph->field_0x673 = 1;
         joseph->mCyl.OnTgSetBit();
         joseph->mCyl.OnCoSetBit();
-        fopAcM_OnStatus(joseph, fopAcM_STATUS_UNK_0x200000);
+        fopAcM_OnStatus(joseph, fopAcStts_UNK_0x200000_e);
     }
 }
 
@@ -114,7 +114,7 @@ static void SaveCb_StallordSkipJoseph() {
         joseph->field_0x673 = 1;
         joseph->mCyl.OnTgSetBit();
         joseph->mCyl.OnCoSetBit();
-        fopAcM_OnStatus(joseph, fopAcM_STATUS_UNK_0x200000);
+        fopAcM_OnStatus(joseph, fopAcStts_UNK_0x200000_e);
 
         joseph->current.pos.set(301.9f, 1800.0f, -4966.0f);
     }
@@ -125,7 +125,7 @@ static void SaveCb_StallordPhase2() {
     // to handle custom situations rather than trying to hook onto the actor.
     // Probably want something similar to the debug "Register" system that can be used to
     // trigger special actions when the variable is set by a callback in the stageInit phase
-    daB_DS_c* stallord = (daB_DS_c*)fopAcM_SearchByName(PROC_B_DS);
+    daB_DS_c* stallord = (daB_DS_c*)fopAcM_SearchByName(fpcNm_B_DS_e);
     if (stallord != NULL) {
         stallord->mAction =  daB_DS_c::ACT_DAMAGE;
         stallord->mMode = 100;
@@ -133,17 +133,17 @@ static void SaveCb_StallordPhase2() {
 
     /* if (stallord != NULL) {
         // create the phase 2 version of stallord
-        fopAcM_create(PROC_B_DS, fopAcM_GetParam(stallord) | 2, &stallord->current.pos,
+        fopAcM_create(fpcNm_B_DS_e, fopAcM_GetParam(stallord) | 2, &stallord->current.pos,
                       fopAcM_GetRoomNo(stallord), NULL, NULL, -1);
         fopAcM_delete(stallord);  // delete phase 1 stallord
     }
     
-    daObjSwSpinner_c* spinnersw = (daObjSwSpinner_c*)fopAcM_SearchByName(PROC_Obj_SwSpinner);
+    daObjSwSpinner_c* spinnersw = (daObjSwSpinner_c*)fopAcM_SearchByName(fpcNm_Obj_SwSpinner_e);
     if (spinnersw != NULL) {
         spinnersw->mRotSpeedY = 3000;  // set arena spinner switch to max speed
     }
 
-    daObjLv4Wall_c* rwall = (daObjLv4Wall_c*)fopAcM_SearchByName(PROC_Obj_Lv4RailWall);
+    daObjLv4Wall_c* rwall = (daObjLv4Wall_c*)fopAcM_SearchByName(fpcNm_Obj_Lv4RailWall_e);
     if (rwall != NULL) {
         rwall->mRotCounter = 101;  // set spinner switch speed counter to threshold
         rwall->mHeight = 3370.0f;  // set arena height to max
@@ -156,7 +156,7 @@ static void SaveCb_CityFanTower() {
 }
 
 static void SaveCb_Argorok() {
-    fopAc_ac_c* argorok = fopAcM_SearchByName(PROC_B_DR);
+    fopAc_ac_c* argorok = fopAcM_SearchByName(fpcNm_B_DR_e);
     if (argorok != NULL) {
         dComIfGs_onZoneSwitch(20, fopAcM_GetRoomNo(argorok));
     }
@@ -169,7 +169,7 @@ static void SaveCb_Palace1() {
 }
 
 static void SaveCb_ZantFinal() {
-    daB_ZANT_c* zant = (daB_ZANT_c*)fopAcM_SearchByName(PROC_B_ZANT);
+    daB_ZANT_c* zant = (daB_ZANT_c*)fopAcM_SearchByName(fpcNm_B_ZANT_e);
     if (zant != NULL) {
         zant->mAction = daB_ZANT_c::ACT_ROOM_CHANGE;
         zant->mFightPhase = daB_ZANT_c::PHASE_YO;
@@ -205,7 +205,7 @@ static void SaveCb_EldinCollection() {
 }
 
 static void SaveCb_Dangoro() {
-    fopAc_ac_c* dangoro = fopAcM_SearchByName(PROC_E_GOB);
+    fopAc_ac_c* dangoro = fopAcM_SearchByName(fpcNm_E_GOB_e);
     if (dangoro != NULL) {
         dComIfGs_onZoneSwitch(21, fopAcM_GetRoomNo(dangoro)); // intro cs off
     }

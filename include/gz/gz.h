@@ -4,6 +4,7 @@
 #include "c/c_damagereaction.h"
 #include "d/d_com_inf_game.h"
 #include "d/d_item.h"
+#include "d/d_item_data.h"
 #include "gz/gz_capture.h"
 #include "gz/gz_utility_misc.h"
 #include "gz/gz_manager_cheats.h"
@@ -969,11 +970,11 @@ inline void gzInfo_onMiniBossDefeated(int i_stageNo) {
 inline void gzInfo_onDropShadows() { g_gzInfo.setDropShadows(true); }
 
 inline void gzInfo_onDungeonBossKey(int i_stageNo) { 
-    gzInfo_isInDungeon(i_stageNo) ? execItemGet(fpcNm_ITEM_BOSS_KEY) : dComIfGs_onSaveDungeonItemBossKey(i_stageNo); 
+    gzInfo_isInDungeon(i_stageNo) ? execItemGet(dItemNo_BOSS_KEY_e) : dComIfGs_onSaveDungeonItemBossKey(i_stageNo); 
 }
 
 inline void gzInfo_onDungeonCompass(int i_stageNo) { 
-    gzInfo_isInDungeon(i_stageNo) ? execItemGet(fpcNm_ITEM_COMPUS) : dComIfGs_onSaveDungeonItemCompass(i_stageNo); 
+    gzInfo_isInDungeon(i_stageNo) ? execItemGet(dItemNo_COMPUS_e) : dComIfGs_onSaveDungeonItemCompass(i_stageNo); 
 }
 
 inline void gzInfo_onDungeonHeartContainer(int i_stageNo) { 
@@ -982,12 +983,12 @@ inline void gzInfo_onDungeonHeartContainer(int i_stageNo) {
 }
 
 inline void gzInfo_onDungeonMap(int i_stageNo) { 
-    gzInfo_isInDungeon(i_stageNo) ? execItemGet(fpcNm_ITEM_MAP) : dComIfGs_onSaveDungeonItemMap(i_stageNo);
+    gzInfo_isInDungeon(i_stageNo) ? execItemGet(dItemNo_MAP_e) : dComIfGs_onSaveDungeonItemMap(i_stageNo);
 }
 
 inline void gzInfo_onDungeonOoccoo(int i_stageNo) { 
     // NOTE(Pheenoh): This won't actually give you the ooccoo, just set the flag. 
-    // Maybe we should call execItemGet(fpcNm_ITEM_DUNGEON_EXIT) which will do both?
+    // Maybe we should call execItemGet(dItemNo_DUNGEON_EXIT_e) which will do both?
     // Or should we leave them separate and let the user set ooccoo in the inventory menu?
     gzInfo_isInDungeon(i_stageNo) ? dComIfGs_onDungeonItemWarp() : dComIfGs_onSaveDungeonItemWarp(i_stageNo);
 }

@@ -66,4 +66,5 @@ umbra_objects = [
     "umbra/umbra_nintendont.cpp",
     "umbra/umbra_storage.cpp",
     "umbra/umbra_net.cpp",
+    "umbra/umbra_gdb.cpp",
 ]

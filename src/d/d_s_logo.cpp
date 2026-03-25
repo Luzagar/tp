@@ -56,8 +56,20 @@ void dScnLogo_c::preLoad_dyl_remove() {
 }
 
 static s16 const l_preLoad_dylKeyTbl[14] = {
-    0x02DC, 0x02CE, 0x0221, 0x00F2, 0x021B, 0x02F4, 0x0139,
-    0x015A, 0x02E4, 0x00FE, 0x0308, 0x030F, 0x00FF, 0x013F,
+    fpcNm_BG_e,
+    fpcNm_DEMO00_e,
+    fpcNm_NBOMB_e,
+    fpcNm_SPINNER_e,
+    fpcNm_Obj_LifeContainer_e,
+    fpcNm_CROD_e,
+    fpcNm_DISAPPEAR_e,
+    fpcNm_Tag_Attp_e,
+    fpcNm_MG_ROD_e,
+    fpcNm_BOOMERANG_e,
+    fpcNm_ARROW_e,
+    fpcNm_SUSPEND_e,
+    fpcNm_MIDNA_e,
+    fpcNm_Obj_Yousei_e,
 };
 
 bool dScnLogo_c::preLoad_dyl() {
@@ -155,7 +167,7 @@ void dScnLogo_c::setupGameResources() {
 
 void dScnLogo_c::nextSceneChange() {
     if (!mDoRst::isReset()) {
-        dComIfG_changeOpeningScene(this, PROC_OPENING_SCENE);
+        dComIfG_changeOpeningScene(this, fpcNm_OPENING_SCENE_e);
     }
 }
 
@@ -400,7 +412,7 @@ static int dScnLogo_Create(scene_class* i_this) {
 
 static int dScnLogo_Execute(dScnLogo_c* i_this) {
     if (mDoRst::isReset()) {
-        fopScnM_ChangeReq(i_this, PROC_LOGO_SCENE, 0, 5);
+        fopScnM_ChangeReq(i_this, fpcNm_LOGO_SCENE_e, 0, 5);
     }
     return 1;
 }
@@ -486,15 +498,15 @@ static scene_method_class l_dScnLogo_Method = {
 };
 
 scene_process_profile_definition g_profile_LOGO_SCENE = {
-    fpcLy_ROOT_e,
-    1,
-    fpcPi_CURRENT_e,
-    PROC_LOGO_SCENE,
-    &g_fpcNd_Method.base,
-    sizeof(dScnLogo_c),
-    0,
-    0,
-    &g_fopScn_Method.base,
-    &l_dScnLogo_Method,
-    NULL,
+    /* Layer ID     */ fpcLy_ROOT_e,
+    /* List ID      */ 1,
+    /* List Prio    */ fpcPi_CURRENT_e,
+    /* Proc Name    */ fpcNm_LOGO_SCENE_e,
+    /* Proc SubMtd  */ &g_fpcNd_Method.base,
+    /* Size         */ sizeof(dScnLogo_c),
+    /* Size Other   */ 0,
+    /* Parameters   */ 0,
+    /* Leaf SubMtd  */ &g_fopScn_Method.base,
+    /* Scene SubMtd */ &l_dScnLogo_Method,
+                       0,
 };

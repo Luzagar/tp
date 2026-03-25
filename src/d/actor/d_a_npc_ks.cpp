@@ -21,6 +21,7 @@
 #include "Z2AudioLib/Z2Instances.h"
 #include "d/d_s_play.h"
 #include "f_op/f_op_camera_mng.h"
+#include <cstring>
 
 class daNpc_Ks_HIO_c : public JORReflexible {
 public:
@@ -288,7 +289,7 @@ static int daNpc_Ks_Draw(npc_ks_class* i_this) {
 
 static void* s_resq_sub(void* i_actor, void* i_data) {
     (void) i_data;
-    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == PROC_NPC_KS) {
+    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == fpcNm_NPC_KS_e) {
         ((npc_ks_class*)i_actor)->anm_time = cM_rndF(50.0f) + 220.0f;
     }
     return NULL;
@@ -527,7 +528,7 @@ static fopAc_ac_c* en_search_test(npc_ks_class* i_this) {
 
 static void* s_ori_sub(void* i_actor, void* i_data) {
     (void) i_data;
-    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == PROC_OBJ_SO) {
+    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == fpcNm_OBJ_SO_e) {
         return i_actor;
     }
     return NULL;
@@ -740,7 +741,7 @@ static int npc_ks_ori(npc_ks_class* i_this) {
 static void* shot_bo_sub(void* i_actor, void* i_data) {
     (void) i_data;
     fopAc_ac_c* player = dComIfGp_getPlayer(0);
-    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == PROC_BOOMERANG && 
+    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == fpcNm_BOOMERANG_e && 
         dComIfGp_checkPlayerStatus0(0, 0x80000) == 0 && fopAcM_GetParam(i_actor) == 1) {
         cXyz ato(((daBoomerang_c*)i_actor)->current.pos - ((fopAc_ac_c*)i_data)->current.pos);
         if (ato.abs() < 1000.0f) {
@@ -1032,9 +1033,9 @@ static void npc_ks_home(npc_ks_class* i_this) {
             i_this->path_no = 0;
             i_this->field_0xaec = 1;
             if (fopAcM_CheckCondition(actor, 4) != 0) {
-                camera_class* camera = dComIfGp_getCamera(0);
-                mae.x = camera->lookat.eye.x - camera->lookat.center.x;
-                mae.z = camera->lookat.eye.z - camera->lookat.center.z;
+                camera_process_class* camera = dComIfGp_getCamera(0);
+                mae.x = camera->view.lookat.eye.x - camera->view.lookat.center.x;
+                mae.z = camera->view.lookat.eye.z - camera->view.lookat.center.z;
                 cMtx_YrotS(*calc_mtx, cM_atan2s(mae.x, mae.z));
                 if ((i_this->set_id & 1) != 0) {
                     mae.x = 100.0f;
@@ -1044,7 +1045,7 @@ static void npc_ks_home(npc_ks_class* i_this) {
                 mae.y = -50.0f;
                 mae.z = 200.0f;
                 MtxPosition(&mae, &ato);
-                actor->current.pos = camera->lookat.eye + ato;
+                actor->current.pos = camera->view.lookat.eye + ato;
                 actor->old = actor->current;
             }
         }
@@ -1052,7 +1053,7 @@ static void npc_ks_home(npc_ks_class* i_this) {
 }
 
 static void* s_sw_sub(void* i_actor, void* i_data) {
-    if ((fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == PROC_OBJ_SW)) {
+    if ((fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == fpcNm_OBJ_SW_e)) {
         if (fopAcM_GetRoomNo((fopAc_ac_c*)i_data) == 0) {
             if (((npc_ks_class*)i_data)->set_id == ((obj_sw_class*)i_actor)->field_0x570) {
                 return i_actor;
@@ -1066,7 +1067,7 @@ static void* s_sw_sub(void* i_actor, void* i_data) {
 
 static void* s_ha_sub(void* i_actor, void* i_data) {
     (void) i_data;
-    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == PROC_Obj_Pillar) {
+    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == fpcNm_Obj_Pillar_e) {
         return i_actor;
     }
     return NULL;
@@ -1074,7 +1075,7 @@ static void* s_ha_sub(void* i_actor, void* i_data) {
 
 static void* s_01_sub(void* i_actor, void* i_data) {
     (void) i_data;
-    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == PROC_NPC_KS && ((npc_ks_class*)i_actor)->action == 4) {
+    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == fpcNm_NPC_KS_e && ((npc_ks_class*)i_actor)->action == 4) {
         return i_actor;
     }
     return NULL;
@@ -1096,7 +1097,7 @@ static int npc_ks_demo_02(npc_ks_class* i_this) {
     int rv = 1;
     int iVar1 = 0;
 
-    obj_so_class* cage_p = (obj_so_class*)fopAcM_SearchByName(PROC_OBJ_SO);
+    obj_so_class* cage_p = (obj_so_class*)fopAcM_SearchByName(fpcNm_OBJ_SO_e);
     if (cage_p == NULL) {
         return 0;
     }
@@ -1387,7 +1388,7 @@ static int npc_ks_demo_02(npc_ks_class* i_this) {
 
 static void* s_dn_sub(void* i_actor, void* i_data) {
     (void) i_data;
-    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == PROC_E_OC) {
+    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == fpcNm_E_OC_e) {
         return i_actor;
     }
     return NULL;
@@ -1739,7 +1740,7 @@ static void npc_ks_to_hang(npc_ks_class* i_this) {
 }
 
 static void* s_next_do_sub(void* i_actor, void* i_data) {
-    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == PROC_NPC_KS) {
+    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == fpcNm_NPC_KS_e) {
         npc_ks_class* mon_data = (npc_ks_class*) i_data;
         npc_ks_class* monkey_actor = (npc_ks_class*) i_actor;
         if (monkey_actor->field_0x5b5 != 0 && mon_data->order == (monkey_actor->order - 1 & 0xFF)) {
@@ -1752,7 +1753,7 @@ static void* s_next_do_sub(void* i_actor, void* i_data) {
 }
 
 static void* s_next_get_sub(void* actor, void* i_data) {
-    if (fopAcM_IsActor(actor) && fopAcM_GetName(actor) == PROC_NPC_KS) {
+    if (fopAcM_IsActor(actor) && fopAcM_GetName(actor) == fpcNm_NPC_KS_e) {
         npc_ks_class* mon_data = (npc_ks_class*) i_data;
         npc_ks_class* monkey_actor = (npc_ks_class*) actor;
         if (monkey_actor->field_0x5b5 != 0 &&
@@ -1801,12 +1802,12 @@ static void hang_end_check(npc_ks_class* i_this) {
             i_this->field_0xaec = 1;
             actor->current.angle.x = 0;
             if (fopAcM_CheckCondition(actor, 4) != 0) {
-                camera_class* camera = dComIfGp_getCamera(0);
+                camera_process_class* camera = dComIfGp_getCamera(0);
                 if (checkDoorDemo()) {
                     cMtx_YrotS(*calc_mtx, player->shape_angle.y + 0x8000);
                 } else {
-                    mae.x = camera->lookat.eye.x - camera->lookat.center.x;
-                    mae.z = camera->lookat.eye.z - camera->lookat.center.z;
+                    mae.x = camera->view.lookat.eye.x - camera->view.lookat.center.x;
+                    mae.z = camera->view.lookat.eye.z - camera->view.lookat.center.z;
                     cMtx_YrotS(*calc_mtx, cM_atan2s(mae.x, mae.z));
                 }
 
@@ -1818,7 +1819,7 @@ static void hang_end_check(npc_ks_class* i_this) {
                 mae.y = -50.0f;
                 mae.z = 100.0f;
                 MtxPosition(&mae, &ato);
-                actor->current.pos = camera->lookat.eye + ato;
+                actor->current.pos = camera->view.lookat.eye + ato;
                 actor->old = actor->current;
             }
         }
@@ -1874,7 +1875,6 @@ static void npc_ks_hang(npc_ks_class* i_this) {
         start_pya = i_this->target_angle;
     }
 
-    s16 sVar1;
     switch (i_this->mode) {
         case 0:
             i_this->timer[0] = 0;
@@ -1925,11 +1925,13 @@ static void npc_ks_hang(npc_ks_class* i_this) {
                 anm_init(i_this, 24, 3.0f, 2, 1.0f);
             }
 
-            sVar1 = start_pya - sw_p->actor.current.angle.y;
-            if (sVar1 < 0x4000 && sVar1 > -0x4000) {
-                actor->home.angle.y = sw_p->actor.current.angle.y + 0x8000;
-            } else {
-                actor->home.angle.y = sw_p->actor.current.angle.y;
+            {
+                s16 sVar1 = start_pya - sw_p->actor.current.angle.y;
+                if (sVar1 < 0x4000 && sVar1 > -0x4000) {
+                    actor->home.angle.y = sw_p->actor.current.angle.y + 0x8000;
+                } else {
+                    actor->home.angle.y = sw_p->actor.current.angle.y;
+                }
             }
             break;
 
@@ -2059,7 +2061,6 @@ static void npc_ks_hang_s(npc_ks_class* i_this) {
     cXyz mae, ato;
     cLib_addCalcAngleS2(&actor->current.angle.y, actor->home.angle.y + 0x4000, 2, 0x800);
 
-    s16 sVar1;
     switch (i_this->mode) {
         case 0:
             int asdf;
@@ -2108,11 +2109,13 @@ static void npc_ks_hang_s(npc_ks_class* i_this) {
                 anm_init(i_this, 24, 3.0f, 2, 1.0f);
             }
 
-            sVar1 = i_this->target_angle - sw_p->actor.current.angle.y;
-            if (sVar1 < 0x4000 && sVar1 > -0x4000) {
-                actor->home.angle.y = sw_p->actor.current.angle.y + 0x8000;
-            } else {
-                actor->home.angle.y = sw_p->actor.current.angle.y;
+            {
+                s16 sVar1 = i_this->target_angle - sw_p->actor.current.angle.y;
+                if (sVar1 < 0x4000 && sVar1 > -0x4000) {
+                    actor->home.angle.y = sw_p->actor.current.angle.y + 0x8000;
+                } else {
+                    actor->home.angle.y = sw_p->actor.current.angle.y;
+                }
             }
             break;
 
@@ -2211,7 +2214,7 @@ static void npc_ks_e_hang(npc_ks_class* i_this) {
             break;
 
         case 3:
-            if (i_this->field_0x5fa == s16(YREG_S(7) - 0x3800)) {
+            if (i_this->field_0x5fa == s16(YREG_S(7) + 0xC800)) {
                 actor->health = 10;
                 i_this->mode = 20;
                 i_this->timer[0] = 0;
@@ -2515,7 +2518,7 @@ static void cam_3d_morf(npc_ks_class* i_this, f32 param_2) {
 
 static void* s_fs_sub(void* i_actor, void* i_data) {
     (void) i_data;
-    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == PROC_E_FS) {
+    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == fpcNm_E_FS_e) {
         ((e_fs_class*)i_actor)->mAction = 10;
         ((e_fs_class*)i_actor)->mMode = 0;
     }
@@ -2524,7 +2527,7 @@ static void* s_fs_sub(void* i_actor, void* i_data) {
 
 static void* s_fsdown_sub(void* i_actor, void* i_data) {
     (void) i_data;
-    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == PROC_E_FS) {
+    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == fpcNm_E_FS_e) {
         ((e_fs_class*)i_actor)->mTimer[0] = (fopAcM_GetID(i_actor) & 0x3) << 3;
         ((e_fs_class*)i_actor)->mMode++;
     }
@@ -2534,8 +2537,8 @@ static void* s_fsdown_sub(void* i_actor, void* i_data) {
 static void demo_camera(npc_ks_class* i_this) {
     fopAc_ac_c* actor = &i_this->actor;
     daPy_py_c* player = (daPy_py_c*)dComIfGp_getPlayer(0);
-    camera_class* camera = dComIfGp_getCamera(dComIfGp_getPlayerCameraID(0));
-    camera_class* unused_cam_p = dComIfGp_getCamera(0);
+    camera_process_class* camera = dComIfGp_getCamera(dComIfGp_getPlayerCameraID(0));
+    camera_process_class* unused_cam_p = dComIfGp_getCamera(0);
     obj_sw_class* sw_p = i_this->child_no;
     fopAc_ac_c* base_sw_p = &sw_p->actor;
     cXyz mae, ato;
@@ -4045,14 +4048,14 @@ static int npc_ks_option(npc_ks_class* i_this) {
             (fopAcM_CheckCondition(actor, 4) != 0 && fopAcM_otherBgCheck(actor, dComIfGp_getPlayer(0)))) {
             if (iVar1 != 0 && player3->speedF > 2.0f) {
                 camera_class* camera = (camera_class*) dComIfGp_getCamera(0);
-                mae.x = camera->lookat.eye.x - camera->lookat.center.x;
-                mae.z = camera->lookat.eye.z - camera->lookat.center.z;
+                mae.x = camera->view.lookat.eye.x - camera->view.lookat.center.x;
+                mae.z = camera->view.lookat.eye.z - camera->view.lookat.center.z;
                 cMtx_YrotS(*calc_mtx, cM_atan2s(mae.x, mae.z));
                 mae.x = 0.0f;
                 mae.y = -50.0f;
                 mae.z = 100.0f;
                 MtxPosition(&mae, &ato);
-                ato += camera->lookat.eye;
+                ato += camera->view.lookat.eye;
                 
                 dBgS_GndChk gnd_chk;
                 gnd_chk.SetPos(&ato);
@@ -5971,7 +5974,7 @@ static int npc_ks_fsdemo(npc_ks_class* i_this) {
             }
     }
 
-    if ((i_this->mode == 40 || i_this->mode == 41) && fopAcM_SearchByName(PROC_E_FS) == NULL && i_this->demo_mode == 0) {
+    if ((i_this->mode == 40 || i_this->mode == 41) && fopAcM_SearchByName(fpcNm_E_FS_e) == NULL && i_this->demo_mode == 0) {
         i_this->mode = 42;
         i_this->timer[1] = 30;
     }
@@ -6589,7 +6592,7 @@ static void action(npc_ks_class* i_this) {
 
 static void* s_kago_sub(void* i_actor, void* i_data) {
     UNUSED(i_data);
-    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == PROC_OBJ_KAGO) {
+    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == fpcNm_OBJ_KAGO_e) {
         if (((daObj_Kago_c*)i_actor)->getType() == 0) {
             return i_actor;
         }
@@ -7240,7 +7243,7 @@ static BOOL start_check(npc_ks_class* i_this) {
             break;
 
         case 20:
-            fopAcM_OnStatus(actor, 0x20000);
+            fopAcM_OnStatus(actor, fopAcStts_NOPAUSE_e);
             i_this->action = 300;
             i_this->field_0xc17 = 1;
             iVar2 = 1;
@@ -7296,7 +7299,7 @@ static BOOL start_check(npc_ks_class* i_this) {
 }
 
 static void* s_check_sub(void* i_actor, void* i_data) {
-    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == PROC_NPC_KS) {
+    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == fpcNm_NPC_KS_e) {
         if (fopAcM_GetID(i_actor) != fopAcM_GetID(i_data) && ((npc_ks_class*)i_actor)->set_id == ((npc_ks_class*)i_data)->set_id) {
             return i_actor;
         }
@@ -7455,18 +7458,18 @@ static actor_method_class l_daNpc_Ks_Method = {
 };
 
 actor_process_profile_definition g_profile_NPC_KS = {
-  fpcLy_CURRENT_e,        // mLayerID
-  3,                      // mListID
-  fpcPi_CURRENT_e,        // mListPrio
-  PROC_NPC_KS,            // mProcName
-  &g_fpcLf_Method.base,  // sub_method
-  sizeof(npc_ks_class),   // mSize
-  0,                      // mSizeOther
-  0,                      // mParameters
-  &g_fopAc_Method.base,   // sub_method
-  701,                    // mPriority
-  &l_daNpc_Ks_Method,     // sub_method
-  0x00044100,             // mStatus
-  fopAc_ACTOR_e,          // mActorType
-  fopAc_CULLBOX_CUSTOM_e, // cullType
+    /* Layer ID     */ fpcLy_CURRENT_e,
+    /* List ID      */ 3,
+    /* List Prio    */ fpcPi_CURRENT_e,
+    /* Proc Name    */ fpcNm_NPC_KS_e,
+    /* Proc SubMtd  */ &g_fpcLf_Method.base,
+    /* Size         */ sizeof(npc_ks_class),
+    /* Size Other   */ 0,
+    /* Parameters   */ 0,
+    /* Leaf SubMtd  */ &g_fopAc_Method.base,
+    /* Draw Prio    */ fpcDwPi_NPC_KS_e,
+    /* Actor SubMtd */ &l_daNpc_Ks_Method,
+    /* Status       */ fopAcStts_UNK_0x40000_e | fopAcStts_UNK_0x4000_e | fopAcStts_CULL_e,
+    /* Group        */ fopAc_ACTOR_e,
+    /* Cull Type    */ fopAc_CULLBOX_CUSTOM_e,
 };

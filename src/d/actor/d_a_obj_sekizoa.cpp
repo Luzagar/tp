@@ -6,7 +6,8 @@
 #include "d/actor/d_a_obj_smtile.h"
 #include "d/actor/d_a_tag_evtarea.h"
 #include "d/actor/d_a_tag_kmsg.h"
-#include <dolphin/types.h>
+#include <types.h>
+#include <cstring>
 #include "f_op/f_op_actor_mng.h"
 #include "f_op/f_op_msg.h"
 
@@ -254,7 +255,7 @@ int daObj_Sekizoa_c::CreateHeap() {
     }
     if (mType == TYPE_6) {
         int success_create = mInvModel.create(mpMorf[0]->getModel(), 1);
-        if (success_create == NULL) {
+        if (success_create == 0) {
             return 0;
         }
 
@@ -344,7 +345,7 @@ int daObj_Sekizoa_c::createHeapCallBack(fopAc_ac_c* i_this) {
 
 void* daObj_Sekizoa_c::srchSekizoa(void* i_actor, void* i_this) {
     if (mFindCount < 50 && i_actor != NULL && i_actor != i_this) {
-        if (fopAcM_IsExecuting(fopAcM_GetID(i_actor)) && fopAcM_GetName(i_actor) == PROC_OBJ_SEKIZOA) {
+        if (fopAcM_IsExecuting(fopAcM_GetID(i_actor)) && fopAcM_GetName(i_actor) == fpcNm_OBJ_SEKIZOA_e) {
             mFindActorPtrs[mFindCount] = (fopAc_ac_c*)i_actor;
             mFindCount++;
         }
@@ -735,7 +736,7 @@ void daObj_Sekizoa_c::setAttnPos() {
         mpMorf[1]->modelCalc();
     }
     if (mpMcaMorf != NULL) {
-        ((mDoExt_McaMorfSO*)mpMcaMorf)->play(NULL, 0);
+        ((mDoExt_McaMorfSO*)mpMcaMorf)->play(0, 0);
         if (mType == TYPE_1 || mType == TYPE_3 || mType == TYPE_5) {
             mDoMtx_stack_c::copy(mpMorf[0]->getModel()->getAnmMtx(7));
         } else {
@@ -2446,20 +2447,20 @@ static actor_method_class daObj_Sekizoa_MethodTable = {
 };
 
 actor_process_profile_definition g_profile_OBJ_SEKIZOA = {
-    fpcLy_CURRENT_e,             // mLayerID
-    3,                           // mListID
-    fpcPi_CURRENT_e,             // mListPrio
-    PROC_OBJ_SEKIZOA,            // mProcName
-    &g_fpcLf_Method.base,        // sub_method
-    sizeof(daObj_Sekizoa_c),     // mSize
-    0,                           // mSizeOther
-    0,                           // mParameters
-    &g_fopAc_Method.base,        // sub_method
-    0x12,                        // mPriority
-    &daObj_Sekizoa_MethodTable,  // sub_method
-    0x00040000,                  // mStatus
-    fopAc_ACTOR_e,               // mActorType
-    fopAc_CULLBOX_CUSTOM_e,      // cullType
+    /* Layer ID     */ fpcLy_CURRENT_e,
+    /* List ID      */ 3,
+    /* List Prio    */ fpcPi_CURRENT_e,
+    /* Proc Name    */ fpcNm_OBJ_SEKIZOA_e,
+    /* Proc SubMtd  */ &g_fpcLf_Method.base,
+    /* Size         */ sizeof(daObj_Sekizoa_c),
+    /* Size Other   */ 0,
+    /* Parameters   */ 0,
+    /* Leaf SubMtd  */ &g_fopAc_Method.base,
+    /* Draw Prio    */ fpcDwPi_OBJ_SEKIZOA_e,
+    /* Actor SubMtd */ &daObj_Sekizoa_MethodTable,
+    /* Status       */ fopAcStts_UNK_0x40000_e,
+    /* Group        */ fopAc_ACTOR_e,
+    /* Cull Type    */ fopAc_CULLBOX_CUSTOM_e,
 };
 
 AUDIO_INSTANCES

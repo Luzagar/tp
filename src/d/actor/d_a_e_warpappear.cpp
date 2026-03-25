@@ -10,6 +10,7 @@
 #include "d/actor/d_a_horse.h"
 #include "d/actor/d_a_obj_ihasi.h"
 #include "f_op/f_op_camera_mng.h"
+#include <cstring>
 
 static int daE_Warpappear_Draw(e_warpappear_class* i_this) {
     int sw = (fopAcM_GetParam(i_this) >> 8) & 0xFF;
@@ -32,7 +33,7 @@ static e_s1_class* master_ns[3];
 static void* s_s1_sub(void* i_actor, void* i_data) {
     e_s1_class* ns = (e_s1_class*)i_actor;
 
-    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == PROC_E_S1) {
+    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == fpcNm_E_S1_e) {
         ns->mAction = 20;
         ns->mMode = 0;
 
@@ -67,7 +68,7 @@ static void* s_s1_sub(void* i_actor, void* i_data) {
 static void* s_s1drop_sub(void* i_actor, void* i_data) {
     e_s1_class* ns = (e_s1_class*)i_actor;
     fopAc_ac_c* actor = (fopAc_ac_c*)i_data;
-    if ((fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == PROC_E_S1) &&
+    if ((fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == fpcNm_E_S1_e) &&
         ns->mMode != 2)
     {
         ns->current.pos = actor->current.pos;
@@ -81,7 +82,7 @@ static void* s_s1drop_sub(void* i_actor, void* i_data) {
 }
 
 static void* s_s1riv_sub(void* i_actor, void* i_data) {
-    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == PROC_E_S1) {
+    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == fpcNm_E_S1_e) {
         e_s1_class* ns = (e_s1_class*)i_actor;
         ns->current.pos = master_ns[0]->home.pos;
         ns->old = ns->current;
@@ -102,7 +103,7 @@ static void* s_s1riv_sub(void* i_actor, void* i_data) {
 }
 
 static void* s_s1fight_sub(void* i_actor, void* i_data) {
-    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == PROC_E_S1) {
+    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == fpcNm_E_S1_e) {
         e_s1_class* ns = (e_s1_class*)i_actor;
         ns->mMode = 20;
     }
@@ -113,7 +114,7 @@ static void* s_s1fight_sub(void* i_actor, void* i_data) {
 static int entry_no;
 
 static void* s_s1entry_sub(void* i_actor, void* i_data) {
-    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == PROC_E_S1) {
+    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == fpcNm_E_S1_e) {
         e_s1_class* ns = (e_s1_class*)i_actor;
         e_warpappear_class* i_this = (e_warpappear_class*)i_data;
 
@@ -137,7 +138,7 @@ static void* s_s1drop2_sub(void* i_actor, void* i_data) {
     e_s1_class* ns = (e_s1_class*)i_actor;
     e_warpappear_class* i_this = (e_warpappear_class*)i_data;
 
-    if ((fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == PROC_E_S1) &&
+    if ((fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == fpcNm_E_S1_e) &&
         i_this->target_info_count == ns->mEntryNo)
     {
         ns->current.pos = i_this->current.pos;
@@ -159,7 +160,7 @@ static void* s_s1Yangset_sub(void* i_actor, void* i_data) {
     e_s1_class* ns = (e_s1_class*)i_actor;
     e_warpappear_class* i_this = (e_warpappear_class*)i_data;
 
-    if ((fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == PROC_E_S1) &&
+    if ((fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == fpcNm_E_S1_e) &&
         i_this->target_info_count == ns->mEntryNo)
     {
         ns->shape_angle.y = ns->current.angle.y = ew_s1angy;
@@ -171,7 +172,7 @@ static void* s_s1Yangset_sub(void* i_actor, void* i_data) {
 }
 
 static void* s_s1start_sub(void* i_actor, void* i_data) {
-    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == PROC_E_S1) {
+    if (fopAcM_IsActor(i_actor) && fopAcM_GetName(i_actor) == fpcNm_E_S1_e) {
         e_s1_class* ns = (e_s1_class*)i_actor;
         fopAc_ac_c* actor = (fopAc_ac_c*)i_data;
 
@@ -291,8 +292,8 @@ static void demo_camera(e_warpappear_class* i_this) {
 };
 
     daPy_py_c* pla = (daPy_py_c*)dComIfGp_getPlayer(0);
-    camera_class* camera = dComIfGp_getCamera(dComIfGp_getPlayerCameraID(0));
-    camera_class* camera0 = dComIfGp_getCamera(0);
+    camera_process_class* camera = dComIfGp_getCamera(dComIfGp_getPlayerCameraID(0));
+    camera_process_class* camera0 = dComIfGp_getCamera(0);
     daHorse_c* horse = (daHorse_c*)dComIfGp_getHorseActor();
 
     cXyz sp48, sp54;
@@ -665,7 +666,7 @@ static void demo_camera(e_warpappear_class* i_this) {
         }
 
         if (i_this->demo_timer >= 180) {
-            obj_ihasi_class* ihasi = (obj_ihasi_class*)fopAcM_SearchByName(PROC_OBJ_IHASI);
+            obj_ihasi_class* ihasi = (obj_ihasi_class*)fopAcM_SearchByName(fpcNm_OBJ_IHASI_e);
             sp54.set(34800.0f, i_this->field_0x5ec + -300.0f, -26735.0f);
 
             ihasi->mParticleKey =
@@ -913,18 +914,18 @@ static actor_method_class l_daE_Warpappear_Method = {
 };
 
 actor_process_profile_definition g_profile_E_WAP = {
-    fpcLy_CURRENT_e,             // mLayerID
-    7,                           // mListID
-    fpcPi_CURRENT_e,             // mListPrio
-    PROC_E_WAP,                  // mProcName
-    &g_fpcLf_Method.base,        // sub_method
-    sizeof(e_warpappear_class),  // mSize
-    0,                           // mSizeOther
-    0,                           // mParameters
-    &g_fopAc_Method.base,        // sub_method
-    233,                         // mPriority
-    &l_daE_Warpappear_Method,    // sub_method
-    0x00044000,                  // mStatus
-    fopAc_ACTOR_e,               // mActorType
-    fopAc_CULLBOX_CUSTOM_e,      // cullType
+    /* Layer ID     */ fpcLy_CURRENT_e,
+    /* List ID      */ 7,
+    /* List Prio    */ fpcPi_CURRENT_e,
+    /* Proc Name    */ fpcNm_E_WAP_e,
+    /* Proc SubMtd  */ &g_fpcLf_Method.base,
+    /* Size         */ sizeof(e_warpappear_class),
+    /* Size Other   */ 0,
+    /* Parameters   */ 0,
+    /* Leaf SubMtd  */ &g_fopAc_Method.base,
+    /* Draw Prio    */ fpcDwPi_E_WAP_e,
+    /* Actor SubMtd */ &l_daE_Warpappear_Method,
+    /* Status       */ fopAcStts_UNK_0x40000_e | fopAcStts_UNK_0x4000_e,
+    /* Group        */ fopAc_ACTOR_e,
+    /* Cull Type    */ fopAc_CULLBOX_CUSTOM_e,
 };

@@ -1,0 +1,47 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Penumbra: Attach to Nintendont",
+      "type": "penumbra",
+      "request": "attach",
+      "program": "${workspaceFolder}/build/${input:gameId}/framework.elf",
+      "debugInfo": "${workspaceFolder}/build/${input:gameId}/debug_info.o",
+      "target": "${input:wiiAddress}:${input:gdbPort}"
+    },
+    {
+      "name": "Penumbra: Attach to Dolphin",
+      "type": "penumbra",
+      "request": "attach",
+      "program": "${workspaceFolder}/build/${input:gameId}/framework.elf",
+      "debugInfo": "${workspaceFolder}/build/${input:gameId}/debug_info.o",
+      "target": "${input:dolphinAddress}:${input:gdbPort}"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "gameId",
+      "type": "promptString",
+      "description": "Game ID (e.g. GZ2E01)",
+      "default": "GZ2E01"
+    },
+    {
+      "id": "wiiAddress",
+      "type": "promptString",
+      "description": "Wii IP address",
+      "default": "192.168.1.100"
+    },
+    {
+      "id": "dolphinAddress",
+      "type": "promptString",
+      "description": "Dolphin IP address",
+      "default": "127.0.0.1"
+    },
+    {
+      "id": "gdbPort",
+      "type": "promptString",
+      "description": "GDB port",
+      "default": "2159"
+    }
+  ]
+}

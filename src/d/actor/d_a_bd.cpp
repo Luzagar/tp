@@ -13,6 +13,7 @@
 #include "d/d_s_play.h"
 #include "f_op/f_op_camera_mng.h"
 #include "Z2AudioLib/Z2Instances.h"
+#include <cstring>
 
 
 
@@ -129,8 +130,8 @@ static void* s_a_sub(void* i_target, void* i_bird) {
     fopEn_enemy_c* a_bird = (fopEn_enemy_c*)i_bird;
 
     if ((fopAcM_IsActor(i_target) && fopAcM_GetGroup(a_target) == fopAc_ENEMY_e) ||
-        fopAcM_GetGroup(a_target) == fopAc_NPC_e || fopAcM_GetName(i_target) == PROC_OBJ_KANBAN2 ||
-        fopAcM_GetName(i_target) == PROC_OBJ_FOOD)
+        fopAcM_GetGroup(a_target) == fopAc_NPC_e || fopAcM_GetName(i_target) == fpcNm_OBJ_KANBAN2_e ||
+        fopAcM_GetName(i_target) == fpcNm_OBJ_FOOD_e)
     {
         cXyz distance = a_bird->current.pos - a_target->current.pos;
         if (distance.abs() < l_HIO.mLinkDetectRange + 10.0f * fabsf(a_target->speedF)) {
@@ -212,9 +213,9 @@ static int land_check(bd_class* i_this) {
     }
 
     fopEn_enemy_c* a_this = (fopEn_enemy_c*)i_this;
-    camera_class* camera = dComIfGp_getCamera(0);
+    camera_process_class* camera = dComIfGp_getCamera(0);
     cXyz sp30;
-    sp30 = camera->lookat.center - camera->lookat.eye;
+    sp30 = camera->view.lookat.center - camera->view.lookat.eye;
     s16 spA = cM_atan2s(sp30.x, sp30.z);
 
     if (strcmp(dComIfGp_getStartStageName(), "F_SP103") == 0) {
@@ -237,15 +238,15 @@ static int land_check(bd_class* i_this) {
             if (temp_r1[j] != 0) {
                 continue;
             }
-            sp30.x = land_pos[j].x - camera->lookat.eye.x;
-            sp30.z = land_pos[j].z - camera->lookat.eye.z;
+            sp30.x = land_pos[j].x - camera->view.lookat.eye.x;
+            sp30.z = land_pos[j].z - camera->view.lookat.eye.z;
             s16 sVar2 = cM_atan2s(sp30.x, sp30.z) - spA;
             if (sVar2 >= 0x2000 || sVar2 <= -0x2000) {
                 continue;
             }
 
-            sp30.x = camera->lookat.eye.x - land_pos[j].x;
-            sp30.z = camera->lookat.eye.z - land_pos[j].z;
+            sp30.x = camera->view.lookat.eye.x - land_pos[j].x;
+            sp30.z = camera->view.lookat.eye.z - land_pos[j].z;
 
             f32 temp_f1 = JMAFastSqrt((sp30.x * sp30.x) + (sp30.z * sp30.z));
             if (!(temp_f1 >= 600.0f) || !(temp_f1 < var_f31)) {
@@ -861,7 +862,7 @@ static int daBd_Execute(bd_class* i_this) {
             i_this->field_0x642--;
         }
 
-        fopAcM_SearchByName(PROC_NPC_KKRI, (fopAc_ac_c**)&kkri);
+        fopAcM_SearchByName(fpcNm_NPC_KKRI_e, (fopAc_ac_c**)&kkri);
         if (kkri != NULL && i_this->field_0x642 == 0) {
             if (i_this->field_0x5B6 == 1) {
                 MTXCopy(kkri->getBd1Mtx(), *calc_mtx);
@@ -907,7 +908,7 @@ static int daBd_Execute(bd_class* i_this) {
     i_this->mSound.framework(0, dComIfGp_getReverb(fopAcM_GetRoomNo(a_this)));
 
     if (i_this->field_0x656 == 0 && dComIfGp_event_runCheck()) {
-        cow = (daCow_c*)fopAcM_SearchByName(PROC_COW);
+        cow = (daCow_c*)fopAcM_SearchByName(fpcNm_COW_e);
         if (cow != NULL && cow->speedF > 1.0f) {
             i_this->field_0x656 = 1;
             i_this->mActionID = ACT_GROUND;
@@ -1037,7 +1038,7 @@ static int daBd_Create(fopAc_ac_c* i_act_this) {
         if (i_this->field_0x5B4 != 0xFF && i_this->field_0x5B4 != 0 && i_this->field_0x5B4 != 1) {
             for (int i = 0; i < i_this->field_0x5B4 - 1; i++) {
                 fopAcM_createChild(
-                    PROC_BD, fopAcM_GetID(i_act_this), fopAcM_GetParam(i_act_this) & 0xFFFFFF00,
+                    fpcNm_BD_e, fopAcM_GetID(i_act_this), fopAcM_GetParam(i_act_this) & 0xFFFFFF00,
                     &i_act_this->current.pos, fopAcM_GetRoomNo(i_act_this), &sp1C, NULL, -1, NULL);
             }
         }
@@ -1052,20 +1053,20 @@ static actor_method_class l_daBd_Method = {
 };
 
 actor_process_profile_definition g_profile_BD = {
-    fpcLy_CURRENT_e,       // mLayerID
-    8,                     // mListID
-    fpcPi_CURRENT_e,       // mListPrio
-    PROC_BD,               // mProcName
-    &g_fpcLf_Method.base,  // sub_method
-    sizeof(bd_class),      // mSize
-    0,                     // mSizeOther
-    0,                     // mParameters
-    &g_fopAc_Method.base,  // sub_method
-    718,                   // mPriority
-    &l_daBd_Method,        // sub_method
-    0x000C4100,            // mStatus
-    fopAc_ACTOR_e,         // mActorType
-    fopAc_CULLBOX_0_e,     // cullType
+    /* Layer ID     */ fpcLy_CURRENT_e,
+    /* List ID      */ 8,
+    /* List Prio    */ fpcPi_CURRENT_e,
+    /* Proc Name    */ fpcNm_BD_e,
+    /* Proc SubMtd  */ &g_fpcLf_Method.base,
+    /* Size         */ sizeof(bd_class),
+    /* Size Other   */ 0,
+    /* Parameters   */ 0,
+    /* Leaf SubMtd  */ &g_fopAc_Method.base,
+    /* Draw Prio    */ fpcDwPi_BD_e,
+    /* Actor SubMtd */ &l_daBd_Method,
+    /* Status       */ fopAcStts_UNK_0x80000_e | fopAcStts_UNK_0x40000_e | fopAcStts_UNK_0x4000_e | fopAcStts_CULL_e,
+    /* Group        */ fopAc_ACTOR_e,
+    /* Cull Type    */ fopAc_CULLBOX_0_e,
 };
 
 AUDIO_INSTANCES

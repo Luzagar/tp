@@ -17,6 +17,7 @@
 #include "f_op/f_op_camera_mng.h"
 #include "m_Do/m_Do_graphic.h"
 #include <cstdio>
+#include <cstring>
 
 dRes_info_c::dRes_info_c() {
     mCount = 0;
@@ -48,7 +49,7 @@ int dRes_info_c::set(char const* i_arcName, char const* i_path, u8 i_mountDirect
     JUT_ASSERT(120, strlen(i_arcName) <= NAME_MAX);
 #endif
 
-    if (*i_path != NULL) {
+    if (*i_path != '\0') {
         char path[40];
         snprintf(path, sizeof(path), "%s%s.arc", i_path, i_arcName);
         mDMCommand = mDoDvdThd_mountArchive_c::create(path, i_mountDirection, i_heap);
@@ -212,7 +213,7 @@ void dRes_info_c::setWarpSRT(J3DModelData* i_modelData, const cXyz& i_pos, f32 i
     texMtxInfo.mSRT.mTranslationY = i_transY;
 
     mDoMtx_stack_c::transS(-i_pos.x, -i_pos.y, -i_pos.z);
-    camera_class* camera = dComIfGp_getCamera(dComIfGp_getPlayerCameraID(0));
+    camera_process_class* camera = dComIfGp_getCamera(dComIfGp_getPlayerCameraID(0));
     mDoMtx_stack_c::YrotM(fopCamM_GetAngleY(camera));
     cMtx_concat(l_texMtxInfo.mEffectMtx, mDoMtx_stack_c::get(), texMtxInfo.mEffectMtx);
 }

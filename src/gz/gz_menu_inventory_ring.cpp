@@ -10,61 +10,61 @@
 #include <cstdio>
 
 static const u8 sRingItemList[] = {
-    fpcNm_ITEM_NOENTRY_19,
-    fpcNm_ITEM_BOOMERANG,
-    fpcNm_ITEM_KANTERA,
-    fpcNm_ITEM_PACHINKO,
-    fpcNm_ITEM_FISHING_ROD_1,
-    fpcNm_ITEM_LURE_ROD,
-    fpcNm_ITEM_BEE_ROD,
-    fpcNm_ITEM_WORM_ROD,
-    fpcNm_ITEM_JEWEL_ROD,
-    fpcNm_ITEM_JEWEL_BEE_ROD,
-    fpcNm_ITEM_JEWEL_WORM_ROD,
-    fpcNm_ITEM_HVY_BOOTS,
-    fpcNm_ITEM_HOOKSHOT,
-    fpcNm_ITEM_W_HOOKSHOT,
-    fpcNm_ITEM_BOW,
-    fpcNm_ITEM_LIGHT_ARROW,
-    fpcNm_ITEM_BOMB_ARROW,
-    fpcNm_ITEM_HAWK_ARROW,
-    fpcNm_ITEM_HAWK_EYE,
-    fpcNm_ITEM_NORMAL_BOMB,
-    fpcNm_ITEM_WATER_BOMB,
-    fpcNm_ITEM_POKE_BOMB,
-    fpcNm_ITEM_SPINNER,
-    fpcNm_ITEM_IRONBALL,
-    fpcNm_ITEM_COPY_ROD,
-    fpcNm_ITEM_COPY_ROD_2,
-    fpcNm_ITEM_HORSE_FLUTE,
-    fpcNm_ITEM_WOOD_STICK,
-    fpcNm_ITEM_EMPTY_BOTTLE,
-    fpcNm_ITEM_RED_BOTTLE,
-    fpcNm_ITEM_GREEN_BOTTLE,
-    fpcNm_ITEM_BLUE_BOTTLE,
-    fpcNm_ITEM_MILK_BOTTLE,
-    fpcNm_ITEM_HALF_MILK_BOTTLE,
-    fpcNm_ITEM_WATER_BOTTLE,
-    fpcNm_ITEM_HOT_SPRING,
-    fpcNm_ITEM_OIL_BOTTLE,
-    fpcNm_ITEM_UGLY_SOUP,
-    fpcNm_ITEM_LV1_SOUP,
-    fpcNm_ITEM_LV2_SOUP,
-    fpcNm_ITEM_LV3_SOUP,
-    fpcNm_ITEM_CHUCHU_RARE,
-    fpcNm_ITEM_CHUCHU_RED,
-    fpcNm_ITEM_CHUCHU_BLUE,
-    fpcNm_ITEM_CHUCHU_GREEN,
-    fpcNm_ITEM_CHUCHU_YELLOW,
-    fpcNm_ITEM_CHUCHU_PURPLE,
-    fpcNm_ITEM_BEE_CHILD,
-    fpcNm_ITEM_FAIRY,
-    fpcNm_ITEM_FAIRY_DROP,
-    fpcNm_ITEM_WORM,
-    fpcNm_ITEM_ZORAS_JEWEL,
-    fpcNm_ITEM_LETTER,
-    fpcNm_ITEM_BILL,
-    fpcNm_ITEM_NONE,
+    dItemNo_NOENTRY_19_e,
+    dItemNo_BOOMERANG_e,
+    dItemNo_KANTERA_e,
+    dItemNo_PACHINKO_e,
+    dItemNo_FISHING_ROD_1_e,
+    dItemNo_LURE_ROD_e,
+    dItemNo_BEE_ROD_e,
+    dItemNo_WORM_ROD_e,
+    dItemNo_JEWEL_ROD_e,
+    dItemNo_JEWEL_BEE_ROD_e,
+    dItemNo_JEWEL_WORM_ROD_e,
+    dItemNo_HVY_BOOTS_e,
+    dItemNo_HOOKSHOT_e,
+    dItemNo_W_HOOKSHOT_e,
+    dItemNo_BOW_e,
+    dItemNo_LIGHT_ARROW_e,
+    dItemNo_BOMB_ARROW_e,
+    dItemNo_HAWK_ARROW_e,
+    dItemNo_HAWK_EYE_e,
+    dItemNo_NORMAL_BOMB_e,
+    dItemNo_WATER_BOMB_e,
+    dItemNo_POKE_BOMB_e,
+    dItemNo_SPINNER_e,
+    dItemNo_IRONBALL_e,
+    dItemNo_COPY_ROD_e,
+    dItemNo_COPY_ROD_2_e,
+    dItemNo_HORSE_FLUTE_e,
+    dItemNo_WOOD_STICK_e,
+    dItemNo_EMPTY_BOTTLE_e,
+    dItemNo_RED_BOTTLE_e,
+    dItemNo_GREEN_BOTTLE_e,
+    dItemNo_BLUE_BOTTLE_e,
+    dItemNo_MILK_BOTTLE_e,
+    dItemNo_HALF_MILK_BOTTLE_e,
+    dItemNo_WATER_BOTTLE_e,
+    dItemNo_HOT_SPRING_e,
+    dItemNo_OIL_BOTTLE_e,
+    dItemNo_UGLY_SOUP_e,
+    dItemNo_LV1_SOUP_e,
+    dItemNo_LV2_SOUP_e,
+    dItemNo_LV3_SOUP_e,
+    dItemNo_CHUCHU_RARE_e,
+    dItemNo_CHUCHU_RED_e,
+    dItemNo_CHUCHU_BLUE_e,
+    dItemNo_CHUCHU_GREEN_e,
+    dItemNo_CHUCHU_YELLOW_e,
+    dItemNo_CHUCHU_PURPLE_e,
+    dItemNo_BEE_CHILD_e,
+    dItemNo_FAIRY_e,
+    dItemNo_FAIRY_DROP_e,
+    dItemNo_WORM_e,
+    dItemNo_ZORAS_JEWEL_e,
+    dItemNo_LETTER_e,
+    dItemNo_BILL_e,
+    dItemNo_NONE_e,
 };
 
 static const int sRingItemCount = sizeof(sRingItemList) / sizeof(u8);
@@ -91,7 +91,7 @@ void gzInventoryMenu_c::freeAllTextures() {
                 mpPickerBuf[i][j] = NULL;
             }
         }
-        mPickerItems[i] = fpcNm_ITEM_NONE;
+        mPickerItems[i] = dItemNo_NONE_e;
     }
 }
 
@@ -108,7 +108,7 @@ void gzInventoryMenu_c::initRingItems() {
     for (int i = 0; i < MAX_ITEM_SLOTS; i++) {
         u8 lineUpItem = dComIfGs_getLineUpItem(i);
         mItemSlots[i] = lineUpItem;
-        if (lineUpItem != fpcNm_ITEM_NONE) {
+        if (lineUpItem != dItemNo_NONE_e) {
             mItemsTotal++;
         }
     }
@@ -135,9 +135,9 @@ void gzInventoryMenu_c::loadItemTexture(int slotIdx, u8 slotNo) {
         mpItemTex[slotIdx][j] = NULL;
     }
 
-    if (item != fpcNm_ITEM_NONE) {
-        if (item == fpcNm_ITEM_LIGHT_ARROW) {
-            item = fpcNm_ITEM_BOW;
+    if (item != dItemNo_NONE_e) {
+        if (item == dItemNo_LIGHT_ARROW_e) {
+            item = dItemNo_BOW_e;
         }
 
         JKRHeap* heap = gzHeap(GZ_GROUP_MENU);
@@ -208,10 +208,10 @@ void gzInventoryMenu_c::loadPickerItemTexture(int pickerIdx, u8 itemId) {
 
     mPickerItems[pickerIdx] = itemId;
 
-    if (itemId != fpcNm_ITEM_NONE) {
+    if (itemId != dItemNo_NONE_e) {
         u8 item = itemId;
-        if (item == fpcNm_ITEM_LIGHT_ARROW) {
-            item = fpcNm_ITEM_BOW;
+        if (item == dItemNo_LIGHT_ARROW_e) {
+            item = dItemNo_BOW_e;
         }
 
         JKRHeap* heap = gzHeap(GZ_GROUP_MENU);
@@ -269,8 +269,8 @@ void gzInventoryMenu_c::addSlot() {
     }
 
     mItemSlots[insertPos] = newSlotNo;
-    dComIfGs_setItem(newSlotNo, fpcNm_ITEM_NOENTRY_19);
-    dComIfGp_setItem(newSlotNo, fpcNm_ITEM_NOENTRY_19);
+    dComIfGs_setItem(newSlotNo, dItemNo_NOENTRY_19_e);
+    dComIfGp_setItem(newSlotNo, dItemNo_NOENTRY_19_e);
     mItemsTotal++;
 
     for (int i = 0; i < gzInventoryMenu_c::RING_MAX_SLOTS; i++) {
@@ -295,8 +295,8 @@ void gzInventoryMenu_c::deleteSlot() {
     }
 
     u8 slotNo = mItemSlots[mCurrentSlot];
-    dComIfGs_setItem(slotNo, fpcNm_ITEM_NONE);
-    dComIfGp_setItem(slotNo, fpcNm_ITEM_NONE);
+    dComIfGs_setItem(slotNo, dItemNo_NONE_e);
+    dComIfGp_setItem(slotNo, dItemNo_NONE_e);
 
     for (int i = mCurrentSlot; i < mItemsTotal - 1; i++) {
         mItemSlots[i] = mItemSlots[i + 1];
@@ -458,10 +458,10 @@ void gzInventoryMenu_c::drawItemPicker(f32 centerX, f32 centerY) {
         f32 texW = ITEM_SIZE;
         f32 texH = ITEM_SIZE;
 
-        if (mpPickerBuf[i][0] != NULL && mPickerItems[i] != fpcNm_ITEM_NONE) {
+        if (mpPickerBuf[i][0] != NULL && mPickerItems[i] != dItemNo_NONE_e) {
             u8 item = mPickerItems[i];
-            if (item == fpcNm_ITEM_LIGHT_ARROW) {
-                item = fpcNm_ITEM_BOW;
+            if (item == dItemNo_LIGHT_ARROW_e) {
+                item = dItemNo_BOW_e;
             }
             u8 texScale = dItem_data::getTexScale(item);
             f32 scale = texScale / 100.0f;
@@ -492,15 +492,15 @@ void gzInventoryMenu_c::drawItemPicker(f32 centerX, f32 centerY) {
 
 static bool getItemAmmoCount(u8 item, u8 slotNo, char* outBuf, int bufSize) {
     switch (item) {
-    case fpcNm_ITEM_BOW:
-    case fpcNm_ITEM_LIGHT_ARROW:
-    case fpcNm_ITEM_BOMB_ARROW:
-    case fpcNm_ITEM_HAWK_ARROW:
+    case dItemNo_BOW_e:
+    case dItemNo_LIGHT_ARROW_e:
+    case dItemNo_BOMB_ARROW_e:
+    case dItemNo_HAWK_ARROW_e:
         snprintf(outBuf, bufSize, "%d", dComIfGs_getArrowNum());
         return true;
-    case fpcNm_ITEM_NORMAL_BOMB:
-    case fpcNm_ITEM_WATER_BOMB:
-    case fpcNm_ITEM_POKE_BOMB:
+    case dItemNo_NORMAL_BOMB_e:
+    case dItemNo_WATER_BOMB_e:
+    case dItemNo_POKE_BOMB_e:
         snprintf(outBuf, bufSize, "%d", dComIfGs_getBombNum(slotNo - SLOT_15));
         return true;
     default:
@@ -655,10 +655,10 @@ void gzInventoryMenu_c::executeRingMenu() {
         if (ammoDelta != 0) {
             bool adjusted = false;
             switch (currentItem) {
-            case fpcNm_ITEM_BOW:
-            case fpcNm_ITEM_LIGHT_ARROW:
-            case fpcNm_ITEM_BOMB_ARROW:
-            case fpcNm_ITEM_HAWK_ARROW: {
+            case dItemNo_BOW_e:
+            case dItemNo_LIGHT_ARROW_e:
+            case dItemNo_BOMB_ARROW_e:
+            case dItemNo_HAWK_ARROW_e: {
                 u8 cur = dComIfGs_getArrowNum();
                 u8 max = dComIfGs_getArrowMax();
                 s32 val = (s32)cur + ammoDelta;
@@ -668,9 +668,9 @@ void gzInventoryMenu_c::executeRingMenu() {
                 adjusted = true;
                 break;
             }
-            case fpcNm_ITEM_NORMAL_BOMB:
-            case fpcNm_ITEM_WATER_BOMB:
-            case fpcNm_ITEM_POKE_BOMB: {
+            case dItemNo_NORMAL_BOMB_e:
+            case dItemNo_WATER_BOMB_e:
+            case dItemNo_POKE_BOMB_e: {
                 u8 bagIdx = slotNo - SLOT_15;
                 u8 cur = dComIfGs_getBombNum(bagIdx);
                 u8 max = dComIfGs_getBombMax(currentItem);

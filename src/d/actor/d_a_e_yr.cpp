@@ -2416,7 +2416,7 @@ static int daE_Yr_Create(fopAc_ac_c* i_this) {
 
     static dCcD_SrcSph head_tg_sph_src = {
         {
-            {0x0, {{0x0, 0x1, 0x0}, {(s32)0xd8fbfdff, 0x3}, 0x0}}, // mObj
+            {0x0, {{0x0, 0x1, 0x0}, {0xd8fbfdff, 0x3}, 0x0}}, // mObj
             {dCcD_SE_NONE, 0x0, 0x0, 0x0, 0x0}, // mGObjAt
             {dCcD_SE_NONE, 0x0, 0x0, 0x0, 0x2}, // mGObjTg
             {0x0}, // mGObjCo
@@ -2428,7 +2428,7 @@ static int daE_Yr_Create(fopAc_ac_c* i_this) {
 
     static dCcD_SrcSph body_tg_sph_src = {
         {
-            {0x0, {{0x0, 0x1, 0x0}, {(s32)0xd8fbfdff, 0x3}, 0x0}}, // mObj
+            {0x0, {{0x0, 0x1, 0x0}, {0xd8fbfdff, 0x3}, 0x0}}, // mObj
             {dCcD_SE_NONE, 0x0, 0x0, 0x0, 0x0}, // mGObjAt
             {dCcD_SE_NONE, 0x0, 0x0, 0x0, 0x2}, // mGObjTg
             {0x0}, // mGObjCo
@@ -2553,20 +2553,20 @@ static actor_method_class l_daE_Yr_Method = {
 };
 
 actor_process_profile_definition g_profile_E_YR = {
-    (u32)fpcLy_CURRENT_e,   // mLayerID
-    7,                      // mListID
-    fpcPi_CURRENT_e,        // mListPrio
-    PROC_E_YR,              // mProcName
-    &g_fpcLf_Method.base,   // sub_method
-    sizeof(e_yr_class),     // mSize
-    0,                      // mSizeOther
-    0,                      // mParameters
-    &g_fopAc_Method.base,   // sub_method
-    189,                    // mPriority
-    &l_daE_Yr_Method,       // sub_method
-    0x10040100,             // mStatus
-    fopAc_ENEMY_e,          // mActorType
-    fopAc_CULLBOX_CUSTOM_e, // cullType
+    /* Layer ID     */ (u32)fpcLy_CURRENT_e,
+    /* List ID      */ 7,
+    /* List Prio    */ fpcPi_CURRENT_e,
+    /* Proc Name    */ fpcNm_E_YR_e,
+    /* Proc SubMtd  */ &g_fpcLf_Method.base,
+    /* Size         */ sizeof(e_yr_class),
+    /* Size Other   */ 0,
+    /* Parameters   */ 0,
+    /* Leaf SubMtd  */ &g_fopAc_Method.base,
+    /* Draw Prio    */ fpcDwPi_E_YR_e,
+    /* Actor SubMtd */ &l_daE_Yr_Method,
+    /* Status       */ fopAcStts_UNK_0x10000000_e | fopAcStts_UNK_0x40000_e | fopAcStts_CULL_e,
+    /* Group        */ fopAc_ENEMY_e,
+    /* Cull Type    */ fopAc_CULLBOX_CUSTOM_e,
 };
 
 e_yr_class::e_yr_class() {
