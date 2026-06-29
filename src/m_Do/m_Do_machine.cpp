@@ -3,6 +3,8 @@
  * Exception Management
  */
 
+#include "m_Do/machine.h" // IWYU pragma: keep
+
 #include "m_Do/m_Do_machine.h"
 #include "JSystem/JFramework/JFWSystem.h"
 #include "JSystem/JKernel/JKRHeap.h"
@@ -250,7 +252,9 @@ GXRenderModeObj g_ntscZeldaProg = {
 
 #if DEBUG
 static void myGXVerifyCallback(GXWarningLevel, u32, const char*);
+#endif
 
+#if DEBUG || VERSION == VERSION_WII_PAL
 GXRenderModeObj g_palZeldaProg60 = {
     VI_TVMODE_EURGB60_PROG,
     640, 456, 456, 25, 12, 670, 456,
