@@ -20,15 +20,18 @@ d/d_home_button.cpp:
 d/d_cursor_mng.cpp:
 	.text       start:0x80006D90 end:0x80007BC8
 	.data       start:0x803BD040 end:0x803BD168
-	.sdata      start:0x804F77C0 end:0x804F780C
-	.sbss       start:0x804FA8C8 end:0x804FA8D8
+	.sdata      start:0x804F77C0 end:0x804F77F8
+	.sbss       start:0x804FA8C8 end:0x804FA8D0
 	.sdata2     start:0x804FBB18 end:0x804FBB30
+
+d/d_rvl_fb_copy.cpp:
+	.sbss       start:0x804FA8D0 end:0x804FA8D8
 
 d/d_E3Stage_select06.cpp:
 	.text       start:0x80007BC8 end:0x800097C4
 	.data       start:0x803BD168 end:0x803BD3A0
-	.sdata      start:0x804F780C end:0x804F783C
-	.sbss       start:0x804FA8D8 end:0x804FA8E8
+	.sdata      start:0x804F77F8 end:0x804F7838
+	.sbss       start:0x804FA8D8 end:0x804FA8E0
 	.sdata2     start:0x804FBB30 end:0x804FBB78
 
 m_Do/m_Do_main.cpp:
@@ -36,23 +39,24 @@ m_Do/m_Do_main.cpp:
 	.ctors      start:0x80396104 end:0x80396108
 	.data       start:0x803BD3A0 end:0x803BD6B8
 	.bss        start:0x8040B480 end:0x8040B8E0
-	.sdata      start:0x804F783C end:0x804F78B8
-	.sbss       start:0x804FA8E8 end:0x804FA910
+	.sdata      start:0x804F7838 end:0x804F78B0
+	.sbss       start:0x804FA8E0 end:0x804FA908
 	.sdata2     start:0x804FBB78 end:0x804FBB90
 
 m_Do/m_Do_printf.cpp:
 	.text       start:0x8000A5DC end:0x8000ACF4
 	.data       start:0x803BD6B8 end:0x803BD770
 	.bss        start:0x8040B8E0 end:0x8040C0E0
-	.sbss       start:0x804FA910 end:0x804FA92C
+	.sdata      start:0x804F78B0 end:0x804F78B8
+	.sbss       start:0x804FA908 end:0x804FA928
 
 m_Do/m_Do_audio.cpp:
 	.text       start:0x8000ACF4 end:0x8000B698
 	.ctors      start:0x80396108 end:0x8039610C
-	.data       start:0x803BD770 end:0x803BD9E8
+	.data       start:0x803BD770 end:0x803BD9D0
 	.bss        start:0x8040C0E0 end:0x8040D498
 	.sdata      start:0x804F78B8 end:0x804F7924
-	.sbss       start:0x804FA92C end:0x804FA978
+	.sbss       start:0x804FA928 end:0x804FA978
 
 m_Do/m_Do_controller_pad.cpp:
 	.text       start:0x8000B698 end:0x8000BAA8
@@ -62,7 +66,7 @@ m_Do/m_Do_controller_pad.cpp:
 m_Re/m_Re_controller_pad.cpp:
 	.text       start:0x8000BAA8 end:0x8000F56C
 	.rodata     start:0x803962C0 end:0x80396310
-	.data       start:0x803BD9E8 end:0x803BDA00
+	.data       start:0x803BD9D0 end:0x803BDA00
 	.bss        start:0x8040D5A8 end:0x80414E58
 	.sbss       start:0x804FA978 end:0x804FA988
 	.sdata2     start:0x804FBBA8 end:0x804FBC50
@@ -1116,17 +1120,17 @@ d/d_meter_HIO.cpp:
 	.text       start:0x801DE3F0 end:0x801E1790
 	.ctors      start:0x80396184 end:0x80396188
 	.rodata     start:0x803B4BF0 end:0x803B4DE8
-	.data       start:0x803DDF10 end:0x803DE28C
+	.data       start:0x803DDF10 end:0x803DE208
 	.bss        start:0x8047D018 end:0x8047E5C0
-	.sdata      start:0x804F95B8 end:0x804F9640
+	.sdata      start:0x804F95B8 end:0x804F9638
 	.sbss       start:0x804FAF38 end:0x804FAF40
 	.sdata2     start:0x804FE448 end:0x804FE6E0
 
 d/d_meter_button.cpp:
 	.text       start:0x801E1790 end:0x801EBD60
 	.rodata     start:0x803B4DE8 end:0x803B4F48
-	.data       start:0x803DE28C end:0x803DE368
-	.sdata      start:0x804F9640 end:0x804F9648
+	.data       start:0x803DE208 end:0x803DE368
+	.sdata      start:0x804F9638 end:0x804F9648
 	.sdata2     start:0x804FE6E0 end:0x804FE760
 
 d/d_meter_haihai.cpp:

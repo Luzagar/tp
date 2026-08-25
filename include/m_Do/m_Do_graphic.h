@@ -59,7 +59,7 @@ public:
     public:
         virtual ~csr_c() {}
         virtual void draw(f32, f32) = 0;
-        virtual bool isPointer();
+        virtual bool isPointer() { return true; }
 
         static void particleExecute();
         static u32 getBlurID() { return m_blurID; }
@@ -255,7 +255,9 @@ public:
 
     static void onWide();
     static void offWide();
-    static u8 isWide();
+    inline static u8 isWide() {
+        return mWide == TRUE;
+    }
 
     static void onWideZoom();
     static void offWideZoom();
